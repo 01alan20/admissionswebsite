@@ -9,6 +9,10 @@ import "./styles/modern.css";
 
 const Detail = lazy(() => import("./pages/Detail.jsx"));
 const ProfileReview = lazy(() => import("./pages/ProfileReview.jsx"));
+const BetaLogin = lazy(() => import("./pages/BetaLogin.jsx"));
+const OnboardingBeta = lazy(() => import("./pages/OnboardingBeta.jsx"));
+const BetaDashboard = lazy(() => import("./pages/BetaDashboard.jsx"));
+const ProtectedRoute = lazy(() => import("./components/ProtectedRoute.jsx"));
 
 export default function App() {
   return (
@@ -52,6 +56,11 @@ export default function App() {
               <Route path="/pathways" element={<HighSchoolPathways />} />
               <Route path="/institution/:unitid" element={<Detail />} />
               <Route path="/review" element={<ProfileReview />} />
+              <Route path="beta/login" element={<BetaLogin />} />
+              <Route element={<ProtectedRoute />}>
+                <Route path="beta/onboarding" element={<OnboardingBeta />} />
+                <Route path="beta/dashboard" element={<BetaDashboard />} />
+              </Route>
               <Route path="*" element={<div>Not found</div>} />
             </Routes>
           </Suspense>
