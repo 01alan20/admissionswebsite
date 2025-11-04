@@ -1,0 +1,58 @@
+{
+  "profile": {
+    "unitid": 483814,
+    "name": "Standard Healthcare Services-College of Nursing",
+    "city": "Ardsley",
+    "state": "NY",
+    "control": "Private for-profit",
+    "level": "2-year",
+    "carnegie_basic": "Special Focus Two-Year: Health Professions",
+    "website": "dentaltrainingwp.com/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": NaN,
+      "in_state": NaN,
+      "out_of_state": NaN
+    },
+    "outcomes": {
+      "acceptance_rate": 22,
+      "yield": 100,
+      "grad_rate_6yr": null,
+      "retention_full_time": 90,
+      "student_faculty_ratio": 34,
+      "total_enrollment": 719
+    }
+  },
+  "requirements": {
+    "required": [
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Recommendations",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Personal Statement Or Essay",
+      "Secondary School Gpa"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

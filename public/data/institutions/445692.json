@@ -1,0 +1,58 @@
+{
+  "profile": {
+    "unitid": 445692,
+    "name": "Neumont College of Computer Science",
+    "city": "Santa Ana",
+    "state": "CA",
+    "control": "Private for-profit",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Four-Year: Engineering and Other Technology-Related Schools",
+    "website": "www.aimtinc.com/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Computer & Information Sciences"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 27375.0,
+      "in_state": 26505.0,
+      "out_of_state": 26505.0
+    },
+    "outcomes": {
+      "acceptance_rate": 89,
+      "yield": 18,
+      "grad_rate_6yr": 51,
+      "retention_full_time": 77,
+      "student_faculty_ratio": 25,
+      "total_enrollment": 530
+    }
+  },
+  "requirements": {
+    "required": [
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "English Proficiency Test",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Rank"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

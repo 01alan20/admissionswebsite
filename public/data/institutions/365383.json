@@ -1,0 +1,58 @@
+{
+  "profile": {
+    "unitid": 365383,
+    "name": "Wilkes-Barre Area Career and Technical Center Practical Nursing",
+    "city": "Tampa",
+    "state": "FL",
+    "control": "Public",
+    "level": "2-year",
+    "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
+    "website": "www.hillsboroughschools.org/erwin",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": NaN,
+      "in_state": NaN,
+      "out_of_state": NaN
+    },
+    "outcomes": {
+      "acceptance_rate": 56,
+      "yield": 79,
+      "grad_rate_6yr": null,
+      "retention_full_time": 47,
+      "student_faculty_ratio": 15,
+      "total_enrollment": 102
+    }
+  },
+  "requirements": {
+    "required": [
+      "Formal Demonstration Of Competencies",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations"
+    ],
+    "considered": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Rank",
+      "Secondary School Record",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "Legacy Status"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

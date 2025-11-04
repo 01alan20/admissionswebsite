@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 155511,
+    "name": "McPherson College",
+    "city": "Lexington",
+    "state": "KY",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
+    "website": "https://bluegrass.kctcs.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Engineering Technologies",
+      "Biological & Biomedical Sciences",
+      "Parks, Recreation & Fitness"
+    ],
+    "intl_enrollment_pct": 6,
+    "tuition_summary": {
+      "sticker": 35162.0,
+      "in_state": 33536.0,
+      "out_of_state": 33536.0
+    },
+    "outcomes": {
+      "acceptance_rate": 84,
+      "yield": 24,
+      "grad_rate_6yr": 52,
+      "retention_full_time": 65,
+      "student_faculty_ratio": 13,
+      "total_enrollment": 788
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores"
+    ],
+    "not_considered": [
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

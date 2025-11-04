@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 120768,
+    "name": "Pacific Oaks College",
+    "city": "Porterville",
+    "state": "CA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Medium Programs",
+    "website": "www.portervillecollege.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Education",
+      "Family & Consumer Sciences",
+      "Health Professions",
+      "Public Administration & Social Service"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 33360.0,
+      "in_state": 11692.0,
+      "out_of_state": 11692.0
+    },
+    "outcomes": {
+      "acceptance_rate": 10,
+      "yield": 67,
+      "grad_rate_6yr": null,
+      "retention_full_time": null,
+      "student_faculty_ratio": 3,
+      "total_enrollment": 1051
+    }
+  },
+  "requirements": {
+    "required": [
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Rank",
+      "Secondary School Record",
+      "Work Experience"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Legacy Status"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

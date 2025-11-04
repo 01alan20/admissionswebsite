@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 150172,
+    "name": "Calumet College of Saint Joseph",
+    "city": "Richmond",
+    "state": "IN",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Small Programs",
+    "website": "www.iue.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Homeland Security & Law Enforcement",
+      "Public Administration & Social Service",
+      "Business, Management & Marketing",
+      "Psychology"
+    ],
+    "intl_enrollment_pct": 4,
+    "tuition_summary": {
+      "sticker": 22650.0,
+      "in_state": 21650.0,
+      "out_of_state": 21650.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": 31,
+      "retention_full_time": 40,
+      "student_faculty_ratio": 13,
+      "total_enrollment": 674
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

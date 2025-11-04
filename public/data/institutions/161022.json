@@ -1,0 +1,58 @@
+{
+  "profile": {
+    "unitid": 161022,
+    "name": "Maine College of Health Professions",
+    "city": "North East",
+    "state": "MD",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Four-Year: Other Health Professions Schools",
+    "website": "www.cecil.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Health Professions"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 17827.0,
+      "in_state": 16238.0,
+      "out_of_state": 16238.0
+    },
+    "outcomes": {
+      "acceptance_rate": 33,
+      "yield": 100,
+      "grad_rate_6yr": null,
+      "retention_full_time": null,
+      "student_faculty_ratio": 13,
+      "total_enrollment": 228
+    }
+  },
+  "requirements": {
+    "required": [
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Secondary School Gpa"
+    ],
+    "not_considered": [
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

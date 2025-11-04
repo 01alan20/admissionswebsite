@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 440396,
+    "name": "New Saint Andrews College",
+    "city": "FALLS CHURCH",
+    "state": "VA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Arts & Sciences Focus",
+    "website": "www.potomac.edu/",
+    "admissions_url": null,
+    "test_policy": "Required",
+    "major_families": [
+      "Liberal Arts & Humanities",
+      "Education",
+      "English Language & Literature",
+      "Theology & Religious Vocations"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 15700.0,
+      "in_state": 14500.0,
+      "out_of_state": 14500.0
+    },
+    "outcomes": {
+      "acceptance_rate": 86,
+      "yield": 74,
+      "grad_rate_6yr": 52,
+      "retention_full_time": 88,
+      "student_faculty_ratio": 15,
+      "total_enrollment": 351
+    }
+  },
+  "requirements": {
+    "required": [
+      "Admission Test Scores",
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Required"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 152637,
+    "name": "Vincennes University",
+    "city": "Des Moines",
+    "state": "IA",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate/Associate's Colleges: Mixed Baccalaureate/Associate's",
+    "website": "https://www.unitypoint.org/desmoines//radiologic-technology-certificate-program.aspx",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Liberal Arts & Humanities",
+      "Engineering Technologies",
+      "Health Professions",
+      "Mechanic & Repair Technologies"
+    ],
+    "intl_enrollment_pct": 1,
+    "tuition_summary": {
+      "sticker": 6886.0,
+      "in_state": 6654.0,
+      "out_of_state": 15739.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": 29,
+      "retention_full_time": 52,
+      "student_faculty_ratio": 25,
+      "total_enrollment": 18438
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

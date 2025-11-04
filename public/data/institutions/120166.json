@@ -1,0 +1,60 @@
+{
+  "profile": {
+    "unitid": 120166,
+    "name": "San Francisco Bay University",
+    "city": "Angwin",
+    "state": "CA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Four-Year: Engineering and Other Technology-Related Schools",
+    "website": "https://www.puc.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Computer & Information Sciences",
+      "Business, Management & Marketing",
+      "Engineering"
+    ],
+    "intl_enrollment_pct": 5,
+    "tuition_summary": {
+      "sticker": 8775.0,
+      "in_state": 8720.0,
+      "out_of_state": 8720.0
+    },
+    "outcomes": {
+      "acceptance_rate": 69,
+      "yield": 26,
+      "grad_rate_6yr": null,
+      "retention_full_time": 81,
+      "student_faculty_ratio": 6,
+      "total_enrollment": 328
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Formal Demonstration Of Competencies",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Completion Of College Preparatory Program",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

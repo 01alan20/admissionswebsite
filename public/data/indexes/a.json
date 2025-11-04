@@ -1,0 +1,2780 @@
+[
+  {
+    "unitid":100654,
+    "name":"Alabama A & M University",
+    "state":"AL",
+    "city":"Normal"
+  },
+  {
+    "unitid":100690,
+    "name":"Amridge University",
+    "state":"AL",
+    "city":"Montgomery"
+  },
+  {
+    "unitid":100724,
+    "name":"Alabama State University",
+    "state":"AL",
+    "city":"Montgomery"
+  },
+  {
+    "unitid":100812,
+    "name":"Athens State University",
+    "state":"AL",
+    "city":"Montgomery"
+  },
+  {
+    "unitid":100830,
+    "name":"Auburn University at Montgomery",
+    "state":"AL",
+    "city":"Auburn"
+  },
+  {
+    "unitid":100858,
+    "name":"Auburn University",
+    "state":"AL",
+    "city":"Birmingham"
+  },
+  {
+    "unitid":102580,
+    "name":"Alaska Bible College",
+    "state":"AK",
+    "city":"Fairbanks"
+  },
+  {
+    "unitid":102669,
+    "name":"Alaska Pacific University",
+    "state":"AK",
+    "city":"Seward"
+  },
+  {
+    "unitid":102711,
+    "name":"Alaska Vocational Technical Center",
+    "state":"WA",
+    "city":"Vancouver"
+  },
+  {
+    "unitid":103501,
+    "name":"Alaska Career College",
+    "state":"AZ",
+    "city":"Tucson"
+  },
+  {
+    "unitid":103954,
+    "name":"Arizona Academy of Beauty",
+    "state":"AZ",
+    "city":"Phoenix"
+  },
+  {
+    "unitid":104151,
+    "name":"Arizona State University Campus Immersion",
+    "state":"AZ",
+    "city":"Tucson"
+  },
+  {
+    "unitid":104160,
+    "name":"Arizona Western College",
+    "state":"AZ",
+    "city":"Coolidge"
+  },
+  {
+    "unitid":104568,
+    "name":"Avalon Institute-Mesa",
+    "state":"AZ",
+    "city":"Prescott"
+  },
+  {
+    "unitid":105899,
+    "name":"Arizona Christian University",
+    "state":"AR",
+    "city":"Little Rock"
+  },
+  {
+    "unitid":106306,
+    "name":"Arkansas Baptist College",
+    "state":"AR",
+    "city":"Batesville"
+  },
+  {
+    "unitid":106315,
+    "name":"Arkansas Beauty School-Little Rock",
+    "state":"AR",
+    "city":"North Little Rock"
+  },
+  {
+    "unitid":106324,
+    "name":"Arkansas Beauty College",
+    "state":"AR",
+    "city":"Fort Smith"
+  },
+  {
+    "unitid":106351,
+    "name":"Arkansas Technical School",
+    "state":"AR",
+    "city":"Pine Bluff"
+  },
+  {
+    "unitid":106360,
+    "name":"Arthur's Beauty College",
+    "state":"AR",
+    "city":"Beebe"
+  },
+  {
+    "unitid":106449,
+    "name":"Arkansas State University-Beebe",
+    "state":"AR",
+    "city":"Monticello"
+  },
+  {
+    "unitid":106458,
+    "name":"Arkansas State University",
+    "state":"AR",
+    "city":"Jacksonville"
+  },
+  {
+    "unitid":106467,
+    "name":"Arkansas Tech University",
+    "state":"AR",
+    "city":"Little Rock"
+  },
+  {
+    "unitid":106494,
+    "name":"Arthur's Beauty College",
+    "state":"AR",
+    "city":"Conway"
+  },
+  {
+    "unitid":107293,
+    "name":"Academy of Salon and Spa",
+    "state":"AR",
+    "city":"North Little Rock"
+  },
+  {
+    "unitid":107318,
+    "name":"Arkansas State University Mid-South",
+    "state":"AR",
+    "city":"Harrison"
+  },
+  {
+    "unitid":107327,
+    "name":"Arkansas Northeastern College",
+    "state":"AR",
+    "city":"Springdale"
+  },
+  {
+    "unitid":107521,
+    "name":"Arkansas State University Three Rivers",
+    "state":"AR",
+    "city":"Morrilton"
+  },
+  {
+    "unitid":108232,
+    "name":"Academy of Art University",
+    "state":"CA",
+    "city":"Los Angeles"
+  },
+  {
+    "unitid":108269,
+    "name":"Academy of Chinese Culture and Health Sciences",
+    "state":"CA",
+    "city":"Berkeley"
+  },
+  {
+    "unitid":108807,
+    "name":"Allan Hancock College",
+    "state":"CA",
+    "city":"West Covina"
+  },
+  {
+    "unitid":108852,
+    "name":"American Academy of Dramatic Arts-Los Angeles",
+    "state":"CA",
+    "city":"Los Angeles"
+  },
+  {
+    "unitid":108870,
+    "name":"American Film Institute Conservatory",
+    "state":"CA",
+    "city":"Lancaster"
+  },
+  {
+    "unitid":108977,
+    "name":"American Beauty College",
+    "state":"CA",
+    "city":"Pasadena"
+  },
+  {
+    "unitid":109040,
+    "name":"American Career College-Los Angeles",
+    "state":"CA",
+    "city":"Los Angeles"
+  },
+  {
+    "unitid":109208,
+    "name":"American River College",
+    "state":"CA",
+    "city":"San Diego"
+  },
+  {
+    "unitid":109350,
+    "name":"Antelope Valley Community College District",
+    "state":"CA",
+    "city":"Azusa"
+  },
+  {
+    "unitid":109651,
+    "name":"Art Center College of Design",
+    "state":"CA",
+    "city":"Bakersfield"
+  },
+  {
+    "unitid":109721,
+    "name":"Associated Technical College-Los Angeles",
+    "state":"CA",
+    "city":"Barstow"
+  },
+  {
+    "unitid":109730,
+    "name":"Associated Technical College-San Diego",
+    "state":"CA",
+    "city":"Chula Vista"
+  },
+  {
+    "unitid":109785,
+    "name":"Azusa Pacific University",
+    "state":"CA",
+    "city":"Anaheim"
+  },
+  {
+    "unitid":110468,
+    "name":"Alliant International University-San Diego",
+    "state":"CA",
+    "city":"Pomona"
+  },
+  {
+    "unitid":116846,
+    "name":"American Jewish University",
+    "state":"CA",
+    "city":"La Puente"
+  },
+  {
+    "unitid":126182,
+    "name":"Adams State University",
+    "state":"CO",
+    "city":"Denver"
+  },
+  {
+    "unitid":126207,
+    "name":"Aims Community College",
+    "state":"CO",
+    "city":"Denver"
+  },
+  {
+    "unitid":126289,
+    "name":"Arapahoe Community College",
+    "state":"CO",
+    "city":"Durango"
+  },
+  {
+    "unitid":128498,
+    "name":"Albertus Magnus College",
+    "state":"CT",
+    "city":"Waterbury"
+  },
+  {
+    "unitid":128577,
+    "name":"Asnuntuck Community College",
+    "state":"CT",
+    "city":"Middletown"
+  },
+  {
+    "unitid":129482,
+    "name":"American Institute-West Hartford",
+    "state":"CT",
+    "city":"New Haven"
+  },
+  {
+    "unitid":131159,
+    "name":"American University",
+    "state":"FL",
+    "city":"Port Charlotte"
+  },
+  {
+    "unitid":132374,
+    "name":"Atlantic Technical College",
+    "state":"FL",
+    "city":"Saint Augustine"
+  },
+  {
+    "unitid":132842,
+    "name":"Albizu University-Miami",
+    "state":"FL",
+    "city":"Key West"
+  },
+  {
+    "unitid":133872,
+    "name":"AdventHealth University",
+    "state":"FL",
+    "city":"Fort Lauderdale"
+  },
+  {
+    "unitid":134811,
+    "name":"AI Miami International University of Art and Design",
+    "state":"FL",
+    "city":"Fort Lauderdale"
+  },
+  {
+    "unitid":137801,
+    "name":"Altierus Career College-Tampa",
+    "state":"GA",
+    "city":"Conyers"
+  },
+  {
+    "unitid":138558,
+    "name":"Abraham Baldwin Agricultural College",
+    "state":"GA",
+    "city":"Columbus"
+  },
+  {
+    "unitid":138600,
+    "name":"Agnes Scott College",
+    "state":"GA",
+    "city":"Columbus"
+  },
+  {
+    "unitid":138682,
+    "name":"Albany Technical College",
+    "state":"GA",
+    "city":"Dalton"
+  },
+  {
+    "unitid":138716,
+    "name":"Albany State University",
+    "state":"GA",
+    "city":"Stone Mountain"
+  },
+  {
+    "unitid":138761,
+    "name":"Andrew College",
+    "state":"GA",
+    "city":"Savannah"
+  },
+  {
+    "unitid":138840,
+    "name":"Atlanta Technical College",
+    "state":"GA",
+    "city":"Atlanta"
+  },
+  {
+    "unitid":138901,
+    "name":"Atlanta Metropolitan State College",
+    "state":"GA",
+    "city":"Fort Valley"
+  },
+  {
+    "unitid":138929,
+    "name":"Atlanta's John Marshall Law School",
+    "state":"GA",
+    "city":"Atlanta"
+  },
+  {
+    "unitid":138938,
+    "name":"Atlanta School of Massage",
+    "state":"GA",
+    "city":"Atlanta"
+  },
+  {
+    "unitid":138956,
+    "name":"Augusta Technical College",
+    "state":"GA",
+    "city":"Milledgeville"
+  },
+  {
+    "unitid":142407,
+    "name":"Aveda Institute-Twin Falls",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":142832,
+    "name":"Adler University",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":142887,
+    "name":"American Academy of Art College",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":142957,
+    "name":"American Islamic College",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":143084,
+    "name":"Augustana College",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":143118,
+    "name":"Aurora University",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":150066,
+    "name":"Anderson University",
+    "state":"IN",
+    "city":"South Bend"
+  },
+  {
+    "unitid":151865,
+    "name":"Anabaptist Mennonite Biblical Seminary",
+    "state":"IA",
+    "city":"Ankeny"
+  },
+  {
+    "unitid":152798,
+    "name":"Allen College",
+    "state":"IA",
+    "city":"Ames"
+  },
+  {
+    "unitid":153463,
+    "name":"American Hair Academy",
+    "state":"IA",
+    "city":"Davenport"
+  },
+  {
+    "unitid":154022,
+    "name":"Ashford University",
+    "state":"KS",
+    "city":"Lindsborg"
+  },
+  {
+    "unitid":154642,
+    "name":"Allen County Community College",
+    "state":"KS",
+    "city":"Kansas City"
+  },
+  {
+    "unitid":156189,
+    "name":"Alice Lloyd College",
+    "state":"KY",
+    "city":"Frankfort"
+  },
+  {
+    "unitid":156213,
+    "name":"Asbury University",
+    "state":"KY",
+    "city":"Owensboro"
+  },
+  {
+    "unitid":156222,
+    "name":"Asbury Theological Seminary",
+    "state":"KY",
+    "city":"Lexington"
+  },
+  {
+    "unitid":156231,
+    "name":"Ashland Community and Technical College",
+    "state":"KY",
+    "city":"Grayson"
+  },
+  {
+    "unitid":157021,
+    "name":"American National University-Pikeville",
+    "state":"KY",
+    "city":"Crestview Hills"
+  },
+  {
+    "unitid":158246,
+    "name":"Ayers Career College",
+    "state":"LA",
+    "city":"Thibodaux"
+  },
+  {
+    "unitid":158778,
+    "name":"Avery James College",
+    "state":"LA",
+    "city":"Monroe"
+  },
+  {
+    "unitid":159513,
+    "name":"Aveda Arts & Sciences Institute-Baton Rouge",
+    "state":"LA",
+    "city":"Lafayette"
+  },
+  {
+    "unitid":159522,
+    "name":"Aveda Arts & Sciences Institute-Lafayette",
+    "state":"LA",
+    "city":"Lacombe"
+  },
+  {
+    "unitid":160320,
+    "name":"Aveda Arts & Sciences Institute-Covington",
+    "state":"ME",
+    "city":"Presque Isle"
+  },
+  {
+    "unitid":161688,
+    "name":"Allegany College of Maryland",
+    "state":"MD",
+    "city":"Princess Anne"
+  },
+  {
+    "unitid":161767,
+    "name":"Anne Arundel Community College",
+    "state":"MD",
+    "city":"Towson"
+  },
+  {
+    "unitid":161800,
+    "name":"Award Beauty School",
+    "state":"MD",
+    "city":"Silver Spring"
+  },
+  {
+    "unitid":162830,
+    "name":"Aveda Institute-Maryland",
+    "state":"MA",
+    "city":"Amherst"
+  },
+  {
+    "unitid":164447,
+    "name":"American International College",
+    "state":"MA",
+    "city":"Concord"
+  },
+  {
+    "unitid":164465,
+    "name":"Amherst College",
+    "state":"MA",
+    "city":"Quincy"
+  },
+  {
+    "unitid":164492,
+    "name":"Anna Maria College",
+    "state":"MA",
+    "city":"Boston"
+  },
+  {
+    "unitid":164535,
+    "name":"Assabet Valley Regional Technical School",
+    "state":"MA",
+    "city":"Boston"
+  },
+  {
+    "unitid":164562,
+    "name":"Assumption University",
+    "state":"MA",
+    "city":"Beverly"
+  },
+  {
+    "unitid":168528,
+    "name":"Adrian College",
+    "state":"MI",
+    "city":"Ironwood"
+  },
+  {
+    "unitid":168546,
+    "name":"Albion College",
+    "state":"MI",
+    "city":"Wyoming"
+  },
+  {
+    "unitid":168591,
+    "name":"Alma College",
+    "state":"MI",
+    "city":"Allendale"
+  },
+  {
+    "unitid":168607,
+    "name":"Alpena Community College",
+    "state":"MI",
+    "city":"Lansing"
+  },
+  {
+    "unitid":168740,
+    "name":"Andrews University",
+    "state":"MI",
+    "city":"Dearborn"
+  },
+  {
+    "unitid":168786,
+    "name":"Aquinas College",
+    "state":"MI",
+    "city":"Hillsdale"
+  },
+  {
+    "unitid":172866,
+    "name":"Academy College",
+    "state":"MN",
+    "city":"Minneapolis"
+  },
+  {
+    "unitid":172918,
+    "name":"Alexandria Technical & Community College",
+    "state":"MN",
+    "city":"Minneapolis"
+  },
+  {
+    "unitid":172954,
+    "name":"Anoka Technical College",
+    "state":"MN",
+    "city":"St. Louis Park"
+  },
+  {
+    "unitid":172963,
+    "name":"Anoka-Ramsey Community College",
+    "state":"MN",
+    "city":"WOODBURY"
+  },
+  {
+    "unitid":173045,
+    "name":"Augsburg University",
+    "state":"MN",
+    "city":"Duluth"
+  },
+  {
+    "unitid":173744,
+    "name":"Aveda Arts & Sciences Institute Minneapolis",
+    "state":"MN",
+    "city":"Duluth"
+  },
+  {
+    "unitid":175342,
+    "name":"Alcorn State University",
+    "state":"MS",
+    "city":"Aberdeen"
+  },
+  {
+    "unitid":175722,
+    "name":"Academy of Hair Design-Grenada",
+    "state":"MO",
+    "city":"Moberly"
+  },
+  {
+    "unitid":176600,
+    "name":"Aquinas Institute of Theology",
+    "state":"MO",
+    "city":"Saint Louis"
+  },
+  {
+    "unitid":176628,
+    "name":"Avila University",
+    "state":"MO",
+    "city":"Kirksville"
+  },
+  {
+    "unitid":177834,
+    "name":"A T Still University of Health Sciences",
+    "state":"MO",
+    "city":"Saint Louis"
+  },
+  {
+    "unitid":179991,
+    "name":"Academy of Cosmetology Inc",
+    "state":"NE",
+    "city":"Kearney"
+  },
+  {
+    "unitid":180203,
+    "name":"Aaniiih Nakoda College",
+    "state":"NE",
+    "city":"Norfolk"
+  },
+  {
+    "unitid":181880,
+    "name":"Academy of Hair Design-Las Vegas",
+    "state":"NH",
+    "city":"Merrimack"
+  },
+  {
+    "unitid":183600,
+    "name":"Assumption College for Sisters",
+    "state":"NJ",
+    "city":"West Long Branch"
+  },
+  {
+    "unitid":183655,
+    "name":"Atlantic Cape Community College",
+    "state":"NJ",
+    "city":"Montclair"
+  },
+  {
+    "unitid":183983,
+    "name":"Adult and Continuing Education-BCTS",
+    "state":"NJ",
+    "city":"Princeton"
+  },
+  {
+    "unitid":184092,
+    "name":"American Institute-Clifton",
+    "state":"NJ",
+    "city":"Morristown"
+  },
+  {
+    "unitid":187000,
+    "name":"Aviation Institute of Maintenance-Teterboro",
+    "state":"NY",
+    "city":"Albany"
+  },
+  {
+    "unitid":188429,
+    "name":"Adelphi University",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":188526,
+    "name":"Albany College of Pharmacy and Health Sciences",
+    "state":"NY",
+    "city":"Plattsburgh"
+  },
+  {
+    "unitid":188535,
+    "name":"Albany Law School",
+    "state":"NY",
+    "city":"Yonkers"
+  },
+  {
+    "unitid":188580,
+    "name":"Albany Medical College",
+    "state":"NY",
+    "city":"Rochester"
+  },
+  {
+    "unitid":188641,
+    "name":"Alfred University",
+    "state":"NY",
+    "city":"Hamilton"
+  },
+  {
+    "unitid":188650,
+    "name":"Allen School-Brooklyn",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":188678,
+    "name":"American Academy of Dramatic Arts-New York",
+    "state":"NY",
+    "city":"Hudson"
+  },
+  {
+    "unitid":188687,
+    "name":"American Academy McAllister Institute of Funeral Service",
+    "state":"NY",
+    "city":"Astoria"
+  },
+  {
+    "unitid":188854,
+    "name":"American Musical and Dramatic Academy",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":188890,
+    "name":"Apex Technical School",
+    "state":"NY",
+    "city":"Ithaca"
+  },
+  {
+    "unitid":188915,
+    "name":"Arnot Ogden Medical Center",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":188942,
+    "name":"Associated Beth Rivkah Schools",
+    "state":"NY",
+    "city":"Corning"
+  },
+  {
+    "unitid":189477,
+    "name":"American Beauty School",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":194161,
+    "name":"Alliance University",
+    "state":"NY",
+    "city":"Utica"
+  },
+  {
+    "unitid":197869,
+    "name":"Appalachian State University",
+    "state":"NC",
+    "city":"Dunn"
+  },
+  {
+    "unitid":197887,
+    "name":"Asheville-Buncombe Technical Community College",
+    "state":"NC",
+    "city":"High Point"
+  },
+  {
+    "unitid":199786,
+    "name":"Alamance Community College",
+    "state":"OH",
+    "city":"Salem"
+  },
+  {
+    "unitid":200697,
+    "name":"Air Force Institute of Technology-Graduate School of Engineering & Management",
+    "state":"OH",
+    "city":"Columbus"
+  },
+  {
+    "unitid":200873,
+    "name":"Allegheny Wesleyan College",
+    "state":"OH",
+    "city":"Miamisburg"
+  },
+  {
+    "unitid":201034,
+    "name":"Apollo Career Center",
+    "state":"OH",
+    "city":"Dayton"
+  },
+  {
+    "unitid":201061,
+    "name":"Art Academy of Cincinnati",
+    "state":"OH",
+    "city":"Defiance"
+  },
+  {
+    "unitid":201098,
+    "name":"Ashland County-West Holmes Career Center",
+    "state":"OH",
+    "city":"Granville"
+  },
+  {
+    "unitid":201104,
+    "name":"Ashland University",
+    "state":"OH",
+    "city":"Piqua"
+  },
+  {
+    "unitid":201131,
+    "name":"Ashtabula County Technical and Career Campus",
+    "state":"OH",
+    "city":"Milan"
+  },
+  {
+    "unitid":201140,
+    "name":"Athenaeum of Ohio",
+    "state":"OH",
+    "city":"Findlay"
+  },
+  {
+    "unitid":201159,
+    "name":"Auburn Career Center",
+    "state":"OH",
+    "city":"Columbus"
+  },
+  {
+    "unitid":201177,
+    "name":"Aultman College of Nursing and Health Sciences",
+    "state":"OH",
+    "city":"Akron"
+  },
+  {
+    "unitid":203030,
+    "name":"Adult and Community Education-Hudson",
+    "state":"OH",
+    "city":"Alliance"
+  },
+  {
+    "unitid":210508,
+    "name":"Academy of Vocal Arts",
+    "state":"PA",
+    "city":"Lebanon"
+  },
+  {
+    "unitid":210571,
+    "name":"Albright College",
+    "state":"PA",
+    "city":"York"
+  },
+  {
+    "unitid":210599,
+    "name":"All-State Career School",
+    "state":"PA",
+    "city":"Lancaster"
+  },
+  {
+    "unitid":210669,
+    "name":"Allegheny College",
+    "state":"PA",
+    "city":"Pottsville"
+  },
+  {
+    "unitid":210748,
+    "name":"Altoona Beauty School Inc",
+    "state":"PA",
+    "city":"Moosic"
+  },
+  {
+    "unitid":210775,
+    "name":"Alvernia University",
+    "state":"PA",
+    "city":"Harrisburg"
+  },
+  {
+    "unitid":210809,
+    "name":"American College of Financial Services",
+    "state":"PA",
+    "city":"Erie"
+  },
+  {
+    "unitid":211006,
+    "name":"Automotive Training Center-Exton",
+    "state":"PA",
+    "city":"Lancaster"
+  },
+  {
+    "unitid":211088,
+    "name":"Arcadia University",
+    "state":"PA",
+    "city":"Gettysburg"
+  },
+  {
+    "unitid":214023,
+    "name":"ASPIRA City College",
+    "state":"PA",
+    "city":"Lancaster"
+  },
+  {
+    "unitid":217615,
+    "name":"Aiken Technical College",
+    "state":"SC",
+    "city":"Allendale"
+  },
+  {
+    "unitid":217624,
+    "name":"Allen University",
+    "state":"SC",
+    "city":"Sumter"
+  },
+  {
+    "unitid":217633,
+    "name":"Anderson University",
+    "state":"SC",
+    "city":"Union"
+  },
+  {
+    "unitid":219000,
+    "name":"Augustana University",
+    "state":"TN",
+    "city":"Lebanon"
+  },
+  {
+    "unitid":219170,
+    "name":"Avera McKennan Hospital School of Radiologic Technology",
+    "state":"TN",
+    "city":"Elizabethton"
+  },
+  {
+    "unitid":219338,
+    "name":"Avera Sacred Heart Hospital",
+    "state":"TN",
+    "city":"Jacksboro"
+  },
+  {
+    "unitid":219505,
+    "name":"American Baptist College",
+    "state":"TN",
+    "city":"Livingston"
+  },
+  {
+    "unitid":219587,
+    "name":"Arnolds Beauty School",
+    "state":"TN",
+    "city":"Pulaski"
+  },
+  {
+    "unitid":219602,
+    "name":"Austin Peay State University",
+    "state":"TN",
+    "city":"McKenzie"
+  },
+  {
+    "unitid":219851,
+    "name":"Austin's Beauty College Inc",
+    "state":"TN",
+    "city":"Tullahoma"
+  },
+  {
+    "unitid":222178,
+    "name":"Abilene Christian University",
+    "state":"TX",
+    "city":"El Paso"
+  },
+  {
+    "unitid":222497,
+    "name":"Alamo Community College District Central Office",
+    "state":"TX",
+    "city":"Austin"
+  },
+  {
+    "unitid":222567,
+    "name":"Alvin Community College",
+    "state":"TX",
+    "city":"Amarillo"
+  },
+  {
+    "unitid":222576,
+    "name":"Amarillo College",
+    "state":"TX",
+    "city":"Dallas"
+  },
+  {
+    "unitid":222628,
+    "name":"Amberton University",
+    "state":"TX",
+    "city":"Benbrook"
+  },
+  {
+    "unitid":222822,
+    "name":"Angelina College",
+    "state":"TX",
+    "city":"Borger"
+  },
+  {
+    "unitid":222831,
+    "name":"Angelo State University",
+    "state":"TX",
+    "city":"Galveston"
+  },
+  {
+    "unitid":222877,
+    "name":"Arlington Baptist University",
+    "state":"TX",
+    "city":"DALLAS"
+  },
+  {
+    "unitid":222886,
+    "name":"Arlington Career Institute",
+    "state":"TX",
+    "city":"Denison"
+  },
+  {
+    "unitid":222983,
+    "name":"Austin College",
+    "state":"TX",
+    "city":"Abilene"
+  },
+  {
+    "unitid":222992,
+    "name":"Austin Community College District",
+    "state":"TX",
+    "city":"Athens"
+  },
+  {
+    "unitid":223001,
+    "name":"Austin Presbyterian Theological Seminary",
+    "state":"TX",
+    "city":"Hillsboro"
+  },
+  {
+    "unitid":227748,
+    "name":"Aviation Institute of Maintenance-Houston",
+    "state":"TX",
+    "city":"Seguin"
+  },
+  {
+    "unitid":231411,
+    "name":"Advanced Technology Institute",
+    "state":"VA",
+    "city":"Radford"
+  },
+  {
+    "unitid":231420,
+    "name":"Averett University",
+    "state":"VA",
+    "city":"Lynchburg"
+  },
+  {
+    "unitid":232797,
+    "name":"American National University",
+    "state":"WA",
+    "city":"Bellevue"
+  },
+  {
+    "unitid":234119,
+    "name":"Asher Institute of Hampton",
+    "state":"WA",
+    "city":"Seattle"
+  },
+  {
+    "unitid":237118,
+    "name":"Alderson Broaddus University",
+    "state":"WI",
+    "city":"Janesville"
+  },
+  {
+    "unitid":237127,
+    "name":"Appalachian Beauty School",
+    "state":"WI",
+    "city":"Milwaukee"
+  },
+  {
+    "unitid":237136,
+    "name":"Appalachian Bible College",
+    "state":"WI",
+    "city":"Waukesha"
+  },
+  {
+    "unitid":237729,
+    "name":"Academy of Careers and Technology",
+    "state":"WI",
+    "city":"Green Bay"
+  },
+  {
+    "unitid":238193,
+    "name":"Alverno College",
+    "state":"WI",
+    "city":"Madison"
+  },
+  {
+    "unitid":240736,
+    "name":"American Samoa Community College",
+    "state":"PR",
+    "city":"Arecibo"
+  },
+  {
+    "unitid":241100,
+    "name":"American University of Puerto Rico",
+    "state":"PR",
+    "city":"Utuado"
+  },
+  {
+    "unitid":241128,
+    "name":"American University of Puerto Rico",
+    "state":"PR",
+    "city":"Mayaguez"
+  },
+  {
+    "unitid":241146,
+    "name":"American Educational College",
+    "state":"PR",
+    "city":"San Juan"
+  },
+  {
+    "unitid":241182,
+    "name":"Antilles School of Technical Careers",
+    "state":"PR",
+    "city":"Ponce"
+  },
+  {
+    "unitid":241216,
+    "name":"Atlantic University",
+    "state":"PR",
+    "city":"Carolina"
+  },
+  {
+    "unitid":241331,
+    "name":"Albizu University-San Juan",
+    "state":"PR",
+    "city":"Bayamon"
+  },
+  {
+    "unitid":245838,
+    "name":"Antioch University-Los Angeles",
+    "state":"WI",
+    "city":"Hayward"
+  },
+  {
+    "unitid":245847,
+    "name":"Antioch University-Santa Barbara",
+    "state":"LA",
+    "city":"Shreveport"
+  },
+  {
+    "unitid":245865,
+    "name":"Antioch University-New England",
+    "state":"AZ",
+    "city":"Mesa"
+  },
+  {
+    "unitid":245883,
+    "name":"Antioch University-Seattle",
+    "state":"CA",
+    "city":"Alhambra"
+  },
+  {
+    "unitid":245892,
+    "name":"Antioch University",
+    "state":"CO",
+    "city":"Greenwood Village"
+  },
+  {
+    "unitid":246813,
+    "name":"Athens Technical College",
+    "state":"MT",
+    "city":"Bozeman"
+  },
+  {
+    "unitid":248192,
+    "name":"Allure Beauty College",
+    "state":"AZ",
+    "city":"Tempe"
+  },
+  {
+    "unitid":250285,
+    "name":"Aviation Institute of Maintenance-Philadelphia",
+    "state":"OK",
+    "city":"Enid"
+  },
+  {
+    "unitid":262369,
+    "name":"Adrian's Beauty College of Turlock",
+    "state":"OK",
+    "city":"Alva"
+  },
+  {
+    "unitid":362700,
+    "name":"Aveda Institute-Fort Myers",
+    "state":"IL",
+    "city":"Bloomington"
+  },
+  {
+    "unitid":365213,
+    "name":"Autry Technology Center",
+    "state":"GA",
+    "city":"Vidalia"
+  },
+  {
+    "unitid":372356,
+    "name":"Avalon Institute-Aurora",
+    "state":"CA",
+    "city":"Pasadena"
+  },
+  {
+    "unitid":372462,
+    "name":"Academy of Cosmetology",
+    "state":"CA",
+    "city":"Salinas"
+  },
+  {
+    "unitid":373784,
+    "name":"All-State Career-Baltimore",
+    "state":"MN",
+    "city":"Cloquet"
+  },
+  {
+    "unitid":374024,
+    "name":"Adler Graduate School",
+    "state":"WA",
+    "city":"Bellingham"
+  },
+  {
+    "unitid":374316,
+    "name":"Academy of Hair Design-Jackson",
+    "state":"UT",
+    "city":"Provo"
+  },
+  {
+    "unitid":376446,
+    "name":"Academy of Hair Technology",
+    "state":"NY",
+    "city":"Hauppauge"
+  },
+  {
+    "unitid":378886,
+    "name":"Artistic Nails and Beauty Academy-Tampa",
+    "state":"TX",
+    "city":"Houston"
+  },
+  {
+    "unitid":382461,
+    "name":"Academy of Hair Design-Pearl",
+    "state":"LA",
+    "city":"Covington"
+  },
+  {
+    "unitid":384306,
+    "name":"Acupuncture and Integrative Medicine College-Berkeley",
+    "state":"NY",
+    "city":"Elmira"
+  },
+  {
+    "unitid":385415,
+    "name":"Albert Einstein College of Medicine",
+    "state":"LA",
+    "city":"Lafayette"
+  },
+  {
+    "unitid":393861,
+    "name":"Asian-American International Beauty College",
+    "state":"TX",
+    "city":"Harlingen"
+  },
+  {
+    "unitid":400187,
+    "name":"Advance Beauty College",
+    "state":"FL",
+    "city":"Hialeah"
+  },
+  {
+    "unitid":412173,
+    "name":"Academy for Nursing and Health Occupations",
+    "state":"NY",
+    "city":"Hudson Falls"
+  },
+  {
+    "unitid":414063,
+    "name":"Artistic Academy of Hair Design",
+    "state":"OK",
+    "city":"Muskogee"
+  },
+  {
+    "unitid":415987,
+    "name":"Allen School-Jamaica",
+    "state":"PA",
+    "city":"Lebanon"
+  },
+  {
+    "unitid":417716,
+    "name":"Applied Technology Services",
+    "state":"IL",
+    "city":"Lombard"
+  },
+  {
+    "unitid":418038,
+    "name":"Albany BOCES-Adult Practical Nursing Program",
+    "state":"NY",
+    "city":"Monsey"
+  },
+  {
+    "unitid":418658,
+    "name":"All-State Career School-Pittsburgh",
+    "state":"OR",
+    "city":"Newport"
+  },
+  {
+    "unitid":418782,
+    "name":"Automeca Technical College-Aguadilla",
+    "state":"FL",
+    "city":"Daytona Beach"
+  },
+  {
+    "unitid":419244,
+    "name":"Atlanta Institute of Music and Media",
+    "state":"CA",
+    "city":"Long Beach"
+  },
+  {
+    "unitid":419703,
+    "name":"Automeca Technical College-Bayamon",
+    "state":"MD",
+    "city":"Suitland"
+  },
+  {
+    "unitid":419712,
+    "name":"Automeca Technical College-Caguas",
+    "state":"PA",
+    "city":"Monroeville"
+  },
+  {
+    "unitid":419721,
+    "name":"Automeca Technical College-Ponce",
+    "state":"TX",
+    "city":"San Antonio"
+  },
+  {
+    "unitid":420538,
+    "name":"Arkansas State University-Mountain Home",
+    "state":"NY",
+    "city":"Williamsville"
+  },
+  {
+    "unitid":420802,
+    "name":"Arizona Board of Regents",
+    "state":"CT",
+    "city":"Bristol"
+  },
+  {
+    "unitid":421708,
+    "name":"Arizona College of Nursing-Tempe",
+    "state":"FL",
+    "city":"Cape Coral"
+  },
+  {
+    "unitid":421771,
+    "name":"Academy of Beauty Professionals",
+    "state":"NJ",
+    "city":"Toms River"
+  },
+  {
+    "unitid":421896,
+    "name":"Academia Serrant Inc",
+    "state":"TX",
+    "city":"El Paso"
+  },
+  {
+    "unitid":422835,
+    "name":"American College of Healthcare and Technology",
+    "state":"DE",
+    "city":"Wilmington"
+  },
+  {
+    "unitid":423397,
+    "name":"Advantage Technical College",
+    "state":"CA",
+    "city":"Santa Ana"
+  },
+  {
+    "unitid":427973,
+    "name":"Aviation Institute of Maintenance-Norfolk",
+    "state":"NE",
+    "city":"Winnebago"
+  },
+  {
+    "unitid":429085,
+    "name":"American College of Acupuncture and Oriental Med",
+    "state":"SC",
+    "city":"Myrtle Beach"
+  },
+  {
+    "unitid":429094,
+    "name":"AOMA Graduate School of Integrative Medicine",
+    "state":"FL",
+    "city":"Miami"
+  },
+  {
+    "unitid":432348,
+    "name":"Appalachian School of Law",
+    "state":"TX",
+    "city":"San Antonio"
+  },
+  {
+    "unitid":433004,
+    "name":"American University of Health Sciences",
+    "state":"AZ",
+    "city":"Tucson"
+  },
+  {
+    "unitid":434274,
+    "name":"Academy of Hair Design-Lufkin",
+    "state":"FL",
+    "city":"Sarasota"
+  },
+  {
+    "unitid":437608,
+    "name":"Advanced Barber College and Hair Design",
+    "state":"CA",
+    "city":"San Francisco"
+  },
+  {
+    "unitid":438586,
+    "name":"American InterContinental University-Atlanta",
+    "state":"FL",
+    "city":"Clearwater"
+  },
+  {
+    "unitid":438735,
+    "name":"Aviation Institute of Maintenance-Indianapolis",
+    "state":"MO",
+    "city":"Houston"
+  },
+  {
+    "unitid":439446,
+    "name":"Atlantic Institute of Oriental Medicine",
+    "state":"OH",
+    "city":"Mentor"
+  },
+  {
+    "unitid":439969,
+    "name":"Acupuncture and Massage College",
+    "state":"WV",
+    "city":"Bridgeport"
+  },
+  {
+    "unitid":440059,
+    "name":"Aviation Institute of Maintenance-Atlanta",
+    "state":"CA",
+    "city":"Ontario"
+  },
+  {
+    "unitid":440138,
+    "name":"Antioch University-System Administration",
+    "state":"AR",
+    "city":"LIttle Rock"
+  },
+  {
+    "unitid":440402,
+    "name":"Arkansas State University-Newport",
+    "state":"CA",
+    "city":"Palm Desert"
+  },
+  {
+    "unitid":440651,
+    "name":"Atenas College",
+    "state":"AZ",
+    "city":"Sells"
+  },
+  {
+    "unitid":441052,
+    "name":"American Career College-Anaheim",
+    "state":"OK",
+    "city":"Shawnee"
+  },
+  {
+    "unitid":441496,
+    "name":"Aviation Institute of Maintenance-Kansas City",
+    "state":"CA",
+    "city":"North Hollywood"
+  },
+  {
+    "unitid":441636,
+    "name":"American Institute of Alternative Medicine",
+    "state":"CA",
+    "city":"W. Covina"
+  },
+  {
+    "unitid":441788,
+    "name":"Aviation Institute of Maintenance-Dallas",
+    "state":"GA",
+    "city":"Norcross"
+  },
+  {
+    "unitid":442295,
+    "name":"Ave Maria School of Law",
+    "state":"SC",
+    "city":"Camden"
+  },
+  {
+    "unitid":442523,
+    "name":"Alaska Christian College",
+    "state":"FL",
+    "city":"Miami Lakes"
+  },
+  {
+    "unitid":443599,
+    "name":"American College of Healthcare Sciences",
+    "state":"TX",
+    "city":"Houston"
+  },
+  {
+    "unitid":443748,
+    "name":"Altierus Career College-Norcross",
+    "state":"FL",
+    "city":"Port Saint Lucie"
+  },
+  {
+    "unitid":444325,
+    "name":"ATI College-Whittier",
+    "state":"FL",
+    "city":"Spring Hill"
+  },
+  {
+    "unitid":444334,
+    "name":"Advance Science International College",
+    "state":"CA",
+    "city":"Redlands"
+  },
+  {
+    "unitid":444361,
+    "name":"ATA College",
+    "state":"VA",
+    "city":"Culpeper"
+  },
+  {
+    "unitid":444370,
+    "name":"American Advanced Technicians Institute",
+    "state":"NJ",
+    "city":"Bloomfield"
+  },
+  {
+    "unitid":444556,
+    "name":"Auguste Escoffier School of Culinary Arts-Austin",
+    "state":"PR",
+    "city":"Aguada"
+  },
+  {
+    "unitid":445027,
+    "name":"American InterContinental University System",
+    "state":"TX",
+    "city":"Jasper"
+  },
+  {
+    "unitid":445133,
+    "name":"American InterContinental University-Houston",
+    "state":"WV",
+    "city":"Beaver"
+  },
+  {
+    "unitid":445461,
+    "name":"Altierus Career College-Bissonnet",
+    "state":"CA",
+    "city":"Temple City"
+  },
+  {
+    "unitid":445540,
+    "name":"Arthur's Beauty College",
+    "state":"CA",
+    "city":"Lakewood"
+  },
+  {
+    "unitid":445762,
+    "name":"Aviation Institute of Maintenance-Manassas",
+    "state":"FL",
+    "city":"Jacksonville"
+  },
+  {
+    "unitid":446002,
+    "name":"American Academy of Health and Wellness",
+    "state":"MI",
+    "city":"Norton Shores"
+  },
+  {
+    "unitid":446039,
+    "name":"Arizona School of Acupuncture and Oriental Medicine",
+    "state":"MO",
+    "city":"Kansas City"
+  },
+  {
+    "unitid":446048,
+    "name":"Ave Maria University",
+    "state":"ND",
+    "city":"Fargo"
+  },
+  {
+    "unitid":446127,
+    "name":"ATA Career Education",
+    "state":"UT",
+    "city":"Orem"
+  },
+  {
+    "unitid":447449,
+    "name":"Academy of Hair Design-Jasper",
+    "state":"CO",
+    "city":"Greeley"
+  },
+  {
+    "unitid":447768,
+    "name":"American Career College-Ontario",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":447777,
+    "name":"Asher College",
+    "state":"OH",
+    "city":"Dayton"
+  },
+  {
+    "unitid":447795,
+    "name":"American Institute of Massage Therapy",
+    "state":"OK",
+    "city":"Tulsa"
+  },
+  {
+    "unitid":447847,
+    "name":"Aviator College of Aeronautical Science and Technology",
+    "state":"TX",
+    "city":"Houston"
+  },
+  {
+    "unitid":447883,
+    "name":"American Institute of Beauty",
+    "state":"UT",
+    "city":"Cedar City"
+  },
+  {
+    "unitid":447917,
+    "name":"Augusta School of Massage",
+    "state":"CA",
+    "city":"Rosemead"
+  },
+  {
+    "unitid":447935,
+    "name":"ATA College",
+    "state":"IN",
+    "city":"Indianapolis"
+  },
+  {
+    "unitid":448071,
+    "name":"Aveda Arts & Sciences Institute-New York",
+    "state":"CA",
+    "city":"Sherman Oaks"
+  },
+  {
+    "unitid":448257,
+    "name":"Avi Career Training",
+    "state":"DE",
+    "city":"Wilmington"
+  },
+  {
+    "unitid":448336,
+    "name":"Arkansas State University System",
+    "state":"AL",
+    "city":"Birmingham"
+  },
+  {
+    "unitid":448770,
+    "name":"Automotive Training Center-Warminster",
+    "state":"CA",
+    "city":"Citrus Heights"
+  },
+  {
+    "unitid":449339,
+    "name":"American Public University System",
+    "state":"FL",
+    "city":"Miami"
+  },
+  {
+    "unitid":449454,
+    "name":"Academy of Natural Therapy Inc",
+    "state":"KS",
+    "city":"Overland Park"
+  },
+  {
+    "unitid":449463,
+    "name":"Academy Di Capelli-School of Cosmetology",
+    "state":"MA",
+    "city":"West Springfield"
+  },
+  {
+    "unitid":449676,
+    "name":"Ace Institute of Technology",
+    "state":"NY",
+    "city":"Brooklyn"
+  },
+  {
+    "unitid":449728,
+    "name":"ATA College",
+    "state":"OH",
+    "city":"Westerville"
+  },
+  {
+    "unitid":449889,
+    "name":"American College of Education",
+    "state":"UT",
+    "city":"Saint George"
+  },
+  {
+    "unitid":449922,
+    "name":"Appalachian College of Pharmacy",
+    "state":"PR",
+    "city":"Bayam\u00f3n"
+  },
+  {
+    "unitid":450951,
+    "name":"Arizona Culinary Institute",
+    "state":"NV",
+    "city":"Reno"
+  },
+  {
+    "unitid":451051,
+    "name":"Academy of Massage and Bodywork",
+    "state":"CO",
+    "city":"Lakewood"
+  },
+  {
+    "unitid":451079,
+    "name":"Academy for Five Element Acupuncture",
+    "state":"CA",
+    "city":"Cathedral City"
+  },
+  {
+    "unitid":451097,
+    "name":"Academy of Career Training",
+    "state":"CA",
+    "city":"San Fernando"
+  },
+  {
+    "unitid":451149,
+    "name":"Aveda Institute-South Florida",
+    "state":"CA",
+    "city":"San Francisco"
+  },
+  {
+    "unitid":451158,
+    "name":"Aveda Institute-Tallahassee",
+    "state":"CA",
+    "city":"San Luis Obispo"
+  },
+  {
+    "unitid":451334,
+    "name":"Academy of Hair Design-Springfield",
+    "state":"GA",
+    "city":"Atlanta"
+  },
+  {
+    "unitid":451468,
+    "name":"Aveda Fredric's Institute-Cincinnati",
+    "state":"IL",
+    "city":"Rockford"
+  },
+  {
+    "unitid":451574,
+    "name":"Aveda Institute-Provo",
+    "state":"NC",
+    "city":"Asheville"
+  },
+  {
+    "unitid":452373,
+    "name":"ATA College-Cincinnati",
+    "state":"FL",
+    "city":"Pensacola"
+  },
+  {
+    "unitid":454722,
+    "name":"Academy of Esthetics and Cosmetology",
+    "state":"VA",
+    "city":"Vienna"
+  },
+  {
+    "unitid":454810,
+    "name":"Auguste Escoffier School of Culinary Arts-Boulder",
+    "state":"MN",
+    "city":"Spring Lake Park"
+  },
+  {
+    "unitid":454829,
+    "name":"Aspen University",
+    "state":"TX",
+    "city":"Houston"
+  },
+  {
+    "unitid":455141,
+    "name":"Aveda Institute-Chapel Hill",
+    "state":"IL",
+    "city":"New Lenox"
+  },
+  {
+    "unitid":455202,
+    "name":"American Institute of Medical Sciences & Education",
+    "state":"NV",
+    "city":"Reno"
+  },
+  {
+    "unitid":455275,
+    "name":"Aveda Institute-Columbus",
+    "state":"IN",
+    "city":"Indianapolis"
+  },
+  {
+    "unitid":455354,
+    "name":"Aveda Arts & Sciences Institute-San Antonio",
+    "state":"CA",
+    "city":"ARTESIA"
+  },
+  {
+    "unitid":455877,
+    "name":"Aveda Institute-Chicago",
+    "state":"IN",
+    "city":"Carmel"
+  },
+  {
+    "unitid":456001,
+    "name":"Advanced Welding Institute",
+    "state":"MT",
+    "city":"Great Falls"
+  },
+  {
+    "unitid":457271,
+    "name":"Academy for Jewish Religion California",
+    "state":"GA",
+    "city":"Morrow"
+  },
+  {
+    "unitid":457299,
+    "name":"Angeles College",
+    "state":"AR",
+    "city":"Little Rock"
+  },
+  {
+    "unitid":457314,
+    "name":"Angeles Institute",
+    "state":"GA",
+    "city":"Chamblee"
+  },
+  {
+    "unitid":457396,
+    "name":"American Academy of Cosmetology",
+    "state":"FL",
+    "city":"West Palm Beach"
+  },
+  {
+    "unitid":457411,
+    "name":"Aviation Institute of Maintenance-Orlando",
+    "state":"AZ",
+    "city":"Phoenix"
+  },
+  {
+    "unitid":457527,
+    "name":"Ambria College of Nursing",
+    "state":"VA",
+    "city":"Virginia Beach"
+  },
+  {
+    "unitid":457563,
+    "name":"Aveda Fredric's Institute-Indianapolis",
+    "state":"DE",
+    "city":"Newark"
+  },
+  {
+    "unitid":457679,
+    "name":"Avalon School of Cosmetology",
+    "state":"OR",
+    "city":"Bend"
+  },
+  {
+    "unitid":457989,
+    "name":"Academy for Careers and Technology",
+    "state":"TX",
+    "city":"Harlingen"
+  },
+  {
+    "unitid":458070,
+    "name":"Avenue Five Institute",
+    "state":"IN",
+    "city":"Granger"
+  },
+  {
+    "unitid":458113,
+    "name":"Ascent College",
+    "state":"TX",
+    "city":"Houston"
+  },
+  {
+    "unitid":458131,
+    "name":"Aveda Arts & Sciences Institute Seattle",
+    "state":"TX",
+    "city":"San Antonio"
+  },
+  {
+    "unitid":459277,
+    "name":"Aveda Institute-Denver",
+    "state":"CA",
+    "city":"Burbank"
+  },
+  {
+    "unitid":459523,
+    "name":"ABC Beauty Academy",
+    "state":"UT",
+    "city":"Provo"
+  },
+  {
+    "unitid":459541,
+    "name":"American Beauty Academy",
+    "state":"TX",
+    "city":"Sherman"
+  },
+  {
+    "unitid":460701,
+    "name":"Artistic Nails and Beauty Academy-Lakeland",
+    "state":"IN",
+    "city":"Indianapolis"
+  },
+  {
+    "unitid":460862,
+    "name":"Aveda Institute-Portland",
+    "state":"IN",
+    "city":"Kokomo"
+  },
+  {
+    "unitid":461111,
+    "name":"Allstate Hairstyling & Barber College",
+    "state":"TX",
+    "city":"Houston"
+  },
+  {
+    "unitid":461263,
+    "name":"American Medical Sciences Center",
+    "state":"CA",
+    "city":"Soledad"
+  },
+  {
+    "unitid":461342,
+    "name":"Acaydia School of Aesthetics",
+    "state":"OK",
+    "city":"Tulsa"
+  },
+  {
+    "unitid":461430,
+    "name":"Advanced Training Institute",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":461555,
+    "name":"Aveda Institute-New Mexico",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":461573,
+    "name":"American Trade School",
+    "state":"GA",
+    "city":"Macon"
+  },
+  {
+    "unitid":461625,
+    "name":"American Technical Institute",
+    "state":"CA",
+    "city":"Santa Barbara"
+  },
+  {
+    "unitid":461652,
+    "name":"Aveda Institute-Boise",
+    "state":"CA",
+    "city":"Van Nuys"
+  },
+  {
+    "unitid":461768,
+    "name":"Atelier Esthetique Institute of Esthetics",
+    "state":"FL",
+    "city":"Hollywood"
+  },
+  {
+    "unitid":461786,
+    "name":"Advanced College of Cosmetology",
+    "state":"TX",
+    "city":"Arlington"
+  },
+  {
+    "unitid":461892,
+    "name":"Abcott Institute",
+    "state":"CA",
+    "city":"Reseda"
+  },
+  {
+    "unitid":462062,
+    "name":"Academy for Salon Professionals",
+    "state":"TX",
+    "city":"San Antonio"
+  },
+  {
+    "unitid":469610,
+    "name":"Allen School-Phoenix",
+    "state":"TX",
+    "city":"Amarillo"
+  },
+  {
+    "unitid":474915,
+    "name":"Avalon Institute-Phoenix",
+    "state":"TX",
+    "city":"Richardson"
+  },
+  {
+    "unitid":474924,
+    "name":"Avalon Institute-Layton",
+    "state":"MO",
+    "city":"Ozark"
+  },
+  {
+    "unitid":475015,
+    "name":"Aveda Institute-Des Moines",
+    "state":"GA",
+    "city":"Savannah"
+  },
+  {
+    "unitid":475431,
+    "name":"ASI Career Institute",
+    "state":"NC",
+    "city":"Raleigh"
+  },
+  {
+    "unitid":475705,
+    "name":"Annenberg School of Nursing",
+    "state":"FL",
+    "city":"Melbourne"
+  },
+  {
+    "unitid":475714,
+    "name":"American Medical Academy",
+    "state":"KS",
+    "city":"Topeka"
+  },
+  {
+    "unitid":476683,
+    "name":"Athena Career Academy",
+    "state":"WV",
+    "city":"Franklin"
+  },
+  {
+    "unitid":476735,
+    "name":"Alexander Academy",
+    "state":"UT",
+    "city":"Taylorsville"
+  },
+  {
+    "unitid":476753,
+    "name":"Aveda Institute-Tucson",
+    "state":"CA",
+    "city":"Santa Ana"
+  },
+  {
+    "unitid":476869,
+    "name":"Austin Kade Academy",
+    "state":"TN",
+    "city":"Memphis"
+  },
+  {
+    "unitid":476878,
+    "name":"Aesthetic Science Institute",
+    "state":"NY",
+    "city":"Islandia"
+  },
+  {
+    "unitid":476957,
+    "name":"Academy di Firenze",
+    "state":"TX",
+    "city":"McAllen"
+  },
+  {
+    "unitid":479974,
+    "name":"Advance Beauty Techs Academy",
+    "state":"CA",
+    "city":"La Jolla"
+  },
+  {
+    "unitid":480019,
+    "name":"Advanced Career Institute",
+    "state":"IL",
+    "city":"Vernon Hills"
+  },
+  {
+    "unitid":480879,
+    "name":"Academy of Salon Professionals",
+    "state":"CA",
+    "city":"Ontario"
+  },
+  {
+    "unitid":480994,
+    "name":"Aspen Beauty Academy of Laurel",
+    "state":"TX",
+    "city":"Irving"
+  },
+  {
+    "unitid":482149,
+    "name":"Augusta University",
+    "state":"CA",
+    "city":"Selma"
+  },
+  {
+    "unitid":482185,
+    "name":"Academy of Interactive Entertainment",
+    "state":"NC",
+    "city":"Mebane"
+  },
+  {
+    "unitid":482194,
+    "name":"Arrojo Cosmetology School",
+    "state":"TX",
+    "city":"Longview"
+  },
+  {
+    "unitid":482255,
+    "name":"Aviation Institute of Maintenance-Las Vegas",
+    "state":"IL",
+    "city":"Dekalb"
+  },
+  {
+    "unitid":482963,
+    "name":"American Institute-Toms River",
+    "state":"TX",
+    "city":"Houston"
+  },
+  {
+    "unitid":482981,
+    "name":"Alamo City Barber College",
+    "state":"CA",
+    "city":"San Francisco"
+  },
+  {
+    "unitid":482990,
+    "name":"Arizona College-Mesa",
+    "state":"CA",
+    "city":"Inglewood"
+  },
+  {
+    "unitid":483009,
+    "name":"American College of Healthcare and Technology",
+    "state":"NY",
+    "city":"Brooklyn"
+  },
+  {
+    "unitid":483018,
+    "name":"Antioch College",
+    "state":"AZ",
+    "city":"Tempe"
+  },
+  {
+    "unitid":483124,
+    "name":"Arizona State University Digital Immersion",
+    "state":"TX",
+    "city":"Houston"
+  },
+  {
+    "unitid":483425,
+    "name":"Alexander Paul Institute of Hair Design",
+    "state":"CA",
+    "city":"Hemet"
+  },
+  {
+    "unitid":483595,
+    "name":"Ana G. Mendez University",
+    "state":"CA",
+    "city":"Carpinteria"
+  },
+  {
+    "unitid":483708,
+    "name":"Access Careers",
+    "state":"LA",
+    "city":"Lafayette"
+  },
+  {
+    "unitid":483850,
+    "name":"Alliance Computing Solutions",
+    "state":"TX",
+    "city":"McAllen"
+  },
+  {
+    "unitid":483975,
+    "name":"Alabama College of Osteopathic Medicine",
+    "state":"CA",
+    "city":"Los Angeles"
+  },
+  {
+    "unitid":484163,
+    "name":"Arizona School of Integrative Studies",
+    "state":"NY",
+    "city":"White Plains"
+  },
+  {
+    "unitid":484899,
+    "name":"Aveda Institute-Phoenix",
+    "state":"TX",
+    "city":"Arlington"
+  },
+  {
+    "unitid":485342,
+    "name":"Aparicio-Levy Technical College",
+    "state":"CA",
+    "city":"Los Angeles"
+  },
+  {
+    "unitid":485494,
+    "name":"Associated Barber College of San Diego",
+    "state":"FL",
+    "city":"Jacksonville"
+  },
+  {
+    "unitid":485500,
+    "name":"ABCO Technology",
+    "state":"TX",
+    "city":"Waco"
+  },
+  {
+    "unitid":485698,
+    "name":"American College of the Building Arts",
+    "state":"FL",
+    "city":"Tampa"
+  },
+  {
+    "unitid":485768,
+    "name":"Atlantis University",
+    "state":"FL",
+    "city":"Boynton Beach"
+  },
+  {
+    "unitid":486169,
+    "name":"American College of Barbering",
+    "state":"NY",
+    "city":"Far Rockaway"
+  },
+  {
+    "unitid":486415,
+    "name":"AMG School of Nursing",
+    "state":"WV",
+    "city":"Martinsburg"
+  },
+  {
+    "unitid":486558,
+    "name":"Aviation Institute of Maintenance-Fremont",
+    "state":"IN",
+    "city":"Indianapolis"
+  },
+  {
+    "unitid":486619,
+    "name":"Academy of Professional Cosmetology",
+    "state":"MO",
+    "city":"Kansas City"
+  },
+  {
+    "unitid":487348,
+    "name":"Aveda Institute Portland-Vancouver Campus",
+    "state":"TX",
+    "city":"Universal City"
+  },
+  {
+    "unitid":487375,
+    "name":"Arizona College of Nursing-Las Vegas",
+    "state":"MD",
+    "city":"Jessup"
+  },
+  {
+    "unitid":487506,
+    "name":"Aveda Institute-Madison",
+    "state":"MI",
+    "city":"Midland"
+  },
+  {
+    "unitid":487658,
+    "name":"Academy of Interactive Entertainment",
+    "state":"FL",
+    "city":"Parkland"
+  },
+  {
+    "unitid":487791,
+    "name":"Arclabs",
+    "state":"CA",
+    "city":"Berkeley"
+  },
+  {
+    "unitid":487852,
+    "name":"American Institute of Alternative Medicine",
+    "state":"CA",
+    "city":"Riverside"
+  },
+  {
+    "unitid":487995,
+    "name":"Alhambra Medical University",
+    "state":"CA",
+    "city":"Gardena"
+  },
+  {
+    "unitid":488031,
+    "name":"Abraham Lincoln University",
+    "state":"CA",
+    "city":"Van Nuys"
+  },
+  {
+    "unitid":488527,
+    "name":"Arkansas Colleges of Health Education",
+    "state":"MI",
+    "city":"Detroit"
+  },
+  {
+    "unitid":488916,
+    "name":"Alabama School of Nail Technology & Cosmetology",
+    "state":"MI",
+    "city":"Grand Rapids"
+  },
+  {
+    "unitid":489122,
+    "name":"Academy of Beauty Professionals",
+    "state":"TX",
+    "city":"Portland"
+  },
+  {
+    "unitid":489131,
+    "name":"Academy of Beauty Professionals",
+    "state":"AR",
+    "city":"Jacksonville"
+  },
+  {
+    "unitid":489140,
+    "name":"Academy of Beauty Professionals",
+    "state":"LA",
+    "city":"Baton Rouge"
+  },
+  {
+    "unitid":489247,
+    "name":"American Beauty Academy-West Valley Campus",
+    "state":"CA",
+    "city":"San Diego"
+  },
+  {
+    "unitid":489830,
+    "name":"Arthur's Beauty College",
+    "state":"TX",
+    "city":"Arlington"
+  },
+  {
+    "unitid":490081,
+    "name":"America Evangelical University",
+    "state":"FL",
+    "city":"Pompano Beach"
+  },
+  {
+    "unitid":490151,
+    "name":"Allied Health Careers Institute",
+    "state":"NJ",
+    "city":"Lakewood"
+  },
+  {
+    "unitid":490258,
+    "name":"American Barber and Beauty Academy",
+    "state":"AL",
+    "city":"Bessemer"
+  },
+  {
+    "unitid":490391,
+    "name":"American Beauty Schools",
+    "state":"CA",
+    "city":"Petaluma"
+  },
+  {
+    "unitid":490425,
+    "name":"Ann Webb Skin Institute",
+    "state":"TX",
+    "city":"San Antonio"
+  },
+  {
+    "unitid":490434,
+    "name":"Apex Academy Hair Skin Nails School of Cosmetology",
+    "state":"MN",
+    "city":"Red Lake"
+  },
+  {
+    "unitid":490522,
+    "name":"Allgood Beauty Institute",
+    "state":"IN",
+    "city":"Jeffersonville"
+  },
+  {
+    "unitid":490869,
+    "name":"American Institute-Somerset",
+    "state":"CA",
+    "city":"Escondido"
+  },
+  {
+    "unitid":490896,
+    "name":"Advantage Career Institute",
+    "state":"CA",
+    "city":"Vista"
+  },
+  {
+    "unitid":491075,
+    "name":"Arkansas Welding Academy",
+    "state":"TX",
+    "city":"Richardson"
+  },
+  {
+    "unitid":491464,
+    "name":"ABC Adult School",
+    "state":"TN",
+    "city":"Bartlett"
+  },
+  {
+    "unitid":491826,
+    "name":"Avenue Academy, A Cosmetology Institute",
+    "state":"TX",
+    "city":"San Antonio"
+  },
+  {
+    "unitid":491978,
+    "name":"Another Level Barbering and Cosmetology School",
+    "state":"DC",
+    "city":"Washington"
+  },
+  {
+    "unitid":492023,
+    "name":"Americare Technical School",
+    "state":"PR",
+    "city":"Manati"
+  },
+  {
+    "unitid":492643,
+    "name":"American Massage & Bodywork Institute",
+    "state":"TX",
+    "city":"Irving"
+  },
+  {
+    "unitid":493071,
+    "name":"Advantage Technical College",
+    "state":"OH",
+    "city":"Cleveland"
+  },
+  {
+    "unitid":493682,
+    "name":"American Institute of Healthcare & Technology",
+    "state":"NJ",
+    "city":"Nutley"
+  },
+  {
+    "unitid":493868,
+    "name":"A Better U Beauty Barber Academy",
+    "state":"IL",
+    "city":"Normal"
+  },
+  {
+    "unitid":494162,
+    "name":"Arizona College of Nursing-Dallas",
+    "state":"CA",
+    "city":"Porterville"
+  },
+  {
+    "unitid":494524,
+    "name":"Avenue Five Institute-South Austin Campus",
+    "state":"CA",
+    "city":"Fresno"
+  },
+  {
+    "unitid":494764,
+    "name":"Aviation Institute of Maintenance-Charlotte",
+    "state":"TX",
+    "city":"San Antonio"
+  },
+  {
+    "unitid":494904,
+    "name":"Access Careers-Islandia",
+    "state":"IL",
+    "city":"Joliet"
+  },
+  {
+    "unitid":494986,
+    "name":"Apex College of Veterinary Technology",
+    "state":"FL",
+    "city":"Pembroke Pines"
+  },
+  {
+    "unitid":495129,
+    "name":"Austin Career Institute",
+    "state":"PA",
+    "city":"Home"
+  },
+  {
+    "unitid":495192,
+    "name":"Alder Graduate School of Education",
+    "state":"AZ",
+    "city":"Glendale"
+  },
+  {
+    "unitid":495217,
+    "name":"Adrian H. Wallace Barber Academy",
+    "state":"NV",
+    "city":"Las Vegas"
+  },
+  {
+    "unitid":495420,
+    "name":"Arizona College of Nursing-Tampa",
+    "state":"MA",
+    "city":"Oxford"
+  },
+  {
+    "unitid":495439,
+    "name":"Arizona College of Nursing-Fort Lauderdale",
+    "state":"CA",
+    "city":"Sunnyvale"
+  },
+  {
+    "unitid":495448,
+    "name":"Arizona College of Nursing-Tucson",
+    "state":"OH",
+    "city":"Chillicothe"
+  },
+  {
+    "unitid":495457,
+    "name":"Arizona College of Nursing-Phoenix",
+    "state":"TN",
+    "city":"Sweetwater"
+  },
+  {
+    "unitid":495970,
+    "name":"Advantage Technical College-Aguadilla",
+    "state":"GA",
+    "city":"Stone Mountain"
+  },
+  {
+    "unitid":496399,
+    "name":"Agape College of Business and Science",
+    "state":"NC",
+    "city":"Asheville"
+  },
+  {
+    "unitid":496636,
+    "name":"Antigua College International",
+    "state":"FL",
+    "city":"Hudson"
+  },
+  {
+    "unitid":496724,
+    "name":"Aesthetics Institute",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":497037,
+    "name":"Abilene Christian University-Undergraduate Online",
+    "state":"AZ",
+    "city":"Tucson"
+  },
+  {
+    "unitid":497198,
+    "name":"Academy of Allied Health Careers",
+    "state":"DC",
+    "city":"Washington"
+  },
+  {
+    "unitid":497268,
+    "name":"Arizona College of Nursing-Salt Lake City",
+    "state":"TN",
+    "city":"Memphis"
+  },
+  {
+    "unitid":497277,
+    "name":"Arizona College-Glendale",
+    "state":"AR",
+    "city":"Siloam Springs"
+  },
+  {
+    "unitid":497301,
+    "name":"Avalon Institute-Las Vegas",
+    "state":"AR",
+    "city":"Fayetteville"
+  },
+  {
+    "unitid":497329,
+    "name":"American Institute-Cherry Hill",
+    "state":"AR",
+    "city":"Texarkana"
+  },
+  {
+    "unitid":497374,
+    "name":"Academia Medical Institute",
+    "state":"CA",
+    "city":"Irvine"
+  },
+  {
+    "unitid":497718,
+    "name":"Academy for Jewish Religion",
+    "state":"MD",
+    "city":"Landover"
+  },
+  {
+    "unitid":497736,
+    "name":"American College of Healthcare and Technology-Santa Ana",
+    "state":"CO",
+    "city":"La Junta"
+  },
+  {
+    "unitid":497745,
+    "name":"Aviation Institute of Maintenance-Chicago",
+    "state":"CT",
+    "city":"Bridgeport"
+  },
+  {
+    "unitid":497790,
+    "name":"Atlantis University-Florida Palms University",
+    "state":"CT",
+    "city":"Niantic"
+  },
+  {
+    "unitid":497897,
+    "name":"Aveda Arts & Sciences Institute Lafayette-Arlington",
+    "state":"CT",
+    "city":"New London"
+  },
+  {
+    "unitid":498049,
+    "name":"Arizona College of Nursing-Southfield",
+    "state":"FL",
+    "city":"Daytona Beach"
+  },
+  {
+    "unitid":498447,
+    "name":"Arizona College of Nursing-Falls Church",
+    "state":"FL",
+    "city":"Altamonte Springs"
+  },
+  {
+    "unitid":498456,
+    "name":"Arizona College of Nursing-Ontario",
+    "state":"GA",
+    "city":"Statesboro"
+  },
+  {
+    "unitid":498669,
+    "name":"Aveda Institute Montana",
+    "state":"IN",
+    "city":"South Bend"
+  },
+  {
+    "unitid":498793,
+    "name":"All In The Wrist Barber Academy",
+    "state":"IN",
+    "city":"Terre Haute"
+  },
+  {
+    "unitid":498915,
+    "name":"Agora University",
+    "state":"MO",
+    "city":"Independence"
+  },
+  {
+    "unitid":498951,
+    "name":"Artisan Academy of Cosmetology",
+    "state":"KS",
+    "city":"Topeka"
+  },
+  {
+    "unitid":499325,
+    "name":"Academy of Cosmetology, Barbering, and Esthetics",
+    "state":"ME",
+    "city":"Machias"
+  },
+  {
+    "unitid":499334,
+    "name":"Aveda Institute Tucson-Avondale",
+    "state":"ME",
+    "city":"Bangor"
+  },
+  {
+    "unitid":499370,
+    "name":"Arizona College of Nursing-Sarasota",
+    "state":"MI",
+    "city":"Cadillac"
+  },
+  {
+    "unitid":499389,
+    "name":"Arizona College of Nursing-Aurora",
+    "state":"MI",
+    "city":"Jackson"
+  },
+  {
+    "unitid":499398,
+    "name":"Arizona College of Nursing-Cincinnati",
+    "state":"MI",
+    "city":"Muskegon"
+  },
+  {
+    "unitid":499404,
+    "name":"Arizona College of Nursing-Cleveland",
+    "state":"MI",
+    "city":"Ionia"
+  },
+  {
+    "unitid":499547,
+    "name":"Austin Medical Assistant Training",
+    "state":"MI",
+    "city":"Traverse City"
+  },
+  {
+    "unitid":499556,
+    "name":"Albany Beauty Academy",
+    "state":"MI",
+    "city":"Belleville"
+  },
+  {
+    "unitid":499662,
+    "name":"Aviation Institute of Maintenance-Phoenix",
+    "state":"MN",
+    "city":"Staples"
+  }
+]

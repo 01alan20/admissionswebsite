@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 146719,
+    "name": "Loyola University Chicago",
+    "city": "Bourbonnais",
+    "state": "IL",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: High Research Activity",
+    "website": "https://www.olivet.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Health Professions",
+      "Legal Studies",
+      "Public Administration & Social Service"
+    ],
+    "intl_enrollment_pct": 3,
+    "tuition_summary": {
+      "sticker": 51716.0,
+      "in_state": 49498.0,
+      "out_of_state": 49498.0
+    },
+    "outcomes": {
+      "acceptance_rate": 81,
+      "yield": 9,
+      "grad_rate_6yr": 76,
+      "retention_full_time": 84,
+      "student_faculty_ratio": 13,
+      "total_enrollment": 17397
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Recommendations",
+      "Secondary School Gpa"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Secondary School Rank",
+      "Secondary School Record",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

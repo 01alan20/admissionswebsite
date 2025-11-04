@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 240198,
+    "name": "Northwood Technical College",
+    "city": "San Juan",
+    "state": "PR",
+    "control": "Public",
+    "level": "2-year",
+    "carnegie_basic": "Associate's Colleges: High Career & Technical-High Nontraditional",
+    "website": "ceaprc.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Precision Production",
+      "Business, Management & Marketing",
+      "Mechanic & Repair Technologies"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 4524.0,
+      "in_state": 4570.0,
+      "out_of_state": 6624.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 74,
+      "student_faculty_ratio": 7,
+      "total_enrollment": 2668
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "profile": {
+    "unitid": 498340,
+    "name": "Chancellor Institute",
+    "city": "New Port Richey",
+    "state": "FL",
+    "control": "Private for-profit",
+    "level": "2-year",
+    "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
+    "website": "www.keiseruniversity.edu/new-port-richey/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": NaN,
+      "in_state": NaN,
+      "out_of_state": NaN
+    },
+    "outcomes": {
+      "acceptance_rate": 90,
+      "yield": 100,
+      "grad_rate_6yr": null,
+      "retention_full_time": 34,
+      "student_faculty_ratio": 16,
+      "total_enrollment": 102
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Record"
+    ],
+    "considered": [],
+    "not_considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

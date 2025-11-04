@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 107840,
+    "name": "Shorter College",
+    "city": "Magnolia",
+    "state": "AR",
+    "control": "Private nonprofit",
+    "level": "2-year",
+    "carnegie_basic": "Associate's Colleges: High Transfer-High Traditional",
+    "website": "https://www.saumag.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Liberal Arts & Humanities",
+      "Business, Management & Marketing",
+      "Homeland Security & Law Enforcement",
+      "Family & Consumer Sciences"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 6246.0,
+      "in_state": 6246.0,
+      "out_of_state": 6246.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 27,
+      "student_faculty_ratio": 13,
+      "total_enrollment": 290
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

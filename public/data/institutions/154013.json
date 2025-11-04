@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 154013,
+    "name": "Mount Mercy University",
+    "city": "Atchison",
+    "state": "KS",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Medium Programs",
+    "website": "www.benedictine.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Health Professions",
+      "Education",
+      "Liberal Arts & Humanities"
+    ],
+    "intl_enrollment_pct": 8,
+    "tuition_summary": {
+      "sticker": 39070.0,
+      "in_state": 37606.0,
+      "out_of_state": 37606.0
+    },
+    "outcomes": {
+      "acceptance_rate": 79,
+      "yield": 18,
+      "grad_rate_6yr": 56,
+      "retention_full_time": 70,
+      "student_faculty_ratio": 13,
+      "total_enrollment": 1451
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Rank"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

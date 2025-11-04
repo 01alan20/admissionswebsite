@@ -1,0 +1,60 @@
+{
+  "profile": {
+    "unitid": 219240,
+    "name": "Kairos University",
+    "city": "Henderson",
+    "state": "TN",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Four-Year: Faith-Related Institutions",
+    "website": "www.fhu.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Theology & Religious Vocations",
+      "Health Professions",
+      "Psychology"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": NaN,
+      "in_state": 3600.0,
+      "out_of_state": 3600.0
+    },
+    "outcomes": {
+      "acceptance_rate": 74,
+      "yield": 15,
+      "grad_rate_6yr": null,
+      "retention_full_time": null,
+      "student_faculty_ratio": 8,
+      "total_enrollment": 1105
+    }
+  },
+  "requirements": {
+    "required": [
+      "Recommendations"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Secondary School Gpa",
+      "Secondary School Record",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 217077,
+    "name": "YTI Career Institute-York",
+    "city": "Columbia",
+    "state": "SC",
+    "control": "Private for-profit",
+    "level": "2-year",
+    "carnegie_basic": "Associate's Colleges: High Career & Technical-High Traditional",
+    "website": "www.kennethshuler.com/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Mechanic & Repair Technologies",
+      "Agriculture & Natural Resources",
+      "Personal & Culinary Services"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": NaN,
+      "in_state": NaN,
+      "out_of_state": NaN
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 61,
+      "student_faculty_ratio": 9,
+      "total_enrollment": 497
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

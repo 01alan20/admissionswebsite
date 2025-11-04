@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 168430,
+    "name": "Worcester State University",
+    "city": "Flint",
+    "state": "MI",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
+    "website": "https://www.kettering.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Education",
+      "Health Professions",
+      "Psychology",
+      "Business, Management & Marketing"
+    ],
+    "intl_enrollment_pct": 1,
+    "tuition_summary": {
+      "sticker": 11286.0,
+      "in_state": 10786.0,
+      "out_of_state": 16866.0
+    },
+    "outcomes": {
+      "acceptance_rate": 90,
+      "yield": 21,
+      "grad_rate_6yr": 56,
+      "retention_full_time": 77,
+      "student_faculty_ratio": 15,
+      "total_enrollment": 5611
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

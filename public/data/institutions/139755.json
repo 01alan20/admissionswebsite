@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 139755,
+    "name": "Georgia Institute of Technology-Main Campus",
+    "city": "Demorest",
+    "state": "GA",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: Very High Research Activity",
+    "website": "https://www.piedmont.edu/",
+    "admissions_url": null,
+    "test_policy": "Required",
+    "major_families": [
+      "Computer & Information Sciences",
+      "Engineering",
+      "Business, Management & Marketing",
+      "Biological & Biomedical Sciences"
+    ],
+    "intl_enrollment_pct": 26,
+    "tuition_summary": {
+      "sticker": 11764.0,
+      "in_state": 11764.0,
+      "out_of_state": 32876.0
+    },
+    "outcomes": {
+      "acceptance_rate": 16,
+      "yield": 44,
+      "grad_rate_6yr": 92,
+      "retention_full_time": 98,
+      "student_faculty_ratio": 18,
+      "total_enrollment": 47946
+    }
+  },
+  "requirements": {
+    "required": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Recommendations",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank"
+    ],
+    "test_policy": "Required"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

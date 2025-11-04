@@ -1,0 +1,45 @@
+{
+  "profile": {
+    "unitid": 498924,
+    "name": "URBE University",
+    "city": "Trenton",
+    "state": "MO",
+    "control": "Private for-profit",
+    "level": "4-year",
+    "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
+    "website": "https://www.graceland.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Communication & Journalism",
+      "Education"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 30550.0,
+      "in_state": NaN,
+      "out_of_state": NaN
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": 61,
+      "retention_full_time": 86,
+      "student_faculty_ratio": 4,
+      "total_enrollment": 48
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

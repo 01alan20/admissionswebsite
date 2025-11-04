@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 213774,
+    "name": "Manor College",
+    "city": "Philadelphia",
+    "state": "PA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate/Associate's Colleges: Associate's Dominant",
+    "website": "https://www.peirce.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Health Professions",
+      "Agriculture & Natural Resources",
+      "Liberal Arts & Humanities",
+      "Computer & Information Sciences"
+    ],
+    "intl_enrollment_pct": 1,
+    "tuition_summary": {
+      "sticker": 19964.0,
+      "in_state": 19414.0,
+      "out_of_state": 19414.0
+    },
+    "outcomes": {
+      "acceptance_rate": 96,
+      "yield": 15,
+      "grad_rate_6yr": null,
+      "retention_full_time": 33,
+      "student_faculty_ratio": 12,
+      "total_enrollment": 599
+    }
+  },
+  "requirements": {
+    "required": [
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

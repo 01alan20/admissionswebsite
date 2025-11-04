@@ -1,0 +1,60 @@
+{
+  "profile": {
+    "unitid": 217059,
+    "name": "York College of Pennsylvania",
+    "city": "North Augusta",
+    "state": "SC",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Small Programs",
+    "website": "www.kennethshuler.com/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Health Professions",
+      "Business, Management & Marketing",
+      "Education",
+      "Engineering"
+    ],
+    "intl_enrollment_pct": 1,
+    "tuition_summary": {
+      "sticker": 24606.0,
+      "in_state": 23328.0,
+      "out_of_state": 23328.0
+    },
+    "outcomes": {
+      "acceptance_rate": 94,
+      "yield": 17,
+      "grad_rate_6yr": 60,
+      "retention_full_time": 77,
+      "student_faculty_ratio": 13,
+      "total_enrollment": 3720
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

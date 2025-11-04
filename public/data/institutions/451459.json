@@ -1,0 +1,43 @@
+{
+  "profile": {
+    "unitid": 451459,
+    "name": "Monroe 2 Orleans BOCES-Center for Workforce Development",
+    "city": "Peoria",
+    "state": "IL",
+    "control": "Public",
+    "level": "2-year",
+    "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
+    "website": "www.tricociuniversity.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions"
+    ],
+    "intl_enrollment_pct": null,
+    "tuition_summary": {
+      "sticker": NaN,
+      "in_state": NaN,
+      "out_of_state": NaN
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": null,
+      "student_faculty_ratio": null,
+      "total_enrollment": null
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

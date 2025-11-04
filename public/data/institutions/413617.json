@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 413617,
+    "name": "College of Menominee Nation",
+    "city": "Perrysburg",
+    "state": "OH",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Tribal Colleges",
+    "website": "https://www.pentacareercenter.org/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Education",
+      "Business, Management & Marketing",
+      "Precision Production",
+      "Liberal Arts & Humanities"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 6200.0,
+      "in_state": 6200.0,
+      "out_of_state": 6200.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": null,
+      "student_faculty_ratio": 6,
+      "total_enrollment": 219
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

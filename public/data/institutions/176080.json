@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 176080,
+    "name": "Mississippi State University",
+    "city": "Springfield",
+    "state": "MO",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: Very High Research Activity",
+    "website": "www.evangel.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Engineering",
+      "Education",
+      "Agriculture & Natural Resources"
+    ],
+    "intl_enrollment_pct": 4,
+    "tuition_summary": {
+      "sticker": 9815.0,
+      "in_state": 9398.0,
+      "out_of_state": 25444.0
+    },
+    "outcomes": {
+      "acceptance_rate": 76,
+      "yield": 24,
+      "grad_rate_6yr": 63,
+      "retention_full_time": 83,
+      "student_faculty_ratio": 16,
+      "total_enrollment": 22657
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Secondary School Rank"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 198598,
+    "name": "Greensboro College",
+    "city": "Grantsboro",
+    "state": "NC",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Small Programs",
+    "website": "www.pamlicocc.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Education",
+      "Business, Management & Marketing",
+      "Psychology",
+      "Liberal Arts & Humanities"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 20400.0,
+      "in_state": 19620.0,
+      "out_of_state": 19620.0
+    },
+    "outcomes": {
+      "acceptance_rate": 92,
+      "yield": 7,
+      "grad_rate_6yr": 41,
+      "retention_full_time": 63,
+      "student_faculty_ratio": 10,
+      "total_enrollment": 898
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Personal Statement Or Essay",
+      "Recommendations"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

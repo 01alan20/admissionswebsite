@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 232089,
+    "name": "Ferrum College",
+    "city": "Arlington",
+    "state": "VA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
+    "website": "www.strayer.edu/campus-locations/virginia/arlington",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Education",
+      "Health Professions",
+      "Business, Management & Marketing",
+      "Homeland Security & Law Enforcement"
+    ],
+    "intl_enrollment_pct": 1,
+    "tuition_summary": {
+      "sticker": 38320.0,
+      "in_state": 38320.0,
+      "out_of_state": 38320.0
+    },
+    "outcomes": {
+      "acceptance_rate": 100,
+      "yield": 16,
+      "grad_rate_6yr": 29,
+      "retention_full_time": 59,
+      "student_faculty_ratio": 11,
+      "total_enrollment": 767
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

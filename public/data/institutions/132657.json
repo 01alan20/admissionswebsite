@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 132657,
+    "name": "Lynn University",
+    "city": "Tampa",
+    "state": "FL",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
+    "website": "https://www.concorde.edu/campus/tampa-florida",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Psychology",
+      "Visual & Performing Arts",
+      "Education"
+    ],
+    "intl_enrollment_pct": 15,
+    "tuition_summary": {
+      "sticker": 42950.0,
+      "in_state": 41550.0,
+      "out_of_state": 41550.0
+    },
+    "outcomes": {
+      "acceptance_rate": 74,
+      "yield": 13,
+      "grad_rate_6yr": 53,
+      "retention_full_time": 71,
+      "student_faculty_ratio": 16,
+      "total_enrollment": 3501
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Recommendations",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

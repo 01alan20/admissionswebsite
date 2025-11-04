@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 458405,
+    "name": "Miller-Motte College-Fayetteville",
+    "city": "Lewistown",
+    "state": "PA",
+    "control": "Private for-profit",
+    "level": "2-year",
+    "carnegie_basic": "Special Focus Two-Year: Health Professions",
+    "website": "https://www.geisinger.org/geisinger-school-of-nursing",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Transportation & Materials Moving",
+      "Health Professions",
+      "Homeland Security & Law Enforcement",
+      "Business, Management & Marketing"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": NaN,
+      "in_state": NaN,
+      "out_of_state": NaN
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 75,
+      "student_faculty_ratio": 11,
+      "total_enrollment": 169
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

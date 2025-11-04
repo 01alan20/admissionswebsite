@@ -1,0 +1,32 @@
+[
+  {
+    "unitid":160904,
+    "name":"Xavier University of Louisiana",
+    "state":"MD",
+    "city":"Baltimore"
+  },
+  {
+    "unitid":206622,
+    "name":"Xavier University",
+    "state":"OK",
+    "city":"Durant"
+  },
+  {
+    "unitid":481289,
+    "name":"Xavier College School of Nursing",
+    "state":"OK",
+    "city":"Oklahoma City"
+  },
+  {
+    "unitid":494700,
+    "name":"Xtylo Beauty College",
+    "state":"FL",
+    "city":"Miramar"
+  },
+  {
+    "unitid":498322,
+    "name":"Xtylo Beauty College",
+    "state":"FL",
+    "city":"Ft Myers"
+  }
+]

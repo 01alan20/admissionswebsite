@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 151111,
+    "name": "Indiana University-Indianapolis",
+    "city": "Saint Mary of the Woods",
+    "state": "IN",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: High Research Activity",
+    "website": "www.smwc.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Health Professions",
+      "Business, Management & Marketing",
+      "Public Administration & Social Service",
+      "Computer & Information Sciences"
+    ],
+    "intl_enrollment_pct": 7,
+    "tuition_summary": {
+      "sticker": 10449.0,
+      "in_state": 10144.0,
+      "out_of_state": 32582.0
+    },
+    "outcomes": {
+      "acceptance_rate": 81,
+      "yield": 26,
+      "grad_rate_6yr": 54,
+      "retention_full_time": 72,
+      "student_faculty_ratio": 14,
+      "total_enrollment": 25497
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Personal Statement Or Essay",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Recommendations"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

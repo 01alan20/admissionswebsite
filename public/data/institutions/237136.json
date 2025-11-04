@@ -1,0 +1,57 @@
+{
+  "profile": {
+    "unitid": 237136,
+    "name": "Appalachian Bible College",
+    "city": "Waukesha",
+    "state": "WI",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Four-Year: Faith-Related Institutions",
+    "website": "www.carrollu.edu/",
+    "admissions_url": null,
+    "test_policy": "Required",
+    "major_families": [
+      "Theology & Religious Vocations"
+    ],
+    "intl_enrollment_pct": 3,
+    "tuition_summary": {
+      "sticker": 18230.0,
+      "in_state": 17050.0,
+      "out_of_state": 17050.0
+    },
+    "outcomes": {
+      "acceptance_rate": 99,
+      "yield": 77,
+      "grad_rate_6yr": 70,
+      "retention_full_time": 85,
+      "student_faculty_ratio": 8,
+      "total_enrollment": 218
+    }
+  },
+  "requirements": {
+    "required": [
+      "Admission Test Scores",
+      "English Proficiency Test",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [],
+    "not_considered": [
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Required"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

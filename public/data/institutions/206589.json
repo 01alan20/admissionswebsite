@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 206589,
+    "name": "The College of Wooster",
+    "city": "Chickasha",
+    "state": "OK",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Arts & Sciences Focus",
+    "website": "www.usao.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Social Sciences",
+      "Biological & Biomedical Sciences",
+      "Psychology",
+      "Visual & Performing Arts"
+    ],
+    "intl_enrollment_pct": 14,
+    "tuition_summary": {
+      "sticker": 59550.0,
+      "in_state": 57500.0,
+      "out_of_state": 57500.0
+    },
+    "outcomes": {
+      "acceptance_rate": 54,
+      "yield": 12,
+      "grad_rate_6yr": 74,
+      "retention_full_time": 81,
+      "student_faculty_ratio": 10,
+      "total_enrollment": 1876
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Formal Demonstration Of Competencies",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Legacy Status"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

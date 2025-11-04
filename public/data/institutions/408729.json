@@ -1,0 +1,41 @@
+{
+  "profile": {
+    "unitid": 408729,
+    "name": "Laurel Technical Institute",
+    "city": "West Plains",
+    "state": "MO",
+    "control": "Private for-profit",
+    "level": "2-year",
+    "carnegie_basic": "Associate's Colleges: High Career & Technical-High Traditional",
+    "website": "https://www.zizzers.org/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [],
+    "intl_enrollment_pct": null,
+    "tuition_summary": {
+      "sticker": NaN,
+      "in_state": 11470.0,
+      "out_of_state": 11470.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": null,
+      "student_faculty_ratio": null,
+      "total_enrollment": null
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

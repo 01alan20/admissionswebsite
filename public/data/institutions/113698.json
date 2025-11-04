@@ -1,0 +1,60 @@
+{
+  "profile": {
+    "unitid": 113698,
+    "name": "Dominican University of California",
+    "city": "Los Angeles",
+    "state": "CA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Medium Programs",
+    "website": "www.fidm.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Health Professions",
+      "Psychology",
+      "Computer & Information Sciences"
+    ],
+    "intl_enrollment_pct": 15,
+    "tuition_summary": {
+      "sticker": 50666.0,
+      "in_state": 49426.0,
+      "out_of_state": 49426.0
+    },
+    "outcomes": {
+      "acceptance_rate": 96,
+      "yield": 13,
+      "grad_rate_6yr": 76,
+      "retention_full_time": 88,
+      "student_faculty_ratio": 8,
+      "total_enrollment": 2026
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Rank",
+      "Secondary School Record",
+      "Work Experience"
+    ],
+    "not_considered": [],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

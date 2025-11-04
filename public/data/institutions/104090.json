@@ -1,0 +1,45 @@
+{
+  "profile": {
+    "unitid": 104090,
+    "name": "Brookline College-Phoenix",
+    "city": "Yuma",
+    "state": "AZ",
+    "control": "Private for-profit",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Four-Year: Other Health Professions Schools",
+    "website": "https://www.azwestern.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Public Administration & Social Service",
+      "Business, Management & Marketing"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": NaN,
+      "in_state": NaN,
+      "out_of_state": NaN
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": 67,
+      "retention_full_time": 0,
+      "student_faculty_ratio": 28,
+      "total_enrollment": 751
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

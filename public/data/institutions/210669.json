@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 210669,
+    "name": "Allegheny College",
+    "city": "Pottsville",
+    "state": "PA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Arts & Sciences Focus",
+    "website": "www.empire.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Biological & Biomedical Sciences",
+      "Social Sciences",
+      "Multidisciplinary Studies",
+      "Psychology"
+    ],
+    "intl_enrollment_pct": 6,
+    "tuition_summary": {
+      "sticker": 54960.0,
+      "in_state": 53610.0,
+      "out_of_state": 53610.0
+    },
+    "outcomes": {
+      "acceptance_rate": 59,
+      "yield": 10,
+      "grad_rate_6yr": 67,
+      "retention_full_time": 84,
+      "student_faculty_ratio": 8,
+      "total_enrollment": 1231
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Secondary School Rank"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

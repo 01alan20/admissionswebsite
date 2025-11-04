@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 453163,
+    "name": "Strayer University-North Carolina",
+    "city": "Chandler",
+    "state": "AZ",
+    "control": "Private for-profit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
+    "website": "www.tsaob.com/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Homeland Security & Law Enforcement",
+      "Health Professions",
+      "Public Administration & Social Service"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 13920.0,
+      "in_state": 13515.0,
+      "out_of_state": 13515.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": 0,
+      "retention_full_time": 0,
+      "student_faculty_ratio": 39,
+      "total_enrollment": 3112
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

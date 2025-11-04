@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 442444,
+    "name": "San Joaquin Valley College-Ontario",
+    "city": "Whitter",
+    "state": "CA",
+    "control": "Private for-profit",
+    "level": "2-year",
+    "carnegie_basic": "Associate's Colleges: High Career & Technical-High Nontraditional",
+    "website": "www.ati.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Construction Trades",
+      "Mechanic & Repair Technologies",
+      "Business, Management & Marketing"
+    ],
+    "intl_enrollment_pct": 1,
+    "tuition_summary": {
+      "sticker": NaN,
+      "in_state": NaN,
+      "out_of_state": NaN
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 73,
+      "student_faculty_ratio": 17,
+      "total_enrollment": 1064
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

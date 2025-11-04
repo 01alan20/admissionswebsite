@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 203580,
+    "name": "Lake Erie College",
+    "city": "Lima",
+    "state": "OH",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Small Programs",
+    "website": "www.ohiostatebeauty.com/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Education",
+      "Health Professions",
+      "Parks, Recreation & Fitness"
+    ],
+    "intl_enrollment_pct": 4,
+    "tuition_summary": {
+      "sticker": 36032.0,
+      "in_state": 35024.0,
+      "out_of_state": 35024.0
+    },
+    "outcomes": {
+      "acceptance_rate": 64,
+      "yield": 24,
+      "grad_rate_6yr": 42,
+      "retention_full_time": 66,
+      "student_faculty_ratio": 12,
+      "total_enrollment": 942
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Recommendations"
+    ],
+    "not_considered": [
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

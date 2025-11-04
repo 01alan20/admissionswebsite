@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 184603,
+    "name": "Fairleigh Dickinson University-Metropolitan Campus",
+    "city": "Trenton",
+    "state": "NJ",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
+    "website": "www.capitalhealth.org/professionals/school-of-radiologic-technology",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Liberal Arts & Humanities",
+      "Health Professions",
+      "Psychology"
+    ],
+    "intl_enrollment_pct": 8,
+    "tuition_summary": {
+      "sticker": 35822.0,
+      "in_state": 34404.0,
+      "out_of_state": 34404.0
+    },
+    "outcomes": {
+      "acceptance_rate": 96,
+      "yield": 15,
+      "grad_rate_6yr": 62,
+      "retention_full_time": 76,
+      "student_faculty_ratio": 14,
+      "total_enrollment": 7607
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

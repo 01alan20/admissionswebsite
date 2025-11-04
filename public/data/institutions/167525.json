@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 167525,
+    "name": "Quincy College",
+    "city": "Escanaba",
+    "state": "MI",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Associate's Colleges: High Transfer-High Nontraditional",
+    "website": "https://www.baycollege.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Business, Management & Marketing",
+      "Liberal Arts & Humanities",
+      "Science Technologies"
+    ],
+    "intl_enrollment_pct": 5,
+    "tuition_summary": {
+      "sticker": 7536.0,
+      "in_state": 7344.0,
+      "out_of_state": 7344.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 88,
+      "student_faculty_ratio": 18,
+      "total_enrollment": 2603
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

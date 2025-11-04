@@ -1,0 +1,44 @@
+{
+  "profile": {
+    "unitid": 166708,
+    "name": "University of Massachusetts Chan Medical School",
+    "city": "North Dartmouth",
+    "state": "MA",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Four-Year: Research Institutions",
+    "website": "www.umassd.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Biological & Biomedical Sciences"
+    ],
+    "intl_enrollment_pct": 8,
+    "tuition_summary": {
+      "sticker": NaN,
+      "in_state": NaN,
+      "out_of_state": NaN
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": null,
+      "student_faculty_ratio": null,
+      "total_enrollment": 1394
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

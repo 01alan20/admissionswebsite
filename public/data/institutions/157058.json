@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 157058,
+    "name": "Kentucky State University",
+    "city": "Barbourville",
+    "state": "KY",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
+    "website": "https://www.unionky.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Health Professions",
+      "Liberal Arts & Humanities",
+      "Education"
+    ],
+    "intl_enrollment_pct": 3,
+    "tuition_summary": {
+      "sticker": 9214.0,
+      "in_state": 9004.0,
+      "out_of_state": 12882.0
+    },
+    "outcomes": {
+      "acceptance_rate": 93,
+      "yield": 19,
+      "grad_rate_6yr": 28,
+      "retention_full_time": 61,
+      "student_faculty_ratio": 14,
+      "total_enrollment": 1689
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Secondary School Rank"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

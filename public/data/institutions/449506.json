@@ -1,0 +1,58 @@
+{
+  "profile": {
+    "unitid": 449506,
+    "name": "SABER College",
+    "city": "Cape Girardeau",
+    "state": "MO",
+    "control": "Private nonprofit",
+    "level": "2-year",
+    "carnegie_basic": "Special Focus Two-Year: Health Professions",
+    "website": "www.trendsettersschool.com/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": NaN,
+      "in_state": NaN,
+      "out_of_state": NaN
+    },
+    "outcomes": {
+      "acceptance_rate": 93,
+      "yield": 56,
+      "grad_rate_6yr": null,
+      "retention_full_time": 90,
+      "student_faculty_ratio": 15,
+      "total_enrollment": 202
+    }
+  },
+  "requirements": {
+    "required": [
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Legacy Status"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Personal Statement Or Essay",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

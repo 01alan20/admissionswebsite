@@ -1,0 +1,56 @@
+{
+  "profile": {
+    "unitid": 436836,
+    "name": "University of Connecticut-Stamford",
+    "city": "Manati",
+    "state": "PR",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
+    "website": "www.atenascollege.edu/",
+    "admissions_url": null,
+    "test_policy": "Required",
+    "major_families": [],
+    "intl_enrollment_pct": 6,
+    "tuition_summary": {
+      "sticker": 17472.0,
+      "in_state": 16650.0,
+      "out_of_state": 39318.0
+    },
+    "outcomes": {
+      "acceptance_rate": 80,
+      "yield": 11,
+      "grad_rate_6yr": 57,
+      "retention_full_time": 78,
+      "student_faculty_ratio": 19,
+      "total_enrollment": 2240
+    }
+  },
+  "requirements": {
+    "required": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Recommendations",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Required"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

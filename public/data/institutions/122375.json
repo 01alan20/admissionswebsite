@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 122375,
+    "name": "San Diego Mesa College",
+    "city": "Santa Barbara",
+    "state": "CA",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate/Associate's Colleges: Associate's Dominant",
+    "website": "www.sbcc.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Liberal Arts & Humanities",
+      "Health Professions",
+      "Psychology"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 1150.0,
+      "in_state": 1144.0,
+      "out_of_state": 7440.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": null,
+      "student_faculty_ratio": 24,
+      "total_enrollment": 19243
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

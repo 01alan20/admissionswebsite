@@ -1,0 +1,60 @@
+{
+  "profile": {
+    "unitid": 490498,
+    "name": "Digital Media Institute",
+    "city": "Lakewood",
+    "state": "NJ",
+    "control": "Private nonprofit",
+    "level": "2-year",
+    "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
+    "website": "https://yeshivagedolatiferesyerachmiel.com/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Communications Technologies",
+      "Visual & Performing Arts",
+      "Computer & Information Sciences"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": NaN,
+      "in_state": NaN,
+      "out_of_state": NaN
+    },
+    "outcomes": {
+      "acceptance_rate": 32,
+      "yield": 100,
+      "grad_rate_6yr": null,
+      "retention_full_time": 100,
+      "student_faculty_ratio": 10,
+      "total_enrollment": 13
+    }
+  },
+  "requirements": {
+    "required": [
+      "Formal Demonstration Of Competencies",
+      "Personal Statement Or Essay",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Completion Of College Preparatory Program",
+      "Recommendations",
+      "Secondary School Rank"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "English Proficiency Test",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Work Experience"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

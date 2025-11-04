@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 142443,
+    "name": "North Idaho College",
+    "city": "Downers Grove",
+    "state": "IL",
+    "control": "Public",
+    "level": "2-year",
+    "carnegie_basic": "Associate's Colleges: High Transfer-Mixed Traditional/Nontraditional",
+    "website": "https://www.midwestern.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Liberal Arts & Humanities",
+      "Health Professions",
+      "Business, Management & Marketing",
+      "Mechanic & Repair Technologies"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 3396.0,
+      "in_state": 3396.0,
+      "out_of_state": 8736.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 59,
+      "student_faculty_ratio": 13,
+      "total_enrollment": 3979
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "profile": {
+    "unitid": 130624,
+    "name": "United States Coast Guard Academy",
+    "city": "Washington",
+    "state": "DC",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
+    "website": "www.wesleyseminary.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Engineering",
+      "Business, Management & Marketing",
+      "Social Sciences",
+      "Physical Sciences"
+    ],
+    "intl_enrollment_pct": 3,
+    "tuition_summary": {
+      "sticker": NaN,
+      "in_state": NaN,
+      "out_of_state": NaN
+    },
+    "outcomes": {
+      "acceptance_rate": 24,
+      "yield": 66,
+      "grad_rate_6yr": 88,
+      "retention_full_time": 99,
+      "student_faculty_ratio": 7,
+      "total_enrollment": 1081
+    }
+  },
+  "requirements": {
+    "required": [
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Rank",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Work Experience"
+    ],
+    "not_considered": [],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 230816,
+    "name": "Bennington College",
+    "city": "Lynchburg",
+    "state": "VA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Arts & Sciences Focus",
+    "website": "https://www.centrahealth.com/college",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "English Language & Literature",
+      "Visual & Performing Arts",
+      "Foreign Languages & Linguistics",
+      "Social Sciences"
+    ],
+    "intl_enrollment_pct": 12,
+    "tuition_summary": {
+      "sticker": 64644.0,
+      "in_state": 61448.0,
+      "out_of_state": 61448.0
+    },
+    "outcomes": {
+      "acceptance_rate": 48,
+      "yield": 16,
+      "grad_rate_6yr": 67,
+      "retention_full_time": 85,
+      "student_faculty_ratio": 9,
+      "total_enrollment": 867
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Formal Demonstration Of Competencies",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

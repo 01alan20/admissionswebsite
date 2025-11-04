@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 204909,
+    "name": "Ohio Wesleyan University",
+    "city": "Cincinnati",
+    "state": "OH",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Arts & Sciences Focus",
+    "website": "https://www.xavier.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Biological & Biomedical Sciences",
+      "Business, Management & Marketing",
+      "Psychology",
+      "Social Sciences"
+    ],
+    "intl_enrollment_pct": 5,
+    "tuition_summary": {
+      "sticker": 52357.0,
+      "in_state": 49822.0,
+      "out_of_state": 49822.0
+    },
+    "outcomes": {
+      "acceptance_rate": 51,
+      "yield": 15,
+      "grad_rate_6yr": 62,
+      "retention_full_time": 84,
+      "student_faculty_ratio": 11,
+      "total_enrollment": 1452
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Legacy Status",
+      "Recommendations",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

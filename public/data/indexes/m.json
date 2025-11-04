@@ -1,0 +1,2624 @@
+[
+  {
+    "unitid":101648,
+    "name":"Marion Military Institute",
+    "state":"AL",
+    "city":"Fairfield"
+  },
+  {
+    "unitid":101675,
+    "name":"Miles College",
+    "state":"AL",
+    "city":"Mobile"
+  },
+  {
+    "unitid":103963,
+    "name":"Miller-Motte College-Arizona Automotive Institute",
+    "state":"AZ",
+    "city":"Tempe"
+  },
+  {
+    "unitid":105136,
+    "name":"Maricopa Community College System Office",
+    "state":"AZ",
+    "city":"Kingman"
+  },
+  {
+    "unitid":105154,
+    "name":"Mesa Community College",
+    "state":"AZ",
+    "city":"Tsaile"
+  },
+  {
+    "unitid":105206,
+    "name":"Mohave Community College",
+    "state":"AZ",
+    "city":"Flagstaff"
+  },
+  {
+    "unitid":112288,
+    "name":"Milan Institute-Visalia",
+    "state":"CA",
+    "city":"Pomona"
+  },
+  {
+    "unitid":118198,
+    "name":"MTI College",
+    "state":"CA",
+    "city":"Monterey"
+  },
+  {
+    "unitid":118684,
+    "name":"Mendocino College",
+    "state":"CA",
+    "city":"Moorpark"
+  },
+  {
+    "unitid":118693,
+    "name":"Menlo College",
+    "state":"CA",
+    "city":"Walnut"
+  },
+  {
+    "unitid":118718,
+    "name":"Merced College",
+    "state":"CA",
+    "city":"Los Angeles"
+  },
+  {
+    "unitid":118772,
+    "name":"Merritt College",
+    "state":"CA",
+    "city":"San Jacinto"
+  },
+  {
+    "unitid":118912,
+    "name":"MiraCosta College",
+    "state":"CA",
+    "city":"Napa"
+  },
+  {
+    "unitid":118930,
+    "name":"Mission College",
+    "state":"CA",
+    "city":"Emeryville"
+  },
+  {
+    "unitid":118958,
+    "name":"Modern Beauty Academy",
+    "state":"CA",
+    "city":"San Diego"
+  },
+  {
+    "unitid":118976,
+    "name":"Modesto Junior College",
+    "state":"CA",
+    "city":"Monterey"
+  },
+  {
+    "unitid":118994,
+    "name":"Moler Barber College",
+    "state":"CA",
+    "city":"San Diego"
+  },
+  {
+    "unitid":119058,
+    "name":"Middlebury Institute of International Studies at Monterey",
+    "state":"CA",
+    "city":"Modesto"
+  },
+  {
+    "unitid":119067,
+    "name":"Monterey Peninsula College",
+    "state":"CA",
+    "city":"Pomona"
+  },
+  {
+    "unitid":119137,
+    "name":"Moorpark College",
+    "state":"CA",
+    "city":"West Covina"
+  },
+  {
+    "unitid":119164,
+    "name":"Mt San Antonio College",
+    "state":"CA",
+    "city":"Van Nuys"
+  },
+  {
+    "unitid":119173,
+    "name":"Mount Saint Mary's University",
+    "state":"CA",
+    "city":"Fremont"
+  },
+  {
+    "unitid":119216,
+    "name":"Mt San Jacinto Community College District",
+    "state":"CA",
+    "city":"Belmont"
+  },
+  {
+    "unitid":119270,
+    "name":"Musicians Institute",
+    "state":"CA",
+    "city":"Los Angeles"
+  },
+  {
+    "unitid":123943,
+    "name":"Marshall B Ketchum University",
+    "state":"CA",
+    "city":"Coalinga"
+  },
+  {
+    "unitid":127565,
+    "name":"Metropolitan State University of Denver",
+    "state":"CT",
+    "city":"Enfield"
+  },
+  {
+    "unitid":127617,
+    "name":"Morgan Community College",
+    "state":"NY",
+    "city":"Monsey"
+  },
+  {
+    "unitid":127954,
+    "name":"Montessori Education Center of the Rockies",
+    "state":"CT",
+    "city":"Fairfield"
+  },
+  {
+    "unitid":129695,
+    "name":"Manchester Community College",
+    "state":"CT",
+    "city":"Danbury"
+  },
+  {
+    "unitid":129756,
+    "name":"Middlesex Community College",
+    "state":"DE",
+    "city":"Lewes"
+  },
+  {
+    "unitid":129774,
+    "name":"Mitchell College",
+    "state":"DE",
+    "city":"Newark"
+  },
+  {
+    "unitid":130837,
+    "name":"Margaret H Rollins School of Nursing at Beebe Medical Center",
+    "state":"FL",
+    "city":"Daytona Beach"
+  },
+  {
+    "unitid":135407,
+    "name":"Manatee Technical College",
+    "state":"FL",
+    "city":"Miami"
+  },
+  {
+    "unitid":135559,
+    "name":"Merryfield Academy",
+    "state":"FL",
+    "city":"Saint Augustine"
+  },
+  {
+    "unitid":135647,
+    "name":"Miami Lakes Educational Center and Technical College",
+    "state":"FL",
+    "city":"St. Petersburg"
+  },
+  {
+    "unitid":135717,
+    "name":"Miami Dade College",
+    "state":"FL",
+    "city":"Saint Petersburg"
+  },
+  {
+    "unitid":140447,
+    "name":"Mercer University",
+    "state":"HI",
+    "city":"Honolulu"
+  },
+  {
+    "unitid":140553,
+    "name":"Morehouse College",
+    "state":"HI",
+    "city":"Hilo"
+  },
+  {
+    "unitid":140562,
+    "name":"Morehouse School of Medicine",
+    "state":"HI",
+    "city":"Honolulu"
+  },
+  {
+    "unitid":140571,
+    "name":"MORRIS BROWN COLLEGE",
+    "state":"HI",
+    "city":"Honolulu"
+  },
+  {
+    "unitid":140827,
+    "name":"Miami Ad School-Atlanta",
+    "state":"HI",
+    "city":"Pearl City"
+  },
+  {
+    "unitid":143853,
+    "name":"Midwestern University-Downers Grove",
+    "state":"IL",
+    "city":"Tinley Park"
+  },
+  {
+    "unitid":146977,
+    "name":"McCormick Theological Seminary",
+    "state":"IL",
+    "city":"Quincy"
+  },
+  {
+    "unitid":147004,
+    "name":"McHenry County College",
+    "state":"IL",
+    "city":"Ina"
+  },
+  {
+    "unitid":147013,
+    "name":"McKendree University",
+    "state":"IL",
+    "city":"Decatur"
+  },
+  {
+    "unitid":147031,
+    "name":"Meadville Theological School of Lombard College",
+    "state":"IL",
+    "city":"Rockford"
+  },
+  {
+    "unitid":147129,
+    "name":"Methodist College",
+    "state":"IL",
+    "city":"Rockford"
+  },
+  {
+    "unitid":147244,
+    "name":"Millikin University",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":147341,
+    "name":"Monmouth College",
+    "state":"IL",
+    "city":"River Forest"
+  },
+  {
+    "unitid":147369,
+    "name":"Moody Bible Institute",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":147378,
+    "name":"Moraine Valley Community College",
+    "state":"IL",
+    "city":"Peoria"
+  },
+  {
+    "unitid":147396,
+    "name":"Morrison Institute of Technology",
+    "state":"IL",
+    "city":"Joliet"
+  },
+  {
+    "unitid":147411,
+    "name":"Morton College",
+    "state":"IL",
+    "city":"Springfield"
+  },
+  {
+    "unitid":151777,
+    "name":"Manchester University",
+    "state":"IA",
+    "city":"Pella"
+  },
+  {
+    "unitid":151786,
+    "name":"Marian University",
+    "state":"IA",
+    "city":"Dubuque"
+  },
+  {
+    "unitid":151810,
+    "name":"Martin University",
+    "state":"IA",
+    "city":"Mount Vernon"
+  },
+  {
+    "unitid":151962,
+    "name":"Mid-America College of Funeral Service",
+    "state":"IA",
+    "city":"Epworth"
+  },
+  {
+    "unitid":153861,
+    "name":"Maharishi International University",
+    "state":"IA",
+    "city":"Oskaloosa"
+  },
+  {
+    "unitid":153922,
+    "name":"Marshalltown Community College",
+    "state":"KS",
+    "city":"Iola"
+  },
+  {
+    "unitid":153977,
+    "name":"Mercy College of Health Sciences",
+    "state":"KS",
+    "city":"Baldwin City"
+  },
+  {
+    "unitid":154004,
+    "name":"Morningside University",
+    "state":"KS",
+    "city":"Great Bend"
+  },
+  {
+    "unitid":154013,
+    "name":"Mount Mercy University",
+    "state":"KS",
+    "city":"Atchison"
+  },
+  {
+    "unitid":155487,
+    "name":"Manhattan Area Technical College",
+    "state":"KY",
+    "city":"Owensboro"
+  },
+  {
+    "unitid":155496,
+    "name":"Manhattan Christian College",
+    "state":"KY",
+    "city":"Campbellsville"
+  },
+  {
+    "unitid":155511,
+    "name":"McPherson College",
+    "state":"KY",
+    "city":"Lexington"
+  },
+  {
+    "unitid":155520,
+    "name":"MidAmerica Nazarene University",
+    "state":"KY",
+    "city":"Danville"
+  },
+  {
+    "unitid":157304,
+    "name":"Madisonville Community College",
+    "state":"LA",
+    "city":"New Orleans"
+  },
+  {
+    "unitid":157331,
+    "name":"Maysville Community and Technical College",
+    "state":"LA",
+    "city":"New Orleans"
+  },
+  {
+    "unitid":157377,
+    "name":"Midway University",
+    "state":"LA",
+    "city":"Lake Charles"
+  },
+  {
+    "unitid":157386,
+    "name":"Morehead State University",
+    "state":"LA",
+    "city":"Denham Springs"
+  },
+  {
+    "unitid":157401,
+    "name":"Murray State University",
+    "state":"LA",
+    "city":"New Orleans"
+  },
+  {
+    "unitid":159717,
+    "name":"McNeese State University",
+    "state":"ME",
+    "city":"Brunswick"
+  },
+  {
+    "unitid":161022,
+    "name":"Maine College of Health Professions",
+    "state":"MD",
+    "city":"North East"
+  },
+  {
+    "unitid":161299,
+    "name":"Maine Maritime Academy",
+    "state":"MD",
+    "city":"Hagerstown"
+  },
+  {
+    "unitid":161509,
+    "name":"Maine College of Art & Design",
+    "state":"MD",
+    "city":"Baltimore"
+  },
+  {
+    "unitid":163295,
+    "name":"Maryland Institute College of Art",
+    "state":"MA",
+    "city":"Boston"
+  },
+  {
+    "unitid":163408,
+    "name":"Montgomery Beauty School",
+    "state":"MA",
+    "city":"Pittsfield"
+  },
+  {
+    "unitid":163426,
+    "name":"Montgomery College",
+    "state":"MA",
+    "city":"Boston"
+  },
+  {
+    "unitid":163453,
+    "name":"Morgan State University",
+    "state":"MA",
+    "city":"Boston"
+  },
+  {
+    "unitid":163462,
+    "name":"Mount St. Mary's University",
+    "state":"MA",
+    "city":"Brookline"
+  },
+  {
+    "unitid":163815,
+    "name":"Maryland Beauty Academy of Essex",
+    "state":"MA",
+    "city":"Fall River"
+  },
+  {
+    "unitid":164085,
+    "name":"Maryland University of Integrative Health",
+    "state":"MA",
+    "city":"Woburn"
+  },
+  {
+    "unitid":164270,
+    "name":"McDaniel College",
+    "state":"MA",
+    "city":"Somerville"
+  },
+  {
+    "unitid":166647,
+    "name":"Massachusetts Bay Community College",
+    "state":"MA",
+    "city":"Boston"
+  },
+  {
+    "unitid":166656,
+    "name":"MCPHS University",
+    "state":"MA",
+    "city":"Great Barrington"
+  },
+  {
+    "unitid":166674,
+    "name":"Massachusetts College of Art and Design",
+    "state":"MA",
+    "city":"South Easton"
+  },
+  {
+    "unitid":166683,
+    "name":"Massachusetts Institute of Technology",
+    "state":"MA",
+    "city":"Springfield"
+  },
+  {
+    "unitid":166692,
+    "name":"Massachusetts Maritime Academy",
+    "state":"MA",
+    "city":"Springfield"
+  },
+  {
+    "unitid":166805,
+    "name":"Massachusetts School of Barbering",
+    "state":"MA",
+    "city":"Boston"
+  },
+  {
+    "unitid":166823,
+    "name":"Massasoit Community College",
+    "state":"MA",
+    "city":"Taunton"
+  },
+  {
+    "unitid":166850,
+    "name":"Merrimack College",
+    "state":"MA",
+    "city":"Medford"
+  },
+  {
+    "unitid":166869,
+    "name":"MGH Institute of Health Professions",
+    "state":"MA",
+    "city":"Wellesley"
+  },
+  {
+    "unitid":166887,
+    "name":"Middlesex Community College",
+    "state":"MA",
+    "city":"Boston"
+  },
+  {
+    "unitid":166911,
+    "name":"Montserrat College of Art",
+    "state":"MA",
+    "city":"Springfield"
+  },
+  {
+    "unitid":166939,
+    "name":"Mount Holyoke College",
+    "state":"MA",
+    "city":"Westfield"
+  },
+  {
+    "unitid":166957,
+    "name":"Mount Wachusett Community College",
+    "state":"MA",
+    "city":"Norton"
+  },
+  {
+    "unitid":167288,
+    "name":"Massachusetts College of Liberal Arts",
+    "state":"MI",
+    "city":"Hillsdale"
+  },
+  {
+    "unitid":169220,
+    "name":"Michigan School of Psychology",
+    "state":"MI",
+    "city":"Monroe"
+  },
+  {
+    "unitid":169275,
+    "name":"Mott Community College",
+    "state":"MI",
+    "city":"Sault Ste Marie"
+  },
+  {
+    "unitid":169655,
+    "name":"MIAT College of Technology",
+    "state":"MI",
+    "city":"Houghton"
+  },
+  {
+    "unitid":170611,
+    "name":"Michigan College of Beauty-Monroe",
+    "state":"MI",
+    "city":"Adrian"
+  },
+  {
+    "unitid":170736,
+    "name":"M J Murphy Beauty College of Mount Pleasant",
+    "state":"MI",
+    "city":"Hancock"
+  },
+  {
+    "unitid":170790,
+    "name":"Macomb Community College",
+    "state":"MI",
+    "city":"Lansing"
+  },
+  {
+    "unitid":170806,
+    "name":"Madonna University",
+    "state":"MI",
+    "city":"Saint Joseph"
+  },
+  {
+    "unitid":171100,
+    "name":"Michigan State University",
+    "state":"MI",
+    "city":"Detroit"
+  },
+  {
+    "unitid":171128,
+    "name":"Michigan Technological University",
+    "state":"MI",
+    "city":"Scottville"
+  },
+  {
+    "unitid":171155,
+    "name":"Mid Michigan College",
+    "state":"MI",
+    "city":"Holland"
+  },
+  {
+    "unitid":171225,
+    "name":"Monroe County Community College",
+    "state":"MN",
+    "city":"Bloomington"
+  },
+  {
+    "unitid":171234,
+    "name":"Montcalm Community College",
+    "state":"MN",
+    "city":"Alexandria"
+  },
+  {
+    "unitid":171304,
+    "name":"Muskegon Community College",
+    "state":"MN",
+    "city":"Anoka"
+  },
+  {
+    "unitid":172422,
+    "name":"Michigan Career and Technical Institute",
+    "state":"MN",
+    "city":"Brooklyn Park"
+  },
+  {
+    "unitid":173452,
+    "name":"Martin Luther College",
+    "state":"MN",
+    "city":"Pine City"
+  },
+  {
+    "unitid":173559,
+    "name":"Minnesota State Community and Technical College",
+    "state":"MN",
+    "city":"Saint Joseph"
+  },
+  {
+    "unitid":173638,
+    "name":"Minnesota West Community and Technical College",
+    "state":"MN",
+    "city":"Saint Cloud"
+  },
+  {
+    "unitid":173735,
+    "name":"Minnesota North College",
+    "state":"MN",
+    "city":"Saint Bonifacius"
+  },
+  {
+    "unitid":173902,
+    "name":"Macalester College",
+    "state":"MN",
+    "city":"Saint Paul"
+  },
+  {
+    "unitid":173920,
+    "name":"Minnesota State University-Mankato",
+    "state":"MN",
+    "city":"Saint Paul"
+  },
+  {
+    "unitid":173957,
+    "name":"Mayo Clinic College of Medicine and Science",
+    "state":"MN",
+    "city":"Marshall"
+  },
+  {
+    "unitid":174020,
+    "name":"Metropolitan State University",
+    "state":"MN",
+    "city":"Minneapolis"
+  },
+  {
+    "unitid":174127,
+    "name":"Minneapolis College of Art and Design",
+    "state":"MN",
+    "city":"Willmar"
+  },
+  {
+    "unitid":174136,
+    "name":"Minneapolis Community and Technical College",
+    "state":"MN",
+    "city":"Winona"
+  },
+  {
+    "unitid":174321,
+    "name":"Model College of Hair Design",
+    "state":"MS",
+    "city":"Jackson"
+  },
+  {
+    "unitid":174358,
+    "name":"Minnesota State University Moorhead",
+    "state":"MS",
+    "city":"Blue Mountain"
+  },
+  {
+    "unitid":175263,
+    "name":"Minnesota State College Southeast",
+    "state":"MS",
+    "city":"Laurel"
+  },
+  {
+    "unitid":175281,
+    "name":"Mitchell Hamline School of Law",
+    "state":"MS",
+    "city":"Hattiesburg"
+  },
+  {
+    "unitid":175935,
+    "name":"Meridian Community College",
+    "state":"MO",
+    "city":"Conception"
+  },
+  {
+    "unitid":175980,
+    "name":"Millsaps College",
+    "state":"MO",
+    "city":"Saint Louis"
+  },
+  {
+    "unitid":176008,
+    "name":"Mississippi Delta Community College",
+    "state":"MO",
+    "city":"Saint Louis"
+  },
+  {
+    "unitid":176035,
+    "name":"Mississippi University for Women",
+    "state":"MO",
+    "city":"Canton"
+  },
+  {
+    "unitid":176044,
+    "name":"Mississippi Valley State University",
+    "state":"MO",
+    "city":"Springfield"
+  },
+  {
+    "unitid":176053,
+    "name":"Mississippi College",
+    "state":"MO",
+    "city":"Union"
+  },
+  {
+    "unitid":176071,
+    "name":"Mississippi Gulf Coast Community College",
+    "state":"MO",
+    "city":"Kansas City"
+  },
+  {
+    "unitid":176080,
+    "name":"Mississippi State University",
+    "state":"MO",
+    "city":"Springfield"
+  },
+  {
+    "unitid":176664,
+    "name":"Mission University",
+    "state":"MO",
+    "city":"Lexington"
+  },
+  {
+    "unitid":177995,
+    "name":"Metropolitan Community College-Kansas City",
+    "state":"MO",
+    "city":"Sedalia"
+  },
+  {
+    "unitid":178059,
+    "name":"Maryville University of Saint Louis",
+    "state":"MO",
+    "city":"Columbia"
+  },
+  {
+    "unitid":178077,
+    "name":"Missouri College of Cosmetology and Esthetics",
+    "state":"MO",
+    "city":"Cape Girardeau"
+  },
+  {
+    "unitid":178183,
+    "name":"Midwest Institute",
+    "state":"MO",
+    "city":"Springfield"
+  },
+  {
+    "unitid":178208,
+    "name":"Midwestern Baptist Theological Seminary",
+    "state":"MO",
+    "city":"Poplar Bluff"
+  },
+  {
+    "unitid":178217,
+    "name":"Mineral Area College",
+    "state":"MO",
+    "city":"Trenton"
+  },
+  {
+    "unitid":178244,
+    "name":"Missouri Baptist University",
+    "state":"MO",
+    "city":"Kansas City"
+  },
+  {
+    "unitid":178341,
+    "name":"Missouri Southern State University",
+    "state":"MO",
+    "city":"Saint Louis"
+  },
+  {
+    "unitid":178369,
+    "name":"Missouri Valley College",
+    "state":"MO",
+    "city":"Saint Louis"
+  },
+  {
+    "unitid":178387,
+    "name":"Missouri Western State University",
+    "state":"MO",
+    "city":"Fulton"
+  },
+  {
+    "unitid":178411,
+    "name":"Missouri University of Science and Technology",
+    "state":"MT",
+    "city":"Bozeman"
+  },
+  {
+    "unitid":178448,
+    "name":"Moberly Area Community College",
+    "state":"MT",
+    "city":"Butte"
+  },
+  {
+    "unitid":179344,
+    "name":"Missouri State University-West Plains",
+    "state":"MT",
+    "city":"Pablo"
+  },
+  {
+    "unitid":179566,
+    "name":"Missouri State University-Springfield",
+    "state":"NE",
+    "city":"Grand Island"
+  },
+  {
+    "unitid":180179,
+    "name":"Montana State University Billings",
+    "state":"NE",
+    "city":"Lincoln"
+  },
+  {
+    "unitid":180373,
+    "name":"Miles Community College",
+    "state":"NE",
+    "city":"Curtis"
+  },
+  {
+    "unitid":180416,
+    "name":"Montana Technological University",
+    "state":"NE",
+    "city":"Wayne"
+  },
+  {
+    "unitid":180461,
+    "name":"Montana State University",
+    "state":"NE",
+    "city":"Scottsbluff"
+  },
+  {
+    "unitid":180522,
+    "name":"Montana State University-Northern",
+    "state":"NV",
+    "city":"Las Vegas"
+  },
+  {
+    "unitid":181303,
+    "name":"Metropolitan Community College Area",
+    "state":"NH",
+    "city":"West Lebanon"
+  },
+  {
+    "unitid":181312,
+    "name":"Mid-Plains Community College",
+    "state":"NH",
+    "city":"Manchester"
+  },
+  {
+    "unitid":181330,
+    "name":"Midland University",
+    "state":"NH",
+    "city":"Nashua"
+  },
+  {
+    "unitid":182917,
+    "name":"Magdalen College",
+    "state":"NJ",
+    "city":"Randolph"
+  },
+  {
+    "unitid":183132,
+    "name":"Manchester Community College",
+    "state":"NJ",
+    "city":"Cherry Hill"
+  },
+  {
+    "unitid":185509,
+    "name":"Mercer County Community College",
+    "state":"NM",
+    "city":"Alamogordo"
+  },
+  {
+    "unitid":185536,
+    "name":"Middlesex College",
+    "state":"NM",
+    "city":"Albuquerque"
+  },
+  {
+    "unitid":185572,
+    "name":"Monmouth University",
+    "state":"NM",
+    "city":"Crownpoint"
+  },
+  {
+    "unitid":185590,
+    "name":"Montclair State University",
+    "state":"NM",
+    "city":"Las Cruces"
+  },
+  {
+    "unitid":188261,
+    "name":"Mesalands Community College",
+    "state":"NY",
+    "city":"Rego Park"
+  },
+  {
+    "unitid":189282,
+    "name":"Mount Sinai Phillips School of Nursing",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":190114,
+    "name":"Metropolitan College of New York",
+    "state":"NY",
+    "city":"Canandaigua"
+  },
+  {
+    "unitid":192624,
+    "name":"Machzikei Hadath Rabbinical College",
+    "state":"NY",
+    "city":"Saranac Lake"
+  },
+  {
+    "unitid":192688,
+    "name":"Mandl School-The College of Allied Health",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":192703,
+    "name":"Manhattan College",
+    "state":"NY",
+    "city":"Old Westbury"
+  },
+  {
+    "unitid":192712,
+    "name":"Manhattan School of Music",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":192749,
+    "name":"Manhattanville College",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":192785,
+    "name":"Maria College of Albany",
+    "state":"NY",
+    "city":"Peekskill"
+  },
+  {
+    "unitid":192800,
+    "name":"Marion S Whelan School of Nursing of Geneva General Hospital",
+    "state":"NY",
+    "city":"Syracuse"
+  },
+  {
+    "unitid":192819,
+    "name":"Marist College",
+    "state":"NY",
+    "city":"Middletown"
+  },
+  {
+    "unitid":192864,
+    "name":"Marymount Manhattan College",
+    "state":"NY",
+    "city":"Oneonta"
+  },
+  {
+    "unitid":192925,
+    "name":"Medaille University",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":192970,
+    "name":"Memorial Hospital School of Radiation Therapy Technology",
+    "state":"NY",
+    "city":"West Seneca"
+  },
+  {
+    "unitid":193016,
+    "name":"Mercy University",
+    "state":"NY",
+    "city":"Forest Hills"
+  },
+  {
+    "unitid":193052,
+    "name":"Mesivta Torah Vodaath Rabbinical Seminary",
+    "state":"NY",
+    "city":"Pottersville"
+  },
+  {
+    "unitid":193061,
+    "name":"Mesivta of Eastern Parkway-Yeshiva Zichron Meilech",
+    "state":"NY",
+    "city":"Brooklyn"
+  },
+  {
+    "unitid":193070,
+    "name":"Mesivtha Tifereth Jerusalem of America",
+    "state":"NY",
+    "city":"Brooklyn"
+  },
+  {
+    "unitid":193201,
+    "name":"Mildred Elley School-Albany Campus",
+    "state":"NY",
+    "city":"Brooklyn"
+  },
+  {
+    "unitid":193247,
+    "name":"Mirrer Yeshiva Cent Institute",
+    "state":"NY",
+    "city":"Monsey"
+  },
+  {
+    "unitid":193265,
+    "name":"Modern Welding School",
+    "state":"NJ",
+    "city":"Lakewood"
+  },
+  {
+    "unitid":193283,
+    "name":"Mohawk Valley Community College",
+    "state":"NY",
+    "city":"Long Beach"
+  },
+  {
+    "unitid":193292,
+    "name":"Molloy College",
+    "state":"NY",
+    "city":"Flushing"
+  },
+  {
+    "unitid":193308,
+    "name":"Monroe College",
+    "state":"NY",
+    "city":"Troy"
+  },
+  {
+    "unitid":193326,
+    "name":"Monroe Community College",
+    "state":"NY",
+    "city":"Rochester"
+  },
+  {
+    "unitid":193353,
+    "name":"Mount Saint Mary College",
+    "state":"NY",
+    "city":"Rochester"
+  },
+  {
+    "unitid":193380,
+    "name":"Montefiore School of Nursing",
+    "state":"NY",
+    "city":"Rochester"
+  },
+  {
+    "unitid":198899,
+    "name":"Mars Hill University",
+    "state":"NC",
+    "city":"Pinehurst"
+  },
+  {
+    "unitid":198905,
+    "name":"Martin Community College",
+    "state":"NC",
+    "city":"Raleigh"
+  },
+  {
+    "unitid":198914,
+    "name":"Mayland Community College",
+    "state":"NC",
+    "city":"Fayetteville"
+  },
+  {
+    "unitid":198923,
+    "name":"McDowell Technical Community College",
+    "state":"NC",
+    "city":"Laurinburg"
+  },
+  {
+    "unitid":198950,
+    "name":"Meredith College",
+    "state":"NC",
+    "city":"Whiteville"
+  },
+  {
+    "unitid":198969,
+    "name":"Methodist University",
+    "state":"NC",
+    "city":"Sylva"
+  },
+  {
+    "unitid":198978,
+    "name":"Miller-Motte College-Wilmington",
+    "state":"NC",
+    "city":"Albemarle"
+  },
+  {
+    "unitid":198987,
+    "name":"Mitchell Community College",
+    "state":"NC",
+    "city":"Wake Forest"
+  },
+  {
+    "unitid":199005,
+    "name":"Mitchells Academy",
+    "state":"NC",
+    "city":"Dobson"
+  },
+  {
+    "unitid":199023,
+    "name":"Montgomery Community College",
+    "state":"NC",
+    "city":"Graham"
+  },
+  {
+    "unitid":199032,
+    "name":"Montreat College",
+    "state":"NC",
+    "city":"Murphy"
+  },
+  {
+    "unitid":199458,
+    "name":"Mid-Atlantic Christian University",
+    "state":"ND",
+    "city":"Mayville"
+  },
+  {
+    "unitid":200226,
+    "name":"Mayville State University",
+    "state":"OH",
+    "city":"Youngstown"
+  },
+  {
+    "unitid":200253,
+    "name":"Minot State University",
+    "state":"OH",
+    "city":"Cincinnati"
+  },
+  {
+    "unitid":203775,
+    "name":"Malone University",
+    "state":"OH",
+    "city":"Lancaster"
+  },
+  {
+    "unitid":203845,
+    "name":"Marietta College",
+    "state":"OH",
+    "city":"Athens"
+  },
+  {
+    "unitid":203881,
+    "name":"Marion Technical College",
+    "state":"OH",
+    "city":"Zanesville"
+  },
+  {
+    "unitid":203942,
+    "name":"Medina County Career Center",
+    "state":"OH",
+    "city":"East Liverpool"
+  },
+  {
+    "unitid":203960,
+    "name":"Mercy College of Ohio",
+    "state":"OH",
+    "city":"Steubenville"
+  },
+  {
+    "unitid":203997,
+    "name":"Methodist Theological School in Ohio",
+    "state":"OH",
+    "city":"Delaware"
+  },
+  {
+    "unitid":204006,
+    "name":"Miami University-Hamilton",
+    "state":"OH",
+    "city":"Westerville"
+  },
+  {
+    "unitid":204015,
+    "name":"Miami University-Middletown",
+    "state":"OH",
+    "city":"Perrysburg"
+  },
+  {
+    "unitid":204024,
+    "name":"Miami University-Oxford",
+    "state":"OH",
+    "city":"Portsmouth"
+  },
+  {
+    "unitid":204121,
+    "name":"Moler Hollywood Beauty Academy",
+    "state":"OH",
+    "city":"Brecksville"
+  },
+  {
+    "unitid":204158,
+    "name":"Miami Valley Career Technology Center",
+    "state":"OH",
+    "city":"Wilberforce"
+  },
+  {
+    "unitid":204176,
+    "name":"Mount Carmel College of Nursing",
+    "state":"OH",
+    "city":"Columbus"
+  },
+  {
+    "unitid":204194,
+    "name":"Mount Vernon Nazarene University",
+    "state":"OH",
+    "city":"Sandusky"
+  },
+  {
+    "unitid":204200,
+    "name":"Mount St. Joseph University",
+    "state":"OH",
+    "city":"Wickliffe"
+  },
+  {
+    "unitid":204264,
+    "name":"Muskingum University",
+    "state":"OH",
+    "city":"Centerville"
+  },
+  {
+    "unitid":207236,
+    "name":"Murray State College",
+    "state":"OR",
+    "city":"La Grande"
+  },
+  {
+    "unitid":209241,
+    "name":"Mount Angel Seminary",
+    "state":"PA",
+    "city":"King of Prussia"
+  },
+  {
+    "unitid":209250,
+    "name":"Mt Hood Community College",
+    "state":"PA",
+    "city":"Exton"
+  },
+  {
+    "unitid":209287,
+    "name":"Multnomah University",
+    "state":"PA",
+    "city":"Clarks Summit"
+  },
+  {
+    "unitid":211130,
+    "name":"Missio Theological Seminary",
+    "state":"PA",
+    "city":"Philadelphia"
+  },
+  {
+    "unitid":213534,
+    "name":"Miller-Motte College-Berks Technical Institute",
+    "state":"PA",
+    "city":"DuBois"
+  },
+  {
+    "unitid":213774,
+    "name":"Manor College",
+    "state":"PA",
+    "city":"Philadelphia"
+  },
+  {
+    "unitid":213826,
+    "name":"Marywood University",
+    "state":"PA",
+    "city":"Washington"
+  },
+  {
+    "unitid":213987,
+    "name":"Mercyhurst University",
+    "state":"PA",
+    "city":"Pittsburgh"
+  },
+  {
+    "unitid":213996,
+    "name":"Messiah University",
+    "state":"PA",
+    "city":"King of Prussia"
+  },
+  {
+    "unitid":214041,
+    "name":"Millersville University of Pennsylvania",
+    "state":"PA",
+    "city":"Philadelphia"
+  },
+  {
+    "unitid":214069,
+    "name":"Misericordia University",
+    "state":"PA",
+    "city":"Philadelphia"
+  },
+  {
+    "unitid":214111,
+    "name":"Montgomery County Community College",
+    "state":"PA",
+    "city":"Langhorne"
+  },
+  {
+    "unitid":214148,
+    "name":"Moore College of Art and Design",
+    "state":"PA",
+    "city":"Philadelphia"
+  },
+  {
+    "unitid":214157,
+    "name":"Moravian University",
+    "state":"PA",
+    "city":"Philadelphia"
+  },
+  {
+    "unitid":214166,
+    "name":"Mount Aloysius College",
+    "state":"PA",
+    "city":"Bradford"
+  },
+  {
+    "unitid":214175,
+    "name":"Muhlenberg College",
+    "state":"PA",
+    "city":"Greensburg"
+  },
+  {
+    "unitid":218335,
+    "name":"Medical University of South Carolina",
+    "state":"SD",
+    "city":"Aberdeen"
+  },
+  {
+    "unitid":218353,
+    "name":"Midlands Technical College",
+    "state":"SD",
+    "city":"Yankton"
+  },
+  {
+    "unitid":218399,
+    "name":"Morris College",
+    "state":"SD",
+    "city":"Rapid City"
+  },
+  {
+    "unitid":219189,
+    "name":"Mitchell Technical College",
+    "state":"TN",
+    "city":"Fayetteville"
+  },
+  {
+    "unitid":219198,
+    "name":"Mount Marty University",
+    "state":"TN",
+    "city":"Nashville"
+  },
+  {
+    "unitid":220710,
+    "name":"Maryville College",
+    "state":"TN",
+    "city":"Nashville"
+  },
+  {
+    "unitid":220792,
+    "name":"Meharry Medical College",
+    "state":"TN",
+    "city":"Memphis"
+  },
+  {
+    "unitid":220871,
+    "name":"Memphis Theological Seminary",
+    "state":"TX",
+    "city":"Amarillo"
+  },
+  {
+    "unitid":220978,
+    "name":"Middle Tennessee State University",
+    "state":"TX",
+    "city":"Garland"
+  },
+  {
+    "unitid":220996,
+    "name":"Middle Tennessee School of Anesthesia Inc",
+    "state":"TX",
+    "city":"Lufkin"
+  },
+  {
+    "unitid":221096,
+    "name":"Motlow State Community College",
+    "state":"TX",
+    "city":"Arlington"
+  },
+  {
+    "unitid":224776,
+    "name":"Miami International University of Art & Design-Art Institute Dallas",
+    "state":"TX",
+    "city":"Irving"
+  },
+  {
+    "unitid":226578,
+    "name":"McLennan Community College",
+    "state":"TX",
+    "city":"Uvalde"
+  },
+  {
+    "unitid":226587,
+    "name":"McMurry University",
+    "state":"TX",
+    "city":"Waxahachie"
+  },
+  {
+    "unitid":226806,
+    "name":"Midland College",
+    "state":"TX",
+    "city":"Nacogdoches"
+  },
+  {
+    "unitid":226833,
+    "name":"Midwestern State University",
+    "state":"TX",
+    "city":"San Marcos"
+  },
+  {
+    "unitid":228219,
+    "name":"Miller-Motte College-STVT-McAllen",
+    "state":"TX",
+    "city":"Victoria"
+  },
+  {
+    "unitid":230959,
+    "name":"Middlebury College",
+    "state":"VA",
+    "city":"Salem"
+  },
+  {
+    "unitid":231873,
+    "name":"Mountain Gateway Community College",
+    "state":"VA",
+    "city":"Richmond"
+  },
+  {
+    "unitid":232672,
+    "name":"Mary Baldwin University",
+    "state":"VA",
+    "city":"Petersburg"
+  },
+  {
+    "unitid":232706,
+    "name":"Marymount University",
+    "state":"VA",
+    "city":"Virginia Beach"
+  },
+  {
+    "unitid":232788,
+    "name":"Mountain Empire Community College",
+    "state":"VA",
+    "city":"Wytheville"
+  },
+  {
+    "unitid":237525,
+    "name":"Marshall University",
+    "state":"WI",
+    "city":"Milwaukee"
+  },
+  {
+    "unitid":237543,
+    "name":"Mercer County Technical Education Center",
+    "state":"WI",
+    "city":"Milwaukee"
+  },
+  {
+    "unitid":237561,
+    "name":"Monongalia County Technical Education Center",
+    "state":"WI",
+    "city":"Fond du Lac"
+  },
+  {
+    "unitid":237570,
+    "name":"Morgantown Beauty College Inc",
+    "state":"WI",
+    "city":"Milwaukee"
+  },
+  {
+    "unitid":237598,
+    "name":"Mountain State College",
+    "state":"WI",
+    "city":"Nashotah"
+  },
+  {
+    "unitid":238263,
+    "name":"Madison Area Technical College",
+    "state":"WI",
+    "city":"Menomonie"
+  },
+  {
+    "unitid":239071,
+    "name":"Maranatha Baptist University",
+    "state":"WY",
+    "city":"Laramie"
+  },
+  {
+    "unitid":239080,
+    "name":"Marian University",
+    "state":"WY",
+    "city":"Laramie"
+  },
+  {
+    "unitid":239105,
+    "name":"Marquette University",
+    "state":"AS",
+    "city":"Pago Pago"
+  },
+  {
+    "unitid":239169,
+    "name":"Medical College of Wisconsin",
+    "state":"GU",
+    "city":"Mangilao"
+  },
+  {
+    "unitid":239220,
+    "name":"Mid-State Technical College",
+    "state":"GU",
+    "city":"Mangilao"
+  },
+  {
+    "unitid":239248,
+    "name":"Milwaukee Area Technical College",
+    "state":"MP",
+    "city":"Saipan"
+  },
+  {
+    "unitid":239309,
+    "name":"Milwaukee Institute of Art & Design",
+    "state":"PR",
+    "city":"Arecibo"
+  },
+  {
+    "unitid":239318,
+    "name":"Milwaukee School of Engineering",
+    "state":"PR",
+    "city":"Bayamon"
+  },
+  {
+    "unitid":239372,
+    "name":"Moraine Park Technical College",
+    "state":"PR",
+    "city":"Manati"
+  },
+  {
+    "unitid":239390,
+    "name":"Mount Mary University",
+    "state":"PR",
+    "city":"Bayamon"
+  },
+  {
+    "unitid":242945,
+    "name":"Modern Hairstyling Institute-Bayamon",
+    "state":"TX",
+    "city":"Houston"
+  },
+  {
+    "unitid":242954,
+    "name":"Modern Hairstyling Institute-Arecibo",
+    "state":"TX",
+    "city":"San Antonio"
+  },
+  {
+    "unitid":244279,
+    "name":"Meridian College",
+    "state":"PA",
+    "city":"Philadelphia"
+  },
+  {
+    "unitid":245953,
+    "name":"Mid-America Christian University",
+    "state":"ID",
+    "city":"Boise"
+  },
+  {
+    "unitid":245962,
+    "name":"Miller-Motte College-Tulsa",
+    "state":"IL",
+    "city":"Rockford"
+  },
+  {
+    "unitid":247737,
+    "name":"Mississippi Community College Board",
+    "state":"FL",
+    "city":"Miami Beach"
+  },
+  {
+    "unitid":248606,
+    "name":"Moore Norman Technology Center",
+    "state":"AZ",
+    "city":"Chandler"
+  },
+  {
+    "unitid":249061,
+    "name":"Ms Roberts Academy of Beauty Culture",
+    "state":"NY",
+    "city":"Mexico"
+  },
+  {
+    "unitid":250902,
+    "name":"Moler-Pickens Beauty Academy",
+    "state":"OK",
+    "city":"El Reno"
+  },
+  {
+    "unitid":262165,
+    "name":"Montana Bible College",
+    "state":"IA",
+    "city":"Cedar Rapids"
+  },
+  {
+    "unitid":363165,
+    "name":"Metro Technology Centers",
+    "state":"MI",
+    "city":"Taylor"
+  },
+  {
+    "unitid":365480,
+    "name":"Meridian Technology Center",
+    "state":"IL",
+    "city":"Niles"
+  },
+  {
+    "unitid":365763,
+    "name":"Morris County Vocational School District",
+    "state":"OR",
+    "city":"Portland"
+  },
+  {
+    "unitid":366571,
+    "name":"Mercy-St Luke's School of Radiologic Technology",
+    "state":"IA",
+    "city":"Davenport"
+  },
+  {
+    "unitid":366632,
+    "name":"Mercer County Career Center",
+    "state":"LA",
+    "city":"Baton Rouge"
+  },
+  {
+    "unitid":367112,
+    "name":"Miller-Motte College-McCann-Monroe",
+    "state":"MN",
+    "city":"Minnetonka"
+  },
+  {
+    "unitid":368647,
+    "name":"Mineral County Vocational Technical Center",
+    "state":"PR",
+    "city":"Humacao"
+  },
+  {
+    "unitid":369002,
+    "name":"Massachusetts School of Law",
+    "state":"PR",
+    "city":"Aguadilla"
+  },
+  {
+    "unitid":371928,
+    "name":"Modern Technology School",
+    "state":"WA",
+    "city":"Tacoma"
+  },
+  {
+    "unitid":374592,
+    "name":"MCVSD",
+    "state":"CA",
+    "city":"Santa Maria"
+  },
+  {
+    "unitid":375407,
+    "name":"Madison Adult Career Center",
+    "state":"AZ",
+    "city":"Scottsdale"
+  },
+  {
+    "unitid":376631,
+    "name":"Mr Wayne's School of Unisex Hair Design",
+    "state":"OH",
+    "city":"New Philadelphia"
+  },
+  {
+    "unitid":379621,
+    "name":"Madison Oneida BOCES-Practical Nursing Program",
+    "state":"OH",
+    "city":"Middleburg Heights"
+  },
+  {
+    "unitid":381370,
+    "name":"Michigan College of Beauty-Troy",
+    "state":"CA",
+    "city":"Anaheim"
+  },
+  {
+    "unitid":382258,
+    "name":"Mt. Diablo Adult Education-Mt. Diablo USD",
+    "state":"CA",
+    "city":"Los Angeles"
+  },
+  {
+    "unitid":383020,
+    "name":"Midwest College of Oriental Medicine-Racine",
+    "state":"IL",
+    "city":"Mount Carmel"
+  },
+  {
+    "unitid":389860,
+    "name":"Mid-EastCTC-Adult Education",
+    "state":"OH",
+    "city":"Canfield"
+  },
+  {
+    "unitid":406486,
+    "name":"Myotherapy Massage College",
+    "state":"PR",
+    "city":"Caguas"
+  },
+  {
+    "unitid":407489,
+    "name":"Mahoning County Career and Technical Center",
+    "state":"CT",
+    "city":"Waterbury"
+  },
+  {
+    "unitid":411684,
+    "name":"Marian Health Careers Center-Los Angeles Campus",
+    "state":"NY",
+    "city":"Newark"
+  },
+  {
+    "unitid":413972,
+    "name":"Mitchells Academy",
+    "state":"OH",
+    "city":"Van Wert"
+  },
+  {
+    "unitid":414124,
+    "name":"Motoring Technical Training Institute",
+    "state":"OK",
+    "city":"Burns Flat"
+  },
+  {
+    "unitid":414461,
+    "name":"Mech-Tech College",
+    "state":"OK",
+    "city":"Wayne"
+  },
+  {
+    "unitid":417752,
+    "name":"Messenger College",
+    "state":"WV",
+    "city":"Eleanor"
+  },
+  {
+    "unitid":418320,
+    "name":"Mid-America Technology Center",
+    "state":"UT",
+    "city":"Saint George"
+  },
+  {
+    "unitid":418481,
+    "name":"Mifflin County Academy of Science and Technology",
+    "state":"PR",
+    "city":"Ponce"
+  },
+  {
+    "unitid":419226,
+    "name":"Marion Technical College",
+    "state":"OK",
+    "city":"Okmulgee"
+  },
+  {
+    "unitid":420981,
+    "name":"Manhattan School of Computer Technology",
+    "state":"NY",
+    "city":"Batavia"
+  },
+  {
+    "unitid":423412,
+    "name":"Mid Cities Barber College",
+    "state":"MA",
+    "city":"Fitchburg"
+  },
+  {
+    "unitid":423643,
+    "name":"Midwestern University-Glendale",
+    "state":"FL",
+    "city":"Fort Walton Beach"
+  },
+  {
+    "unitid":425986,
+    "name":"Mildred Elley-Pittsfield Campus",
+    "state":"NC",
+    "city":"Charlotte"
+  },
+  {
+    "unitid":427308,
+    "name":"Merkaz Bnos-Business School",
+    "state":"CA",
+    "city":"Bakersfield"
+  },
+  {
+    "unitid":428000,
+    "name":"Miami Ad School",
+    "state":"GA",
+    "city":"Marietta"
+  },
+  {
+    "unitid":428453,
+    "name":"Minnesota State Colleges and Universities System Office",
+    "state":"FL",
+    "city":"Miami"
+  },
+  {
+    "unitid":431017,
+    "name":"Mid-Del Technology Center",
+    "state":"NC",
+    "city":"Raleigh"
+  },
+  {
+    "unitid":433040,
+    "name":"Monty Tech",
+    "state":"CA",
+    "city":"Pleasant Hill"
+  },
+  {
+    "unitid":434432,
+    "name":"Myotherapy Institute",
+    "state":"OK",
+    "city":"Tulsa"
+  },
+  {
+    "unitid":436650,
+    "name":"Medical Training College",
+    "state":"NY",
+    "city":"Jamaica"
+  },
+  {
+    "unitid":437556,
+    "name":"Midwest Technical Institute-Illinois",
+    "state":"NJ",
+    "city":"Newark"
+  },
+  {
+    "unitid":437778,
+    "name":"Milan Institute-San Antonio Ingram",
+    "state":"CA",
+    "city":"Anaheim"
+  },
+  {
+    "unitid":438221,
+    "name":"Miller-Motte College-McCann-Lewisburg",
+    "state":"OR",
+    "city":"Hillsboro"
+  },
+  {
+    "unitid":438337,
+    "name":"Modern Hairstyling Institute-Carolina",
+    "state":"CA",
+    "city":"Duarte"
+  },
+  {
+    "unitid":439020,
+    "name":"Midwest College of Oriental Medicine-Skokie",
+    "state":"MS",
+    "city":"Gulfport"
+  },
+  {
+    "unitid":439455,
+    "name":"MDT College of Health Sciences",
+    "state":"OR",
+    "city":"Salem"
+  },
+  {
+    "unitid":439747,
+    "name":"My Le's Beauty College",
+    "state":"VA",
+    "city":"Virginia Beach"
+  },
+  {
+    "unitid":440819,
+    "name":"Miami Ad School-San Francisco",
+    "state":"CA",
+    "city":"Lancaster"
+  },
+  {
+    "unitid":440855,
+    "name":"Milan Institute-Amarillo",
+    "state":"CA",
+    "city":"Carson"
+  },
+  {
+    "unitid":441025,
+    "name":"Miller-Motte College-Charleston",
+    "state":"WA",
+    "city":"Tacoma"
+  },
+  {
+    "unitid":441414,
+    "name":"M-DCPS The English Center",
+    "state":"CO",
+    "city":"Colorado Springs"
+  },
+  {
+    "unitid":441575,
+    "name":"Metropolitan Learning Institute",
+    "state":"PA",
+    "city":"Sunbury"
+  },
+  {
+    "unitid":442657,
+    "name":"Milan Institute-Palm Desert",
+    "state":"NY",
+    "city":"Far Rockaway"
+  },
+  {
+    "unitid":443650,
+    "name":"Miller-Motte College-Chattanooga",
+    "state":"MA",
+    "city":"Westborough"
+  },
+  {
+    "unitid":443669,
+    "name":"Milan Institute-Sparks",
+    "state":"MA",
+    "city":"Plymouth"
+  },
+  {
+    "unitid":444662,
+    "name":"Moore Career College",
+    "state":"NE",
+    "city":"Omaha"
+  },
+  {
+    "unitid":444954,
+    "name":"Mountwest Community and Technical College",
+    "state":"UT",
+    "city":"Layton"
+  },
+  {
+    "unitid":448123,
+    "name":"MyrAngel Beauty Institute",
+    "state":"VA",
+    "city":"McLean"
+  },
+  {
+    "unitid":448248,
+    "name":"Mountainland Technical College",
+    "state":"LA",
+    "city":"Alexandria"
+  },
+  {
+    "unitid":448275,
+    "name":"Mountain State School of Massage",
+    "state":"TX",
+    "city":"Fort Worth"
+  },
+  {
+    "unitid":448895,
+    "name":"Milan Institute-Clovis",
+    "state":"AL",
+    "city":"Orange Beach"
+  },
+  {
+    "unitid":449861,
+    "name":"Milwaukee Career College",
+    "state":"TX",
+    "city":"Austin"
+  },
+  {
+    "unitid":449904,
+    "name":"Milan Institute of Cosmetology-San Antonio Military",
+    "state":"TX",
+    "city":"San Antonio"
+  },
+  {
+    "unitid":451103,
+    "name":"Miami Regional University",
+    "state":"CA",
+    "city":"Los Angeles"
+  },
+  {
+    "unitid":451228,
+    "name":"MyComputerCareer at Indianapolis",
+    "state":"CO",
+    "city":"Boulder"
+  },
+  {
+    "unitid":451459,
+    "name":"Monroe 2 Orleans BOCES-Center for Workforce Development",
+    "state":"IL",
+    "city":"Peoria"
+  },
+  {
+    "unitid":451477,
+    "name":"MyComputerCareer at Columbus",
+    "state":"MD",
+    "city":"Rockville"
+  },
+  {
+    "unitid":451547,
+    "name":"Manuel and Theresa's School of Hair Design-Bryan",
+    "state":"MS",
+    "city":"Clinton"
+  },
+  {
+    "unitid":454546,
+    "name":"Milan Institute of Cosmetology-Vacaville",
+    "state":"IL",
+    "city":"Libertyville"
+  },
+  {
+    "unitid":454555,
+    "name":"Milan Institute of Cosmetology-Reno",
+    "state":"IL",
+    "city":"Bridgeview"
+  },
+  {
+    "unitid":454698,
+    "name":"Mayfield College",
+    "state":"TX",
+    "city":"San Benito"
+  },
+  {
+    "unitid":455105,
+    "name":"Mississippi Institute of Aesthetics Nails & Cosmetology",
+    "state":"NC",
+    "city":"Greensboro"
+  },
+  {
+    "unitid":455336,
+    "name":"MediaTech Institute-Dallas",
+    "state":"CA",
+    "city":"Los Angeles"
+  },
+  {
+    "unitid":455831,
+    "name":"Medical Institute of Palm Beach",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":456153,
+    "name":"MediaTech Institute-Houston",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":456205,
+    "name":"Miller-Motte College-Raleigh",
+    "state":"NY",
+    "city":"Staten Island"
+  },
+  {
+    "unitid":456579,
+    "name":"Miller-Motte College-McCann-Allentown",
+    "state":"TX",
+    "city":"Haltom city"
+  },
+  {
+    "unitid":456931,
+    "name":"Miller-Motte College-STVT-Corpus Christi",
+    "state":"WA",
+    "city":"Port Hadlock"
+  },
+  {
+    "unitid":457077,
+    "name":"Milan Institute-Bakersfield",
+    "state":"NC",
+    "city":"Fayetteville"
+  },
+  {
+    "unitid":457536,
+    "name":"Midwestern Career College",
+    "state":"CO",
+    "city":"Denver"
+  },
+  {
+    "unitid":457606,
+    "name":"My Le's Beauty College",
+    "state":"IL",
+    "city":"Downers Grove"
+  },
+  {
+    "unitid":457642,
+    "name":"Marketti Academy of Cosmetology",
+    "state":"MN",
+    "city":"Rochester"
+  },
+  {
+    "unitid":457749,
+    "name":"Montana Academy of Salons",
+    "state":"TX",
+    "city":"Richardson"
+  },
+  {
+    "unitid":457952,
+    "name":"Metro Beauty Academy",
+    "state":"TX",
+    "city":"Brownsville"
+  },
+  {
+    "unitid":458405,
+    "name":"Miller-Motte College-Fayetteville",
+    "state":"PA",
+    "city":"Lewistown"
+  },
+  {
+    "unitid":458441,
+    "name":"Miller-Motte College-Columbus",
+    "state":"CA",
+    "city":"Norco"
+  },
+  {
+    "unitid":460172,
+    "name":"Miller-Motte College-STVT-San Antonio",
+    "state":"KY",
+    "city":"Louisville"
+  },
+  {
+    "unitid":460394,
+    "name":"Moreno Valley College",
+    "state":"NJ",
+    "city":"Lakewood"
+  },
+  {
+    "unitid":460525,
+    "name":"Milan Institute-Boise",
+    "state":"WI",
+    "city":"Beloit"
+  },
+  {
+    "unitid":460534,
+    "name":"Milan Institute of Cosmetology-El Paso",
+    "state":"FL",
+    "city":"Doral"
+  },
+  {
+    "unitid":460817,
+    "name":"Miller-Motte College-Jacksonville",
+    "state":"ME",
+    "city":"Scarborough"
+  },
+  {
+    "unitid":460826,
+    "name":"Miller-Motte College-Augusta",
+    "state":"OH",
+    "city":"Norwalk"
+  },
+  {
+    "unitid":460835,
+    "name":"Miller-Motte College-Conway",
+    "state":"NV",
+    "city":"Las Vegas"
+  },
+  {
+    "unitid":461014,
+    "name":"Mildred Elley-New York Campus",
+    "state":"CA",
+    "city":"Escondido"
+  },
+  {
+    "unitid":461272,
+    "name":"Mandalyn Academy",
+    "state":"CA",
+    "city":"Oceanside"
+  },
+  {
+    "unitid":461324,
+    "name":"Meridian Institute of Surgical Assisting",
+    "state":"PR",
+    "city":"Manati"
+  },
+  {
+    "unitid":461333,
+    "name":"Mauna Loa Helicopters",
+    "state":"AZ",
+    "city":"Phoenix"
+  },
+  {
+    "unitid":461528,
+    "name":"Manna University",
+    "state":"IA",
+    "city":"West Des Moines"
+  },
+  {
+    "unitid":461883,
+    "name":"Millennia Atlantic University",
+    "state":"TX",
+    "city":"La Joya"
+  },
+  {
+    "unitid":470296,
+    "name":"Manuel and Theresa's School of Hair Design-Victoria",
+    "state":"KS",
+    "city":"Overland Park"
+  },
+  {
+    "unitid":475060,
+    "name":"Miller-Motte College-Macon",
+    "state":"KS",
+    "city":"Salina"
+  },
+  {
+    "unitid":475282,
+    "name":"Marian Health Careers Center-Van Nuys Campus",
+    "state":"CO",
+    "city":"Westminster"
+  },
+  {
+    "unitid":475325,
+    "name":"Milan Institute-Las Vegas",
+    "state":"CA",
+    "city":"Glendale"
+  },
+  {
+    "unitid":476355,
+    "name":"Miami Ad School-New York",
+    "state":"MO",
+    "city":"Sedalia"
+  },
+  {
+    "unitid":476595,
+    "name":"Medical Allied Career Center",
+    "state":"UT",
+    "city":"Salt Lake City"
+  },
+  {
+    "unitid":476902,
+    "name":"Mitsu Sato Hair Academy",
+    "state":"CA",
+    "city":"Hanford"
+  },
+  {
+    "unitid":476993,
+    "name":"Medspa Academies",
+    "state":"FL",
+    "city":"Hallandale Beach"
+  },
+  {
+    "unitid":479062,
+    "name":"MotoRing Technical Training Institute",
+    "state":"CA",
+    "city":"Danville"
+  },
+  {
+    "unitid":479965,
+    "name":"Medical Career Institute",
+    "state":"VA",
+    "city":"Virginia Beach"
+  },
+  {
+    "unitid":480037,
+    "name":"MyComputerCareer at Raleigh",
+    "state":"CA",
+    "city":"Lancaster"
+  },
+  {
+    "unitid":480851,
+    "name":"Miami Media School",
+    "state":"AZ",
+    "city":"Phoenix"
+  },
+  {
+    "unitid":480985,
+    "name":"Midwives College of Utah",
+    "state":"OH",
+    "city":"Columbus"
+  },
+  {
+    "unitid":481003,
+    "name":"M T Training Center",
+    "state":"VA",
+    "city":"Arlington"
+  },
+  {
+    "unitid":481225,
+    "name":"Mid-South Christian College",
+    "state":"CA",
+    "city":"Los Angeles"
+  },
+  {
+    "unitid":482060,
+    "name":"Milan Institute-Merced",
+    "state":"OH",
+    "city":"Mayfield Hts"
+  },
+  {
+    "unitid":482097,
+    "name":"Midwest Technical Institute-Missouri",
+    "state":"LA",
+    "city":"Shreveport"
+  },
+  {
+    "unitid":482158,
+    "name":"Middle Georgia State University",
+    "state":"AL",
+    "city":"Dothan"
+  },
+  {
+    "unitid":483470,
+    "name":"More Tech Institute",
+    "state":"GA",
+    "city":"Waycross"
+  },
+  {
+    "unitid":483887,
+    "name":"Mind Body Institute",
+    "state":"NY",
+    "city":"Brooklyn"
+  },
+  {
+    "unitid":484066,
+    "name":"MedQuest College",
+    "state":"CA",
+    "city":"Los Angeles"
+  },
+  {
+    "unitid":484844,
+    "name":"Minerva University",
+    "state":"AL",
+    "city":"Huntsville"
+  },
+  {
+    "unitid":486202,
+    "name":"Mingo Extended Learning Center",
+    "state":"SC",
+    "city":"Piedmont"
+  },
+  {
+    "unitid":486901,
+    "name":"Milligan University",
+    "state":"NJ",
+    "city":"Lakewood"
+  },
+  {
+    "unitid":487816,
+    "name":"Midfield Institute of Cosmetology",
+    "state":"CA",
+    "city":"Rancho Cordova"
+  },
+  {
+    "unitid":487977,
+    "name":"Martinsburg College",
+    "state":"FL",
+    "city":"West Palm Beach"
+  },
+  {
+    "unitid":488059,
+    "name":"Med College",
+    "state":"CA",
+    "city":"Irvine"
+  },
+  {
+    "unitid":488217,
+    "name":"Medical Career & Technical College",
+    "state":"TN",
+    "city":"Old Hickory"
+  },
+  {
+    "unitid":488299,
+    "name":"Mission Beauty Institute",
+    "state":"NY",
+    "city":"Monsey"
+  },
+  {
+    "unitid":490221,
+    "name":"MAK Beauty Institute",
+    "state":"PR",
+    "city":"San Juan"
+  },
+  {
+    "unitid":490249,
+    "name":"Mobile Technical Training",
+    "state":"AZ",
+    "city":"Chandler"
+  },
+  {
+    "unitid":490267,
+    "name":"Master's Barber & Styling College",
+    "state":"ID",
+    "city":"Rexburg"
+  },
+  {
+    "unitid":490328,
+    "name":"Mechon L'hoyroa",
+    "state":"NJ",
+    "city":"Howell"
+  },
+  {
+    "unitid":490470,
+    "name":"Massage Institute of Memphis",
+    "state":"CA",
+    "city":"Torrance"
+  },
+  {
+    "unitid":490489,
+    "name":"Metro Detroit Barber College",
+    "state":"AL",
+    "city":"Hoover"
+  },
+  {
+    "unitid":490674,
+    "name":"Manuel and Theresa's School of Hair Design",
+    "state":"OH",
+    "city":"Bridgeport"
+  },
+  {
+    "unitid":490753,
+    "name":"Maine Media College",
+    "state":"MI",
+    "city":"Waterford"
+  },
+  {
+    "unitid":491394,
+    "name":"Miller-Motte College-STVT-Arlington",
+    "state":"CA",
+    "city":"Pasadena"
+  },
+  {
+    "unitid":491589,
+    "name":"Mystros Barber Academy",
+    "state":"TX",
+    "city":"McAllen"
+  },
+  {
+    "unitid":491808,
+    "name":"Meridian University",
+    "state":"SC",
+    "city":"Charleston"
+  },
+  {
+    "unitid":493479,
+    "name":"Medical Career College of Northern California",
+    "state":"MI",
+    "city":"Cedarville"
+  },
+  {
+    "unitid":493549,
+    "name":"MCI",
+    "state":"CA",
+    "city":"Los Angeles"
+  },
+  {
+    "unitid":493655,
+    "name":"Montana Barber Institute",
+    "state":"AZ",
+    "city":"Flagstaff"
+  },
+  {
+    "unitid":493761,
+    "name":"MIXED Institute of Cosmetology & Barber",
+    "state":"NY",
+    "city":"Jackson Heights"
+  },
+  {
+    "unitid":493831,
+    "name":"Midwest Barber College",
+    "state":"VA",
+    "city":"Newport News"
+  },
+  {
+    "unitid":494728,
+    "name":"Michael's Barber & Hair Stylist Academy",
+    "state":"OH",
+    "city":"Cleveland Heights"
+  },
+  {
+    "unitid":494995,
+    "name":"Meryma'at Barber College",
+    "state":"TN",
+    "city":"Knoxville"
+  },
+  {
+    "unitid":495040,
+    "name":"Makana Esthetics Wellness Academy",
+    "state":"TX",
+    "city":"Houston"
+  },
+  {
+    "unitid":495183,
+    "name":"Mariano Moreno Culinary Institute",
+    "state":"UT",
+    "city":"Murray"
+  },
+  {
+    "unitid":496061,
+    "name":"Mason Anthony School of Cosmetology Arts & Sciences",
+    "state":"FL",
+    "city":"Miramar"
+  },
+  {
+    "unitid":496478,
+    "name":"Motion Picture Institute",
+    "state":"GA",
+    "city":"Atlanta"
+  },
+  {
+    "unitid":497046,
+    "name":"Madera Community College",
+    "state":"AZ",
+    "city":"Lake Havasu City"
+  },
+  {
+    "unitid":497204,
+    "name":"Mei Barber School",
+    "state":"AZ",
+    "city":"Show Low"
+  },
+  {
+    "unitid":497310,
+    "name":"Medspa Academies-National Institute of Modern Aesthetics",
+    "state":"AR",
+    "city":"Fort Smith"
+  },
+  {
+    "unitid":497833,
+    "name":"Marian University-Ancilla",
+    "state":"CT",
+    "city":"Waterbury"
+  },
+  {
+    "unitid":498003,
+    "name":"Montgomery Beauty School-Baltimore Beauty & Barber School",
+    "state":"FL",
+    "city":"Orlando"
+  },
+  {
+    "unitid":498757,
+    "name":"Medical Solutions Academy",
+    "state":"IN",
+    "city":"Lafayette"
+  }
+]

@@ -1,0 +1,58 @@
+{
+  "profile": {
+    "unitid": 433004,
+    "name": "American University of Health Sciences",
+    "city": "Tucson",
+    "state": "AZ",
+    "control": "Private for-profit",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Four-Year: Other Health Professions Schools",
+    "website": "www.brooklinecollege.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions"
+    ],
+    "intl_enrollment_pct": 2,
+    "tuition_summary": {
+      "sticker": 24575.0,
+      "in_state": 24575.0,
+      "out_of_state": 24575.0
+    },
+    "outcomes": {
+      "acceptance_rate": 100,
+      "yield": 100,
+      "grad_rate_6yr": 50,
+      "retention_full_time": null,
+      "student_faculty_ratio": 16,
+      "total_enrollment": 523
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record",
+      "Work Experience"
+    ],
+    "considered": [
+      "Legacy Status"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "Secondary School Rank"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

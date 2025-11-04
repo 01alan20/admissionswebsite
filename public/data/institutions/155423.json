@@ -1,0 +1,60 @@
+{
+  "profile": {
+    "unitid": 155423,
+    "name": "Washburn Institute of Technology",
+    "city": "Bowling Green",
+    "state": "KY",
+    "control": "Public",
+    "level": "2-year",
+    "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
+    "website": "www.gotopjs.com/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Precision Production",
+      "Mechanic & Repair Technologies",
+      "Engineering Technologies"
+    ],
+    "intl_enrollment_pct": 1,
+    "tuition_summary": {
+      "sticker": 9120.0,
+      "in_state": 9360.0,
+      "out_of_state": 9360.0
+    },
+    "outcomes": {
+      "acceptance_rate": 41,
+      "yield": 77,
+      "grad_rate_6yr": null,
+      "retention_full_time": 71,
+      "student_faculty_ratio": 16,
+      "total_enrollment": 1187
+    }
+  },
+  "requirements": {
+    "required": [
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Record"
+    ],
+    "considered": [],
+    "not_considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

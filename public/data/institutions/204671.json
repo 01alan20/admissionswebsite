@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 204671,
+    "name": "Ohio State University-Lima Campus",
+    "city": "South Point",
+    "state": "OH",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
+    "website": "www.tsbc.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Liberal Arts & Humanities",
+      "Education",
+      "Public Administration & Social Service",
+      "Business, Management & Marketing"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 9212.0,
+      "in_state": 8944.0,
+      "out_of_state": 33181.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": 12,
+      "retention_full_time": 43,
+      "student_faculty_ratio": 16,
+      "total_enrollment": 740
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 167729,
+    "name": "Salem State University",
+    "city": "Farmington Hills",
+    "state": "MI",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
+    "website": "www.msp.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Education",
+      "Health Professions",
+      "Business, Management & Marketing",
+      "Psychology"
+    ],
+    "intl_enrollment_pct": 3,
+    "tuition_summary": {
+      "sticker": 11978.0,
+      "in_state": 11978.0,
+      "out_of_state": 18961.0
+    },
+    "outcomes": {
+      "acceptance_rate": 96,
+      "yield": 17,
+      "grad_rate_6yr": 55,
+      "retention_full_time": 74,
+      "student_faculty_ratio": 11,
+      "total_enrollment": 6239
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Formal Demonstration Of Competencies",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Rank"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

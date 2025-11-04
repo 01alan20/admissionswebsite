@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 148876,
+    "name": "St. Augustine College",
+    "city": "Whiting",
+    "state": "IN",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate/Associate's Colleges: Mixed Baccalaureate/Associate's",
+    "website": "www.ccsj.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Education",
+      "Liberal Arts & Humanities",
+      "Business, Management & Marketing",
+      "Health Professions"
+    ],
+    "intl_enrollment_pct": 4,
+    "tuition_summary": {
+      "sticker": 13288.0,
+      "in_state": 13288.0,
+      "out_of_state": 13288.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": 6,
+      "retention_full_time": 62,
+      "student_faculty_ratio": 12,
+      "total_enrollment": 774
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 162760,
+    "name": "Hood College",
+    "city": "Cambridge",
+    "state": "MA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
+    "website": "www.hult.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Education",
+      "Computer & Information Sciences",
+      "Biological & Biomedical Sciences",
+      "Business, Management & Marketing"
+    ],
+    "intl_enrollment_pct": 7,
+    "tuition_summary": {
+      "sticker": 45870.0,
+      "in_state": 44500.0,
+      "out_of_state": 44500.0
+    },
+    "outcomes": {
+      "acceptance_rate": 78,
+      "yield": 12,
+      "grad_rate_6yr": 55,
+      "retention_full_time": 80,
+      "student_faculty_ratio": 11,
+      "total_enrollment": 2078
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "profile": {
+    "unitid": 442064,
+    "name": "Won Institute of Graduate Studies",
+    "city": "Pittsburgh",
+    "state": "PA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Four-Year: Other Health Professions Schools",
+    "website": "www.bcs.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Theology & Religious Vocations",
+      "Philosophy & Religious Studies"
+    ],
+    "intl_enrollment_pct": 1,
+    "tuition_summary": {
+      "sticker": NaN,
+      "in_state": NaN,
+      "out_of_state": NaN
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": null,
+      "student_faculty_ratio": null,
+      "total_enrollment": 112
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

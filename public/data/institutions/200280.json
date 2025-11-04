@@ -1,0 +1,60 @@
+{
+  "profile": {
+    "unitid": 200280,
+    "name": "University of North Dakota",
+    "city": "Cincinnati",
+    "state": "OH",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: High Research Activity",
+    "website": "www.ccms.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Business, Management & Marketing",
+      "Education",
+      "Transportation & Materials Moving"
+    ],
+    "intl_enrollment_pct": 6,
+    "tuition_summary": {
+      "sticker": 10951.0,
+      "in_state": 10951.0,
+      "out_of_state": 15570.0
+    },
+    "outcomes": {
+      "acceptance_rate": 77,
+      "yield": 31,
+      "grad_rate_6yr": 63,
+      "retention_full_time": 83,
+      "student_faculty_ratio": 17,
+      "total_enrollment": 14172
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [],
+    "not_considered": [
+      "Admission Test Scores",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

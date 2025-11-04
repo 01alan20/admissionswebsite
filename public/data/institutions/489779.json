@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 489779,
+    "name": "Purdue University Global",
+    "city": "Milwaukee",
+    "state": "WI",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral/Professional Universities",
+    "website": "https://flex.wisconsin.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Health Professions",
+      "Computer & Information Sciences",
+      "Multidisciplinary Studies"
+    ],
+    "intl_enrollment_pct": 1,
+    "tuition_summary": {
+      "sticker": 10110.0,
+      "in_state": 10134.0,
+      "out_of_state": 14445.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": 50,
+      "retention_full_time": 25,
+      "student_faculty_ratio": 25,
+      "total_enrollment": 44421
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

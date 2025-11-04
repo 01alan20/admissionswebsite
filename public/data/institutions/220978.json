@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 220978,
+    "name": "Middle Tennessee State University",
+    "city": "Garland",
+    "state": "TX",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: High Research Activity",
+    "website": "www.amberton.edu/",
+    "admissions_url": null,
+    "test_policy": "Required",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Visual & Performing Arts",
+      "Multidisciplinary Studies",
+      "Education"
+    ],
+    "intl_enrollment_pct": 3,
+    "tuition_summary": {
+      "sticker": 9506.0,
+      "in_state": 9232.0,
+      "out_of_state": 28264.0
+    },
+    "outcomes": {
+      "acceptance_rate": 68,
+      "yield": 31,
+      "grad_rate_6yr": 54,
+      "retention_full_time": 78,
+      "student_faculty_ratio": 17,
+      "total_enrollment": 20183
+    }
+  },
+  "requirements": {
+    "required": [
+      "Admission Test Scores",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank"
+    ],
+    "test_policy": "Required"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

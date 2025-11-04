@@ -1,0 +1,60 @@
+{
+  "profile": {
+    "unitid": 225548,
+    "name": "Howard Payne University",
+    "city": "Ranger",
+    "state": "TX",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
+    "website": "https://www.rangercollege.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Education",
+      "Social Sciences",
+      "Parks, Recreation & Fitness"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 33322.0,
+      "in_state": 31650.0,
+      "out_of_state": 31650.0
+    },
+    "outcomes": {
+      "acceptance_rate": 68,
+      "yield": 24,
+      "grad_rate_6yr": 31,
+      "retention_full_time": 55,
+      "student_faculty_ratio": 10,
+      "total_enrollment": 833
+    }
+  },
+  "requirements": {
+    "required": [
+      "Secondary School Gpa",
+      "Secondary School Rank",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Work Experience"
+    ],
+    "not_considered": [],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "profile": {
+    "unitid": 235024,
+    "name": "Cornish College of the Arts",
+    "city": "Walla Walla",
+    "state": "WA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Four-Year: Arts, Music & Design Schools",
+    "website": "www.whitman.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Visual & Performing Arts",
+      "Communications Technologies",
+      "Architecture & Planning"
+    ],
+    "intl_enrollment_pct": 2,
+    "tuition_summary": {
+      "sticker": 39913.0,
+      "in_state": 36844.0,
+      "out_of_state": 36844.0
+    },
+    "outcomes": {
+      "acceptance_rate": 70,
+      "yield": 21,
+      "grad_rate_6yr": 52,
+      "retention_full_time": 69,
+      "student_faculty_ratio": 6,
+      "total_enrollment": 502
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

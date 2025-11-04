@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 203748,
+    "name": "Lorain County Community College",
+    "city": "Chillicothe",
+    "state": "OH",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Associate's Colleges: High Transfer-Mixed Traditional/Nontraditional",
+    "website": "https://www.ohio.edu/chillicothe/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Liberal Arts & Humanities",
+      "Health Professions",
+      "Business, Management & Marketing",
+      "Engineering Technologies"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 4135.0,
+      "in_state": 4005.0,
+      "out_of_state": 8601.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": null,
+      "student_faculty_ratio": 14,
+      "total_enrollment": 9410
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

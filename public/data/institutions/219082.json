@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 219082,
+    "name": "Dakota State University",
+    "city": "Nashville",
+    "state": "TN",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Medium Programs",
+    "website": "www.daymarcollege.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Computer & Information Sciences",
+      "Education",
+      "Business, Management & Marketing",
+      "Liberal Arts & Humanities"
+    ],
+    "intl_enrollment_pct": 6,
+    "tuition_summary": {
+      "sticker": 9633.0,
+      "in_state": 9633.0,
+      "out_of_state": 12735.0
+    },
+    "outcomes": {
+      "acceptance_rate": 98,
+      "yield": 41,
+      "grad_rate_6yr": 48,
+      "retention_full_time": 75,
+      "student_faculty_ratio": 19,
+      "total_enrollment": 3508
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Rank",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores"
+    ],
+    "not_considered": [
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

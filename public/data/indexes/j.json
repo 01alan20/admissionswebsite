@@ -1,0 +1,452 @@
+[
+  {
+    "unitid":101462,
+    "name":"J. F. Drake State Community and Technical College",
+    "state":"AL",
+    "city":"Deatsville"
+  },
+  {
+    "unitid":101471,
+    "name":"J F Ingram State Technical College",
+    "state":"AL",
+    "city":"Jacksonville"
+  },
+  {
+    "unitid":101480,
+    "name":"Jacksonville State University",
+    "state":"AL",
+    "city":"Birmingham"
+  },
+  {
+    "unitid":101505,
+    "name":"Jefferson State Community College",
+    "state":"AL",
+    "city":"Tanner"
+  },
+  {
+    "unitid":101514,
+    "name":"John C Calhoun State Community College",
+    "state":"AL",
+    "city":"Birmingham"
+  },
+  {
+    "unitid":107123,
+    "name":"Jefferson Regional School of Nursing",
+    "state":"AR",
+    "city":"Fort Smith"
+  },
+  {
+    "unitid":107141,
+    "name":"John Brown University",
+    "state":"AR",
+    "city":"West Memphis"
+  },
+  {
+    "unitid":132879,
+    "name":"Johnson University Florida",
+    "state":"FL",
+    "city":"Miami"
+  },
+  {
+    "unitid":134945,
+    "name":"Jacksonville University",
+    "state":"FL",
+    "city":"Niceville"
+  },
+  {
+    "unitid":146205,
+    "name":"John A Logan College",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":146278,
+    "name":"John Wood Community College",
+    "state":"IL",
+    "city":"Peoria"
+  },
+  {
+    "unitid":146296,
+    "name":"Joliet Junior College",
+    "state":"IL",
+    "city":"Decatur"
+  },
+  {
+    "unitid":146339,
+    "name":"Judson University",
+    "state":"IL",
+    "city":"Monmouth"
+  },
+  {
+    "unitid":150765,
+    "name":"J Michael Harrold Beauty Academy",
+    "state":"IN",
+    "city":"Oakland City"
+  },
+  {
+    "unitid":155210,
+    "name":"Johnson County Community College",
+    "state":"KS",
+    "city":"Wichita"
+  },
+  {
+    "unitid":156921,
+    "name":"Jefferson Community and Technical College",
+    "state":"KY",
+    "city":"Louisville"
+  },
+  {
+    "unitid":159328,
+    "name":"John Jay Beauty College",
+    "state":"LA",
+    "city":"Lake Charles"
+  },
+  {
+    "unitid":162928,
+    "name":"Johns Hopkins University",
+    "state":"MA",
+    "city":"Paxton"
+  },
+  {
+    "unitid":170444,
+    "name":"Jackson College",
+    "state":"MI",
+    "city":"Warren"
+  },
+  {
+    "unitid":175856,
+    "name":"Jackson State University",
+    "state":"KS",
+    "city":"Overland Park"
+  },
+  {
+    "unitid":175883,
+    "name":"Jones County Junior College",
+    "state":"MO",
+    "city":"Columbia"
+  },
+  {
+    "unitid":177676,
+    "name":"Jefferson College",
+    "state":"MO",
+    "city":"Saint Louis"
+  },
+  {
+    "unitid":181190,
+    "name":"Joseph's College Cosmetology",
+    "state":"NH",
+    "city":"Keene"
+  },
+  {
+    "unitid":185174,
+    "name":"Joe Kubert School of Cartoon and Graphic Art",
+    "state":"NJ",
+    "city":"Trenton"
+  },
+  {
+    "unitid":185679,
+    "name":"JFK Muhlenberg Harold B. and Dorothy A. Snyder Schools",
+    "state":"NM",
+    "city":"Clovis"
+  },
+  {
+    "unitid":188696,
+    "name":"Joffrey Ballet School",
+    "state":"NY",
+    "city":"Rochester"
+  },
+  {
+    "unitid":191986,
+    "name":"Jamestown Community College",
+    "state":"NY",
+    "city":"Rochester"
+  },
+  {
+    "unitid":192004,
+    "name":"Jamestown Business College",
+    "state":"NY",
+    "city":"New York City"
+  },
+  {
+    "unitid":192022,
+    "name":"Jefferson Community College",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":192040,
+    "name":"Jewish Theological Seminary of America",
+    "state":"NY",
+    "city":"Seneca Falls"
+  },
+  {
+    "unitid":198729,
+    "name":"James Sprunt Community College",
+    "state":"NC",
+    "city":"Hamlet"
+  },
+  {
+    "unitid":198756,
+    "name":"Johnson C Smith University",
+    "state":"NC",
+    "city":"Elizabeth City"
+  },
+  {
+    "unitid":198774,
+    "name":"Johnston Community College",
+    "state":"NC",
+    "city":"Ahoskie"
+  },
+  {
+    "unitid":200110,
+    "name":"Josef's School of Hair, Skin & Body-Grand Forks",
+    "state":"OH",
+    "city":"Cedarville"
+  },
+  {
+    "unitid":203368,
+    "name":"John Carroll University",
+    "state":"OH",
+    "city":"Toledo"
+  },
+  {
+    "unitid":203678,
+    "name":"James A. Rhodes State College",
+    "state":"OH",
+    "city":"CANAL WINCHESTER"
+  },
+  {
+    "unitid":207704,
+    "name":"Jenks Beauty College",
+    "state":"OR",
+    "city":"Portland"
+  },
+  {
+    "unitid":213233,
+    "name":"Johnson College",
+    "state":"PA",
+    "city":"Bethlehem"
+  },
+  {
+    "unitid":213251,
+    "name":"Juniata College",
+    "state":"PA",
+    "city":"McKees Rocks"
+  },
+  {
+    "unitid":215479,
+    "name":"Joseph F McCloskey School of Nursing",
+    "state":"PA",
+    "city":"Washington"
+  },
+  {
+    "unitid":217235,
+    "name":"Johnson & Wales University-Providence",
+    "state":"SC",
+    "city":"Charleston"
+  },
+  {
+    "unitid":220400,
+    "name":"Jackson State Community College",
+    "state":"TN",
+    "city":"Memphis"
+  },
+  {
+    "unitid":220464,
+    "name":"John A Gupton College",
+    "state":"TN",
+    "city":"Athens"
+  },
+  {
+    "unitid":220473,
+    "name":"Johnson University",
+    "state":"TN",
+    "city":"Chattanooga"
+  },
+  {
+    "unitid":225876,
+    "name":"Jacksonville College-Main Campus",
+    "state":"TX",
+    "city":"Austin"
+  },
+  {
+    "unitid":225885,
+    "name":"Jarvis Christian University",
+    "state":"TX",
+    "city":"San Antonio"
+  },
+  {
+    "unitid":232414,
+    "name":"J Sargeant Reynolds Community College",
+    "state":"VA",
+    "city":"Abingdon"
+  },
+  {
+    "unitid":232423,
+    "name":"James Madison University",
+    "state":"VA",
+    "city":"Blacksburg"
+  },
+  {
+    "unitid":237473,
+    "name":"James Rumsey Technical Institute",
+    "state":"WI",
+    "city":"Wisconsin Rapids"
+  },
+  {
+    "unitid":401764,
+    "name":"John Amico School of Hair Design",
+    "state":"PR",
+    "city":"Bayamon"
+  },
+  {
+    "unitid":414540,
+    "name":"Jean Madeline Aveda Institute",
+    "state":"OK",
+    "city":"Wetumka"
+  },
+  {
+    "unitid":417886,
+    "name":"Jefferson Lewis BOCES-Practical Nursing Program",
+    "state":"PR",
+    "city":"Caguas"
+  },
+  {
+    "unitid":418445,
+    "name":"Jefferson County Dubois Area Vocational Technical Practical Nursing Program",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":419341,
+    "name":"Jna Institute of Culinary Arts",
+    "state":"OR",
+    "city":"Klamath Falls"
+  },
+  {
+    "unitid":428125,
+    "name":"John Wesley International Barber and Beauty College",
+    "state":"MD",
+    "city":"Linthicum"
+  },
+  {
+    "unitid":443146,
+    "name":"Jay's Technical Institute",
+    "state":"UT",
+    "city":"Salt Lake City"
+  },
+  {
+    "unitid":445708,
+    "name":"Johnson & Wales University-Charlotte",
+    "state":"CA",
+    "city":"Sunnyvale"
+  },
+  {
+    "unitid":446349,
+    "name":"John D Rockefeller IV Career Center",
+    "state":"IL",
+    "city":"Rockford"
+  },
+  {
+    "unitid":447263,
+    "name":"Joyce University of Nursing and Health Sciences",
+    "state":"CA",
+    "city":"Hollywood"
+  },
+  {
+    "unitid":455196,
+    "name":"Jersey College",
+    "state":"NV",
+    "city":"Las Vegas"
+  },
+  {
+    "unitid":456551,
+    "name":"Josef's School of Hair, Skin & Body-Fargo",
+    "state":"TX",
+    "city":"Bedford"
+  },
+  {
+    "unitid":460349,
+    "name":"Johnson & Wales University-Online",
+    "state":"CO",
+    "city":"Denver"
+  },
+  {
+    "unitid":461139,
+    "name":"Jung Tao School of Classical Chinese Medicine",
+    "state":"CA",
+    "city":"Ontario"
+  },
+  {
+    "unitid":461281,
+    "name":"Jose Maria Vargas University",
+    "state":"LA",
+    "city":"Metairie"
+  },
+  {
+    "unitid":462354,
+    "name":"John Paul the Great Catholic University",
+    "state":"MD",
+    "city":"Baltimore"
+  },
+  {
+    "unitid":481474,
+    "name":"J D Academy of Salon and Spa",
+    "state":"OH",
+    "city":"Huber Heights"
+  },
+  {
+    "unitid":483276,
+    "name":"JB's Hair Design and Barber College",
+    "state":"PA",
+    "city":"Bellevue"
+  },
+  {
+    "unitid":484057,
+    "name":"Jupiter Beauty Academy",
+    "state":"FL",
+    "city":"Doral"
+  },
+  {
+    "unitid":487311,
+    "name":"Jones Technical Institute",
+    "state":"IN",
+    "city":"Marion"
+  },
+  {
+    "unitid":488776,
+    "name":"John Patrick University of Health and Applied Sciences",
+    "state":"NV",
+    "city":"Las Vegas"
+  },
+  {
+    "unitid":490416,
+    "name":"J's Barber College",
+    "state":"NM",
+    "city":"Albuquerque"
+  },
+  {
+    "unitid":491242,
+    "name":"Johnny Matthew's Hairdressing Training School",
+    "state":"MO",
+    "city":"Springfield"
+  },
+  {
+    "unitid":497453,
+    "name":"Jackson Theological Seminary",
+    "state":"VA",
+    "city":"Christiansburg"
+  },
+  {
+    "unitid":498827,
+    "name":"JT's Cuts Academy",
+    "state":"IN",
+    "city":"Madison"
+  },
+  {
+    "unitid":498854,
+    "name":"Jazz Barber and Hairstyling Academy",
+    "state":"IN",
+    "city":"Marion"
+  }
+]

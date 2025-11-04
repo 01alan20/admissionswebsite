@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 464226,
+    "name": "Ottawa University-Surprise",
+    "city": "Toledo",
+    "state": "OH",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
+    "website": "www.saloninstitute.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Parks, Recreation & Fitness",
+      "Psychology",
+      "Biological & Biomedical Sciences"
+    ],
+    "intl_enrollment_pct": 3,
+    "tuition_summary": {
+      "sticker": 35300.0,
+      "in_state": 33000.0,
+      "out_of_state": 33000.0
+    },
+    "outcomes": {
+      "acceptance_rate": 40,
+      "yield": 39,
+      "grad_rate_6yr": 23,
+      "retention_full_time": 44,
+      "student_faculty_ratio": 12,
+      "total_enrollment": 836
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Personal Statement Or Essay",
+      "Recommendations"
+    ],
+    "not_considered": [
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

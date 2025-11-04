@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 157076,
+    "name": "Kentucky Wesleyan College",
+    "city": "Bowling Green",
+    "state": "KY",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
+    "website": "www.wku.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Biological & Biomedical Sciences",
+      "Business, Management & Marketing",
+      "Parks, Recreation & Fitness",
+      "Psychology"
+    ],
+    "intl_enrollment_pct": 4,
+    "tuition_summary": {
+      "sticker": 33393.0,
+      "in_state": 31300.0,
+      "out_of_state": 31300.0
+    },
+    "outcomes": {
+      "acceptance_rate": 67,
+      "yield": 18,
+      "grad_rate_6yr": 49,
+      "retention_full_time": 65,
+      "student_faculty_ratio": 13,
+      "total_enrollment": 834
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Secondary School Rank"
+    ],
+    "not_considered": [
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

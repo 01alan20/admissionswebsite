@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 171128,
+    "name": "Michigan Technological University",
+    "city": "Scottville",
+    "state": "MI",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: High Research Activity",
+    "website": "www.westshore.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Engineering",
+      "Computer & Information Sciences",
+      "Business, Management & Marketing",
+      "Mathematics & Statistics"
+    ],
+    "intl_enrollment_pct": 10,
+    "tuition_summary": {
+      "sticker": 18392.0,
+      "in_state": 17614.0,
+      "out_of_state": 39574.0
+    },
+    "outcomes": {
+      "acceptance_rate": 88,
+      "yield": 13,
+      "grad_rate_6yr": 69,
+      "retention_full_time": 88,
+      "student_faculty_ratio": 13,
+      "total_enrollment": 7313
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Personal Statement Or Essay",
+      "Recommendations"
+    ],
+    "not_considered": [
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 498562,
+    "name": "Commonwealth University of Pennsylvania",
+    "city": "Brownsburg",
+    "state": "IN",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
+    "website": "https://www.gotopjs.com/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Health Professions",
+      "Business, Management & Marketing",
+      "Education",
+      "Homeland Security & Law Enforcement"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 11046.0,
+      "in_state": 10848.0,
+      "out_of_state": 18919.0
+    },
+    "outcomes": {
+      "acceptance_rate": 95,
+      "yield": 33,
+      "grad_rate_6yr": 54,
+      "retention_full_time": 75,
+      "student_faculty_ratio": 19,
+      "total_enrollment": 11088
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

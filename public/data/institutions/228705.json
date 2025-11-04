@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 228705,
+    "name": "Texas A & M University-Kingsville",
+    "city": "Murray",
+    "state": "UT",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: High Research Activity",
+    "website": "eaglegatecollege.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Engineering",
+      "Business, Management & Marketing",
+      "Education",
+      "Computer & Information Sciences"
+    ],
+    "intl_enrollment_pct": 9,
+    "tuition_summary": {
+      "sticker": 9892.0,
+      "in_state": 9892.0,
+      "out_of_state": 25746.0
+    },
+    "outcomes": {
+      "acceptance_rate": 92,
+      "yield": 16,
+      "grad_rate_6yr": 46,
+      "retention_full_time": 67,
+      "student_faculty_ratio": 16,
+      "total_enrollment": 6562
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Formal Demonstration Of Competencies",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Completion Of College Preparatory Program",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

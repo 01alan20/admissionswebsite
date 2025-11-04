@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 494278,
+    "name": "EDP University of Puerto Rico-Humacao",
+    "city": "Columbus",
+    "state": "OH",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Two-Year: Other Fields",
+    "website": "https://www.masonanthony.com/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Computer & Information Sciences",
+      "Visual & Performing Arts",
+      "Business, Management & Marketing"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 7050.0,
+      "in_state": 6900.0,
+      "out_of_state": 12600.0
+    },
+    "outcomes": {
+      "acceptance_rate": 85,
+      "yield": 81,
+      "grad_rate_6yr": null,
+      "retention_full_time": null,
+      "student_faculty_ratio": 22,
+      "total_enrollment": 269
+    }
+  },
+  "requirements": {
+    "required": [
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Recommendations",
+      "Secondary School Rank"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

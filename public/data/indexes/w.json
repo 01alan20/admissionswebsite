@@ -1,0 +1,1382 @@
+[
+  {
+    "unitid":107877,
+    "name":"Williams Baptist University",
+    "state":"AR",
+    "city":"Camden"
+  },
+  {
+    "unitid":112525,
+    "name":"Western University of Health Sciences",
+    "state":"CA",
+    "city":"Yucaipa"
+  },
+  {
+    "unitid":122728,
+    "name":"William Jessup University",
+    "state":"CA",
+    "city":"Santa Ana"
+  },
+  {
+    "unitid":125222,
+    "name":"West Valley Mission Community College District Office",
+    "state":"CO",
+    "city":"Broomfield"
+  },
+  {
+    "unitid":125231,
+    "name":"Walden University",
+    "state":"CO",
+    "city":"Boulder"
+  },
+  {
+    "unitid":125310,
+    "name":"Waynes College of Beauty",
+    "state":"CO",
+    "city":"Lakewood"
+  },
+  {
+    "unitid":125471,
+    "name":"West Los Angeles College",
+    "state":"CO",
+    "city":"Aurora"
+  },
+  {
+    "unitid":125499,
+    "name":"West Valley College",
+    "state":"CO",
+    "city":"Glenwood Springs"
+  },
+  {
+    "unitid":125718,
+    "name":"Westminster Theological Seminary in California",
+    "state":"CO",
+    "city":"Golden"
+  },
+  {
+    "unitid":125727,
+    "name":"Westmont College",
+    "state":"CO",
+    "city":"Lakewood"
+  },
+  {
+    "unitid":125763,
+    "name":"Whittier College",
+    "state":"CO",
+    "city":"Fort Collins"
+  },
+  {
+    "unitid":125897,
+    "name":"Woodbury University",
+    "state":"CO",
+    "city":"Colorado Springs"
+  },
+  {
+    "unitid":128391,
+    "name":"Western Colorado University",
+    "state":"CT",
+    "city":"Manchester"
+  },
+  {
+    "unitid":130697,
+    "name":"Wesleyan University",
+    "state":"FL",
+    "city":"Coconut Creek"
+  },
+  {
+    "unitid":130776,
+    "name":"Western Connecticut State University",
+    "state":"FL",
+    "city":"Graceville"
+  },
+  {
+    "unitid":131113,
+    "name":"Wilmington University",
+    "state":"FL",
+    "city":"Orlando"
+  },
+  {
+    "unitid":131973,
+    "name":"Wesley Theological Seminary",
+    "state":"FL",
+    "city":"Jacksonville"
+  },
+  {
+    "unitid":138275,
+    "name":"Warner University",
+    "state":"GA",
+    "city":"Augusta"
+  },
+  {
+    "unitid":138293,
+    "name":"Webber International University",
+    "state":"GA",
+    "city":"Atlanta"
+  },
+  {
+    "unitid":138479,
+    "name":"William T McFatter Technical College",
+    "state":"GA",
+    "city":"Waco"
+  },
+  {
+    "unitid":138497,
+    "name":"Withlacoochee Technical College",
+    "state":"GA",
+    "city":"Decatur"
+  },
+  {
+    "unitid":139278,
+    "name":"West Georgia Technical College",
+    "state":"GA",
+    "city":"Decatur"
+  },
+  {
+    "unitid":141255,
+    "name":"Wiregrass Georgia Technical College",
+    "state":"ID",
+    "city":"Lewiston"
+  },
+  {
+    "unitid":141325,
+    "name":"Wesleyan College",
+    "state":"ID",
+    "city":"Coeur d'Alene"
+  },
+  {
+    "unitid":141990,
+    "name":"Windward Community College",
+    "state":"IL",
+    "city":"Quincy"
+  },
+  {
+    "unitid":149727,
+    "name":"Waubonsee Community College",
+    "state":"IN",
+    "city":"Indianapolis"
+  },
+  {
+    "unitid":149772,
+    "name":"Western Illinois University",
+    "state":"IN",
+    "city":"Evansville"
+  },
+  {
+    "unitid":149781,
+    "name":"Wheaton College",
+    "state":"IN",
+    "city":"Terre Haute"
+  },
+  {
+    "unitid":149842,
+    "name":"William Rainey Harper College",
+    "state":"IN",
+    "city":"Kokomo"
+  },
+  {
+    "unitid":152044,
+    "name":"West Michigan College of Barbering and Beauty",
+    "state":"IA",
+    "city":"Sioux Center"
+  },
+  {
+    "unitid":152673,
+    "name":"Wabash College",
+    "state":"IA",
+    "city":"Des Moines"
+  },
+  {
+    "unitid":154518,
+    "name":"Waldorf University",
+    "state":"KS",
+    "city":"Hesston"
+  },
+  {
+    "unitid":154527,
+    "name":"Wartburg College",
+    "state":"KS",
+    "city":"Highland"
+  },
+  {
+    "unitid":154536,
+    "name":"Wartburg Theological Seminary",
+    "state":"KS",
+    "city":"Hutchinson"
+  },
+  {
+    "unitid":154572,
+    "name":"Western Iowa Tech Community College",
+    "state":"KS",
+    "city":"Overland Park"
+  },
+  {
+    "unitid":154590,
+    "name":"William Penn University",
+    "state":"MO",
+    "city":"Kansas City"
+  },
+  {
+    "unitid":155423,
+    "name":"Washburn Institute of Technology",
+    "state":"KY",
+    "city":"Bowling Green"
+  },
+  {
+    "unitid":156082,
+    "name":"Washburn University",
+    "state":"KY",
+    "city":"Louisville"
+  },
+  {
+    "unitid":156107,
+    "name":"Wichita State University-Campus of Applied Sciences and Technology",
+    "state":"KY",
+    "city":"Lexington"
+  },
+  {
+    "unitid":156125,
+    "name":"Wichita State University",
+    "state":"KY",
+    "city":"Pikeville"
+  },
+  {
+    "unitid":156134,
+    "name":"Wichita Technical Institute",
+    "state":"KY",
+    "city":"Jackson"
+  },
+  {
+    "unitid":157483,
+    "name":"West Kentucky Community and Technical College",
+    "state":"LA",
+    "city":"Shreveport"
+  },
+  {
+    "unitid":157951,
+    "name":"Western Kentucky University",
+    "state":"LA",
+    "city":"New Orleans"
+  },
+  {
+    "unitid":161581,
+    "name":"Washington County Community College",
+    "state":"MD",
+    "city":"Baltimore"
+  },
+  {
+    "unitid":162210,
+    "name":"Washington Adventist University",
+    "state":"MD",
+    "city":"Salisbury"
+  },
+  {
+    "unitid":164216,
+    "name":"Washington College",
+    "state":"MA",
+    "city":"Milton"
+  },
+  {
+    "unitid":164313,
+    "name":"Wor-Wic Community College",
+    "state":"MA",
+    "city":"Franklin"
+  },
+  {
+    "unitid":166717,
+    "name":"William James College",
+    "state":"MA",
+    "city":"Easton"
+  },
+  {
+    "unitid":168218,
+    "name":"Wellesley College",
+    "state":"MI",
+    "city":"Canton"
+  },
+  {
+    "unitid":168227,
+    "name":"Wentworth Institute of Technology",
+    "state":"MI",
+    "city":"Detroit"
+  },
+  {
+    "unitid":168254,
+    "name":"Western New England University",
+    "state":"MI",
+    "city":"Madison Heights"
+  },
+  {
+    "unitid":168263,
+    "name":"Westfield State University",
+    "state":"MI",
+    "city":"Ypsilanti"
+  },
+  {
+    "unitid":168281,
+    "name":"Wheaton College (Massachusetts)",
+    "state":"MI",
+    "city":"Flint"
+  },
+  {
+    "unitid":168342,
+    "name":"Williams College",
+    "state":"MI",
+    "city":"Big Rapids"
+  },
+  {
+    "unitid":168421,
+    "name":"Worcester Polytechnic Institute",
+    "state":"MI",
+    "city":"Centreville"
+  },
+  {
+    "unitid":168430,
+    "name":"Worcester State University",
+    "state":"MI",
+    "city":"Flint"
+  },
+  {
+    "unitid":172608,
+    "name":"Walsh College",
+    "state":"MN",
+    "city":"Saint Paul"
+  },
+  {
+    "unitid":172617,
+    "name":"Washtenaw Community College",
+    "state":"MN",
+    "city":"Saint Paul"
+  },
+  {
+    "unitid":172635,
+    "name":"Wayne County Community College District",
+    "state":"MN",
+    "city":"North Mankato"
+  },
+  {
+    "unitid":172644,
+    "name":"Wayne State University",
+    "state":"MN",
+    "city":"Mankato"
+  },
+  {
+    "unitid":172671,
+    "name":"West Shore Community College",
+    "state":"MN",
+    "city":"Rochester"
+  },
+  {
+    "unitid":172699,
+    "name":"Western Michigan University",
+    "state":"MN",
+    "city":"Minneapolis"
+  },
+  {
+    "unitid":172705,
+    "name":"Western Theological Seminary",
+    "state":"MN",
+    "city":"Crookston"
+  },
+  {
+    "unitid":175272,
+    "name":"Winona State University",
+    "state":"MS",
+    "city":"Summit"
+  },
+  {
+    "unitid":176451,
+    "name":"Wesley Biblical Seminary",
+    "state":"MO",
+    "city":"Saint Louis"
+  },
+  {
+    "unitid":176479,
+    "name":"William Carey University",
+    "state":"MO",
+    "city":"Kansas City"
+  },
+  {
+    "unitid":179867,
+    "name":"Washington University in St Louis",
+    "state":"NE",
+    "city":"Omaha"
+  },
+  {
+    "unitid":179894,
+    "name":"Webster University",
+    "state":"NE",
+    "city":"Crete"
+  },
+  {
+    "unitid":179946,
+    "name":"Westminster College",
+    "state":"NE",
+    "city":"Hastings"
+  },
+  {
+    "unitid":179955,
+    "name":"William Jewell College",
+    "state":"NE",
+    "city":"Omaha"
+  },
+  {
+    "unitid":179964,
+    "name":"William Woods University",
+    "state":"NE",
+    "city":"Lincoln"
+  },
+  {
+    "unitid":181783,
+    "name":"Wayne State College",
+    "state":"NH",
+    "city":"Manchester"
+  },
+  {
+    "unitid":181817,
+    "name":"Western Nebraska Community College",
+    "state":"NH",
+    "city":"Nashua"
+  },
+  {
+    "unitid":182564,
+    "name":"Western Nevada College",
+    "state":"NJ",
+    "city":"Lincroft"
+  },
+  {
+    "unitid":183105,
+    "name":"White Mountains Community College",
+    "state":"NJ",
+    "city":"Lakewood"
+  },
+  {
+    "unitid":187444,
+    "name":"William Paterson University of New Jersey",
+    "state":"NY",
+    "city":"Brooklyn"
+  },
+  {
+    "unitid":188304,
+    "name":"Western New Mexico University",
+    "state":"NY",
+    "city":"Cazenovia"
+  },
+  {
+    "unitid":190424,
+    "name":"Weill Medical College of Cornell University",
+    "state":"NY",
+    "city":"Oneonta"
+  },
+  {
+    "unitid":197197,
+    "name":"Wagner College",
+    "state":"NC",
+    "city":"Durham"
+  },
+  {
+    "unitid":197221,
+    "name":"Webb Institute",
+    "state":"NC",
+    "city":"Durham"
+  },
+  {
+    "unitid":197230,
+    "name":"Wells College",
+    "state":"NC",
+    "city":"Greenville"
+  },
+  {
+    "unitid":197337,
+    "name":"Westchester School of Beauty Culture",
+    "state":"NC",
+    "city":"Elon"
+  },
+  {
+    "unitid":197531,
+    "name":"Word of Life Bible Institute",
+    "state":"NC",
+    "city":"Fayetteville"
+  },
+  {
+    "unitid":199272,
+    "name":"William Peace University",
+    "state":"ND",
+    "city":"Bismarck"
+  },
+  {
+    "unitid":199847,
+    "name":"Wake Forest University",
+    "state":"OH",
+    "city":"Ashland"
+  },
+  {
+    "unitid":199856,
+    "name":"Wake Technical Community College",
+    "state":"OH",
+    "city":"Ashland"
+  },
+  {
+    "unitid":199865,
+    "name":"Warren Wilson College",
+    "state":"OH",
+    "city":"Jefferson"
+  },
+  {
+    "unitid":199883,
+    "name":"Watts College of Nursing",
+    "state":"OH",
+    "city":"Cincinnati"
+  },
+  {
+    "unitid":199892,
+    "name":"Wayne Community College",
+    "state":"OH",
+    "city":"Concord Twp"
+  },
+  {
+    "unitid":199908,
+    "name":"Western Piedmont Community College",
+    "state":"OH",
+    "city":"Canton"
+  },
+  {
+    "unitid":199926,
+    "name":"Wilkes Community College",
+    "state":"OH",
+    "city":"Berea"
+  },
+  {
+    "unitid":199953,
+    "name":"Wilson Community College",
+    "state":"OH",
+    "city":"St Clairsville"
+  },
+  {
+    "unitid":199962,
+    "name":"Wingate University",
+    "state":"OH",
+    "city":"Bluffton"
+  },
+  {
+    "unitid":199980,
+    "name":"Winston Salem Barber School",
+    "state":"OH",
+    "city":"Bowling Green"
+  },
+  {
+    "unitid":199999,
+    "name":"Winston-Salem State University",
+    "state":"OH",
+    "city":"Parma"
+  },
+  {
+    "unitid":200004,
+    "name":"Western Carolina University",
+    "state":"OH",
+    "city":"Rio Grande"
+  },
+  {
+    "unitid":200341,
+    "name":"Williston State College",
+    "state":"OH",
+    "city":"Blue Ash"
+  },
+  {
+    "unitid":206437,
+    "name":"Walsh University",
+    "state":"OK",
+    "city":"Norman"
+  },
+  {
+    "unitid":206446,
+    "name":"Washington State Community College",
+    "state":"OK",
+    "city":"Okmulgee"
+  },
+  {
+    "unitid":206491,
+    "name":"Wilberforce University",
+    "state":"OK",
+    "city":"Tulsa"
+  },
+  {
+    "unitid":206507,
+    "name":"Wilmington College",
+    "state":"OK",
+    "city":"Claremore"
+  },
+  {
+    "unitid":206516,
+    "name":"Winebrenner Theological Seminary",
+    "state":"OK",
+    "city":"Midwest City"
+  },
+  {
+    "unitid":206525,
+    "name":"Wittenberg University",
+    "state":"OK",
+    "city":"Jenks"
+  },
+  {
+    "unitid":206604,
+    "name":"Wright State University-Main Campus",
+    "state":"OK",
+    "city":"Seminole"
+  },
+  {
+    "unitid":206613,
+    "name":"Wright State University-Lake Campus",
+    "state":"OK",
+    "city":"Durant"
+  },
+  {
+    "unitid":208035,
+    "name":"Western Oklahoma State College",
+    "state":"OR",
+    "city":"Portland"
+  },
+  {
+    "unitid":210304,
+    "name":"Warner Pacific University",
+    "state":"PA",
+    "city":"Carlisle"
+  },
+  {
+    "unitid":210368,
+    "name":"Western Seminary",
+    "state":"PA",
+    "city":"Philadelphia"
+  },
+  {
+    "unitid":210401,
+    "name":"Willamette University",
+    "state":"PA",
+    "city":"Pittsburgh"
+  },
+  {
+    "unitid":210429,
+    "name":"Western Oregon University",
+    "state":"PA",
+    "city":"East Stroudsburg"
+  },
+  {
+    "unitid":215637,
+    "name":"Walnut Hill College",
+    "state":"PA",
+    "city":"Pittsburgh"
+  },
+  {
+    "unitid":216630,
+    "name":"Washington Health System School of Nursing",
+    "state":"SC",
+    "city":"Orangeburg"
+  },
+  {
+    "unitid":216667,
+    "name":"Washington & Jefferson College",
+    "state":"SC",
+    "city":"Clemson"
+  },
+  {
+    "unitid":216694,
+    "name":"Waynesburg University",
+    "state":"SC",
+    "city":"Rock Hill"
+  },
+  {
+    "unitid":216746,
+    "name":"Welder Training and Testing Institute",
+    "state":"SC",
+    "city":"Hartsville"
+  },
+  {
+    "unitid":216764,
+    "name":"West Chester University of Pennsylvania",
+    "state":"SC",
+    "city":"Columbia"
+  },
+  {
+    "unitid":216773,
+    "name":"Western Pennsylvania Hospital School of Nursing",
+    "state":"SC",
+    "city":"Columbia"
+  },
+  {
+    "unitid":216807,
+    "name":"Westminster College",
+    "state":"SC",
+    "city":"Spartanburg"
+  },
+  {
+    "unitid":216816,
+    "name":"Westminster Theological Seminary",
+    "state":"SC",
+    "city":"Denmark"
+  },
+  {
+    "unitid":216825,
+    "name":"Westmoreland County Community College",
+    "state":"SC",
+    "city":"Due West"
+  },
+  {
+    "unitid":216852,
+    "name":"Widener University",
+    "state":"SC",
+    "city":"Florence"
+  },
+  {
+    "unitid":216931,
+    "name":"Wilkes University",
+    "state":"SC",
+    "city":"Florence"
+  },
+  {
+    "unitid":216940,
+    "name":"Williamson College of the Trades",
+    "state":"SC",
+    "city":"Greenville"
+  },
+  {
+    "unitid":217013,
+    "name":"Wilson College",
+    "state":"SC",
+    "city":"Greenville"
+  },
+  {
+    "unitid":218955,
+    "name":"Williamsburg Technical College",
+    "state":"TN",
+    "city":"Cleveland"
+  },
+  {
+    "unitid":218964,
+    "name":"Winthrop University",
+    "state":"TN",
+    "city":"Columbia"
+  },
+  {
+    "unitid":218973,
+    "name":"Wofford College",
+    "state":"TN",
+    "city":"Memphis"
+  },
+  {
+    "unitid":219480,
+    "name":"Western Dakota Technical College",
+    "state":"TN",
+    "city":"Harrogate"
+  },
+  {
+    "unitid":220206,
+    "name":"Welch College",
+    "state":"TN",
+    "city":"Crossville"
+  },
+  {
+    "unitid":222062,
+    "name":"Walters State Community College",
+    "state":"TX",
+    "city":"El Paso"
+  },
+  {
+    "unitid":222105,
+    "name":"William R Moore College of Technology",
+    "state":"TX",
+    "city":"El Paso"
+  },
+  {
+    "unitid":224660,
+    "name":"Western Technical College",
+    "state":"TX",
+    "city":"Wichita Falls"
+  },
+  {
+    "unitid":224679,
+    "name":"Western Technical College",
+    "state":"TX",
+    "city":"New Braunfels"
+  },
+  {
+    "unitid":226860,
+    "name":"William Edge Institute",
+    "state":"TX",
+    "city":"Keene"
+  },
+  {
+    "unitid":226879,
+    "name":"Wade College",
+    "state":"TX",
+    "city":"Terrell"
+  },
+  {
+    "unitid":229780,
+    "name":"Wayland Baptist University",
+    "state":"VA",
+    "city":"Bluefield"
+  },
+  {
+    "unitid":229799,
+    "name":"Weatherford College",
+    "state":"VA",
+    "city":"Bridgewater"
+  },
+  {
+    "unitid":229814,
+    "name":"West Texas A & M University",
+    "state":"VA",
+    "city":"Williamsburg"
+  },
+  {
+    "unitid":229832,
+    "name":"Western Texas College",
+    "state":"VA",
+    "city":"Virginia Beach"
+  },
+  {
+    "unitid":229841,
+    "name":"Wharton County Junior College",
+    "state":"VA",
+    "city":"Norfolk"
+  },
+  {
+    "unitid":229887,
+    "name":"Wiley University",
+    "state":"VA",
+    "city":"Lynchburg"
+  },
+  {
+    "unitid":230782,
+    "name":"Weber State University",
+    "state":"VA",
+    "city":"Middletown"
+  },
+  {
+    "unitid":230807,
+    "name":"Westminster University",
+    "state":"VA",
+    "city":"Lynchburg"
+  },
+  {
+    "unitid":231624,
+    "name":"William & Mary",
+    "state":"VA",
+    "city":"Norfolk"
+  },
+  {
+    "unitid":234207,
+    "name":"Washington and Lee University",
+    "state":"WA",
+    "city":"Olympia"
+  },
+  {
+    "unitid":234377,
+    "name":"Wytheville Community College",
+    "state":"WA",
+    "city":"Spokane"
+  },
+  {
+    "unitid":236887,
+    "name":"Walla Walla Community College",
+    "state":"WV",
+    "city":"Martinsburg"
+  },
+  {
+    "unitid":236896,
+    "name":"Walla Walla University",
+    "state":"WV",
+    "city":"Wheeling"
+  },
+  {
+    "unitid":236939,
+    "name":"Washington State University",
+    "state":"WV",
+    "city":"Morgantown"
+  },
+  {
+    "unitid":236975,
+    "name":"Wenatchee Valley College",
+    "state":"WV",
+    "city":"Parkersburg"
+  },
+  {
+    "unitid":237011,
+    "name":"Western Washington University",
+    "state":"WI",
+    "city":"Greenfield"
+  },
+  {
+    "unitid":237039,
+    "name":"Whatcom Community College",
+    "state":"WI",
+    "city":"Milwaukee"
+  },
+  {
+    "unitid":237057,
+    "name":"Whitman College",
+    "state":"WI",
+    "city":"Madison"
+  },
+  {
+    "unitid":237066,
+    "name":"Whitworth University",
+    "state":"WI",
+    "city":"Green Bay"
+  },
+  {
+    "unitid":237686,
+    "name":"West Virginia University at Parkersburg",
+    "state":"WI",
+    "city":"Rhinelander"
+  },
+  {
+    "unitid":237880,
+    "name":"West Virginia School of Osteopathic Medicine",
+    "state":"WI",
+    "city":"Fennimore"
+  },
+  {
+    "unitid":237899,
+    "name":"West Virginia State University",
+    "state":"WI",
+    "city":"La Crosse"
+  },
+  {
+    "unitid":237905,
+    "name":"West Virginia University Hospital Departments of Rad Tech and Nutrition",
+    "state":"WI",
+    "city":"Eau Claire"
+  },
+  {
+    "unitid":237932,
+    "name":"West Liberty University",
+    "state":"WI",
+    "city":"Pewaukee"
+  },
+  {
+    "unitid":237950,
+    "name":"West Virginia University Institute of Technology",
+    "state":"WI",
+    "city":"La Crosse"
+  },
+  {
+    "unitid":237969,
+    "name":"West Virginia Wesleyan College",
+    "state":"WI",
+    "city":"Whitewater"
+  },
+  {
+    "unitid":237987,
+    "name":"West Virginia Junior College-Charleston",
+    "state":"WI",
+    "city":"Shell Lake"
+  },
+  {
+    "unitid":237996,
+    "name":"West Virginia Junior College-Morgantown",
+    "state":"WI",
+    "city":"Milwaukee"
+  },
+  {
+    "unitid":238014,
+    "name":"West Virginia Northern Community College",
+    "state":"WI",
+    "city":"Green Bay"
+  },
+  {
+    "unitid":238032,
+    "name":"West Virginia University",
+    "state":"WI",
+    "city":"La Crosse"
+  },
+  {
+    "unitid":238078,
+    "name":"Wheeling University",
+    "state":"WI",
+    "city":"Milwaukee"
+  },
+  {
+    "unitid":238096,
+    "name":"Wood County Technical Center-Practical Nursing",
+    "state":"WI",
+    "city":"Oshkosh"
+  },
+  {
+    "unitid":240125,
+    "name":"Waukesha County Technical College",
+    "state":"PR",
+    "city":"San Juan"
+  },
+  {
+    "unitid":240170,
+    "name":"Western Technical College",
+    "state":"PR",
+    "city":"San Juan"
+  },
+  {
+    "unitid":240213,
+    "name":"Wisconsin School of Professional Psychology",
+    "state":"PR",
+    "city":"San Sebastian"
+  },
+  {
+    "unitid":240338,
+    "name":"Wisconsin Lutheran College",
+    "state":"PR",
+    "city":"Caguas"
+  },
+  {
+    "unitid":240693,
+    "name":"Western Wyoming Community College",
+    "state":"PR",
+    "city":"Arecibo"
+  },
+  {
+    "unitid":240718,
+    "name":"WyoTech",
+    "state":"PR",
+    "city":"Ponce"
+  },
+  {
+    "unitid":245625,
+    "name":"Warren County Community College",
+    "state":"SC",
+    "city":"Columbia"
+  },
+  {
+    "unitid":261861,
+    "name":"West Virginia Junior College-United Career Institute",
+    "state":"MD",
+    "city":"California"
+  },
+  {
+    "unitid":365383,
+    "name":"Wilkes-Barre Area Career and Technical Center Practical Nursing",
+    "state":"FL",
+    "city":"Tampa"
+  },
+  {
+    "unitid":365505,
+    "name":"Waynesville Career Center",
+    "state":"IL",
+    "city":"Wheeling"
+  },
+  {
+    "unitid":368407,
+    "name":"Western Area Career & Technology Center",
+    "state":"OK",
+    "city":"Shawnee"
+  },
+  {
+    "unitid":369455,
+    "name":"Worsham College of Mortuary Science",
+    "state":"MH",
+    "city":"Majuro"
+  },
+  {
+    "unitid":401223,
+    "name":"World Mission University",
+    "state":"FL",
+    "city":"Miami"
+  },
+  {
+    "unitid":403487,
+    "name":"Wabash Valley College",
+    "state":"RI",
+    "city":"Bristol"
+  },
+  {
+    "unitid":407832,
+    "name":"Warren County Career Center",
+    "state":"IL",
+    "city":"Red Bud"
+  },
+  {
+    "unitid":417655,
+    "name":"Warrensburg Area Career Center",
+    "state":"GA",
+    "city":"Columbus"
+  },
+  {
+    "unitid":418001,
+    "name":"Wayne Finger Lakes BOCES-Practical Nursing Program",
+    "state":"NJ",
+    "city":"Cherry Hill"
+  },
+  {
+    "unitid":418029,
+    "name":"Washington Saratoga Warren Hamilton Essex BOCES-Practical Nursing Program",
+    "state":"PR",
+    "city":"Isabela"
+  },
+  {
+    "unitid":418250,
+    "name":"Washington County Career Center-Adult Technical Training",
+    "state":"OR",
+    "city":"The Dalles"
+  },
+  {
+    "unitid":418302,
+    "name":"Western Technology Center",
+    "state":"KY",
+    "city":"Hopkinsville"
+  },
+  {
+    "unitid":418357,
+    "name":"Wes Watkins Technology Center",
+    "state":"AZ",
+    "city":"Tempe"
+  },
+  {
+    "unitid":420468,
+    "name":"Western Suffolk BOCES",
+    "state":"OK",
+    "city":"Midwest City"
+  },
+  {
+    "unitid":433138,
+    "name":"Wayne County Schools Career Center",
+    "state":"CA",
+    "city":"Rancho Cucamonga"
+  },
+  {
+    "unitid":433387,
+    "name":"Western Governors University",
+    "state":"MS",
+    "city":"Hattiesburg"
+  },
+  {
+    "unitid":434751,
+    "name":"White Earth Tribal and Community College",
+    "state":"FL",
+    "city":"Miami"
+  },
+  {
+    "unitid":442064,
+    "name":"Won Institute of Graduate Studies",
+    "state":"PA",
+    "city":"Pittsburgh"
+  },
+  {
+    "unitid":442383,
+    "name":"West Virginia Junior College-Bridgeport",
+    "state":"VA",
+    "city":"Midlothian"
+  },
+  {
+    "unitid":443331,
+    "name":"West Coast University-Los Angeles",
+    "state":"TX",
+    "city":"Houston"
+  },
+  {
+    "unitid":443340,
+    "name":"Williamson Christian College",
+    "state":"CA",
+    "city":"Merced"
+  },
+  {
+    "unitid":447999,
+    "name":"WellSpring School of Allied Health-Kansas City",
+    "state":"CA",
+    "city":"San Diego"
+  },
+  {
+    "unitid":448637,
+    "name":"West Hills Community College District",
+    "state":"KY",
+    "city":"Lexington"
+  },
+  {
+    "unitid":455512,
+    "name":"Woodland Community College",
+    "state":"FL",
+    "city":"Orange Park"
+  },
+  {
+    "unitid":457192,
+    "name":"Washington Barber College Inc",
+    "state":"TN",
+    "city":"Brentwood"
+  },
+  {
+    "unitid":458210,
+    "name":"West Coast University-Orange County",
+    "state":"TX",
+    "city":"San Antonio"
+  },
+  {
+    "unitid":458229,
+    "name":"West Coast University-Ontario",
+    "state":"RI",
+    "city":"Providence"
+  },
+  {
+    "unitid":470047,
+    "name":"WellSpring School of Allied Health-Lawrence",
+    "state":"CO",
+    "city":"Aurora"
+  },
+  {
+    "unitid":475200,
+    "name":"Whitworth University-Adult Degree Programs",
+    "state":"CA",
+    "city":"Hayward"
+  },
+  {
+    "unitid":476896,
+    "name":"Wade Gordon Hairdressing Academy",
+    "state":"CA",
+    "city":"Stockton"
+  },
+  {
+    "unitid":477039,
+    "name":"West Coast University-Dallas",
+    "state":"TX",
+    "city":"Conroe"
+  },
+  {
+    "unitid":480198,
+    "name":"Warner Pacific University Professional and Graduate Studies",
+    "state":"CA",
+    "city":"Fairfield"
+  },
+  {
+    "unitid":481067,
+    "name":"World A Cuts Barber Institute",
+    "state":"NJ",
+    "city":"Toms River"
+  },
+  {
+    "unitid":481146,
+    "name":"Woodruff Medical and Wellness Training",
+    "state":"GA",
+    "city":"Warner Robins"
+  },
+  {
+    "unitid":483780,
+    "name":"Washington University of Science and Technology",
+    "state":"AR",
+    "city":"Russellville"
+  },
+  {
+    "unitid":485272,
+    "name":"West Coast University-Miami",
+    "state":"NJ",
+    "city":"North Brunswick"
+  },
+  {
+    "unitid":485801,
+    "name":"Westchester School for Medical & Dental Assistants",
+    "state":"FL",
+    "city":"Margate"
+  },
+  {
+    "unitid":486141,
+    "name":"Westchester College of Nursing & Allied Health",
+    "state":"LA",
+    "city":"Lafayette"
+  },
+  {
+    "unitid":486460,
+    "name":"Wright Graduate University for the Realization of Human Potential",
+    "state":"SC",
+    "city":"Orangeburg"
+  },
+  {
+    "unitid":487065,
+    "name":"Wade Gordon Hairdressing Academy-Lubbock",
+    "state":"WA",
+    "city":"Seattle"
+  },
+  {
+    "unitid":488138,
+    "name":"Williams Technical College",
+    "state":"MO",
+    "city":"Bolivar"
+  },
+  {
+    "unitid":488907,
+    "name":"Wongu University of Oriental Medicine",
+    "state":"OH",
+    "city":"Canton"
+  },
+  {
+    "unitid":489858,
+    "name":"West Coast University-Center for Graduate Studies",
+    "state":"NY",
+    "city":"Brooklyn"
+  },
+  {
+    "unitid":490133,
+    "name":"Westcliff University",
+    "state":"PA",
+    "city":"Sinking Spring"
+  },
+  {
+    "unitid":490142,
+    "name":"World Class Academy of Beauty Careers",
+    "state":"NJ",
+    "city":"North Plainfield"
+  },
+  {
+    "unitid":490373,
+    "name":"Western Michigan University Homer Stryker M.D. School of Medicine",
+    "state":"FL",
+    "city":"Brooksville"
+  },
+  {
+    "unitid":491631,
+    "name":"Women's Institute of Torah Seminary and College",
+    "state":"PA",
+    "city":"Philadelphia"
+  },
+  {
+    "unitid":491783,
+    "name":"Wilton Simpson Technical College",
+    "state":"TN",
+    "city":"Memphis"
+  },
+  {
+    "unitid":491905,
+    "name":"Winonah's International School of Cosmetology",
+    "state":"ID",
+    "city":"Meridian"
+  },
+  {
+    "unitid":493451,
+    "name":"WellSpring School of Allied Health-Springfield",
+    "state":"UT",
+    "city":"St. George"
+  },
+  {
+    "unitid":494755,
+    "name":"West Virginia Junior College-United Career Institute",
+    "state":"NV",
+    "city":"Carson City"
+  },
+  {
+    "unitid":494898,
+    "name":"WellSpring School of Allied Health-Wichita",
+    "state":"AZ",
+    "city":"Mesa"
+  },
+  {
+    "unitid":495013,
+    "name":"Western Maricopa Education Center",
+    "state":"TX",
+    "city":"Addison"
+  },
+  {
+    "unitid":495208,
+    "name":"Webb's Barber School of Arts",
+    "state":"TX",
+    "city":"Austin"
+  },
+  {
+    "unitid":499608,
+    "name":"Wade Gordon Hairdressing Academy-Oklahoma",
+    "state":"MI",
+    "city":"Detroit"
+  }
+]

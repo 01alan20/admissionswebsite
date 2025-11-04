@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 366003,
+    "name": "South Florida Bible College and Theological Seminary",
+    "city": "Dallas",
+    "state": "TX",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
+    "website": "www.pcihealth.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Theology & Religious Vocations",
+      "Psychology",
+      "Health Professions"
+    ],
+    "intl_enrollment_pct": 32,
+    "tuition_summary": {
+      "sticker": 7380.0,
+      "in_state": 7380.0,
+      "out_of_state": 7380.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": 0,
+      "retention_full_time": 50,
+      "student_faculty_ratio": 18,
+      "total_enrollment": 355
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

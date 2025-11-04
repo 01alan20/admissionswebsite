@@ -1,0 +1,58 @@
+{
+  "profile": {
+    "unitid": 481438,
+    "name": "Yeshiva Yesodei Hatorah",
+    "city": "Abilene",
+    "state": "TX",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Four-Year: Faith-Related Institutions",
+    "website": "neeceescollege.com/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Philosophy & Religious Studies"
+    ],
+    "intl_enrollment_pct": 6,
+    "tuition_summary": {
+      "sticker": 12500.0,
+      "in_state": 12500.0,
+      "out_of_state": 12500.0
+    },
+    "outcomes": {
+      "acceptance_rate": 100,
+      "yield": 87,
+      "grad_rate_6yr": 7,
+      "retention_full_time": 65,
+      "student_faculty_ratio": 9,
+      "total_enrollment": 72
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "Recommendations"
+    ],
+    "considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Secondary School Record"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "English Proficiency Test",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Gpa",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 185828,
+    "name": "New Jersey Institute of Technology",
+    "city": "Las Vegas",
+    "state": "NM",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: Very High Research Activity",
+    "website": "www.nmhu.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Engineering",
+      "Computer & Information Sciences",
+      "Engineering Technologies",
+      "Business, Management & Marketing"
+    ],
+    "intl_enrollment_pct": 20,
+    "tuition_summary": {
+      "sticker": 19022.0,
+      "in_state": 18512.0,
+      "out_of_state": 34972.0
+    },
+    "outcomes": {
+      "acceptance_rate": 67,
+      "yield": 19,
+      "grad_rate_6yr": 73,
+      "retention_full_time": 91,
+      "student_faculty_ratio": 16,
+      "total_enrollment": 13007
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Secondary School Rank"
+    ],
+    "not_considered": [
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

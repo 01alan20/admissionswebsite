@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 149781,
+    "name": "Wheaton College",
+    "city": "Terre Haute",
+    "state": "IN",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Arts & Sciences Focus",
+    "website": "https://www.indstate.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Theology & Religious Vocations",
+      "Social Sciences",
+      "Psychology",
+      "Business, Management & Marketing"
+    ],
+    "intl_enrollment_pct": 6,
+    "tuition_summary": {
+      "sticker": 43930.0,
+      "in_state": 42240.0,
+      "out_of_state": 42240.0
+    },
+    "outcomes": {
+      "acceptance_rate": 90,
+      "yield": 33,
+      "grad_rate_6yr": 87,
+      "retention_full_time": 94,
+      "student_faculty_ratio": 10,
+      "total_enrollment": 2799
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

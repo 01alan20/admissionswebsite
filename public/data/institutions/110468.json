@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 110468,
+    "name": "Alliant International University-San Diego",
+    "city": "Pomona",
+    "state": "CA",
+    "control": "Private for-profit",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral/Professional Universities",
+    "website": "www.cpp.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Education",
+      "Psychology",
+      "Health Professions",
+      "Business, Management & Marketing"
+    ],
+    "intl_enrollment_pct": 8,
+    "tuition_summary": {
+      "sticker": 13918.0,
+      "in_state": 13680.0,
+      "out_of_state": 13680.0
+    },
+    "outcomes": {
+      "acceptance_rate": 0,
+      "yield": null,
+      "grad_rate_6yr": 22,
+      "retention_full_time": null,
+      "student_faculty_ratio": 10,
+      "total_enrollment": 4147
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Legacy Status",
+      "Recommendations",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Secondary School Rank"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

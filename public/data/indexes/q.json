@@ -1,0 +1,50 @@
+[
+  {
+    "unitid":130217,
+    "name":"Quinebaug Valley Community College",
+    "state":"DC",
+    "city":"Washington"
+  },
+  {
+    "unitid":130226,
+    "name":"Quinnipiac University",
+    "state":"DC",
+    "city":"Washington"
+  },
+  {
+    "unitid":148131,
+    "name":"Quincy University",
+    "state":"IL",
+    "city":"South Holland"
+  },
+  {
+    "unitid":167525,
+    "name":"Quincy College",
+    "state":"MI",
+    "city":"Escanaba"
+  },
+  {
+    "unitid":167534,
+    "name":"Quinsigamond Community College",
+    "state":"MI",
+    "city":"Bay City"
+  },
+  {
+    "unitid":199412,
+    "name":"Queens University of Charlotte",
+    "state":"ND",
+    "city":"Devils Lake"
+  },
+  {
+    "unitid":376677,
+    "name":"Queen City College",
+    "state":"OH",
+    "city":"Sandusky"
+  },
+  {
+    "unitid":418764,
+    "name":"Quality Technical and Beauty College",
+    "state":"GA",
+    "city":"Sandy Springs"
+  }
+]

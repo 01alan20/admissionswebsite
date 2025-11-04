@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 160038,
+    "name": "Northwestern State University of Louisiana",
+    "city": "Arundel",
+    "state": "ME",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
+    "website": "www.landingschool.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Health Professions",
+      "Liberal Arts & Humanities",
+      "Education",
+      "Business, Management & Marketing"
+    ],
+    "intl_enrollment_pct": 2,
+    "tuition_summary": {
+      "sticker": 8864.0,
+      "in_state": 8672.0,
+      "out_of_state": 19460.0
+    },
+    "outcomes": {
+      "acceptance_rate": 94,
+      "yield": 35,
+      "grad_rate_6yr": 44,
+      "retention_full_time": 70,
+      "student_faculty_ratio": 16,
+      "total_enrollment": 8847
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

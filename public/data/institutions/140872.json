@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 140872,
+    "name": "Reinhardt University",
+    "city": "Kahului",
+    "state": "HI",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
+    "website": "maui.hawaii.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Parks, Recreation & Fitness",
+      "Health Professions",
+      "Education"
+    ],
+    "intl_enrollment_pct": 4,
+    "tuition_summary": {
+      "sticker": 28420.0,
+      "in_state": 27300.0,
+      "out_of_state": 27300.0
+    },
+    "outcomes": {
+      "acceptance_rate": 55,
+      "yield": 33,
+      "grad_rate_6yr": 36,
+      "retention_full_time": 57,
+      "student_faculty_ratio": 11,
+      "total_enrollment": 1170
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

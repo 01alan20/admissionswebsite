@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 123554,
+    "name": "Saint Mary's College of California",
+    "city": "Huntington Park",
+    "state": "CA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
+    "website": "https://www.uei.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Education",
+      "Psychology",
+      "Liberal Arts & Humanities"
+    ],
+    "intl_enrollment_pct": 3,
+    "tuition_summary": {
+      "sticker": 56134.0,
+      "in_state": 53932.0,
+      "out_of_state": 53932.0
+    },
+    "outcomes": {
+      "acceptance_rate": 89,
+      "yield": 13,
+      "grad_rate_6yr": 69,
+      "retention_full_time": 85,
+      "student_faculty_ratio": 10,
+      "total_enrollment": 2775
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Legacy Status"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "Formal Demonstration Of Competencies",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "profile": {
+    "unitid": 245777,
+    "name": "Bais Medrash Elyon",
+    "city": "Waynesburg",
+    "state": "PA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Four-Year: Faith-Related Institutions",
+    "website": "www.greenectc.org/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Philosophy & Religious Studies"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 8600.0,
+      "in_state": 8600.0,
+      "out_of_state": 8600.0
+    },
+    "outcomes": {
+      "acceptance_rate": 80,
+      "yield": 100,
+      "grad_rate_6yr": null,
+      "retention_full_time": 67,
+      "student_faculty_ratio": 19,
+      "total_enrollment": 95
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "Recommendations"
+    ],
+    "considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "English Proficiency Test",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

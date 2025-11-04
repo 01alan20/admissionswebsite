@@ -1,0 +1,60 @@
+{
+  "profile": {
+    "unitid": 137476,
+    "name": "St. Thomas University",
+    "city": "Decatur",
+    "state": "GA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral/Professional Universities",
+    "website": "www.agnesscott.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Legal Studies",
+      "Health Professions",
+      "Business, Management & Marketing",
+      "Education"
+    ],
+    "intl_enrollment_pct": 6,
+    "tuition_summary": {
+      "sticker": 34770.0,
+      "in_state": 33760.0,
+      "out_of_state": 33760.0
+    },
+    "outcomes": {
+      "acceptance_rate": 99,
+      "yield": 12,
+      "grad_rate_6yr": 43,
+      "retention_full_time": 55,
+      "student_faculty_ratio": 17,
+      "total_enrollment": 6455
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [],
+    "not_considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

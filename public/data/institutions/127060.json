@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 127060,
+    "name": "University of Denver",
+    "city": "Aurora",
+    "state": "CO",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: Very High Research Activity",
+    "website": "www.pickenstech.org/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Public Administration & Social Service",
+      "Social Sciences",
+      "Psychology"
+    ],
+    "intl_enrollment_pct": 6,
+    "tuition_summary": {
+      "sticker": 59340.0,
+      "in_state": 56439.0,
+      "out_of_state": 56439.0
+    },
+    "outcomes": {
+      "acceptance_rate": 71,
+      "yield": 11,
+      "grad_rate_6yr": 78,
+      "retention_full_time": 88,
+      "student_faculty_ratio": 10,
+      "total_enrollment": 13387
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Legacy Status",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

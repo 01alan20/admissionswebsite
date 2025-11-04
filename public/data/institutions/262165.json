@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 262165,
+    "name": "Montana Bible College",
+    "city": "Cedar Rapids",
+    "state": "IA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
+    "website": "https://www.mercycare.org/employment/students/school-of-radiologic-technology/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Theology & Religious Vocations",
+      "Communication & Journalism",
+      "Parks, Recreation & Fitness",
+      "Homeland Security & Law Enforcement"
+    ],
+    "intl_enrollment_pct": 2,
+    "tuition_summary": {
+      "sticker": 13600.0,
+      "in_state": 10090.0,
+      "out_of_state": 10090.0
+    },
+    "outcomes": {
+      "acceptance_rate": 85,
+      "yield": 82,
+      "grad_rate_6yr": 57,
+      "retention_full_time": 55,
+      "student_faculty_ratio": 6,
+      "total_enrollment": 47
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Secondary School Gpa",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

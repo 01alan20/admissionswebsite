@@ -1,0 +1,58 @@
+{
+  "profile": {
+    "unitid": 421878,
+    "name": "Eastern International College-Jersey City",
+    "city": "Rock Hill",
+    "state": "SC",
+    "control": "Private for-profit",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Four-Year: Other Health Professions Schools",
+    "website": "www.kennethshuler.com/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 18947.0,
+      "in_state": 18046.0,
+      "out_of_state": 18046.0
+    },
+    "outcomes": {
+      "acceptance_rate": 100,
+      "yield": 100,
+      "grad_rate_6yr": 10,
+      "retention_full_time": 33,
+      "student_faculty_ratio": 15,
+      "total_enrollment": 474
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Secondary School Record",
+      "Work Experience"
+    ],
+    "considered": [
+      "Legacy Status",
+      "Recommendations"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Secondary School Gpa",
+      "Secondary School Rank"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

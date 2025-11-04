@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 228529,
+    "name": "Tarleton State University",
+    "city": "Murray",
+    "state": "UT",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: High Research Activity",
+    "website": "www.cameocollege.com/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Agriculture & Natural Resources",
+      "Health Professions",
+      "Parks, Recreation & Fitness"
+    ],
+    "intl_enrollment_pct": 1,
+    "tuition_summary": {
+      "sticker": 7878.0,
+      "in_state": 7848.0,
+      "out_of_state": 17640.0
+    },
+    "outcomes": {
+      "acceptance_rate": 94,
+      "yield": 33,
+      "grad_rate_6yr": 51,
+      "retention_full_time": 74,
+      "student_faculty_ratio": 18,
+      "total_enrollment": 15937
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Rank",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

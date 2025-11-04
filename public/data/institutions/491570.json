@@ -1,0 +1,43 @@
+{
+  "profile": {
+    "unitid": 491570,
+    "name": "Institute of Medical Ultrasound",
+    "city": "Bristol",
+    "state": "VA",
+    "control": "Private for-profit",
+    "level": "2-year",
+    "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
+    "website": "www.bristolschoolofhairdesign.com/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 31052.0,
+      "in_state": 28100.0,
+      "out_of_state": 28100.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 25,
+      "student_faculty_ratio": 12,
+      "total_enrollment": 29
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

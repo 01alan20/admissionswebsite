@@ -1,0 +1,59 @@
+{
+  "profile": {
+    "unitid": 201821,
+    "name": "The Christ College of Nursing and Health Sciences",
+    "city": "East Liverpool",
+    "state": "OH",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Four-Year: Other Health Professions Schools",
+    "website": "www.kent.edu/columbiana",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Health Professions",
+      "Liberal Arts & Humanities"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 16394.0,
+      "in_state": 16472.0,
+      "out_of_state": 16472.0
+    },
+    "outcomes": {
+      "acceptance_rate": 50,
+      "yield": 31,
+      "grad_rate_6yr": 59,
+      "retention_full_time": 60,
+      "student_faculty_ratio": 12,
+      "total_enrollment": 765
+    }
+  },
+  "requirements": {
+    "required": [
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Personal Statement Or Essay",
+      "Recommendations"
+    ],
+    "not_considered": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

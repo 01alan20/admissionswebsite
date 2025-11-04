@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 167987,
+    "name": "University of Massachusetts-Dartmouth",
+    "city": "Detroit",
+    "state": "MI",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: High Research Activity",
+    "website": "https://www.collegeforcreativestudies.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Health Professions",
+      "Engineering",
+      "Visual & Performing Arts"
+    ],
+    "intl_enrollment_pct": 9,
+    "tuition_summary": {
+      "sticker": 15208.0,
+      "in_state": 14854.0,
+      "out_of_state": 30992.0
+    },
+    "outcomes": {
+      "acceptance_rate": 92,
+      "yield": 15,
+      "grad_rate_6yr": 49,
+      "retention_full_time": 64,
+      "student_faculty_ratio": 15,
+      "total_enrollment": 7759
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Legacy Status"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

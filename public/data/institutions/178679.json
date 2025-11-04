@@ -1,0 +1,58 @@
+{
+  "profile": {
+    "unitid": 178679,
+    "name": "Ozark Christian College",
+    "city": "Billings",
+    "state": "MT",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Four-Year: Faith-Related Institutions",
+    "website": "www.msubillings.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Theology & Religious Vocations"
+    ],
+    "intl_enrollment_pct": 1,
+    "tuition_summary": {
+      "sticker": 15550.0,
+      "in_state": 14680.0,
+      "out_of_state": 14680.0
+    },
+    "outcomes": {
+      "acceptance_rate": 98,
+      "yield": 54,
+      "grad_rate_6yr": 57,
+      "retention_full_time": 77,
+      "student_faculty_ratio": 13,
+      "total_enrollment": 701
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Completion Of College Preparatory Program",
+      "Recommendations"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

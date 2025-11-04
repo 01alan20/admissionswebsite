@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 451866,
+    "name": "Remington College-Shreveport Campus",
+    "city": "Cincinnati",
+    "state": "OH",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate/Associate's Colleges: Associate's Dominant",
+    "website": "paulmitchell.edu/cincinnati",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Mechanic & Repair Technologies",
+      "Business, Management & Marketing",
+      "Legal Studies"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 23560.0,
+      "in_state": 23477.0,
+      "out_of_state": 23477.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": 67,
+      "retention_full_time": null,
+      "student_faculty_ratio": 21,
+      "total_enrollment": 342
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

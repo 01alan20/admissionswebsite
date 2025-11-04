@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 131520,
+    "name": "Howard University",
+    "city": "Jacksonville",
+    "state": "FL",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: High Research Activity",
+    "website": "www.ewc.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Health Professions",
+      "Business, Management & Marketing",
+      "Social Sciences",
+      "Communication & Journalism"
+    ],
+    "intl_enrollment_pct": 5,
+    "tuition_summary": {
+      "sticker": 33344.0,
+      "in_state": 31050.0,
+      "out_of_state": 31050.0
+    },
+    "outcomes": {
+      "acceptance_rate": 35,
+      "yield": 21,
+      "grad_rate_6yr": 69,
+      "retention_full_time": 90,
+      "student_faculty_ratio": 11,
+      "total_enrollment": 13416
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

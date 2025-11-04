@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 209922,
+    "name": "Reed College",
+    "city": "Cheyney",
+    "state": "PA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Arts & Sciences Focus",
+    "website": "www.cheyney.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Social Sciences",
+      "Biological & Biomedical Sciences",
+      "Foreign Languages & Linguistics",
+      "Psychology"
+    ],
+    "intl_enrollment_pct": 8,
+    "tuition_summary": {
+      "sticker": 67020.0,
+      "in_state": 64760.0,
+      "out_of_state": 64760.0
+    },
+    "outcomes": {
+      "acceptance_rate": 27,
+      "yield": 13,
+      "grad_rate_6yr": 76,
+      "retention_full_time": 86,
+      "student_faculty_ratio": 9,
+      "total_enrollment": 1458
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Formal Demonstration Of Competencies",
+      "Secondary School Rank"
+    ],
+    "not_considered": [
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

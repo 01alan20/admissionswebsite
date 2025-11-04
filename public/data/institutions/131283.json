@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 131283,
+    "name": "The Catholic University of America",
+    "city": "Marianna",
+    "state": "FL",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: High Research Activity",
+    "website": "https://www.chipola.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Engineering",
+      "Health Professions",
+      "Legal Studies"
+    ],
+    "intl_enrollment_pct": 10,
+    "tuition_summary": {
+      "sticker": 55834.0,
+      "in_state": 54186.0,
+      "out_of_state": 54186.0
+    },
+    "outcomes": {
+      "acceptance_rate": 84,
+      "yield": 17,
+      "grad_rate_6yr": 81,
+      "retention_full_time": 83,
+      "student_faculty_ratio": 11,
+      "total_enrollment": 5171
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Formal Demonstration Of Competencies",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "profile": {
+    "unitid": 214944,
+    "name": "Pennco Tech-Bristol",
+    "city": "Pittsburgh",
+    "state": "PA",
+    "control": "Private for-profit",
+    "level": "2-year",
+    "carnegie_basic": "Special Focus Two-Year: Technical Professions",
+    "website": "www.shnhbeauty.com/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Construction Trades",
+      "Mechanic & Repair Technologies",
+      "Health Professions"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": NaN,
+      "in_state": NaN,
+      "out_of_state": NaN
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 75,
+      "student_faculty_ratio": 13,
+      "total_enrollment": 603
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

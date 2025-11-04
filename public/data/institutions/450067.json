@@ -1,0 +1,45 @@
+{
+  "profile": {
+    "unitid": 450067,
+    "name": "Fortis College-Cincinnati",
+    "city": "New Baltimore",
+    "state": "MI",
+    "control": "Private for-profit",
+    "level": "2-year",
+    "carnegie_basic": "Special Focus Two-Year: Health Professions",
+    "website": "https://rosseducation.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Mechanic & Repair Technologies",
+      "Precision Production"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 14283.0,
+      "in_state": 15787.0,
+      "out_of_state": 15787.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 59,
+      "student_faculty_ratio": 17,
+      "total_enrollment": 403
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "profile": {
+    "unitid": 481155,
+    "name": "Helms College",
+    "city": "Pittsburgh",
+    "state": "PA",
+    "control": "Private nonprofit",
+    "level": "2-year",
+    "carnegie_basic": "Special Focus Two-Year: Arts & Design",
+    "website": "bsp.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Personal & Culinary Services",
+      "Health Professions",
+      "Mechanic & Repair Technologies"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 17924.0,
+      "in_state": 13460.0,
+      "out_of_state": 13460.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 61,
+      "student_faculty_ratio": 14,
+      "total_enrollment": 150
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "profile": {
+    "unitid": 235097,
+    "name": "Eastern Washington University",
+    "city": "Yakima",
+    "state": "WA",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
+    "website": "https://www.yvcc.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Education",
+      "Health Professions",
+      "Psychology"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 8353.0,
+      "in_state": 8139.0,
+      "out_of_state": 26529.0
+    },
+    "outcomes": {
+      "acceptance_rate": 92,
+      "yield": 23,
+      "grad_rate_6yr": 47,
+      "retention_full_time": 67,
+      "student_faculty_ratio": 20,
+      "total_enrollment": 10741
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [],
+    "not_considered": [
+      "Admission Test Scores",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 219198,
+    "name": "Mount Marty University",
+    "city": "Nashville",
+    "state": "TN",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Small Programs",
+    "website": "www.fisk.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Health Professions",
+      "Business, Management & Marketing",
+      "Education",
+      "Parks, Recreation & Fitness"
+    ],
+    "intl_enrollment_pct": 3,
+    "tuition_summary": {
+      "sticker": 33100.0,
+      "in_state": 31500.0,
+      "out_of_state": 31500.0
+    },
+    "outcomes": {
+      "acceptance_rate": 48,
+      "yield": 26,
+      "grad_rate_6yr": 60,
+      "retention_full_time": 70,
+      "student_faculty_ratio": 12,
+      "total_enrollment": 1314
+    }
+  },
+  "requirements": {
+    "required": [
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "English Proficiency Test",
+      "Secondary School Rank"
+    ],
+    "not_considered": [
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

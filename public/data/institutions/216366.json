@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 216366,
+    "name": "Thomas Jefferson University",
+    "city": "Charleston",
+    "state": "SC",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: High Research Activity",
+    "website": "https://www.charlestonsouthern.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Health Professions",
+      "Business, Management & Marketing",
+      "Architecture & Planning",
+      "Psychology"
+    ],
+    "intl_enrollment_pct": 5,
+    "tuition_summary": {
+      "sticker": 45683.0,
+      "in_state": 44350.0,
+      "out_of_state": 44350.0
+    },
+    "outcomes": {
+      "acceptance_rate": 86,
+      "yield": 15,
+      "grad_rate_6yr": 68,
+      "retention_full_time": 82,
+      "student_faculty_ratio": 13,
+      "total_enrollment": 8315
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Rank",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

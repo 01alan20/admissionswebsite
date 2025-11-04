@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 195234,
+    "name": "The College of Saint Rose",
+    "city": "Brooklyn",
+    "state": "NY",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
+    "website": "www.downstate.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Education",
+      "Business, Management & Marketing",
+      "Psychology",
+      "Health Professions"
+    ],
+    "intl_enrollment_pct": 5,
+    "tuition_summary": {
+      "sticker": 37452.0,
+      "in_state": 36398.0,
+      "out_of_state": 36398.0
+    },
+    "outcomes": {
+      "acceptance_rate": 73,
+      "yield": 14,
+      "grad_rate_6yr": 51,
+      "retention_full_time": 72,
+      "student_faculty_ratio": 14,
+      "total_enrollment": 2538
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Legacy Status"
+    ],
+    "not_considered": [
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

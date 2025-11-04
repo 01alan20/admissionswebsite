@@ -1,0 +1,60 @@
+{
+  "profile": {
+    "unitid": 209603,
+    "name": "Pacific Northwest College of Art",
+    "city": "Feasterville",
+    "state": "PA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
+    "website": "www.bcsbc.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Visual & Performing Arts",
+      "English Language & Literature",
+      "Multidisciplinary Studies"
+    ],
+    "intl_enrollment_pct": 3,
+    "tuition_summary": {
+      "sticker": 47126.0,
+      "in_state": 45100.0,
+      "out_of_state": 45100.0
+    },
+    "outcomes": {
+      "acceptance_rate": 69,
+      "yield": 26,
+      "grad_rate_6yr": 46,
+      "retention_full_time": 63,
+      "student_faculty_ratio": 9,
+      "total_enrollment": 524
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Secondary School Gpa"
+    ],
+    "considered": [
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Record"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

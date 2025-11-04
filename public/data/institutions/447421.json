@@ -1,0 +1,43 @@
+{
+  "profile": {
+    "unitid": 447421,
+    "name": "Eagle Gate College-Layton",
+    "city": "West Hills",
+    "state": "CA",
+    "control": "Private for-profit",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Four-Year: Other Health Professions Schools",
+    "website": "www.valleycollegeofmedicalcareers.info/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": NaN,
+      "in_state": 17112.0,
+      "out_of_state": 17112.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": 64,
+      "retention_full_time": 63,
+      "student_faculty_ratio": 29,
+      "total_enrollment": 205
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

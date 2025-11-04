@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 190114,
+    "name": "Metropolitan College of New York",
+    "city": "Canandaigua",
+    "state": "NY",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Medium Programs",
+    "website": "www.flcc.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Public Administration & Social Service",
+      "Education",
+      "Health Professions"
+    ],
+    "intl_enrollment_pct": 8,
+    "tuition_summary": {
+      "sticker": 20188.0,
+      "in_state": 20188.0,
+      "out_of_state": 20188.0
+    },
+    "outcomes": {
+      "acceptance_rate": 77,
+      "yield": 37,
+      "grad_rate_6yr": 21,
+      "retention_full_time": 38,
+      "student_faculty_ratio": 13,
+      "total_enrollment": 663
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Gpa"
+    ],
+    "considered": [
+      "Personal Statement Or Essay",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Recommendations",
+      "Secondary School Rank",
+      "Secondary School Record"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

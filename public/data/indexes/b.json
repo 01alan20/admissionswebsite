@@ -1,0 +1,1766 @@
+[
+  {
+    "unitid":100937,
+    "name":"Birmingham-Southern College",
+    "state":"AL",
+    "city":"Phenix City"
+  },
+  {
+    "unitid":102030,
+    "name":"Bishop State Community College",
+    "state":"AL",
+    "city":"Birmingham"
+  },
+  {
+    "unitid":102429,
+    "name":"Bevill State Community College",
+    "state":"AK",
+    "city":"Anchorage"
+  },
+  {
+    "unitid":104090,
+    "name":"Brookline College-Phoenix",
+    "state":"AZ",
+    "city":"Yuma"
+  },
+  {
+    "unitid":106546,
+    "name":"Baptist Health College Little Rock",
+    "state":"AR",
+    "city":"Conway"
+  },
+  {
+    "unitid":106625,
+    "name":"Black River Technical College",
+    "state":"AR",
+    "city":"De Queen"
+  },
+  {
+    "unitid":108861,
+    "name":"Berkeley School of Theology",
+    "state":"CA",
+    "city":"Sacramento"
+  },
+  {
+    "unitid":109819,
+    "name":"Bakersfield College",
+    "state":"CA",
+    "city":"La Mirada"
+  },
+  {
+    "unitid":109907,
+    "name":"Barstow Community College",
+    "state":"CA",
+    "city":"Anaheim"
+  },
+  {
+    "unitid":109934,
+    "name":"Bellus Academy-Chula Vista",
+    "state":"AZ",
+    "city":"Tempe"
+  },
+  {
+    "unitid":110060,
+    "name":"Bethesda University",
+    "state":"CA",
+    "city":"Oroville"
+  },
+  {
+    "unitid":110097,
+    "name":"Biola University",
+    "state":"CA",
+    "city":"San Francisco"
+  },
+  {
+    "unitid":110194,
+    "name":"Brownson Technical School",
+    "state":"CA",
+    "city":"Aptos"
+  },
+  {
+    "unitid":110219,
+    "name":"Bryan University",
+    "state":"CA",
+    "city":"Riverside"
+  },
+  {
+    "unitid":110246,
+    "name":"Butte College",
+    "state":"CA",
+    "city":"San Francisco"
+  },
+  {
+    "unitid":116563,
+    "name":"Bellus Academy-El Cajon",
+    "state":"CA",
+    "city":"Susanville"
+  },
+  {
+    "unitid":125082,
+    "name":"Bridges Beauty College",
+    "state":"CO",
+    "city":"Denver"
+  },
+  {
+    "unitid":125170,
+    "name":"Berkeley City College",
+    "state":"CO",
+    "city":"Colorado Springs"
+  },
+  {
+    "unitid":126359,
+    "name":"Bel-Rea Institute of Animal Technology",
+    "state":"CO",
+    "city":"Westminster"
+  },
+  {
+    "unitid":128586,
+    "name":"Bais Binyomin Academy",
+    "state":"CT",
+    "city":"New London"
+  },
+  {
+    "unitid":132408,
+    "name":"Baptist University of Florida",
+    "state":"FL",
+    "city":"Temple Terrace"
+  },
+  {
+    "unitid":132471,
+    "name":"Barry University",
+    "state":"FL",
+    "city":"Jacksonville"
+  },
+  {
+    "unitid":132602,
+    "name":"Bethune-Cookman University",
+    "state":"FL",
+    "city":"Miramar"
+  },
+  {
+    "unitid":132709,
+    "name":"Broward College",
+    "state":"FL",
+    "city":"Miami"
+  },
+  {
+    "unitid":137591,
+    "name":"Bene's Career Academy",
+    "state":"GA",
+    "city":"Albany"
+  },
+  {
+    "unitid":137856,
+    "name":"Big Bend Technical College",
+    "state":"GA",
+    "city":"West Point"
+  },
+  {
+    "unitid":139144,
+    "name":"Berry College",
+    "state":"GA",
+    "city":"Statesboro"
+  },
+  {
+    "unitid":139153,
+    "name":"Beulah Heights University",
+    "state":"GA",
+    "city":"Atlanta"
+  },
+  {
+    "unitid":139199,
+    "name":"Brenau University",
+    "state":"GA",
+    "city":"Athens"
+  },
+  {
+    "unitid":139205,
+    "name":"Brewton-Parker College",
+    "state":"GA",
+    "city":"Barnesville"
+  },
+  {
+    "unitid":142090,
+    "name":"Boise Bible College",
+    "state":"IL",
+    "city":"Tinley Park"
+  },
+  {
+    "unitid":142115,
+    "name":"Boise State University",
+    "state":"IL",
+    "city":"Oak Lawn"
+  },
+  {
+    "unitid":142522,
+    "name":"Brigham Young University-Idaho",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":143233,
+    "name":"Bethany Theological Seminary",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":143279,
+    "name":"Black Hawk College",
+    "state":"IL",
+    "city":"River Forest"
+  },
+  {
+    "unitid":143288,
+    "name":"Blackburn College",
+    "state":"IL",
+    "city":"Danville"
+  },
+  {
+    "unitid":143297,
+    "name":"Blessing Rieman College of Nursing and Health Sciences",
+    "state":"IL",
+    "city":"Urbana"
+  },
+  {
+    "unitid":143358,
+    "name":"Bradley University",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":145619,
+    "name":"Benedictine University",
+    "state":"IL",
+    "city":"Lincoln"
+  },
+  {
+    "unitid":150136,
+    "name":"Ball State University",
+    "state":"IN",
+    "city":"Bloomington"
+  },
+  {
+    "unitid":150145,
+    "name":"Bethel University",
+    "state":"IN",
+    "city":"Gary"
+  },
+  {
+    "unitid":150163,
+    "name":"Butler University",
+    "state":"IN",
+    "city":"New Albany"
+  },
+  {
+    "unitid":152992,
+    "name":"Briar Cliff University",
+    "state":"IA",
+    "city":"Mount Pleasant"
+  },
+  {
+    "unitid":153001,
+    "name":"Buena Vista University",
+    "state":"IA",
+    "city":"Council Bluffs"
+  },
+  {
+    "unitid":154688,
+    "name":"Baker University",
+    "state":"KS",
+    "city":"Overland Park"
+  },
+  {
+    "unitid":154697,
+    "name":"Barton County Community College",
+    "state":"KS",
+    "city":"Lawrence"
+  },
+  {
+    "unitid":154712,
+    "name":"Benedictine College",
+    "state":"KS",
+    "city":"Wichita"
+  },
+  {
+    "unitid":154721,
+    "name":"Bethany College",
+    "state":"KS",
+    "city":"Wichita"
+  },
+  {
+    "unitid":154749,
+    "name":"Bethel College-North Newton",
+    "state":"KS",
+    "city":"Manhattan"
+  },
+  {
+    "unitid":154800,
+    "name":"Butler Community College",
+    "state":"KS",
+    "city":"Salina"
+  },
+  {
+    "unitid":155070,
+    "name":"Barclay College",
+    "state":"KS",
+    "city":"Overland Park"
+  },
+  {
+    "unitid":156286,
+    "name":"Bellarmine University",
+    "state":"KY",
+    "city":"Lexington"
+  },
+  {
+    "unitid":156295,
+    "name":"Berea College",
+    "state":"KY",
+    "city":"Columbia"
+  },
+  {
+    "unitid":156356,
+    "name":"Brescia University",
+    "state":"KY",
+    "city":"Madisonville"
+  },
+  {
+    "unitid":156392,
+    "name":"Bluegrass Community and Technical College",
+    "state":"KY",
+    "city":"Midway"
+  },
+  {
+    "unitid":157553,
+    "name":"Big Sandy Community and Technical College",
+    "state":"LA",
+    "city":"Kenner"
+  },
+  {
+    "unitid":158325,
+    "name":"Baton Rouge General Medical Center School of Nursing & School of Radiologic Technology",
+    "state":"LA",
+    "city":"Monroe"
+  },
+  {
+    "unitid":158431,
+    "name":"Bossier Parish Community College",
+    "state":"LA",
+    "city":"Minden"
+  },
+  {
+    "unitid":159027,
+    "name":"Belbo Beauty Institute",
+    "state":"LA",
+    "city":"Schriever"
+  },
+  {
+    "unitid":160977,
+    "name":"Bates College",
+    "state":"MD",
+    "city":"Baltimore"
+  },
+  {
+    "unitid":160995,
+    "name":"Beal University",
+    "state":"MD",
+    "city":"Bowie"
+  },
+  {
+    "unitid":161004,
+    "name":"Bowdoin College",
+    "state":"MD",
+    "city":"Laurel"
+  },
+  {
+    "unitid":161855,
+    "name":"Baltimore Studio of Hair Design",
+    "state":"MD",
+    "city":"Rockville"
+  },
+  {
+    "unitid":161864,
+    "name":"Baltimore City Community College",
+    "state":"MD",
+    "city":"Baltimore"
+  },
+  {
+    "unitid":162007,
+    "name":"Bowie State University",
+    "state":"MD",
+    "city":"Baltimore"
+  },
+  {
+    "unitid":164580,
+    "name":"Babson College",
+    "state":"MA",
+    "city":"Fall River"
+  },
+  {
+    "unitid":164599,
+    "name":"Bancroft School of Massage Therapy",
+    "state":"MA",
+    "city":"Boston"
+  },
+  {
+    "unitid":164614,
+    "name":"Boston Baptist College",
+    "state":"MA",
+    "city":"Fitchburg"
+  },
+  {
+    "unitid":164632,
+    "name":"Bay Path University",
+    "state":"MA",
+    "city":"Framingham"
+  },
+  {
+    "unitid":164641,
+    "name":"Bay State College",
+    "state":"MA",
+    "city":"Boston"
+  },
+  {
+    "unitid":164739,
+    "name":"Bentley University",
+    "state":"MA",
+    "city":"Wenham"
+  },
+  {
+    "unitid":164748,
+    "name":"Berklee College of Music",
+    "state":"MA",
+    "city":"South Hamilton"
+  },
+  {
+    "unitid":164775,
+    "name":"Berkshire Community College",
+    "state":"MA",
+    "city":"Greenfield"
+  },
+  {
+    "unitid":164872,
+    "name":"Boston Architectural College",
+    "state":"MA",
+    "city":"Cambridge"
+  },
+  {
+    "unitid":164915,
+    "name":"Boston Graduate School of Psychoanalysis Inc",
+    "state":"MA",
+    "city":"Newton Centre"
+  },
+  {
+    "unitid":164924,
+    "name":"Boston College",
+    "state":"MA",
+    "city":"Brookline"
+  },
+  {
+    "unitid":164988,
+    "name":"Boston University",
+    "state":"MA",
+    "city":"Worcester"
+  },
+  {
+    "unitid":165015,
+    "name":"Brandeis University",
+    "state":"MA",
+    "city":"Holyoke"
+  },
+  {
+    "unitid":165024,
+    "name":"Bridgewater State University",
+    "state":"MA",
+    "city":"Newton"
+  },
+  {
+    "unitid":165033,
+    "name":"Bristol Community College",
+    "state":"MA",
+    "city":"Medford"
+  },
+  {
+    "unitid":165112,
+    "name":"Bunker Hill Community College",
+    "state":"MA",
+    "city":"Cambridge"
+  },
+  {
+    "unitid":165884,
+    "name":"Benjamin Franklin Cummings Institute of Technology",
+    "state":"MA",
+    "city":"New Bedford"
+  },
+  {
+    "unitid":167792,
+    "name":"Bard College at Simon's Rock",
+    "state":"MI",
+    "city":"Flint"
+  },
+  {
+    "unitid":168847,
+    "name":"Baker College",
+    "state":"MI",
+    "city":"Holland"
+  },
+  {
+    "unitid":168883,
+    "name":"Bay de Noc Community College",
+    "state":"MI",
+    "city":"Jackson"
+  },
+  {
+    "unitid":168892,
+    "name":"Bayshire Academy of Beauty Craft Inc",
+    "state":"MI",
+    "city":"Kalamazoo"
+  },
+  {
+    "unitid":173124,
+    "name":"Bemidji State University",
+    "state":"MN",
+    "city":"Moorhead"
+  },
+  {
+    "unitid":173142,
+    "name":"Bethany Lutheran College",
+    "state":"MN",
+    "city":"Brooklyn Park"
+  },
+  {
+    "unitid":173160,
+    "name":"Bethel University",
+    "state":"MN",
+    "city":"Bloomington"
+  },
+  {
+    "unitid":175421,
+    "name":"Belhaven University",
+    "state":"MS",
+    "city":"Ridgeland"
+  },
+  {
+    "unitid":175430,
+    "name":"Blue Mountain Christian University",
+    "state":"MS",
+    "city":"Hattiesburg"
+  },
+  {
+    "unitid":175999,
+    "name":"Board of Trustees-Mississippi State Institutions of Higher Learning",
+    "state":"MO",
+    "city":"Nevada"
+  },
+  {
+    "unitid":177719,
+    "name":"Barnes-Jewish College Goldfarb School of Nursing",
+    "state":"MO",
+    "city":"Kansas City"
+  },
+  {
+    "unitid":180054,
+    "name":"Blackfeet Community College",
+    "state":"NE",
+    "city":"Omaha"
+  },
+  {
+    "unitid":180063,
+    "name":"Butte Academy of Beauty Culture",
+    "state":"NE",
+    "city":"Omaha"
+  },
+  {
+    "unitid":180814,
+    "name":"Bellevue University",
+    "state":"NV",
+    "city":"Las Vegas"
+  },
+  {
+    "unitid":180878,
+    "name":"Bryan College of Health Sciences",
+    "state":"NV",
+    "city":"Elko"
+  },
+  {
+    "unitid":183743,
+    "name":"Bergen Community College",
+    "state":"NJ",
+    "city":"Nutley"
+  },
+  {
+    "unitid":183789,
+    "name":"Berkeley College-Woodland Park",
+    "state":"NJ",
+    "city":"New Brunswick"
+  },
+  {
+    "unitid":183804,
+    "name":"Beth Medrash Govoha",
+    "state":"NJ",
+    "city":"West New York"
+  },
+  {
+    "unitid":183822,
+    "name":"Bloomfield College",
+    "state":"NJ",
+    "city":"Newark"
+  },
+  {
+    "unitid":183859,
+    "name":"Brookdale Community College",
+    "state":"NJ",
+    "city":"Toms River"
+  },
+  {
+    "unitid":188517,
+    "name":"Bryant & Stratton College-Albany",
+    "state":"NY",
+    "city":"Potsdam"
+  },
+  {
+    "unitid":189015,
+    "name":"Bank Street College of Education",
+    "state":"NY",
+    "city":"Syracuse"
+  },
+  {
+    "unitid":189088,
+    "name":"Bard College",
+    "state":"NY",
+    "city":"Hyde Park"
+  },
+  {
+    "unitid":189097,
+    "name":"Barnard College",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":189219,
+    "name":"Berk Trade and Business School",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":189228,
+    "name":"Berkeley College-New York",
+    "state":"NY",
+    "city":"Bronx"
+  },
+  {
+    "unitid":189255,
+    "name":"Berkowits School of Electrolysis",
+    "state":"NY",
+    "city":"Brooklyn"
+  },
+  {
+    "unitid":189273,
+    "name":"Beth Hamedrash Shaarei Yosher Institute",
+    "state":"NY",
+    "city":"Staten Island"
+  },
+  {
+    "unitid":189404,
+    "name":"Brittany Beauty Academy",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":189413,
+    "name":"Boricua College",
+    "state":"NY",
+    "city":"Bronx"
+  },
+  {
+    "unitid":189468,
+    "name":"Brittany Beauty Academy",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":189501,
+    "name":"Brooklyn Law School",
+    "state":"NY",
+    "city":"Brooklyn"
+  },
+  {
+    "unitid":189565,
+    "name":"Bryant & Stratton College-Syracuse North",
+    "state":"NY",
+    "city":"Bronx"
+  },
+  {
+    "unitid":189583,
+    "name":"Bryant & Stratton College-Buffalo",
+    "state":"NY",
+    "city":"Brooklyn"
+  },
+  {
+    "unitid":189592,
+    "name":"Bryant & Stratton College-Greece",
+    "state":"NY",
+    "city":"Brooklyn"
+  },
+  {
+    "unitid":190956,
+    "name":"Belanger School of Nursing",
+    "state":"NY",
+    "city":"Purchase"
+  },
+  {
+    "unitid":196079,
+    "name":"Binghamton University",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":197911,
+    "name":"Barton College",
+    "state":"NC",
+    "city":"Spindale"
+  },
+  {
+    "unitid":197966,
+    "name":"Beaufort County Community College",
+    "state":"NC",
+    "city":"Kenansville"
+  },
+  {
+    "unitid":197984,
+    "name":"Belmont Abbey College",
+    "state":"NC",
+    "city":"Charlotte"
+  },
+  {
+    "unitid":197993,
+    "name":"Bennett College",
+    "state":"NC",
+    "city":"Smithfield"
+  },
+  {
+    "unitid":198011,
+    "name":"Bladen Community College",
+    "state":"NC",
+    "city":"Banner Elk"
+  },
+  {
+    "unitid":198039,
+    "name":"Blue Ridge Community College",
+    "state":"NC",
+    "city":"Kinston"
+  },
+  {
+    "unitid":198066,
+    "name":"Brevard College",
+    "state":"NC",
+    "city":"Hickory"
+  },
+  {
+    "unitid":198084,
+    "name":"Brunswick Community College",
+    "state":"NC",
+    "city":"Greensboro"
+  },
+  {
+    "unitid":200022,
+    "name":"Bismarck State College",
+    "state":"OH",
+    "city":"Canton"
+  },
+  {
+    "unitid":201195,
+    "name":"Baldwin Wallace University",
+    "state":"OH",
+    "city":"Cincinnati"
+  },
+  {
+    "unitid":201283,
+    "name":"Belmont College",
+    "state":"OH",
+    "city":"Cincinnati"
+  },
+  {
+    "unitid":201371,
+    "name":"Bluffton University",
+    "state":"OH",
+    "city":"Cincinnati"
+  },
+  {
+    "unitid":201432,
+    "name":"Bowling Green State University-Firelands",
+    "state":"OH",
+    "city":"Salem"
+  },
+  {
+    "unitid":201441,
+    "name":"Bowling Green State University-Main Campus",
+    "state":"OH",
+    "city":"Columbus"
+  },
+  {
+    "unitid":201469,
+    "name":"Bryant & Stratton College-Parma",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":201478,
+    "name":"Buckeye Hills Career Center",
+    "state":"OH",
+    "city":"Tiffin"
+  },
+  {
+    "unitid":201496,
+    "name":"Butler Technology and Career Development Schools",
+    "state":"OH",
+    "city":"Hiram"
+  },
+  {
+    "unitid":206817,
+    "name":"Bacone College",
+    "state":"OK",
+    "city":"Weatherford"
+  },
+  {
+    "unitid":208275,
+    "name":"Blue Mountain Community College",
+    "state":"OR",
+    "city":"Coos Bay"
+  },
+  {
+    "unitid":209409,
+    "name":"Bushnell University",
+    "state":"PA",
+    "city":"Glenside"
+  },
+  {
+    "unitid":210492,
+    "name":"Bryn Athyn College of the New Church",
+    "state":"PA",
+    "city":"Elizabethtown"
+  },
+  {
+    "unitid":211273,
+    "name":"Bryn Mawr College",
+    "state":"PA",
+    "city":"Melrose Park"
+  },
+  {
+    "unitid":211291,
+    "name":"Bucknell University",
+    "state":"PA",
+    "city":"Grove City"
+  },
+  {
+    "unitid":211307,
+    "name":"Bucks County Community College",
+    "state":"PA",
+    "city":"Gwynedd Valley"
+  },
+  {
+    "unitid":211316,
+    "name":"Bucks County School of Beauty Culture Inc",
+    "state":"PA",
+    "city":"Bryn Mawr"
+  },
+  {
+    "unitid":211334,
+    "name":"Butler Beauty Academy",
+    "state":"PA",
+    "city":"Harrisburg"
+  },
+  {
+    "unitid":211343,
+    "name":"Butler County Community College",
+    "state":"PA",
+    "city":"Haverford"
+  },
+  {
+    "unitid":213330,
+    "name":"Butler Beauty Academy-Kittanning Beauty Academy",
+    "state":"PA",
+    "city":"Media"
+  },
+  {
+    "unitid":215336,
+    "name":"Beaver Falls Beauty Academy",
+    "state":"PA",
+    "city":"Ambridge"
+  },
+  {
+    "unitid":217156,
+    "name":"Brown University",
+    "state":"SC",
+    "city":"Greenwood"
+  },
+  {
+    "unitid":217165,
+    "name":"Bryant University",
+    "state":"SC",
+    "city":"Gaffney"
+  },
+  {
+    "unitid":217721,
+    "name":"Benedict College",
+    "state":"SC",
+    "city":"Spartanburg"
+  },
+  {
+    "unitid":217749,
+    "name":"Bob Jones University",
+    "state":"SC",
+    "city":"Spartanburg"
+  },
+  {
+    "unitid":219046,
+    "name":"Black Hills State University",
+    "state":"TN",
+    "city":"Dickson"
+  },
+  {
+    "unitid":219639,
+    "name":"Baptist Health Sciences University",
+    "state":"TN",
+    "city":"Cookeville"
+  },
+  {
+    "unitid":219709,
+    "name":"Belmont University",
+    "state":"TN",
+    "city":"Nashville"
+  },
+  {
+    "unitid":219718,
+    "name":"Bethel University",
+    "state":"TN",
+    "city":"Memphis"
+  },
+  {
+    "unitid":219790,
+    "name":"Bryan College-Dayton",
+    "state":"TN",
+    "city":"Memphis"
+  },
+  {
+    "unitid":223056,
+    "name":"Baldwin Beauty School-South Austin",
+    "state":"TX",
+    "city":"Houston"
+  },
+  {
+    "unitid":223083,
+    "name":"Baptist Health System School of Health Professions",
+    "state":"TX",
+    "city":"Houston"
+  },
+  {
+    "unitid":223117,
+    "name":"Baptist Missionary Association Theological Seminary",
+    "state":"TX",
+    "city":"Houston"
+  },
+  {
+    "unitid":223223,
+    "name":"Baylor College of Medicine",
+    "state":"TX",
+    "city":"Houston"
+  },
+  {
+    "unitid":223232,
+    "name":"Baylor University",
+    "state":"TX",
+    "city":"Victoria"
+  },
+  {
+    "unitid":223427,
+    "name":"Blinn College District",
+    "state":"TX",
+    "city":"Big Spring"
+  },
+  {
+    "unitid":223506,
+    "name":"Brazosport College",
+    "state":"TX",
+    "city":"San Antonio"
+  },
+  {
+    "unitid":224013,
+    "name":"BK Cosmo College of Cosmetology",
+    "state":"TX",
+    "city":"Orange"
+  },
+  {
+    "unitid":230010,
+    "name":"Bridgerland Technical College",
+    "state":"VA",
+    "city":"Newport News"
+  },
+  {
+    "unitid":230038,
+    "name":"Brigham Young University",
+    "state":"VA",
+    "city":"Virginia Beach"
+  },
+  {
+    "unitid":230047,
+    "name":"Brigham Young University-Hawaii",
+    "state":"VA",
+    "city":"Clifton Forge"
+  },
+  {
+    "unitid":230816,
+    "name":"Bennington College",
+    "state":"VA",
+    "city":"Lynchburg"
+  },
+  {
+    "unitid":231536,
+    "name":"Blue Ridge Community College",
+    "state":"VA",
+    "city":"Ashland"
+  },
+  {
+    "unitid":231554,
+    "name":"Bluefield University",
+    "state":"VA",
+    "city":"Lynchburg"
+  },
+  {
+    "unitid":231581,
+    "name":"Bridgewater College",
+    "state":"VA",
+    "city":"Glenns"
+  },
+  {
+    "unitid":231785,
+    "name":"Bryant & Stratton College-Virginia Beach",
+    "state":"VA",
+    "city":"Salem"
+  },
+  {
+    "unitid":232450,
+    "name":"Brightpoint Community College",
+    "state":"VA",
+    "city":"Roanoke"
+  },
+  {
+    "unitid":233356,
+    "name":"Bon Secours Memorial College of Nursing",
+    "state":"WA",
+    "city":"Spokane"
+  },
+  {
+    "unitid":233480,
+    "name":"Bon Secours St Mary's Hospital School of Medical Imaging",
+    "state":"WA",
+    "city":"Toppenish"
+  },
+  {
+    "unitid":234669,
+    "name":"Bellevue College",
+    "state":"WA",
+    "city":"Spokane"
+  },
+  {
+    "unitid":234696,
+    "name":"Bellingham Technical College",
+    "state":"WA",
+    "city":"Longview"
+  },
+  {
+    "unitid":234711,
+    "name":"Big Bend Community College",
+    "state":"WA",
+    "city":"Tacoma"
+  },
+  {
+    "unitid":235547,
+    "name":"Bastyr University",
+    "state":"WV",
+    "city":"Elkins"
+  },
+  {
+    "unitid":235671,
+    "name":"Bates Technical College",
+    "state":"WV",
+    "city":"Glenville"
+  },
+  {
+    "unitid":236018,
+    "name":"BJ's Beauty & Barber College",
+    "state":"WV",
+    "city":"Stollings"
+  },
+  {
+    "unitid":237145,
+    "name":"B M Spurr School of Practical Nursing",
+    "state":"WI",
+    "city":"Kenosha"
+  },
+  {
+    "unitid":237172,
+    "name":"Ben Franklin Career Center",
+    "state":"WI",
+    "city":"Mequon"
+  },
+  {
+    "unitid":237181,
+    "name":"Bethany College",
+    "state":"WI",
+    "city":"Madison"
+  },
+  {
+    "unitid":237215,
+    "name":"Bluefield State University",
+    "state":"WI",
+    "city":"Appleton"
+  },
+  {
+    "unitid":238324,
+    "name":"Bellin College",
+    "state":"WI",
+    "city":"Superior"
+  },
+  {
+    "unitid":238333,
+    "name":"Beloit College",
+    "state":"WI",
+    "city":"Madison"
+  },
+  {
+    "unitid":238397,
+    "name":"Blackhawk Technical College",
+    "state":"WI",
+    "city":"Milwaukee"
+  },
+  {
+    "unitid":243799,
+    "name":"Blue Hills Regional Technical School",
+    "state":"VA",
+    "city":"Virginia Beach"
+  },
+  {
+    "unitid":245777,
+    "name":"Bais Medrash Elyon",
+    "state":"PA",
+    "city":"Waynesburg"
+  },
+  {
+    "unitid":247065,
+    "name":"Beckfield College-Florence",
+    "state":"FL",
+    "city":"Fort Myers"
+  },
+  {
+    "unitid":364760,
+    "name":"Bell Mar Beauty College",
+    "state":"TN",
+    "city":"Nashville"
+  },
+  {
+    "unitid":366438,
+    "name":"Blades School of Hair Design",
+    "state":"CO",
+    "city":"Fort Collins"
+  },
+  {
+    "unitid":367431,
+    "name":"Butler Beauty Academy-New Castle Beauty Academy",
+    "state":"NJ",
+    "city":"Freehold"
+  },
+  {
+    "unitid":369516,
+    "name":"Bryan University",
+    "state":"TX",
+    "city":"Fort Worth"
+  },
+  {
+    "unitid":373456,
+    "name":"Blalock's Professional Beauty College",
+    "state":"NY",
+    "city":"Verona"
+  },
+  {
+    "unitid":375568,
+    "name":"Brown & Clermont Adult Career Campuses",
+    "state":"CO",
+    "city":"Lakewood"
+  },
+  {
+    "unitid":377722,
+    "name":"Bellus Academy-Poway",
+    "state":"FL",
+    "city":"Boca Raton"
+  },
+  {
+    "unitid":380359,
+    "name":"Bay Mills Community College",
+    "state":"NY",
+    "city":"Bronx"
+  },
+  {
+    "unitid":383312,
+    "name":"Buckeye Joint Vocational School",
+    "state":"TN",
+    "city":"Cleveland"
+  },
+  {
+    "unitid":384254,
+    "name":"Beacon College",
+    "state":"FL",
+    "city":"Sarasota"
+  },
+  {
+    "unitid":404055,
+    "name":"Brookline College-Tempe",
+    "state":"CA",
+    "city":"Seaside"
+  },
+  {
+    "unitid":404718,
+    "name":"Brillare Beauty Institute",
+    "state":"MA",
+    "city":"Billerica"
+  },
+  {
+    "unitid":414489,
+    "name":"Baldwin Beauty School-North Austin",
+    "state":"OK",
+    "city":"Choctaw"
+  },
+  {
+    "unitid":417105,
+    "name":"Baldwin Park Adult & Community Education",
+    "state":"PR",
+    "city":"Bayamon"
+  },
+  {
+    "unitid":418010,
+    "name":"Broome Delaware Tioga BOCES-Practical Nursing Program",
+    "state":"AZ",
+    "city":"Tempe"
+  },
+  {
+    "unitid":420705,
+    "name":"Bakke Graduate University",
+    "state":"PR",
+    "city":"Ponce"
+  },
+  {
+    "unitid":431187,
+    "name":"Bristol Technical Education Center",
+    "state":"CT",
+    "city":"Groton"
+  },
+  {
+    "unitid":434821,
+    "name":"Blue Cliff College-Metairie",
+    "state":"NY",
+    "city":"Mineola"
+  },
+  {
+    "unitid":437103,
+    "name":"Baton Rouge Community College",
+    "state":"SD",
+    "city":"Box Elder"
+  },
+  {
+    "unitid":438179,
+    "name":"Brookline College-Tucson",
+    "state":"WA",
+    "city":"Seattle"
+  },
+  {
+    "unitid":439473,
+    "name":"Bennett Career Institute",
+    "state":"PA",
+    "city":"Springville"
+  },
+  {
+    "unitid":439491,
+    "name":"Blue Cliff College-Lafayette",
+    "state":"PR",
+    "city":"Rio Piedras"
+  },
+  {
+    "unitid":441502,
+    "name":"Blue Cliff College-Gulfport",
+    "state":"TN",
+    "city":"Franklin"
+  },
+  {
+    "unitid":441645,
+    "name":"Brown Aveda Institute-Mentor",
+    "state":"OR",
+    "city":"Portland"
+  },
+  {
+    "unitid":442976,
+    "name":"Brighton Center's Center for Employment Training",
+    "state":"TX",
+    "city":"Houston"
+  },
+  {
+    "unitid":443702,
+    "name":"Bexley Hall Seabury Western Theological Seminary Federation, Inc.",
+    "state":"NC",
+    "city":"Charlotte"
+  },
+  {
+    "unitid":444088,
+    "name":"Brookline College-Albuquerque",
+    "state":"VA",
+    "city":"Sterling"
+  },
+  {
+    "unitid":444103,
+    "name":"Byzantine Catholic Seminary of Saints Cyril and Methodius",
+    "state":"CT",
+    "city":"Shelton"
+  },
+  {
+    "unitid":444194,
+    "name":"Bayamon Community College",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":444398,
+    "name":"Baptist University of the Americas",
+    "state":"AR",
+    "city":"Springdale"
+  },
+  {
+    "unitid":444413,
+    "name":"Beis Medrash Heichal Dovid",
+    "state":"IL",
+    "city":"Skokie"
+  },
+  {
+    "unitid":444440,
+    "name":"Blue Cliff Career College",
+    "state":"WA",
+    "city":"Everett"
+  },
+  {
+    "unitid":446774,
+    "name":"Blue Ridge Community and Technical College",
+    "state":"FL",
+    "city":"Hialeah"
+  },
+  {
+    "unitid":447810,
+    "name":"Blake Austin College",
+    "state":"TX",
+    "city":"Arlington"
+  },
+  {
+    "unitid":448424,
+    "name":"Broken Arrow Beauty College",
+    "state":"WI",
+    "city":"Green Bay"
+  },
+  {
+    "unitid":449311,
+    "name":"Brittany Beauty Academy",
+    "state":"FL",
+    "city":"Kissimmee"
+  },
+  {
+    "unitid":449357,
+    "name":"Beaumont Adult School",
+    "state":"FL",
+    "city":"Tallahassee"
+  },
+  {
+    "unitid":449658,
+    "name":"Bais Medrash Toras Chesed",
+    "state":"NY",
+    "city":"Brooklyn"
+  },
+  {
+    "unitid":450021,
+    "name":"Blue Cliff College-Houma",
+    "state":"VA",
+    "city":"Purcellville"
+  },
+  {
+    "unitid":450119,
+    "name":"Blue Cliff College-Fayetteville",
+    "state":"OH",
+    "city":"Sylvania"
+  },
+  {
+    "unitid":450128,
+    "name":"Blue Cliff College-Alexandria",
+    "state":"PR",
+    "city":"Bayamon"
+  },
+  {
+    "unitid":450304,
+    "name":"Brite Divinity School",
+    "state":"OH",
+    "city":"Cincinnati"
+  },
+  {
+    "unitid":450395,
+    "name":"Brown Aveda Institute-Strongsville",
+    "state":"OH",
+    "city":"Lebanon"
+  },
+  {
+    "unitid":451042,
+    "name":"Branford Academy of Hair and Cosmetology",
+    "state":"AL",
+    "city":"Hoover"
+  },
+  {
+    "unitid":451750,
+    "name":"Bryant & Stratton College-Wauwatosa",
+    "state":"NY",
+    "city":"Staten Island"
+  },
+  {
+    "unitid":454759,
+    "name":"Borner's Barber College",
+    "state":"VT",
+    "city":"Montpelier"
+  },
+  {
+    "unitid":457253,
+    "name":"Beyond 21st Century Beauty Academy",
+    "state":"IN",
+    "city":"Speedway"
+  },
+  {
+    "unitid":457615,
+    "name":"Blackstone Valley Vocational Regional School District",
+    "state":"IN",
+    "city":"Evansville"
+  },
+  {
+    "unitid":460969,
+    "name":"Beauty Academy of South Florida",
+    "state":"CA",
+    "city":"Northridge"
+  },
+  {
+    "unitid":461193,
+    "name":"Bella Capelli Academy",
+    "state":"SC",
+    "city":"Greenville"
+  },
+  {
+    "unitid":461643,
+    "name":"Bergin University of Canine Studies",
+    "state":"MA",
+    "city":"Springfield"
+  },
+  {
+    "unitid":461740,
+    "name":"Buckner Barber School",
+    "state":"NJ",
+    "city":"Turnersville"
+  },
+  {
+    "unitid":461865,
+    "name":"Best Care College",
+    "state":"CA",
+    "city":"Beverly Hills"
+  },
+  {
+    "unitid":475635,
+    "name":"Beverly Hills Design Institute",
+    "state":"OH",
+    "city":"Dayton"
+  },
+  {
+    "unitid":476601,
+    "name":"Bais HaMedrash and Mesivta of Baltimore",
+    "state":"MD",
+    "city":"Laurel"
+  },
+  {
+    "unitid":476610,
+    "name":"Barber & Beauty Institute of New York",
+    "state":"TX",
+    "city":"Grand Prairie"
+  },
+  {
+    "unitid":476717,
+    "name":"Be'er Yaakov Talmudic Seminary",
+    "state":"IL",
+    "city":"Oak Brook"
+  },
+  {
+    "unitid":476850,
+    "name":"Boise Barber College",
+    "state":"MD",
+    "city":"Hunt Valley"
+  },
+  {
+    "unitid":477002,
+    "name":"Brighton Institute of Cosmetology",
+    "state":"CA",
+    "city":"Anaheim"
+  },
+  {
+    "unitid":478953,
+    "name":"Bellus Academy",
+    "state":"LA",
+    "city":"Kenner"
+  },
+  {
+    "unitid":479992,
+    "name":"Brand College",
+    "state":"GA",
+    "city":"Augusta"
+  },
+  {
+    "unitid":480091,
+    "name":"Bryant & Stratton College-Online",
+    "state":"IN",
+    "city":"Kokomo"
+  },
+  {
+    "unitid":481021,
+    "name":"Berks Career & Technology Center",
+    "state":"GA",
+    "city":"Dahlonega"
+  },
+  {
+    "unitid":481456,
+    "name":"Bonnie Joseph Academy of Cosmetology & Barbering",
+    "state":"TN",
+    "city":"Franklin"
+  },
+  {
+    "unitid":481483,
+    "name":"Boca Beauty Academy",
+    "state":"NY",
+    "city":"Hempstead"
+  },
+  {
+    "unitid":481571,
+    "name":"Belle Academy of Cosmetology LLC",
+    "state":"PA",
+    "city":"Lancaster"
+  },
+  {
+    "unitid":483054,
+    "name":"Barber School of Pittsburgh",
+    "state":"WV",
+    "city":"South  Charleston"
+  },
+  {
+    "unitid":483346,
+    "name":"Barber and Beauty Academy of Pennsylvania",
+    "state":"TX",
+    "city":"Houston"
+  },
+  {
+    "unitid":483559,
+    "name":"Bella Cosmetology and Barber College",
+    "state":"CA",
+    "city":"San Diego"
+  },
+  {
+    "unitid":483878,
+    "name":"Bay Area Medical Academy",
+    "state":"LA",
+    "city":"Bossier City"
+  },
+  {
+    "unitid":483948,
+    "name":"Bos-Man's Barber College",
+    "state":"NY",
+    "city":"Manhasset"
+  },
+  {
+    "unitid":484020,
+    "name":"Beyond Measure Barbering Institute",
+    "state":"NY",
+    "city":"Monsey"
+  },
+  {
+    "unitid":484048,
+    "name":"Barber Institute of Texas",
+    "state":"WV",
+    "city":"Delbarton"
+  },
+  {
+    "unitid":484932,
+    "name":"BridgeValley Community & Technical College",
+    "state":"AZ",
+    "city":"Phoenix"
+  },
+  {
+    "unitid":485166,
+    "name":"Beau Monde Academy of Barbering and Cosmetology",
+    "state":"NV",
+    "city":"Las Vegas"
+  },
+  {
+    "unitid":485999,
+    "name":"Bet Medrash Gadol Ateret Torah",
+    "state":"IL",
+    "city":"Elgin"
+  },
+  {
+    "unitid":486053,
+    "name":"Bethlehem College & Seminary",
+    "state":"WA",
+    "city":"Kirkland"
+  },
+  {
+    "unitid":486196,
+    "name":"Beth Medrash Meor Yitzchok",
+    "state":"CA",
+    "city":"Chico"
+  },
+  {
+    "unitid":486284,
+    "name":"Bethany Global University",
+    "state":"OH",
+    "city":"Columbus"
+  },
+  {
+    "unitid":487773,
+    "name":"Butte County Regional Occupational Program",
+    "state":"TX",
+    "city":"McAllen"
+  },
+  {
+    "unitid":487898,
+    "name":"B-Unique Beauty and Barber Academy",
+    "state":"AR",
+    "city":"Jonesboro"
+  },
+  {
+    "unitid":488022,
+    "name":"Barber Tech Academy",
+    "state":"TN",
+    "city":"Nashville"
+  },
+  {
+    "unitid":488314,
+    "name":"Beth Medrash of Asbury Park",
+    "state":"MI",
+    "city":"Kalamazoo"
+  },
+  {
+    "unitid":488554,
+    "name":"Burrell College of Osteopathic Medicine",
+    "state":"LA",
+    "city":"Shreveport"
+  },
+  {
+    "unitid":489238,
+    "name":"Boca Beauty Academy-Parkland",
+    "state":"KY",
+    "city":"Hazard"
+  },
+  {
+    "unitid":490203,
+    "name":"Bolivar Technical College",
+    "state":"CA",
+    "city":"San Diego"
+  },
+  {
+    "unitid":490513,
+    "name":"Bais Medrash Mayan Hatorah",
+    "state":"FL",
+    "city":"Holly Hill"
+  },
+  {
+    "unitid":490948,
+    "name":"Bull City Durham Beauty and Barber College",
+    "state":"FL",
+    "city":"Delray Beach"
+  },
+  {
+    "unitid":491446,
+    "name":"Bnos Zion Of Bobov Seminary",
+    "state":"NJ",
+    "city":"Bloomfield"
+  },
+  {
+    "unitid":491695,
+    "name":"Brown Beauty Barber School",
+    "state":"NY",
+    "city":"Monsey"
+  },
+  {
+    "unitid":493567,
+    "name":"Bellasa Professional Institute",
+    "state":"CA",
+    "city":"Redwood City"
+  },
+  {
+    "unitid":495031,
+    "name":"Bais Medrash of Dexter Park",
+    "state":"CA",
+    "city":"Madera"
+  },
+  {
+    "unitid":496645,
+    "name":"Burlington County Institute of Technology-Adult Education",
+    "state":"WV",
+    "city":"Foster"
+  },
+  {
+    "unitid":496690,
+    "name":"Body Wisdom Massage Therapy School",
+    "state":"AZ",
+    "city":"Phoenix"
+  },
+  {
+    "unitid":496894,
+    "name":"Branford Academy of Hair & Cosmetology-Bridgeport",
+    "state":"AL",
+    "city":"Montgomery"
+  },
+  {
+    "unitid":497356,
+    "name":"Barber Education Academy",
+    "state":"CA",
+    "city":"Alhambra"
+  },
+  {
+    "unitid":497383,
+    "name":"Barbers Trade School",
+    "state":"CA",
+    "city":"Sacramento"
+  },
+  {
+    "unitid":497408,
+    "name":"Bridges Christian College",
+    "state":"WA",
+    "city":"Seattle"
+  },
+  {
+    "unitid":498386,
+    "name":"Boone Career and Technical Center",
+    "state":"FL",
+    "city":"Odessa"
+  },
+  {
+    "unitid":498775,
+    "name":"Beaver Beauty Academy",
+    "state":"IN",
+    "city":"Sellersburg"
+  },
+  {
+    "unitid":499255,
+    "name":"Baltimore Beauty & Barber School II",
+    "state":"LA",
+    "city":"Baton Rouge"
+  },
+  {
+    "unitid":499723,
+    "name":"Barber Tech Academy-Columbia",
+    "state":"MN",
+    "city":"Grand Rapids"
+  }
+]

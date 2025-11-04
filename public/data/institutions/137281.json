@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 137281,
+    "name": "Saint Johns River State College",
+    "city": "Winter Park",
+    "state": "FL",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate/Associate's Colleges: Mixed Baccalaureate/Associate's",
+    "website": "https://www.orangetechcollege.net/campuses/east_campus",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Liberal Arts & Humanities",
+      "Health Professions",
+      "Business, Management & Marketing",
+      "Homeland Security & Law Enforcement"
+    ],
+    "intl_enrollment_pct": 1,
+    "tuition_summary": {
+      "sticker": 2830.0,
+      "in_state": 2830.0,
+      "out_of_state": 10347.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": null,
+      "student_faculty_ratio": 20,
+      "total_enrollment": 7066
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

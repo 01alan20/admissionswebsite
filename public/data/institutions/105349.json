@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 105349,
+    "name": "Northland Pioneer College",
+    "city": "Tucson",
+    "state": "AZ",
+    "control": "Public",
+    "level": "2-year",
+    "carnegie_basic": "Associate's Colleges: High Career & Technical-High Nontraditional",
+    "website": "https://pmi.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Precision Production",
+      "Health Professions",
+      "Personal & Culinary Services",
+      "Liberal Arts & Humanities"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 2428.0,
+      "in_state": 2428.0,
+      "out_of_state": 9851.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 42,
+      "student_faculty_ratio": 11,
+      "total_enrollment": 2825
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

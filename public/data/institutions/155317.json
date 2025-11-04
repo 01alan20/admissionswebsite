@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 155317,
+    "name": "University of Kansas",
+    "city": "Wilmore",
+    "state": "KY",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: Very High Research Activity",
+    "website": "https://www.asbury.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Health Professions",
+      "Engineering",
+      "Education"
+    ],
+    "intl_enrollment_pct": 7,
+    "tuition_summary": {
+      "sticker": 11700.0,
+      "in_state": 11167.0,
+      "out_of_state": 28035.0
+    },
+    "outcomes": {
+      "acceptance_rate": 88,
+      "yield": 31,
+      "grad_rate_6yr": 69,
+      "retention_full_time": 85,
+      "student_faculty_ratio": 17,
+      "total_enrollment": 28406
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Gpa"
+    ],
+    "considered": [
+      "Admission Test Scores"
+    ],
+    "not_considered": [
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Rank",
+      "Secondary School Record",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

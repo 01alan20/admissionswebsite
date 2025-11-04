@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 454786,
+    "name": "Laurus College",
+    "city": "Mesa",
+    "state": "AZ",
+    "control": "Private for-profit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate/Associate's Colleges: Associate's Dominant",
+    "website": "https://pmi.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Computer & Information Sciences",
+      "Health Professions",
+      "Communications Technologies"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": NaN,
+      "in_state": NaN,
+      "out_of_state": NaN
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": 50,
+      "retention_full_time": 92,
+      "student_faculty_ratio": 18,
+      "total_enrollment": 794
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

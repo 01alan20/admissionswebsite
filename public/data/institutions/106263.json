@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 106263,
+    "name": "University of Arkansas for Medical Sciences",
+    "city": "Russellville",
+    "state": "AR",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Four-Year: Research Institutions",
+    "website": "https://www.arkansasbeautycollege.us/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Biological & Biomedical Sciences",
+      "Multidisciplinary Studies",
+      "Public Administration & Social Service"
+    ],
+    "intl_enrollment_pct": 3,
+    "tuition_summary": {
+      "sticker": NaN,
+      "in_state": NaN,
+      "out_of_state": NaN
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": null,
+      "student_faculty_ratio": 15,
+      "total_enrollment": 3275
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

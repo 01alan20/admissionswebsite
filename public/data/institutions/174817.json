@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 174817,
+    "name": "Saint Mary's University of Minnesota",
+    "city": "Meridian",
+    "state": "MS",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral/Professional Universities",
+    "website": "www.meridiancc.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Education",
+      "Business, Management & Marketing",
+      "Health Professions",
+      "Psychology"
+    ],
+    "intl_enrollment_pct": 2,
+    "tuition_summary": {
+      "sticker": 43160.0,
+      "in_state": 41150.0,
+      "out_of_state": 41150.0
+    },
+    "outcomes": {
+      "acceptance_rate": 89,
+      "yield": 23,
+      "grad_rate_6yr": 68,
+      "retention_full_time": 79,
+      "student_faculty_ratio": 18,
+      "total_enrollment": 3831
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Completion Of College Preparatory Program",
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Recommendations"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "Formal Demonstration Of Competencies",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 132879,
+    "name": "Johnson University Florida",
+    "city": "Miami",
+    "state": "FL",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Four-Year: Faith-Related Institutions",
+    "website": "https://www.floridacareercollege.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Theology & Religious Vocations",
+      "Business, Management & Marketing",
+      "Parks, Recreation & Fitness",
+      "Psychology"
+    ],
+    "intl_enrollment_pct": 30,
+    "tuition_summary": {
+      "sticker": 19658.0,
+      "in_state": 18614.0,
+      "out_of_state": 18614.0
+    },
+    "outcomes": {
+      "acceptance_rate": 23,
+      "yield": 33,
+      "grad_rate_6yr": 24,
+      "retention_full_time": 48,
+      "student_faculty_ratio": 10,
+      "total_enrollment": 136
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Secondary School Rank",
+      "Secondary School Record",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

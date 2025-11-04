@@ -1,0 +1,2540 @@
+[
+  {
+    "unitid":100663,
+    "name":"University of Alabama at Birmingham",
+    "state":"AL",
+    "city":"Birmingham"
+  },
+  {
+    "unitid":100706,
+    "name":"University of Alabama in Huntsville",
+    "state":"AL",
+    "city":"Huntsville"
+  },
+  {
+    "unitid":100733,
+    "name":"University of Alabama System Office",
+    "state":"AL",
+    "city":"Tuscaloosa"
+  },
+  {
+    "unitid":101587,
+    "name":"University of West Alabama",
+    "state":"AL",
+    "city":"Andalusia"
+  },
+  {
+    "unitid":101693,
+    "name":"University of Mobile",
+    "state":"AL",
+    "city":"Montevallo"
+  },
+  {
+    "unitid":101709,
+    "name":"University of Montevallo",
+    "state":"AL",
+    "city":"Muscle Shoals"
+  },
+  {
+    "unitid":101879,
+    "name":"University of North Alabama",
+    "state":"AL",
+    "city":"Rainsville"
+  },
+  {
+    "unitid":102094,
+    "name":"University of South Alabama",
+    "state":"AL",
+    "city":"Mobile"
+  },
+  {
+    "unitid":102395,
+    "name":"United States Sports Academy",
+    "state":"AL",
+    "city":"Jasper"
+  },
+  {
+    "unitid":102553,
+    "name":"University of Alaska Anchorage",
+    "state":"AK",
+    "city":"Palmer"
+  },
+  {
+    "unitid":102614,
+    "name":"University of Alaska Fairbanks",
+    "state":"AK",
+    "city":"Juneau"
+  },
+  {
+    "unitid":102632,
+    "name":"University of Alaska Southeast",
+    "state":"AK",
+    "city":"Anchorage"
+  },
+  {
+    "unitid":103529,
+    "name":"University of Alaska System of Higher Education",
+    "state":"AZ",
+    "city":"Phoenix"
+  },
+  {
+    "unitid":104179,
+    "name":"University of Arizona",
+    "state":"AZ",
+    "city":"Lake Havasu City"
+  },
+  {
+    "unitid":105215,
+    "name":"Universal Technical Institute of Arizona Inc-Motorcycle Mechanics Institute Division",
+    "state":"AZ",
+    "city":"Holbrook"
+  },
+  {
+    "unitid":106041,
+    "name":"Universal Technical Institute of Arizona Inc",
+    "state":"AR",
+    "city":"Little Rock"
+  },
+  {
+    "unitid":106245,
+    "name":"University of Arkansas at Little Rock",
+    "state":"AR",
+    "city":"Little Rock"
+  },
+  {
+    "unitid":106263,
+    "name":"University of Arkansas for Medical Sciences",
+    "state":"AR",
+    "city":"Russellville"
+  },
+  {
+    "unitid":106397,
+    "name":"University of Arkansas",
+    "state":"AR",
+    "city":"Jonesboro"
+  },
+  {
+    "unitid":106412,
+    "name":"University of Arkansas at Pine Bluff",
+    "state":"AR",
+    "city":"Russellville"
+  },
+  {
+    "unitid":106485,
+    "name":"University of Arkansas at Monticello",
+    "state":"AR",
+    "city":"Pocahontas"
+  },
+  {
+    "unitid":106704,
+    "name":"University of Central Arkansas",
+    "state":"AR",
+    "city":"Paragould"
+  },
+  {
+    "unitid":106999,
+    "name":"University of Arkansas Community College-Batesville",
+    "state":"AR",
+    "city":"Conway"
+  },
+  {
+    "unitid":107558,
+    "name":"University of the Ozarks",
+    "state":"AR",
+    "city":"Helena"
+  },
+  {
+    "unitid":107585,
+    "name":"University of Arkansas Community College-Morrilton",
+    "state":"AR",
+    "city":"Pine Bluff"
+  },
+  {
+    "unitid":107655,
+    "name":"University of Aesthetics & Cosmetology",
+    "state":"AR",
+    "city":"Mena"
+  },
+  {
+    "unitid":107664,
+    "name":"University of Arkansas-Pulaski Technical College",
+    "state":"AR",
+    "city":"Fayetteville"
+  },
+  {
+    "unitid":107725,
+    "name":"University of Arkansas Hope-Texarkana",
+    "state":"AR",
+    "city":"Searcy"
+  },
+  {
+    "unitid":107743,
+    "name":"University of Arkansas Community College Rich Mountain",
+    "state":"AR",
+    "city":"N Little Rock"
+  },
+  {
+    "unitid":108056,
+    "name":"University of Arkansas System Office",
+    "state":"CA",
+    "city":"Oakland"
+  },
+  {
+    "unitid":108092,
+    "name":"University of Arkansas-Fort Smith",
+    "state":"CA",
+    "city":"Santa Maria"
+  },
+  {
+    "unitid":110398,
+    "name":"University of California College of the Law-San Francisco",
+    "state":"CA",
+    "city":"San Diego"
+  },
+  {
+    "unitid":110635,
+    "name":"University of California-Berkeley",
+    "state":"CA",
+    "city":"La Jolla"
+  },
+  {
+    "unitid":110644,
+    "name":"University of California-Davis",
+    "state":"CA",
+    "city":"San Francisco"
+  },
+  {
+    "unitid":110653,
+    "name":"University of California-Irvine",
+    "state":"CA",
+    "city":"Santa Barbara"
+  },
+  {
+    "unitid":110662,
+    "name":"University of California-Los Angeles",
+    "state":"CA",
+    "city":"Santa Cruz"
+  },
+  {
+    "unitid":110671,
+    "name":"University of California-Riverside",
+    "state":"CA",
+    "city":"Palo Alto"
+  },
+  {
+    "unitid":110680,
+    "name":"University of California-San Diego",
+    "state":"CA",
+    "city":"Modesto"
+  },
+  {
+    "unitid":110699,
+    "name":"University of California-San Francisco",
+    "state":"CA",
+    "city":"Fresno"
+  },
+  {
+    "unitid":110705,
+    "name":"University of California-Santa Barbara",
+    "state":"CA",
+    "city":"Garden Grove"
+  },
+  {
+    "unitid":110714,
+    "name":"University of California-Santa Cruz",
+    "state":"CA",
+    "city":"La Mesa"
+  },
+  {
+    "unitid":112394,
+    "name":"University of Silicon Valley",
+    "state":"CA",
+    "city":"San Pablo"
+  },
+  {
+    "unitid":117140,
+    "name":"University of La Verne",
+    "state":"CA",
+    "city":"El Cajon"
+  },
+  {
+    "unitid":120883,
+    "name":"University of the Pacific",
+    "state":"CA",
+    "city":"Redding"
+  },
+  {
+    "unitid":121691,
+    "name":"University of Redlands",
+    "state":"CA",
+    "city":"San Diego"
+  },
+  {
+    "unitid":122436,
+    "name":"University of San Diego",
+    "state":"CA",
+    "city":"Santa Rosa"
+  },
+  {
+    "unitid":122612,
+    "name":"University of San Francisco",
+    "state":"CA",
+    "city":"Visalia"
+  },
+  {
+    "unitid":123961,
+    "name":"University of Southern California",
+    "state":"CA",
+    "city":"Saratoga"
+  },
+  {
+    "unitid":124557,
+    "name":"University of California-System Administration Central Office",
+    "state":"CA",
+    "city":"Berkeley"
+  },
+  {
+    "unitid":124681,
+    "name":"UEI College-Huntington Park",
+    "state":"CA",
+    "city":"San Diego"
+  },
+  {
+    "unitid":126562,
+    "name":"University of Colorado Denver\/Anschutz Medical Campus",
+    "state":"CO",
+    "city":"Denver"
+  },
+  {
+    "unitid":126580,
+    "name":"University of Colorado Colorado Springs",
+    "state":"CO",
+    "city":"Colorado Springs"
+  },
+  {
+    "unitid":126614,
+    "name":"University of Colorado Boulder",
+    "state":"CO",
+    "city":"Grand Junction"
+  },
+  {
+    "unitid":127060,
+    "name":"University of Denver",
+    "state":"CO",
+    "city":"Aurora"
+  },
+  {
+    "unitid":127741,
+    "name":"University of Northern Colorado",
+    "state":"CT",
+    "city":"Cromwell"
+  },
+  {
+    "unitid":128300,
+    "name":"University of Colorado System Office",
+    "state":"CT",
+    "city":"West Hartford"
+  },
+  {
+    "unitid":128328,
+    "name":"United States Air Force Academy",
+    "state":"CT",
+    "city":"Cromwell"
+  },
+  {
+    "unitid":128744,
+    "name":"University of Bridgeport",
+    "state":"CT",
+    "city":"Norwich"
+  },
+  {
+    "unitid":129020,
+    "name":"University of Connecticut",
+    "state":"CT",
+    "city":"Bridgeport"
+  },
+  {
+    "unitid":129525,
+    "name":"University of Hartford",
+    "state":"CT",
+    "city":"Farmington"
+  },
+  {
+    "unitid":129941,
+    "name":"University of New Haven",
+    "state":"DE",
+    "city":"Wilmington"
+  },
+  {
+    "unitid":130314,
+    "name":"University of Saint Joseph",
+    "state":"DC",
+    "city":"Washington"
+  },
+  {
+    "unitid":130624,
+    "name":"United States Coast Guard Academy",
+    "state":"DC",
+    "city":"Washington"
+  },
+  {
+    "unitid":130943,
+    "name":"University of Delaware",
+    "state":"FL",
+    "city":"Miami"
+  },
+  {
+    "unitid":131399,
+    "name":"University of the District of Columbia",
+    "state":"FL",
+    "city":"Naples"
+  },
+  {
+    "unitid":132903,
+    "name":"University of Central Florida",
+    "state":"FL",
+    "city":"Gainesville"
+  },
+  {
+    "unitid":134130,
+    "name":"University of Florida",
+    "state":"GA",
+    "city":"Lithonia"
+  },
+  {
+    "unitid":135726,
+    "name":"University of Miami",
+    "state":"FL",
+    "city":"Gainesville"
+  },
+  {
+    "unitid":136172,
+    "name":"University of North Florida",
+    "state":"FL",
+    "city":"Miami"
+  },
+  {
+    "unitid":137351,
+    "name":"University of South Florida",
+    "state":"GA",
+    "city":"Tifton"
+  },
+  {
+    "unitid":138354,
+    "name":"University of West Florida",
+    "state":"GA",
+    "city":"Mount Vernon"
+  },
+  {
+    "unitid":139959,
+    "name":"University of Georgia",
+    "state":"GA",
+    "city":"Savannah"
+  },
+  {
+    "unitid":141334,
+    "name":"University of West Georgia",
+    "state":"ID",
+    "city":"Nampa"
+  },
+  {
+    "unitid":141565,
+    "name":"University of Hawaii at Hilo",
+    "state":"ID",
+    "city":"Twin Falls"
+  },
+  {
+    "unitid":141574,
+    "name":"University of Hawaii at Manoa",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":141839,
+    "name":"University of Hawaii Maui College",
+    "state":"IN",
+    "city":"Richmond"
+  },
+  {
+    "unitid":141963,
+    "name":"University of Hawaii System Office",
+    "state":"IL",
+    "city":"Moline"
+  },
+  {
+    "unitid":141981,
+    "name":"University of Hawaii-West Oahu",
+    "state":"IL",
+    "city":"Carlinville"
+  },
+  {
+    "unitid":142285,
+    "name":"University of Idaho",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":144050,
+    "name":"University of Chicago",
+    "state":"IL",
+    "city":"Canton"
+  },
+  {
+    "unitid":145600,
+    "name":"University of Illinois Chicago",
+    "state":"IL",
+    "city":"Romeoville"
+  },
+  {
+    "unitid":145637,
+    "name":"University of Illinois Urbana-Champaign",
+    "state":"IL",
+    "city":"Melrose Park"
+  },
+  {
+    "unitid":148584,
+    "name":"University of St Francis",
+    "state":"IL",
+    "city":"Wheaton"
+  },
+  {
+    "unitid":148654,
+    "name":"University of Illinois Springfield",
+    "state":"IN",
+    "city":"Muncie"
+  },
+  {
+    "unitid":148885,
+    "name":"University of Saint Mary of the Lake",
+    "state":"IN",
+    "city":"Indianapolis"
+  },
+  {
+    "unitid":149550,
+    "name":"University of Spa & Cosmetology Arts",
+    "state":"IN",
+    "city":"Indianapolis"
+  },
+  {
+    "unitid":149587,
+    "name":"University of Illinois System Offices",
+    "state":"IN",
+    "city":"Fort Wayne"
+  },
+  {
+    "unitid":150534,
+    "name":"University of Evansville",
+    "state":"IN",
+    "city":"Indianapolis"
+  },
+  {
+    "unitid":151263,
+    "name":"University of Indianapolis",
+    "state":"IN",
+    "city":"Notre Dame"
+  },
+  {
+    "unitid":151306,
+    "name":"University of Southern Indiana",
+    "state":"IN",
+    "city":"Lafayette"
+  },
+  {
+    "unitid":152080,
+    "name":"University of Notre Dame",
+    "state":"IA",
+    "city":"Des Moines"
+  },
+  {
+    "unitid":152336,
+    "name":"University of Saint Francis-Fort Wayne",
+    "state":"IA",
+    "city":"Lamoni"
+  },
+  {
+    "unitid":153278,
+    "name":"University of Dubuque",
+    "state":"IA",
+    "city":"Des Moines"
+  },
+  {
+    "unitid":153542,
+    "name":"UnityPoint Health-Des Moines School of Radiologic Technology",
+    "state":"IA",
+    "city":"Davenport"
+  },
+  {
+    "unitid":153658,
+    "name":"University of Iowa",
+    "state":"IA",
+    "city":"Sioux City"
+  },
+  {
+    "unitid":154095,
+    "name":"University of Northern Iowa",
+    "state":"KS",
+    "city":"El Dorado"
+  },
+  {
+    "unitid":154493,
+    "name":"Upper Iowa University",
+    "state":"KS",
+    "city":"Hays"
+  },
+  {
+    "unitid":155317,
+    "name":"University of Kansas",
+    "state":"KY",
+    "city":"Wilmore"
+  },
+  {
+    "unitid":155812,
+    "name":"University of Saint Mary",
+    "state":"KY",
+    "city":"Georgetown"
+  },
+  {
+    "unitid":156541,
+    "name":"University of the Cumberlands",
+    "state":"KY",
+    "city":"Paducah"
+  },
+  {
+    "unitid":157085,
+    "name":"University of Kentucky",
+    "state":"LA",
+    "city":"Alexandria"
+  },
+  {
+    "unitid":157289,
+    "name":"University of Louisville",
+    "state":"LA",
+    "city":"Shreveport"
+  },
+  {
+    "unitid":157535,
+    "name":"University of Pikeville",
+    "state":"LA",
+    "city":"Baton Rouge"
+  },
+  {
+    "unitid":157863,
+    "name":"Union College",
+    "state":"LA",
+    "city":"Lake Charles"
+  },
+  {
+    "unitid":159939,
+    "name":"University of New Orleans",
+    "state":"ME",
+    "city":"Lewiston"
+  },
+  {
+    "unitid":159993,
+    "name":"University of Louisiana at Monroe",
+    "state":"ME",
+    "city":"Bangor"
+  },
+  {
+    "unitid":160065,
+    "name":"University of Holy Cross",
+    "state":"ME",
+    "city":"Augusta"
+  },
+  {
+    "unitid":160658,
+    "name":"University of Louisiana at Lafayette",
+    "state":"MD",
+    "city":"Cumberland"
+  },
+  {
+    "unitid":161217,
+    "name":"University of Maine at Augusta",
+    "state":"MD",
+    "city":"Baltimore"
+  },
+  {
+    "unitid":161226,
+    "name":"University of Maine at Farmington",
+    "state":"MD",
+    "city":"Frederick"
+  },
+  {
+    "unitid":161235,
+    "name":"University of Maine at Fort Kent",
+    "state":"MD",
+    "city":"Frostburg"
+  },
+  {
+    "unitid":161253,
+    "name":"University of Maine",
+    "state":"MD",
+    "city":"McHenry"
+  },
+  {
+    "unitid":161280,
+    "name":"University of Maine-System Central Office",
+    "state":"MD",
+    "city":"Baltimore"
+  },
+  {
+    "unitid":161341,
+    "name":"University of Maine at Presque Isle",
+    "state":"MD",
+    "city":"Bel Air"
+  },
+  {
+    "unitid":161457,
+    "name":"University of New England",
+    "state":"MD",
+    "city":"Frederick"
+  },
+  {
+    "unitid":161554,
+    "name":"University of Southern Maine",
+    "state":"MD",
+    "city":"Baltimore"
+  },
+  {
+    "unitid":161572,
+    "name":"Unity Environmental University",
+    "state":"MD",
+    "city":"College Park"
+  },
+  {
+    "unitid":161873,
+    "name":"University of Baltimore",
+    "state":"MD",
+    "city":"Emmitsburg"
+  },
+  {
+    "unitid":163204,
+    "name":"University of Maryland Global Campus",
+    "state":"MA",
+    "city":"Wellesley"
+  },
+  {
+    "unitid":163259,
+    "name":"University of Maryland, Baltimore",
+    "state":"MA",
+    "city":"Worcester"
+  },
+  {
+    "unitid":163268,
+    "name":"University of Maryland-Baltimore County",
+    "state":"MA",
+    "city":"Boston"
+  },
+  {
+    "unitid":163286,
+    "name":"University of Maryland-College Park",
+    "state":"MA",
+    "city":"Longmeadow"
+  },
+  {
+    "unitid":163338,
+    "name":"University of Maryland Eastern Shore",
+    "state":"MA",
+    "city":"Waltham"
+  },
+  {
+    "unitid":164146,
+    "name":"University System of Maryland",
+    "state":"MA",
+    "city":"Milton"
+  },
+  {
+    "unitid":164155,
+    "name":"United States Naval Academy",
+    "state":"MA",
+    "city":"Worcester"
+  },
+  {
+    "unitid":166513,
+    "name":"University of Massachusetts-Lowell",
+    "state":"MA",
+    "city":"Roxbury Crossing"
+  },
+  {
+    "unitid":166629,
+    "name":"University of Massachusetts-Amherst",
+    "state":"MA",
+    "city":"Brighton"
+  },
+  {
+    "unitid":166638,
+    "name":"University of Massachusetts-Boston",
+    "state":"MA",
+    "city":"Salem"
+  },
+  {
+    "unitid":166665,
+    "name":"University of Massachusetts-Central Office",
+    "state":"MA",
+    "city":"Northampton"
+  },
+  {
+    "unitid":166708,
+    "name":"University of Massachusetts Chan Medical School",
+    "state":"MA",
+    "city":"North Dartmouth"
+  },
+  {
+    "unitid":167987,
+    "name":"University of Massachusetts-Dartmouth",
+    "state":"MI",
+    "city":"Detroit"
+  },
+  {
+    "unitid":169716,
+    "name":"University of Detroit Mercy",
+    "state":"MI",
+    "city":"Dearborn"
+  },
+  {
+    "unitid":170976,
+    "name":"University of Michigan-Ann Arbor",
+    "state":"MI",
+    "city":"Ann Arbor"
+  },
+  {
+    "unitid":171137,
+    "name":"University of Michigan-Dearborn",
+    "state":"MI",
+    "city":"Kentwood"
+  },
+  {
+    "unitid":171146,
+    "name":"University of Michigan-Flint",
+    "state":"MI",
+    "city":"Kalamazoo"
+  },
+  {
+    "unitid":174066,
+    "name":"University of Minnesota-Twin Cities",
+    "state":"MN",
+    "city":"St. Paul"
+  },
+  {
+    "unitid":174075,
+    "name":"University of Minnesota-Crookston",
+    "state":"MN",
+    "city":"Minneapolis"
+  },
+  {
+    "unitid":174233,
+    "name":"University of Minnesota-Duluth",
+    "state":"MN",
+    "city":"White Bear Lake"
+  },
+  {
+    "unitid":174251,
+    "name":"University of Minnesota-Morris",
+    "state":"MS",
+    "city":"Alcorn State"
+  },
+  {
+    "unitid":174491,
+    "name":"University of Northwestern-St Paul",
+    "state":"MS",
+    "city":"Decatur"
+  },
+  {
+    "unitid":174914,
+    "name":"University of St Thomas",
+    "state":"MS",
+    "city":"Columbus"
+  },
+  {
+    "unitid":175139,
+    "name":"United Theological Seminary of the Twin Cities",
+    "state":"MS",
+    "city":"Senatobia"
+  },
+  {
+    "unitid":176017,
+    "name":"University of Mississippi",
+    "state":"MO",
+    "city":"Neosho"
+  },
+  {
+    "unitid":176372,
+    "name":"University of Southern Mississippi",
+    "state":"MO",
+    "city":"Independence"
+  },
+  {
+    "unitid":176965,
+    "name":"University of Central Missouri",
+    "state":"MO",
+    "city":"Jefferson City"
+  },
+  {
+    "unitid":178396,
+    "name":"University of Missouri-Columbia",
+    "state":"MO",
+    "city":"Liberty"
+  },
+  {
+    "unitid":178402,
+    "name":"University of Missouri-Kansas City",
+    "state":"MO",
+    "city":"Fulton"
+  },
+  {
+    "unitid":178420,
+    "name":"University of Missouri-St Louis",
+    "state":"MT",
+    "city":"Browning"
+  },
+  {
+    "unitid":178439,
+    "name":"University of Missouri-System Office",
+    "state":"MT",
+    "city":"Butte"
+  },
+  {
+    "unitid":179265,
+    "name":"University of Health Sciences and Pharmacy in St. Louis",
+    "state":"MT",
+    "city":"Bozeman"
+  },
+  {
+    "unitid":180258,
+    "name":"University of Providence",
+    "state":"NE",
+    "city":"Omaha"
+  },
+  {
+    "unitid":181215,
+    "name":"University of Nebraska at Kearney",
+    "state":"NH",
+    "city":"Warner"
+  },
+  {
+    "unitid":181394,
+    "name":"University of Nebraska at Omaha",
+    "state":"NH",
+    "city":"Durham"
+  },
+  {
+    "unitid":181428,
+    "name":"University of Nebraska Medical Center",
+    "state":"NH",
+    "city":"Manchester"
+  },
+  {
+    "unitid":181464,
+    "name":"University of Nebraska-Lincoln",
+    "state":"NH",
+    "city":"Concord"
+  },
+  {
+    "unitid":181738,
+    "name":"Union Adventist University",
+    "state":"NH",
+    "city":"Portsmouth"
+  },
+  {
+    "unitid":181747,
+    "name":"University of Nebraska-Central Administration System Office",
+    "state":"NH",
+    "city":"Portsmouth"
+  },
+  {
+    "unitid":182281,
+    "name":"University of Nevada-Las Vegas",
+    "state":"NJ",
+    "city":"Wayne"
+  },
+  {
+    "unitid":182290,
+    "name":"University of Nevada-Reno",
+    "state":"NJ",
+    "city":"Paramus"
+  },
+  {
+    "unitid":182829,
+    "name":"University of New Hampshire-Franklin Pierce School of Law",
+    "state":"NJ",
+    "city":"Iselin"
+  },
+  {
+    "unitid":183044,
+    "name":"University of New Hampshire-Main Campus",
+    "state":"NJ",
+    "city":"Union"
+  },
+  {
+    "unitid":183071,
+    "name":"University of New Hampshire at Manchester",
+    "state":"NJ",
+    "city":"Lodi"
+  },
+  {
+    "unitid":183257,
+    "name":"University of New Hampshire College of Professional Studies Online",
+    "state":"NJ",
+    "city":"Union"
+  },
+  {
+    "unitid":183327,
+    "name":"University System of New Hampshire System Office",
+    "state":"NJ",
+    "city":"West Windsor"
+  },
+  {
+    "unitid":187198,
+    "name":"UCNJ Union College of Union County, NJ",
+    "state":"NY",
+    "city":"Alfred"
+  },
+  {
+    "unitid":187958,
+    "name":"University of New Mexico-Gallup Campus",
+    "state":"NY",
+    "city":"Long Island City"
+  },
+  {
+    "unitid":187976,
+    "name":"University of New Mexico-Los Alamos Campus",
+    "state":"NY",
+    "city":"Forest Hills"
+  },
+  {
+    "unitid":187985,
+    "name":"University of New Mexico-Main Campus",
+    "state":"NY",
+    "city":"Brooklyn"
+  },
+  {
+    "unitid":188049,
+    "name":"University of New Mexico-Valencia County Campus",
+    "state":"NY",
+    "city":"Bronx"
+  },
+  {
+    "unitid":188182,
+    "name":"University of the Southwest",
+    "state":"NY",
+    "city":"Buffalo"
+  },
+  {
+    "unitid":188225,
+    "name":"University of New Mexico-Taos Campus",
+    "state":"NY",
+    "city":"Nanuet"
+  },
+  {
+    "unitid":193399,
+    "name":"University of Mount Saint Vincent",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":195030,
+    "name":"University of Rochester",
+    "state":"NY",
+    "city":"Fredonia"
+  },
+  {
+    "unitid":196060,
+    "name":"University at Albany",
+    "state":"NY",
+    "city":"Buffalo"
+  },
+  {
+    "unitid":196088,
+    "name":"University at Buffalo",
+    "state":"NY",
+    "city":"Staten Island"
+  },
+  {
+    "unitid":196307,
+    "name":"Upstate Medical University",
+    "state":"NC",
+    "city":"Belmont"
+  },
+  {
+    "unitid":196699,
+    "name":"Ulster County Community College",
+    "state":"NC",
+    "city":"Salisbury"
+  },
+  {
+    "unitid":196866,
+    "name":"Union College",
+    "state":"NC",
+    "city":"Hickory"
+  },
+  {
+    "unitid":196884,
+    "name":"Union Theological Seminary in the City of New York",
+    "state":"NC",
+    "city":"Sanford"
+  },
+  {
+    "unitid":197018,
+    "name":"United Talmudical Seminary",
+    "state":"NC",
+    "city":"Charlotte"
+  },
+  {
+    "unitid":197027,
+    "name":"United States Merchant Marine Academy",
+    "state":"NC",
+    "city":"Murfreesboro"
+  },
+  {
+    "unitid":197036,
+    "name":"United States Military Academy",
+    "state":"NC",
+    "city":"Shelby"
+  },
+  {
+    "unitid":197045,
+    "name":"Utica University",
+    "state":"NC",
+    "city":"Jacksonville"
+  },
+  {
+    "unitid":199069,
+    "name":"University of Mount Olive",
+    "state":"NC",
+    "city":"Henderson"
+  },
+  {
+    "unitid":199111,
+    "name":"University of North Carolina Asheville",
+    "state":"NC",
+    "city":"Durham"
+  },
+  {
+    "unitid":199120,
+    "name":"University of North Carolina at Chapel Hill",
+    "state":"NC",
+    "city":"Goldsboro"
+  },
+  {
+    "unitid":199139,
+    "name":"University of North Carolina at Charlotte",
+    "state":"NC",
+    "city":"Morganton"
+  },
+  {
+    "unitid":199148,
+    "name":"University of North Carolina at Greensboro",
+    "state":"NC",
+    "city":"Wilkesboro"
+  },
+  {
+    "unitid":199175,
+    "name":"University of North Carolina System",
+    "state":"NC",
+    "city":"Wingate"
+  },
+  {
+    "unitid":199184,
+    "name":"University of North Carolina School of the Arts",
+    "state":"NC",
+    "city":"Winston Salem"
+  },
+  {
+    "unitid":199218,
+    "name":"University of North Carolina Wilmington",
+    "state":"NC",
+    "city":"Cullowhee"
+  },
+  {
+    "unitid":199281,
+    "name":"University of North Carolina at Pembroke",
+    "state":"ND",
+    "city":"Dickinson"
+  },
+  {
+    "unitid":200156,
+    "name":"University of Jamestown",
+    "state":"OH",
+    "city":"Newark"
+  },
+  {
+    "unitid":200217,
+    "name":"University of Mary",
+    "state":"OH",
+    "city":"Saint Martin"
+  },
+  {
+    "unitid":200280,
+    "name":"University of North Dakota",
+    "state":"OH",
+    "city":"Cincinnati"
+  },
+  {
+    "unitid":200554,
+    "name":"United Tribes Technical College",
+    "state":"OH",
+    "city":"Cleveland"
+  },
+  {
+    "unitid":200800,
+    "name":"University of Akron Main Campus",
+    "state":"OH",
+    "city":"Cleveland"
+  },
+  {
+    "unitid":200846,
+    "name":"University of Akron Wayne College",
+    "state":"OH",
+    "city":"Toledo"
+  },
+  {
+    "unitid":201885,
+    "name":"University of Cincinnati-Main Campus",
+    "state":"OH",
+    "city":"Warren"
+  },
+  {
+    "unitid":201946,
+    "name":"University of Cincinnati-Clermont College",
+    "state":"OH",
+    "city":"Salem"
+  },
+  {
+    "unitid":201955,
+    "name":"University of Cincinnati-Blue Ash College",
+    "state":"OH",
+    "city":"Kent"
+  },
+  {
+    "unitid":202480,
+    "name":"University of Dayton",
+    "state":"OH",
+    "city":"Canton"
+  },
+  {
+    "unitid":204185,
+    "name":"University of Mount Union",
+    "state":"OH",
+    "city":"Maumee"
+  },
+  {
+    "unitid":204486,
+    "name":"University of Northwestern Ohio",
+    "state":"OH",
+    "city":"Steubenville"
+  },
+  {
+    "unitid":205203,
+    "name":"University of Rio Grande",
+    "state":"OK",
+    "city":"Wilburton"
+  },
+  {
+    "unitid":206084,
+    "name":"University of Toledo",
+    "state":"OK",
+    "city":"Tulsa"
+  },
+  {
+    "unitid":206279,
+    "name":"Union Institute & University",
+    "state":"OK",
+    "city":"Stillwater"
+  },
+  {
+    "unitid":206288,
+    "name":"United Theological Seminary",
+    "state":"OK",
+    "city":"Oklahoma City"
+  },
+  {
+    "unitid":206321,
+    "name":"Upper Valley Career Center",
+    "state":"OK",
+    "city":"Shawnee"
+  },
+  {
+    "unitid":206349,
+    "name":"Ursuline College",
+    "state":"OK",
+    "city":"Oklahoma City"
+  },
+  {
+    "unitid":206941,
+    "name":"University of Central Oklahoma",
+    "state":"OR",
+    "city":"Pendleton"
+  },
+  {
+    "unitid":207342,
+    "name":"University of Oklahoma-Health Sciences Center",
+    "state":"OR",
+    "city":"Beaverton"
+  },
+  {
+    "unitid":207500,
+    "name":"University of Oklahoma-Norman Campus",
+    "state":"OR",
+    "city":"Eugene"
+  },
+  {
+    "unitid":207722,
+    "name":"University of Science and Arts of Oklahoma",
+    "state":"OR",
+    "city":"Forest Grove"
+  },
+  {
+    "unitid":207971,
+    "name":"University of Tulsa",
+    "state":"OR",
+    "city":"Portland"
+  },
+  {
+    "unitid":209551,
+    "name":"University of Oregon",
+    "state":"PA",
+    "city":"Newtown"
+  },
+  {
+    "unitid":209825,
+    "name":"University of Portland",
+    "state":"PA",
+    "city":"Philadelphia"
+  },
+  {
+    "unitid":210270,
+    "name":"Umpqua Community College",
+    "state":"PA",
+    "city":"Doylestown"
+  },
+  {
+    "unitid":210438,
+    "name":"University of Western States",
+    "state":"PA",
+    "city":"Saint Davids"
+  },
+  {
+    "unitid":213163,
+    "name":"UPMC Jameson School of Nursing",
+    "state":"PA",
+    "city":"Aston"
+  },
+  {
+    "unitid":213622,
+    "name":"UPMC St. Margaret School of Nursing",
+    "state":"PA",
+    "city":"Mont Alto"
+  },
+  {
+    "unitid":213631,
+    "name":"United Lutheran Seminary",
+    "state":"PA",
+    "city":"Abington"
+  },
+  {
+    "unitid":215062,
+    "name":"University of Pennsylvania",
+    "state":"PA",
+    "city":"Swarthmore"
+  },
+  {
+    "unitid":215105,
+    "name":"University of the Arts",
+    "state":"PA",
+    "city":"Lancaster"
+  },
+  {
+    "unitid":215266,
+    "name":"University of Pittsburgh-Bradford",
+    "state":"PA",
+    "city":"Greenville"
+  },
+  {
+    "unitid":215275,
+    "name":"University of Pittsburgh-Greensburg",
+    "state":"PA",
+    "city":"Philadelphia"
+  },
+  {
+    "unitid":215284,
+    "name":"University of Pittsburgh-Johnstown",
+    "state":"PA",
+    "city":"Pittsburgh"
+  },
+  {
+    "unitid":215293,
+    "name":"University of Pittsburgh-Pittsburgh Campus",
+    "state":"PA",
+    "city":"Greensburg"
+  },
+  {
+    "unitid":215309,
+    "name":"University of Pittsburgh-Titusville",
+    "state":"PA",
+    "city":"Falls Creek"
+  },
+  {
+    "unitid":215929,
+    "name":"University of Scranton",
+    "state":"PA",
+    "city":"York"
+  },
+  {
+    "unitid":215974,
+    "name":"UPMC Shadyside School of Nursing",
+    "state":"RI",
+    "city":"Providence"
+  },
+  {
+    "unitid":216524,
+    "name":"Ursinus College",
+    "state":"SC",
+    "city":"Charleston"
+  },
+  {
+    "unitid":216542,
+    "name":"University of Valley Forge",
+    "state":"SC",
+    "city":"Charleston"
+  },
+  {
+    "unitid":217484,
+    "name":"University of Rhode Island",
+    "state":"SC",
+    "city":"Greenwood"
+  },
+  {
+    "unitid":218645,
+    "name":"University of South Carolina Aiken",
+    "state":"SD",
+    "city":"Sioux Falls"
+  },
+  {
+    "unitid":218654,
+    "name":"University of South Carolina Beaufort",
+    "state":"SD",
+    "city":"Sioux Falls"
+  },
+  {
+    "unitid":218663,
+    "name":"University of South Carolina-Columbia",
+    "state":"SD",
+    "city":"Vermillion"
+  },
+  {
+    "unitid":218672,
+    "name":"University of South Carolina-Lancaster",
+    "state":"SD",
+    "city":"Rapid City"
+  },
+  {
+    "unitid":218681,
+    "name":"University of South Carolina-Salkehatchie",
+    "state":"TN",
+    "city":"Nashville"
+  },
+  {
+    "unitid":218690,
+    "name":"University of South Carolina-Sumter",
+    "state":"TN",
+    "city":"Milan"
+  },
+  {
+    "unitid":218706,
+    "name":"University of South Carolina-Union",
+    "state":"TN",
+    "city":"Athens"
+  },
+  {
+    "unitid":218742,
+    "name":"University of South Carolina-Upstate",
+    "state":"TN",
+    "city":"Nashville"
+  },
+  {
+    "unitid":219383,
+    "name":"University of Sioux Falls",
+    "state":"TN",
+    "city":"Murfreesboro"
+  },
+  {
+    "unitid":219471,
+    "name":"University of South Dakota",
+    "state":"TN",
+    "city":"Cleveland"
+  },
+  {
+    "unitid":220862,
+    "name":"University of Memphis",
+    "state":"TX",
+    "city":"Alvin"
+  },
+  {
+    "unitid":221971,
+    "name":"Union University",
+    "state":"TX",
+    "city":"Texarkana"
+  },
+  {
+    "unitid":224323,
+    "name":"University of Dallas",
+    "state":"TX",
+    "city":"Lubbock"
+  },
+  {
+    "unitid":225414,
+    "name":"University of Houston-Clear Lake",
+    "state":"TX",
+    "city":"Edinburg"
+  },
+  {
+    "unitid":225432,
+    "name":"University of Houston-Downtown",
+    "state":"TX",
+    "city":"Carthage"
+  },
+  {
+    "unitid":225502,
+    "name":"University of Houston-Victoria",
+    "state":"TX",
+    "city":"Paris"
+  },
+  {
+    "unitid":225511,
+    "name":"University of Houston",
+    "state":"TX",
+    "city":"Dallas"
+  },
+  {
+    "unitid":225627,
+    "name":"University of the Incarnate Word",
+    "state":"TX",
+    "city":"Houston"
+  },
+  {
+    "unitid":226471,
+    "name":"University of Mary Hardin-Baylor",
+    "state":"TX",
+    "city":"San Antonio"
+  },
+  {
+    "unitid":227216,
+    "name":"University of North Texas",
+    "state":"TX",
+    "city":"Dallas"
+  },
+  {
+    "unitid":227863,
+    "name":"University of St Thomas",
+    "state":"TX",
+    "city":"Lubbock"
+  },
+  {
+    "unitid":228635,
+    "name":"University of Texas Southwestern Medical Center",
+    "state":"UT",
+    "city":"Saint George"
+  },
+  {
+    "unitid":228909,
+    "name":"University of North Texas Health Science Center",
+    "state":"UT",
+    "city":"Salt Lake City"
+  },
+  {
+    "unitid":229407,
+    "name":"University of Houston-System Administration",
+    "state":"VT",
+    "city":"South Royalton"
+  },
+  {
+    "unitid":229416,
+    "name":"Universal Technical Institute of Texas Inc.",
+    "state":"VT",
+    "city":"Randolph"
+  },
+  {
+    "unitid":229425,
+    "name":"UCAS University of Cosmetology Arts & Sciences-McAllen",
+    "state":"VT",
+    "city":"Burlington"
+  },
+  {
+    "unitid":230171,
+    "name":"Utah Tech University",
+    "state":"VA",
+    "city":"Emory"
+  },
+  {
+    "unitid":230676,
+    "name":"Uintah Basin Technical College",
+    "state":"VA",
+    "city":"Richmond"
+  },
+  {
+    "unitid":230728,
+    "name":"Utah State University",
+    "state":"VA",
+    "city":"Harrisonburg"
+  },
+  {
+    "unitid":230737,
+    "name":"Utah Valley University",
+    "state":"VA",
+    "city":"Chester"
+  },
+  {
+    "unitid":230764,
+    "name":"University of Utah",
+    "state":"VA",
+    "city":"Farmville"
+  },
+  {
+    "unitid":231174,
+    "name":"University of Vermont",
+    "state":"VA",
+    "city":"Colonial Heights"
+  },
+  {
+    "unitid":232609,
+    "name":"University of Lynchburg",
+    "state":"VA",
+    "city":"Hampton"
+  },
+  {
+    "unitid":232681,
+    "name":"University of Mary Washington",
+    "state":"VA",
+    "city":"Richmond"
+  },
+  {
+    "unitid":233374,
+    "name":"University of Richmond",
+    "state":"WA",
+    "city":"Aberdeen"
+  },
+  {
+    "unitid":233842,
+    "name":"Union Presbyterian Seminary",
+    "state":"WA",
+    "city":"Bremerton"
+  },
+  {
+    "unitid":233897,
+    "name":"University of Virginia's College at Wise",
+    "state":"WA",
+    "city":"Yakima"
+  },
+  {
+    "unitid":234076,
+    "name":"University of Virginia-Main Campus",
+    "state":"WA",
+    "city":"Lacey"
+  },
+  {
+    "unitid":236328,
+    "name":"University of Puget Sound",
+    "state":"WV",
+    "city":"Keyser"
+  },
+  {
+    "unitid":236948,
+    "name":"University of Washington-Seattle Campus",
+    "state":"WV",
+    "city":"Wheeling"
+  },
+  {
+    "unitid":237312,
+    "name":"University of Charleston",
+    "state":"WI",
+    "city":"Plymouth"
+  },
+  {
+    "unitid":240189,
+    "name":"University of Wisconsin-Whitewater",
+    "state":"PR",
+    "city":"San Juan"
+  },
+  {
+    "unitid":240268,
+    "name":"University of Wisconsin-Eau Claire",
+    "state":"PR",
+    "city":"Mayaguez"
+  },
+  {
+    "unitid":240277,
+    "name":"University of Wisconsin-Green Bay",
+    "state":"PR",
+    "city":"San Juan"
+  },
+  {
+    "unitid":240329,
+    "name":"University of Wisconsin-La Crosse",
+    "state":"PR",
+    "city":"Manati"
+  },
+  {
+    "unitid":240365,
+    "name":"University of Wisconsin-Oshkosh",
+    "state":"PR",
+    "city":"Humacao"
+  },
+  {
+    "unitid":240374,
+    "name":"University of Wisconsin-Parkside",
+    "state":"PR",
+    "city":"Arecibo"
+  },
+  {
+    "unitid":240417,
+    "name":"University of Wisconsin-Stout",
+    "state":"PR",
+    "city":"Guayama"
+  },
+  {
+    "unitid":240426,
+    "name":"University of Wisconsin-Superior",
+    "state":"PR",
+    "city":"San Juan"
+  },
+  {
+    "unitid":240435,
+    "name":"University of Wisconsin-System Administration",
+    "state":"PR",
+    "city":"San German"
+  },
+  {
+    "unitid":240444,
+    "name":"University of Wisconsin-Madison",
+    "state":"PR",
+    "city":"Aguadilla"
+  },
+  {
+    "unitid":240453,
+    "name":"University of Wisconsin-Milwaukee",
+    "state":"PR",
+    "city":"Arecibo"
+  },
+  {
+    "unitid":240462,
+    "name":"University of Wisconsin-Platteville",
+    "state":"PR",
+    "city":"Barranquitas"
+  },
+  {
+    "unitid":240471,
+    "name":"University of Wisconsin-River Falls",
+    "state":"PR",
+    "city":"San Juan"
+  },
+  {
+    "unitid":240480,
+    "name":"University of Wisconsin-Stevens Point",
+    "state":"PR",
+    "city":"Mercedita"
+  },
+  {
+    "unitid":240727,
+    "name":"University of Wyoming",
+    "state":"PR",
+    "city":"Aguadilla"
+  },
+  {
+    "unitid":240754,
+    "name":"University of Guam",
+    "state":"PR",
+    "city":"Carolina"
+  },
+  {
+    "unitid":241191,
+    "name":"Universidad Adventista de las Antillas",
+    "state":"PR",
+    "city":"San Juan"
+  },
+  {
+    "unitid":241225,
+    "name":"Universidad Central de Bayamon",
+    "state":"PR",
+    "city":"Santurce"
+  },
+  {
+    "unitid":241614,
+    "name":"Universidad Teologica del Caribe",
+    "state":"VI",
+    "city":"Charlotte Amalie"
+  },
+  {
+    "unitid":241739,
+    "name":"Universidad Ana G. Mendez-Cupey Campus",
+    "state":"IN",
+    "city":"West Lafayette"
+  },
+  {
+    "unitid":243106,
+    "name":"University of Puerto Rico-Aguadilla",
+    "state":"TX",
+    "city":"Round Rock"
+  },
+  {
+    "unitid":243115,
+    "name":"University of Puerto Rico-Arecibo",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":243133,
+    "name":"University of Puerto Rico-Bayamon",
+    "state":"GA",
+    "city":"Athens"
+  },
+  {
+    "unitid":243142,
+    "name":"University of Puerto Rico-Carolina",
+    "state":"AZ",
+    "city":"Phoenix"
+  },
+  {
+    "unitid":243151,
+    "name":"University of Puerto Rico at Cayey",
+    "state":"CA",
+    "city":"San Leandro"
+  },
+  {
+    "unitid":243160,
+    "name":"University of Puerto Rico-Central Administration",
+    "state":"ID",
+    "city":"Lewiston"
+  },
+  {
+    "unitid":243179,
+    "name":"University of Puerto Rico-Humacao",
+    "state":"ID",
+    "city":"Nampa"
+  },
+  {
+    "unitid":243188,
+    "name":"University of Puerto Rico-Utuado",
+    "state":"KY",
+    "city":"Florence"
+  },
+  {
+    "unitid":243197,
+    "name":"University of Puerto Rico-Mayaguez",
+    "state":"MI",
+    "city":"Wayne"
+  },
+  {
+    "unitid":243203,
+    "name":"University of Puerto Rico-Medical Sciences",
+    "state":"MI",
+    "city":"Detroit"
+  },
+  {
+    "unitid":243212,
+    "name":"University of Puerto Rico at Ponce",
+    "state":"MI",
+    "city":"Saginaw"
+  },
+  {
+    "unitid":243221,
+    "name":"University of Puerto Rico-Rio Piedras",
+    "state":"NJ",
+    "city":"Newton"
+  },
+  {
+    "unitid":243346,
+    "name":"Universidad Ana G. Mendez-Carolina Campus",
+    "state":"VT",
+    "city":"Putney"
+  },
+  {
+    "unitid":243443,
+    "name":"Universidad del Sagrado Corazon",
+    "state":"MI",
+    "city":"Oak Park"
+  },
+  {
+    "unitid":243568,
+    "name":"Universidad Central Del Caribe",
+    "state":"KY",
+    "city":"Owensboro"
+  },
+  {
+    "unitid":243577,
+    "name":"Universidad Politecnica de Puerto Rico",
+    "state":"KY",
+    "city":"Whitesburg"
+  },
+  {
+    "unitid":243601,
+    "name":"Universidad Ana G. Mendez-Gurabo Campus",
+    "state":"OK",
+    "city":"Norman"
+  },
+  {
+    "unitid":243665,
+    "name":"University of the Virgin Islands",
+    "state":"TN",
+    "city":"Knoxville"
+  },
+  {
+    "unitid":246415,
+    "name":"UCAS University of Cosmetology Arts & Sciences-San Antonio 410",
+    "state":"MO",
+    "city":"Cottleville"
+  },
+  {
+    "unitid":247083,
+    "name":"University of Louisiana-System Administration",
+    "state":"MA",
+    "city":"Medford"
+  },
+  {
+    "unitid":262086,
+    "name":"University of Massachusetts Global",
+    "state":"AL",
+    "city":"Mobile"
+  },
+  {
+    "unitid":363934,
+    "name":"University of Advancing Technology",
+    "state":"CA",
+    "city":"San Marcos"
+  },
+  {
+    "unitid":366191,
+    "name":"Universal Technical Institute of Illinois Inc",
+    "state":"AL",
+    "city":"Mobile"
+  },
+  {
+    "unitid":367954,
+    "name":"University of St. Augustine for Health Sciences",
+    "state":"OH",
+    "city":"Mansfield"
+  },
+  {
+    "unitid":369400,
+    "name":"Universal Technical Institute-Auto Motorcycle & Marine Mechanics Institute Division-Orlando",
+    "state":"SC",
+    "city":"Greenville"
+  },
+  {
+    "unitid":372240,
+    "name":"Universal College of Beauty Inc-Los Angeles 2",
+    "state":"WV",
+    "city":"Martinsburg"
+  },
+  {
+    "unitid":373711,
+    "name":"Upper Cape Cod Regional Technical School",
+    "state":"MI",
+    "city":"Brimley"
+  },
+  {
+    "unitid":376385,
+    "name":"Universal Technology College of Puerto Rico",
+    "state":"NJ",
+    "city":"North Plainfield"
+  },
+  {
+    "unitid":377193,
+    "name":"UCAS University of Cosmetology Arts & Sciences",
+    "state":"NY",
+    "city":"Angola"
+  },
+  {
+    "unitid":377555,
+    "name":"University of Washington-Bothell Campus",
+    "state":"DC",
+    "city":"Washington"
+  },
+  {
+    "unitid":377564,
+    "name":"University of Washington-Tacoma Campus",
+    "state":"NJ",
+    "city":"Edison"
+  },
+  {
+    "unitid":384236,
+    "name":"UEI College-Ontario",
+    "state":"FL",
+    "city":"Saint Petersburg"
+  },
+  {
+    "unitid":384245,
+    "name":"UEI College-Reseda",
+    "state":"TX",
+    "city":"San Antonio"
+  },
+  {
+    "unitid":384412,
+    "name":"University of the Potomac-Washington DC Campus",
+    "state":"UT",
+    "city":"Millcreek City"
+  },
+  {
+    "unitid":393649,
+    "name":"UEI College-Gardena",
+    "state":"PA",
+    "city":"Erie"
+  },
+  {
+    "unitid":397942,
+    "name":"UEI College-Fresno",
+    "state":"OH",
+    "city":"Lebanon"
+  },
+  {
+    "unitid":404480,
+    "name":"University System of Maryland-Research Centers",
+    "state":"OH",
+    "city":"Euclid"
+  },
+  {
+    "unitid":407683,
+    "name":"UCAS University of Cosmetology Arts & Sciences-Harlingen",
+    "state":"CT",
+    "city":"Hartford"
+  },
+  {
+    "unitid":413893,
+    "name":"United Education Institute-Morrow",
+    "state":"OH",
+    "city":"Norwood"
+  },
+  {
+    "unitid":417831,
+    "name":"Union County Vocational Technical School",
+    "state":"PA",
+    "city":"Meadville"
+  },
+  {
+    "unitid":419031,
+    "name":"United Technical Center",
+    "state":"VA",
+    "city":"Norfolk"
+  },
+  {
+    "unitid":420042,
+    "name":"University of Phoenix-Hawaii",
+    "state":"NJ",
+    "city":"West  Atlantic City"
+  },
+  {
+    "unitid":429128,
+    "name":"Urban College of Boston",
+    "state":"AK",
+    "city":"Barrow"
+  },
+  {
+    "unitid":431600,
+    "name":"UPMC Mercy School of Nursing",
+    "state":"TX",
+    "city":"Weslaco"
+  },
+  {
+    "unitid":436818,
+    "name":"University of Connecticut-Waterbury Campus",
+    "state":"ID",
+    "city":"Moscow"
+  },
+  {
+    "unitid":436827,
+    "name":"University of Connecticut-Avery Point",
+    "state":"AR",
+    "city":"Newport"
+  },
+  {
+    "unitid":436836,
+    "name":"University of Connecticut-Stamford",
+    "state":"PR",
+    "city":"Manati"
+  },
+  {
+    "unitid":437097,
+    "name":"University of Management and Technology",
+    "state":"NY",
+    "city":"Liverpool"
+  },
+  {
+    "unitid":438504,
+    "name":"Universal Technical Institute of California Inc",
+    "state":"CA",
+    "city":"Paso Robles"
+  },
+  {
+    "unitid":440004,
+    "name":"Upper Valley Educators Institute",
+    "state":"MO",
+    "city":"Fenton"
+  },
+  {
+    "unitid":441371,
+    "name":"Ultimate Medical Academy",
+    "state":"FL",
+    "city":"Miami"
+  },
+  {
+    "unitid":441690,
+    "name":"Universidad Pentecostal Mizpa",
+    "state":"TN",
+    "city":"Chattanooga"
+  },
+  {
+    "unitid":442569,
+    "name":"University of Arkansas Grantham",
+    "state":"CA",
+    "city":"El Cajon"
+  },
+  {
+    "unitid":442639,
+    "name":"University of the Potomac-VA Campus",
+    "state":"FL",
+    "city":"West  Palm Beach"
+  },
+  {
+    "unitid":442930,
+    "name":"University of Antelope Valley",
+    "state":"TX",
+    "city":"Austin"
+  },
+  {
+    "unitid":443711,
+    "name":"University of North Texas System",
+    "state":"NV",
+    "city":"Henderson"
+  },
+  {
+    "unitid":444945,
+    "name":"Unitech Training Academy-Lafayette",
+    "state":"CA",
+    "city":"Salida"
+  },
+  {
+    "unitid":445188,
+    "name":"University of California-Merced",
+    "state":"TX",
+    "city":"Houston"
+  },
+  {
+    "unitid":445799,
+    "name":"Universal Technical Institute of Pennsylvania Inc",
+    "state":"FL",
+    "city":"Tallahassee"
+  },
+  {
+    "unitid":446598,
+    "name":"Universal College of Healing Arts",
+    "state":"FL",
+    "city":"Tampa"
+  },
+  {
+    "unitid":446604,
+    "name":"Uta Mesivta of Kiryas Joel",
+    "state":"WA",
+    "city":"Renton"
+  },
+  {
+    "unitid":447050,
+    "name":"United States University",
+    "state":"NY",
+    "city":"Whitestone"
+  },
+  {
+    "unitid":447467,
+    "name":"Unitech Training Academy-West Monroe",
+    "state":"CT",
+    "city":"Wallingford"
+  },
+  {
+    "unitid":447607,
+    "name":"UEI College-Chula Vista",
+    "state":"FL",
+    "city":"Lake Park"
+  },
+  {
+    "unitid":447616,
+    "name":"UEI College-West Covina",
+    "state":"FL",
+    "city":"Miami"
+  },
+  {
+    "unitid":447801,
+    "name":"University of East-West Medicine",
+    "state":"TN",
+    "city":"Memphis"
+  },
+  {
+    "unitid":448433,
+    "name":"Universal Technical Institute of Northern California Inc",
+    "state":"VA",
+    "city":"Richmond"
+  },
+  {
+    "unitid":448646,
+    "name":"Unitech Training Academy-Houma",
+    "state":"NH",
+    "city":"Hooksett"
+  },
+  {
+    "unitid":449870,
+    "name":"University of the West",
+    "state":"UT",
+    "city":"Provo"
+  },
+  {
+    "unitid":454953,
+    "name":"University of Aesthetics & Cosmetology",
+    "state":"PA",
+    "city":"Scranton"
+  },
+  {
+    "unitid":455099,
+    "name":"Urshan Graduate School of Theology",
+    "state":"MN",
+    "city":"Rochester"
+  },
+  {
+    "unitid":456171,
+    "name":"Urbana Theological Seminary",
+    "state":"NY",
+    "city":"Tonawanda"
+  },
+  {
+    "unitid":456959,
+    "name":"University of Minnesota-Rochester",
+    "state":"WI",
+    "city":"Onalaska"
+  },
+  {
+    "unitid":457402,
+    "name":"University of Fort Lauderdale",
+    "state":"NC",
+    "city":"Charlotte"
+  },
+  {
+    "unitid":459204,
+    "name":"Unitek College",
+    "state":"NC",
+    "city":"Fayetteville"
+  },
+  {
+    "unitid":459374,
+    "name":"Universal Spa Training Academy",
+    "state":"CA",
+    "city":"Glendale"
+  },
+  {
+    "unitid":460543,
+    "name":"Universal Technical Institute-Dallas Fort Worth",
+    "state":"MI",
+    "city":"Southfield"
+  },
+  {
+    "unitid":461810,
+    "name":"United Beauty College",
+    "state":"FL",
+    "city":"Fort Myers"
+  },
+  {
+    "unitid":463056,
+    "name":"University of Connecticut-Hartford Campus",
+    "state":"NY",
+    "city":"Hempstead"
+  },
+  {
+    "unitid":468848,
+    "name":"UEI College-Oceanside",
+    "state":"NV",
+    "city":"Reno"
+  },
+  {
+    "unitid":468909,
+    "name":"UEI College-Garden Grove",
+    "state":"ID",
+    "city":"Idaho Falls"
+  },
+  {
+    "unitid":469911,
+    "name":"Unitech Training Academy-Alexandria",
+    "state":"FL",
+    "city":"Miami"
+  },
+  {
+    "unitid":470038,
+    "name":"UEI College-Riverside",
+    "state":"ID",
+    "city":"Jerome"
+  },
+  {
+    "unitid":475662,
+    "name":"UCAS University of Cosmetology Arts & Sciences-La Joya",
+    "state":"KY",
+    "city":"Bowling Green"
+  },
+  {
+    "unitid":476799,
+    "name":"Unitek College",
+    "state":"GA",
+    "city":"Tucker"
+  },
+  {
+    "unitid":476805,
+    "name":"University Academy of Hair Design",
+    "state":"GA",
+    "city":"Macon"
+  },
+  {
+    "unitid":479424,
+    "name":"Unitek College",
+    "state":"FL",
+    "city":"Boca Raton"
+  },
+  {
+    "unitid":480471,
+    "name":"UEI College-Stockton",
+    "state":"GA",
+    "city":"Augusta"
+  },
+  {
+    "unitid":481182,
+    "name":"Ukiah Adult School",
+    "state":"NJ",
+    "city":"South Plainfield"
+  },
+  {
+    "unitid":481252,
+    "name":"Ultrasound Medical Institute",
+    "state":"IL",
+    "city":"Calumet City"
+  },
+  {
+    "unitid":481429,
+    "name":"Universal Training Institute",
+    "state":"MI",
+    "city":"Detroit"
+  },
+  {
+    "unitid":482291,
+    "name":"UEI College-Bakersfield",
+    "state":"MI",
+    "city":"Farmington Hills"
+  },
+  {
+    "unitid":482680,
+    "name":"University of North Georgia",
+    "state":"TX",
+    "city":"Stafford"
+  },
+  {
+    "unitid":484473,
+    "name":"University of Florida-Online",
+    "state":"TN",
+    "city":"Memphis"
+  },
+  {
+    "unitid":484613,
+    "name":"University of Phoenix-Arizona",
+    "state":"OK",
+    "city":"Tulsa"
+  },
+  {
+    "unitid":484631,
+    "name":"University of Phoenix-California",
+    "state":"PR",
+    "city":"Caguas"
+  },
+  {
+    "unitid":484710,
+    "name":"University of Phoenix-Nevada",
+    "state":"AR",
+    "city":"Rogers"
+  },
+  {
+    "unitid":484756,
+    "name":"University of Phoenix-Texas",
+    "state":"GA",
+    "city":"Atlanta"
+  },
+  {
+    "unitid":484862,
+    "name":"University of West Los Angeles",
+    "state":"TN",
+    "city":"Knoxville"
+  },
+  {
+    "unitid":484905,
+    "name":"University of North Texas at Dallas",
+    "state":"TX",
+    "city":"Houston"
+  },
+  {
+    "unitid":485573,
+    "name":"Universal Healthcare Careers College",
+    "state":"FL",
+    "city":"West Palm Beach"
+  },
+  {
+    "unitid":486354,
+    "name":"United International College",
+    "state":"SC",
+    "city":"Greenville"
+  },
+  {
+    "unitid":487047,
+    "name":"Unitech Training Academy-New Orleans",
+    "state":"IN",
+    "city":"Indianapolis"
+  },
+  {
+    "unitid":487481,
+    "name":"UEI College-Phoenix",
+    "state":"OH",
+    "city":"Elyria"
+  },
+  {
+    "unitid":487597,
+    "name":"Universal Technical Institute-Southern California",
+    "state":"WI",
+    "city":"Appleton"
+  },
+  {
+    "unitid":488785,
+    "name":"University of Saint Katherine",
+    "state":"TX",
+    "city":"Arlington"
+  },
+  {
+    "unitid":488837,
+    "name":"U.S. Truck Driver Training School",
+    "state":"ME",
+    "city":"Rockport"
+  },
+  {
+    "unitid":488846,
+    "name":"University of the People",
+    "state":"IN",
+    "city":"Hammond"
+  },
+  {
+    "unitid":491084,
+    "name":"Unitech Training Academy-Baton Rouge",
+    "state":"VA",
+    "city":"Vienna"
+  },
+  {
+    "unitid":491233,
+    "name":"Unlimited Cosmetology School",
+    "state":"LA",
+    "city":"Jefferson"
+  },
+  {
+    "unitid":491288,
+    "name":"University of Wisconsin-Milwaukee Flex",
+    "state":"IN",
+    "city":"Fort Wayne"
+  },
+  {
+    "unitid":491297,
+    "name":"University of Wisconsin-Parkside Flex",
+    "state":"PR",
+    "city":"San Juan"
+  },
+  {
+    "unitid":491525,
+    "name":"Union Bible College",
+    "state":"CA",
+    "city":"Roseville"
+  },
+  {
+    "unitid":491747,
+    "name":"UR Beauty & Barber Academy",
+    "state":"OK",
+    "city":"McAlester"
+  },
+  {
+    "unitid":491756,
+    "name":"Urban Barber College",
+    "state":"NJ",
+    "city":"Lakewood"
+  },
+  {
+    "unitid":493132,
+    "name":"Universal Technical Institute-Bloomfield",
+    "state":"NY",
+    "city":"Chestnut Ridge"
+  },
+  {
+    "unitid":493372,
+    "name":"Urban Academy of Beauty",
+    "state":"CA",
+    "city":"San Jose"
+  },
+  {
+    "unitid":494357,
+    "name":"UEI College-Sacramento",
+    "state":"PA",
+    "city":"Chambersburg"
+  },
+  {
+    "unitid":494685,
+    "name":"Urshan College",
+    "state":"CA",
+    "city":"San Diego"
+  },
+  {
+    "unitid":496919,
+    "name":"United Education Institute-Las Vegas",
+    "state":"AL",
+    "city":"Dothan"
+  },
+  {
+    "unitid":496955,
+    "name":"UEI College-Mesa",
+    "state":"AL",
+    "city":"Troy"
+  },
+  {
+    "unitid":497107,
+    "name":"University of Silicon Andhra",
+    "state":"AZ",
+    "city":"Yuma"
+  },
+  {
+    "unitid":497286,
+    "name":"Universal Technical Institute-West Texas",
+    "state":"AR",
+    "city":"Rogers"
+  },
+  {
+    "unitid":497949,
+    "name":"United Education Institute-Stone Mountain",
+    "state":"DE",
+    "city":"Georgetown"
+  },
+  {
+    "unitid":497958,
+    "name":"UEI College-Tacoma",
+    "state":"DE",
+    "city":"Wilmington"
+  },
+  {
+    "unitid":498030,
+    "name":"Universal Technical Institute-South Florida Miramar",
+    "state":"FL",
+    "city":"Tallahassee"
+  },
+  {
+    "unitid":498784,
+    "name":"Upper Kutz Barber & Style College",
+    "state":"IN",
+    "city":"Evansville"
+  },
+  {
+    "unitid":498924,
+    "name":"URBE University",
+    "state":"MO",
+    "city":"Trenton"
+  }
+]

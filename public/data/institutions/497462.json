@@ -1,0 +1,58 @@
+{
+  "profile": {
+    "unitid": 497462,
+    "name": "Redeemers University North America",
+    "city": "Cardiff",
+    "state": "CA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
+    "website": "https://miracosta.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Theology & Religious Vocations"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 6800.0,
+      "in_state": 6800.0,
+      "out_of_state": 6800.0
+    },
+    "outcomes": {
+      "acceptance_rate": 92,
+      "yield": 0,
+      "grad_rate_6yr": null,
+      "retention_full_time": null,
+      "student_faculty_ratio": 15,
+      "total_enrollment": 60
+    }
+  },
+  "requirements": {
+    "required": [
+      "Recommendations"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Secondary School Gpa",
+      "Secondary School Rank",
+      "Secondary School Record"
+    ],
+    "not_considered": [
+      "Legacy Status",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

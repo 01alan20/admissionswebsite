@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 126775,
+    "name": "Colorado School of Mines",
+    "city": "Greeley",
+    "state": "CO",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: Very High Research Activity",
+    "website": "https://www.unco.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Engineering",
+      "Computer & Information Sciences",
+      "Physical Sciences",
+      "Multidisciplinary Studies"
+    ],
+    "intl_enrollment_pct": 8,
+    "tuition_summary": {
+      "sticker": 21186.0,
+      "in_state": 20040.0,
+      "out_of_state": 42120.0
+    },
+    "outcomes": {
+      "acceptance_rate": 60,
+      "yield": 25,
+      "grad_rate_6yr": 79,
+      "retention_full_time": 93,
+      "student_faculty_ratio": 17,
+      "total_enrollment": 7599
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

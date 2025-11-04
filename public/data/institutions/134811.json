@@ -1,0 +1,41 @@
+{
+  "profile": {
+    "unitid": 134811,
+    "name": "AI Miami International University of Art and Design",
+    "city": "Fort Lauderdale",
+    "state": "FL",
+    "control": "Private for-profit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
+    "website": "www.nova.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [],
+    "intl_enrollment_pct": null,
+    "tuition_summary": {
+      "sticker": NaN,
+      "in_state": 20794.0,
+      "out_of_state": 20794.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": null,
+      "student_faculty_ratio": null,
+      "total_enrollment": null
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

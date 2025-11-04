@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 135522,
+    "name": "Traviss Technical College",
+    "city": "Winter Park",
+    "state": "FL",
+    "control": "Public",
+    "level": "2-year",
+    "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
+    "website": "www.rollins.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Mechanic & Repair Technologies",
+      "Engineering Technologies",
+      "Personal & Culinary Services"
+    ],
+    "intl_enrollment_pct": 3,
+    "tuition_summary": {
+      "sticker": NaN,
+      "in_state": 3251.0,
+      "out_of_state": 11118.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 97,
+      "student_faculty_ratio": 11,
+      "total_enrollment": 512
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

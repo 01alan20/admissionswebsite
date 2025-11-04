@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 153278,
+    "name": "University of Dubuque",
+    "city": "Des Moines",
+    "state": "IA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Medium Programs",
+    "website": "https://www.mchs.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Transportation & Materials Moving",
+      "Health Professions",
+      "Theology & Religious Vocations"
+    ],
+    "intl_enrollment_pct": 3,
+    "tuition_summary": {
+      "sticker": 40065.0,
+      "in_state": 38526.0,
+      "out_of_state": 38526.0
+    },
+    "outcomes": {
+      "acceptance_rate": 87,
+      "yield": 24,
+      "grad_rate_6yr": 41,
+      "retention_full_time": 71,
+      "student_faculty_ratio": 11,
+      "total_enrollment": 1795
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Rank"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

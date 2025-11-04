@@ -1,0 +1,58 @@
+{
+  "profile": {
+    "unitid": 232618,
+    "name": "Centra College",
+    "city": "Lynchburg",
+    "state": "VA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Four-Year: Other Health Professions Schools",
+    "website": "www.vul.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 12263.0,
+      "in_state": 12259.0,
+      "out_of_state": 12259.0
+    },
+    "outcomes": {
+      "acceptance_rate": 100,
+      "yield": 0,
+      "grad_rate_6yr": null,
+      "retention_full_time": 100,
+      "student_faculty_ratio": 6,
+      "total_enrollment": 212
+    }
+  },
+  "requirements": {
+    "required": [
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "English Proficiency Test",
+      "Legacy Status",
+      "Secondary School Rank"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

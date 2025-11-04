@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 173416,
+    "name": "Dakota County Technical College",
+    "city": "Bemidji",
+    "state": "MN",
+    "control": "Public",
+    "level": "2-year",
+    "carnegie_basic": "Associate's Colleges: High Career & Technical-High Traditional",
+    "website": "www.oakhills.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Business, Management & Marketing",
+      "Mechanic & Repair Technologies",
+      "Construction Trades"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 6419.0,
+      "in_state": 6419.0,
+      "out_of_state": 6419.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 68,
+      "student_faculty_ratio": 22,
+      "total_enrollment": 2662
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

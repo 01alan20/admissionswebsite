@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 248934,
+    "name": "ECPI University",
+    "city": "Fort Cobb",
+    "state": "OK",
+    "control": "Private for-profit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Medium Programs",
+    "website": "cktc.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Computer & Information Sciences",
+      "Engineering Technologies",
+      "Business, Management & Marketing"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 18484.0,
+      "in_state": 18484.0,
+      "out_of_state": 18484.0
+    },
+    "outcomes": {
+      "acceptance_rate": 83,
+      "yield": 33,
+      "grad_rate_6yr": 29,
+      "retention_full_time": 53,
+      "student_faculty_ratio": 12,
+      "total_enrollment": 11745
+    }
+  },
+  "requirements": {
+    "required": [
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "considered": [
+      "Secondary School Record"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

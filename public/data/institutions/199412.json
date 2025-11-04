@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 199412,
+    "name": "Queens University of Charlotte",
+    "city": "Devils Lake",
+    "state": "ND",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
+    "website": "www.lrsc.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Health Professions",
+      "Education",
+      "Communication & Journalism"
+    ],
+    "intl_enrollment_pct": 11,
+    "tuition_summary": {
+      "sticker": 43285.0,
+      "in_state": 40830.0,
+      "out_of_state": 40830.0
+    },
+    "outcomes": {
+      "acceptance_rate": 68,
+      "yield": 14,
+      "grad_rate_6yr": 66,
+      "retention_full_time": 76,
+      "student_faculty_ratio": 9,
+      "total_enrollment": 1846
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Secondary School Gpa"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Recommendations",
+      "Secondary School Rank",
+      "Secondary School Record",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

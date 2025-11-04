@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 132709,
+    "name": "Broward College",
+    "city": "Miami",
+    "state": "FL",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate/Associate's Colleges: Associate's Dominant",
+    "website": "www.fiu.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Liberal Arts & Humanities",
+      "Business, Management & Marketing",
+      "Health Professions",
+      "Computer & Information Sciences"
+    ],
+    "intl_enrollment_pct": 12,
+    "tuition_summary": {
+      "sticker": 2830.0,
+      "in_state": 2830.0,
+      "out_of_state": 8952.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": null,
+      "student_faculty_ratio": 30,
+      "total_enrollment": 29140
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

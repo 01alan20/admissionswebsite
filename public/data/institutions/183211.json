@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 183211,
+    "name": "Rivier University",
+    "city": "Jersey City",
+    "state": "NJ",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Medium Programs",
+    "website": "www.njcu.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Computer & Information Sciences",
+      "Education",
+      "Business, Management & Marketing"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 37791.0,
+      "in_state": 36610.0,
+      "out_of_state": 36610.0
+    },
+    "outcomes": {
+      "acceptance_rate": 82,
+      "yield": 20,
+      "grad_rate_6yr": 58,
+      "retention_full_time": 76,
+      "student_faculty_ratio": 14,
+      "total_enrollment": 2879
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Formal Demonstration Of Competencies"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

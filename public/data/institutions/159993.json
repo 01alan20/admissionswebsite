@@ -1,0 +1,60 @@
+{
+  "profile": {
+    "unitid": 159993,
+    "name": "University of Louisiana at Monroe",
+    "city": "Bangor",
+    "state": "ME",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral/Professional Universities",
+    "website": "www.emcc.edu/",
+    "admissions_url": null,
+    "test_policy": "Required",
+    "major_families": [
+      "Health Professions",
+      "Education",
+      "Psychology",
+      "Business, Management & Marketing"
+    ],
+    "intl_enrollment_pct": 4,
+    "tuition_summary": {
+      "sticker": 9190.0,
+      "in_state": 9082.0,
+      "out_of_state": 21182.0
+    },
+    "outcomes": {
+      "acceptance_rate": 75,
+      "yield": 29,
+      "grad_rate_6yr": 48,
+      "retention_full_time": 72,
+      "student_faculty_ratio": 16,
+      "total_enrollment": 8272
+    }
+  },
+  "requirements": {
+    "required": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Rank"
+    ],
+    "considered": [],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Record",
+      "Work Experience"
+    ],
+    "test_policy": "Required"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

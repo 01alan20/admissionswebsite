@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 167394,
+    "name": "College of Our Lady of the Elms",
+    "city": "Grand Rapids",
+    "state": "MI",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Medium Programs",
+    "website": "https://www.aquinas.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Health Professions",
+      "Education",
+      "Public Administration & Social Service",
+      "Business, Management & Marketing"
+    ],
+    "intl_enrollment_pct": 2,
+    "tuition_summary": {
+      "sticker": 42061.0,
+      "in_state": 40635.0,
+      "out_of_state": 40635.0
+    },
+    "outcomes": {
+      "acceptance_rate": 88,
+      "yield": 16,
+      "grad_rate_6yr": 65,
+      "retention_full_time": 76,
+      "student_faculty_ratio": 11,
+      "total_enrollment": 1332
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

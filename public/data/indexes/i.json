@@ -1,0 +1,920 @@
+[
+  {
+    "unitid":113449,
+    "name":"International School of Beauty Inc",
+    "state":"CA",
+    "city":"Berkeley"
+  },
+  {
+    "unitid":115861,
+    "name":"Imperial Valley College",
+    "state":"CA",
+    "city":"La Verne"
+  },
+  {
+    "unitid":115931,
+    "name":"Institute for Business and Technology",
+    "state":"CA",
+    "city":"Laguna Beach"
+  },
+  {
+    "unitid":116226,
+    "name":"Interior Designers Institute",
+    "state":"CA",
+    "city":"South Lake Tahoe"
+  },
+  {
+    "unitid":116350,
+    "name":"International School of Cosmetology",
+    "state":"CA",
+    "city":"Lancaster"
+  },
+  {
+    "unitid":116439,
+    "name":"Irvine Valley College",
+    "state":"CA",
+    "city":"Oakland"
+  },
+  {
+    "unitid":127273,
+    "name":"Iliff School of Theology",
+    "state":"CO",
+    "city":"USAF Academy"
+  },
+  {
+    "unitid":127316,
+    "name":"International Salon and Spa Academy",
+    "state":"CO",
+    "city":"Thornton"
+  },
+  {
+    "unitid":128179,
+    "name":"Intellitec College-Colorado Springs",
+    "state":"CT",
+    "city":"Hartford"
+  },
+  {
+    "unitid":128188,
+    "name":"Intellitec College-Grand Junction",
+    "state":"CT",
+    "city":"West Hartford"
+  },
+  {
+    "unitid":134608,
+    "name":"Indian River State College",
+    "state":"FL",
+    "city":"Madison"
+  },
+  {
+    "unitid":134714,
+    "name":"International Academy",
+    "state":"FL",
+    "city":"Jacksonville"
+  },
+  {
+    "unitid":138655,
+    "name":"Interactive College of Technology-Chamblee",
+    "state":"GA",
+    "city":"Rome"
+  },
+  {
+    "unitid":138664,
+    "name":"Interactive College of Technology-Morrow",
+    "state":"GA",
+    "city":"Lookout Mountain"
+  },
+  {
+    "unitid":140146,
+    "name":"Interdenominational Theological Center",
+    "state":"GA",
+    "city":"Cleveland"
+  },
+  {
+    "unitid":142276,
+    "name":"Idaho State University",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":145628,
+    "name":"Illinois College of Optometry",
+    "state":"IL",
+    "city":"Springfield"
+  },
+  {
+    "unitid":145646,
+    "name":"Illinois Wesleyan University",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":145682,
+    "name":"Illinois Central College",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":145691,
+    "name":"Illinois College",
+    "state":"IL",
+    "city":"Rock Island"
+  },
+  {
+    "unitid":145725,
+    "name":"Illinois Institute of Technology",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":145813,
+    "name":"Illinois State University",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":145831,
+    "name":"Illinois Valley Community College",
+    "state":"IL",
+    "city":"Crystal Lake"
+  },
+  {
+    "unitid":145886,
+    "name":"Institute for Clinical Social Work",
+    "state":"IL",
+    "city":"Lebanon"
+  },
+  {
+    "unitid":150987,
+    "name":"Ivy Tech Community College",
+    "state":"IN",
+    "city":"Terre Haute"
+  },
+  {
+    "unitid":151111,
+    "name":"Indiana University-Indianapolis",
+    "state":"IN",
+    "city":"Saint Mary of the Woods"
+  },
+  {
+    "unitid":151290,
+    "name":"Indiana Institute of Technology",
+    "state":"IN",
+    "city":"St. Meinrad"
+  },
+  {
+    "unitid":151324,
+    "name":"Indiana State University",
+    "state":"IN",
+    "city":"Upland"
+  },
+  {
+    "unitid":151333,
+    "name":"Indiana University-Kokomo",
+    "state":"IN",
+    "city":"Angola"
+  },
+  {
+    "unitid":151342,
+    "name":"Indiana University-South Bend",
+    "state":"IN",
+    "city":"Valparaiso"
+  },
+  {
+    "unitid":151351,
+    "name":"Indiana University-Bloomington",
+    "state":"IN",
+    "city":"Vincennes"
+  },
+  {
+    "unitid":151360,
+    "name":"Indiana University-Northwest",
+    "state":"IN",
+    "city":"Vincennes"
+  },
+  {
+    "unitid":151379,
+    "name":"Indiana University-Southeast",
+    "state":"IN",
+    "city":"Crawfordsville"
+  },
+  {
+    "unitid":151388,
+    "name":"Indiana University-East",
+    "state":"IA",
+    "city":"Waterloo"
+  },
+  {
+    "unitid":151467,
+    "name":"International Business College-Indianapolis",
+    "state":"IA",
+    "city":"Sioux City"
+  },
+  {
+    "unitid":151801,
+    "name":"Indiana Wesleyan University-Marion",
+    "state":"IA",
+    "city":"Cedar Rapids"
+  },
+  {
+    "unitid":153472,
+    "name":"Indian Hills Community College",
+    "state":"IA",
+    "city":"Ames"
+  },
+  {
+    "unitid":153524,
+    "name":"Iowa Central Community College",
+    "state":"IA",
+    "city":"Davenport"
+  },
+  {
+    "unitid":153533,
+    "name":"Iowa Lakes Community College",
+    "state":"IA",
+    "city":"Sioux City"
+  },
+  {
+    "unitid":153597,
+    "name":"Iowa School of Beauty-Des Moines",
+    "state":"IA",
+    "city":"Indianola"
+  },
+  {
+    "unitid":153603,
+    "name":"Iowa State University",
+    "state":"IA",
+    "city":"West Burlington"
+  },
+  {
+    "unitid":153621,
+    "name":"Iowa Wesleyan University",
+    "state":"IA",
+    "city":"Creston"
+  },
+  {
+    "unitid":153630,
+    "name":"Iowa Western Community College",
+    "state":"IA",
+    "city":"Davenport"
+  },
+  {
+    "unitid":154457,
+    "name":"Iowa School of Beauty-Sioux City",
+    "state":"KS",
+    "city":"Garden City"
+  },
+  {
+    "unitid":155201,
+    "name":"Independence Community College",
+    "state":"KS",
+    "city":"Topeka"
+  },
+  {
+    "unitid":159197,
+    "name":"ITI Technical College",
+    "state":"LA",
+    "city":"Lafayette"
+  },
+  {
+    "unitid":173799,
+    "name":"Inver Hills Community College",
+    "state":"MN",
+    "city":"Saint Paul"
+  },
+  {
+    "unitid":175829,
+    "name":"Itawamba Community College",
+    "state":"MO",
+    "city":"Chillicothe"
+  },
+  {
+    "unitid":187745,
+    "name":"Institute of American Indian and Alaska Native Culture and Arts Development",
+    "state":"NY",
+    "city":"Brooklyn"
+  },
+  {
+    "unitid":191931,
+    "name":"Iona University",
+    "state":"NY",
+    "city":"Mount Vernon"
+  },
+  {
+    "unitid":191940,
+    "name":"Isabella Graham Hart School of Practical Nursing",
+    "state":"NY",
+    "city":"Bronx"
+  },
+  {
+    "unitid":191959,
+    "name":"Island Drafting and Technical Institute",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":191968,
+    "name":"Ithaca College",
+    "state":"NY",
+    "city":"Garden City"
+  },
+  {
+    "unitid":193405,
+    "name":"Icahn School of Medicine at Mount Sinai",
+    "state":"NY",
+    "city":"Suffern"
+  },
+  {
+    "unitid":198710,
+    "name":"Isothermal Community College",
+    "state":"NC",
+    "city":"Asheboro"
+  },
+  {
+    "unitid":203289,
+    "name":"International College of Broadcasting",
+    "state":"OH",
+    "city":"Lorain"
+  },
+  {
+    "unitid":213011,
+    "name":"Immaculata University",
+    "state":"PA",
+    "city":"Cresson"
+  },
+  {
+    "unitid":213020,
+    "name":"Indiana University of Pennsylvania-Main Campus",
+    "state":"PA",
+    "city":"Allentown"
+  },
+  {
+    "unitid":235501,
+    "name":"International Air and Hospitality Academy",
+    "state":"WV",
+    "city":"Athens"
+  },
+  {
+    "unitid":238005,
+    "name":"International Beauty School 4",
+    "state":"WI",
+    "city":"Eau Claire"
+  },
+  {
+    "unitid":240879,
+    "name":"Institute of Beauty Careers",
+    "state":"PR",
+    "city":"Humacao"
+  },
+  {
+    "unitid":242042,
+    "name":"Instituto Tecnologico de Puerto Rico-Recinto de Manati",
+    "state":"FL",
+    "city":"Sarasota"
+  },
+  {
+    "unitid":242130,
+    "name":"ICPR Junior College-Arecibo",
+    "state":"MS",
+    "city":"Jackson"
+  },
+  {
+    "unitid":242149,
+    "name":"ICPR Junior College-Mayaguez",
+    "state":"NJ",
+    "city":"Washington"
+  },
+  {
+    "unitid":242556,
+    "name":"Instituto Tecnologico de Puerto Rico-Recinto de Guayama",
+    "state":"NM",
+    "city":"Santa Fe"
+  },
+  {
+    "unitid":242583,
+    "name":"Instituto Tecnologico de Puerto Rico-Recinto de San Juan",
+    "state":"NY",
+    "city":"Monsey"
+  },
+  {
+    "unitid":242617,
+    "name":"Inter American University of Puerto Rico-San German",
+    "state":"CA",
+    "city":"Culver City"
+  },
+  {
+    "unitid":242626,
+    "name":"Inter American University of Puerto Rico-Aguadilla",
+    "state":"CA",
+    "city":"Santa Barbara"
+  },
+  {
+    "unitid":242635,
+    "name":"Inter American University of Puerto Rico-Arecibo",
+    "state":"NH",
+    "city":"Keene"
+  },
+  {
+    "unitid":242644,
+    "name":"Inter American University of Puerto Rico-Barranquitas",
+    "state":"WA",
+    "city":"Seattle"
+  },
+  {
+    "unitid":242653,
+    "name":"Inter American University of Puerto Rico-Metro",
+    "state":"OH",
+    "city":"Yellow Springs"
+  },
+  {
+    "unitid":242662,
+    "name":"Inter American University of Puerto Rico-Ponce",
+    "state":"OK",
+    "city":"Oklahoma City"
+  },
+  {
+    "unitid":242671,
+    "name":"Inter American University of Puerto Rico-Central Office",
+    "state":"OK",
+    "city":"Tulsa"
+  },
+  {
+    "unitid":242680,
+    "name":"Inter American University of Puerto Rico-Fajardo",
+    "state":"OK",
+    "city":"Ponca City"
+  },
+  {
+    "unitid":242699,
+    "name":"Inter American University of Puerto Rico-Guayama",
+    "state":"OK",
+    "city":"Oklahoma City"
+  },
+  {
+    "unitid":242705,
+    "name":"Inter American University of Puerto Rico-Bayamon",
+    "state":"OK",
+    "city":"Drumright"
+  },
+  {
+    "unitid":242723,
+    "name":"Inter American University of Puerto Rico-School of Law",
+    "state":"OR",
+    "city":"Portland"
+  },
+  {
+    "unitid":243841,
+    "name":"ICPR Junior College",
+    "state":"PA",
+    "city":"Forty Fort"
+  },
+  {
+    "unitid":365091,
+    "name":"International School of Skin Nailcare & Massage Therapy",
+    "state":"WV",
+    "city":"Keyser"
+  },
+  {
+    "unitid":366289,
+    "name":"InterCoast Colleges-Santa Ana",
+    "state":"CA",
+    "city":"Citrus Heights"
+  },
+  {
+    "unitid":367103,
+    "name":"Interactive College of Technology-Newport",
+    "state":"MD",
+    "city":"Baltimore"
+  },
+  {
+    "unitid":367361,
+    "name":"Interactive College of Technology",
+    "state":"NJ",
+    "city":"Moorestown"
+  },
+  {
+    "unitid":372329,
+    "name":"IBMC College",
+    "state":"CA",
+    "city":"Poway"
+  },
+  {
+    "unitid":376288,
+    "name":"Institucion Chaviano de Mayaguez",
+    "state":"FL",
+    "city":"Miami"
+  },
+  {
+    "unitid":404222,
+    "name":"Inter American University of Puerto Rico-School of Optometry",
+    "state":"OH",
+    "city":"Valley View"
+  },
+  {
+    "unitid":415057,
+    "name":"Industrial Management Training Institute",
+    "state":"PA",
+    "city":"Willow Street"
+  },
+  {
+    "unitid":418296,
+    "name":"Indian Capital Technology Center-Muskogee",
+    "state":"NY",
+    "city":"Brooklyn"
+  },
+  {
+    "unitid":418560,
+    "name":"Indiana County Technology Center",
+    "state":"PR",
+    "city":"Manati"
+  },
+  {
+    "unitid":419253,
+    "name":"Illinois Media School",
+    "state":"FL",
+    "city":"West Palm Beach"
+  },
+  {
+    "unitid":431141,
+    "name":"Institute of Technology",
+    "state":"CT",
+    "city":"Waterbury"
+  },
+  {
+    "unitid":434584,
+    "name":"Ilisagvik College",
+    "state":"LA",
+    "city":"Baton Rouge"
+  },
+  {
+    "unitid":436614,
+    "name":"International Baptist College and Seminary",
+    "state":"CA",
+    "city":"Claremont"
+  },
+  {
+    "unitid":437237,
+    "name":"IYRS School of Technology & Trades",
+    "state":"TX",
+    "city":"Pasadena"
+  },
+  {
+    "unitid":438984,
+    "name":"IVAEM College",
+    "state":"MO",
+    "city":"Kansas City"
+  },
+  {
+    "unitid":439686,
+    "name":"International Training Careers",
+    "state":"TX",
+    "city":"Irving"
+  },
+  {
+    "unitid":440776,
+    "name":"Interactive College of Technology",
+    "state":"AZ",
+    "city":"Tempe"
+  },
+  {
+    "unitid":441238,
+    "name":"Irell & Manella Graduate School of Biological Sciences at City of Hope",
+    "state":"NJ",
+    "city":"Iselin"
+  },
+  {
+    "unitid":441663,
+    "name":"Institute of Technology",
+    "state":"CO",
+    "city":"Denver"
+  },
+  {
+    "unitid":442435,
+    "name":"Interactive College of Technology-Gainesville",
+    "state":"PA",
+    "city":"West Mifflin"
+  },
+  {
+    "unitid":442888,
+    "name":"InterCoast Colleges-Riverside",
+    "state":"CA",
+    "city":"Modesto"
+  },
+  {
+    "unitid":443137,
+    "name":"Irene's Myomassology Institute",
+    "state":"NC",
+    "city":"Charlotte"
+  },
+  {
+    "unitid":443368,
+    "name":"Illinois Eastern Community College-System Office",
+    "state":"TX",
+    "city":"Houston"
+  },
+  {
+    "unitid":443571,
+    "name":"InterCoast Colleges-West Covina",
+    "state":"CA",
+    "city":"Riverside"
+  },
+  {
+    "unitid":443696,
+    "name":"Interactive College of Technology",
+    "state":"UT",
+    "city":"Salt Lake City"
+  },
+  {
+    "unitid":444671,
+    "name":"Industrial Technical College",
+    "state":"NY",
+    "city":"Monroe"
+  },
+  {
+    "unitid":444699,
+    "name":"Institute of Clinical Acupuncture & Oriental Med",
+    "state":"PA",
+    "city":"Harrisburg"
+  },
+  {
+    "unitid":448691,
+    "name":"International Institute for Restorative Practices",
+    "state":"CA",
+    "city":"Stockton"
+  },
+  {
+    "unitid":449597,
+    "name":"Ideal Beauty Academy",
+    "state":"NC",
+    "city":"Charlotte"
+  },
+  {
+    "unitid":451501,
+    "name":"Instituto Educativo Premier",
+    "state":"MO",
+    "city":"St. Louis"
+  },
+  {
+    "unitid":453297,
+    "name":"International Culinary Arts and Sciences Institute",
+    "state":"CA",
+    "city":"Sacramento"
+  },
+  {
+    "unitid":454838,
+    "name":"Institute of Taoist Education and Acupuncture",
+    "state":"NC",
+    "city":"Raleigh"
+  },
+  {
+    "unitid":455804,
+    "name":"Institute of World Politics",
+    "state":"ID",
+    "city":"TWIN FALLS"
+  },
+  {
+    "unitid":457208,
+    "name":"InterCoast Colleges-Rancho Cordova",
+    "state":"TN",
+    "city":"Jackson"
+  },
+  {
+    "unitid":457341,
+    "name":"International Institute of Cosmetology",
+    "state":"TX",
+    "city":"Farmers Branch"
+  },
+  {
+    "unitid":457387,
+    "name":"Immokalee Technical College",
+    "state":"NC",
+    "city":"Winston-Salem"
+  },
+  {
+    "unitid":457554,
+    "name":"Innovations Design Academy",
+    "state":"CO",
+    "city":"Colorado Springs"
+  },
+  {
+    "unitid":457785,
+    "name":"International Academy of Style",
+    "state":"WA",
+    "city":"Tacoma"
+  },
+  {
+    "unitid":457819,
+    "name":"Institute of Culinary Education",
+    "state":"CA",
+    "city":"Vallejo"
+  },
+  {
+    "unitid":458122,
+    "name":"Institute of Advanced Medical Esthetics",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":460145,
+    "name":"Illinois Media School-Chicago Campus",
+    "state":"TX",
+    "city":"Dallas"
+  },
+  {
+    "unitid":460677,
+    "name":"ICPR Junior College",
+    "state":"WI",
+    "city":"Kenosha"
+  },
+  {
+    "unitid":460808,
+    "name":"Integrated Massage Therapy Services",
+    "state":"CO",
+    "city":"Colorado Springs"
+  },
+  {
+    "unitid":461175,
+    "name":"International College of Cosmetology",
+    "state":"SC",
+    "city":"North Charleston"
+  },
+  {
+    "unitid":461218,
+    "name":"Institute of Medical Careers",
+    "state":"OR",
+    "city":"Springfield"
+  },
+  {
+    "unitid":462044,
+    "name":"Institute for Doctoral Studies in the Visual Arts",
+    "state":"FL",
+    "city":"Hialeah"
+  },
+  {
+    "unitid":462336,
+    "name":"International College of Beauty Arts & Sciences",
+    "state":"VA",
+    "city":"Newport News"
+  },
+  {
+    "unitid":480161,
+    "name":"Ideal Beauty Academy",
+    "state":"WV",
+    "city":"Charleston"
+  },
+  {
+    "unitid":480347,
+    "name":"International School of Cosmetology",
+    "state":"MO",
+    "city":"Springfield"
+  },
+  {
+    "unitid":481207,
+    "name":"Institute of Health Sciences",
+    "state":"LA",
+    "city":"Monroe"
+  },
+  {
+    "unitid":481960,
+    "name":"InterCoast Colleges-Fairfield",
+    "state":"FL",
+    "city":"Jacksonville"
+  },
+  {
+    "unitid":483106,
+    "name":"Innovate Salon Academy",
+    "state":"OR",
+    "city":"Medford"
+  },
+  {
+    "unitid":483373,
+    "name":"Integrity College of Health",
+    "state":"PA",
+    "city":"Wyncote"
+  },
+  {
+    "unitid":483869,
+    "name":"InterAmerican Technical Institute",
+    "state":"TX",
+    "city":"Austin"
+  },
+  {
+    "unitid":485564,
+    "name":"Infinity College",
+    "state":"FL",
+    "city":"Pembroke Pines"
+  },
+  {
+    "unitid":487922,
+    "name":"Image Maker Beauty Institute",
+    "state":"NC",
+    "city":"Winston-Salem"
+  },
+  {
+    "unitid":488378,
+    "name":"International Beauty Education Center",
+    "state":"LA",
+    "city":"New Iberia"
+  },
+  {
+    "unitid":488420,
+    "name":"Indiana Wellness College",
+    "state":"AZ",
+    "city":"Peoria"
+  },
+  {
+    "unitid":488679,
+    "name":"Indiana Wesleyan University-National & Global",
+    "state":"FL",
+    "city":"Orlando"
+  },
+  {
+    "unitid":489335,
+    "name":"Institute of Buddhist Studies",
+    "state":"MS",
+    "city":"Hattiesburg"
+  },
+  {
+    "unitid":491570,
+    "name":"Institute of Medical Ultrasound",
+    "state":"VA",
+    "city":"Bristol"
+  },
+  {
+    "unitid":491659,
+    "name":"ICOHS College",
+    "state":"NY",
+    "city":"Brooklyn"
+  },
+  {
+    "unitid":491686,
+    "name":"International Barber College",
+    "state":"KY",
+    "city":"Paintsville"
+  },
+  {
+    "unitid":491738,
+    "name":"IBS School of Cosmetology and Massage",
+    "state":"CT",
+    "city":"Stratford"
+  },
+  {
+    "unitid":491880,
+    "name":"Independent Training & Apprenticeship Program",
+    "state":"MD",
+    "city":"North Bethesda"
+  },
+  {
+    "unitid":491932,
+    "name":"Installer Institute",
+    "state":"MO",
+    "city":"St. Louis"
+  },
+  {
+    "unitid":492731,
+    "name":"Innovate Salon Academy",
+    "state":"MD",
+    "city":"Landover"
+  },
+  {
+    "unitid":492962,
+    "name":"Indiana Institute of Technology-College of Professional Studies",
+    "state":"CO",
+    "city":"Colorado Springs"
+  },
+  {
+    "unitid":493080,
+    "name":"Institute of Culinary Education",
+    "state":"AZ",
+    "city":"Glendale"
+  },
+  {
+    "unitid":493363,
+    "name":"Institute of Lutheran Theology",
+    "state":"CA",
+    "city":"Rialto"
+  },
+  {
+    "unitid":493947,
+    "name":"Idaho College of Osteopathic Medicine",
+    "state":"MI",
+    "city":"Woodhaven"
+  },
+  {
+    "unitid":495280,
+    "name":"Indian Bible College",
+    "state":"TX",
+    "city":"Beaumont"
+  },
+  {
+    "unitid":496751,
+    "name":"Institute of Allied Healthcare",
+    "state":"PA",
+    "city":"California"
+  },
+  {
+    "unitid":499130,
+    "name":"Innovate Salon Academy",
+    "state":"IN",
+    "city":"Muncie"
+  }
+]

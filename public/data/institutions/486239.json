@@ -1,0 +1,45 @@
+{
+  "profile": {
+    "unitid": 486239,
+    "name": "San Ignacio University",
+    "city": "Charleston",
+    "state": "SC",
+    "control": "Private for-profit",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Four-Year: Business & Management Schools",
+    "website": "www.topofthelinebarbercollege.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Foreign Languages & Linguistics",
+      "Education"
+    ],
+    "intl_enrollment_pct": 74,
+    "tuition_summary": {
+      "sticker": 10405.0,
+      "in_state": 10405.0,
+      "out_of_state": 10405.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": 74,
+      "retention_full_time": 67,
+      "student_faculty_ratio": 5,
+      "total_enrollment": 291
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 195720,
+    "name": "St. John Fisher University",
+    "city": "New York",
+    "state": "NY",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral/Professional Universities",
+    "website": "https://www.touro.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Health Professions",
+      "Business, Management & Marketing",
+      "Education",
+      "Biological & Biomedical Sciences"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 39666.0,
+      "in_state": 37748.0,
+      "out_of_state": 37748.0
+    },
+    "outcomes": {
+      "acceptance_rate": 68,
+      "yield": 20,
+      "grad_rate_6yr": 74,
+      "retention_full_time": 84,
+      "student_faculty_ratio": 12,
+      "total_enrollment": 3674
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

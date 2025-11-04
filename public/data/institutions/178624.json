@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 178624,
+    "name": "Northwest Missouri State University",
+    "city": "Lame Deer",
+    "state": "MT",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
+    "website": "cdkc.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Education",
+      "Computer & Information Sciences",
+      "Business, Management & Marketing",
+      "Agriculture & Natural Resources"
+    ],
+    "intl_enrollment_pct": 11,
+    "tuition_summary": {
+      "sticker": 10181.0,
+      "in_state": 9502.0,
+      "out_of_state": 15569.0
+    },
+    "outcomes": {
+      "acceptance_rate": 86,
+      "yield": 18,
+      "grad_rate_6yr": 57,
+      "retention_full_time": 74,
+      "student_faculty_ratio": 19,
+      "total_enrollment": 9664
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Personal Statement Or Essay",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Recommendations"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

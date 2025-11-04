@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 227863,
+    "name": "University of St Thomas",
+    "city": "Lubbock",
+    "state": "TX",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral/Professional Universities",
+    "website": "www.ttu.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Health Professions",
+      "Business, Management & Marketing",
+      "Theology & Religious Vocations",
+      "Education"
+    ],
+    "intl_enrollment_pct": 5,
+    "tuition_summary": {
+      "sticker": 33660.0,
+      "in_state": 32484.0,
+      "out_of_state": 32484.0
+    },
+    "outcomes": {
+      "acceptance_rate": 93,
+      "yield": 45,
+      "grad_rate_6yr": 69,
+      "retention_full_time": 73,
+      "student_faculty_ratio": 15,
+      "total_enrollment": 3813
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Formal Demonstration Of Competencies",
+      "Recommendations"
+    ],
+    "not_considered": [
+      "Completion Of College Preparatory Program",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 219709,
+    "name": "Belmont University",
+    "city": "Nashville",
+    "state": "TN",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral/Professional Universities",
+    "website": "www.mmc.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Visual & Performing Arts",
+      "Health Professions",
+      "Business, Management & Marketing",
+      "Legal Studies"
+    ],
+    "intl_enrollment_pct": 1,
+    "tuition_summary": {
+      "sticker": 41320.0,
+      "in_state": 39850.0,
+      "out_of_state": 39850.0
+    },
+    "outcomes": {
+      "acceptance_rate": 96,
+      "yield": 19,
+      "grad_rate_6yr": 72,
+      "retention_full_time": 84,
+      "student_faculty_ratio": 12,
+      "total_enrollment": 8862
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

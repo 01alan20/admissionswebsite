@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 230889,
+    "name": "Goddard College",
+    "city": "Danville",
+    "state": "VA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Small Programs",
+    "website": "https://www.sovahhealth.com/school-of-health-professions",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Education",
+      "Visual & Performing Arts",
+      "English Language & Literature",
+      "Liberal Arts & Humanities"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 19568.0,
+      "in_state": 18477.0,
+      "out_of_state": 18477.0
+    },
+    "outcomes": {
+      "acceptance_rate": 20,
+      "yield": 25,
+      "grad_rate_6yr": 75,
+      "retention_full_time": 100,
+      "student_faculty_ratio": 7,
+      "total_enrollment": 263
+    }
+  },
+  "requirements": {
+    "required": [
+      "Personal Statement Or Essay",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Formal Demonstration Of Competencies",
+      "Recommendations",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Gpa",
+      "Secondary School Rank"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

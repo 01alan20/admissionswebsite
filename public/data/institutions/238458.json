@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 238458,
+    "name": "Carroll University",
+    "city": "River Falls",
+    "state": "WI",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
+    "website": "https://www.uwrf.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Health Professions",
+      "Parks, Recreation & Fitness",
+      "Business, Management & Marketing",
+      "Education"
+    ],
+    "intl_enrollment_pct": 3,
+    "tuition_summary": {
+      "sticker": 37230.0,
+      "in_state": 36190.0,
+      "out_of_state": 36190.0
+    },
+    "outcomes": {
+      "acceptance_rate": 58,
+      "yield": 18,
+      "grad_rate_6yr": 70,
+      "retention_full_time": 79,
+      "student_faculty_ratio": 13,
+      "total_enrollment": 3176
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Personal Statement Or Essay",
+      "Recommendations"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 116439,
+    "name": "Irvine Valley College",
+    "city": "Oakland",
+    "state": "CA",
+    "control": "Public",
+    "level": "2-year",
+    "carnegie_basic": "Associate's Colleges: High Transfer-Mixed Traditional/Nontraditional",
+    "website": "laney.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Liberal Arts & Humanities",
+      "Business, Management & Marketing",
+      "Multidisciplinary Studies",
+      "Physical Sciences"
+    ],
+    "intl_enrollment_pct": 5,
+    "tuition_summary": {
+      "sticker": 1156.0,
+      "in_state": 1150.0,
+      "out_of_state": 9814.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 77,
+      "student_faculty_ratio": 30,
+      "total_enrollment": 11994
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

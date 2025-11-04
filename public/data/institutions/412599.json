@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 412599,
+    "name": "Remington College-Memphis Campus",
+    "city": "West Nyack",
+    "state": "NY",
+    "control": "Private nonprofit",
+    "level": "2-year",
+    "carnegie_basic": "Baccalaureate/Associate's Colleges: Associate's Dominant",
+    "website": "www.rocklandboces.org/adult-education-business-services/practical-nursing/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Personal & Culinary Services",
+      "Mechanic & Repair Technologies",
+      "Construction Trades"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 20047.0,
+      "in_state": 19964.0,
+      "out_of_state": 19964.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 47,
+      "student_faculty_ratio": 29,
+      "total_enrollment": 391
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

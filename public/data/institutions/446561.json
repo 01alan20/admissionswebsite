@@ -1,0 +1,59 @@
+{
+  "profile": {
+    "unitid": 446561,
+    "name": "Stanbridge University",
+    "city": "Clovis",
+    "state": "CA",
+    "control": "Private for-profit",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Four-Year: Other Health Professions Schools",
+    "website": "www.milaninstitute.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Agriculture & Natural Resources"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": NaN,
+      "in_state": NaN,
+      "out_of_state": NaN
+    },
+    "outcomes": {
+      "acceptance_rate": 11,
+      "yield": 96,
+      "grad_rate_6yr": 82,
+      "retention_full_time": 93,
+      "student_faculty_ratio": 15,
+      "total_enrollment": 2642
+    }
+  },
+  "requirements": {
+    "required": [
+      "Formal Demonstration Of Competencies",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Completion Of College Preparatory Program",
+      "Recommendations",
+      "Secondary School Gpa"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "English Proficiency Test",
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

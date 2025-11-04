@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 230047,
+    "name": "Brigham Young University-Hawaii",
+    "city": "Clifton Forge",
+    "state": "VA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
+    "website": "www.mgcc.edu/",
+    "admissions_url": null,
+    "test_policy": "Required",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Education",
+      "Biological & Biomedical Sciences",
+      "Multidisciplinary Studies"
+    ],
+    "intl_enrollment_pct": 48,
+    "tuition_summary": {
+      "sticker": 6438.0,
+      "in_state": 6250.0,
+      "out_of_state": 6250.0
+    },
+    "outcomes": {
+      "acceptance_rate": 38,
+      "yield": 70,
+      "grad_rate_6yr": 48,
+      "retention_full_time": 67,
+      "student_faculty_ratio": 16,
+      "total_enrollment": 2836
+    }
+  },
+  "requirements": {
+    "required": [
+      "Admission Test Scores",
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Required"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

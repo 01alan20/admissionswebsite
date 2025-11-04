@@ -1,0 +1,980 @@
+[
+  {
+    "unitid":105297,
+    "name":"Dine College",
+    "state":"AZ",
+    "city":"Phoenix"
+  },
+  {
+    "unitid":113333,
+    "name":"De Anza College",
+    "state":"CA",
+    "city":"San Rafael"
+  },
+  {
+    "unitid":113537,
+    "name":"Dell'Arte International School of Physical Theatre",
+    "state":"CA",
+    "city":"Monterey Park"
+  },
+  {
+    "unitid":113582,
+    "name":"Design Institute of San Diego",
+    "state":"CA",
+    "city":"Santa Monica"
+  },
+  {
+    "unitid":113616,
+    "name":"Dharma Realm Buddhist University",
+    "state":"CA",
+    "city":"Santa Rosa"
+  },
+  {
+    "unitid":113634,
+    "name":"Diablo Valley College",
+    "state":"CA",
+    "city":"San Jose"
+  },
+  {
+    "unitid":113698,
+    "name":"Dominican University of California",
+    "state":"CA",
+    "city":"Los Angeles"
+  },
+  {
+    "unitid":113704,
+    "name":"Dominican School of Philosophy & Theology",
+    "state":"CA",
+    "city":"Quincy"
+  },
+  {
+    "unitid":122117,
+    "name":"Dongguk University Los Angeles",
+    "state":"CA",
+    "city":"Visalia"
+  },
+  {
+    "unitid":126979,
+    "name":"Denver Seminary",
+    "state":"CO",
+    "city":"Pueblo"
+  },
+  {
+    "unitid":130873,
+    "name":"Dawn Career Institute LLC",
+    "state":"FL",
+    "city":"Boca Raton"
+  },
+  {
+    "unitid":130882,
+    "name":"Delaware Technical Community College-Central Office",
+    "state":"FL",
+    "city":"Starke"
+  },
+  {
+    "unitid":130907,
+    "name":"Delaware Technical Community College-Terry",
+    "state":"FL",
+    "city":"Melbourne"
+  },
+  {
+    "unitid":130934,
+    "name":"Delaware State University",
+    "state":"FL",
+    "city":"Fort Lauderdale"
+  },
+  {
+    "unitid":133386,
+    "name":"Daytona State College",
+    "state":"FL",
+    "city":"Fort Pierce"
+  },
+  {
+    "unitid":139463,
+    "name":"Dalton State College",
+    "state":"GA",
+    "city":"Marietta"
+  },
+  {
+    "unitid":144564,
+    "name":"Danville Area Community College",
+    "state":"IL",
+    "city":"Champaign"
+  },
+  {
+    "unitid":144740,
+    "name":"DePaul University",
+    "state":"IL",
+    "city":"East Peoria"
+  },
+  {
+    "unitid":144777,
+    "name":"DeVry University-Administrative Office",
+    "state":"IL",
+    "city":"Jacksonville"
+  },
+  {
+    "unitid":148496,
+    "name":"Dominican University",
+    "state":"IL",
+    "city":"Sugar Grove"
+  },
+  {
+    "unitid":150400,
+    "name":"DePauw University",
+    "state":"IN",
+    "city":"North Manchester"
+  },
+  {
+    "unitid":150428,
+    "name":"Don Roberts School of Hair Design",
+    "state":"IN",
+    "city":"Indianapolis"
+  },
+  {
+    "unitid":153214,
+    "name":"Des Moines Area Community College",
+    "state":"IA",
+    "city":"Dubuque"
+  },
+  {
+    "unitid":153241,
+    "name":"Divine Word College",
+    "state":"IA",
+    "city":"Decorah"
+  },
+  {
+    "unitid":153250,
+    "name":"Dordt University",
+    "state":"IA",
+    "city":"Fairfield"
+  },
+  {
+    "unitid":153269,
+    "name":"Drake University",
+    "state":"IA",
+    "city":"Marshalltown"
+  },
+  {
+    "unitid":154156,
+    "name":"Des Moines University-Osteopathic Medical Center",
+    "state":"KS",
+    "city":"Colby"
+  },
+  {
+    "unitid":154998,
+    "name":"Dodge City Community College",
+    "state":"KS",
+    "city":"Olathe"
+  },
+  {
+    "unitid":155007,
+    "name":"Donnelly College",
+    "state":"KS",
+    "city":"Chanute"
+  },
+  {
+    "unitid":158662,
+    "name":"Delgado Community College",
+    "state":"LA",
+    "city":"Shreveport"
+  },
+  {
+    "unitid":158787,
+    "name":"Denham Springs Beauty School",
+    "state":"LA",
+    "city":"Pineville"
+  },
+  {
+    "unitid":158802,
+    "name":"Dillard University",
+    "state":"LA",
+    "city":"Covington"
+  },
+  {
+    "unitid":162335,
+    "name":"Del-Mar-Va Beauty Academy",
+    "state":"MD",
+    "city":"Annapolis"
+  },
+  {
+    "unitid":165574,
+    "name":"Dean College",
+    "state":"MA",
+    "city":"Buzzards Bay"
+  },
+  {
+    "unitid":165608,
+    "name":"Diman Regional Technical Institute",
+    "state":"MA",
+    "city":"Worcester"
+  },
+  {
+    "unitid":169479,
+    "name":"Davenport University",
+    "state":"MI",
+    "city":"Rochester Hills"
+  },
+  {
+    "unitid":169503,
+    "name":"David Pressley School of Cosmetology",
+    "state":"MI",
+    "city":"Ann Arbor"
+  },
+  {
+    "unitid":169521,
+    "name":"Delta College",
+    "state":"MI",
+    "city":"Detroit"
+  },
+  {
+    "unitid":169576,
+    "name":"Detroit Business Institute-Downriver",
+    "state":"MI",
+    "city":"East Lansing"
+  },
+  {
+    "unitid":169761,
+    "name":"Dorsey College",
+    "state":"MI",
+    "city":"Flint"
+  },
+  {
+    "unitid":173416,
+    "name":"Dakota County Technical College",
+    "state":"MN",
+    "city":"Bemidji"
+  },
+  {
+    "unitid":175227,
+    "name":"Dunwoody College of Technology",
+    "state":"MS",
+    "city":"Poplarville"
+  },
+  {
+    "unitid":175616,
+    "name":"Delta State University",
+    "state":"MO",
+    "city":"Blue Springs"
+  },
+  {
+    "unitid":177214,
+    "name":"Drury University",
+    "state":"MO",
+    "city":"Rolla"
+  },
+  {
+    "unitid":180151,
+    "name":"Dawson Community College",
+    "state":"NE",
+    "city":"Macy"
+  },
+  {
+    "unitid":181020,
+    "name":"Doane University",
+    "state":"NH",
+    "city":"Somersworth"
+  },
+  {
+    "unitid":182670,
+    "name":"Dartmouth College",
+    "state":"NJ",
+    "city":"Caldwell"
+  },
+  {
+    "unitid":184348,
+    "name":"Drew University",
+    "state":"NJ",
+    "city":"Lawrenceville"
+  },
+  {
+    "unitid":190716,
+    "name":"D'Youville  University",
+    "state":"NY",
+    "city":"Flushing"
+  },
+  {
+    "unitid":190725,
+    "name":"Daemen University",
+    "state":"NY",
+    "city":"Brooklyn"
+  },
+  {
+    "unitid":190761,
+    "name":"Dominican University New York",
+    "state":"NY",
+    "city":"Riverdale"
+  },
+  {
+    "unitid":190840,
+    "name":"Dutchess Community College",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":194569,
+    "name":"Davis College",
+    "state":"NY",
+    "city":"Farmingdale"
+  },
+  {
+    "unitid":198376,
+    "name":"Davidson-Davie Community College",
+    "state":"NC",
+    "city":"Mount Olive"
+  },
+  {
+    "unitid":198385,
+    "name":"Davidson College",
+    "state":"NC",
+    "city":"Wilmington"
+  },
+  {
+    "unitid":198419,
+    "name":"Duke University",
+    "state":"NC",
+    "city":"Rocky Mount"
+  },
+  {
+    "unitid":198455,
+    "name":"Durham Technical Community College",
+    "state":"NC",
+    "city":"Greensboro"
+  },
+  {
+    "unitid":200059,
+    "name":"Dickinson State University",
+    "state":"OH",
+    "city":"Columbus"
+  },
+  {
+    "unitid":200314,
+    "name":"Dakota College at Bottineau",
+    "state":"OH",
+    "city":"Cincinnati"
+  },
+  {
+    "unitid":202435,
+    "name":"Davis College",
+    "state":"OH",
+    "city":"Elyria"
+  },
+  {
+    "unitid":202453,
+    "name":"Dayton Barber College",
+    "state":"OH",
+    "city":"Sylvania"
+  },
+  {
+    "unitid":202514,
+    "name":"Defiance College",
+    "state":"OH",
+    "city":"Marietta"
+  },
+  {
+    "unitid":202523,
+    "name":"Denison University",
+    "state":"OH",
+    "city":"Marion"
+  },
+  {
+    "unitid":210739,
+    "name":"DeSales University",
+    "state":"GA",
+    "city":"Lawrenceville"
+  },
+  {
+    "unitid":211802,
+    "name":"DLP Conemaugh Memorial Medical Center",
+    "state":"PA",
+    "city":"La Plume"
+  },
+  {
+    "unitid":211927,
+    "name":"Delaware County Community College",
+    "state":"PA",
+    "city":"Kittanning"
+  },
+  {
+    "unitid":211981,
+    "name":"Delaware Valley University",
+    "state":"PA",
+    "city":"Kutztown"
+  },
+  {
+    "unitid":212009,
+    "name":"Dickinson College",
+    "state":"PA",
+    "city":"Pittsburgh"
+  },
+  {
+    "unitid":212045,
+    "name":"Douglas Education Center",
+    "state":"PA",
+    "city":"Philadelphia"
+  },
+  {
+    "unitid":212054,
+    "name":"Drexel University",
+    "state":"PA",
+    "city":"Scranton"
+  },
+  {
+    "unitid":212106,
+    "name":"Duquesne University",
+    "state":"PA",
+    "city":"Easton"
+  },
+  {
+    "unitid":217989,
+    "name":"Denmark Technical College",
+    "state":"SD",
+    "city":"Madison"
+  },
+  {
+    "unitid":219082,
+    "name":"Dakota State University",
+    "state":"TN",
+    "city":"Nashville"
+  },
+  {
+    "unitid":219091,
+    "name":"Dakota Wesleyan University",
+    "state":"TN",
+    "city":"Dyersburg"
+  },
+  {
+    "unitid":220057,
+    "name":"Dyersburg State Community College",
+    "state":"TN",
+    "city":"Harriman"
+  },
+  {
+    "unitid":224226,
+    "name":"Dallas Baptist University",
+    "state":"TX",
+    "city":"Laredo"
+  },
+  {
+    "unitid":224244,
+    "name":"Dallas Christian College",
+    "state":"TX",
+    "city":"Baytown"
+  },
+  {
+    "unitid":224271,
+    "name":"Dallas Institute of Funeral Service",
+    "state":"TX",
+    "city":"Longview"
+  },
+  {
+    "unitid":224305,
+    "name":"Dallas Theological Seminary",
+    "state":"TX",
+    "city":"Grand Prairie"
+  },
+  {
+    "unitid":224350,
+    "name":"Del Mar College",
+    "state":"TX",
+    "city":"Texas City"
+  },
+  {
+    "unitid":224615,
+    "name":"Dallas College",
+    "state":"TX",
+    "city":"Lubbock"
+  },
+  {
+    "unitid":230162,
+    "name":"Davis Technical College",
+    "state":"VA",
+    "city":"Virginia Beach"
+  },
+  {
+    "unitid":231882,
+    "name":"Danville Community College",
+    "state":"VA",
+    "city":"Winchester"
+  },
+  {
+    "unitid":235088,
+    "name":"Divers Institute of Technology",
+    "state":"WA",
+    "city":"Spokane"
+  },
+  {
+    "unitid":237358,
+    "name":"Davis & Elkins College",
+    "state":"WI",
+    "city":"Watertown"
+  },
+  {
+    "unitid":247153,
+    "name":"Dorsey College-Wayne",
+    "state":"MI",
+    "city":"Port Huron"
+  },
+  {
+    "unitid":250744,
+    "name":"Dorsey College-Roseville",
+    "state":"OH",
+    "city":"Xenia"
+  },
+  {
+    "unitid":260664,
+    "name":"Diesel Driving Academy-Shreveport",
+    "state":"MI",
+    "city":"Kentwood"
+  },
+  {
+    "unitid":261436,
+    "name":"Douglas J Aveda Institute",
+    "state":"CA",
+    "city":"Santa Ana"
+  },
+  {
+    "unitid":261719,
+    "name":"Dorsey School of Beauty",
+    "state":"NY",
+    "city":"Selden"
+  },
+  {
+    "unitid":262466,
+    "name":"Dr. Ida Rolf Institute",
+    "state":"CA",
+    "city":"San Marcos"
+  },
+  {
+    "unitid":366270,
+    "name":"Delta College of Arts & Technology",
+    "state":"CA",
+    "city":"Fountain Valley"
+  },
+  {
+    "unitid":371690,
+    "name":"Downey Adult School",
+    "state":"VA",
+    "city":"Norfolk"
+  },
+  {
+    "unitid":373526,
+    "name":"Diesel Driving Academy-Baton Rouge",
+    "state":"TX",
+    "city":"Houston"
+  },
+  {
+    "unitid":395690,
+    "name":"Diversified Vocational College",
+    "state":"WI",
+    "city":"Ashwaubenon"
+  },
+  {
+    "unitid":402563,
+    "name":"Delta College Inc",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":406361,
+    "name":"Delaware Chenango Madison Otsego BOCES-Practical Nursing Program",
+    "state":"NJ",
+    "city":"Morris Plains"
+  },
+  {
+    "unitid":418773,
+    "name":"D'Mart Institute",
+    "state":"MA",
+    "city":"Pittsfield"
+  },
+  {
+    "unitid":430971,
+    "name":"Delaware County Technical School-Practical Nursing Program",
+    "state":"AZ",
+    "city":"Chandler"
+  },
+  {
+    "unitid":431105,
+    "name":"Dutchess BOCES-Practical Nursing Program",
+    "state":"LA",
+    "city":"Baton Rouge"
+  },
+  {
+    "unitid":432524,
+    "name":"Delaware College of Art and Design",
+    "state":"CA",
+    "city":"San Jose"
+  },
+  {
+    "unitid":434900,
+    "name":"Dewey University-Carolina",
+    "state":"NY",
+    "city":"Rochester"
+  },
+  {
+    "unitid":441256,
+    "name":"Design's School of Cosmetology",
+    "state":"FL",
+    "city":"Margate"
+  },
+  {
+    "unitid":443021,
+    "name":"Dallas Barber & Stylist College",
+    "state":"OH",
+    "city":"Perrysburg"
+  },
+  {
+    "unitid":443410,
+    "name":"DigiPen Institute of Technology",
+    "state":"NV",
+    "city":"Las Vegas"
+  },
+  {
+    "unitid":443562,
+    "name":"Dewey University-Hato Rey",
+    "state":"MO",
+    "city":"Fayette"
+  },
+  {
+    "unitid":445869,
+    "name":"Divine Mercy University",
+    "state":"KY",
+    "city":"Louisville"
+  },
+  {
+    "unitid":447014,
+    "name":"Daytona College",
+    "state":"TX",
+    "city":"San Antonio"
+  },
+  {
+    "unitid":447023,
+    "name":"Delta Technical College-Mississippi",
+    "state":"NY",
+    "city":"Bronx"
+  },
+  {
+    "unitid":449135,
+    "name":"Dewey University-Juana D\u00edaz",
+    "state":"DE",
+    "city":"Bear"
+  },
+  {
+    "unitid":449472,
+    "name":"Delaware Learning Institute of Cosmetology",
+    "state":"MI",
+    "city":"Royal Oak"
+  },
+  {
+    "unitid":449481,
+    "name":"Dragon Rises College of Oriental Medicine",
+    "state":"MI",
+    "city":"Port Huron"
+  },
+  {
+    "unitid":449603,
+    "name":"Denmark College",
+    "state":"NJ",
+    "city":"Elizabeth"
+  },
+  {
+    "unitid":449700,
+    "name":"Dayton School of Medical Massage",
+    "state":"OH",
+    "city":"West Chester"
+  },
+  {
+    "unitid":451255,
+    "name":"DiGrigoli School of Cosmetology",
+    "state":"CO",
+    "city":"Louisville"
+  },
+  {
+    "unitid":451583,
+    "name":"Dixie Technical College",
+    "state":"NJ",
+    "city":"Union City"
+  },
+  {
+    "unitid":452771,
+    "name":"Dental Assistant Pro LLC-Columbus",
+    "state":"CA",
+    "city":"Woodland"
+  },
+  {
+    "unitid":452780,
+    "name":"Dental Assistant Pro-Lebanon",
+    "state":"AL",
+    "city":"Birmingham"
+  },
+  {
+    "unitid":454856,
+    "name":"Denver College of Nursing",
+    "state":"TX",
+    "city":"San Antonio"
+  },
+  {
+    "unitid":455178,
+    "name":"Daoist Traditions College of Chinese Medical Arts",
+    "state":"CA",
+    "city":"Bakersfield"
+  },
+  {
+    "unitid":458043,
+    "name":"DuVall's School of Cosmetology",
+    "state":"SC",
+    "city":"Columbia"
+  },
+  {
+    "unitid":460482,
+    "name":"Dorsey College-Saginaw",
+    "state":"NJ",
+    "city":"East Orange"
+  },
+  {
+    "unitid":461306,
+    "name":"D A Dorsey Technical College",
+    "state":"CA",
+    "city":"Garden Grove"
+  },
+  {
+    "unitid":461388,
+    "name":"Diamonds College",
+    "state":"CA",
+    "city":"Riverside"
+  },
+  {
+    "unitid":469416,
+    "name":"Dewey University-Manati",
+    "state":"GA",
+    "city":"Atlanta"
+  },
+  {
+    "unitid":476780,
+    "name":"Diamond Beauty College",
+    "state":"WI",
+    "city":"Union Grove"
+  },
+  {
+    "unitid":480028,
+    "name":"Digital Film Academy",
+    "state":"IL",
+    "city":"Stone Park"
+  },
+  {
+    "unitid":480921,
+    "name":"Designer Barber & Stylist School",
+    "state":"IL",
+    "city":"Naperville"
+  },
+  {
+    "unitid":482413,
+    "name":"DeVry College of New York",
+    "state":"IN",
+    "city":"Merrillville"
+  },
+  {
+    "unitid":482422,
+    "name":"DeVry University-Arizona",
+    "state":"CT",
+    "city":"Newtown"
+  },
+  {
+    "unitid":482431,
+    "name":"DeVry University-California",
+    "state":"TX",
+    "city":"Killeen"
+  },
+  {
+    "unitid":482440,
+    "name":"DeVry University-Colorado",
+    "state":"AZ",
+    "city":"Tucson"
+  },
+  {
+    "unitid":482459,
+    "name":"DeVry University-Florida",
+    "state":"FL",
+    "city":"Fort Myers"
+  },
+  {
+    "unitid":482468,
+    "name":"DeVry University-Georgia",
+    "state":"LA",
+    "city":"New Orleans"
+  },
+  {
+    "unitid":482477,
+    "name":"DeVry University-Illinois",
+    "state":"CA",
+    "city":"San Jose"
+  },
+  {
+    "unitid":482538,
+    "name":"DeVry University-Missouri",
+    "state":"CA",
+    "city":"Covina"
+  },
+  {
+    "unitid":482547,
+    "name":"DeVry University-Nevada",
+    "state":"KY",
+    "city":"Owensboro"
+  },
+  {
+    "unitid":482556,
+    "name":"DeVry University-New Jersey",
+    "state":"IN",
+    "city":"Evansville"
+  },
+  {
+    "unitid":482565,
+    "name":"DeVry University-North Carolina",
+    "state":"TN",
+    "city":"Johnson City"
+  },
+  {
+    "unitid":482574,
+    "name":"DeVry University-Ohio",
+    "state":"CA",
+    "city":"Anaheim"
+  },
+  {
+    "unitid":482617,
+    "name":"DeVry University-Tennessee",
+    "state":"CA",
+    "city":"Long Beach"
+  },
+  {
+    "unitid":482635,
+    "name":"DeVry University-Texas",
+    "state":"UT",
+    "city":"Provo"
+  },
+  {
+    "unitid":482653,
+    "name":"DeVry University-Virginia",
+    "state":"FL",
+    "city":"Gainesville"
+  },
+  {
+    "unitid":483355,
+    "name":"Delta College of Arts & Technology-Lafayette Campus",
+    "state":"FL",
+    "city":"West Palm Beach"
+  },
+  {
+    "unitid":483364,
+    "name":"Delta College-Slidell Campus",
+    "state":"FL",
+    "city":"Casselberry"
+  },
+  {
+    "unitid":483504,
+    "name":"Dorsey College-Dearborn",
+    "state":"WA",
+    "city":"Spokane Valley"
+  },
+  {
+    "unitid":484084,
+    "name":"Debutantes School of Cosmetology and Nail Technology",
+    "state":"MN",
+    "city":"Bloomington"
+  },
+  {
+    "unitid":484923,
+    "name":"Dermal Science International Aesthetics and Nail Academy",
+    "state":"TX",
+    "city":"El Paso"
+  },
+  {
+    "unitid":485607,
+    "name":"Dolce The Academy",
+    "state":"FL",
+    "city":"Lauderdale Lakes"
+  },
+  {
+    "unitid":487959,
+    "name":"Dalton Institute of Esthetics and Cosmetology",
+    "state":"FL",
+    "city":"Tampa"
+  },
+  {
+    "unitid":488192,
+    "name":"DeHart Technical School",
+    "state":"PA",
+    "city":"Reading"
+  },
+  {
+    "unitid":490498,
+    "name":"Digital Media Institute",
+    "state":"NJ",
+    "city":"Lakewood"
+  },
+  {
+    "unitid":492096,
+    "name":"D&S School of Cosmetology",
+    "state":"TX",
+    "city":"Brenham"
+  },
+  {
+    "unitid":492139,
+    "name":"DSDT",
+    "state":"TX",
+    "city":"Austin"
+  },
+  {
+    "unitid":492801,
+    "name":"Drury University-College of Continuing Professional Studies",
+    "state":"KS",
+    "city":"Wichita"
+  },
+  {
+    "unitid":493804,
+    "name":"Deluxe Barber College",
+    "state":"FL",
+    "city":"Fort Lauderdale"
+  },
+  {
+    "unitid":494463,
+    "name":"Derech Hachaim Seminary",
+    "state":"ID",
+    "city":"Boise"
+  },
+  {
+    "unitid":495253,
+    "name":"Durant Institute of Hair Design",
+    "state":"TX",
+    "city":"Laredo"
+  },
+  {
+    "unitid":495837,
+    "name":"Dorsey College-Woodhaven",
+    "state":"FL",
+    "city":"Miami"
+  },
+  {
+    "unitid":496469,
+    "name":"Daybreak University",
+    "state":"AZ",
+    "city":"Phoenix"
+  },
+  {
+    "unitid":496575,
+    "name":"Dymond Designs Beauty School",
+    "state":"FL",
+    "city":"Margate"
+  },
+  {
+    "unitid":499185,
+    "name":"Dorsey College-Grand Rapids",
+    "state":"KY",
+    "city":"Louisville"
+  },
+  {
+    "unitid":499422,
+    "name":"Denver College of Nursing-Houston",
+    "state":"MI",
+    "city":"Kalamazoo"
+  }
+]

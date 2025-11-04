@@ -1,0 +1,57 @@
+{
+  "profile": {
+    "unitid": 487375,
+    "name": "Arizona College of Nursing-Las Vegas",
+    "city": "Jessup",
+    "state": "MD",
+    "control": "Private for-profit",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Four-Year: Other Health Professions Schools",
+    "website": "https://paulmitchell.edu/jessup",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 22426.0,
+      "in_state": 21653.0,
+      "out_of_state": 21653.0
+    },
+    "outcomes": {
+      "acceptance_rate": 100,
+      "yield": 60,
+      "grad_rate_6yr": 75,
+      "retention_full_time": 84,
+      "student_faculty_ratio": 20,
+      "total_enrollment": 1185
+    }
+  },
+  "requirements": {
+    "required": [
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [],
+    "not_considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

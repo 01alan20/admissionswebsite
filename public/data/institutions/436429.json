@@ -1,0 +1,45 @@
+{
+  "profile": {
+    "unitid": 436429,
+    "name": "Los Angeles Film School",
+    "city": "Shawnee",
+    "state": "OK",
+    "control": "Private for-profit",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Four-Year: Arts, Music & Design Schools",
+    "website": "www.shawneebeautycollege.com/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Visual & Performing Arts",
+      "Communications Technologies",
+      "Communication & Journalism"
+    ],
+    "intl_enrollment_pct": 2,
+    "tuition_summary": {
+      "sticker": NaN,
+      "in_state": NaN,
+      "out_of_state": NaN
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": 36,
+      "retention_full_time": 50,
+      "student_faculty_ratio": 31,
+      "total_enrollment": 5833
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 157401,
+    "name": "Murray State University",
+    "city": "New Orleans",
+    "state": "LA",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
+    "website": "www.dillard.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Education",
+      "Agriculture & Natural Resources",
+      "Health Professions"
+    ],
+    "intl_enrollment_pct": 7,
+    "tuition_summary": {
+      "sticker": 9708.0,
+      "in_state": 9432.0,
+      "out_of_state": 18888.0
+    },
+    "outcomes": {
+      "acceptance_rate": 86,
+      "yield": 17,
+      "grad_rate_6yr": 63,
+      "retention_full_time": 76,
+      "student_faculty_ratio": 16,
+      "total_enrollment": 9841
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Legacy Status",
+      "Secondary School Rank"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

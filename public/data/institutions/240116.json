@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 240116,
+    "name": "Chippewa Valley Technical College",
+    "city": "Trujillo Alto",
+    "state": "PR",
+    "control": "Public",
+    "level": "2-year",
+    "carnegie_basic": "Associate's Colleges: High Career & Technical-High Nontraditional",
+    "website": "www.utcpr.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Business, Management & Marketing",
+      "Mechanic & Repair Technologies",
+      "Computer & Information Sciences"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 4724.0,
+      "in_state": 4642.0,
+      "out_of_state": 6793.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 70,
+      "student_faculty_ratio": 13,
+      "total_enrollment": 8198
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 226903,
+    "name": "Southern Careers Institute-Austin",
+    "city": "Alpine",
+    "state": "TX",
+    "control": "Private for-profit",
+    "level": "2-year",
+    "carnegie_basic": "Special Focus Two-Year: Other Fields",
+    "website": "www.sulross.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Computer & Information Sciences",
+      "Health Professions",
+      "Precision Production",
+      "Business, Management & Marketing"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": NaN,
+      "in_state": NaN,
+      "out_of_state": NaN
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 61,
+      "student_faculty_ratio": 25,
+      "total_enrollment": 1079
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

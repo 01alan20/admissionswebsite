@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 228325,
+    "name": "Southwestern Assemblies of God University",
+    "city": "Canyon",
+    "state": "TX",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Small Programs",
+    "website": "https://www.wtamu.edu/",
+    "admissions_url": null,
+    "test_policy": "Required",
+    "major_families": [
+      "Theology & Religious Vocations",
+      "Philosophy & Religious Studies",
+      "Business, Management & Marketing",
+      "Liberal Arts & Humanities"
+    ],
+    "intl_enrollment_pct": 1,
+    "tuition_summary": {
+      "sticker": 18610.0,
+      "in_state": 17782.0,
+      "out_of_state": 17782.0
+    },
+    "outcomes": {
+      "acceptance_rate": 84,
+      "yield": 55,
+      "grad_rate_6yr": 42,
+      "retention_full_time": 81,
+      "student_faculty_ratio": 15,
+      "total_enrollment": 1725
+    }
+  },
+  "requirements": {
+    "required": [
+      "Admission Test Scores",
+      "English Proficiency Test",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Personal Statement Or Essay"
+    ],
+    "not_considered": [
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Required"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

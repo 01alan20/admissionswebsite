@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 187976,
+    "name": "University of New Mexico-Los Alamos Campus",
+    "city": "Forest Hills",
+    "state": "NY",
+    "control": "Public",
+    "level": "2-year",
+    "carnegie_basic": "Associate's Colleges: High Transfer-High Nontraditional",
+    "website": "estheticsschoolny.com/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Liberal Arts & Humanities",
+      "Health Professions",
+      "Business, Management & Marketing",
+      "Engineering"
+    ],
+    "intl_enrollment_pct": 1,
+    "tuition_summary": {
+      "sticker": 2214.0,
+      "in_state": 2214.0,
+      "out_of_state": 5578.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 62,
+      "student_faculty_ratio": 11,
+      "total_enrollment": 376
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

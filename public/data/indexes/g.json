@@ -1,0 +1,1028 @@
+[
+  {
+    "unitid":101240,
+    "name":"Gadsden State Community College",
+    "state":"AL",
+    "city":"Albertville"
+  },
+  {
+    "unitid":101286,
+    "name":"George C Wallace Community College-Dothan",
+    "state":"AL",
+    "city":"Hanceville"
+  },
+  {
+    "unitid":101295,
+    "name":"George C Wallace State Community College-Hanceville",
+    "state":"AL",
+    "city":"Selma"
+  },
+  {
+    "unitid":101301,
+    "name":"George C Wallace State Community College-Selma",
+    "state":"AL",
+    "city":"Birmingham"
+  },
+  {
+    "unitid":104708,
+    "name":"Glendale Community College",
+    "state":"AZ",
+    "city":"Phoenix"
+  },
+  {
+    "unitid":104717,
+    "name":"Grand Canyon University",
+    "state":"AZ",
+    "city":"Mesa"
+  },
+  {
+    "unitid":105145,
+    "name":"GateWay Community College",
+    "state":"AZ",
+    "city":"Avondale"
+  },
+  {
+    "unitid":114938,
+    "name":"Gavilan College",
+    "state":"CA",
+    "city":"Riverside"
+  },
+  {
+    "unitid":114947,
+    "name":"Gemological Institute of America-Carlsbad",
+    "state":"CA",
+    "city":"Salinas"
+  },
+  {
+    "unitid":115001,
+    "name":"Glendale Community College",
+    "state":"CA",
+    "city":"Claremont"
+  },
+  {
+    "unitid":115010,
+    "name":"Glendale Career College",
+    "state":"CA",
+    "city":"Daly City"
+  },
+  {
+    "unitid":115083,
+    "name":"Golden Gate University",
+    "state":"CA",
+    "city":"Oakland"
+  },
+  {
+    "unitid":115126,
+    "name":"Golden West College",
+    "state":"CA",
+    "city":"Carpinteria"
+  },
+  {
+    "unitid":115214,
+    "name":"Graduate Theological Union",
+    "state":"CA",
+    "city":"Arcata"
+  },
+  {
+    "unitid":115287,
+    "name":"Grossmont-Cuyamaca Community College District",
+    "state":"CA",
+    "city":"Stockton"
+  },
+  {
+    "unitid":115296,
+    "name":"Grossmont College",
+    "state":"CA",
+    "city":"Imperial"
+  },
+  {
+    "unitid":129154,
+    "name":"Goodwin University",
+    "state":"CT",
+    "city":"Bridgeport"
+  },
+  {
+    "unitid":130989,
+    "name":"Goldey-Beacom College",
+    "state":"FL",
+    "city":"Ocala"
+  },
+  {
+    "unitid":131450,
+    "name":"Gallaudet University",
+    "state":"FL",
+    "city":"Royal Palm Beach"
+  },
+  {
+    "unitid":131469,
+    "name":"George Washington University",
+    "state":"FL",
+    "city":"Saint Petersburg"
+  },
+  {
+    "unitid":131496,
+    "name":"Georgetown University",
+    "state":"FL",
+    "city":"Fort Myers"
+  },
+  {
+    "unitid":134291,
+    "name":"George Stone Technical College",
+    "state":"FL",
+    "city":"Lakeland"
+  },
+  {
+    "unitid":134307,
+    "name":"George T Baker Aviation Technical College",
+    "state":"FL",
+    "city":"Oakland Park"
+  },
+  {
+    "unitid":134343,
+    "name":"Gulf Coast State College",
+    "state":"FL",
+    "city":"Miami"
+  },
+  {
+    "unitid":138822,
+    "name":"Georgia Career Institute",
+    "state":"GA",
+    "city":"Franklin Springs"
+  },
+  {
+    "unitid":139384,
+    "name":"Georgia Northwestern Technical College",
+    "state":"GA",
+    "city":"Gainesville"
+  },
+  {
+    "unitid":139700,
+    "name":"Georgia Highlands College",
+    "state":"GA",
+    "city":"Clarkesville"
+  },
+  {
+    "unitid":139746,
+    "name":"Grady Health System Professional Schools",
+    "state":"GA",
+    "city":"Augusta"
+  },
+  {
+    "unitid":139755,
+    "name":"Georgia Institute of Technology-Main Campus",
+    "state":"GA",
+    "city":"Demorest"
+  },
+  {
+    "unitid":139764,
+    "name":"Georgia Southwestern State University",
+    "state":"GA",
+    "city":"Atlanta"
+  },
+  {
+    "unitid":139861,
+    "name":"Georgia College & State University",
+    "state":"GA",
+    "city":"Waleska"
+  },
+  {
+    "unitid":139931,
+    "name":"Georgia Southern University",
+    "state":"GA",
+    "city":"Savannah"
+  },
+  {
+    "unitid":139940,
+    "name":"Georgia State University",
+    "state":"GA",
+    "city":"Savannah"
+  },
+  {
+    "unitid":139968,
+    "name":"Gordon State College",
+    "state":"GA",
+    "city":"Rome"
+  },
+  {
+    "unitid":139995,
+    "name":"Gupton Jones College of Funeral Service",
+    "state":"GA",
+    "city":"Atlanta"
+  },
+  {
+    "unitid":140003,
+    "name":"Gwinnett College-Lilburn",
+    "state":"GA",
+    "city":"Thomasville"
+  },
+  {
+    "unitid":140012,
+    "name":"Gwinnett Technical College",
+    "state":"GA",
+    "city":"Toccoa Falls"
+  },
+  {
+    "unitid":145275,
+    "name":"Garrett-Evangelical Theological Seminary",
+    "state":"IL",
+    "city":"Kankakee"
+  },
+  {
+    "unitid":145309,
+    "name":"Gem City College",
+    "state":"IL",
+    "city":"Centralia"
+  },
+  {
+    "unitid":145336,
+    "name":"Governors State University",
+    "state":"IL",
+    "city":"Malta"
+  },
+  {
+    "unitid":145354,
+    "name":"Graham Hospital School of Nursing",
+    "state":"IL",
+    "city":"Galesburg"
+  },
+  {
+    "unitid":145372,
+    "name":"Greenville University",
+    "state":"IL",
+    "city":"PERU"
+  },
+  {
+    "unitid":145406,
+    "name":"G Skin & Beauty Institute",
+    "state":"IL",
+    "city":"Grayslake"
+  },
+  {
+    "unitid":146816,
+    "name":"Generations College",
+    "state":"IL",
+    "city":"Joliet"
+  },
+  {
+    "unitid":150668,
+    "name":"Goshen College",
+    "state":"IN",
+    "city":"Jeffersonville"
+  },
+  {
+    "unitid":150677,
+    "name":"Grace College and Theological Seminary",
+    "state":"MI",
+    "city":"Kalamazoo"
+  },
+  {
+    "unitid":153366,
+    "name":"Graceland University-Lamoni",
+    "state":"IA",
+    "city":"Cedar Falls"
+  },
+  {
+    "unitid":153375,
+    "name":"Grand View University",
+    "state":"IA",
+    "city":"Orange City"
+  },
+  {
+    "unitid":153384,
+    "name":"Grinnell College",
+    "state":"IA",
+    "city":"Calmar"
+  },
+  {
+    "unitid":155104,
+    "name":"Garden City Community College",
+    "state":"KS",
+    "city":"Leavenworth"
+  },
+  {
+    "unitid":156471,
+    "name":"Galen College of Nursing-Louisville",
+    "state":"KY",
+    "city":"Highland Heights"
+  },
+  {
+    "unitid":156745,
+    "name":"Georgetown College",
+    "state":"KY",
+    "city":"Elizabethtown"
+  },
+  {
+    "unitid":157438,
+    "name":"Gateway Community and Technical College",
+    "state":"LA",
+    "city":"Chalmette"
+  },
+  {
+    "unitid":159009,
+    "name":"Grambling State University",
+    "state":"LA",
+    "city":"Houma"
+  },
+  {
+    "unitid":162609,
+    "name":"Garrett College",
+    "state":"MD",
+    "city":"Owings Mills"
+  },
+  {
+    "unitid":162654,
+    "name":"Goucher College",
+    "state":"MD",
+    "city":"Chestertown"
+  },
+  {
+    "unitid":165936,
+    "name":"Gordon College",
+    "state":"MA",
+    "city":"Boston"
+  },
+  {
+    "unitid":165945,
+    "name":"Gordon-Conwell Theological Seminary",
+    "state":"MA",
+    "city":"Boston"
+  },
+  {
+    "unitid":165981,
+    "name":"Greenfield Community College",
+    "state":"MA",
+    "city":"Boston"
+  },
+  {
+    "unitid":169974,
+    "name":"Glen Oaks Community College",
+    "state":"MI",
+    "city":"Muskegon"
+  },
+  {
+    "unitid":169992,
+    "name":"Gogebic Community College",
+    "state":"MI",
+    "city":"Marquette"
+  },
+  {
+    "unitid":170000,
+    "name":"Grace Christian University",
+    "state":"MI",
+    "city":"Traverse City"
+  },
+  {
+    "unitid":170055,
+    "name":"Grand Rapids Community College",
+    "state":"MI",
+    "city":"Auburn Hills"
+  },
+  {
+    "unitid":170082,
+    "name":"Grand Valley State University",
+    "state":"MI",
+    "city":"Rochester Hills"
+  },
+  {
+    "unitid":170091,
+    "name":"Great Lakes Christian College",
+    "state":"MI",
+    "city":"Olivet"
+  },
+  {
+    "unitid":173647,
+    "name":"Gustavus Adolphus College",
+    "state":"MN",
+    "city":"Saint Cloud"
+  },
+  {
+    "unitid":176983,
+    "name":"Grand River Technical School",
+    "state":"MO",
+    "city":"Fenton"
+  },
+  {
+    "unitid":180249,
+    "name":"Great Falls College Montana State University",
+    "state":"NE",
+    "city":"Gering"
+  },
+  {
+    "unitid":182306,
+    "name":"Great Basin College",
+    "state":"NJ",
+    "city":"Woodland Park"
+  },
+  {
+    "unitid":183150,
+    "name":"Great Bay Community College",
+    "state":"NJ",
+    "city":"Englewood Cliffs"
+  },
+  {
+    "unitid":184773,
+    "name":"Georgian Court University",
+    "state":"NJ",
+    "city":"South Orange"
+  },
+  {
+    "unitid":191311,
+    "name":"Gemological Institute of America-New York",
+    "state":"NY",
+    "city":"Dobbs Ferry"
+  },
+  {
+    "unitid":191339,
+    "name":"Genesee Community College",
+    "state":"NY",
+    "city":"Brooklyn"
+  },
+  {
+    "unitid":198561,
+    "name":"Gardner-Webb University",
+    "state":"NC",
+    "city":"Rocky Mount"
+  },
+  {
+    "unitid":198570,
+    "name":"Gaston College",
+    "state":"NC",
+    "city":"Wilmington"
+  },
+  {
+    "unitid":198598,
+    "name":"Greensboro College",
+    "state":"NC",
+    "city":"Grantsboro"
+  },
+  {
+    "unitid":198613,
+    "name":"Guilford College",
+    "state":"NC",
+    "city":"Raleigh"
+  },
+  {
+    "unitid":198622,
+    "name":"Guilford Technical Community College",
+    "state":"NC",
+    "city":"Pembroke"
+  },
+  {
+    "unitid":202888,
+    "name":"Gerbers Akron Beauty School",
+    "state":"OH",
+    "city":"Middletown"
+  },
+  {
+    "unitid":202903,
+    "name":"Gods Bible School and College",
+    "state":"OH",
+    "city":"Oxford"
+  },
+  {
+    "unitid":202912,
+    "name":"Good Samaritan College of Nursing and Health Science",
+    "state":"OH",
+    "city":"Cincinnati"
+  },
+  {
+    "unitid":202949,
+    "name":"Great Oaks Career Campuses",
+    "state":"OH",
+    "city":"Englewood"
+  },
+  {
+    "unitid":208822,
+    "name":"George Fox University",
+    "state":"PA",
+    "city":"Reading"
+  },
+  {
+    "unitid":212601,
+    "name":"Gannon University",
+    "state":"PA",
+    "city":"Williamsport"
+  },
+  {
+    "unitid":212656,
+    "name":"Geneva College",
+    "state":"PA",
+    "city":"Jenkintown"
+  },
+  {
+    "unitid":212674,
+    "name":"Gettysburg College",
+    "state":"PA",
+    "city":"Scranton"
+  },
+  {
+    "unitid":212771,
+    "name":"Gratz College",
+    "state":"PA",
+    "city":"Philadelphia"
+  },
+  {
+    "unitid":212805,
+    "name":"Grove City College",
+    "state":"PA",
+    "city":"Erie"
+  },
+  {
+    "unitid":212832,
+    "name":"Gwynedd Mercy University",
+    "state":"PA",
+    "city":"Mechanicsburg"
+  },
+  {
+    "unitid":213181,
+    "name":"Great Lakes Institute of Technology",
+    "state":"PA",
+    "city":"New Castle"
+  },
+  {
+    "unitid":218113,
+    "name":"Greenville Technical College",
+    "state":"SD",
+    "city":"Mitchell"
+  },
+  {
+    "unitid":220765,
+    "name":"Genesis Career College-Cookeville",
+    "state":"TN",
+    "city":"Morristown"
+  },
+  {
+    "unitid":224961,
+    "name":"Galveston College",
+    "state":"TX",
+    "city":"Denton"
+  },
+  {
+    "unitid":225043,
+    "name":"Graham's Barber College",
+    "state":"TX",
+    "city":"Mount Pleasant"
+  },
+  {
+    "unitid":225070,
+    "name":"Grayson College",
+    "state":"TX",
+    "city":"San Antonio"
+  },
+  {
+    "unitid":230889,
+    "name":"Goddard College",
+    "state":"VA",
+    "city":"Danville"
+  },
+  {
+    "unitid":232186,
+    "name":"George Mason University",
+    "state":"VA",
+    "city":"Sweet Briar"
+  },
+  {
+    "unitid":232195,
+    "name":"Germanna Community College",
+    "state":"VA",
+    "city":"Hampton"
+  },
+  {
+    "unitid":235307,
+    "name":"Glen Dow Academy of Hair Design",
+    "state":"WV",
+    "city":"Dunbar"
+  },
+  {
+    "unitid":235316,
+    "name":"Gonzaga University",
+    "state":"WV",
+    "city":"Bethany"
+  },
+  {
+    "unitid":235334,
+    "name":"Grays Harbor College",
+    "state":"WV",
+    "city":"Bluefield"
+  },
+  {
+    "unitid":235343,
+    "name":"Green River College",
+    "state":"WV",
+    "city":"Huntington"
+  },
+  {
+    "unitid":237385,
+    "name":"Glenville State University",
+    "state":"WI",
+    "city":"Milwaukee"
+  },
+  {
+    "unitid":238759,
+    "name":"Gateway Technical College",
+    "state":"WY",
+    "city":"Cheyenne"
+  },
+  {
+    "unitid":240745,
+    "name":"Guam Community College",
+    "state":"PR",
+    "city":"Bayamon"
+  },
+  {
+    "unitid":244437,
+    "name":"Georgia State University-Perimeter College",
+    "state":"MI",
+    "city":"Roseville"
+  },
+  {
+    "unitid":244446,
+    "name":"Georgia Piedmont Technical College",
+    "state":"OH",
+    "city":"Fairfield"
+  },
+  {
+    "unitid":246895,
+    "name":"GateWay Community College-Central City",
+    "state":"AZ",
+    "city":"Tempe"
+  },
+  {
+    "unitid":260363,
+    "name":"Greene County Career and Technology Center",
+    "state":"NJ",
+    "city":"Denville"
+  },
+  {
+    "unitid":363679,
+    "name":"Grabber School of Hair Design",
+    "state":"TX",
+    "city":"Houston"
+  },
+  {
+    "unitid":364548,
+    "name":"Great Plains Technology Center",
+    "state":"NJ",
+    "city":"Bloomfield"
+  },
+  {
+    "unitid":365240,
+    "name":"Greene County Career Center",
+    "state":"MA",
+    "city":"Andover"
+  },
+  {
+    "unitid":375683,
+    "name":"Gordon Cooper Technology Center",
+    "state":"MA",
+    "city":"Tyngsboro"
+  },
+  {
+    "unitid":382416,
+    "name":"Greater Lowell Technical School",
+    "state":"IL",
+    "city":"Oak Forest"
+  },
+  {
+    "unitid":382780,
+    "name":"Genesis Career College-Lebanon",
+    "state":"TX",
+    "city":"El Paso"
+  },
+  {
+    "unitid":383367,
+    "name":"Greater Altoona Career & Technology Center",
+    "state":"OH",
+    "city":"Heath"
+  },
+  {
+    "unitid":406024,
+    "name":"Galen College of Nursing-Tampa Bay",
+    "state":"CA",
+    "city":"Inglewood"
+  },
+  {
+    "unitid":406033,
+    "name":"Galen College of Nursing-San Antonio",
+    "state":"OK",
+    "city":"Yukon"
+  },
+  {
+    "unitid":407090,
+    "name":"G Skin & Beauty Institute",
+    "state":"PA",
+    "city":"Philadelphia"
+  },
+  {
+    "unitid":408862,
+    "name":"Georgia Institute of Cosmetology",
+    "state":"MO",
+    "city":"Warrensburg"
+  },
+  {
+    "unitid":418454,
+    "name":"Greater Johnstown Career and Technology Center",
+    "state":"NJ",
+    "city":"Jersey City"
+  },
+  {
+    "unitid":425250,
+    "name":"Gwinnett College-Sandy Springs",
+    "state":"OH",
+    "city":"Smithville"
+  },
+  {
+    "unitid":428019,
+    "name":"Green Country Technology Center",
+    "state":"TX",
+    "city":"Lufkin"
+  },
+  {
+    "unitid":431196,
+    "name":"Genesee Valley BOCES-Practical Nursing Program",
+    "state":"CT",
+    "city":"Stamford"
+  },
+  {
+    "unitid":431284,
+    "name":"Graduate America College",
+    "state":"RI",
+    "city":"Newport"
+  },
+  {
+    "unitid":436632,
+    "name":"Gwinnett College",
+    "state":"GA",
+    "city":"Duluth"
+  },
+  {
+    "unitid":444714,
+    "name":"Gwinnett College-Marietta Campus",
+    "state":"WV",
+    "city":"Martinsburg"
+  },
+  {
+    "unitid":447689,
+    "name":"Georgia Gwinnett College",
+    "state":"FL",
+    "city":"Belleview"
+  },
+  {
+    "unitid":449384,
+    "name":"Gnomon",
+    "state":"FL",
+    "city":"Tampa"
+  },
+  {
+    "unitid":452948,
+    "name":"Galen College of Nursing-Cincinnati",
+    "state":"AL",
+    "city":"Mobile"
+  },
+  {
+    "unitid":456542,
+    "name":"Geisinger Commonwealth School of Medicine",
+    "state":"TX",
+    "city":"Houston"
+  },
+  {
+    "unitid":459213,
+    "name":"Gurnick Academy of Medical Arts",
+    "state":"OK",
+    "city":"Pryor"
+  },
+  {
+    "unitid":460385,
+    "name":"Geisinger-Lewistown Hospital School of Nursing",
+    "state":"NY",
+    "city":"Levittown"
+  },
+  {
+    "unitid":461254,
+    "name":"Galaxy Medical College",
+    "state":"CA",
+    "city":"Hanford"
+  },
+  {
+    "unitid":481058,
+    "name":"Grace Mission University",
+    "state":"FL",
+    "city":"Lakeland"
+  },
+  {
+    "unitid":481401,
+    "name":"Grace School of Theology",
+    "state":"NC",
+    "city":"Greenville"
+  },
+  {
+    "unitid":483841,
+    "name":"Grace International Beauty School",
+    "state":"TX",
+    "city":"Addison"
+  },
+  {
+    "unitid":485111,
+    "name":"Georgia Military College",
+    "state":"TN",
+    "city":"Milligan"
+  },
+  {
+    "unitid":485926,
+    "name":"GA Beauty & Barber School",
+    "state":"TX",
+    "city":"Houston"
+  },
+  {
+    "unitid":486530,
+    "name":"Gould's Academy",
+    "state":"TX",
+    "city":"Clute"
+  },
+  {
+    "unitid":488013,
+    "name":"Garden State Science and Technology Institute",
+    "state":"VA",
+    "city":"Vienna"
+  },
+  {
+    "unitid":488651,
+    "name":"Glitz School of Cosmetology",
+    "state":"LA",
+    "city":"Baton Rouge"
+  },
+  {
+    "unitid":490090,
+    "name":"Gadsden Technical College",
+    "state":"CA",
+    "city":"San Bernardino"
+  },
+  {
+    "unitid":490559,
+    "name":"Gwinnett Institute",
+    "state":"VA",
+    "city":"Petersburg"
+  },
+  {
+    "unitid":491181,
+    "name":"Galen College of Nursing-ARH",
+    "state":"TX",
+    "city":"El Paso"
+  },
+  {
+    "unitid":491729,
+    "name":"Goshen School of Cosmetology",
+    "state":"PR",
+    "city":"Hato Rey"
+  },
+  {
+    "unitid":492281,
+    "name":"GoodFellas Barber College",
+    "state":"TX",
+    "city":"Fort Worth"
+  },
+  {
+    "unitid":492935,
+    "name":"Global Medical & Technical Training Institute",
+    "state":"NY",
+    "city":"Islandia"
+  },
+  {
+    "unitid":493150,
+    "name":"Gould's Academy",
+    "state":"HI",
+    "city":"Honolulu"
+  },
+  {
+    "unitid":493521,
+    "name":"Global Tech College",
+    "state":"WA",
+    "city":"Kennewick"
+  },
+  {
+    "unitid":494551,
+    "name":"Glasgow Caledonian New York College",
+    "state":"MI",
+    "city":"Troy"
+  },
+  {
+    "unitid":495110,
+    "name":"Great Lakes Boat Building School",
+    "state":"OH",
+    "city":"Trotwood"
+  },
+  {
+    "unitid":496991,
+    "name":"Galen Health Institutes-Miami Campus",
+    "state":"AZ",
+    "city":"Mesa"
+  },
+  {
+    "unitid":497116,
+    "name":"Galen Health Institutes-Austin Campus",
+    "state":"AZ",
+    "city":"Casa Grande"
+  },
+  {
+    "unitid":497125,
+    "name":"Galen Health Institutes-Nashville Campus",
+    "state":"AZ",
+    "city":"Sierra Vista"
+  },
+  {
+    "unitid":497213,
+    "name":"Great Northern University",
+    "state":"AZ",
+    "city":"Mesa"
+  },
+  {
+    "unitid":497338,
+    "name":"Glendale Career College-North-West College-Bakersfield",
+    "state":"CA",
+    "city":"Fresno"
+  },
+  {
+    "unitid":498076,
+    "name":"Galen Health Institutes-Sarasota",
+    "state":"FL",
+    "city":"Lakeland"
+  },
+  {
+    "unitid":498085,
+    "name":"Galen Health Institutes-Gainesville",
+    "state":"FL",
+    "city":"Miami"
+  },
+  {
+    "unitid":498094,
+    "name":"Galen Health Institutes-Richmond",
+    "state":"FL",
+    "city":"Orlando"
+  },
+  {
+    "unitid":498100,
+    "name":"Galen Health Institutes-Myrtle Beach",
+    "state":"FL",
+    "city":"Sarasota"
+  },
+  {
+    "unitid":498119,
+    "name":"Galen Health Institutes-Asheville",
+    "state":"FL",
+    "city":"Jacksonville"
+  },
+  {
+    "unitid":498474,
+    "name":"Galen Health Institutes-Houston",
+    "state":"MI",
+    "city":"Plymouth"
+  },
+  {
+    "unitid":498483,
+    "name":"Galen Health Institutes-Pikeville",
+    "state":"WA",
+    "city":"Spokane"
+  },
+  {
+    "unitid":499273,
+    "name":"Galen Health Institutes-Dallas",
+    "state":"LA",
+    "city":"St Amant"
+  },
+  {
+    "unitid":499282,
+    "name":"Galen Health Institutes-Roanoke",
+    "state":"LA",
+    "city":"Destrehan"
+  },
+  {
+    "unitid":499291,
+    "name":"Galen Health Institutes-Wichita",
+    "state":"LA",
+    "city":"St. Rose"
+  },
+  {
+    "unitid":499307,
+    "name":"Galen Health Institutes-Salt Lake City",
+    "state":"ME",
+    "city":"Wilton"
+  },
+  {
+    "unitid":499413,
+    "name":"Glendale Career College-North-West College-MFSON",
+    "state":"MI",
+    "city":"Warren"
+  },
+  {
+    "unitid":499495,
+    "name":"Gwinnett Institute",
+    "state":"MI",
+    "city":"Lansing"
+  },
+  {
+    "unitid":499671,
+    "name":"Galen Health Institutes-Las Vegas",
+    "state":"MN",
+    "city":"Detroit Lakes"
+  }
+]

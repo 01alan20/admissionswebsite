@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 183026,
+    "name": "Southern New Hampshire University",
+    "city": "South Plainfield",
+    "state": "NJ",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
+    "website": "www.lincolntech.edu/campus/south-plainfield-nj",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Psychology",
+      "Health Professions",
+      "Computer & Information Sciences"
+    ],
+    "intl_enrollment_pct": 1,
+    "tuition_summary": {
+      "sticker": 16450.0,
+      "in_state": 15380.0,
+      "out_of_state": 15380.0
+    },
+    "outcomes": {
+      "acceptance_rate": 96,
+      "yield": 35,
+      "grad_rate_6yr": 48,
+      "retention_full_time": 60,
+      "student_faculty_ratio": 24,
+      "total_enrollment": 184099
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

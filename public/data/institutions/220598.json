@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 220598,
+    "name": "Lane College",
+    "city": "Nashville",
+    "state": "TN",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Arts & Sciences Focus",
+    "website": "www.tnstate.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Social Sciences",
+      "Education",
+      "Homeland Security & Law Enforcement"
+    ],
+    "intl_enrollment_pct": 2,
+    "tuition_summary": {
+      "sticker": 11790.0,
+      "in_state": 11790.0,
+      "out_of_state": 11790.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": 17,
+      "retention_full_time": 45,
+      "student_faculty_ratio": 17,
+      "total_enrollment": 822
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

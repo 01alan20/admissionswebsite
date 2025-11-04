@@ -1,0 +1,60 @@
+{
+  "profile": {
+    "unitid": 152080,
+    "name": "University of Notre Dame",
+    "city": "Des Moines",
+    "state": "IA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: Very High Research Activity",
+    "website": "www.drake.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Social Sciences",
+      "Engineering",
+      "Mathematics & Statistics"
+    ],
+    "intl_enrollment_pct": 14,
+    "tuition_summary": {
+      "sticker": 62693.0,
+      "in_state": 60301.0,
+      "out_of_state": 60301.0
+    },
+    "outcomes": {
+      "acceptance_rate": 12,
+      "yield": 59,
+      "grad_rate_6yr": 97,
+      "retention_full_time": 98,
+      "student_faculty_ratio": 9,
+      "total_enrollment": 13174
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Gpa",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 142832,
+    "name": "Adler University",
+    "city": "Chicago",
+    "state": "IL",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Four-Year: Other Health Professions Schools",
+    "website": "www.ccc.edu/colleges/kennedy/pages/default.aspx",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Psychology",
+      "Health Professions",
+      "Public Administration & Social Service",
+      "Parks, Recreation & Fitness"
+    ],
+    "intl_enrollment_pct": 1,
+    "tuition_summary": {
+      "sticker": NaN,
+      "in_state": NaN,
+      "out_of_state": NaN
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": null,
+      "student_faculty_ratio": 1,
+      "total_enrollment": 1674
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

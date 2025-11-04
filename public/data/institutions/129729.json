@@ -1,0 +1,41 @@
+{
+  "profile": {
+    "unitid": 129729,
+    "name": "Naugatuck Valley Community College",
+    "city": "New Haven",
+    "state": "CT",
+    "control": "Public",
+    "level": "2-year",
+    "carnegie_basic": "Associate's Colleges: Mixed Transfer/Career & Technical-High Traditional",
+    "website": "https://www.yale.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [],
+    "intl_enrollment_pct": null,
+    "tuition_summary": {
+      "sticker": NaN,
+      "in_state": 4740.0,
+      "out_of_state": 14140.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": null,
+      "student_faculty_ratio": null,
+      "total_enrollment": null
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

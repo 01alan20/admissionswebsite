@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 147536,
+    "name": "National Louis University",
+    "city": "Chicago",
+    "state": "IL",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral/Professional Universities",
+    "website": "https://www.sxu.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Education",
+      "Psychology",
+      "Business, Management & Marketing",
+      "Health Professions"
+    ],
+    "intl_enrollment_pct": 4,
+    "tuition_summary": {
+      "sticker": 12345.0,
+      "in_state": 11580.0,
+      "out_of_state": 11580.0
+    },
+    "outcomes": {
+      "acceptance_rate": 93,
+      "yield": 20,
+      "grad_rate_6yr": 37,
+      "retention_full_time": 56,
+      "student_faculty_ratio": 17,
+      "total_enrollment": 8270
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Personal Statement Or Essay",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Recommendations",
+      "Secondary School Rank"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 191931,
+    "name": "Iona University",
+    "city": "Mount Vernon",
+    "state": "NY",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
+    "website": "montefiorenewrochelle.org/school-of-nursing",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Health Professions",
+      "Psychology",
+      "Communication & Journalism"
+    ],
+    "intl_enrollment_pct": 3,
+    "tuition_summary": {
+      "sticker": 45880.0,
+      "in_state": 44328.0,
+      "out_of_state": 44328.0
+    },
+    "outcomes": {
+      "acceptance_rate": 91,
+      "yield": 12,
+      "grad_rate_6yr": 57,
+      "retention_full_time": 80,
+      "student_faculty_ratio": 15,
+      "total_enrollment": 3720
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

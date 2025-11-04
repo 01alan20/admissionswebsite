@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 179715,
+    "name": "North Central Missouri College",
+    "city": "Lincoln",
+    "state": "NE",
+    "control": "Public",
+    "level": "2-year",
+    "carnegie_basic": "Associate's Colleges: High Career & Technical-High Traditional",
+    "website": "collegeofhairdesign.com/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Liberal Arts & Humanities",
+      "Agriculture & Natural Resources",
+      "Business, Management & Marketing"
+    ],
+    "intl_enrollment_pct": 1,
+    "tuition_summary": {
+      "sticker": 4950.0,
+      "in_state": 4260.0,
+      "out_of_state": 7350.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 71,
+      "student_faculty_ratio": 19,
+      "total_enrollment": 1847
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

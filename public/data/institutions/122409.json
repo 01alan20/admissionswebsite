@@ -1,0 +1,60 @@
+{
+  "profile": {
+    "unitid": 122409,
+    "name": "San Diego State University",
+    "city": "Santa Monica",
+    "state": "CA",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: High Research Activity",
+    "website": "https://www.smc.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Health Professions",
+      "Engineering",
+      "Social Sciences"
+    ],
+    "intl_enrollment_pct": 4,
+    "tuition_summary": {
+      "sticker": 8290.0,
+      "in_state": 8174.0,
+      "out_of_state": 20054.0
+    },
+    "outcomes": {
+      "acceptance_rate": 34,
+      "yield": 22,
+      "grad_rate_6yr": 78,
+      "retention_full_time": 90,
+      "student_faculty_ratio": 22,
+      "total_enrollment": 39241
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [],
+    "not_considered": [
+      "Admission Test Scores",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

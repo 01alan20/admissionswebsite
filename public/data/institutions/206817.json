@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 206817,
+    "name": "Bacone College",
+    "city": "Weatherford",
+    "state": "OK",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
+    "website": "https://www.swosu.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Parks, Recreation & Fitness",
+      "Health Professions",
+      "Business, Management & Marketing",
+      "Area, Ethnic & Cultural Studies"
+    ],
+    "intl_enrollment_pct": 2,
+    "tuition_summary": {
+      "sticker": 15060.0,
+      "in_state": 15060.0,
+      "out_of_state": 15060.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": 2,
+      "retention_full_time": 31,
+      "student_faculty_ratio": 13,
+      "total_enrollment": 106
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

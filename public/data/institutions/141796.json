@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 141796,
+    "name": "Kapiolani Community College",
+    "city": "Rock Island",
+    "state": "IL",
+    "control": "Public",
+    "level": "2-year",
+    "carnegie_basic": "Associate's Colleges: Mixed Transfer/Career & Technical-High Nontraditional",
+    "website": "www.augustana.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Liberal Arts & Humanities",
+      "Health Professions",
+      "Business, Management & Marketing",
+      "Personal & Culinary Services"
+    ],
+    "intl_enrollment_pct": 7,
+    "tuition_summary": {
+      "sticker": 3284.0,
+      "in_state": 3284.0,
+      "out_of_state": 8420.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 62,
+      "student_faculty_ratio": 15,
+      "total_enrollment": 5822
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

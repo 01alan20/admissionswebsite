@@ -1,0 +1,57 @@
+{
+  "profile": {
+    "unitid": 486488,
+    "name": "California Jazz Conservatory",
+    "city": "Glendale",
+    "state": "CA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Four-Year: Arts, Music & Design Schools",
+    "website": "https://www.alu.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Visual & Performing Arts"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 23700.0,
+      "in_state": 22800.0,
+      "out_of_state": 22800.0
+    },
+    "outcomes": {
+      "acceptance_rate": 100,
+      "yield": 100,
+      "grad_rate_6yr": 33,
+      "retention_full_time": null,
+      "student_faculty_ratio": 4,
+      "total_enrollment": 20
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [],
+    "not_considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

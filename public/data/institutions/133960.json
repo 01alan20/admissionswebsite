@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 133960,
+    "name": "The College of the Florida Keys",
+    "city": "Eustis",
+    "state": "FL",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate/Associate's Colleges: Associate's Dominant",
+    "website": "www.laketech.org/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Homeland Security & Law Enforcement",
+      "Health Professions",
+      "Liberal Arts & Humanities",
+      "Business, Management & Marketing"
+    ],
+    "intl_enrollment_pct": 2,
+    "tuition_summary": {
+      "sticker": 3279.0,
+      "in_state": 3276.0,
+      "out_of_state": 13162.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": null,
+      "student_faculty_ratio": 10,
+      "total_enrollment": 854
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

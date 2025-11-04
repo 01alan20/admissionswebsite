@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 225511,
+    "name": "University of Houston",
+    "city": "Dallas",
+    "state": "TX",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: Very High Research Activity",
+    "website": "www.pqc.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Engineering",
+      "Computer & Information Sciences",
+      "Health Professions"
+    ],
+    "intl_enrollment_pct": 10,
+    "tuition_summary": {
+      "sticker": 9711.0,
+      "in_state": 9699.0,
+      "out_of_state": 21891.0
+    },
+    "outcomes": {
+      "acceptance_rate": 70,
+      "yield": 27,
+      "grad_rate_6yr": 65,
+      "retention_full_time": 86,
+      "student_faculty_ratio": 21,
+      "total_enrollment": 46676
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Rank",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Formal Demonstration Of Competencies",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

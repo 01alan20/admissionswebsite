@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 133553,
+    "name": "Embry-Riddle Aeronautical University-Daytona Beach",
+    "city": "Fort Lauderdale",
+    "state": "FL",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
+    "website": "www.keycollege.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Transportation & Materials Moving",
+      "Engineering",
+      "Business, Management & Marketing",
+      "Homeland Security & Law Enforcement"
+    ],
+    "intl_enrollment_pct": 11,
+    "tuition_summary": {
+      "sticker": 42304.0,
+      "in_state": 40564.0,
+      "out_of_state": 40564.0
+    },
+    "outcomes": {
+      "acceptance_rate": 66,
+      "yield": 28,
+      "grad_rate_6yr": 68,
+      "retention_full_time": 85,
+      "student_faculty_ratio": 18,
+      "total_enrollment": 11070
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Rank"
+    ],
+    "not_considered": [
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

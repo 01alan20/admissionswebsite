@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 204796,
+    "name": "Ohio State University-Main Campus",
+    "city": "North Canton",
+    "state": "OH",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: Very High Research Activity",
+    "website": "https://www.walsh.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Health Professions",
+      "Engineering",
+      "Biological & Biomedical Sciences"
+    ],
+    "intl_enrollment_pct": 10,
+    "tuition_summary": {
+      "sticker": 12859.0,
+      "in_state": 12485.0,
+      "out_of_state": 36722.0
+    },
+    "outcomes": {
+      "acceptance_rate": 51,
+      "yield": 23,
+      "grad_rate_6yr": 88,
+      "retention_full_time": 94,
+      "student_faculty_ratio": 18,
+      "total_enrollment": 60046
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Secondary School Gpa",
+      "Secondary School Rank",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Recommendations",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

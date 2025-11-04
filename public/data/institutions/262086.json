@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 262086,
+    "name": "University of Massachusetts Global",
+    "city": "Mobile",
+    "state": "AL",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral/Professional Universities",
+    "website": "https://www.remingtoncollege.edu/locations/mobile/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Education",
+      "Psychology",
+      "Health Professions"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 12520.0,
+      "in_state": 12520.0,
+      "out_of_state": 12520.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 42,
+      "student_faculty_ratio": 28,
+      "total_enrollment": 9069
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

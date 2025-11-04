@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 170091,
+    "name": "Great Lakes Christian College",
+    "city": "Olivet",
+    "state": "MI",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
+    "website": "https://www.olivetcollege.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Theology & Religious Vocations",
+      "Liberal Arts & Humanities",
+      "Business, Management & Marketing",
+      "Communication & Journalism"
+    ],
+    "intl_enrollment_pct": 5,
+    "tuition_summary": {
+      "sticker": 19990.0,
+      "in_state": 17220.0,
+      "out_of_state": 17220.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": 22,
+      "retention_full_time": 39,
+      "student_faculty_ratio": 13,
+      "total_enrollment": 130
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

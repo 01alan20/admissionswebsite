@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 226116,
+    "name": "Lamar State College-Port Arthur",
+    "city": "Kerrville",
+    "state": "TX",
+    "control": "Public",
+    "level": "2-year",
+    "carnegie_basic": "Associate's Colleges: High Career & Technical-High Traditional",
+    "website": "www.schreiner.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Liberal Arts & Humanities",
+      "Science Technologies",
+      "Personal & Culinary Services"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 1770.0,
+      "in_state": 1770.0,
+      "out_of_state": 7890.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 63,
+      "student_faculty_ratio": 22,
+      "total_enrollment": 3802
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 234173,
+    "name": "Virginia Wesleyan University",
+    "city": "Mount Vernon",
+    "state": "WA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Arts & Sciences Focus",
+    "website": "www.skagit.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Biological & Biomedical Sciences",
+      "Social Sciences",
+      "Homeland Security & Law Enforcement"
+    ],
+    "intl_enrollment_pct": 3,
+    "tuition_summary": {
+      "sticker": 36960.0,
+      "in_state": 36910.0,
+      "out_of_state": 36910.0
+    },
+    "outcomes": {
+      "acceptance_rate": 71,
+      "yield": 20,
+      "grad_rate_6yr": 49,
+      "retention_full_time": 67,
+      "student_faculty_ratio": 13,
+      "total_enrollment": 1711
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

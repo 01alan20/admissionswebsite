@@ -1,0 +1,45 @@
+{
+  "profile": {
+    "unitid": 218335,
+    "name": "Medical University of South Carolina",
+    "city": "Aberdeen",
+    "state": "SD",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Four-Year: Research Institutions",
+    "website": "www.presentation.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Biological & Biomedical Sciences",
+      "Education"
+    ],
+    "intl_enrollment_pct": 2,
+    "tuition_summary": {
+      "sticker": NaN,
+      "in_state": NaN,
+      "out_of_state": NaN
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": null,
+      "student_faculty_ratio": 8,
+      "total_enrollment": 3117
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

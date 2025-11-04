@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 158802,
+    "name": "Dillard University",
+    "city": "Covington",
+    "state": "LA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Arts & Sciences Focus",
+    "website": "avedaarts.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Health Professions",
+      "Biological & Biomedical Sciences",
+      "Homeland Security & Law Enforcement",
+      "Visual & Performing Arts"
+    ],
+    "intl_enrollment_pct": 2,
+    "tuition_summary": {
+      "sticker": 22194.0,
+      "in_state": 20224.0,
+      "out_of_state": 20224.0
+    },
+    "outcomes": {
+      "acceptance_rate": 41,
+      "yield": 8,
+      "grad_rate_6yr": 45,
+      "retention_full_time": 70,
+      "student_faculty_ratio": 11,
+      "total_enrollment": 1122
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Personal Statement Or Essay",
+      "Recommendations"
+    ],
+    "not_considered": [
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

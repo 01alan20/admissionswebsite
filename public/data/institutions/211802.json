@@ -1,0 +1,58 @@
+{
+  "profile": {
+    "unitid": 211802,
+    "name": "DLP Conemaugh Memorial Medical Center",
+    "city": "La Plume",
+    "state": "PA",
+    "control": "Private for-profit",
+    "level": "2-year",
+    "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
+    "website": "https://www.keystone.edu/",
+    "admissions_url": null,
+    "test_policy": "Required",
+    "major_families": [
+      "Health Professions"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": NaN,
+      "in_state": NaN,
+      "out_of_state": NaN
+    },
+    "outcomes": {
+      "acceptance_rate": 43,
+      "yield": 88,
+      "grad_rate_6yr": null,
+      "retention_full_time": 38,
+      "student_faculty_ratio": 7,
+      "total_enrollment": 108
+    }
+  },
+  "requirements": {
+    "required": [
+      "Admission Test Scores",
+      "Personal Statement Or Essay",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Completion Of College Preparatory Program",
+      "Recommendations",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Required"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

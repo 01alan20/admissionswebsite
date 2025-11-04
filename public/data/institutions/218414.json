@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 218414,
+    "name": "Newberry College",
+    "city": "Brookings",
+    "state": "SD",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
+    "website": "https://www.sdstate.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Health Professions",
+      "Parks, Recreation & Fitness",
+      "Education"
+    ],
+    "intl_enrollment_pct": 4,
+    "tuition_summary": {
+      "sticker": 30050.0,
+      "in_state": 29100.0,
+      "out_of_state": 29100.0
+    },
+    "outcomes": {
+      "acceptance_rate": 75,
+      "yield": 15,
+      "grad_rate_6yr": 44,
+      "retention_full_time": 70,
+      "student_faculty_ratio": 14,
+      "total_enrollment": 1507
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Gpa"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Rank",
+      "Secondary School Record",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

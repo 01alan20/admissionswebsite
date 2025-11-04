@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 203474,
+    "name": "Kent State University at Trumbull",
+    "city": "Columbus",
+    "state": "OH",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate/Associate's Colleges: Mixed Baccalaureate/Associate's",
+    "website": "https://www.ohiodominican.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Liberal Arts & Humanities",
+      "Homeland Security & Law Enforcement",
+      "Computer & Information Sciences",
+      "Business, Management & Marketing"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 7272.0,
+      "in_state": 7058.0,
+      "out_of_state": 16164.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": 1,
+      "retention_full_time": 51,
+      "student_faculty_ratio": 32,
+      "total_enrollment": 2029
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

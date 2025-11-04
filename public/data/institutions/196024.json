@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 196024,
+    "name": "SUNY College of Technology at Delhi",
+    "city": "Kings Point",
+    "state": "NY",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
+    "website": "https://www.usmma.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Business, Management & Marketing",
+      "Agriculture & Natural Resources",
+      "Homeland Security & Law Enforcement"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 8710.0,
+      "in_state": 8720.0,
+      "out_of_state": 12490.0
+    },
+    "outcomes": {
+      "acceptance_rate": 88,
+      "yield": 16,
+      "grad_rate_6yr": 56,
+      "retention_full_time": 68,
+      "student_faculty_ratio": 12,
+      "total_enrollment": 2777
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Formal Demonstration Of Competencies",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "Legacy Status",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

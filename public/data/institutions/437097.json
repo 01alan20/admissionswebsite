@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 437097,
+    "name": "University of Management and Technology",
+    "city": "Liverpool",
+    "state": "NY",
+    "control": "Private for-profit",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral/Professional Universities",
+    "website": "ocmboces.org/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Computer & Information Sciences",
+      "Homeland Security & Law Enforcement",
+      "Engineering Technologies"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 9450.0,
+      "in_state": 9450.0,
+      "out_of_state": 9450.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": null,
+      "student_faculty_ratio": 30,
+      "total_enrollment": 1167
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

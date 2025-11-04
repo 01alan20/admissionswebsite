@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 151290,
+    "name": "Indiana Institute of Technology",
+    "city": "St. Meinrad",
+    "state": "IN",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
+    "website": "https://www.saintmeinrad.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Engineering Technologies",
+      "Psychology",
+      "Engineering"
+    ],
+    "intl_enrollment_pct": 22,
+    "tuition_summary": {
+      "sticker": 30446.0,
+      "in_state": 29560.0,
+      "out_of_state": 29560.0
+    },
+    "outcomes": {
+      "acceptance_rate": 57,
+      "yield": 13,
+      "grad_rate_6yr": 35,
+      "retention_full_time": 66,
+      "student_faculty_ratio": 16,
+      "total_enrollment": 2862
+    }
+  },
+  "requirements": {
+    "required": [
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Completion Of College Preparatory Program",
+      "Recommendations"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

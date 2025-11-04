@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 123952,
+    "name": "Southern California Institute of Architecture",
+    "city": "Culver City",
+    "state": "CA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Four-Year: Other Special Focus Institutions",
+    "website": "www.wlac.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Architecture & Planning",
+      "Communications Technologies",
+      "Natural Resources & Conservation",
+      "Education"
+    ],
+    "intl_enrollment_pct": 58,
+    "tuition_summary": {
+      "sticker": 53564.0,
+      "in_state": 50690.0,
+      "out_of_state": 50690.0
+    },
+    "outcomes": {
+      "acceptance_rate": 83,
+      "yield": 7,
+      "grad_rate_6yr": 70,
+      "retention_full_time": 82,
+      "student_faculty_ratio": 9,
+      "total_enrollment": 457
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 134510,
+    "name": "Hobe Sound Bible College",
+    "city": "Coral Gables",
+    "state": "FL",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
+    "website": "www.miami.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Education",
+      "Liberal Arts & Humanities",
+      "Theology & Religious Vocations",
+      "Psychology"
+    ],
+    "intl_enrollment_pct": 9,
+    "tuition_summary": {
+      "sticker": 9068.0,
+      "in_state": 7960.0,
+      "out_of_state": 7960.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": 67,
+      "retention_full_time": 71,
+      "student_faculty_ratio": 10,
+      "total_enrollment": 156
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

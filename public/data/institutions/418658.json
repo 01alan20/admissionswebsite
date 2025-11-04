@@ -1,0 +1,45 @@
+{
+  "profile": {
+    "unitid": 418658,
+    "name": "All-State Career School-Pittsburgh",
+    "city": "Newport",
+    "state": "OR",
+    "control": "Private for-profit",
+    "level": "2-year",
+    "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
+    "website": "www.oregoncoastcc.org/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Transportation & Materials Moving",
+      "Mechanic & Repair Technologies",
+      "Precision Production"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": NaN,
+      "in_state": NaN,
+      "out_of_state": NaN
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 74,
+      "student_faculty_ratio": 18,
+      "total_enrollment": 418
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

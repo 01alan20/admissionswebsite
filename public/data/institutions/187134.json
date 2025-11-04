@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 187134,
+    "name": "The College of New Jersey",
+    "city": "Albany",
+    "state": "NY",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
+    "website": "www.amc.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Education",
+      "Business, Management & Marketing",
+      "Health Professions",
+      "Engineering"
+    ],
+    "intl_enrollment_pct": 1,
+    "tuition_summary": {
+      "sticker": 18685.0,
+      "in_state": 17978.0,
+      "out_of_state": 30772.0
+    },
+    "outcomes": {
+      "acceptance_rate": 62,
+      "yield": 21,
+      "grad_rate_6yr": 85,
+      "retention_full_time": 90,
+      "student_faculty_ratio": 13,
+      "total_enrollment": 7652
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

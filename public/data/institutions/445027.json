@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 445027,
+    "name": "American InterContinental University System",
+    "city": "Jasper",
+    "state": "TX",
+    "control": "Private for-profit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
+    "website": "lufkinhairdesign.com/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Homeland Security & Law Enforcement",
+      "Health Professions",
+      "Computer & Information Sciences"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 12310.0,
+      "in_state": 12422.0,
+      "out_of_state": 12422.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": 16,
+      "retention_full_time": 20,
+      "student_faculty_ratio": 34,
+      "total_enrollment": 10997
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

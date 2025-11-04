@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 122931,
+    "name": "Santa Clara University",
+    "city": "Fairfield",
+    "state": "CA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral/Professional Universities",
+    "website": "www.solano.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Engineering",
+      "Psychology",
+      "Legal Studies"
+    ],
+    "intl_enrollment_pct": 16,
+    "tuition_summary": {
+      "sticker": 59241.0,
+      "in_state": 57534.0,
+      "out_of_state": 57534.0
+    },
+    "outcomes": {
+      "acceptance_rate": 44,
+      "yield": 19,
+      "grad_rate_6yr": 88,
+      "retention_full_time": 94,
+      "student_faculty_ratio": 10,
+      "total_enrollment": 9340
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Legacy Status",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

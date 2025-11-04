@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 212577,
+    "name": "Franklin and Marshall College",
+    "city": "Nanticoke",
+    "state": "PA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Arts & Sciences Focus",
+    "website": "www.luzerne.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Multidisciplinary Studies",
+      "Social Sciences",
+      "Biological & Biomedical Sciences",
+      "Business, Management & Marketing"
+    ],
+    "intl_enrollment_pct": 17,
+    "tuition_summary": {
+      "sticker": 68380.0,
+      "in_state": 65844.0,
+      "out_of_state": 65844.0
+    },
+    "outcomes": {
+      "acceptance_rate": 32,
+      "yield": 19,
+      "grad_rate_6yr": 86,
+      "retention_full_time": 85,
+      "student_faculty_ratio": 9,
+      "total_enrollment": 1911
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

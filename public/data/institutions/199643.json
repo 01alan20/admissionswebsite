@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 199643,
+    "name": "Shaw University",
+    "city": "Belcourt",
+    "state": "ND",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
+    "website": "www.tm.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Theology & Religious Vocations",
+      "Parks, Recreation & Fitness",
+      "Communication & Journalism"
+    ],
+    "intl_enrollment_pct": 9,
+    "tuition_summary": {
+      "sticker": 17176.0,
+      "in_state": 16480.0,
+      "out_of_state": 16480.0
+    },
+    "outcomes": {
+      "acceptance_rate": 30,
+      "yield": 6,
+      "grad_rate_6yr": 20,
+      "retention_full_time": 56,
+      "student_faculty_ratio": 11,
+      "total_enrollment": 962
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Rank"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "Formal Demonstration Of Competencies",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Work Experience"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

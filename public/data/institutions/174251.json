@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 174251,
+    "name": "University of Minnesota-Morris",
+    "city": "Alcorn State",
+    "state": "MS",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Arts & Sciences Focus",
+    "website": "www.alcorn.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Psychology",
+      "Biological & Biomedical Sciences",
+      "Computer & Information Sciences",
+      "Natural Resources & Conservation"
+    ],
+    "intl_enrollment_pct": 4,
+    "tuition_summary": {
+      "sticker": 14288.0,
+      "in_state": 14120.0,
+      "out_of_state": 16250.0
+    },
+    "outcomes": {
+      "acceptance_rate": 70,
+      "yield": 11,
+      "grad_rate_6yr": 62,
+      "retention_full_time": 73,
+      "student_faculty_ratio": 9,
+      "total_enrollment": 1020
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Rank",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Personal Statement Or Essay",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Recommendations"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

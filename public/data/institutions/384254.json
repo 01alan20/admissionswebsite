@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 384254,
+    "name": "Beacon College",
+    "city": "Sarasota",
+    "state": "FL",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
+    "website": "https://www.sarasotaschoolofmassagetherapy.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Computer & Information Sciences",
+      "Multidisciplinary Studies",
+      "Business, Management & Marketing",
+      "Public Administration & Social Service"
+    ],
+    "intl_enrollment_pct": 1,
+    "tuition_summary": {
+      "sticker": 49230.0,
+      "in_state": 47110.0,
+      "out_of_state": 47110.0
+    },
+    "outcomes": {
+      "acceptance_rate": 60,
+      "yield": 35,
+      "grad_rate_6yr": 53,
+      "retention_full_time": 76,
+      "student_faculty_ratio": 12,
+      "total_enrollment": 527
+    }
+  },
+  "requirements": {
+    "required": [
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Secondary School Rank"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

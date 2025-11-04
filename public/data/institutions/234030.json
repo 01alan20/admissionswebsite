@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 234030,
+    "name": "Virginia Commonwealth University",
+    "city": "Renton",
+    "state": "WA",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: Very High Research Activity",
+    "website": "www.rtc.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Health Professions",
+      "Business, Management & Marketing",
+      "Education",
+      "Visual & Performing Arts"
+    ],
+    "intl_enrollment_pct": 4,
+    "tuition_summary": {
+      "sticker": 16458.0,
+      "in_state": 15828.0,
+      "out_of_state": 37786.0
+    },
+    "outcomes": {
+      "acceptance_rate": 93,
+      "yield": 25,
+      "grad_rate_6yr": 65,
+      "retention_full_time": 86,
+      "student_faculty_ratio": 17,
+      "total_enrollment": 28238
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Personal Statement Or Essay",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Recommendations",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

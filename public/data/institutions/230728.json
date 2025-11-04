@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 230728,
+    "name": "Utah State University",
+    "city": "Harrisonburg",
+    "state": "VA",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: Very High Research Activity",
+    "website": "www.jmu.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Liberal Arts & Humanities",
+      "Business, Management & Marketing",
+      "Health Professions",
+      "Education"
+    ],
+    "intl_enrollment_pct": 2,
+    "tuition_summary": {
+      "sticker": 9228.0,
+      "in_state": 9228.0,
+      "out_of_state": 24802.0
+    },
+    "outcomes": {
+      "acceptance_rate": 94,
+      "yield": 24,
+      "grad_rate_6yr": 55,
+      "retention_full_time": 74,
+      "student_faculty_ratio": 19,
+      "total_enrollment": 28063
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Secondary School Rank"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

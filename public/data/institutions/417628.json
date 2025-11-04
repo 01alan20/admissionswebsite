@@ -1,0 +1,60 @@
+{
+  "profile": {
+    "unitid": 417628,
+    "name": "Kirksville Area Technical Center",
+    "city": "San Luis Obispo",
+    "state": "CA",
+    "control": "Public",
+    "level": "2-year",
+    "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
+    "website": "ccsce.org/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Mechanic & Repair Technologies",
+      "Communications Technologies",
+      "Family & Consumer Sciences"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": NaN,
+      "in_state": NaN,
+      "out_of_state": NaN
+    },
+    "outcomes": {
+      "acceptance_rate": 50,
+      "yield": 83,
+      "grad_rate_6yr": null,
+      "retention_full_time": 100,
+      "student_faculty_ratio": 3,
+      "total_enrollment": 21
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [],
+    "not_considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

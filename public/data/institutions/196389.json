@@ -1,0 +1,44 @@
+{
+  "profile": {
+    "unitid": 196389,
+    "name": "Swedish Institute a College of Health Sciences",
+    "city": "Greensboro",
+    "state": "NC",
+    "control": "Private for-profit",
+    "level": "2-year",
+    "carnegie_basic": "Special Focus Two-Year: Health Professions",
+    "website": "https://www.bennett.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Parks, Recreation & Fitness"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 26041.0,
+      "in_state": 26041.0,
+      "out_of_state": 26041.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 22,
+      "student_faculty_ratio": 25,
+      "total_enrollment": 1160
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 190150,
+    "name": "Columbia University in the City of New York",
+    "city": "Dix Hills",
+    "state": "NY",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: Very High Research Activity",
+    "website": "www.ftc.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Engineering",
+      "Computer & Information Sciences",
+      "Health Professions"
+    ],
+    "intl_enrollment_pct": 39,
+    "tuition_summary": {
+      "sticker": 69045.0,
+      "in_state": 66139.0,
+      "out_of_state": 66139.0
+    },
+    "outcomes": {
+      "acceptance_rate": 4,
+      "yield": 63,
+      "grad_rate_6yr": 95,
+      "retention_full_time": 97,
+      "student_faculty_ratio": 6,
+      "total_enrollment": 35279
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Rank",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

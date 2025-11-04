@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 144050,
+    "name": "University of Chicago",
+    "city": "Canton",
+    "state": "IL",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: Very High Research Activity",
+    "website": "grahamschoolofnursing.org/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Social Sciences",
+      "Business, Management & Marketing",
+      "Computer & Information Sciences",
+      "Mathematics & Statistics"
+    ],
+    "intl_enrollment_pct": 31,
+    "tuition_summary": {
+      "sticker": 66939.0,
+      "in_state": 64260.0,
+      "out_of_state": 64260.0
+    },
+    "outcomes": {
+      "acceptance_rate": 5,
+      "yield": 88,
+      "grad_rate_6yr": 95,
+      "retention_full_time": 99,
+      "student_faculty_ratio": 5,
+      "total_enrollment": 18339
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Secondary School Gpa",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

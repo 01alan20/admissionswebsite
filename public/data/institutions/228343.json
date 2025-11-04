@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 228343,
+    "name": "Southwestern University",
+    "city": "Snyder",
+    "state": "TX",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Arts & Sciences Focus",
+    "website": "www.wtc.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Social Sciences",
+      "Psychology",
+      "Parks, Recreation & Fitness"
+    ],
+    "intl_enrollment_pct": 2,
+    "tuition_summary": {
+      "sticker": 51058.0,
+      "in_state": 48650.0,
+      "out_of_state": 48650.0
+    },
+    "outcomes": {
+      "acceptance_rate": 39,
+      "yield": 16,
+      "grad_rate_6yr": 69,
+      "retention_full_time": 83,
+      "student_faculty_ratio": 11,
+      "total_enrollment": 1457
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Legacy Status",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

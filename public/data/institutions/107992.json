@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 107992,
+    "name": "Southern Arkansas University Tech",
+    "city": "San Francisco",
+    "state": "CA",
+    "control": "Public",
+    "level": "2-year",
+    "carnegie_basic": "Associate's Colleges: High Career & Technical-Mixed Traditional/Nontraditional",
+    "website": "www.academyart.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Computer & Information Sciences",
+      "Homeland Security & Law Enforcement",
+      "Liberal Arts & Humanities"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 4685.0,
+      "in_state": 4519.0,
+      "out_of_state": 4519.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 57,
+      "student_faculty_ratio": 10,
+      "total_enrollment": 939
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

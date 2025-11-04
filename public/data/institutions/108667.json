@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 108667,
+    "name": "College of Alameda",
+    "city": "Los Angeles",
+    "state": "CA",
+    "control": "Public",
+    "level": "2-year",
+    "carnegie_basic": "Associate's Colleges: High Transfer-High Nontraditional",
+    "website": "www.afi.com/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Liberal Arts & Humanities",
+      "Mechanic & Repair Technologies",
+      "Social Sciences",
+      "Business, Management & Marketing"
+    ],
+    "intl_enrollment_pct": 1,
+    "tuition_summary": {
+      "sticker": 1148.0,
+      "in_state": 1148.0,
+      "out_of_state": 8684.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 56,
+      "student_faculty_ratio": 35,
+      "total_enrollment": 5833
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

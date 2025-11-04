@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 176008,
+    "name": "Mississippi Delta Community College",
+    "city": "Saint Louis",
+    "state": "MO",
+    "control": "Public",
+    "level": "2-year",
+    "carnegie_basic": "Associate's Colleges: Mixed Transfer/Career & Technical-Mixed Traditional/Nontraditional",
+    "website": "www.covenantseminary.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Business, Management & Marketing",
+      "Liberal Arts & Humanities",
+      "Mechanic & Repair Technologies"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 3540.0,
+      "in_state": 3380.0,
+      "out_of_state": 5980.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 61,
+      "student_faculty_ratio": 17,
+      "total_enrollment": 2037
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

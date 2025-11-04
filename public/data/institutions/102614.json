@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 102614,
+    "name": "University of Alaska Fairbanks",
+    "city": "Juneau",
+    "state": "AK",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: High Research Activity",
+    "website": "www.uas.alaska.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Education",
+      "Health Professions",
+      "Homeland Security & Law Enforcement"
+    ],
+    "intl_enrollment_pct": 3,
+    "tuition_summary": {
+      "sticker": 8640.0,
+      "in_state": 7896.0,
+      "out_of_state": 22032.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": 33,
+      "retention_full_time": 72,
+      "student_faculty_ratio": 12,
+      "total_enrollment": 6640
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

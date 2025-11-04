@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 488846,
+    "name": "University of the People",
+    "city": "Hammond",
+    "state": "IN",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
+    "website": "www.pnw.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Education",
+      "Computer & Information Sciences",
+      "Health Professions"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 1200.0,
+      "in_state": 1200.0,
+      "out_of_state": 1200.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": 28,
+      "retention_full_time": 79,
+      "student_faculty_ratio": 27,
+      "total_enrollment": 42867
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

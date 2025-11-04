@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 186371,
+    "name": "Rutgers University-Camden",
+    "city": "Espanola",
+    "state": "NM",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: High Research Activity",
+    "website": "https://nnmc.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Health Professions",
+      "Legal Studies",
+      "Psychology"
+    ],
+    "intl_enrollment_pct": 4,
+    "tuition_summary": {
+      "sticker": 17079.0,
+      "in_state": 16112.0,
+      "out_of_state": 33812.0
+    },
+    "outcomes": {
+      "acceptance_rate": 78,
+      "yield": 6,
+      "grad_rate_6yr": 66,
+      "retention_full_time": 82,
+      "student_faculty_ratio": 12,
+      "total_enrollment": 5776
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Secondary School Rank"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Recommendations",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

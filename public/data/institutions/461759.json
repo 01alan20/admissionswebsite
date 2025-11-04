@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 461759,
+    "name": "Simmons College of Kentucky",
+    "city": "Pine Brook",
+    "state": "NJ",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Arts & Sciences Focus",
+    "website": "https://www.christinevalmy.com/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Theology & Religious Vocations",
+      "Business, Management & Marketing",
+      "Liberal Arts & Humanities",
+      "Social Sciences"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 16398.0,
+      "in_state": 16398.0,
+      "out_of_state": 16398.0
+    },
+    "outcomes": {
+      "acceptance_rate": 98,
+      "yield": 61,
+      "grad_rate_6yr": 20,
+      "retention_full_time": 51,
+      "student_faculty_ratio": 8,
+      "total_enrollment": 389
+    }
+  },
+  "requirements": {
+    "required": [
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Completion Of College Preparatory Program",
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

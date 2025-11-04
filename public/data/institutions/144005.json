@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 144005,
+    "name": "Chicago State University",
+    "city": "Quincy",
+    "state": "IL",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
+    "website": "www.gemcitycollege.com/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Psychology",
+      "Business, Management & Marketing",
+      "Education"
+    ],
+    "intl_enrollment_pct": 8,
+    "tuition_summary": {
+      "sticker": 12754.0,
+      "in_state": 12018.0,
+      "out_of_state": 12018.0
+    },
+    "outcomes": {
+      "acceptance_rate": 41,
+      "yield": 6,
+      "grad_rate_6yr": 17,
+      "retention_full_time": 47,
+      "student_faculty_ratio": 10,
+      "total_enrollment": 2324
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Gpa"
+    ],
+    "considered": [
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Record"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

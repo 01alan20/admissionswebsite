@@ -1,0 +1,1064 @@
+[
+  {
+    "unitid":101189,
+    "name":"Faulkner University",
+    "state":"AL",
+    "city":"Gadsden"
+  },
+  {
+    "unitid":114354,
+    "name":"FIDM-Fashion Institute of Design & Merchandising",
+    "state":"CA",
+    "city":"San Diego"
+  },
+  {
+    "unitid":114433,
+    "name":"Feather River Community College District",
+    "state":"CA",
+    "city":"Eureka"
+  },
+  {
+    "unitid":114460,
+    "name":"Federico Beauty Institute",
+    "state":"CA",
+    "city":"Fresno"
+  },
+  {
+    "unitid":114549,
+    "name":"Fielding Graduate University",
+    "state":"CA",
+    "city":"Fresno"
+  },
+  {
+    "unitid":114585,
+    "name":"Five Branches University",
+    "state":"CA",
+    "city":"Pasadena"
+  },
+  {
+    "unitid":114716,
+    "name":"Foothill College",
+    "state":"CA",
+    "city":"Gilroy"
+  },
+  {
+    "unitid":114734,
+    "name":"Franciscan School of Theology",
+    "state":"CA",
+    "city":"Carlsbad"
+  },
+  {
+    "unitid":114761,
+    "name":"Fredrick and Charles Beauty College",
+    "state":"CA",
+    "city":"Glendale"
+  },
+  {
+    "unitid":114789,
+    "name":"Fresno City College",
+    "state":"CA",
+    "city":"Glendale"
+  },
+  {
+    "unitid":114813,
+    "name":"Fresno Pacific University",
+    "state":"CA",
+    "city":"San Francisco"
+  },
+  {
+    "unitid":114831,
+    "name":"Foothill-De Anza Community College District",
+    "state":"CA",
+    "city":"Huntington Beach"
+  },
+  {
+    "unitid":114840,
+    "name":"Fuller Theological Seminary",
+    "state":"CA",
+    "city":"Berkeley"
+  },
+  {
+    "unitid":114859,
+    "name":"Fullerton College",
+    "state":"CA",
+    "city":"El Cajon"
+  },
+  {
+    "unitid":127185,
+    "name":"Fort Lewis College",
+    "state":"CO",
+    "city":"Grand Junction"
+  },
+  {
+    "unitid":127200,
+    "name":"Front Range Community College",
+    "state":"CO",
+    "city":"Trinidad"
+  },
+  {
+    "unitid":129242,
+    "name":"Fairfield University",
+    "state":"CT",
+    "city":"Hamden"
+  },
+  {
+    "unitid":133508,
+    "name":"Florida SouthWestern State College",
+    "state":"FL",
+    "city":"Miami"
+  },
+  {
+    "unitid":133650,
+    "name":"Florida Agricultural and Mechanical University",
+    "state":"FL",
+    "city":"Tampa"
+  },
+  {
+    "unitid":133669,
+    "name":"Florida Atlantic University",
+    "state":"FL",
+    "city":"Hobe Sound"
+  },
+  {
+    "unitid":133702,
+    "name":"Florida State College at Jacksonville",
+    "state":"FL",
+    "city":"Hollywood"
+  },
+  {
+    "unitid":133711,
+    "name":"Flagler College",
+    "state":"FL",
+    "city":"St. Petersburg"
+  },
+  {
+    "unitid":133809,
+    "name":"Florida College",
+    "state":"FL",
+    "city":"Fort Pierce"
+  },
+  {
+    "unitid":133881,
+    "name":"Florida Institute of Technology",
+    "state":"FL",
+    "city":"Hialeah"
+  },
+  {
+    "unitid":133951,
+    "name":"Florida International University",
+    "state":"FL",
+    "city":"Lake City"
+  },
+  {
+    "unitid":133979,
+    "name":"Florida Memorial University",
+    "state":"FL",
+    "city":"Leesburg"
+  },
+  {
+    "unitid":133997,
+    "name":"Florida Career College-Miami",
+    "state":"FL",
+    "city":"Fort Myers"
+  },
+  {
+    "unitid":134024,
+    "name":"Florida School of Massage",
+    "state":"FL",
+    "city":"Tallahassee"
+  },
+  {
+    "unitid":134079,
+    "name":"Florida Southern College",
+    "state":"FL",
+    "city":"Miami"
+  },
+  {
+    "unitid":134097,
+    "name":"Florida State University",
+    "state":"FL",
+    "city":"Saint Petersburg"
+  },
+  {
+    "unitid":134228,
+    "name":"Fort Pierce Beauty Academy",
+    "state":"FL",
+    "city":"Bradenton"
+  },
+  {
+    "unitid":134237,
+    "name":"Full Sail University",
+    "state":"FL",
+    "city":"Bradenton"
+  },
+  {
+    "unitid":135160,
+    "name":"Florida Gateway College",
+    "state":"FL",
+    "city":"Lake Worth"
+  },
+  {
+    "unitid":135267,
+    "name":"Fort Myers Technical College",
+    "state":"FL",
+    "city":"Clearwater"
+  },
+  {
+    "unitid":137023,
+    "name":"First Coast Technical College",
+    "state":"FL",
+    "city":"Trinity"
+  },
+  {
+    "unitid":138284,
+    "name":"Florida Panhandle Technical College",
+    "state":"GA",
+    "city":"Mount Berry"
+  },
+  {
+    "unitid":139719,
+    "name":"Fort Valley State University",
+    "state":"GA",
+    "city":"Atlanta"
+  },
+  {
+    "unitid":145099,
+    "name":"First Institute of Travel, Inc.",
+    "state":"IL",
+    "city":"Joliet"
+  },
+  {
+    "unitid":145239,
+    "name":"Fox College",
+    "state":"IL",
+    "city":"Elgin"
+  },
+  {
+    "unitid":150604,
+    "name":"Franklin College",
+    "state":"IN",
+    "city":"Elkhart"
+  },
+  {
+    "unitid":153320,
+    "name":"Faith Baptist Bible College and Theological Seminary",
+    "state":"IA",
+    "city":"Mason City"
+  },
+  {
+    "unitid":155052,
+    "name":"Flint Hills Technical College",
+    "state":"KS",
+    "city":"Goodland"
+  },
+  {
+    "unitid":155061,
+    "name":"Fort Hays State University",
+    "state":"KS",
+    "city":"Ottawa"
+  },
+  {
+    "unitid":155089,
+    "name":"Friends University",
+    "state":"KS",
+    "city":"Pittsburg"
+  },
+  {
+    "unitid":155098,
+    "name":"Fort Scott Community College",
+    "state":"KS",
+    "city":"Pratt"
+  },
+  {
+    "unitid":156727,
+    "name":"Frontier Nursing University",
+    "state":"KY",
+    "city":"Louisville"
+  },
+  {
+    "unitid":160074,
+    "name":"Franciscan Missionaries of Our Lady University",
+    "state":"ME",
+    "city":"Farmington"
+  },
+  {
+    "unitid":160481,
+    "name":"Fletcher Technical Community College",
+    "state":"ME",
+    "city":"Portland"
+  },
+  {
+    "unitid":162557,
+    "name":"Frederick Community College",
+    "state":"MD",
+    "city":"Laurel"
+  },
+  {
+    "unitid":162584,
+    "name":"Frostburg State University",
+    "state":"MD",
+    "city":"Annapolis"
+  },
+  {
+    "unitid":163347,
+    "name":"Fortis Institute-Towson",
+    "state":"MA",
+    "city":"Boston"
+  },
+  {
+    "unitid":165802,
+    "name":"Fisher College",
+    "state":"MA",
+    "city":"Beverly"
+  },
+  {
+    "unitid":165820,
+    "name":"Fitchburg State University",
+    "state":"MA",
+    "city":"South Hadley"
+  },
+  {
+    "unitid":165866,
+    "name":"Framingham State University",
+    "state":"MA",
+    "city":"Gardner"
+  },
+  {
+    "unitid":169910,
+    "name":"Ferris State University",
+    "state":"MI",
+    "city":"Sidney"
+  },
+  {
+    "unitid":172440,
+    "name":"Finlandia University",
+    "state":"MN",
+    "city":"Hibbing"
+  },
+  {
+    "unitid":175698,
+    "name":"Fosters Cosmetology College",
+    "state":"MO",
+    "city":"Cape Girardeau"
+  },
+  {
+    "unitid":177418,
+    "name":"Fontbonne University",
+    "state":"MO",
+    "city":"Kirksville"
+  },
+  {
+    "unitid":177436,
+    "name":"Four Rivers Career Center",
+    "state":"MO",
+    "city":"Maryville"
+  },
+  {
+    "unitid":180197,
+    "name":"Flathead Valley Community College",
+    "state":"NE",
+    "city":"Lincoln"
+  },
+  {
+    "unitid":180212,
+    "name":"Fort Peck Community College",
+    "state":"NE",
+    "city":"Peru"
+  },
+  {
+    "unitid":182795,
+    "name":"Franklin Pierce University",
+    "state":"NJ",
+    "city":"Hackensack"
+  },
+  {
+    "unitid":183725,
+    "name":"Fortis Institute-Wayne",
+    "state":"NJ",
+    "city":"Plainfield"
+  },
+  {
+    "unitid":184603,
+    "name":"Fairleigh Dickinson University-Metropolitan Campus",
+    "state":"NJ",
+    "city":"Trenton"
+  },
+  {
+    "unitid":184612,
+    "name":"Felician University",
+    "state":"NJ",
+    "city":"Trenton"
+  },
+  {
+    "unitid":184694,
+    "name":"Fairleigh Dickinson University-Florham Campus",
+    "state":"NJ",
+    "city":"Jersey City"
+  },
+  {
+    "unitid":191126,
+    "name":"Fashion Institute of Technology",
+    "state":"NY",
+    "city":"Poughkeepsie"
+  },
+  {
+    "unitid":191199,
+    "name":"Finger Lakes Community College",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":191205,
+    "name":"Five Towns College",
+    "state":"NY",
+    "city":"Buffalo"
+  },
+  {
+    "unitid":191241,
+    "name":"Fordham University",
+    "state":"NY",
+    "city":"Albany"
+  },
+  {
+    "unitid":191302,
+    "name":"Fulton-Montgomery Community College",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":196042,
+    "name":"Farmingdale State College",
+    "state":"NY",
+    "city":"Utica"
+  },
+  {
+    "unitid":198534,
+    "name":"Fayetteville Technical Community College",
+    "state":"NC",
+    "city":"Durham"
+  },
+  {
+    "unitid":198543,
+    "name":"Fayetteville State University",
+    "state":"NC",
+    "city":"Winston Salem"
+  },
+  {
+    "unitid":198552,
+    "name":"Forsyth Technical Community College",
+    "state":"NC",
+    "city":"Raleigh"
+  },
+  {
+    "unitid":202806,
+    "name":"Franklin University",
+    "state":"OH",
+    "city":"Hamilton"
+  },
+  {
+    "unitid":205090,
+    "name":"Firelands Regional Medical Center School of Nursing",
+    "state":"OK",
+    "city":"Oklahoma City"
+  },
+  {
+    "unitid":205179,
+    "name":"Fortis College-Centerville",
+    "state":"OK",
+    "city":"Ada"
+  },
+  {
+    "unitid":205957,
+    "name":"Franciscan University of Steubenville",
+    "state":"OK",
+    "city":"Tulsa"
+  },
+  {
+    "unitid":207087,
+    "name":"Formations Institute",
+    "state":"OR",
+    "city":"Salem"
+  },
+  {
+    "unitid":208044,
+    "name":"Formations Institute of Cosmetology & Barbering",
+    "state":"OR",
+    "city":"Grants Pass"
+  },
+  {
+    "unitid":212577,
+    "name":"Franklin and Marshall College",
+    "state":"PA",
+    "city":"Nanticoke"
+  },
+  {
+    "unitid":218025,
+    "name":"Florence-Darlington Technical College",
+    "state":"SD",
+    "city":"Rapid City"
+  },
+  {
+    "unitid":218061,
+    "name":"Francis Marion University",
+    "state":"SD",
+    "city":"Watertown"
+  },
+  {
+    "unitid":218070,
+    "name":"Furman University",
+    "state":"SD",
+    "city":"Sioux Falls"
+  },
+  {
+    "unitid":220181,
+    "name":"Fisk University",
+    "state":"TN",
+    "city":"Huntsville"
+  },
+  {
+    "unitid":220215,
+    "name":"Freed-Hardeman University",
+    "state":"TN",
+    "city":"McMinnville"
+  },
+  {
+    "unitid":224828,
+    "name":"Fort Worth Beauty School",
+    "state":"TX",
+    "city":"Corsicana"
+  },
+  {
+    "unitid":224891,
+    "name":"Frank Phillips College",
+    "state":"TX",
+    "city":"The Woodlands"
+  },
+  {
+    "unitid":232089,
+    "name":"Ferrum College",
+    "state":"VA",
+    "city":"Arlington"
+  },
+  {
+    "unitid":233329,
+    "name":"Fortis College-Norfolk",
+    "state":"WA",
+    "city":"Lakewood"
+  },
+  {
+    "unitid":237367,
+    "name":"Fairmont State University",
+    "state":"WI",
+    "city":"Fond Du Lac"
+  },
+  {
+    "unitid":237844,
+    "name":"Fred W Eberle Technical Center",
+    "state":"WI",
+    "city":"Wausau"
+  },
+  {
+    "unitid":238722,
+    "name":"Fox Valley Technical College",
+    "state":"WY",
+    "city":"Torrington"
+  },
+  {
+    "unitid":245999,
+    "name":"Francis Tuttle Technology Center",
+    "state":"MI",
+    "city":"East Lansing"
+  },
+  {
+    "unitid":248624,
+    "name":"Fayette County Career & Technical Institute Practical Nursing Program",
+    "state":"OK",
+    "city":"Lawton"
+  },
+  {
+    "unitid":248633,
+    "name":"Franklin County Career and Technology Center",
+    "state":"WV",
+    "city":"Leroy"
+  },
+  {
+    "unitid":249609,
+    "name":"Fortis Institute-Forty Fort",
+    "state":"CA",
+    "city":"San Marcos"
+  },
+  {
+    "unitid":371052,
+    "name":"Fortis College",
+    "state":"VA",
+    "city":"Newport News"
+  },
+  {
+    "unitid":372073,
+    "name":"Fremont University",
+    "state":"WV",
+    "city":"Huntington"
+  },
+  {
+    "unitid":372921,
+    "name":"Fortis College-Smyrna",
+    "state":"CA",
+    "city":"San Diego"
+  },
+  {
+    "unitid":380368,
+    "name":"Fond du Lac Tribal and Community College",
+    "state":"TX",
+    "city":"Houston"
+  },
+  {
+    "unitid":381486,
+    "name":"Faust Institute of Cosmetology-Spirit Lake",
+    "state":"CA",
+    "city":"Garden Grove"
+  },
+  {
+    "unitid":382957,
+    "name":"Fortis College-Richmond",
+    "state":"IL",
+    "city":"Robinson"
+  },
+  {
+    "unitid":385503,
+    "name":"Fortis Institute-Scranton",
+    "state":"LA",
+    "city":"Lake Charles"
+  },
+  {
+    "unitid":392415,
+    "name":"Fortis College",
+    "state":"OR",
+    "city":"Medford"
+  },
+  {
+    "unitid":403469,
+    "name":"Frontier Community College",
+    "state":"OH",
+    "city":"Piketon"
+  },
+  {
+    "unitid":408844,
+    "name":"Florida National University-Main Campus",
+    "state":"MO",
+    "city":"Marshall"
+  },
+  {
+    "unitid":409120,
+    "name":"Franklin Technology Center Adult Education",
+    "state":"MO",
+    "city":"Sunset Hills"
+  },
+  {
+    "unitid":413176,
+    "name":"Fayette Institute of Technology",
+    "state":"NY",
+    "city":"Syosset"
+  },
+  {
+    "unitid":433660,
+    "name":"Florida Gulf Coast University",
+    "state":"PR",
+    "city":"Caguas"
+  },
+  {
+    "unitid":434441,
+    "name":"Florida College of Integrative Medicine",
+    "state":"NY",
+    "city":"West Seneca"
+  },
+  {
+    "unitid":436599,
+    "name":"FINE Mortuary College",
+    "state":"NH",
+    "city":"Lebanon"
+  },
+  {
+    "unitid":436641,
+    "name":"Fortis College-Foley",
+    "state":"GA",
+    "city":"Kennesaw"
+  },
+  {
+    "unitid":439738,
+    "name":"Fortis College-Baton Rouge",
+    "state":"VA",
+    "city":"Fredericksburg"
+  },
+  {
+    "unitid":439792,
+    "name":"Fortis College-Orange Park",
+    "state":"MA",
+    "city":"Needham"
+  },
+  {
+    "unitid":441380,
+    "name":"Florida Barber Academy",
+    "state":"SC",
+    "city":"North Charleston"
+  },
+  {
+    "unitid":441423,
+    "name":"Florida Education Institute",
+    "state":"TX",
+    "city":"Houston"
+  },
+  {
+    "unitid":441982,
+    "name":"Franklin W Olin College of Engineering",
+    "state":"NM",
+    "city":"Albuquerque"
+  },
+  {
+    "unitid":443049,
+    "name":"Faith International University",
+    "state":"PR",
+    "city":"Humacao"
+  },
+  {
+    "unitid":443058,
+    "name":"Family of Faith Christian University",
+    "state":"HI",
+    "city":"Honolulu"
+  },
+  {
+    "unitid":444219,
+    "name":"Folsom Lake College",
+    "state":"MN",
+    "city":"Roseville"
+  },
+  {
+    "unitid":445744,
+    "name":"Fortis Institute-Port Saint Lucie",
+    "state":"FL",
+    "city":"Fort Pierce"
+  },
+  {
+    "unitid":447908,
+    "name":"Florida Academy of Health & Beauty",
+    "state":"WI",
+    "city":"Milwaukee"
+  },
+  {
+    "unitid":450058,
+    "name":"Fortis College-Columbus",
+    "state":"ND",
+    "city":"Bismarck"
+  },
+  {
+    "unitid":450067,
+    "name":"Fortis College-Cincinnati",
+    "state":"MI",
+    "city":"New Baltimore"
+  },
+  {
+    "unitid":452124,
+    "name":"Fortis Institute-Nashville",
+    "state":"AL",
+    "city":"Dothan"
+  },
+  {
+    "unitid":455062,
+    "name":"French Academy of Cosmetology",
+    "state":"CA",
+    "city":"Hesperia"
+  },
+  {
+    "unitid":455460,
+    "name":"Fortis College-Dothan",
+    "state":"FL",
+    "city":"Gainesville"
+  },
+  {
+    "unitid":455479,
+    "name":"Fortis Institute-Pensacola",
+    "state":"FL",
+    "city":"DeFuniak Springs"
+  },
+  {
+    "unitid":455488,
+    "name":"Fortis College-Montgomery",
+    "state":"FL",
+    "city":"Immokalee"
+  },
+  {
+    "unitid":455628,
+    "name":"Fortis Institute-Birmingham",
+    "state":"FL",
+    "city":"Lauderhill"
+  },
+  {
+    "unitid":456454,
+    "name":"Fortis College-Salt Lake City",
+    "state":"OR",
+    "city":"Portland"
+  },
+  {
+    "unitid":457350,
+    "name":"Florida School of Traditional Midwifery",
+    "state":"TX",
+    "city":"San Antonio"
+  },
+  {
+    "unitid":457873,
+    "name":"Four County Career Center",
+    "state":"WI",
+    "city":"Kenosha"
+  },
+  {
+    "unitid":458681,
+    "name":"Fortis College-Indianapolis",
+    "state":"ID",
+    "city":"Boise"
+  },
+  {
+    "unitid":459329,
+    "name":"Fred K Marchman Technical College",
+    "state":"FL",
+    "city":"Palm Coast"
+  },
+  {
+    "unitid":459958,
+    "name":"Fortis Institute",
+    "state":"MO",
+    "city":"Saint Ann"
+  },
+  {
+    "unitid":460020,
+    "name":"Fortis College-Columbia",
+    "state":"CA",
+    "city":"Penngrove"
+  },
+  {
+    "unitid":460376,
+    "name":"Fairfax University of America",
+    "state":"CA",
+    "city":"San Francisco"
+  },
+  {
+    "unitid":461245,
+    "name":"Flagler Technical College",
+    "state":"OR",
+    "city":"Tualatin"
+  },
+  {
+    "unitid":461874,
+    "name":"First Class Cosmetology School",
+    "state":"IL",
+    "city":"Decatur"
+  },
+  {
+    "unitid":462035,
+    "name":"Florida Academy",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":475024,
+    "name":"Fortis Institute-Lawrenceville",
+    "state":"TX",
+    "city":"Denton"
+  },
+  {
+    "unitid":475422,
+    "name":"Finger Lakes Health College of Nursing & Health Sciences",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":476498,
+    "name":"Futura Career Institute",
+    "state":"CT",
+    "city":"Bridgeport"
+  },
+  {
+    "unitid":476513,
+    "name":"Flair Beauty College",
+    "state":"AR",
+    "city":"Ft Smith"
+  },
+  {
+    "unitid":476814,
+    "name":"Florida Institute of Recording Sound and Technology",
+    "state":"CA",
+    "city":"Ukiah"
+  },
+  {
+    "unitid":476939,
+    "name":"FVI School of Nursing and Technology",
+    "state":"FL",
+    "city":"Pembroke Pines"
+  },
+  {
+    "unitid":480569,
+    "name":"Florida Institute of Technology-Online",
+    "state":"WA",
+    "city":"Seattle"
+  },
+  {
+    "unitid":481030,
+    "name":"Future Generations University",
+    "state":"GA",
+    "city":"Douglas"
+  },
+  {
+    "unitid":482936,
+    "name":"Florida Polytechnic University",
+    "state":"NV",
+    "city":"Las Vegas"
+  },
+  {
+    "unitid":483577,
+    "name":"Franklin Hair Academy School of Cosmetology",
+    "state":"CA",
+    "city":"Inglewood"
+  },
+  {
+    "unitid":484075,
+    "name":"First Coast Barber Academy",
+    "state":"OH",
+    "city":"Canal Winchester"
+  },
+  {
+    "unitid":485236,
+    "name":"Fountain of Youth Academy of Cosmetology",
+    "state":"MI",
+    "city":"Troy"
+  },
+  {
+    "unitid":486512,
+    "name":"Florida International Training Institute",
+    "state":"AZ",
+    "city":"Tempe"
+  },
+  {
+    "unitid":487302,
+    "name":"Fortis College-Cuyahoga Falls",
+    "state":"NM",
+    "city":"Las Cruces"
+  },
+  {
+    "unitid":487384,
+    "name":"Florida Career College-Pembroke Pines",
+    "state":"IN",
+    "city":"South Bend"
+  },
+  {
+    "unitid":487393,
+    "name":"Florida Career College-West Palm Beach",
+    "state":"CA",
+    "city":"San Marcos"
+  },
+  {
+    "unitid":487409,
+    "name":"Florida Career College-Hialeah",
+    "state":"CA",
+    "city":"Stockton"
+  },
+  {
+    "unitid":487418,
+    "name":"Florida Career College-Lauderdale Lakes",
+    "state":"MI",
+    "city":"Sterling Heights"
+  },
+  {
+    "unitid":487427,
+    "name":"Florida Career College-Tampa",
+    "state":"CA",
+    "city":"Pasadena"
+  },
+  {
+    "unitid":487436,
+    "name":"Florida Career College-Jacksonville",
+    "state":"FL",
+    "city":"HOMESTEAD"
+  },
+  {
+    "unitid":487445,
+    "name":"Florida Career College-Boynton Beach",
+    "state":"NV",
+    "city":"Las Vegas"
+  },
+  {
+    "unitid":487454,
+    "name":"Florida Career College-Margate",
+    "state":"AL",
+    "city":"Jackson"
+  },
+  {
+    "unitid":487472,
+    "name":"Florida Career College-Orlando",
+    "state":"OK",
+    "city":"Tulsa"
+  },
+  {
+    "unitid":487490,
+    "name":"Florida Career College-Houston",
+    "state":"IN",
+    "city":"Lafayette"
+  },
+  {
+    "unitid":487861,
+    "name":"Felbry College",
+    "state":"IN",
+    "city":"West Lafayette"
+  },
+  {
+    "unitid":488253,
+    "name":"Focus Personal Training Institute",
+    "state":"CA",
+    "city":"San Diego"
+  },
+  {
+    "unitid":488271,
+    "name":"Fosbre Academy of Hair Design",
+    "state":"NJ",
+    "city":"Succasunna"
+  },
+  {
+    "unitid":490975,
+    "name":"Fortis College-Cutler Bay",
+    "state":"NC",
+    "city":"Charlotte"
+  },
+  {
+    "unitid":493813,
+    "name":"Falcon Institute of Health and Science",
+    "state":"AZ",
+    "city":"Tucson"
+  },
+  {
+    "unitid":494436,
+    "name":"Fortis Institute-Cookeville",
+    "state":"ID",
+    "city":"Idaho Falls"
+  },
+  {
+    "unitid":494597,
+    "name":"Faith Theological Seminary and Christian College",
+    "state":"MI",
+    "city":"Holland"
+  },
+  {
+    "unitid":494843,
+    "name":"Fortis College-Landover",
+    "state":"CT",
+    "city":"Bridgeport"
+  },
+  {
+    "unitid":495299,
+    "name":"Florida Professional Institute",
+    "state":"TX",
+    "city":"San Antonio"
+  },
+  {
+    "unitid":496681,
+    "name":"Florida Academy of Nursing",
+    "state":"CA",
+    "city":"Ontario"
+  }
+]
