@@ -17,7 +17,7 @@ export default function App() {
         <div className="container navbar">
           <div className="brand">
             <span className="dot" />
-            <span>Uni Admissions</span>
+            <span>See Through Uni Admissions</span>
           </div>
 
           <nav className="navlinks">
