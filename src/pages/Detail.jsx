@@ -218,24 +218,6 @@ export default function Detail() {
           </div>
 
           <div className="card" style={{ marginBottom: 20 }}>
-            <h3 style={{ marginTop: 0 }}>Scholarships & student support</h3>
-            <div style={{ display: "grid", gap: 12 }}>
-              <SupportBullet
-                title="Scholarships"
-                note={supportNotes.scholarships ?? "Check the admissions site for merit-based and need-based scholarships open to international students. Email financial aid to confirm requirements and deadlines."}
-              />
-              <SupportBullet
-                title="International student services"
-                note={supportNotes.support_services ?? "Review the International Student Office for visa advising, CPT/OPT workshops, and arrival orientation sessions."}
-              />
-              <SupportBullet
-                title="Visa & deadline reminders"
-                note={supportNotes.deadlines ?? "Plan backward from the embassy appointment: priority application deadlines are often January-February. Confirm I-20 processing times with admissions."}
-              />
-            </div>
-          </div>
-
-          <div className="card" style={{ marginBottom: 20 }}>
             <h3 style={{ marginTop: 0 }}>Admission requirements</h3>
             <p style={{ color: "#64748b", fontSize: 13, marginTop: 0 }}>
               Test policy: <strong>{requirements.test_policy}</strong>
@@ -321,16 +303,27 @@ export default function Detail() {
             <div style={{ fontWeight: 700, marginBottom: 12 }}>Quick links</div>
             <div style={{ display: "grid", gap: 8 }}>
               {profile.website && (
-                <a href={profile.website.startsWith("http") ? profile.website : `https://${profile.website}`} target="_blank" rel="noreferrer">
+                <a
+                  href={profile.website.startsWith("http") ? profile.website : `https://${profile.website}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Institution website
                 </a>
               )}
               {profile.admissions_url && (
-                <a href={profile.admissions_url.startsWith("http") ? profile.admissions_url : `https://${profile.admissions_url}`} target="_blank" rel="noreferrer">
-                  Admissions office
+                <a
+                  href={profile.admissions_url.startsWith("http") ? profile.admissions_url : `https://${profile.admissions_url}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Admissions website
                 </a>
               )}
             </div>
+            <p style={{ marginTop: 12, fontSize: 12, color: "#64748b" }}>
+              Always confirm visa requirements, scholarship forms, and exact deadlines on the official admissions site—dates vary by program and citizenship.
+            </p>
           </div>
           <div className="card">
             <div style={{ fontWeight: 700, marginBottom: 8 }}>Contact checklist</div>
