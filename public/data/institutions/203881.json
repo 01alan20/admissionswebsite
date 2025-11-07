@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 203881,
     "name": "Marion Technical College",
-    "city": "Zanesville",
+    "city": "Marion",
     "state": "OH",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Associate's Colleges: High Career & Technical-High Nontraditional",
-    "website": "https://www.ohio.edu/zanesville/",
+    "website": "www.mtc.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 494588,
     "name": "Pima Medical Institute-San Antonio",
-    "city": "Evanston",
-    "state": "IL",
+    "city": "San Antonio",
+    "state": "TX",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.zenshiatsuchicago.org/",
+    "website": "https://pmi.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

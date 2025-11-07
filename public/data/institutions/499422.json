@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 499422,
     "name": "Denver College of Nursing-Houston",
-    "city": "Kalamazoo",
-    "state": "MI",
+    "city": null,
+    "state": "Texas",
     "control": "Private for-profit",
     "level": "4-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.davenport.edu/",
+    "website": null,
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

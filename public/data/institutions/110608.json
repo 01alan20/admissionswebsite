@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 110608,
     "name": "California State University-Northridge",
-    "city": "Los Angeles",
+    "city": "Northridge",
     "state": "CA",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
-    "website": "www.ucla.edu/",
+    "website": "https://www.csun.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

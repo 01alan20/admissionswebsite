@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 498234,
     "name": "Larkin University",
-    "city": "Tampa",
+    "city": "Miami",
     "state": "FL",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.keiseruniversity.edu/tampa/",
+    "website": "https://ularkin.org/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

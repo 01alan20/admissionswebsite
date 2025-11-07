@@ -3,337 +3,337 @@
     "unitid":100751,
     "name":"The University of Alabama",
     "state":"AL",
-    "city":"Alexander City"
+    "city":"Tuscaloosa"
   },
   {
     "unitid":102298,
     "name":"Talladega College",
     "state":"AL",
-    "city":"Montgomery"
+    "city":"Talladega"
   },
   {
     "unitid":102368,
     "name":"Troy University",
     "state":"AL",
-    "city":"Tuskegee"
+    "city":"Troy"
   },
   {
     "unitid":102377,
     "name":"Tuskegee University",
     "state":"AL",
-    "city":"Daphne"
+    "city":"Tuskegee"
   },
   {
     "unitid":104665,
     "name":"The School of Architecture",
     "state":"AZ",
-    "city":"Phoenix"
+    "city":"Paradise Valley"
   },
   {
     "unitid":117751,
     "name":"The Master's University and Seminary",
     "state":"CA",
-    "city":"Sacramento"
+    "city":"Santa Clarita"
   },
   {
     "unitid":123448,
     "name":"Trinity Law School",
     "state":"CA",
-    "city":"Los Angeles"
+    "city":"Santa Ana"
   },
   {
     "unitid":124113,
     "name":"Taft College",
     "state":"CA",
-    "city":"Escondido"
+    "city":"Taft"
   },
   {
     "unitid":124292,
     "name":"Thomas Aquinas College",
     "state":"CA",
-    "city":"Whittier"
+    "city":"Santa Paula"
   },
   {
     "unitid":125037,
     "name":"The Colleges of Law at Ventura",
-    "state":"CO",
-    "city":"Littleton"
+    "state":"CA",
+    "city":"Ventura"
   },
   {
     "unitid":126012,
     "name":"The Wright Institute",
-    "state":"CO",
-    "city":"Aurora"
+    "state":"CA",
+    "city":"Berkeley"
   },
   {
     "unitid":126049,
     "name":"Thomas Jefferson School of Law",
-    "state":"CO",
-    "city":"Delta"
+    "state":"CA",
+    "city":"San Diego"
   },
   {
     "unitid":126915,
     "name":"Technical College of the Rockies",
     "state":"CO",
-    "city":"Denver"
+    "city":"Delta"
   },
   {
     "unitid":128258,
     "name":"Trinidad State College",
-    "state":"CT",
-    "city":"Hartford"
+    "state":"CO",
+    "city":"Trinidad"
   },
   {
     "unitid":129808,
     "name":"Three Rivers Community College",
-    "state":"DE",
-    "city":"Dover"
+    "state":"CT",
+    "city":"Norwich"
   },
   {
     "unitid":130590,
     "name":"Trinity College",
-    "state":"DC",
-    "city":"Washington"
+    "state":"CT",
+    "city":"Hartford"
   },
   {
     "unitid":131283,
     "name":"The Catholic University of America",
-    "state":"FL",
-    "city":"Marianna"
+    "state":"DC",
+    "city":"Washington"
   },
   {
     "unitid":131876,
     "name":"Trinity Washington University",
-    "state":"FL",
-    "city":"Boca Raton"
+    "state":"DC",
+    "city":"Washington"
   },
   {
     "unitid":133960,
     "name":"The College of the Florida Keys",
     "state":"FL",
-    "city":"Eustis"
+    "city":"Key West"
   },
   {
     "unitid":135522,
     "name":"Traviss Technical College",
     "state":"FL",
-    "city":"Winter Park"
+    "city":"Lakeland"
   },
   {
     "unitid":135610,
     "name":"Trinity International University-Florida",
     "state":"FL",
-    "city":"Saint Leo"
+    "city":"Miami"
   },
   {
     "unitid":137759,
     "name":"Tallahassee Community College",
-    "state":"GA",
-    "city":"Cuthbert"
+    "state":"FL",
+    "city":"Tallahassee"
   },
   {
     "unitid":137777,
     "name":"Talmudic College of Florida",
-    "state":"GA",
-    "city":"Atlanta"
+    "state":"FL",
+    "city":"Miami Beach"
   },
   {
     "unitid":137847,
     "name":"The University of Tampa",
-    "state":"GA",
-    "city":"Atlanta"
+    "state":"FL",
+    "city":"Tampa"
   },
   {
     "unitid":137865,
     "name":"Tom P. Haney Technical College",
-    "state":"GA",
-    "city":"Atlanta"
+    "state":"FL",
+    "city":"Panama City"
   },
   {
     "unitid":137953,
     "name":"Trinity Baptist College",
-    "state":"GA",
-    "city":"Atlanta"
+    "state":"FL",
+    "city":"Jacksonville"
   },
   {
     "unitid":137962,
     "name":"Trinity College of Florida",
-    "state":"GA",
-    "city":"Atlanta"
+    "state":"FL",
+    "city":"Trinity"
   },
   {
     "unitid":138813,
     "name":"The Art Institute of Atlanta",
     "state":"GA",
-    "city":"Swainsboro"
+    "city":"Atlanta"
   },
   {
     "unitid":141167,
     "name":"Thomas University",
-    "state":"ID",
-    "city":"Pocatello"
+    "state":"GA",
+    "city":"Thomasville"
   },
   {
     "unitid":141185,
     "name":"Toccoa Falls College",
-    "state":"ID",
-    "city":"Moscow"
+    "state":"GA",
+    "city":"Toccoa Falls"
   },
   {
     "unitid":141237,
     "name":"Truett McConnell University",
-    "state":"ID",
-    "city":"Caldwell"
+    "state":"GA",
+    "city":"Cleveland"
   },
   {
     "unitid":142294,
     "name":"The College of Idaho",
-    "state":"IL",
-    "city":"Oak Forest"
+    "state":"ID",
+    "city":"Caldwell"
   },
   {
     "unitid":143978,
     "name":"The Chicago School at Chicago",
     "state":"IL",
-    "city":"Evanston"
+    "city":"Chicago"
   },
   {
     "unitid":144573,
     "name":"Tricoci University of Beauty Culture",
     "state":"IL",
-    "city":"Bloomington"
+    "city":"Urbana"
   },
   {
     "unitid":146755,
     "name":"Trinity College of Nursing & Health Sciences",
     "state":"IL",
-    "city":"Chicago Heights"
+    "city":"Rock Island"
   },
   {
     "unitid":149310,
     "name":"Taylor Business Institute",
-    "state":"IN",
-    "city":"Winona Lake"
+    "state":"IL",
+    "city":"Chicago"
   },
   {
     "unitid":149329,
     "name":"Telshe Yeshiva-Chicago",
-    "state":"IN",
-    "city":"Hanover"
+    "state":"IL",
+    "city":"Chicago"
   },
   {
     "unitid":149505,
     "name":"Trinity Christian College",
-    "state":"IN",
-    "city":"Notre Dame"
+    "state":"IL",
+    "city":"Palos Heights"
   },
   {
     "unitid":149514,
     "name":"Trinity International University-Illinois",
-    "state":"IN",
-    "city":"Clarksville"
+    "state":"IL",
+    "city":"Deerfield"
   },
   {
     "unitid":149532,
     "name":"Triton College",
-    "state":"IN",
-    "city":"Huntington"
+    "state":"IL",
+    "city":"River Grove"
   },
   {
     "unitid":150303,
     "name":"Tricoci University of Beauty Culture-Highland",
     "state":"IN",
-    "city":"Indianapolis"
+    "city":"Highland"
   },
   {
     "unitid":151564,
     "name":"Taylor Institute of Cosmetology II",
-    "state":"IA",
-    "city":"Storm Lake"
+    "state":"IN",
+    "city":"Knox"
   },
   {
     "unitid":151607,
     "name":"Tricoci University of Beauty Culture-Lafayette",
-    "state":"IA",
-    "city":"Dubuque"
+    "state":"IN",
+    "city":"Lafayette"
   },
   {
     "unitid":152530,
     "name":"Taylor University",
-    "state":"IA",
-    "city":"Mt. Pleasant"
+    "state":"IN",
+    "city":"Upland"
   },
   {
     "unitid":152567,
     "name":"Trine University",
-    "state":"IA",
-    "city":"Ottumwa"
+    "state":"IN",
+    "city":"Angola"
   },
   {
     "unitid":154545,
     "name":"The Salon Professional Academy-Cedar Falls",
-    "state":"KS",
-    "city":"Independence"
+    "state":"IA",
+    "city":"Cedar Falls"
   },
   {
     "unitid":155973,
     "name":"Tabor College",
-    "state":"KY",
-    "city":"Hopkinsville"
+    "state":"KS",
+    "city":"Hillsboro"
   },
   {
     "unitid":157748,
     "name":"The Southern Baptist Theological Seminary",
-    "state":"LA",
-    "city":"Lafayette"
+    "state":"KY",
+    "city":"Louisville"
   },
   {
     "unitid":157809,
     "name":"Thomas More University",
-    "state":"LA",
-    "city":"Opelousas"
+    "state":"KY",
+    "city":"Crestview Hills"
   },
   {
     "unitid":157818,
     "name":"Transylvania University",
-    "state":"LA",
-    "city":"Ruston"
+    "state":"KY",
+    "city":"Lexington"
   },
   {
     "unitid":160755,
     "name":"Tulane University of Louisiana",
-    "state":"MD",
-    "city":"Hagerstown"
+    "state":"LA",
+    "city":"New Orleans"
   },
   {
     "unitid":161208,
     "name":"The Landing School",
-    "state":"MD",
-    "city":"Salisbury"
+    "state":"ME",
+    "city":"Arundel"
   },
   {
     "unitid":161563,
     "name":"Thomas College",
-    "state":"MD",
-    "city":"Baltimore"
+    "state":"ME",
+    "city":"Waterville"
   },
   {
     "unitid":164076,
     "name":"Towson University",
-    "state":"MA",
-    "city":"West Barnstable"
+    "state":"MD",
+    "city":"Towson"
   },
   {
     "unitid":167057,
     "name":"The New England Conservatory of Music",
     "state":"MA",
-    "city":"Worcester"
+    "city":"Boston"
   },
   {
     "unitid":168148,
     "name":"Tufts University",
-    "state":"MI",
-    "city":"Riverview"
+    "state":"MA",
+    "city":"Medford"
   },
   {
     "unitid":171012,
@@ -344,86 +344,86 @@
   {
     "unitid":171599,
     "name":"The University of Olivet",
-    "state":"MN",
-    "city":"Saint Paul"
+    "state":"MI",
+    "city":"Olivet"
   },
   {
     "unitid":172477,
     "name":"Thomas M Cooley Law School",
-    "state":"MN",
-    "city":"Minneapolis"
+    "state":"MI",
+    "city":"Lansing"
   },
   {
     "unitid":172495,
     "name":"Twin City Beauty College",
-    "state":"MN",
-    "city":"Inver Grove Heights"
+    "state":"MI",
+    "city":"Saint Joseph"
   },
   {
     "unitid":174899,
     "name":"The College of Saint Scholastica",
-    "state":"MS",
-    "city":"University"
+    "state":"MN",
+    "city":"Duluth"
   },
   {
     "unitid":176406,
     "name":"Tougaloo College",
-    "state":"MO",
-    "city":"Hillsboro"
+    "state":"MS",
+    "city":"Tougaloo"
   },
   {
     "unitid":178615,
     "name":"Truman State University",
-    "state":"MT",
-    "city":"Glendive"
+    "state":"MO",
+    "city":"Kirksville"
   },
   {
     "unitid":179645,
     "name":"Three Rivers College",
-    "state":"NE",
-    "city":"Chadron"
+    "state":"MO",
+    "city":"Poplar Bluff"
   },
   {
     "unitid":180489,
     "name":"The University of Montana",
-    "state":"NE",
-    "city":"York"
+    "state":"MT",
+    "city":"Missoula"
   },
   {
     "unitid":180692,
     "name":"The University of Montana-Western",
-    "state":"NV",
-    "city":"Las Vegas"
+    "state":"MT",
+    "city":"Dillon"
   },
   {
     "unitid":182500,
     "name":"Truckee Meadows Community College",
-    "state":"NJ",
-    "city":"Lakewood"
+    "state":"NV",
+    "city":"Reno"
   },
   {
     "unitid":183275,
     "name":"Thomas More College of Liberal Arts",
-    "state":"NJ",
-    "city":"Voorhees"
+    "state":"NH",
+    "city":"Merrimack"
   },
   {
     "unitid":186900,
     "name":"Talmudical Academy-New Jersey",
-    "state":"NY",
-    "city":"Albany"
+    "state":"NJ",
+    "city":"Adelphia"
   },
   {
     "unitid":187046,
     "name":"Thomas Edison State University",
-    "state":"NY",
-    "city":"Albany"
+    "state":"NJ",
+    "city":"Trenton"
   },
   {
     "unitid":187134,
     "name":"The College of New Jersey",
-    "state":"NY",
-    "city":"Albany"
+    "state":"NJ",
+    "city":"Ewing"
   },
   {
     "unitid":188669,
@@ -435,7 +435,7 @@
     "unitid":190372,
     "name":"The Cooper Union for the Advancement of Science and Art",
     "state":"NY",
-    "city":"Batavia"
+    "city":"New York"
   },
   {
     "unitid":192110,
@@ -447,187 +447,187 @@
     "unitid":193654,
     "name":"The New School",
     "state":"NY",
-    "city":"Saint Bonaventure"
+    "city":"New York"
   },
   {
     "unitid":195049,
     "name":"The Rockefeller University",
     "state":"NY",
-    "city":"Geneseo"
+    "city":"New York"
   },
   {
     "unitid":195234,
     "name":"The College of Saint Rose",
     "state":"NY",
-    "city":"Brooklyn"
+    "city":"Albany"
   },
   {
     "unitid":196431,
     "name":"Talmudical Seminary Oholei Torah",
-    "state":"NC",
-    "city":"Flat Rock"
+    "state":"NY",
+    "city":"Brooklyn"
   },
   {
     "unitid":196440,
     "name":"Talmudical Institute of Upstate New York",
-    "state":"NC",
-    "city":"Brevard"
+    "state":"NY",
+    "city":"Rochester"
   },
   {
     "unitid":196468,
     "name":"Teachers College at Columbia University",
-    "state":"NC",
-    "city":"Bolivia"
+    "state":"NY",
+    "city":"New York"
   },
   {
     "unitid":196565,
     "name":"Tompkins Cortland Community College",
-    "state":"NC",
-    "city":"Concord"
+    "state":"NY",
+    "city":"Dryden"
   },
   {
     "unitid":196583,
     "name":"Torah Temimah Talmudical Seminary",
-    "state":"NC",
-    "city":"Hudson"
+    "state":"NY",
+    "city":"Staten Island"
   },
   {
     "unitid":196592,
     "name":"Touro University",
-    "state":"NC",
-    "city":"Buies Creek"
+    "state":"NY",
+    "city":"New York"
   },
   {
     "unitid":196653,
     "name":"Trocaire College",
-    "state":"NC",
-    "city":"Wilmington"
+    "state":"NY",
+    "city":"Buffalo"
   },
   {
     "unitid":197285,
     "name":"The College of Westchester",
-    "state":"NC",
-    "city":"Tarboro"
+    "state":"NY",
+    "city":"White Plains"
   },
   {
     "unitid":199795,
     "name":"Tri-County Community College",
-    "state":"OH",
-    "city":"Lima"
+    "state":"NC",
+    "city":"Murphy"
   },
   {
     "unitid":200484,
     "name":"Trinity Bible College and Graduate School",
-    "state":"OH",
-    "city":"Springfield"
+    "state":"ND",
+    "city":"Ellendale"
   },
   {
     "unitid":200527,
     "name":"Turtle Mountain Community College",
-    "state":"OH",
-    "city":"Cleveland"
+    "state":"ND",
+    "city":"Belcourt"
   },
   {
     "unitid":201821,
     "name":"The Christ College of Nursing and Health Sciences",
     "state":"OH",
-    "city":"East Liverpool"
+    "city":"Cincinnati"
   },
   {
     "unitid":202763,
     "name":"The University of Findlay",
     "state":"OH",
-    "city":"Delaware"
+    "city":"Findlay"
   },
   {
     "unitid":204459,
     "name":"Toledo Public Schools Adult and Continuing Education",
     "state":"OH",
-    "city":"Columbus"
+    "city":"Toledo"
   },
   {
     "unitid":204769,
     "name":"The Spa School",
     "state":"OH",
-    "city":"Pepper Pike"
+    "city":"Columbus"
   },
   {
     "unitid":204893,
     "name":"Trinity Health System School of Nursing",
     "state":"OH",
-    "city":"Celina"
+    "city":"Steubenville"
   },
   {
     "unitid":205391,
     "name":"The Modern College of Design",
-    "state":"OK",
-    "city":"El Reno"
+    "state":"OH",
+    "city":"Kettering"
   },
   {
     "unitid":206011,
     "name":"Terra State Community College",
-    "state":"OK",
-    "city":"Tonkawa"
+    "state":"OH",
+    "city":"Fremont"
   },
   {
     "unitid":206039,
     "name":"Tiffin Academy of Hair Design",
-    "state":"OK",
-    "city":"Miami"
+    "state":"OH",
+    "city":"Tiffin"
   },
   {
     "unitid":206048,
     "name":"Tiffin University",
-    "state":"OK",
-    "city":"Alva"
+    "state":"OH",
+    "city":"Tiffin"
   },
   {
     "unitid":206154,
     "name":"Tri-State Bible College",
-    "state":"OK",
-    "city":"Edmond"
+    "state":"OH",
+    "city":"South Point"
   },
   {
     "unitid":206172,
     "name":"Tri-County Adult Career Center",
-    "state":"OK",
-    "city":"Oklahoma City"
+    "state":"OH",
+    "city":"Nelsonville"
   },
   {
     "unitid":206181,
     "name":"Tri-Rivers Career Center",
-    "state":"OK",
-    "city":"Goodwell"
+    "state":"OH",
+    "city":"Marion"
   },
   {
     "unitid":206394,
     "name":"The North Coast College",
-    "state":"OK",
-    "city":"Oklahoma City"
+    "state":"OH",
+    "city":"Lakewood"
   },
   {
     "unitid":206589,
     "name":"The College of Wooster",
-    "state":"OK",
-    "city":"Chickasha"
+    "state":"OH",
+    "city":"Wooster"
   },
   {
     "unitid":207935,
     "name":"Tulsa Community College",
-    "state":"OR",
-    "city":"Portland"
+    "state":"OK",
+    "city":"Tulsa"
   },
   {
     "unitid":207962,
     "name":"Tulsa Welding School-Tulsa",
-    "state":"OR",
-    "city":"Portland"
+    "state":"OK",
+    "city":"Tulsa"
   },
   {
     "unitid":210234,
     "name":"Treasure Valley Community College",
-    "state":"PA",
-    "city":"Media"
+    "state":"OR",
+    "city":"Ontario"
   },
   {
     "unitid":210711,
@@ -639,1542 +639,1542 @@
     "unitid":210784,
     "name":"The Beauty Institute-Ambler",
     "state":"PA",
-    "city":"Reading"
+    "city":"Ambler"
   },
   {
     "unitid":215530,
     "name":"The Salon Professional Academy-Altoona",
     "state":"PA",
-    "city":"Washington"
+    "city":"Altoona"
   },
   {
     "unitid":216223,
     "name":"The Beauty Institute",
-    "state":"RI",
-    "city":"Providence"
+    "state":"PA",
+    "city":"Stroudsburg"
   },
   {
     "unitid":216296,
     "name":"Thaddeus Stevens College of Technology",
-    "state":"RI",
-    "city":"Providence"
+    "state":"PA",
+    "city":"Lancaster"
   },
   {
     "unitid":216311,
     "name":"Talmudical Yeshiva of Philadelphia",
-    "state":"MA",
-    "city":"Haverhill"
+    "state":"PA",
+    "city":"Philadelphia"
   },
   {
     "unitid":216339,
     "name":"Temple University",
-    "state":"SC",
-    "city":"Graniteville"
+    "state":"PA",
+    "city":"Philadelphia"
   },
   {
     "unitid":216348,
     "name":"Theological Seminary of the Reformed Episcopal Church",
-    "state":"SC",
-    "city":"Columbia"
+    "state":"PA",
+    "city":"Blue Bell"
   },
   {
     "unitid":216357,
     "name":"Thiel College",
-    "state":"SC",
-    "city":"Anderson"
+    "state":"PA",
+    "city":"Greenville"
   },
   {
     "unitid":216366,
     "name":"Thomas Jefferson University",
-    "state":"SC",
-    "city":"Charleston"
+    "state":"PA",
+    "city":"Philadelphia"
   },
   {
     "unitid":216436,
     "name":"Triangle Tech Inc-Pittsburgh",
-    "state":"SC",
-    "city":"Beaufort"
+    "state":"PA",
+    "city":"Pittsburgh"
   },
   {
     "unitid":216445,
     "name":"Triangle Tech Inc-Greensburg",
-    "state":"SC",
-    "city":"Columbia"
+    "state":"PA",
+    "city":"Greensburg"
   },
   {
     "unitid":216454,
     "name":"Triangle Tech Inc-Dubois",
-    "state":"SC",
-    "city":"Greenville"
+    "state":"PA",
+    "city":"Falls Creek"
   },
   {
     "unitid":216463,
     "name":"Trinity Episcopal School for Ministry",
-    "state":"SC",
-    "city":"Central"
+    "state":"PA",
+    "city":"Ambridge"
   },
   {
     "unitid":217712,
     "name":"Technical College of the Lowcountry",
     "state":"SC",
-    "city":"Orangeburg"
+    "city":"Beaufort"
   },
   {
     "unitid":218885,
     "name":"Tri-County Technical College",
-    "state":"TN",
-    "city":"Memphis"
+    "state":"SC",
+    "city":"Pendleton"
   },
   {
     "unitid":218894,
     "name":"Trident Technical College",
-    "state":"TN",
-    "city":"Cleveland"
+    "state":"SC",
+    "city":"Charleston"
   },
   {
     "unitid":219037,
     "name":"The Salon Professional Academy",
-    "state":"TN",
-    "city":"Nashville"
+    "state":"SD",
+    "city":"Rapid City"
   },
   {
     "unitid":219596,
     "name":"Tennessee College of Applied Technology-Athens",
     "state":"TN",
-    "city":"Maryville"
+    "city":"Athens"
   },
   {
     "unitid":219921,
     "name":"Tennessee College of Applied Technology-Covington",
     "state":"TN",
-    "city":"Newbern"
+    "city":"Covington"
   },
   {
     "unitid":219994,
     "name":"Tennessee College of Applied Technology-Dickson",
     "state":"TN",
-    "city":"Memphis"
+    "city":"Dickson"
   },
   {
     "unitid":220127,
     "name":"Tennessee College of Applied Technology-Elizabethton",
     "state":"TN",
-    "city":"Shelbyville"
+    "city":"Elizabethton"
   },
   {
     "unitid":220163,
     "name":"The Hair Academy LLC",
     "state":"TN",
-    "city":"Sewanee"
+    "city":"Fayetteville"
   },
   {
     "unitid":220251,
     "name":"Tennessee College of Applied Technology-Harriman",
     "state":"TN",
-    "city":"Jackson"
+    "city":"Harriman"
   },
   {
     "unitid":220279,
     "name":"Tennessee College of Applied Technology-Hartsville",
     "state":"TN",
-    "city":"Knoxville"
+    "city":"Hartsville"
   },
   {
     "unitid":220321,
     "name":"Tennessee College of Applied Technology-Hohenwald",
     "state":"TN",
-    "city":"Knoxville"
+    "city":"Hohenwald"
   },
   {
     "unitid":220394,
     "name":"Tennessee College of Applied Technology-Jacksboro",
     "state":"TN",
-    "city":"Collegedale"
+    "city":"Jacksboro"
   },
   {
     "unitid":220640,
     "name":"Tennessee College of Applied Technology-Livingston",
     "state":"TN",
-    "city":"Greeneville"
+    "city":"Livingston"
   },
   {
     "unitid":220701,
     "name":"The University of Tennessee Southern",
     "state":"TN",
-    "city":"Jackson"
+    "city":"Pulaski"
   },
   {
     "unitid":220756,
     "name":"Tennessee College of Applied Technology-McKenzie",
     "state":"TN",
-    "city":"Gallatin"
+    "city":"McKenzie"
   },
   {
     "unitid":220853,
     "name":"Tennessee College of Applied Technology-Memphis",
-    "state":"TX",
-    "city":"Abilene"
+    "state":"TN",
+    "city":"Memphis"
   },
   {
     "unitid":221050,
     "name":"Tennessee College of Applied Technology-Morristown",
-    "state":"TX",
-    "city":"San Angelo"
+    "state":"TN",
+    "city":"Morristown"
   },
   {
     "unitid":221102,
     "name":"Tennessee College of Applied Technology-Murfreesboro",
-    "state":"TX",
-    "city":"Grand Prairie"
+    "state":"TN",
+    "city":"Murfreesboro"
   },
   {
     "unitid":221236,
     "name":"Tennessee College of Applied Technology Northwest",
-    "state":"TX",
-    "city":"Austin"
+    "state":"TN",
+    "city":"Newbern"
   },
   {
     "unitid":221281,
     "name":"Tennessee College of Applied Technology-Henry\/Carroll",
-    "state":"TX",
-    "city":"Austin"
+    "state":"TN",
+    "city":"Paris"
   },
   {
     "unitid":221333,
     "name":"Tennessee College of Applied Technology-Pulaski",
-    "state":"TX",
-    "city":"Austin"
+    "state":"TN",
+    "city":"Pulaski"
   },
   {
     "unitid":221388,
     "name":"Tennessee College of Applied Technology-Ripley",
-    "state":"TX",
-    "city":"Jacksonville"
+    "state":"TN",
+    "city":"Ripley"
   },
   {
     "unitid":221430,
     "name":"Tennessee College of Applied Technology-Crump",
-    "state":"TX",
-    "city":"Waco"
+    "state":"TN",
+    "city":"Crump"
   },
   {
     "unitid":221494,
     "name":"Tennessee College of Applied Technology-Shelbyville",
-    "state":"TX",
-    "city":"Brenham"
+    "state":"TN",
+    "city":"Shelbyville"
   },
   {
     "unitid":221519,
     "name":"The University of the South",
-    "state":"TX",
-    "city":"Dallas"
+    "state":"TN",
+    "city":"Sewanee"
   },
   {
     "unitid":221582,
     "name":"Tennessee College of Applied Technology-Oneida-Huntsville",
-    "state":"TX",
-    "city":"Houston"
+    "state":"TN",
+    "city":"Huntsville"
   },
   {
     "unitid":221591,
     "name":"Tennessee College of Applied Technology-Crossville",
-    "state":"TX",
-    "city":"Lake Jackson"
+    "state":"TN",
+    "city":"Crossville"
   },
   {
     "unitid":221607,
     "name":"Tennessee College of Applied Technology-McMinnville",
-    "state":"TX",
-    "city":"Killeen"
+    "state":"TN",
+    "city":"McMinnville"
   },
   {
     "unitid":221616,
     "name":"Tennessee College of Applied Technology-Jackson",
-    "state":"TX",
-    "city":"Bryan"
+    "state":"TN",
+    "city":"Jackson"
   },
   {
     "unitid":221625,
     "name":"Tennessee College of Applied Technology-Knoxville",
-    "state":"TX",
-    "city":"Cisco"
+    "state":"TN",
+    "city":"Knoxville"
   },
   {
     "unitid":221731,
     "name":"Tennessee Wesleyan University",
-    "state":"TX",
-    "city":"Gainesville"
+    "state":"TN",
+    "city":"Athens"
   },
   {
     "unitid":221740,
     "name":"The University of Tennessee-Chattanooga",
-    "state":"TX",
-    "city":"Corpus Christi"
+    "state":"TN",
+    "city":"Chattanooga"
   },
   {
     "unitid":221759,
     "name":"The University of Tennessee-Knoxville",
-    "state":"TX",
-    "city":"Carrollton"
+    "state":"TN",
+    "city":"Knoxville"
   },
   {
     "unitid":221768,
     "name":"The University of Tennessee-Martin",
-    "state":"TX",
-    "city":"Dallas"
+    "state":"TN",
+    "city":"Martin"
   },
   {
     "unitid":221829,
     "name":"Tennessee School of Beauty of Knoxville Inc",
-    "state":"TX",
-    "city":"Dallas"
+    "state":"TN",
+    "city":"Knoxville"
   },
   {
     "unitid":221838,
     "name":"Tennessee State University",
-    "state":"TX",
-    "city":"Dallas"
+    "state":"TN",
+    "city":"Nashville"
   },
   {
     "unitid":221847,
     "name":"Tennessee Technological University",
-    "state":"TX",
-    "city":"Dallas"
+    "state":"TN",
+    "city":"Cookeville"
   },
   {
     "unitid":221892,
     "name":"Trevecca Nazarene University",
-    "state":"TX",
-    "city":"Irving"
+    "state":"TN",
+    "city":"Nashville"
   },
   {
     "unitid":221953,
     "name":"Tusculum University",
-    "state":"TX",
-    "city":"Marshall"
+    "state":"TN",
+    "city":"Greeneville"
   },
   {
     "unitid":222938,
     "name":"The Art Institute of Houston",
     "state":"TX",
-    "city":"San Antonio"
+    "city":"Houston"
   },
   {
     "unitid":224147,
     "name":"Texas A & M University-Corpus Christi",
     "state":"TX",
-    "city":"Laredo"
+    "city":"Corpus Christi"
   },
   {
     "unitid":224545,
     "name":"Texas A&M University-Texarkana",
     "state":"TX",
-    "city":"Waco"
+    "city":"Texarkana"
   },
   {
     "unitid":224554,
     "name":"Texas A & M University-Commerce",
     "state":"TX",
-    "city":"Abilene"
+    "city":"Commerce"
   },
   {
     "unitid":225308,
     "name":"Trinity Valley Community College",
     "state":"TX",
-    "city":"Arlington"
+    "city":"Athens"
   },
   {
     "unitid":226152,
     "name":"Texas A & M International University",
     "state":"TX",
-    "city":"Levelland"
+    "city":"Laredo"
   },
   {
     "unitid":227058,
     "name":"Tint School of Makeup & Cosmetology",
     "state":"TX",
-    "city":"Stephenville"
+    "city":"Irving"
   },
   {
     "unitid":227368,
     "name":"The University of Texas Rio Grande Valley",
     "state":"TX",
-    "city":"Richardson"
+    "city":"Edinburg"
   },
   {
     "unitid":227377,
     "name":"Texas Southmost College",
     "state":"TX",
-    "city":"El Paso"
+    "city":"Brownsville"
   },
   {
     "unitid":228459,
     "name":"Texas State University",
     "state":"TX",
-    "city":"Marshall"
+    "city":"San Marcos"
   },
   {
     "unitid":228529,
     "name":"Tarleton State University",
-    "state":"UT",
-    "city":"Murray"
+    "state":"TX",
+    "city":"Stephenville"
   },
   {
     "unitid":228547,
     "name":"Tarrant County College District",
-    "state":"UT",
-    "city":"Sandy"
+    "state":"TX",
+    "city":"Fort Worth"
   },
   {
     "unitid":228608,
     "name":"Temple College",
-    "state":"UT",
-    "city":"Kaysville"
+    "state":"TX",
+    "city":"Temple"
   },
   {
     "unitid":228644,
     "name":"The University of Texas Health Science Center at San Antonio",
-    "state":"UT",
-    "city":"Cedar City"
+    "state":"TX",
+    "city":"San Antonio"
   },
   {
     "unitid":228653,
     "name":"The University of Texas Medical Branch at Galveston",
-    "state":"UT",
-    "city":"Saint George"
+    "state":"TX",
+    "city":"Galveston"
   },
   {
     "unitid":228699,
     "name":"Texarkana College",
-    "state":"UT",
-    "city":"Holladay"
+    "state":"TX",
+    "city":"Texarkana"
   },
   {
     "unitid":228705,
     "name":"Texas A & M University-Kingsville",
-    "state":"UT",
-    "city":"Murray"
+    "state":"TX",
+    "city":"Kingsville"
   },
   {
     "unitid":228723,
     "name":"Texas A & M University-College Station",
-    "state":"UT",
-    "city":"Salt Lake City"
+    "state":"TX",
+    "city":"College Station"
   },
   {
     "unitid":228732,
     "name":"Texas A & M University-System Office",
-    "state":"UT",
-    "city":"Ogden"
+    "state":"Texas",
+    "city":null
   },
   {
     "unitid":228769,
     "name":"The University of Texas at Arlington",
-    "state":"UT",
-    "city":"Ephraim"
+    "state":"TX",
+    "city":"Arlington"
   },
   {
     "unitid":228778,
     "name":"The University of Texas at Austin",
-    "state":"UT",
-    "city":"Cedar City"
+    "state":"TX",
+    "city":"Austin"
   },
   {
     "unitid":228787,
     "name":"The University of Texas at Dallas",
-    "state":"UT",
-    "city":"Roosevelt"
+    "state":"TX",
+    "city":"Richardson"
   },
   {
     "unitid":228796,
     "name":"The University of Texas at El Paso",
-    "state":"UT",
-    "city":"Logan"
+    "state":"TX",
+    "city":"El Paso"
   },
   {
     "unitid":228802,
     "name":"The University of Texas at Tyler",
-    "state":"UT",
-    "city":"Orem"
+    "state":"TX",
+    "city":"Tyler"
   },
   {
     "unitid":228866,
     "name":"Texas Chiropractic College Foundation Inc",
-    "state":"UT",
-    "city":"Salt Lake City"
+    "state":"TX",
+    "city":"Pasadena"
   },
   {
     "unitid":228875,
     "name":"Texas Christian University",
-    "state":"UT",
-    "city":"Salt Lake City"
+    "state":"TX",
+    "city":"Fort Worth"
   },
   {
     "unitid":228884,
     "name":"Texas College",
-    "state":"UT",
-    "city":"Ogden"
+    "state":"TX",
+    "city":"Tyler"
   },
   {
     "unitid":228981,
     "name":"Texas Lutheran University",
-    "state":"VT",
-    "city":"Bennington"
+    "state":"TX",
+    "city":"Seguin"
   },
   {
     "unitid":229018,
     "name":"The University of Texas Permian Basin",
-    "state":"VT",
-    "city":"Castleton"
+    "state":"TX",
+    "city":"Odessa"
   },
   {
     "unitid":229027,
     "name":"The University of Texas at San Antonio",
-    "state":"VT",
-    "city":"Burlington"
+    "state":"TX",
+    "city":"San Antonio"
   },
   {
     "unitid":229063,
     "name":"Texas Southern University",
-    "state":"VT",
-    "city":"Montpelier"
+    "state":"TX",
+    "city":"Houston"
   },
   {
     "unitid":229090,
     "name":"The University of Texas System Office",
-    "state":"VT",
-    "city":"Plainfield"
+    "state":"Texas",
+    "city":null
   },
   {
     "unitid":229115,
     "name":"Texas Tech University",
-    "state":"VT",
-    "city":"Johnson"
+    "state":"TX",
+    "city":"Lubbock"
   },
   {
     "unitid":229160,
     "name":"Texas Wesleyan University",
-    "state":"VT",
-    "city":"Middlebury"
+    "state":"TX",
+    "city":"Fort Worth"
   },
   {
     "unitid":229179,
     "name":"Texas Woman's University",
-    "state":"VT",
-    "city":"Northfield"
+    "state":"TX",
+    "city":"Denton"
   },
   {
     "unitid":229267,
     "name":"Trinity University",
-    "state":"VT",
-    "city":"Williston"
+    "state":"TX",
+    "city":"San Antonio"
   },
   {
     "unitid":229300,
     "name":"The University of Texas Health Science Center at Houston",
-    "state":"VT",
-    "city":"Colchester"
+    "state":"TX",
+    "city":"Houston"
   },
   {
     "unitid":229337,
     "name":"Texas Tech University Health Sciences Center",
-    "state":"VT",
-    "city":"Brattleboro"
+    "state":"TX",
+    "city":"Lubbock"
   },
   {
     "unitid":229355,
     "name":"Tyler Junior College",
-    "state":"VT",
-    "city":"Craftsbury Common"
+    "state":"TX",
+    "city":"Tyler"
   },
   {
     "unitid":232919,
     "name":"Tidewater Tech-Trades",
-    "state":"WA",
-    "city":"Ellensburg"
+    "state":"VA",
+    "city":"Norfolk"
   },
   {
     "unitid":233772,
     "name":"Tidewater Community College",
-    "state":"WA",
-    "city":"Kirkland"
+    "state":"VA",
+    "city":"Norfolk"
   },
   {
     "unitid":235167,
     "name":"The Evergreen State College",
-    "state":"WV",
-    "city":"Mount Hope"
+    "state":"WA",
+    "city":"Olympia"
   },
   {
     "unitid":235352,
     "name":"Toni & Guy Hairdressing Academy-Shoreline",
-    "state":"WV",
-    "city":"Charleston"
+    "state":"WA",
+    "city":"Shoreline"
   },
   {
     "unitid":236753,
     "name":"Tacoma Community College",
-    "state":"WV",
-    "city":"Morgantown"
+    "state":"WA",
+    "city":"Tacoma"
   },
   {
     "unitid":238810,
     "name":"The Professional Hair Design Academy",
-    "state":"WY",
-    "city":"Powell"
+    "state":"WI",
+    "city":"Eau Claire"
   },
   {
     "unitid":245281,
     "name":"Traxlers School of Hair",
-    "state":"AL",
-    "city":"Wadley"
+    "state":"MS",
+    "city":"Jackson"
   },
   {
     "unitid":247047,
     "name":"The Salon Professional Academy-Nampa",
-    "state":"CO",
-    "city":"Boulder"
+    "state":"ID",
+    "city":"Nampa"
   },
   {
     "unitid":248925,
     "name":"Tennessee College of Applied Technology Nashville",
-    "state":"IL",
-    "city":"Cicero"
+    "state":"TN",
+    "city":"Nashville"
   },
   {
     "unitid":367088,
     "name":"Tricoci University of Beauty Culture LLC-Bloomington",
-    "state":"MA",
-    "city":"Bourne"
+    "state":"IN",
+    "city":"Bloomington"
   },
   {
     "unitid":368832,
     "name":"Thanh Le College School of Cosmetology",
-    "state":"PR",
-    "city":"Mayaguez"
+    "state":"CA",
+    "city":"Garden Grove"
   },
   {
     "unitid":375540,
     "name":"Toledo Academy of Beauty Culture-East",
-    "state":"CO",
-    "city":"Loveland"
+    "state":"OH",
+    "city":"OREGON"
   },
   {
     "unitid":377315,
     "name":"Texas College of Cosmetology-Abilene",
-    "state":"CA",
-    "city":"Reseda"
+    "state":"TX",
+    "city":"Abilene"
   },
   {
     "unitid":385132,
     "name":"The Salon Professional Academy-Melbourne",
-    "state":"IL",
-    "city":"Oakbrook"
+    "state":"FL",
+    "city":"Melbourne"
   },
   {
     "unitid":392257,
     "name":"The College of Health Care Professions-Northwest",
-    "state":"OH",
-    "city":"Lucasville"
+    "state":"TX",
+    "city":"Houston"
   },
   {
     "unitid":402800,
     "name":"Tri-State Cosmetology Institute",
     "state":"TX",
-    "city":"McAllen"
+    "city":"El Paso"
   },
   {
     "unitid":407595,
     "name":"Trumbull Career & Technical Center",
-    "state":"CA",
-    "city":"Visalia"
+    "state":"OH",
+    "city":"Warren"
   },
   {
     "unitid":409379,
     "name":"Tennessee Board of Regents",
-    "state":"NJ",
-    "city":"Scotch Plains"
+    "state":"Tennessee",
+    "city":null
   },
   {
     "unitid":414869,
     "name":"Tricoci University of Beauty Culture-Indianapolis",
-    "state":"PA",
-    "city":"Downingtown"
+    "state":"IN",
+    "city":"Indianapolis"
   },
   {
     "unitid":414878,
     "name":"Trine University-Regional\/Non-Traditional Campuses",
-    "state":"PA",
-    "city":"Reynoldsville"
+    "state":"IN",
+    "city":"Angola"
   },
   {
     "unitid":416801,
     "name":"The University of Texas MD Anderson Cancer Center",
-    "state":"PA",
-    "city":"Towanda"
+    "state":"TX",
+    "city":"Houston"
   },
   {
     "unitid":418968,
     "name":"Tint School of Makeup and Cosmetology-Dallas",
-    "state":"VA",
-    "city":"Alexandria"
+    "state":"TX",
+    "city":"Grand Prairie"
   },
   {
     "unitid":419633,
     "name":"Texas College of Cosmetology-San Angelo",
-    "state":"MA",
-    "city":"Boston"
+    "state":"TX",
+    "city":"San Angelo"
   },
   {
     "unitid":420723,
     "name":"Tillamook Bay Community College",
-    "state":"CA",
-    "city":"Clovis"
+    "state":"OR",
+    "city":"Tillamook"
   },
   {
     "unitid":430704,
     "name":"Texas Health and Science University",
-    "state":"CO",
-    "city":"Boulder"
+    "state":"TX",
+    "city":"Austin"
   },
   {
     "unitid":434344,
     "name":"Toni & Guy Hairdressing Academy-Worcester",
-    "state":"DC",
-    "city":"Washington"
+    "state":"MA",
+    "city":"Worcester"
   },
   {
     "unitid":436775,
     "name":"Toni & Guy Hairdressing Academy-Plano",
-    "state":"LA",
-    "city":"Baton Rouge"
+    "state":"TX",
+    "city":"Plano"
   },
   {
     "unitid":437635,
     "name":"The College of Health Care Professions-Austin",
-    "state":"OR",
-    "city":"Bend"
+    "state":"TX",
+    "city":"Austin"
   },
   {
     "unitid":437732,
     "name":"The Chicago School-College of Nursing",
-    "state":"LA",
-    "city":"Baton Rouge"
+    "state":"TX",
+    "city":"Richardson"
   },
   {
     "unitid":438674,
     "name":"The Academy of Hair Design Six",
-    "state":"FL",
-    "city":"Miami"
+    "state":"MS",
+    "city":"Hattiesburg"
   },
   {
     "unitid":439154,
     "name":"Texas Tech University System Administration",
-    "state":"NY",
-    "city":"Lockport"
+    "state":"Texas",
+    "city":null
   },
   {
     "unitid":439701,
     "name":"The King's University",
-    "state":"UT",
-    "city":"Salt Lake City"
+    "state":"TX",
+    "city":"Southlake"
   },
   {
     "unitid":440989,
     "name":"Texas Barber College",
-    "state":"IL",
-    "city":"Evanston"
+    "state":"TX",
+    "city":"Houston"
   },
   {
     "unitid":441131,
     "name":"The Seattle School of Theology & Psychology",
-    "state":"MI",
-    "city":"Southfield"
+    "state":"WA",
+    "city":"Seattle"
   },
   {
     "unitid":441487,
     "name":"Texas County Technical College",
-    "state":"TX",
-    "city":"Weslaco"
+    "state":"MO",
+    "city":"Houston"
   },
   {
     "unitid":442329,
     "name":"Tulsa Welding School-Jacksonville",
-    "state":"TN",
-    "city":"Murfreesboro"
+    "state":"FL",
+    "city":"Jacksonville"
   },
   {
     "unitid":442781,
     "name":"Tohono O'Odham Community College",
-    "state":"AL",
-    "city":"Mobile"
+    "state":"AZ",
+    "city":"Sells"
   },
   {
     "unitid":443289,
     "name":"Tigi Hairdressing Academy-Colorado Springs",
-    "state":"WV",
-    "city":"Huntington"
+    "state":"CO",
+    "city":"Colorado Springs"
   },
   {
     "unitid":443298,
     "name":"Trend Barber College",
-    "state":"AZ",
-    "city":"Chandler"
+    "state":"TX",
+    "city":"Houston"
   },
   {
     "unitid":443377,
     "name":"Triangle Tech Inc-Sunbury",
-    "state":"FL",
-    "city":"Oviedo"
+    "state":"PA",
+    "city":"Sunbury"
   },
   {
     "unitid":444404,
     "name":"The Beauty Institute",
-    "state":"KY",
-    "city":"Lexington"
+    "state":"FL",
+    "city":"West  Palm Beach"
   },
   {
     "unitid":444936,
     "name":"Turning Point Beauty College",
-    "state":"UT",
-    "city":"Draper"
+    "state":"AZ",
+    "city":"Casa Grande"
   },
   {
     "unitid":445054,
     "name":"Toyota Technological Institute at Chicago",
-    "state":"LA",
-    "city":"West Monroe"
+    "state":"IL",
+    "city":"Chicago"
   },
   {
     "unitid":447591,
     "name":"The College of Health Care Professions-Southwest Houston",
-    "state":"FL",
-    "city":"Gainesville"
+    "state":"TX",
+    "city":"Houston"
   },
   {
     "unitid":447704,
     "name":"Tucson College of Beauty",
-    "state":"IN",
-    "city":"Jeffersonville"
+    "state":"AZ",
+    "city":"Tucson"
   },
   {
     "unitid":447865,
     "name":"Trendsetters School of Beauty & Barbering",
-    "state":"TX",
-    "city":"Silsbee"
+    "state":"FL",
+    "city":"Jacksonville"
   },
   {
     "unitid":448026,
     "name":"The Salon Professional Academy-Fargo",
-    "state":"MI",
-    "city":"Sterling Heights"
-  },
-  {
-    "unitid":448196,
-    "name":"Texas Health School",
-    "state":"OH",
-    "city":"Westerville"
-  },
-  {
-    "unitid":448859,
-    "name":"Triangle Tech Inc-Bethlehem",
-    "state":"NV",
-    "city":"Las Vegas"
-  },
-  {
-    "unitid":449250,
-    "name":"The College of Health Care Professions-San Antonio",
-    "state":"FL",
-    "city":"Gainesville"
-  },
-  {
-    "unitid":449524,
-    "name":"Taylor College",
-    "state":"MO",
-    "city":"Springfield"
-  },
-  {
-    "unitid":450650,
-    "name":"The Institute of Beauty and Wellness",
-    "state":"NY",
-    "city":"New York"
-  },
-  {
-    "unitid":450711,
-    "name":"Trend Barber College",
-    "state":"AZ",
-    "city":"Phoenix"
-  },
-  {
-    "unitid":451307,
-    "name":"The Salon Professional Academy-Battle Creek",
-    "state":"FL",
-    "city":"Bonita Springs"
-  },
-  {
-    "unitid":451316,
-    "name":"Trend Setters School",
-    "state":"FL",
-    "city":"Miami"
-  },
-  {
-    "unitid":451404,
-    "name":"Talmudical Seminary of Bobov",
-    "state":"IL",
-    "city":"Chicago"
-  },
-  {
-    "unitid":451820,
-    "name":"The Art Institute of Austin",
-    "state":"NY",
-    "city":"Brooklyn"
-  },
-  {
-    "unitid":451918,
-    "name":"TC Beauty",
-    "state":"TX",
-    "city":"Mesquite"
-  },
-  {
-    "unitid":452009,
-    "name":"The Hair Academy",
-    "state":"TX",
-    "city":"San Antonio"
-  },
-  {
-    "unitid":454184,
-    "name":"The King's College",
-    "state":"DC",
-    "city":"Washington"
-  },
-  {
-    "unitid":454537,
-    "name":"The Salon Professional Academy-Appleton",
-    "state":"IL",
-    "city":"Chicago"
-  },
-  {
-    "unitid":454689,
-    "name":"Taft University System",
-    "state":"RI",
-    "city":"Cranston"
-  },
-  {
-    "unitid":454962,
-    "name":"The University of Aesthetics & Cosmetology",
     "state":"ND",
     "city":"Fargo"
   },
   {
+    "unitid":448196,
+    "name":"Texas Health School",
+    "state":"TX",
+    "city":"Houston"
+  },
+  {
+    "unitid":448859,
+    "name":"Triangle Tech Inc-Bethlehem",
+    "state":"PA",
+    "city":"Bethlehem"
+  },
+  {
+    "unitid":449250,
+    "name":"The College of Health Care Professions-San Antonio",
+    "state":"TX",
+    "city":"San Antonio"
+  },
+  {
+    "unitid":449524,
+    "name":"Taylor College",
+    "state":"FL",
+    "city":"Belleview"
+  },
+  {
+    "unitid":450650,
+    "name":"The Institute of Beauty and Wellness",
+    "state":"WI",
+    "city":"Milwaukee"
+  },
+  {
+    "unitid":450711,
+    "name":"Trend Barber College",
+    "state":"TX",
+    "city":"Houston"
+  },
+  {
+    "unitid":451307,
+    "name":"The Salon Professional Academy-Battle Creek",
+    "state":"MI",
+    "city":"Battle Creek"
+  },
+  {
+    "unitid":451316,
+    "name":"Trend Setters School",
+    "state":"MO",
+    "city":"Cape Girardeau"
+  },
+  {
+    "unitid":451404,
+    "name":"Talmudical Seminary of Bobov",
+    "state":"NY",
+    "city":"Brooklyn"
+  },
+  {
+    "unitid":451820,
+    "name":"The Art Institute of Austin",
+    "state":"TX",
+    "city":"Bastrop"
+  },
+  {
+    "unitid":451918,
+    "name":"TC Beauty",
+    "state":"TN",
+    "city":"Johnson City"
+  },
+  {
+    "unitid":452009,
+    "name":"The Hair Academy",
+    "state":"ND",
+    "city":"Bismarck"
+  },
+  {
+    "unitid":454184,
+    "name":"The King's College",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":454537,
+    "name":"The Salon Professional Academy-Appleton",
+    "state":"WI",
+    "city":"Appleton"
+  },
+  {
+    "unitid":454689,
+    "name":"Taft University System",
+    "state":"CO",
+    "city":"Lakewood"
+  },
+  {
+    "unitid":454962,
+    "name":"The University of Aesthetics & Cosmetology",
+    "state":"IL",
+    "city":"Downers Grove"
+  },
+  {
     "unitid":454971,
     "name":"Tricoci University of Beauty Culture-Chicago NW",
-    "state":"PA",
-    "city":"Allentown"
+    "state":"IL",
+    "city":"Chicago"
   },
   {
     "unitid":454980,
     "name":"Tricoci University of Beauty Culture-Glendale Heights",
-    "state":"CA",
-    "city":"Fontana"
+    "state":"IL",
+    "city":"Glendale Heights"
   },
   {
     "unitid":454999,
     "name":"Tricoci University of Beauty Culture-Peoria",
-    "state":"CA",
-    "city":"Redlands"
+    "state":"IL",
+    "city":"Peoria"
   },
   {
     "unitid":455008,
     "name":"Tricoci University of Beauty Culture-Rockford",
-    "state":"WV",
-    "city":"Scott Depot"
+    "state":"IL",
+    "city":"Rockford"
   },
   {
     "unitid":455187,
     "name":"Total Image Beauty Academy",
-    "state":"CA",
-    "city":"Torrance"
+    "state":"NJ",
+    "city":"Union City"
   },
   {
     "unitid":455433,
     "name":"The Chicago School at Anaheim",
-    "state":"CT",
-    "city":"Wethersfield"
+    "state":"CA",
+    "city":"Anaheim"
   },
   {
     "unitid":455664,
     "name":"The Chicago School at Los Angeles",
-    "state":"FL",
-    "city":"Casselberry"
-  },
-  {
-    "unitid":455886,
-    "name":"Tricoci University of Beauty Culture-Libertyville",
-    "state":"IN",
-    "city":"Anderson"
-  },
-  {
-    "unitid":455895,
-    "name":"Tricoci University of Beauty Culture-Bridgeview",
-    "state":"KS",
-    "city":"Wichita"
-  },
-  {
-    "unitid":455901,
-    "name":"The Temple-A Paul Mitchell Partner School",
-    "state":"LA",
-    "city":"Gretna"
-  },
-  {
-    "unitid":455929,
-    "name":"The Academy of Hair Design LLC",
-    "state":"MA",
-    "city":"Charlton"
-  },
-  {
-    "unitid":455965,
-    "name":"Toni & Guy Hairdressing Academy-Cranston",
-    "state":"MI",
-    "city":"Canton"
-  },
-  {
-    "unitid":457332,
-    "name":"TIGI Hairdressing Academy Guilford",
-    "state":"SC",
-    "city":"Greenville"
-  },
-  {
-    "unitid":457448,
-    "name":"Tenaj Salon Institute",
-    "state":"CA",
-    "city":"Fresno"
-  },
-  {
-    "unitid":457837,
-    "name":"The Salon Professional Academy-Tonawanda",
-    "state":"DC",
-    "city":"Washington"
-  },
-  {
-    "unitid":458061,
-    "name":"Texas Beauty College",
-    "state":"MI",
-    "city":"Davison"
-  },
-  {
-    "unitid":458098,
-    "name":"The Salon Professional Academy-Lewisville",
-    "state":"OH",
-    "city":"Niles"
-  },
-  {
-    "unitid":458168,
-    "name":"The Salon Professional Academy-Onalaska",
-    "state":"FL",
-    "city":"Orlando"
-  },
-  {
-    "unitid":458496,
-    "name":"The Art Institute of Virginia Beach",
-    "state":"MI",
-    "city":"Saginaw"
-  },
-  {
-    "unitid":458982,
-    "name":"The Art Institute of San Antonio",
-    "state":"VA",
-    "city":"Vienna"
-  },
-  {
-    "unitid":459295,
-    "name":"The Salon Professional Academy-Colorado Springs",
-    "state":"PA",
-    "city":"Monroeville"
-  },
-  {
-    "unitid":459347,
-    "name":"The Salon Professional Academy-Ft Myers",
-    "state":"CA",
-    "city":"North Hollywood"
-  },
-  {
-    "unitid":459392,
-    "name":"The Salon Professional Academy-Evansville",
-    "state":"UT",
-    "city":"American Fork"
-  },
-  {
-    "unitid":459408,
-    "name":"Tri County Regional Vocational Technical High School",
-    "state":"FL",
-    "city":"Pembroke Pines"
-  },
-  {
-    "unitid":459727,
-    "name":"Touro University Worldwide",
-    "state":"NV",
-    "city":"Las Vegas"
-  },
-  {
-    "unitid":459736,
-    "name":"Touro University California",
-    "state":"NC",
-    "city":"Cary"
-  },
-  {
-    "unitid":459745,
-    "name":"The Chicago School at Washington DC",
-    "state":"UT",
-    "city":"West Jordan"
-  },
-  {
-    "unitid":459824,
-    "name":"Touro University Nevada",
-    "state":"CA",
-    "city":"Santa Ana"
-  },
-  {
-    "unitid":459949,
-    "name":"Texas A&M University-San Antonio",
-    "state":"NM",
-    "city":"Albuquerque"
-  },
-  {
-    "unitid":460987,
-    "name":"The Salon Professional Academy",
     "state":"CA",
     "city":"Los Angeles"
   },
   {
+    "unitid":455886,
+    "name":"Tricoci University of Beauty Culture-Libertyville",
+    "state":"IL",
+    "city":"Libertyville"
+  },
+  {
+    "unitid":455895,
+    "name":"Tricoci University of Beauty Culture-Bridgeview",
+    "state":"IL",
+    "city":"Bridgeview"
+  },
+  {
+    "unitid":455901,
+    "name":"The Temple-A Paul Mitchell Partner School",
+    "state":"MD",
+    "city":"Frederick"
+  },
+  {
+    "unitid":455929,
+    "name":"The Academy of Hair Design LLC",
+    "state":"OK",
+    "city":"Oklahoma City"
+  },
+  {
+    "unitid":455965,
+    "name":"Toni & Guy Hairdressing Academy-Cranston",
+    "state":"RI",
+    "city":"Cranston"
+  },
+  {
+    "unitid":457332,
+    "name":"TIGI Hairdressing Academy Guilford",
+    "state":"CT",
+    "city":"Guilford"
+  },
+  {
+    "unitid":457448,
+    "name":"Tenaj Salon Institute",
+    "state":"FL",
+    "city":"The Villages"
+  },
+  {
+    "unitid":457837,
+    "name":"The Salon Professional Academy-Tonawanda",
+    "state":"NY",
+    "city":"Tonawanda"
+  },
+  {
+    "unitid":458061,
+    "name":"Texas Beauty College",
+    "state":"TX",
+    "city":"Haltom city"
+  },
+  {
+    "unitid":458098,
+    "name":"The Salon Professional Academy-Lewisville",
+    "state":"TX",
+    "city":"Lewisville"
+  },
+  {
+    "unitid":458168,
+    "name":"The Salon Professional Academy-Onalaska",
+    "state":"WI",
+    "city":"Onalaska"
+  },
+  {
+    "unitid":458496,
+    "name":"The Art Institute of Virginia Beach",
+    "state":"VA",
+    "city":"Virginia Beach"
+  },
+  {
+    "unitid":458982,
+    "name":"The Art Institute of San Antonio",
+    "state":"TX",
+    "city":"San Antonio"
+  },
+  {
+    "unitid":459295,
+    "name":"The Salon Professional Academy-Colorado Springs",
+    "state":"CO",
+    "city":"Colorado Springs"
+  },
+  {
+    "unitid":459347,
+    "name":"The Salon Professional Academy-Ft Myers",
+    "state":"FL",
+    "city":"Fort Myers"
+  },
+  {
+    "unitid":459392,
+    "name":"The Salon Professional Academy-Evansville",
+    "state":"IN",
+    "city":"Evansville"
+  },
+  {
+    "unitid":459408,
+    "name":"Tri County Regional Vocational Technical High School",
+    "state":"MA",
+    "city":"Franklin"
+  },
+  {
+    "unitid":459727,
+    "name":"Touro University Worldwide",
+    "state":"CA",
+    "city":"Los Alamitos"
+  },
+  {
+    "unitid":459736,
+    "name":"Touro University California",
+    "state":"CA",
+    "city":"Vallejo"
+  },
+  {
+    "unitid":459745,
+    "name":"The Chicago School at Washington DC",
+    "state":"DC",
+    "city":"Washington"
+  },
+  {
+    "unitid":459824,
+    "name":"Touro University Nevada",
+    "state":"NV",
+    "city":"Henderson"
+  },
+  {
+    "unitid":459949,
+    "name":"Texas A&M University-San Antonio",
+    "state":"TX",
+    "city":"San Antonio"
+  },
+  {
+    "unitid":460987,
+    "name":"The Salon Professional Academy",
+    "state":"AR",
+    "city":"Sherwood"
+  },
+  {
     "unitid":460996,
     "name":"The Salon Professional Academy-St Charles",
-    "state":"IL",
-    "city":"Plainfield"
+    "state":"MO",
+    "city":"St. Charles"
   },
   {
     "unitid":461494,
     "name":"Taylor Andrews Academy of Hair Design-West Jordan",
-    "state":"AZ",
-    "city":"Phoenix"
+    "state":"UT",
+    "city":"West Jordan"
   },
   {
     "unitid":461908,
     "name":"The Salon Professional Academy-Kenosha",
-    "state":"FL",
-    "city":"Miami"
+    "state":"WI",
+    "city":"Kenosha"
   },
   {
     "unitid":461926,
     "name":"Taylor Andrews Academy-St George",
-    "state":"GA",
-    "city":"Sandy Springs"
+    "state":"UT",
+    "city":"St. George"
   },
   {
     "unitid":462345,
     "name":"The Salon Professional Academy",
-    "state":"CA",
-    "city":"Santa Fe Springs"
+    "state":"IL",
+    "city":"Plainfield"
   },
   {
     "unitid":470393,
     "name":"Tricoci University of Beauty Culture-Chicago NE",
-    "state":"UT",
-    "city":"South Jordan"
+    "state":"IL",
+    "city":"Chicago"
   },
   {
     "unitid":475228,
     "name":"The Colleges of Law at Santa Barbara",
-    "state":"PA",
-    "city":"University Park"
+    "state":"CA",
+    "city":"Santa Barbara"
   },
   {
     "unitid":475237,
     "name":"The University of America",
-    "state":"NJ",
-    "city":"Ocean"
+    "state":"California",
+    "city":null
   },
   {
     "unitid":475723,
     "name":"Tooele Technical College",
-    "state":"MI",
-    "city":"Ionia"
+    "state":"UT",
+    "city":"Tooele"
   },
   {
     "unitid":476063,
     "name":"Tulsa Welding School-Jacksonville",
-    "state":"TX",
-    "city":"Fort Worth"
+    "state":"FL",
+    "city":"Jacksonville"
   },
   {
     "unitid":476568,
     "name":"Tomorrow's Image Barber And Beauty Academy of Virginia",
-    "state":"AL",
-    "city":"Huntsville"
+    "state":"VA",
+    "city":"Newport News"
   },
   {
     "unitid":476708,
     "name":"The Barber School",
-    "state":"CA",
-    "city":"Fullerton"
+    "state":"UT",
+    "city":"Midvale"
   },
   {
     "unitid":480824,
     "name":"The College of Health Care Professions-Dallas",
-    "state":"NV",
-    "city":"Las Vegas"
+    "state":"TX",
+    "city":"Dallas"
   },
   {
     "unitid":480833,
     "name":"The College of Health Care Professions-Fort Worth",
-    "state":"CA",
-    "city":"Bakersfield"
+    "state":"TX",
+    "city":"Fort Worth"
   },
   {
     "unitid":480976,
     "name":"The Salon Professional Academy-Huntsville",
-    "state":"NC",
-    "city":"Charlotte"
+    "state":"AL",
+    "city":"Huntsville"
   },
   {
     "unitid":481100,
     "name":"Top Nails & Hair Beauty School",
-    "state":"CA",
-    "city":"Huntington Park"
+    "state":"UT",
+    "city":"Taylorsville"
   },
   {
     "unitid":481340,
     "name":"The Salon Professional Academy-Nashville",
-    "state":"LA",
-    "city":"Slidell"
+    "state":"TN",
+    "city":"Nashville"
   },
   {
     "unitid":481526,
     "name":"The Chrysm Institute of Esthetics",
-    "state":"TX",
-    "city":"San Marcos"
+    "state":"VA",
+    "city":"Virginia Beach"
   },
   {
     "unitid":482167,
     "name":"Trenz Beauty Academy",
-    "state":"CA",
-    "city":"Lancaster"
+    "state":"IL",
+    "city":"Calumet City"
   },
   {
     "unitid":483036,
     "name":"Texas A&M University-Central Texas",
     "state":"TX",
-    "city":"Dallas"
+    "city":"Killeen"
   },
   {
     "unitid":483230,
     "name":"The Fab School",
-    "state":"GA",
-    "city":"Milledgeville"
+    "state":"CA",
+    "city":"Rancho Cucamonga"
   },
   {
     "unitid":483735,
     "name":"Total Transformation Institute of Cosmetology",
-    "state":"AR",
-    "city":"Pine Bluff"
+    "state":"TX",
+    "city":"San Marcos"
   },
   {
     "unitid":484127,
     "name":"TIGI Hairdressing Academy Newtown",
-    "state":"CA",
-    "city":"San Francisco"
+    "state":"CT",
+    "city":"Newtown"
   },
   {
     "unitid":484206,
     "name":"The Salon Professional Academy-San Jose",
-    "state":"DC",
-    "city":"Washington"
+    "state":"CA",
+    "city":"San Jose"
   },
   {
     "unitid":484233,
     "name":"Tri-Community Adult Education",
     "state":"CA",
-    "city":"San Francisco"
+    "city":"Covina"
   },
   {
     "unitid":484394,
     "name":"Taylor Andrews Academy of Hair Design-Provo",
-    "state":"FL",
-    "city":"Miami"
+    "state":"UT",
+    "city":"Provo"
   },
   {
     "unitid":485360,
     "name":"The Vocational Nursing Institute Inc",
-    "state":"WI",
-    "city":"Madison"
+    "state":"TX",
+    "city":"Houston"
   },
   {
     "unitid":485953,
     "name":"The Recording Conservatory of Austin",
-    "state":"WI",
-    "city":"Madison"
+    "state":"TX",
+    "city":"Austin"
   },
   {
     "unitid":486123,
     "name":"Theatre of Arts",
     "state":"CA",
-    "city":"Alhambra"
+    "city":"Hollywood"
   },
   {
     "unitid":486150,
     "name":"Treasure Coast Technical College",
-    "state":"MD",
-    "city":"Annapolis"
+    "state":"FL",
+    "city":"Vero Beach"
   },
   {
     "unitid":486798,
     "name":"Tulsa Welding School-Houston",
-    "state":"DE",
-    "city":"Newark"
-  },
-  {
-    "unitid":487010,
-    "name":"The University of Tennessee Health Science Center",
-    "state":"IN",
-    "city":"Carmel"
-  },
-  {
-    "unitid":487153,
-    "name":"The Chicago School at Xavier University of Louisiana",
-    "state":"CA",
-    "city":"Pasadena"
-  },
-  {
-    "unitid":487232,
-    "name":"Texas College of Cosmetology-Lubbock",
-    "state":"OR",
-    "city":"Cannon Beach"
-  },
-  {
-    "unitid":487320,
-    "name":"Texas State Technical College",
-    "state":"LA",
-    "city":"New Orleans"
-  },
-  {
-    "unitid":487533,
-    "name":"Tricoci University of Beauty Culture-Elgin",
-    "state":"ID",
-    "city":"Nampa"
-  },
-  {
-    "unitid":487676,
-    "name":"The Temple Annapolis-A Paul Mitchell Partner School",
-    "state":"UT",
-    "city":"West Valley City"
-  },
-  {
-    "unitid":487807,
-    "name":"Top of the Line Barber College",
-    "state":"NC",
-    "city":"Charlotte"
-  },
-  {
-    "unitid":488129,
-    "name":"Textures Institute of Cosmetology",
-    "state":"CA",
-    "city":"El Monte"
-  },
-  {
-    "unitid":488800,
-    "name":"Teachers College of San Joaquin",
-    "state":"AR",
-    "city":"Pine Bluff"
-  },
-  {
-    "unitid":488934,
-    "name":"Tulsa Technology Center",
-    "state":"NJ",
-    "city":"Somerset"
-  },
-  {
-    "unitid":489283,
-    "name":"The College of Health Care Professions-McAllen Campus",
-    "state":"WI",
-    "city":"Janesville"
-  },
-  {
-    "unitid":490443,
-    "name":"The Esthetic Institute",
-    "state":"CA",
-    "city":"Reedley"
-  },
-  {
-    "unitid":491190,
-    "name":"The Chicago School at San Diego",
-    "state":"PR",
-    "city":"Santurce"
-  },
-  {
-    "unitid":491224,
-    "name":"Tricoci University of Beauty Culture-Janesville",
-    "state":"NJ",
-    "city":"Ewing"
-  },
-  {
-    "unitid":491251,
-    "name":"The Culinary School of Fort Worth",
-    "state":"FL",
-    "city":"Miami"
-  },
-  {
-    "unitid":491774,
-    "name":"Transitions Career Institute School of Nursing",
     "state":"TX",
     "city":"Houston"
   },
   {
+    "unitid":487010,
+    "name":"The University of Tennessee Health Science Center",
+    "state":"TN",
+    "city":"Memphis"
+  },
+  {
+    "unitid":487153,
+    "name":"The Chicago School at Xavier University of Louisiana",
+    "state":"LA",
+    "city":"New Orleans"
+  },
+  {
+    "unitid":487232,
+    "name":"Texas College of Cosmetology-Lubbock",
+    "state":"TX",
+    "city":"Lubbock"
+  },
+  {
+    "unitid":487320,
+    "name":"Texas State Technical College",
+    "state":"TX",
+    "city":"Waco"
+  },
+  {
+    "unitid":487533,
+    "name":"Tricoci University of Beauty Culture-Elgin",
+    "state":"IL",
+    "city":"Elgin"
+  },
+  {
+    "unitid":487676,
+    "name":"The Temple Annapolis-A Paul Mitchell Partner School",
+    "state":"MD",
+    "city":"Annapolis"
+  },
+  {
+    "unitid":487807,
+    "name":"Top of the Line Barber College",
+    "state":"SC",
+    "city":"Charleston"
+  },
+  {
+    "unitid":488129,
+    "name":"Textures Institute of Cosmetology",
+    "state":"IN",
+    "city":"Indianapolis"
+  },
+  {
+    "unitid":488800,
+    "name":"Teachers College of San Joaquin",
+    "state":"CA",
+    "city":"Stockton"
+  },
+  {
+    "unitid":488934,
+    "name":"Tulsa Technology Center",
+    "state":"OK",
+    "city":"Tulsa"
+  },
+  {
+    "unitid":489283,
+    "name":"The College of Health Care Professions-McAllen Campus",
+    "state":"TX",
+    "city":"McAllen"
+  },
+  {
+    "unitid":490443,
+    "name":"The Esthetic Institute",
+    "state":"VA",
+    "city":"Vienna"
+  },
+  {
+    "unitid":491190,
+    "name":"The Chicago School at San Diego",
+    "state":"CA",
+    "city":"San Diego"
+  },
+  {
+    "unitid":491224,
+    "name":"Tricoci University of Beauty Culture-Janesville",
+    "state":"WI",
+    "city":"Janesville"
+  },
+  {
+    "unitid":491251,
+    "name":"The Culinary School of Fort Worth",
+    "state":"TX",
+    "city":"Fort Worth"
+  },
+  {
+    "unitid":491774,
+    "name":"Transitions Career Institute School of Nursing",
+    "state":"NY",
+    "city":"Flushing"
+  },
+  {
     "unitid":491996,
     "name":"The Salon Professional Academy-Georgetown",
-    "state":"OH",
-    "city":"Cleveland"
+    "state":"TX",
+    "city":"Georgetown"
   },
   {
     "unitid":492087,
     "name":"The Continents States University",
-    "state":"NY",
-    "city":"Monroe"
+    "state":"Missouri",
+    "city":null
   },
   {
     "unitid":492263,
     "name":"The University of Tennessee System Office",
-    "state":"FL",
-    "city":"Tampa"
+    "state":"Tennessee",
+    "city":null
   },
   {
     "unitid":492360,
     "name":"The Salon Professional Academy-Delray Beach",
-    "state":"CA",
-    "city":"Los Angeles"
+    "state":"FL",
+    "city":"Delray Beach"
   },
   {
     "unitid":492607,
     "name":"The Chicago School at Dallas",
     "state":"TX",
-    "city":"Texarkana"
+    "city":"Richardson"
   },
   {
     "unitid":492689,
     "name":"Texas Tech University Health Sciences Center-El Paso",
-    "state":"PA",
-    "city":"Irwin"
+    "state":"TX",
+    "city":"El Paso"
   },
   {
     "unitid":492722,
     "name":"The College of Health Care Professions-South San Antonio",
-    "state":"PR",
-    "city":"Ponce"
+    "state":"TX",
+    "city":"San Antonio"
   },
   {
     "unitid":493910,
     "name":"Tuana European Beauty Academy",
-    "state":"TN",
-    "city":"Hendersonville"
+    "state":"CO",
+    "city":"Fort Collins"
   },
   {
     "unitid":494232,
     "name":"The Salon Professional Academy-Washington DC",
-    "state":"CA",
-    "city":"Colton"
+    "state":"DC",
+    "city":"Washington"
   },
   {
     "unitid":494603,
     "name":"The Southwestern Baptist Theological Seminary",
-    "state":"CO",
-    "city":"Denver"
+    "state":"TX",
+    "city":"Fort Worth"
   },
   {
     "unitid":494694,
     "name":"Texas Healthtech Institute",
-    "state":"OK",
-    "city":"Oklahoma City"
+    "state":"TX",
+    "city":"Beaumont"
   },
   {
     "unitid":494719,
     "name":"Tonsorial Arts Barber College",
-    "state":"IA",
-    "city":"Urbandale"
+    "state":"TX",
+    "city":"Texarkana"
   },
   {
     "unitid":495235,
     "name":"Total Beauty Institute",
-    "state":"NJ",
-    "city":"Cherry Hill"
+    "state":"FL",
+    "city":"Jacksonville"
   },
   {
     "unitid":495305,
     "name":"The Professional Cosmetology Academy",
-    "state":"LA",
-    "city":"New Orleans"
+    "state":"TX",
+    "city":"Laredo"
   },
   {
     "unitid":495341,
     "name":"Taylor Andrews Academy of Hair Design-Hair Lab Detroit Barber School",
-    "state":"NJ",
-    "city":"Howell"
+    "state":"MI",
+    "city":"Southgate"
   },
   {
     "unitid":495730,
     "name":"Tricoci University of Beauty Culture-Normal",
-    "state":"NY",
-    "city":"Yonkers"
+    "state":"IL",
+    "city":"Normal"
   },
   {
     "unitid":496265,
     "name":"Triangle Tech-Chambersburg",
-    "state":"FL",
-    "city":"Sarasota"
+    "state":"PA",
+    "city":"Chambersburg"
   },
   {
     "unitid":496539,
     "name":"The  Salon Professional Academy of Holland",
-    "state":"CA",
-    "city":"San Francisco"
+    "state":"MI",
+    "city":"Holland"
   },
   {
     "unitid":497189,
     "name":"The Rapha School",
-    "state":"AZ",
-    "city":"Tucson"
+    "state":"PA",
+    "city":"Home"
   },
   {
     "unitid":497392,
     "name":"Top of the Line Barber School",
-    "state":"CA",
-    "city":"San Jose"
+    "state":"TX",
+    "city":"San Antonio"
   },
   {
     "unitid":497499,
     "name":"Technology Learning Center",
-    "state":"CA",
-    "city":"French Camp"
+    "state":"MA",
+    "city":"Oxford"
   },
   {
     "unitid":498298,
     "name":"The Salon Professional Academy Maplewood",
-    "state":"FL",
-    "city":"West Palm Beach"
+    "state":"Minnesota",
+    "city":null
   },
   {
     "unitid":498359,
     "name":"The Salon Professional Academy",
-    "state":"FL",
-    "city":"West Palm Beach"
+    "state":"PA",
+    "city":"Collegeville"
   },
   {
     "unitid":498836,
     "name":"The Nurse Academy",
-    "state":"IN",
-    "city":"Bloomington"
+    "state":"California",
+    "city":null
   },
   {
     "unitid":499705,
     "name":"Tulsa Welding School-Dallas Campus",
-    "state":"MN",
-    "city":"Wadena"
+    "state":"Texas",
+    "city":null
   }
 ]

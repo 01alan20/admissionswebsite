@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 234696,
     "name": "Bellingham Technical College",
-    "city": "Longview",
+    "city": "Bellingham",
     "state": "WA",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate/Associate's Colleges: Associate's Dominant",
-    "website": "stylemasters.edu/",
+    "website": "https://www.btc.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

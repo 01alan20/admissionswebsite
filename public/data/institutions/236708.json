@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 236708,
     "name": "Spokane Falls Community College",
-    "city": "Buckhannon",
-    "state": "WV",
+    "city": "Spokane",
+    "state": "WA",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate/Associate's Colleges: Associate's Dominant",
-    "website": "www.wvwc.edu/",
+    "website": "https://sfcc.spokane.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

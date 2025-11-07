@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 499103,
     "name": "Homestead Schools-Costa Mesa",
-    "city": "Greenfield",
-    "state": "IN",
+    "city": null,
+    "state": "California",
     "control": "Private nonprofit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.gotopjs.com/",
+    "website": null,
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

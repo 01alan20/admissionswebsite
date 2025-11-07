@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 214528,
     "name": "Orleans Technical College",
-    "city": "West Mifflin",
+    "city": "Philadelphia",
     "state": "PA",
     "control": "Private nonprofit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.pia.edu/",
+    "website": "https://www.orleanstech.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

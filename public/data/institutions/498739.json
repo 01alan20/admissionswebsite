@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 498739,
     "name": "Lehigh Career & Technical Institute",
-    "city": "Muncie",
-    "state": "IN",
+    "city": null,
+    "state": "Pennsylvania",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.ivytech.edu/muncie/",
+    "website": null,
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

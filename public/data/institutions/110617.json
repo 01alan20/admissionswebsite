@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 110617,
     "name": "California State University-Sacramento",
-    "city": "Riverside",
+    "city": "Sacramento",
     "state": "CA",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
-    "website": "www.ucr.edu/",
+    "website": "https://www.csus.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

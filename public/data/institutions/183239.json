@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 183239,
     "name": "Saint Anselm College",
-    "city": "Dover",
-    "state": "NJ",
+    "city": "Manchester",
+    "state": "NH",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate Colleges: Arts & Sciences Focus",
-    "website": "kubertschool.edu/",
+    "website": "https://www.anselm.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

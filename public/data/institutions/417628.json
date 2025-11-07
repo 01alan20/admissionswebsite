@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 417628,
     "name": "Kirksville Area Technical Center",
-    "city": "San Luis Obispo",
-    "state": "CA",
+    "city": "Kirksville",
+    "state": "MO",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "ccsce.org/",
+    "website": "https://www.kirksville.k12.mo.us/o/katc",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

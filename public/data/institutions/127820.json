@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 127820,
     "name": "Pikes Peak State College",
-    "city": "Hamden",
-    "state": "CT",
+    "city": "Colorado Springs",
+    "state": "CO",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate/Associate's Colleges: Associate's Dominant",
-    "website": "www.porterchester.edu/",
+    "website": "https://www.pikespeak.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

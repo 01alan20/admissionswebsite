@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 228802,
     "name": "The University of Texas at Tyler",
-    "city": "Orem",
-    "state": "UT",
+    "city": "Tyler",
+    "state": "TX",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Doctoral Universities: High Research Activity",
-    "website": "www.uvu.edu/",
+    "website": "https://www.uttyler.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

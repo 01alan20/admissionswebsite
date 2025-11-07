@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 236382,
     "name": "Renton Technical College",
-    "city": "Beckley",
-    "state": "WV",
+    "city": "Renton",
+    "state": "WA",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate/Associate's Colleges: Associate's Dominant",
-    "website": "www.wvact.net/",
+    "website": "www.rtc.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

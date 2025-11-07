@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 221607,
     "name": "Tennessee College of Applied Technology-McMinnville",
-    "city": "Killeen",
-    "state": "TX",
+    "city": "McMinnville",
+    "state": "TN",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "https://www.ctcd.edu/",
+    "website": "tcatmcminnville.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

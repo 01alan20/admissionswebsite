@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 179308,
     "name": "Saint Louis Community College",
-    "city": "Missoula",
-    "state": "MT",
+    "city": "Bridgeton",
+    "state": "MO",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Associate's Colleges: High Transfer-Mixed Traditional/Nontraditional",
-    "website": "www.umt.edu/",
+    "website": "https://www.stlcc.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

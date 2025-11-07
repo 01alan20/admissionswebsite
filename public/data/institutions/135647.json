@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 135647,
     "name": "Miami Lakes Educational Center and Technical College",
-    "city": "St. Petersburg",
+    "city": "Miami Lakes",
     "state": "FL",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.spcollege.edu/",
+    "website": "https://miamilakes.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

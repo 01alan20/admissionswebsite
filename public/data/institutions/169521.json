@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 169521,
     "name": "Delta College",
-    "city": "Detroit",
+    "city": "University Center",
     "state": "MI",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: High Transfer-High Traditional",
-    "website": "www.michiganbarberschool.org/",
+    "website": "https://www.delta.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

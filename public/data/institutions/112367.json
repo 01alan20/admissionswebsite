@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 112367,
     "name": "Clovis Adult Education",
-    "city": "Sonora",
+    "city": "Clovis",
     "state": "CA",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "https://www.gocolumbia.edu/",
+    "website": "clovisadult.cusd.com/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

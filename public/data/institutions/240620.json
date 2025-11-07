@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 240620,
     "name": "Laramie County Community College",
-    "city": "San Juan",
-    "state": "PR",
+    "city": "Cheyenne",
+    "state": "WY",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Associate's Colleges: High Career & Technical-Mixed Traditional/Nontraditional",
-    "website": "www.derecho.inter.edu/",
+    "website": "https://www.lccc.wy.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

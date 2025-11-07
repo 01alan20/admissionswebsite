@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 181394,
     "name": "University of Nebraska at Omaha",
-    "city": "Durham",
-    "state": "NH",
+    "city": "Omaha",
+    "state": "NE",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Doctoral Universities: High Research Activity",
-    "website": "www.unh.edu/",
+    "website": "https://www.unomaha.edu/",
     "admissions_url": null,
     "test_policy": "Required",
     "major_families": [

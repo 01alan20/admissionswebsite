@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 190983,
     "name": "Elmira College",
-    "city": "Albany",
+    "city": "Elmira",
     "state": "NY",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
-    "website": "www.mariacollege.edu/",
+    "website": "https://www.elmira.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

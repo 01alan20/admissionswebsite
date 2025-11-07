@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 225423,
     "name": "Houston Community College",
-    "city": "Brownsville",
+    "city": "Houston",
     "state": "TX",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Associate's Colleges: High Transfer-High Traditional",
-    "website": "www.tsc.edu/",
+    "website": "www.hccs.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

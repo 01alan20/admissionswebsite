@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 498289,
     "name": "Pontifex University",
-    "city": "Port St Lucie",
-    "state": "FL",
+    "city": "Atlanta",
+    "state": "GA",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.keiseruniversity.edu/port-st-lucie/",
+    "website": "https://www.pontifex.university/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

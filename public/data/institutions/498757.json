@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 498757,
     "name": "Medical Solutions Academy",
-    "city": "Lafayette",
-    "state": "IN",
+    "city": null,
+    "state": "Virginia",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.ivytech.edu/lafayette/",
+    "website": null,
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 225201,
     "name": "Hallmark University",
-    "city": "Houston",
+    "city": "San Antonio",
     "state": "TX",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
-    "website": "www.oceancorp.com/",
+    "website": "https://www.hallmarkuniversity.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

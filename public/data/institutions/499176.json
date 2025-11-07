@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 499176,
     "name": "College of Biomedical Equipment Technology",
-    "city": "Plainfield",
-    "state": "IN",
+    "city": null,
+    "state": "Texas",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.gotopjs.com/",
+    "website": null,
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

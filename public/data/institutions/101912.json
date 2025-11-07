@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 101912,
     "name": "Oakwood University",
-    "city": "Evergreen",
+    "city": "Huntsville",
     "state": "AL",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate Colleges: Arts & Sciences Focus",
-    "website": "www.rstc.edu/",
+    "website": "https://www2.oakwood.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

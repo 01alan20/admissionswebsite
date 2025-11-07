@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 163286,
     "name": "University of Maryland-College Park",
-    "city": "Longmeadow",
-    "state": "MA",
+    "city": "College Park",
+    "state": "MD",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Doctoral Universities: Very High Research Activity",
-    "website": "www.baypath.edu/",
+    "website": "www.umd.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

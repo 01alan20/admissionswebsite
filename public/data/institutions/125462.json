@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 125462,
     "name": "Coalinga College",
-    "city": "Colorado Springs",
-    "state": "CO",
+    "city": "Coalinga",
+    "state": "CA",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: Mixed Transfer/Career & Technical-High Nontraditional",
-    "website": "www.coloradocollege.edu/",
+    "website": "https://www.westhillscollege.com/coalinga/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

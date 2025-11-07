@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 126863,
     "name": "Community College of Aurora",
-    "city": "Lakewood",
+    "city": "Aurora",
     "state": "CO",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: High Transfer-High Nontraditional",
-    "website": "www.rrcc.edu/",
+    "website": "https://www.ccaurora.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

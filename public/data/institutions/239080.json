@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 239080,
     "name": "Marian University",
-    "city": "Laramie",
-    "state": "WY",
+    "city": "Fond Du Lac",
+    "state": "WI",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Master's Colleges & Universities: Medium Programs",
-    "website": "www.uwyo.edu/",
+    "website": "https://www.marianuniversity.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

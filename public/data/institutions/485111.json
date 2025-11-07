@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 485111,
     "name": "Georgia Military College",
-    "city": "Milligan",
-    "state": "TN",
+    "city": "Milledgeville",
+    "state": "GA",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate/Associate's Colleges: Associate's Dominant",
-    "website": "www.milligan.edu/",
+    "website": "https://www.gmc.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

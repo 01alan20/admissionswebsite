@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 156860,
     "name": "Hopkinsville Community College",
-    "city": "Louisville",
+    "city": "Hopkinsville",
     "state": "KY",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: Mixed Transfer/Career & Technical-Mixed Traditional/Nontraditional",
-    "website": "www.sbts.edu/",
+    "website": "https://hopkinsville.kctcs.edu/index.aspx",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

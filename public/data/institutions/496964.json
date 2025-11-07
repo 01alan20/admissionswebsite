@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 496964,
     "name": "Larry's Barber College-Joliet",
-    "city": "Alpharetta",
-    "state": "GA",
+    "city": "Joliet",
+    "state": "IL",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.troy.edu/about-us/troy-support-centers/",
+    "website": "https://www.larrysbarbercollege.com/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

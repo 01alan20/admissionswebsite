@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 188021,
     "name": "New Mexico State University-Grants",
-    "city": "New York",
-    "state": "NY",
+    "city": "Grants",
+    "state": "NM",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: Mixed Transfer/Career & Technical-High Nontraditional",
-    "website": "https://www.boricuacollege.edu/",
+    "website": "grants.nmsu.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

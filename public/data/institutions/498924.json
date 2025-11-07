@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 498924,
     "name": "URBE University",
-    "city": "Trenton",
-    "state": "MO",
+    "city": null,
+    "state": "Florida",
     "control": "Private for-profit",
     "level": "4-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "https://www.graceland.edu/",
+    "website": null,
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

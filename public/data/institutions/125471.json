@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 125471,
     "name": "West Los Angeles College",
-    "city": "Aurora",
-    "state": "CO",
+    "city": "Culver City",
+    "state": "CA",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate/Associate's Colleges: Associate's Dominant",
-    "website": "https://www.concorde.edu/campus/aurora-colorado",
+    "website": "www.wlac.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

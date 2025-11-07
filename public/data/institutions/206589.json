@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 206589,
     "name": "The College of Wooster",
-    "city": "Chickasha",
-    "state": "OK",
+    "city": "Wooster",
+    "state": "OH",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate Colleges: Arts & Sciences Focus",
-    "website": "www.usao.edu/",
+    "website": "https://www.wooster.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

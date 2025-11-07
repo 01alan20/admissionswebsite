@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 231174,
     "name": "University of Vermont",
-    "city": "Colonial Heights",
-    "state": "VA",
+    "city": "Burlington",
+    "state": "VT",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Doctoral Universities: High Research Activity",
-    "website": "https://www.schs.edu/",
+    "website": "www.uvm.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

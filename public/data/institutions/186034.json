@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 186034,
     "name": "Passaic County Community College",
-    "city": "Socorro",
-    "state": "NM",
+    "city": "Paterson",
+    "state": "NJ",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: Mixed Transfer/Career & Technical-High Traditional",
-    "website": "www.nmt.edu/",
+    "website": "https://web.pccc.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

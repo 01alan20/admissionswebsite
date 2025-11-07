@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 187532,
     "name": "Central New Mexico Community College",
-    "city": "New York",
-    "state": "NY",
+    "city": "Albuquerque",
+    "state": "NM",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: High Transfer-Mixed Traditional/Nontraditional",
-    "website": "www.aada.edu/",
+    "website": "https://www.cnm.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

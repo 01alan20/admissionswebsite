@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 497693,
     "name": "Kansas Health Science Center",
-    "city": "Aurora",
-    "state": "CO",
+    "city": "Wichita",
+    "state": "KS",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.coloradotech.edu/Denver",
+    "website": "https://kansascom.kansashsc.org/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

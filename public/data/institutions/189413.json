@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 189413,
     "name": "Boricua College",
-    "city": "Bronx",
+    "city": "New York",
     "state": "NY",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
-    "website": "www.hostos.cuny.edu/",
+    "website": "https://www.boricuacollege.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 237039,
     "name": "Whatcom Community College",
-    "city": "Milwaukee",
-    "state": "WI",
+    "city": "Bellingham",
+    "state": "WA",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate/Associate's Colleges: Associate's Dominant",
-    "website": "https://www.alverno.edu/",
+    "website": "whatcom.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

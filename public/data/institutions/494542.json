@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 494542,
     "name": "Sattler College",
-    "city": "Anaheim",
-    "state": "CA",
+    "city": null,
+    "state": "Massachusetts",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "daybreak.edu/",
+    "website": null,
     "admissions_url": null,
     "test_policy": "Required",
     "major_families": [

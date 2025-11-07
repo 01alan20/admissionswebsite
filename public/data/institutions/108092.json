@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 108092,
     "name": "University of Arkansas-Fort Smith",
-    "city": "Santa Maria",
-    "state": "CA",
+    "city": "Fort Smith",
+    "state": "AR",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
-    "website": "www.hancockcollege.edu/",
+    "website": "https://uafs.edu/",
     "admissions_url": null,
     "test_policy": "Required",
     "major_families": [

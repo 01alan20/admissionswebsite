@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 110875,
     "name": "California Beauty School",
-    "city": "Vallejo",
+    "city": "Modesto",
     "state": "CA",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "https://www.csum.edu/",
+    "website": "www.calbeautycollege.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

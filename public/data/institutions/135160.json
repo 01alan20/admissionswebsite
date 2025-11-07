@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 135160,
     "name": "Florida Gateway College",
-    "city": "Lake Worth",
+    "city": "Lake City",
     "state": "FL",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate/Associate's Colleges: Mixed Baccalaureate/Associate's",
-    "website": "www.palmbeachstate.edu/",
+    "website": "https://www.fgc.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

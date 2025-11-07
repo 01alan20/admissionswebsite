@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 240198,
     "name": "Northwood Technical College",
-    "city": "San Juan",
-    "state": "PR",
+    "city": "Shell Lake",
+    "state": "WI",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: High Career & Technical-High Nontraditional",
-    "website": "ceaprc.edu/",
+    "website": "https://www.northwoodtech.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

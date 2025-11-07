@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 161235,
     "name": "University of Maine at Fort Kent",
-    "city": "Frostburg",
-    "state": "MD",
+    "city": "Fort Kent",
+    "state": "ME",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
-    "website": "www.frostburg.edu/",
+    "website": "www.umfk.maine.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

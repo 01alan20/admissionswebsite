@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 182148,
     "name": "Las Vegas College",
-    "city": "Mays Landing",
-    "state": "NJ",
+    "city": "Las Vegas",
+    "state": "NV",
     "control": "Private for-profit",
     "level": "4-year",
     "carnegie_basic": "Special Focus Two-Year: Health Professions",
-    "website": "www.atlantic.edu/",
+    "website": "https://lvcollege.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

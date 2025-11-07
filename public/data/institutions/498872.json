@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 498872,
     "name": "Central Valley Barber College",
-    "city": "Lawrenceburg",
-    "state": "IN",
+    "city": null,
+    "state": "California",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "https://www.ivytech.edu/lawrenceburg",
+    "website": null,
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

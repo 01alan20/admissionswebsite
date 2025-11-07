@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 171137,
     "name": "University of Michigan-Dearborn",
-    "city": "Kentwood",
+    "city": "Dearborn",
     "state": "MI",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
-    "website": "paulmitchell.edu/grandrapids",
+    "website": "https://umdearborn.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 199087,
     "name": "Nash Community College",
-    "city": "Raleigh",
+    "city": "Rocky Mount",
     "state": "NC",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: Mixed Transfer/Career & Technical-High Nontraditional",
-    "website": "www.waketech.edu/",
+    "website": "https://www.nashcc.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

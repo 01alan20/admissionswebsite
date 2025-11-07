@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 456959,
     "name": "University of Minnesota-Rochester",
-    "city": "Onalaska",
-    "state": "WI",
+    "city": "Rochester",
+    "state": "MN",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Special Focus Four-Year: Other Health Professions Schools",
-    "website": "salonproacademy.com/",
+    "website": "https://r.umn.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

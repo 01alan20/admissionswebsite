@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 118912,
     "name": "MiraCosta College",
-    "city": "Napa",
+    "city": "Oceanside",
     "state": "CA",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate/Associate's Colleges: Associate's Dominant",
-    "website": "https://www.napavalley.edu/Pages/default.aspx",
+    "website": "www.miracosta.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

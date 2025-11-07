@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 110699,
     "name": "University of California-San Francisco",
-    "city": "Fresno",
+    "city": "San Francisco",
     "state": "CA",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Special Focus Four-Year: Research Institutions",
-    "website": "www.calchristiancollege.edu/",
+    "website": "ucsf.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

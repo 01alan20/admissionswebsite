@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 235343,
     "name": "Green River College",
-    "city": "Huntington",
-    "state": "WV",
+    "city": "Auburn",
+    "state": "WA",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate/Associate's Colleges: Mixed Baccalaureate/Associate's",
-    "website": "www.cabellschools.com/Domain/12",
+    "website": "https://www.greenriver.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

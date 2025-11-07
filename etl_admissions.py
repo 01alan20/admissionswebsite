@@ -155,10 +155,8 @@ def scrub_json(value):
 
 # ---------- loaders ----------
 def load_uni_info(info_path: Path, merged_path: Path) -> pd.DataFrame:
-    df = prefer_base_cols(read_csv_safe(info_path))
-    merged_df = prefer_base_cols(read_csv_safe(merged_path))
-
-    merged_df = merged_df.rename(
+    info_df = prefer_base_cols(read_csv_safe(info_path))
+    merged_df = prefer_base_cols(read_csv_safe(merged_path)).rename(
         columns={
             "instnm": "inst_name",
             "city": "inst_city",
@@ -168,19 +166,49 @@ def load_uni_info(info_path: Path, merged_path: Path) -> pd.DataFrame:
         }
     )
 
-    out = pd.DataFrame(
-        {
-            "unitid": df.get("unitid"),
-            "name": df.get("institution_name"),
-            "state": merged_df.get("inst_state"),
-            "control": df.get("control_of_institution"),
-            "level": df.get("level_of_institution"),
-            "carnegie_basic": df.get("carnegie_classification_2021_basic"),
-            "city": merged_df.get("inst_city"),
-            "website": merged_df.get("inst_url") if "inst_url" in merged_df.columns else df.get("institution_internet_website_address"),
-            "admissions_url": merged_df.get("adm_url") if "adm_url" in merged_df.columns else df.get("admissions_office_web_address"),
-        }
-    )
+    merged_subset = merged_df[
+        [c for c in ["unitid", "inst_name", "inst_city", "inst_state", "inst_url", "adm_url"] if c in merged_df.columns]
+    ].drop_duplicates("unitid", keep="last")
+
+    combined = info_df.merge(merged_subset, on="unitid", how="left", suffixes=("", "_merged"))
+
+    def choose(row, *cols):
+        for col in cols:
+            if col not in row:
+                continue
+            val = row[col]
+            if pd.isna(val):
+                continue
+            if isinstance(val, str):
+                val = val.strip()
+                if not val:
+                    continue
+            return val
+        return None
+
+    records = []
+    for _, row in combined.iterrows():
+        unitid = row.get("unitid")
+        if pd.isna(unitid):
+            continue
+        records.append(
+            {
+                "unitid": unitid,
+                "name": choose(row, "institution_name", "inst_name"),
+                "state": choose(row, "inst_state", "state_abbreviation"),
+                "control": choose(row, "control_of_institution", "sector_of_institution", "control"),
+                "level": choose(row, "level_of_institution"),
+                "carnegie_basic": choose(row, "carnegie_classification_2021_basic"),
+                "city": choose(row, "inst_city", "city"),
+                "website": choose(row, "institution_internet_website_address", "inst_url"),
+                "admissions_url": choose(row, "admissions_office_web_address", "adm_url"),
+            }
+        )
+
+    out = pd.DataFrame(records)
+    if "unitid" in out.columns:
+        out = out[out["unitid"].notna()].copy()
+        out["unitid"] = out["unitid"].astype(int)
     out["control"] = out["control"].map(simplify_control)
     out["level"] = out["level"].map(simplify_level)
     return out

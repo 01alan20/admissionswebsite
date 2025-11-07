@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 199999,
     "name": "Winston-Salem State University",
-    "city": "Parma",
-    "state": "OH",
+    "city": "Winston-Salem",
+    "state": "NC",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Doctoral/Professional Universities",
-    "website": "https://www.bryantstratton.edu/",
+    "website": "www.wssu.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

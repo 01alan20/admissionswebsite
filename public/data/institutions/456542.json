@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 456542,
     "name": "Geisinger Commonwealth School of Medicine",
-    "city": "Houston",
-    "state": "TX",
+    "city": "Scranton",
+    "state": "PA",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Special Focus Four-Year: Medical Schools & Centers",
-    "website": "www.cardiotech.org/",
+    "website": "https://www.geisinger.edu/education",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

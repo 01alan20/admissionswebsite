@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 193894,
     "name": "New York Theological Seminary",
-    "city": "Sparkill",
+    "city": "New York",
     "state": "NY",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Special Focus Four-Year: Faith-Related Institutions",
-    "website": "www.stac.edu/",
+    "website": "https://www.nyts.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 456001,
     "name": "Advanced Welding Institute",
-    "city": "Great Falls",
-    "state": "MT",
+    "city": "South Burlington",
+    "state": "VT",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "https://montanaacademy.edu/",
+    "website": "www.awi.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

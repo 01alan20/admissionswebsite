@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 118888,
     "name": "Northeastern University Oakland",
-    "city": "Hollywood",
-    "state": "CA",
+    "city": null,
+    "state": "California",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Master's Colleges & Universities: Medium Programs",
-    "website": "www.mi.edu/",
+    "website": null,
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

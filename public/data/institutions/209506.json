@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 209506,
     "name": "Oregon Institute of Technology",
-    "city": "Bryn Mawr",
-    "state": "PA",
+    "city": "Klamath Falls",
+    "state": "OR",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
-    "website": "www.brynmawr.edu/",
+    "website": "https://www.oit.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 368629,
     "name": "Pima Medical Institute-Seattle",
-    "city": "Philadelphia",
-    "state": "PA",
+    "city": "Seattle",
+    "state": "WA",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Special Focus Two-Year: Health Professions",
-    "website": "www.empire.edu/",
+    "website": "https://pmi.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

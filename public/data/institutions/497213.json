@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 497213,
     "name": "Great Northern University",
-    "city": "Mesa",
-    "state": "AZ",
+    "city": "Spokane",
+    "state": "WA",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.asu.edu/",
+    "website": "https://www.greatnorthernu.org/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

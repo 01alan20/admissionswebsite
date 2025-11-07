@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 499282,
     "name": "Galen Health Institutes-Roanoke",
-    "city": "Destrehan",
-    "state": "LA",
+    "city": null,
+    "state": "Virginia",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.southeastern.edu/",
+    "website": null,
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

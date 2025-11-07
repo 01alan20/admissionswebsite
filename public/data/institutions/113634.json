@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 113634,
     "name": "Diablo Valley College",
-    "city": "San Jose",
+    "city": "Pleasant Hill",
     "state": "CA",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: High Transfer-High Traditional",
-    "website": "www.evc.edu/",
+    "website": "https://www.dvc.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

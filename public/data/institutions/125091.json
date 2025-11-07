@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 125091,
     "name": "Victor Valley College",
-    "city": "Denver",
-    "state": "CO",
+    "city": "Victorville",
+    "state": "CA",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: Mixed Transfer/Career & Technical-Mixed Traditional/Nontraditional",
-    "website": "www.ucdenver.edu/",
+    "website": "www.vvc.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

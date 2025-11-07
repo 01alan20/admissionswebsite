@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 228699,
     "name": "Texarkana College",
-    "city": "Holladay",
-    "state": "UT",
+    "city": "Texarkana",
+    "state": "TX",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: High Career & Technical-High Nontraditional",
-    "website": "paulmitchell.edu/saltlakecity",
+    "website": "https://www.texarkanacollege.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

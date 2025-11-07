@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 119331,
     "name": "Napa Valley College",
-    "city": "Fremont",
+    "city": "Napa",
     "state": "CA",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: High Transfer-High Traditional",
-    "website": "www.ohlone.edu/",
+    "website": "https://www.napavalley.edu/Pages/default.aspx",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

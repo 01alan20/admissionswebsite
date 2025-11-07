@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 431275,
     "name": "Herkimer County BOCES-Practical Nursing Program",
-    "city": "Baton Rouge",
-    "state": "LA",
+    "city": "Ilion",
+    "state": "NY",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.mybrcc.edu/",
+    "website": "https://www.herkimer-boces.org/page/adult-practical-nursing",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

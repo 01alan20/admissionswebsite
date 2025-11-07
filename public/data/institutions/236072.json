@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 236072,
     "name": "North Seattle College",
-    "city": "Huntington",
-    "state": "WV",
+    "city": "Seattle",
+    "state": "WA",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate/Associate's Colleges: Mixed Baccalaureate/Associate's",
-    "website": "https://www.marshall.edu/",
+    "website": "www.northseattle.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 210270,
     "name": "Umpqua Community College",
-    "city": "Doylestown",
-    "state": "PA",
+    "city": "Roseburg",
+    "state": "OR",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: High Transfer-Mixed Traditional/Nontraditional",
-    "website": "www.delval.edu/",
+    "website": "https://www.umpqua.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 240365,
     "name": "University of Wisconsin-Oshkosh",
-    "city": "Humacao",
-    "state": "PR",
+    "city": "Oshkosh",
+    "state": "WI",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Doctoral/Professional Universities",
-    "website": "www.hccpr.edu/",
+    "website": "https://www.uwosh.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 199926,
     "name": "Wilkes Community College",
-    "city": "Berea",
-    "state": "OH",
+    "city": "Wilkesboro",
+    "state": "NC",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: Mixed Transfer/Career & Technical-Mixed Traditional/Nontraditional",
-    "website": "https://www.bw.edu/",
+    "website": "www.wilkescc.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

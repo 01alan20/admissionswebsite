@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 209922,
     "name": "Reed College",
-    "city": "Cheyney",
-    "state": "PA",
+    "city": "Portland",
+    "state": "OR",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate Colleges: Arts & Sciences Focus",
-    "website": "www.cheyney.edu/",
+    "website": "https://www.reed.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 482255,
     "name": "Aviation Institute of Maintenance-Las Vegas",
-    "city": "Dekalb",
-    "state": "IL",
+    "city": "Las Vegas",
+    "state": "NV",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.debschool.com/",
+    "website": "https://aviationmaintenance.edu/campuses/las-vegas-nv",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

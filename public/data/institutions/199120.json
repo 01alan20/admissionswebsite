@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 199120,
     "name": "University of North Carolina at Chapel Hill",
-    "city": "Goldsboro",
+    "city": "Chapel Hill",
     "state": "NC",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Doctoral Universities: Very High Research Activity",
-    "website": "www.waynecc.edu/",
+    "website": "https://www.unc.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

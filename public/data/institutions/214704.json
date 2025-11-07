@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 214704,
     "name": "Pennsylvania State University-Penn State Berks",
-    "city": "Rosemont",
+    "city": "Reading",
     "state": "PA",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.rosemont.edu/",
+    "website": "https://berks.psu.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

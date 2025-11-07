@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 182829,
     "name": "University of New Hampshire-Franklin Pierce School of Law",
-    "city": "Iselin",
-    "state": "NJ",
+    "city": "Concord",
+    "state": "NH",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Special Focus Four-Year: Law Schools",
-    "website": "www.lincolntech.edu/campus/edison-nj",
+    "website": "https://law.unh.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

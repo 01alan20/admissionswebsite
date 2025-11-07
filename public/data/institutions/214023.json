@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 214023,
     "name": "ASPIRA City College",
-    "city": "Lancaster",
+    "city": "Philadelphia",
     "state": "PA",
     "control": "Private nonprofit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "pcad.edu/",
+    "website": "https://aspiracitycollege.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

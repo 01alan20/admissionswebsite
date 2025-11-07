@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 138284,
     "name": "Florida Panhandle Technical College",
-    "city": "Mount Berry",
-    "state": "GA",
+    "city": "Chipley",
+    "state": "FL",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "https://www.berry.edu/",
+    "website": "fptc.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

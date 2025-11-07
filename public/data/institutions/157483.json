@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 157483,
     "name": "West Kentucky Community and Technical College",
-    "city": "Shreveport",
-    "state": "LA",
+    "city": "Paducah",
+    "state": "KY",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: High Career & Technical-Mixed Traditional/Nontraditional",
-    "website": "guysacademy.com/",
+    "website": "https://westkentucky.kctcs.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

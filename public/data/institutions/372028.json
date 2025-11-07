@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 372028,
     "name": "North-West College-Glendale",
-    "city": "Tacoma",
-    "state": "WA",
+    "city": "Glendale",
+    "state": "CA",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "https://www.tacoma.uw.edu/",
+    "website": "www.nw.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

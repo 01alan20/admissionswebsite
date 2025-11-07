@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 230010,
     "name": "Bridgerland Technical College",
-    "city": "Newport News",
-    "state": "VA",
+    "city": "Logan",
+    "state": "UT",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "https://cnu.edu/",
+    "website": "www.btech.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

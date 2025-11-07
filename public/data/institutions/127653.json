@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 127653,
     "name": "Naropa University",
-    "city": "Bridgeport",
-    "state": "CT",
+    "city": "Boulder",
+    "state": "CO",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Master's Colleges & Universities: Medium Programs",
-    "website": "www.bridgeport.edu/",
+    "website": "https://www.naropa.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

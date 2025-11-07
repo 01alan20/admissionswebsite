@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 218520,
     "name": "Piedmont Technical College",
-    "city": "Sioux Falls",
-    "state": "SD",
+    "city": "Greenwood",
+    "state": "SC",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: High Career & Technical-High Traditional",
-    "website": "www.sanfordhealth.org/",
+    "website": "https://www.ptc.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

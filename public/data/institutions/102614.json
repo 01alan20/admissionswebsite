@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 102614,
     "name": "University of Alaska Fairbanks",
-    "city": "Juneau",
+    "city": "Fairbanks",
     "state": "AK",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Doctoral Universities: High Research Activity",
-    "website": "www.uas.alaska.edu/",
+    "website": "www.uaf.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

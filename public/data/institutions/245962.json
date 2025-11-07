@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 245962,
     "name": "Miller-Motte College-Tulsa",
-    "city": "Rockford",
-    "state": "IL",
+    "city": "Tulsa",
+    "state": "OK",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.educatorsofbeauty.com/",
+    "website": "https://www.miller-motte.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

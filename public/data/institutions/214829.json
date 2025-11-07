@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 214829,
     "name": "Pennsylvania State University-Penn State York",
-    "city": "Shippensburg",
+    "city": "York",
     "state": "PA",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.ship.edu/",
+    "website": "https://www.york.psu.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

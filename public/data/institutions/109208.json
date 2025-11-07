@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 109208,
     "name": "American River College",
-    "city": "San Diego",
+    "city": "Sacramento",
     "state": "CA",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: Mixed Transfer/Career & Technical-Mixed Traditional/Nontraditional",
-    "website": "www.atcsd.edu/",
+    "website": "https://www.arc.losrios.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

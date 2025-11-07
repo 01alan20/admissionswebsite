@@ -122,21 +122,6 @@ const METRIC_ROWS = [
     )
   },
   {
-    key: "scholarships",
-    label: "Scholarship availability",
-    render: () => "Ask admissions about merit and need-based aid for international students"
-  },
-  {
-    key: "housing",
-    label: "On-campus housing",
-    render: () => "Check if first-year housing is guaranteed and note estimated housing costs"
-  },
-  {
-    key: "deadlines",
-    label: "Application deadlines",
-    render: () => "Confirm early action / regular deadlines on the admissions site"
-  },
-  {
     key: "gradRate",
     label: "6-year graduation rate",
     render: (_inst, metric) => formatPercent(metric?.graduation_rate_bachelor_degree_within_6_years_total)

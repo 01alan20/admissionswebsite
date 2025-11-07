@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 499413,
     "name": "Glendale Career College-North-West College-MFSON",
-    "city": "Warren",
-    "state": "MI",
+    "city": null,
+    "state": "California",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.davenport.edu/",
+    "website": null,
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

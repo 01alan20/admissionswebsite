@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 163268,
     "name": "University of Maryland-Baltimore County",
-    "city": "Boston",
-    "state": "MA",
+    "city": "Baltimore",
+    "state": "MD",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Doctoral Universities: Very High Research Activity",
-    "website": "www.boston.edu/",
+    "website": "umbc.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

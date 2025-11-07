@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 144740,
     "name": "DePaul University",
-    "city": "East Peoria",
+    "city": "Chicago",
     "state": "IL",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Doctoral Universities: High Research Activity",
-    "website": "icc.edu/",
+    "website": "https://www.depaul.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

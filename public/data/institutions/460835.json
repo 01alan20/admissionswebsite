@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 460835,
     "name": "Miller-Motte College-Conway",
-    "city": "Las Vegas",
-    "state": "NV",
+    "city": "Conway",
+    "state": "SC",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: High Career & Technical-High Traditional",
-    "website": "paulmitchell.edu/lasvegas",
+    "website": "https://www.miller-motte.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

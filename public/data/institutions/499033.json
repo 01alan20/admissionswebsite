@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 499033,
     "name": "Champ's Barber School-Lebanon",
-    "city": "Columbus",
-    "state": "KS",
+    "city": null,
+    "state": "Pennsylvania",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.coffeyville.edu/",
+    "website": null,
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

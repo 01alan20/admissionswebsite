@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 481003,
     "name": "M T Training Center",
-    "city": "Arlington",
-    "state": "VA",
+    "city": "Grand Prairie",
+    "state": "TX",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "https://www.devry.edu/",
+    "website": "mttrainingcenter.org/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

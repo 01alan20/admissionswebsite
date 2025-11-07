@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 438735,
     "name": "Aviation Institute of Maintenance-Indianapolis",
-    "city": "Houston",
-    "state": "MO",
+    "city": "Indianapolis",
+    "state": "IN",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.texascountytech.edu/",
+    "website": "https://aviationmaintenance.edu/campuses/indianapolis-in",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

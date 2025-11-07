@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 475273,
     "name": "Springfield College-Regional, Online, and Continuing Education",
-    "city": "San Jacinto",
-    "state": "CA",
+    "city": "Springfield",
+    "state": "MA",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Master's Colleges & Universities: Small Programs",
-    "website": "www.abt.edu/",
+    "website": "https://springfield.edu/regional-and-online",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

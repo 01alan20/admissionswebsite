@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 200846,
     "name": "University of Akron Wayne College",
-    "city": "Toledo",
+    "city": "Orrville",
     "state": "OH",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: High Transfer-High Nontraditional",
-    "website": "www.daviscollege.edu/",
+    "website": "https://wayne.uakron.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

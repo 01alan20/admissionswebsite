@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 207449,
     "name": "Oklahoma City Community College",
-    "city": "Portland",
-    "state": "OR",
+    "city": "Oklahoma City",
+    "state": "OK",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: High Transfer-High Traditional",
-    "website": "https://www.multnomah.edu/",
+    "website": "www.occc.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

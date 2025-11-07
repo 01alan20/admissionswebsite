@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 498951,
     "name": "Artisan Academy of Cosmetology",
-    "city": "Topeka",
-    "state": "KS",
+    "city": null,
+    "state": "Indiana",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.bakeru.edu/",
+    "website": null,
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

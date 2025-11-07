@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 122409,
     "name": "San Diego State University",
-    "city": "Santa Monica",
+    "city": "San Diego",
     "state": "CA",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Doctoral Universities: High Research Activity",
-    "website": "https://www.smc.edu/",
+    "website": "www.sdsu.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

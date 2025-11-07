@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 214810,
     "name": "Pennsylvania State University-Penn State Schuylkill",
-    "city": "Hermitage",
+    "city": "Schuylkill Haven",
     "state": "PA",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.laurel.edu/",
+    "website": "https://schuylkill.psu.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

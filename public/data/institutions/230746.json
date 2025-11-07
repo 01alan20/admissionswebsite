@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 230746,
     "name": "Salt Lake Community College",
-    "city": "Lynchburg",
-    "state": "VA",
+    "city": "Salt Lake City",
+    "state": "UT",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: High Transfer-Mixed Traditional/Nontraditional",
-    "website": "https://www.liberty.edu/",
+    "website": "www.slcc.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

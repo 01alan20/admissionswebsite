@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 238722,
     "name": "Fox Valley Technical College",
-    "city": "Torrington",
-    "state": "WY",
+    "city": "Appleton",
+    "state": "WI",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: High Career & Technical-High Nontraditional",
-    "website": "ewc.wy.edu/",
+    "website": "https://www.fvtc.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 456171,
     "name": "Urbana Theological Seminary",
-    "city": "Tonawanda",
-    "state": "NY",
+    "city": null,
+    "state": "Illinois",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.tspabuffalo.com/",
+    "website": null,
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

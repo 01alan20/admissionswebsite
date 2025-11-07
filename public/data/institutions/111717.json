@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 111717,
     "name": "CET-San Jose",
-    "city": "Norwalk",
+    "city": "San Jose",
     "state": "CA",
     "control": "Private nonprofit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.cerritos.edu/",
+    "website": "https://cetweb.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 170240,
     "name": "Henry Ford College",
-    "city": "Waterford",
+    "city": "Dearborn",
     "state": "MI",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate/Associate's Colleges: Associate's Dominant",
-    "website": "www.michigancollegeofbeauty.com/",
+    "website": "https://www.hfcc.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

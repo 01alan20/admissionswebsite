@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 498906,
     "name": "Yeshivas Sanz Klauzenburg",
-    "city": "Chicago",
-    "state": "IL",
+    "city": null,
+    "state": "New York",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.nd.edu/",
+    "website": null,
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

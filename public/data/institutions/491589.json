@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 491589,
     "name": "Mystros Barber Academy",
-    "city": "McAllen",
+    "city": "Houston",
     "state": "TX",
     "control": "Private nonprofit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.mcallencareersinstitute.edu/",
+    "website": "https://mystrosbarberacademy.org/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

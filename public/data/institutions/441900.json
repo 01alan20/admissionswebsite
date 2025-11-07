@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 441900,
     "name": "Nevada State University",
-    "city": "Plymouth",
-    "state": "MN",
+    "city": "Henderson",
+    "state": "NV",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
-    "website": "www.pci-academy.com/",
+    "website": "https://nsc.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

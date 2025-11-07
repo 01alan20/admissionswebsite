@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 497480,
     "name": "Reach University",
-    "city": "Calexico",
+    "city": "Oakland",
     "state": "CA",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "imperialvalley.sdsu.edu/",
+    "website": "https://www.reach.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

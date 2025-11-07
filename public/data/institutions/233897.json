@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 233897,
     "name": "University of Virginia's College at Wise",
-    "city": "Yakima",
-    "state": "WA",
+    "city": "Wise",
+    "state": "VA",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate Colleges: Arts & Sciences Focus",
-    "website": "www.perrytech.edu/",
+    "website": "https://www.uvawise.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

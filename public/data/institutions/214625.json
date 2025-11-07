@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 214625,
     "name": "Pennsylvania State University-Penn State New Kensington",
-    "city": "Pottsville",
+    "city": "New Kensington",
     "state": "PA",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.schuylkillhealthschoolofnursing.com/",
+    "website": "https://newkensington.psu.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 261685,
     "name": "Ross Medical Education Center-Ann Arbor",
-    "city": "New York",
-    "state": "NY",
+    "city": "Ann Arbor",
+    "state": "MI",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "nyaa.edu/",
+    "website": "https://rosseducation.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

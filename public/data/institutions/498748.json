@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 498748,
     "name": "CalCopa Massage School",
-    "city": "Kokomo",
-    "state": "IN",
+    "city": null,
+    "state": "California",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.ivytech.edu/kokomo/",
+    "website": null,
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

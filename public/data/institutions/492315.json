@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 492315,
     "name": "Poway Adult School",
-    "city": "San Antonio",
-    "state": "TX",
+    "city": "Poway",
+    "state": "CA",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "cmctx.edu/",
+    "website": "www.powayadultschool.com/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

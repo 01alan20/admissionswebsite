@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 363013,
     "name": "Ross Medical Education Center-Port Huron",
-    "city": "Newport",
-    "state": "KY",
+    "city": "Port Huron",
+    "state": "MI",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.ict.edu/",
+    "website": "https://rosseducation.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

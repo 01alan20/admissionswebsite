@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 250285,
     "name": "Aviation Institute of Maintenance-Philadelphia",
-    "city": "Enid",
-    "state": "OK",
+    "city": "Philadelphia",
+    "state": "PA",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "autrytech.edu/",
+    "website": "https://aviationmaintenance.edu/campuses/philadelphia-pa",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

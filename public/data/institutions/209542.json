@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 209542,
     "name": "Oregon State University",
-    "city": "Lewisburg",
-    "state": "PA",
+    "city": "Corvallis",
+    "state": "OR",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Doctoral Universities: Very High Research Activity",
-    "website": "www.bucknell.edu/",
+    "website": "https://oregonstate.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 176080,
     "name": "Mississippi State University",
-    "city": "Springfield",
-    "state": "MO",
+    "city": "Mississippi State",
+    "state": "MS",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Doctoral Universities: Very High Research Activity",
-    "website": "www.evangel.edu/",
+    "website": "https://www.msstate.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

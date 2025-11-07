@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 117894,
     "name": "Los Medanos College",
-    "city": "Merced",
+    "city": "Pittsburg",
     "state": "CA",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: High Transfer-High Traditional",
-    "website": "www.mccd.edu/",
+    "website": "https://www.losmedanos.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

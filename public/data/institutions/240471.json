@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 240471,
     "name": "University of Wisconsin-River Falls",
-    "city": "San Juan",
-    "state": "PR",
+    "city": "River Falls",
+    "state": "WI",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Master's Colleges & Universities: Medium Programs",
-    "website": "metro.inter.edu/",
+    "website": "https://www.uwrf.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

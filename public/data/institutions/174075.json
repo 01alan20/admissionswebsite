@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 174075,
     "name": "University of Minnesota-Crookston",
-    "city": "Minneapolis",
+    "city": "Crookston",
     "state": "MN",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
-    "website": "www.dunwoody.edu/",
+    "website": "https://crk.umn.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

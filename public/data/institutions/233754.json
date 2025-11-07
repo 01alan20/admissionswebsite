@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 233754,
     "name": "Virginia Peninsula Community College",
-    "city": "Seattle",
-    "state": "WA",
+    "city": "Hampton",
+    "state": "VA",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: Mixed Transfer/Career & Technical-Mixed Traditional/Nontraditional",
-    "website": "www.northseattle.edu/",
+    "website": "https://vpcc.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

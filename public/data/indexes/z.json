@@ -3,36 +3,36 @@
     "unitid":204255,
     "name":"Zane State College",
     "state":"OH",
-    "city":"Niles"
+    "city":"Zanesville"
   },
   {
     "unitid":451237,
     "name":"Z Hair Academy",
-    "state":"AZ",
-    "city":"Phoenix"
+    "state":"KS",
+    "city":"Overland Park"
   },
   {
     "unitid":486248,
     "name":"ZMS The Academy",
-    "state":"AL",
-    "city":"Midfield"
+    "state":"CA",
+    "city":"Los Angeles"
   },
   {
     "unitid":495101,
     "name":"Zion Massage College",
-    "state":"TN",
-    "city":"Nashville"
+    "state":"UT",
+    "city":"St. George"
   },
   {
     "unitid":496423,
     "name":"Zorganics Institute of Beauty and Wellness",
-    "state":"FL",
-    "city":"Miami"
+    "state":"Washington",
+    "city":null
   },
   {
     "unitid":496520,
     "name":"Zen Shiatsu Chicago",
-    "state":"AZ",
-    "city":"Tolleson"
+    "state":"IL",
+    "city":"Evanston"
   }
 ]

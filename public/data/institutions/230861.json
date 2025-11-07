@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 230861,
     "name": "Community College of Vermont",
-    "city": "Arlington",
-    "state": "VA",
+    "city": "Montpelier",
+    "state": "VT",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: Mixed Transfer/Career & Technical-High Nontraditional",
-    "website": "https://www.marymount.edu/",
+    "website": "www.ccv.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 104665,
     "name": "The School of Architecture",
-    "city": "Phoenix",
+    "city": "Paradise Valley",
     "state": "AZ",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Special Focus Four-Year: Other Special Focus Institutions",
-    "website": "www.gcu.edu/",
+    "website": "https://tsoa.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 180179,
     "name": "Montana State University Billings",
-    "city": "Lincoln",
-    "state": "NE",
+    "city": "Billings",
+    "state": "MT",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Master's Colleges & Universities: Medium Programs",
-    "website": "https://www.nebrwesleyan.edu/",
+    "website": "www.msubillings.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

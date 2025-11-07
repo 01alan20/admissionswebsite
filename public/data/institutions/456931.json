@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 456931,
     "name": "Miller-Motte College-STVT-Corpus Christi",
-    "city": "Port Hadlock",
-    "state": "WA",
+    "city": "Corpus Christi",
+    "state": "TX",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.nwswb.edu/",
+    "website": "https://www.stvt.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

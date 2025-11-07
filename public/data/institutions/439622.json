@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 439622,
     "name": "Erie 1 BOCES",
-    "city": "Grand Prairie",
-    "state": "TX",
+    "city": "West Seneca",
+    "state": "NY",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "https://www.concorde.edu/campus/grand-prairie-texas",
+    "website": "e1b.org/WFD",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

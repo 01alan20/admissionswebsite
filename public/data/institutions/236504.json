@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 236504,
     "name": "South Seattle College",
-    "city": "Shepherdstown",
-    "state": "WV",
+    "city": "Seattle",
+    "state": "WA",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate/Associate's Colleges: Associate's Dominant",
-    "website": "www.shepherd.edu/",
+    "website": "southseattle.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

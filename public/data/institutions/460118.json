@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 460118,
     "name": "Ross Medical Education Center-Niles",
-    "city": "Augusta",
-    "state": "ME",
+    "city": "Niles",
+    "state": "OH",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.capilo.com/",
+    "website": "https://rosseducation.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

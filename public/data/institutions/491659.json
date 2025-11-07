@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 491659,
     "name": "ICOHS College",
-    "city": "Brooklyn",
-    "state": "NY",
+    "city": "San Diego",
+    "state": "CA",
     "control": "Private nonprofit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "yeshivaaleksander.org/",
+    "website": "https://icohs.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

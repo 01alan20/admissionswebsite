@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 499149,
     "name": "Herzing University-Nashville",
-    "city": "Indianapolis",
-    "state": "IN",
+    "city": null,
+    "state": "Tennessee",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.gotopjs.com/",
+    "website": null,
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

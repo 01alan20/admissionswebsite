@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 458441,
     "name": "Miller-Motte College-Columbus",
-    "city": "Norco",
-    "state": "CA",
+    "city": "Columbus",
+    "state": "GA",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: High Career & Technical-High Traditional",
-    "website": "www.norcocollege.edu/Pages/index.aspx",
+    "website": "https://www.miller-motte.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

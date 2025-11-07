@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 199032,
     "name": "Montreat College",
-    "city": "Murphy",
+    "city": "Montreat",
     "state": "NC",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
-    "website": "www.tricountycc.edu/",
+    "website": "https://www.montreat.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

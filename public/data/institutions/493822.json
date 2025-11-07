@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 493822,
     "name": "College Unbound",
-    "city": "Phoenix",
-    "state": "AZ",
+    "city": "Providence",
+    "state": "RI",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Special Focus Four-Year: Other Special Focus Institutions",
-    "website": "https://www.arizonacollege.edu/",
+    "website": "collegeunbound.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

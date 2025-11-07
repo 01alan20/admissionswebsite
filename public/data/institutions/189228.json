@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 189228,
     "name": "Berkeley College-New York",
-    "city": "Bronx",
+    "city": "New York",
     "state": "NY",
     "control": "Private for-profit",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
-    "website": "www.bcc.cuny.edu/",
+    "website": "https://berkeleycollege.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 174251,
     "name": "University of Minnesota-Morris",
-    "city": "Alcorn State",
-    "state": "MS",
+    "city": "Morris",
+    "state": "MN",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate Colleges: Arts & Sciences Focus",
-    "website": "www.alcorn.edu/",
+    "website": "https://morris.umn.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

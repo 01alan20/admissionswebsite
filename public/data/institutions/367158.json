@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 367158,
     "name": "Ross Medical Education Center-Taylor",
-    "city": "Jackson",
-    "state": "MS",
+    "city": "Taylor",
+    "state": "MI",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "mississippibarberacademy.com/",
+    "website": "https://rosseducation.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

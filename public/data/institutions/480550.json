@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 480550,
     "name": "Ross Medical Education Center-Bowling Green",
-    "city": "Lakewood",
-    "state": "CO",
+    "city": "Bowling Green",
+    "state": "KY",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "paulmitchell.edu/denver",
+    "website": "https://rosseducation.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

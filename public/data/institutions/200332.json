@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 200332,
     "name": "North Dakota State University-Main Campus",
-    "city": "Batavia",
-    "state": "OH",
+    "city": "Fargo",
+    "state": "ND",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Doctoral Universities: Very High Research Activity",
-    "website": "www.ucclermont.edu/",
+    "website": "https://www.ndsu.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

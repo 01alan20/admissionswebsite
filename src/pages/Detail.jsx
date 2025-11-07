@@ -231,6 +231,10 @@ export default function Detail() {
 
           <div className="card" style={{ marginBottom: 24 }}>
             <h3 style={{ marginTop: 0 }}>Test scores & submission rates</h3>
+            <p style={{ marginTop: -4, marginBottom: 16, fontSize: 13, color: "#475569" }}>
+              Submission percentages reference accepted students reporting each exam. Use the 25th/50th/75th percentile
+              scores to gauge how you compare to the latest admitted class.
+            </p>
 
             <ScoreSection
               title="SAT"

@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 152451,
     "name": "Saint Meinrad School of Theology",
-    "city": "Davenport",
-    "state": "IA",
+    "city": "St. Meinrad",
+    "state": "IN",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Special Focus Four-Year: Faith-Related Institutions",
-    "website": "orion.edu/iowa",
+    "website": "https://www.saintmeinrad.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

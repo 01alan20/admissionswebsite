@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 456506,
     "name": "Ross Medical Education Center-Fort Wayne",
-    "city": "Mullins",
-    "state": "SC",
+    "city": "Fort Wayne",
+    "state": "IN",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.mcact.org/",
+    "website": "https://rosseducation.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

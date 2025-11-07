@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 218113,
     "name": "Greenville Technical College",
-    "city": "Mitchell",
-    "state": "SD",
+    "city": "Greenville",
+    "state": "SC",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Associate's Colleges: High Career & Technical-High Traditional",
-    "website": "https://www.mitchelltech.edu/",
+    "website": "www.gvltec.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

@@ -3,277 +3,277 @@
     "unitid":101912,
     "name":"Oakwood University",
     "state":"AL",
-    "city":"Evergreen"
+    "city":"Huntsville"
   },
   {
     "unitid":107512,
     "name":"Ouachita Baptist University",
     "state":"AR",
-    "city":"Clarksville"
+    "city":"Arkadelphia"
   },
   {
     "unitid":107549,
     "name":"Ozarka College",
     "state":"AR",
-    "city":"Little Rock"
+    "city":"Melbourne"
   },
   {
     "unitid":120254,
     "name":"Occidental College",
     "state":"CA",
-    "city":"Blythe"
+    "city":"Los Angeles"
   },
   {
     "unitid":120290,
     "name":"Ohlone College",
     "state":"CA",
-    "city":"San Marcos"
+    "city":"Fremont"
   },
   {
     "unitid":120342,
     "name":"Orange Coast College",
     "state":"CA",
-    "city":"Pasadena"
+    "city":"Costa Mesa"
   },
   {
     "unitid":120403,
     "name":"Otis College of Art and Design",
     "state":"CA",
-    "city":"Malibu"
+    "city":"Los Angeles"
   },
   {
     "unitid":120421,
     "name":"Oxnard College",
     "state":"CA",
-    "city":"Claremont"
+    "city":"Oxnard"
   },
   {
     "unitid":127778,
     "name":"Otero College",
-    "state":"CT",
-    "city":"New London"
+    "state":"CO",
+    "city":"La Junta"
   },
   {
     "unitid":135735,
     "name":"Orange Technical College-South Campus",
     "state":"FL",
-    "city":"Sarasota"
+    "city":"Orlando"
   },
   {
     "unitid":136303,
     "name":"Orange Technical College",
     "state":"FL",
-    "city":"Tampa"
+    "city":"Orlando"
   },
   {
     "unitid":138372,
     "name":"Orange Technical College-West Campus",
-    "state":"GA",
-    "city":"Brunswick"
+    "state":"FL",
+    "city":"Winter Garden"
   },
   {
     "unitid":138488,
     "name":"Orange Technical College-East Campus",
-    "state":"GA",
-    "city":"Morrow"
+    "state":"FL",
+    "city":"Winter Park"
   },
   {
     "unitid":140696,
     "name":"Oglethorpe University",
-    "state":"HI",
-    "city":"Honolulu"
+    "state":"GA",
+    "city":"Atlanta"
   },
   {
     "unitid":145707,
     "name":"Olney Central College",
     "state":"IL",
-    "city":"Chicago"
+    "city":"Olney"
   },
   {
     "unitid":147800,
     "name":"Oakton College",
     "state":"IL",
-    "city":"Canton"
+    "city":"Des Plaines"
   },
   {
     "unitid":147819,
     "name":"Oehrlein School of Cosmetology",
     "state":"IL",
-    "city":"Rockford"
+    "city":"East Peoria"
   },
   {
     "unitid":147828,
     "name":"Olivet Nazarene University",
     "state":"IL",
-    "city":"Sterling"
+    "city":"Bourbonnais"
   },
   {
     "unitid":149763,
     "name":"Oak Point University",
-    "state":"IN",
-    "city":"Fort Wayne"
+    "state":"IL",
+    "city":"Oak Brook"
   },
   {
     "unitid":152099,
     "name":"Oakland City University",
-    "state":"IA",
-    "city":"Dubuque"
+    "state":"IN",
+    "city":"Oakland City"
   },
   {
     "unitid":153427,
     "name":"Orion Technical College",
     "state":"IA",
-    "city":"Sheldon"
+    "city":"Davenport"
   },
   {
     "unitid":155353,
     "name":"Old Town Barber College-Wichita",
-    "state":"KY",
-    "city":"Ashland"
+    "state":"KS",
+    "city":"Wichita"
   },
   {
     "unitid":155627,
     "name":"Ottawa University-Ottawa",
-    "state":"KY",
-    "city":"Williamsburg"
+    "state":"KS",
+    "city":"Ottawa"
   },
   {
     "unitid":155636,
     "name":"Ottawa University-Kansas City",
-    "state":"KY",
-    "city":"Richmond"
+    "state":"KS",
+    "city":"Overland Park"
   },
   {
     "unitid":159601,
     "name":"Opelousas School of Cosmetology",
-    "state":"ME",
-    "city":"Bar Harbor"
+    "state":"LA",
+    "city":"Opelousas"
   },
   {
     "unitid":171535,
     "name":"Oakland Community College",
-    "state":"MN",
-    "city":"Bemidji"
+    "state":"MI",
+    "city":"Auburn Hills"
   },
   {
     "unitid":171571,
     "name":"Oakland University",
-    "state":"MN",
-    "city":"Mankato"
+    "state":"MI",
+    "city":"Rochester Hills"
   },
   {
     "unitid":174525,
     "name":"Oak Hills Christian College",
-    "state":"MS",
-    "city":"Ripley"
+    "state":"MN",
+    "city":"Bemidji"
   },
   {
     "unitid":177472,
     "name":"Ozarks Technical Community College",
     "state":"MO",
-    "city":"Joplin"
+    "city":"Springfield"
   },
   {
     "unitid":178679,
     "name":"Ozark Christian College",
-    "state":"MT",
-    "city":"Billings"
+    "state":"MO",
+    "city":"Joplin"
   },
   {
     "unitid":185873,
     "name":"Ocean County College",
-    "state":"NM",
-    "city":"Hobbs"
+    "state":"NJ",
+    "city":"Toms River"
   },
   {
     "unitid":187505,
     "name":"Olympian Academy of Cosmetology",
-    "state":"NY",
-    "city":"New York"
+    "state":"NM",
+    "city":"Alamogordo"
   },
   {
     "unitid":194189,
     "name":"Ohr Hameir Theological Seminary",
     "state":"NY",
-    "city":"Rochester"
+    "city":"Peekskill"
   },
   {
     "unitid":194222,
     "name":"Onondaga Community College",
     "state":"NY",
-    "city":"Staten Island"
+    "city":"Syracuse"
   },
   {
     "unitid":194240,
     "name":"Orange County Community College",
     "state":"NY",
-    "city":"Queens"
+    "city":"Middletown"
   },
   {
     "unitid":194259,
     "name":"Otsego Area BOCES-Practical Nursing Program",
     "state":"NY",
-    "city":"Loch Sheldrake"
+    "city":"Oneonta"
   },
   {
     "unitid":201964,
     "name":"Ohio Christian University",
     "state":"OH",
-    "city":"Burton"
+    "city":"Circleville"
   },
   {
     "unitid":203720,
     "name":"Ohio Business College-Sheffield",
     "state":"OH",
-    "city":"Columbus"
+    "city":"Sheffield Village"
   },
   {
     "unitid":203739,
     "name":"Ohio Business College-Sandusky",
     "state":"OH",
-    "city":"Saint Clairsville"
+    "city":"Sandusky"
   },
   {
     "unitid":204501,
     "name":"Oberlin College",
     "state":"OH",
-    "city":"Hillsboro"
+    "city":"Oberlin"
   },
   {
     "unitid":204608,
     "name":"Ohio Technical College",
     "state":"OH",
-    "city":"Fremont"
+    "city":"Cleveland"
   },
   {
     "unitid":204617,
     "name":"Ohio Dominican University",
     "state":"OH",
-    "city":"Tiffin"
+    "city":"Columbus"
   },
   {
     "unitid":204635,
     "name":"Ohio Northern University",
     "state":"OH",
-    "city":"Tiffin"
+    "city":"Ada"
   },
   {
     "unitid":204662,
     "name":"Ohio State University Agricultural Technical Institute",
     "state":"OH",
-    "city":"Toledo"
+    "city":"Wooster"
   },
   {
     "unitid":204671,
     "name":"Ohio State University-Lima Campus",
     "state":"OH",
-    "city":"South Point"
+    "city":"Lima"
   },
   {
     "unitid":204680,
     "name":"Ohio State University-Mansfield Campus",
     "state":"OH",
-    "city":"Nelsonville"
+    "city":"Mansfield"
   },
   {
     "unitid":204699,
@@ -285,486 +285,486 @@
     "unitid":204705,
     "name":"Ohio State University-Newark Campus",
     "state":"OH",
-    "city":"Cincinnati"
+    "city":"Newark"
   },
   {
     "unitid":204714,
     "name":"Ohio State Beauty Academy",
     "state":"OH",
-    "city":"Dayton"
+    "city":"Lima"
   },
   {
     "unitid":204723,
     "name":"Ohio State College of Barber Styling",
     "state":"OH",
-    "city":"Piqua"
+    "city":"Columbus"
   },
   {
     "unitid":204778,
     "name":"Ohio State School of Cosmetology-Canal Winchester",
     "state":"OH",
-    "city":"Lakewood"
+    "city":"CANAL WINCHESTER"
   },
   {
     "unitid":204796,
     "name":"Ohio State University-Main Campus",
     "state":"OH",
-    "city":"North Canton"
+    "city":"Columbus"
   },
   {
     "unitid":204802,
     "name":"Ohio University-Eastern Campus",
     "state":"OH",
-    "city":"Marietta"
+    "city":"Saint Clairsville"
   },
   {
     "unitid":204820,
     "name":"Ohio University-Chillicothe Campus",
     "state":"OH",
-    "city":"Wilberforce"
+    "city":"Chillicothe"
   },
   {
     "unitid":204839,
     "name":"Ohio University-Southern Campus",
     "state":"OH",
-    "city":"Wilmington"
+    "city":"Ironton"
   },
   {
     "unitid":204848,
     "name":"Ohio University-Lancaster Campus",
     "state":"OH",
-    "city":"Findlay"
+    "city":"Lancaster"
   },
   {
     "unitid":204857,
     "name":"Ohio University-Main Campus",
     "state":"OH",
-    "city":"Springfield"
+    "city":"Athens"
   },
   {
     "unitid":204866,
     "name":"Ohio University-Zanesville Campus",
     "state":"OH",
-    "city":"Wooster"
+    "city":"Zanesville"
   },
   {
     "unitid":204909,
     "name":"Ohio Wesleyan University",
     "state":"OH",
-    "city":"Cincinnati"
+    "city":"Delaware"
   },
   {
     "unitid":204936,
     "name":"Otterbein University",
     "state":"OH",
-    "city":"Youngstown"
+    "city":"Westerville"
   },
   {
     "unitid":204945,
     "name":"Owens Community College",
-    "state":"OK",
-    "city":"Muskogee"
+    "state":"OH",
+    "city":"Perrysburg"
   },
   {
     "unitid":206835,
     "name":"Oklahoma Wesleyan University",
     "state":"OK",
-    "city":"Tulsa"
+    "city":"Bartlesville"
   },
   {
     "unitid":207315,
     "name":"Oklahoma State University Center for Health Sciences",
-    "state":"OR",
-    "city":"McMinnville"
+    "state":"OK",
+    "city":"Tulsa"
   },
   {
     "unitid":207324,
     "name":"Oklahoma Christian University",
-    "state":"OR",
-    "city":"Albany"
+    "state":"OK",
+    "city":"Edmond"
   },
   {
     "unitid":207351,
     "name":"Oklahoma Panhandle State University",
-    "state":"OR",
-    "city":"Medford"
+    "state":"OK",
+    "city":"Goodwell"
   },
   {
     "unitid":207388,
     "name":"Oklahoma State University-Main Campus",
-    "state":"OR",
-    "city":"Happy Valley"
+    "state":"OK",
+    "city":"Stillwater"
   },
   {
     "unitid":207397,
     "name":"Oklahoma State University-Oklahoma City",
-    "state":"OR",
-    "city":"Saint Benedict"
+    "state":"OK",
+    "city":"Oklahoma City"
   },
   {
     "unitid":207403,
     "name":"Oklahoma Baptist University",
-    "state":"OR",
-    "city":"Gresham"
+    "state":"OK",
+    "city":"Shawnee"
   },
   {
     "unitid":207449,
     "name":"Oklahoma City Community College",
-    "state":"OR",
-    "city":"Portland"
+    "state":"OK",
+    "city":"Oklahoma City"
   },
   {
     "unitid":207458,
     "name":"Oklahoma City University",
-    "state":"OR",
-    "city":"Portland"
+    "state":"OK",
+    "city":"Oklahoma City"
   },
   {
     "unitid":207564,
     "name":"Oklahoma State University Institute of Technology",
-    "state":"OR",
-    "city":"Portland"
+    "state":"OK",
+    "city":"Okmulgee"
   },
   {
     "unitid":207582,
     "name":"Oral Roberts University",
-    "state":"OR",
-    "city":"Klamath Falls"
+    "state":"OK",
+    "city":"Tulsa"
   },
   {
     "unitid":209490,
     "name":"Oregon Health & Science University",
-    "state":"PA",
-    "city":"Philadelphia"
+    "state":"OR",
+    "city":"Portland"
   },
   {
     "unitid":209506,
     "name":"Oregon Institute of Technology",
-    "state":"PA",
-    "city":"Bryn Mawr"
+    "state":"OR",
+    "city":"Klamath Falls"
   },
   {
     "unitid":209542,
     "name":"Oregon State University",
-    "state":"PA",
-    "city":"Lewisburg"
+    "state":"OR",
+    "city":"Corvallis"
   },
   {
     "unitid":214528,
     "name":"Orleans Technical College",
     "state":"PA",
-    "city":"West Mifflin"
+    "city":"Philadelphia"
   },
   {
     "unitid":218487,
     "name":"Orangeburg Calhoun Technical College",
-    "state":"SD",
-    "city":"Sioux Falls"
+    "state":"SC",
+    "city":"Orangeburg"
   },
   {
     "unitid":219277,
     "name":"Oglala Lakota College",
-    "state":"TN",
-    "city":"Hartsville"
+    "state":"SD",
+    "city":"Kyle"
   },
   {
     "unitid":227289,
     "name":"Oblate School of Theology",
     "state":"TX",
-    "city":"Galveston"
+    "city":"San Antonio"
   },
   {
     "unitid":227298,
     "name":"Ocean Corporation",
     "state":"TX",
-    "city":"Texarkana"
+    "city":"Houston"
   },
   {
     "unitid":227304,
     "name":"Odessa College",
     "state":"TX",
-    "city":"Kingsville"
+    "city":"Odessa"
   },
   {
     "unitid":227313,
     "name":"Ogle School Hair Skin Nails-Arlington",
     "state":"TX",
-    "city":"College Station"
+    "city":"Arlington"
   },
   {
     "unitid":227322,
     "name":"Ogle School Hair Skin Nails-Ft Worth",
     "state":"TX",
-    "city":"Arlington"
+    "city":"Fort Worth"
   },
   {
     "unitid":227331,
     "name":"Our Lady of the Lake University",
     "state":"TX",
-    "city":"Austin"
+    "city":"San Antonio"
   },
   {
     "unitid":230490,
     "name":"Ogden-Weber Technical College",
-    "state":"VA",
-    "city":"Hampden-Sydney"
+    "state":"UT",
+    "city":"Ogden"
   },
   {
     "unitid":231004,
     "name":"O'Briens Aveda Institute",
-    "state":"VA",
-    "city":"Chesapeake"
+    "state":"VT",
+    "city":"Williston"
   },
   {
     "unitid":232982,
     "name":"Old Dominion University",
-    "state":"WA",
-    "city":"Richland"
+    "state":"VA",
+    "city":"Norfolk"
   },
   {
     "unitid":236188,
     "name":"Olympic College",
-    "state":"WV",
-    "city":"Morgantown"
+    "state":"WA",
+    "city":"Bremerton"
   },
   {
     "unitid":247940,
     "name":"Owensboro Community and Technical College",
-    "state":"PR",
-    "city":"Vega Baja"
+    "state":"KY",
+    "city":"Owensboro"
   },
   {
     "unitid":248703,
     "name":"Ogle School Hair Skin Nails-Hurst",
-    "state":"OH",
-    "city":"Uniontown"
+    "state":"TX",
+    "city":"Hurst"
   },
   {
     "unitid":366465,
     "name":"Ogeechee Technical College",
-    "state":"CO",
-    "city":"Aurora"
+    "state":"GA",
+    "city":"Statesboro"
   },
   {
     "unitid":369659,
     "name":"Oregon College of Oriental Medicine",
-    "state":"TX",
-    "city":"San Antonio"
+    "state":"OR",
+    "city":"Portland"
   },
   {
     "unitid":381404,
     "name":"Ogle School Hair Skin Nails-Dallas",
-    "state":"CA",
-    "city":"Aliso Viejo"
-  },
-  {
-    "unitid":405012,
-    "name":"Ohio State School of Cosmetology-Heath",
-    "state":"TN",
-    "city":"Memphis"
-  },
-  {
-    "unitid":407434,
-    "name":"Orlo School of Hair Design and Cosmetology",
-    "state":"NV",
-    "city":"Las Vegas"
-  },
-  {
-    "unitid":410797,
-    "name":"Ohio Media School-Valley View",
-    "state":"NY",
-    "city":"Olean"
-  },
-  {
-    "unitid":417992,
-    "name":"Orange Ulster BOCES-Practical Nursing Program",
-    "state":"HI",
-    "city":"Kapolei"
-  },
-  {
-    "unitid":418269,
-    "name":"Ohio Media School-Cincinnati",
     "state":"TX",
     "city":"Dallas"
   },
   {
+    "unitid":405012,
+    "name":"Ohio State School of Cosmetology-Heath",
+    "state":"OH",
+    "city":"Heath"
+  },
+  {
+    "unitid":407434,
+    "name":"Orlo School of Hair Design and Cosmetology",
+    "state":"NY",
+    "city":"Albany"
+  },
+  {
+    "unitid":410797,
+    "name":"Ohio Media School-Valley View",
+    "state":"OH",
+    "city":"Valley View"
+  },
+  {
+    "unitid":417992,
+    "name":"Orange Ulster BOCES-Practical Nursing Program",
+    "state":"NY",
+    "city":"Newburgh"
+  },
+  {
+    "unitid":418269,
+    "name":"Ohio Media School-Cincinnati",
+    "state":"OH",
+    "city":"Norwood"
+  },
+  {
     "unitid":420431,
     "name":"Oconee Fall Line Technical College",
-    "state":"PR",
-    "city":"Bayamon"
+    "state":"GA",
+    "city":"Sandersville"
   },
   {
     "unitid":423652,
     "name":"Oregon Coast Community College",
-    "state":"RI",
-    "city":"Lincoln"
+    "state":"OR",
+    "city":"Newport"
   },
   {
     "unitid":427991,
     "name":"Osceola Technical College",
-    "state":"CA",
-    "city":"Chula Vista"
+    "state":"FL",
+    "city":"Kissimmee"
   },
   {
     "unitid":428259,
     "name":"Ottawa University-Milwaukee",
-    "state":"WA",
-    "city":"Spokane"
+    "state":"WI",
+    "city":"Brookfield"
   },
   {
     "unitid":431716,
     "name":"Ocean County Vocational-Technical School",
-    "state":"TX",
-    "city":"Austin"
+    "state":"NJ",
+    "city":"Toms River"
   },
   {
     "unitid":433068,
     "name":"Okaloosa Technical College",
     "state":"FL",
-    "city":"Maitland"
+    "city":"Fort Walton Beach"
   },
   {
     "unitid":439844,
     "name":"Omega Institute of Cosmetology",
-    "state":"NJ",
-    "city":"Paramus"
+    "state":"LA",
+    "city":"Houma"
   },
   {
     "unitid":440730,
     "name":"Onondaga Cortland Madison BOCES",
-    "state":"VA",
-    "city":"Blacksburg"
+    "state":"NY",
+    "city":"Liverpool"
   },
   {
     "unitid":440828,
     "name":"Oregon State University-Cascades Campus",
-    "state":"KY",
-    "city":"Newport"
+    "state":"OR",
+    "city":"Bend"
   },
   {
     "unitid":441593,
     "name":"Orleans Niagara BOCES-Practical Nursing Program",
-    "state":"WA",
-    "city":"Redmond"
+    "state":"NY",
+    "city":"Lockport"
   },
   {
     "unitid":444635,
     "name":"Orion Institute",
-    "state":"CA",
-    "city":"Irvine"
+    "state":"OH",
+    "city":"Perrysburg"
   },
   {
     "unitid":453756,
     "name":"Ohio Media School-Columbus",
-    "state":"CA",
-    "city":"Pasadena"
+    "state":"OH",
+    "city":"Columbus"
   },
   {
     "unitid":453792,
     "name":"Ohio Medical Career College",
-    "state":"CT",
-    "city":"Seymour"
+    "state":"OH",
+    "city":"Dayton"
   },
   {
     "unitid":454582,
     "name":"Ottawa University-Online",
-    "state":"MD",
-    "city":"Frederick"
+    "state":"KS",
+    "city":"Ottawa"
   },
   {
     "unitid":455026,
     "name":"Omega Studios' School of Applied Recording Arts & Sciences",
-    "state":"LA",
-    "city":"Baton Rouge"
+    "state":"MD",
+    "city":"Rockville"
   },
   {
     "unitid":455798,
     "name":"Oxford Academy of Hair Design Inc",
-    "state":"HI",
-    "city":"Honolulu"
+    "state":"CT",
+    "city":"Seymour"
   },
   {
     "unitid":455859,
     "name":"Oliver Finley Academy of Cosmetology",
-    "state":"IL",
-    "city":"Normal"
+    "state":"ID",
+    "city":"Boise"
   },
   {
     "unitid":460978,
     "name":"Ogle School Hair Skin Nails-North Dallas",
-    "state":"WA",
-    "city":"Spokane Valley"
+    "state":"TX",
+    "city":"Dallas"
   },
   {
     "unitid":461120,
     "name":"Omega Graduate School",
-    "state":"NY",
-    "city":"Mattydale"
+    "state":"TN",
+    "city":"Dayton"
   },
   {
     "unitid":464226,
     "name":"Ottawa University-Surprise",
-    "state":"OH",
-    "city":"Toledo"
+    "state":"AZ",
+    "city":"Surprise"
   },
   {
     "unitid":469629,
     "name":"Oklahoma Technical College",
-    "state":"KS",
-    "city":"Overland Park"
+    "state":"OK",
+    "city":"Tulsa"
   },
   {
     "unitid":478591,
     "name":"Ogle School Hair Skin Nails-Denton",
-    "state":"NJ",
-    "city":"Lakewood"
+    "state":"TX",
+    "city":"Denton"
   },
   {
     "unitid":480125,
     "name":"Ogle School Hair Skin Nails-San Antonio",
-    "state":"KY",
-    "city":"Erlanger"
+    "state":"TX",
+    "city":"San Antonio"
   },
   {
     "unitid":483647,
     "name":"Ohio Institute of Allied Health",
-    "state":"CA",
-    "city":"Irvine"
+    "state":"OH",
+    "city":"Huber Heights"
   },
   {
     "unitid":484604,
     "name":"Ogle School Hair Skin Nails-Stafford",
-    "state":"CA",
-    "city":"Fremont"
+    "state":"TX",
+    "city":"Stafford"
   },
   {
     "unitid":493646,
     "name":"Ohel Margulia Seminary",
-    "state":"CA",
-    "city":"Palm Desert"
+    "state":"NY",
+    "city":"Monsey"
   },
   {
     "unitid":495059,
     "name":"Oak Valley College",
     "state":"CA",
-    "city":"Milpitas"
+    "city":"Rialto"
   },
   {
     "unitid":497073,
     "name":"Ogle School Hair Skin Nails-Willowbrook",
-    "state":"AZ",
-    "city":"Thatcher"
+    "state":"TX",
+    "city":"Houston"
   },
   {
     "unitid":497161,
     "name":"Ohio Business College-Dayton-Driving Academy",
-    "state":"AZ",
-    "city":"Prescott Valley"
+    "state":"OH",
+    "city":"Trotwood"
   },
   {
     "unitid":498881,
     "name":"One Stop Academy",
-    "state":"IN",
-    "city":"Noblesville"
+    "state":"North Carolina",
+    "city":null
   }
 ]

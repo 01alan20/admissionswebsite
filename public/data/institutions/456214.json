@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 456214,
     "name": "Lamson Institute",
-    "city": "Archbold",
-    "state": "OH",
+    "city": "San Antonio",
+    "state": "TX",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.fourcounty.net/adulteducation_home.aspx",
+    "website": "https://lamson.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

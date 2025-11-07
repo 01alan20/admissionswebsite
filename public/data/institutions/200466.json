@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 200466,
     "name": "Sitting Bull College",
-    "city": "Circleville",
-    "state": "OH",
+    "city": "Fort Yates",
+    "state": "ND",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Tribal Colleges",
-    "website": "www.ohiochristian.edu/",
+    "website": "https://www.sittingbull.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

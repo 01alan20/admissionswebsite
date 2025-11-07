@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 143118,
     "name": "Aurora University",
-    "city": "Chicago",
+    "city": "Aurora",
     "state": "IL",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Doctoral/Professional Universities",
-    "website": "www.ccc.edu/colleges/washington/Pages/default.aspx",
+    "website": "https://aurora.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

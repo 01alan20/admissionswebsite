@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 479956,
     "name": "Pennsylvania State University-World Campus",
-    "city": "Webb City",
-    "state": "MO",
+    "city": "University Park",
+    "state": "PA",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.citypointebeauty.com/",
+    "website": "https://www.worldcampus.psu.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

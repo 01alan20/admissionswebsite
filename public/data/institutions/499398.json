@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 499398,
     "name": "Arizona College of Nursing-Cincinnati",
-    "city": "Muskegon",
-    "state": "MI",
+    "city": null,
+    "state": "Ohio",
     "control": "Private for-profit",
     "level": "4-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.baker.edu/",
+    "website": null,
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

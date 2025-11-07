@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 221740,
     "name": "The University of Tennessee-Chattanooga",
-    "city": "Corpus Christi",
-    "state": "TX",
+    "city": "Chattanooga",
+    "state": "TN",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Doctoral/Professional Universities",
-    "website": "https://www.tamucc.edu/",
+    "website": "utc.edu/",
     "admissions_url": null,
     "test_policy": "Required",
     "major_families": [

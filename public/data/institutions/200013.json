@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 200013,
     "name": "Rasmussen University-North Dakota",
-    "city": "Monroe",
-    "state": "OH",
+    "city": "Fargo",
+    "state": "ND",
     "control": "Private for-profit",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate/Associate's Colleges: Mixed Baccalaureate/Associate's",
-    "website": "www.butlertech.org/",
+    "website": "https://rasmussen.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

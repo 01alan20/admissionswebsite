@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 237561,
     "name": "Monongalia County Technical Education Center",
-    "city": "Fond du Lac",
-    "state": "WI",
+    "city": "Morgantown",
+    "state": "WV",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.morainepark.edu/",
+    "website": "https://mtec.mono.k12.wv.us/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

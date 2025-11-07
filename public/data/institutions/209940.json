@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 209940,
     "name": "Rogue Community College",
-    "city": "Tarentum",
-    "state": "PA",
+    "city": "Grants Pass",
+    "state": "OR",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: Mixed Transfer/Career & Technical-Mixed Traditional/Nontraditional",
-    "website": "https://www.ahn.org/education/citizens-school-nursing",
+    "website": "www.roguecc.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

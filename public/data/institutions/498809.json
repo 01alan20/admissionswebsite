@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 498809,
     "name": "Yeshiva of Kasho",
-    "city": "Richmond",
-    "state": "IN",
+    "city": null,
+    "state": "New York",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.ivytech.edu/richmond/",
+    "website": null,
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

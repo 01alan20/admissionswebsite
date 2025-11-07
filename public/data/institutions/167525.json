@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 167525,
     "name": "Quincy College",
-    "city": "Escanaba",
-    "state": "MI",
+    "city": "Quincy",
+    "state": "MA",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Associate's Colleges: High Transfer-High Nontraditional",
-    "website": "https://www.baycollege.edu/",
+    "website": "https://www.quincycollege.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

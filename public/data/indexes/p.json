@@ -2,326 +2,326 @@
   {
     "unitid":105428,
     "name":"Phoenix College",
-    "state":"NM",
-    "city":"Albuquerque"
+    "state":"AZ",
+    "city":"Phoenix"
   },
   {
     "unitid":105525,
     "name":"Pima Community College",
     "state":"AZ",
-    "city":"Prescott"
+    "city":"Tucson"
   },
   {
     "unitid":105534,
     "name":"Pima Medical Institute-Tucson",
     "state":"AZ",
-    "city":"Phoenix"
+    "city":"Tucson"
   },
   {
     "unitid":105543,
     "name":"Pima Medical Institute-Albuquerque",
-    "state":"AZ",
-    "city":"Tempe"
+    "state":"NM",
+    "city":"Albuquerque"
   },
   {
     "unitid":105589,
     "name":"Prescott College",
     "state":"AZ",
-    "city":"Phoenix"
+    "city":"Prescott"
   },
   {
     "unitid":106908,
     "name":"Paul Mitchell the School-Little Rock",
     "state":"AR",
-    "city":"Searcy"
+    "city":"North Little Rock"
   },
   {
     "unitid":107600,
     "name":"Philander Smith University",
     "state":"AR",
-    "city":"El Dorado"
+    "city":"Little Rock"
   },
   {
     "unitid":107619,
     "name":"Phillips Community College of the University of Arkansas",
     "state":"AR",
-    "city":"North Little Rock"
+    "city":"Helena"
   },
   {
     "unitid":107789,
     "name":"Paul Mitchell the School-Arkansas",
     "state":"AR",
-    "city":"Walnut Ridge"
+    "city":"Fayetteville"
   },
   {
     "unitid":115746,
     "name":"Pacifica Graduate Institute",
     "state":"CA",
-    "city":"Los Angeles"
+    "city":"Carpinteria"
   },
   {
     "unitid":120698,
     "name":"Palo Alto University",
     "state":"CA",
-    "city":"Claremont"
+    "city":"Palo Alto"
   },
   {
     "unitid":120768,
     "name":"Pacific Oaks College",
     "state":"CA",
-    "city":"Porterville"
+    "city":"Pasadena"
   },
   {
     "unitid":120795,
     "name":"Pacific School of Religion",
     "state":"CA",
-    "city":"El Monte"
+    "city":"Berkeley"
   },
   {
     "unitid":120838,
     "name":"Pacific States University",
     "state":"CA",
-    "city":"Santa Ana"
+    "city":"Los Angeles"
   },
   {
     "unitid":120865,
     "name":"Pacific Union College",
     "state":"CA",
-    "city":"Santa Monica"
+    "city":"Angwin"
   },
   {
     "unitid":120953,
     "name":"Palo Verde College",
     "state":"CA",
-    "city":"Redlands"
+    "city":"Blythe"
   },
   {
     "unitid":120971,
     "name":"Palomar College",
     "state":"CA",
-    "city":"Eureka"
+    "city":"San Marcos"
   },
   {
     "unitid":121044,
     "name":"Pasadena City College",
     "state":"CA",
-    "city":"Upland"
+    "city":"Pasadena"
   },
   {
     "unitid":121150,
     "name":"Pepperdine University",
     "state":"CA",
-    "city":"Corona"
+    "city":"Malibu"
   },
   {
     "unitid":121178,
     "name":"Peralta Community College System Office",
-    "state":"CA",
-    "city":"Whittier"
+    "state":"California",
+    "city":null
   },
   {
     "unitid":121257,
     "name":"Pitzer College",
     "state":"CA",
-    "city":"Riverside"
+    "city":"Claremont"
   },
   {
     "unitid":121275,
     "name":"Platt College-San Diego",
     "state":"CA",
-    "city":"Los Angeles"
+    "city":"San Diego"
   },
   {
     "unitid":121309,
     "name":"Point Loma Nazarene University",
     "state":"CA",
-    "city":"Sacramento"
+    "city":"San Diego"
   },
   {
     "unitid":121345,
     "name":"Pomona College",
     "state":"CA",
-    "city":"Mission Viejo"
+    "city":"Claremont"
   },
   {
     "unitid":121363,
     "name":"Porterville College",
     "state":"CA",
-    "city":"Oakland"
+    "city":"Porterville"
   },
   {
     "unitid":121433,
     "name":"Professional Institute of Beauty",
     "state":"CA",
-    "city":"San Diego"
+    "city":"El Monte"
   },
   {
     "unitid":121628,
     "name":"Pardee RAND Graduate School",
     "state":"CA",
-    "city":"San Diego"
+    "city":"Santa Monica"
   },
   {
     "unitid":127820,
     "name":"Pikes Peak State College",
-    "state":"CT",
-    "city":"Hamden"
+    "state":"CO",
+    "city":"Colorado Springs"
   },
   {
     "unitid":127884,
     "name":"Pueblo Community College",
-    "state":"CT",
-    "city":"Storrs"
+    "state":"CO",
+    "city":"Pueblo"
   },
   {
     "unitid":128151,
     "name":"Pickens Technical College",
-    "state":"CT",
-    "city":"Hartford"
+    "state":"CO",
+    "city":"Aurora"
   },
   {
     "unitid":129002,
     "name":"Porter & Chester Institute of Hamden",
     "state":"CT",
-    "city":"Winsted"
+    "city":"Hamden"
   },
   {
     "unitid":129349,
     "name":"Paul Mitchell the School-North Haven",
     "state":"CT",
-    "city":"Fairfield"
+    "city":"North Haven"
   },
   {
     "unitid":130110,
     "name":"Paier College",
-    "state":"DC",
-    "city":"Washington"
+    "state":"CT",
+    "city":"Bridgeport"
   },
   {
     "unitid":130174,
     "name":"Porter & Chester Institute",
-    "state":"DC",
-    "city":"Washington"
+    "state":"CT",
+    "city":"Bridgeport"
   },
   {
     "unitid":130183,
     "name":"Post University",
-    "state":"DC",
-    "city":"Washington"
+    "state":"CT",
+    "city":"Waterbury"
   },
   {
     "unitid":131405,
     "name":"Pontifical Faculty of the Immaculate Conception at the Dominican House of Studies",
-    "state":"FL",
-    "city":"Daytona Beach"
+    "state":"DC",
+    "city":"Washington"
   },
   {
     "unitid":136109,
     "name":"Paul Mitchell the School-Jacksonville",
     "state":"FL",
-    "city":"Sanford"
+    "city":"Jacksonville"
   },
   {
     "unitid":136330,
     "name":"Palm Beach Atlantic University",
     "state":"FL",
-    "city":"Miami Gardens"
+    "city":"West Palm Beach"
   },
   {
     "unitid":136358,
     "name":"Palm Beach State College",
     "state":"FL",
-    "city":"DeLand"
+    "city":"Lake Worth"
   },
   {
     "unitid":136400,
     "name":"Pasco-Hernando State College",
     "state":"FL",
-    "city":"Lakeland"
+    "city":"New Port Richey"
   },
   {
     "unitid":136473,
     "name":"Pensacola State College",
     "state":"FL",
-    "city":"New Port Richey"
+    "city":"Pensacola"
   },
   {
     "unitid":136491,
     "name":"Pinellas Technical College-Clearwater",
     "state":"FL",
-    "city":"Live Oak"
+    "city":"Clearwater"
   },
   {
     "unitid":136516,
     "name":"Polk State College",
     "state":"FL",
-    "city":"Tallahassee"
+    "city":"Winter Haven"
   },
   {
     "unitid":137087,
     "name":"Pinellas Technical College-St. Petersburg",
     "state":"FL",
-    "city":"Chipley"
+    "city":"Saint Petersburg"
   },
   {
     "unitid":138868,
     "name":"Point University",
     "state":"GA",
-    "city":"Rome"
+    "city":"West Point"
   },
   {
     "unitid":139506,
     "name":"Pro Way Hair School",
     "state":"GA",
-    "city":"Atlanta"
+    "city":"Stone Mountain"
   },
   {
     "unitid":140720,
     "name":"Paine College",
-    "state":"HI",
-    "city":"Honolulu"
+    "state":"GA",
+    "city":"Augusta"
   },
   {
     "unitid":140818,
     "name":"Piedmont University",
-    "state":"HI",
-    "city":"Lihue"
+    "state":"GA",
+    "city":"Demorest"
   },
   {
     "unitid":143376,
     "name":"Paul Mitchell the School-Tinley Park",
     "state":"IL",
-    "city":"Crystal Lake"
+    "city":"Tinley Park"
   },
   {
     "unitid":147916,
     "name":"Parkland College",
     "state":"IL",
-    "city":"Carbondale"
+    "city":"Champaign"
   },
   {
     "unitid":148007,
     "name":"Prairie State College",
     "state":"IL",
-    "city":"Edwardsville"
+    "city":"Chicago Heights"
   },
   {
     "unitid":148016,
     "name":"Principia College",
     "state":"IL",
-    "city":"Chicago"
+    "city":"Elsah"
   },
   {
     "unitid":148098,
     "name":"Professional's Choice Hair Design Academy",
     "state":"IL",
-    "city":"Chicago"
+    "city":"Joliet"
   },
   {
     "unitid":150853,
     "name":"PJ's College of Cosmetology-Clarksville",
     "state":"IN",
-    "city":"Fort Wayne"
+    "city":"Clarksville"
   },
   {
     "unitid":151102,
@@ -332,104 +332,104 @@
   {
     "unitid":152150,
     "name":"PJ's College of Cosmetology-Richmond",
-    "state":"IA",
-    "city":"Iowa Falls"
+    "state":"IN",
+    "city":"Richmond"
   },
   {
     "unitid":154174,
     "name":"Palmer College of Chiropractic",
-    "state":"KS",
-    "city":"Arkansas City"
+    "state":"IA",
+    "city":"Davenport"
   },
   {
     "unitid":154208,
     "name":"PCI Academy-Ames",
-    "state":"KS",
-    "city":"Dodge City"
+    "state":"IA",
+    "city":"Ames"
   },
   {
     "unitid":155681,
     "name":"Pittsburg State University",
-    "state":"KY",
-    "city":"Elizabethtown"
+    "state":"KS",
+    "city":"Pittsburg"
   },
   {
     "unitid":155715,
     "name":"Pratt Community College",
-    "state":"KY",
-    "city":"Versailles"
+    "state":"KS",
+    "city":"Pratt"
   },
   {
     "unitid":156310,
     "name":"PJ's College of Cosmetology-Bowling Green",
     "state":"KY",
-    "city":"Louisville"
+    "city":"Bowling Green"
   },
   {
     "unitid":156426,
     "name":"Paul Mitchell the School-Lexington",
     "state":"KY",
-    "city":"Florence"
+    "city":"Lexington"
   },
   {
     "unitid":156754,
     "name":"PJ's College of Cosmetology-Glasgow",
     "state":"KY",
-    "city":"Louisville"
+    "city":"Glasgow"
   },
   {
     "unitid":156842,
     "name":"Paul Mitchell the School-Louisville",
     "state":"KY",
-    "city":"Somerset"
+    "city":"Louisville"
   },
   {
     "unitid":160117,
     "name":"Pat Goins Beauty Schools formerly Paul Mitchell the School-Shreveport",
-    "state":"ME",
-    "city":"Fort Kent"
+    "state":"LA",
+    "city":"Shreveport"
   },
   {
     "unitid":160199,
     "name":"Pineville Beauty School",
-    "state":"ME",
-    "city":"Castine"
+    "state":"LA",
+    "city":"Pineville"
   },
   {
     "unitid":163657,
     "name":"Prince George's Community College",
-    "state":"MA",
-    "city":"Bridgewater"
+    "state":"MD",
+    "city":"Largo"
   },
   {
     "unitid":167464,
     "name":"Pope St John XXIII National Seminary",
-    "state":"MI",
-    "city":"Owosso"
+    "state":"MA",
+    "city":"Weston"
   },
   {
     "unitid":171775,
     "name":"Port Huron Cosmetology College",
-    "state":"MN",
-    "city":"Brainerd"
+    "state":"MI",
+    "city":"Waterford"
   },
   {
     "unitid":172680,
     "name":"Paul Mitchell the School-Grand Rapids",
-    "state":"MN",
-    "city":"Saint Paul"
+    "state":"MI",
+    "city":"Kentwood"
   },
   {
     "unitid":174570,
     "name":"Pine Technical & Community College",
-    "state":"MS",
-    "city":"Grenada"
+    "state":"MN",
+    "city":"Pine City"
   },
   {
     "unitid":176239,
     "name":"Pearl River Community College",
-    "state":"MO",
-    "city":"Springfield"
+    "state":"MS",
+    "city":"Poplarville"
   },
   {
     "unitid":177302,
@@ -441,397 +441,397 @@
     "unitid":177685,
     "name":"Paul Mitchell the School-Missouri Columbia",
     "state":"MO",
-    "city":"Kansas City"
+    "city":"Columbia"
   },
   {
     "unitid":178721,
     "name":"Park University",
-    "state":"MT",
-    "city":"Harlem"
+    "state":"MO",
+    "city":"Parkville"
   },
   {
     "unitid":178828,
     "name":"Poplar Bluff Technical Career Center",
-    "state":"MT",
-    "city":"Great Falls"
+    "state":"MO",
+    "city":"Poplar Bluff"
   },
   {
     "unitid":181534,
     "name":"Peru State College",
-    "state":"NH",
-    "city":"Claremont"
+    "state":"NE",
+    "city":"Peru"
   },
   {
     "unitid":183080,
     "name":"Plymouth State University",
-    "state":"NJ",
-    "city":"Madison"
+    "state":"NH",
+    "city":"Plymouth"
   },
   {
     "unitid":183202,
     "name":"Paul Mitchell the School-Portsmouth",
-    "state":"NJ",
-    "city":"Jersey City"
+    "state":"NH",
+    "city":"Portsmouth"
   },
   {
     "unitid":185970,
     "name":"P B Cosmetology Education Center",
-    "state":"NM",
-    "city":"Roswell"
+    "state":"NJ",
+    "city":"Gloucester"
   },
   {
     "unitid":186016,
     "name":"Parisian Beauty School",
-    "state":"NM",
-    "city":"Gallup"
+    "state":"NJ",
+    "city":"Hackensack"
   },
   {
     "unitid":186034,
     "name":"Passaic County Community College",
-    "state":"NM",
-    "city":"Socorro"
+    "state":"NJ",
+    "city":"Paterson"
   },
   {
     "unitid":186052,
     "name":"Pennco Tech-Blackwood",
-    "state":"NM",
-    "city":"Los Alamos"
+    "state":"NJ",
+    "city":"Blackwood"
   },
   {
     "unitid":186122,
     "name":"Princeton Theological Seminary",
-    "state":"NM",
-    "city":"Albuquerque"
+    "state":"NJ",
+    "city":"Princeton"
   },
   {
     "unitid":186131,
     "name":"Princeton University",
-    "state":"NM",
-    "city":"Alamogordo"
+    "state":"NJ",
+    "city":"Princeton"
   },
   {
     "unitid":190451,
     "name":"Pomeroy College of Nursing at Crouse Hospital",
     "state":"NY",
-    "city":"Herkimer"
+    "city":"Syracuse"
   },
   {
     "unitid":194310,
     "name":"Pace University",
     "state":"NY",
-    "city":"Alfred"
+    "city":"New York"
   },
   {
     "unitid":194392,
     "name":"Paul Smiths College of Arts and Science",
     "state":"NY",
-    "city":"Canton"
+    "city":"Paul Smiths"
   },
   {
     "unitid":194499,
     "name":"Plaza College",
     "state":"NY",
-    "city":"Cobleskill"
+    "city":"Forest Hills"
   },
   {
     "unitid":194578,
     "name":"Pratt Institute-Main",
     "state":"NY",
-    "city":"Morrisville"
+    "city":"Brooklyn"
   },
   {
     "unitid":199263,
     "name":"Pamlico Community College",
-    "state":"ND",
-    "city":"Fargo"
+    "state":"NC",
+    "city":"Grantsboro"
   },
   {
     "unitid":199306,
     "name":"Pfeiffer University",
-    "state":"ND",
-    "city":"New Town"
+    "state":"NC",
+    "city":"Misenheimer"
   },
   {
     "unitid":199324,
     "name":"Piedmont Community College",
-    "state":"ND",
-    "city":"Grand Forks"
+    "state":"NC",
+    "city":"Roxboro"
   },
   {
     "unitid":199333,
     "name":"Pitt Community College",
-    "state":"ND",
-    "city":"Jamestown"
+    "state":"NC",
+    "city":"Winterville"
   },
   {
     "unitid":199689,
     "name":"Paul Mitchell the School-Fayetteville",
-    "state":"ND",
-    "city":"Bismarck"
+    "state":"NC",
+    "city":"Fayetteville"
   },
   {
     "unitid":204963,
     "name":"Paramount Beauty Academy",
-    "state":"OK",
-    "city":"Bartlesville"
+    "state":"OH",
+    "city":"Portsmouth"
   },
   {
     "unitid":204990,
     "name":"Payne Theological Seminary",
-    "state":"OK",
-    "city":"Ada"
+    "state":"OH",
+    "city":"Wilberforce"
   },
   {
     "unitid":205027,
     "name":"Pontifical College Josephinum",
-    "state":"OK",
-    "city":"Lawton"
+    "state":"OH",
+    "city":"Columbus"
   },
   {
     "unitid":205054,
     "name":"Professional Skills Institute",
-    "state":"OK",
-    "city":"Poteau"
+    "state":"OH",
+    "city":"Maumee"
   },
   {
     "unitid":206905,
     "name":"Pontotoc Technology Center",
     "state":"OK",
-    "city":"Tulsa"
+    "city":"Ada"
   },
   {
     "unitid":208859,
     "name":"Phagans Grants Pass College of Beauty",
-    "state":"PA",
-    "city":"Essington"
+    "state":"OR",
+    "city":"Grants Pass"
   },
   {
     "unitid":209153,
     "name":"Phagans Medford Beauty School",
-    "state":"PA",
-    "city":"Reading"
+    "state":"OR",
+    "city":"Medford"
   },
   {
     "unitid":209603,
     "name":"Pacific Northwest College of Art",
-    "state":"PA",
-    "city":"Feasterville"
+    "state":"OR",
+    "city":"Portland"
   },
   {
     "unitid":209612,
     "name":"Pacific University",
-    "state":"PA",
-    "city":"Butler"
+    "state":"OR",
+    "city":"Forest Grove"
   },
   {
     "unitid":209667,
     "name":"Phagans Beauty College",
-    "state":"PA",
-    "city":"Butler"
+    "state":"OR",
+    "city":"Corvallis"
   },
   {
     "unitid":209676,
     "name":"Phagans Central Oregon Beauty College",
-    "state":"PA",
-    "city":"Radnor"
+    "state":"OR",
+    "city":"Bend"
   },
   {
     "unitid":209694,
     "name":"Phagans School of Beauty",
-    "state":"PA",
-    "city":"Pittsburgh"
+    "state":"OR",
+    "city":"Salem"
   },
   {
     "unitid":209700,
     "name":"Phagans School of Hair Design",
-    "state":"PA",
-    "city":"Pittsburgh"
+    "state":"OR",
+    "city":"Happy Valley"
   },
   {
     "unitid":209746,
     "name":"Portland Community College",
-    "state":"PA",
-    "city":"Summerdale"
+    "state":"OR",
+    "city":"Portland"
   },
   {
     "unitid":209807,
     "name":"Portland State University",
-    "state":"PA",
-    "city":"Pittsburgh"
+    "state":"OR",
+    "city":"Portland"
   },
   {
     "unitid":214582,
     "name":"Pennsylvania Institute of Technology",
     "state":"PA",
-    "city":"Oakdale"
+    "city":"Media"
   },
   {
     "unitid":214591,
     "name":"Pennsylvania State University-Penn State Erie-Behrend College",
     "state":"PA",
-    "city":"Pittsburgh"
+    "city":"Erie"
   },
   {
     "unitid":214607,
     "name":"Pennsylvania State University-Penn State Great Valley",
     "state":"PA",
-    "city":"Pittsburgh"
+    "city":"Malvern"
   },
   {
     "unitid":214625,
     "name":"Pennsylvania State University-Penn State New Kensington",
     "state":"PA",
-    "city":"Pottsville"
+    "city":"New Kensington"
   },
   {
     "unitid":214634,
     "name":"Pennsylvania State University-Penn State Shenango",
     "state":"PA",
-    "city":"Altoona"
+    "city":"Sharon"
   },
   {
     "unitid":214643,
     "name":"Pennsylvania State University-Penn State Wilkes-Barre",
     "state":"PA",
-    "city":"Reading"
+    "city":"Dallas"
   },
   {
     "unitid":214652,
     "name":"Pennsylvania State University-Penn State Scranton",
     "state":"PA",
-    "city":"Reading"
+    "city":"Dunmore"
   },
   {
     "unitid":214661,
     "name":"Pennsylvania State System of Higher Education-Central Office",
-    "state":"PA",
-    "city":"Wyncote"
+    "state":"Pennsylvania",
+    "city":null
   },
   {
     "unitid":214670,
     "name":"Pennsylvania State University-Penn State Lehigh Valley",
     "state":"PA",
-    "city":"Philadelphia"
+    "city":"Center Valley"
   },
   {
     "unitid":214689,
     "name":"Pennsylvania State University-Penn State Altoona",
     "state":"PA",
-    "city":"Moon Township"
+    "city":"Altoona"
   },
   {
     "unitid":214698,
     "name":"Pennsylvania State University-Penn State Beaver",
     "state":"PA",
-    "city":"Pittsburgh"
+    "city":"Monaca"
   },
   {
     "unitid":214704,
     "name":"Pennsylvania State University-Penn State Berks",
     "state":"PA",
-    "city":"Rosemont"
+    "city":"Reading"
   },
   {
     "unitid":214713,
     "name":"Pennsylvania State University-Penn State Harrisburg",
     "state":"PA",
-    "city":"Loretto"
+    "city":"Middletown"
   },
   {
     "unitid":214731,
     "name":"Pennsylvania State University-Penn State Brandywine",
     "state":"PA",
-    "city":"Philadelphia"
+    "city":"Media"
   },
   {
     "unitid":214740,
     "name":"Pennsylvania State University-Penn State DuBois",
     "state":"PA",
-    "city":"Latrobe"
+    "city":"DuBois"
   },
   {
     "unitid":214759,
     "name":"Pennsylvania State University-Penn State Fayette- Eberly",
     "state":"PA",
-    "city":"Latrobe"
+    "city":"Lemont Furnace"
   },
   {
     "unitid":214768,
     "name":"Pennsylvania State University-Penn State Hazleton",
     "state":"PA",
-    "city":"Frackville"
+    "city":"Hazleton"
   },
   {
     "unitid":214777,
     "name":"Pennsylvania State University-Main Campus",
     "state":"PA",
-    "city":"Scranton"
+    "city":"University Park"
   },
   {
     "unitid":214786,
     "name":"Pennsylvania State University-Penn State Greater Allegheny",
     "state":"PA",
-    "city":"Greensburg"
+    "city":"McKeesport"
   },
   {
     "unitid":214795,
     "name":"Pennsylvania State University-Penn State Mont Alto",
     "state":"PA",
-    "city":"Pittsburgh"
+    "city":"Mont Alto"
   },
   {
     "unitid":214801,
     "name":"Pennsylvania State University-Penn State Abington",
     "state":"PA",
-    "city":"Sharon"
+    "city":"Abington"
   },
   {
     "unitid":214810,
     "name":"Pennsylvania State University-Penn State Schuylkill",
     "state":"PA",
-    "city":"Hermitage"
+    "city":"Schuylkill Haven"
   },
   {
     "unitid":214829,
     "name":"Pennsylvania State University-Penn State York",
     "state":"PA",
-    "city":"Shippensburg"
+    "city":"York"
   },
   {
     "unitid":214883,
     "name":"Peirce College",
     "state":"PA",
-    "city":"Slippery Rock"
+    "city":"Philadelphia"
   },
   {
     "unitid":214892,
     "name":"Penn Commercial Business\/Technical School",
     "state":"PA",
-    "city":"Wynnewood"
+    "city":"Washington"
   },
   {
     "unitid":214944,
     "name":"Pennco Tech-Bristol",
     "state":"PA",
-    "city":"Pittsburgh"
+    "city":"Bristol"
   },
   {
     "unitid":214971,
     "name":"Pennsylvania Academy of the Fine Arts",
     "state":"PA",
-    "city":"State College"
+    "city":"Philadelphia"
   },
   {
     "unitid":215008,
     "name":"Pennsylvania Gunsmith School",
     "state":"PA",
-    "city":"Bethlehem"
+    "city":"Pittsburgh"
   },
   {
     "unitid":215053,
     "name":"Pennsylvania College of Art and Design",
     "state":"PA",
-    "city":"Selinsgrove"
+    "city":"Lancaster"
   },
   {
     "unitid":215123,
@@ -843,385 +843,385 @@
     "unitid":215381,
     "name":"Pittsburgh Institute of Aeronautics",
     "state":"PA",
-    "city":"Collegeville"
+    "city":"West Mifflin"
   },
   {
     "unitid":215390,
     "name":"Pittsburgh Institute of Mortuary Science Inc",
     "state":"PA",
-    "city":"Phoenixville"
+    "city":"Pittsburgh"
   },
   {
     "unitid":215415,
     "name":"Pittsburgh Technical College",
     "state":"PA",
-    "city":"Wayne"
+    "city":"Oakdale"
   },
   {
     "unitid":215424,
     "name":"Pittsburgh Theological Seminary",
     "state":"PA",
-    "city":"Sharon Hill"
+    "city":"Pittsburgh"
   },
   {
     "unitid":215442,
     "name":"Point Park University",
     "state":"PA",
-    "city":"Villanova"
+    "city":"Pittsburgh"
   },
   {
     "unitid":217402,
     "name":"Providence College",
-    "state":"SC",
-    "city":"Newberry"
+    "state":"RI",
+    "city":"Providence"
   },
   {
     "unitid":218520,
     "name":"Piedmont Technical College",
-    "state":"SD",
-    "city":"Sioux Falls"
+    "state":"SC",
+    "city":"Greenwood"
   },
   {
     "unitid":218539,
     "name":"Presbyterian College",
-    "state":"SD",
-    "city":"Sisseton"
+    "state":"SC",
+    "city":"Clinton"
   },
   {
     "unitid":219125,
     "name":"Paul Mitchell the School-Rapid City",
-    "state":"TN",
-    "city":"Johnson City"
+    "state":"SD",
+    "city":"Rapid City"
   },
   {
     "unitid":219295,
     "name":"Presentation College",
-    "state":"TN",
-    "city":"Hohenwald"
+    "state":"SD",
+    "city":"Aberdeen"
   },
   {
     "unitid":219842,
     "name":"Pentecostal Theological Seminary",
     "state":"TN",
-    "city":"Morristown"
+    "city":"Cleveland"
   },
   {
     "unitid":220491,
     "name":"Paul Mitchell the School-Murfreesboro",
     "state":"TN",
-    "city":"Knoxville"
+    "city":"Murfreesboro"
   },
   {
     "unitid":221643,
     "name":"Pellissippi State Community College",
-    "state":"TX",
-    "city":"Clarendon"
+    "state":"TN",
+    "city":"Knoxville"
   },
   {
     "unitid":224156,
     "name":"Paul Mitchell the School-Dallas",
     "state":"TX",
-    "city":"Laredo"
+    "city":"Carrollton"
   },
   {
     "unitid":227386,
     "name":"Panola College",
     "state":"TX",
-    "city":"Tyler"
+    "city":"Carthage"
   },
   {
     "unitid":227401,
     "name":"Paris Junior College",
     "state":"TX",
-    "city":"Pasadena"
+    "city":"Paris"
   },
   {
     "unitid":227429,
     "name":"Paul Quinn College",
     "state":"TX",
-    "city":"Fort Worth"
+    "city":"Dallas"
   },
   {
     "unitid":227526,
     "name":"Prairie View A & M University",
     "state":"TX",
-    "city":"Tyler"
+    "city":"Prairie View"
   },
   {
     "unitid":230214,
     "name":"Paul Mitchell the School-Salt Lake City",
-    "state":"VA",
-    "city":"Ferrum"
+    "state":"UT",
+    "city":"Holladay"
   },
   {
     "unitid":231280,
     "name":"Paul Mitchell the School-Roanoke",
     "state":"VA",
-    "city":"Charlottesville"
+    "city":"Roanoke"
   },
   {
     "unitid":233019,
     "name":"Patrick & Henry Community College",
-    "state":"WA",
-    "city":"Vancouver"
+    "state":"VA",
+    "city":"Martinsville"
   },
   {
     "unitid":233037,
     "name":"Paul D Camp Community College",
-    "state":"WA",
-    "city":"Lakewood"
+    "state":"VA",
+    "city":"Franklin"
   },
   {
     "unitid":233116,
     "name":"Piedmont Virginia Community College",
-    "state":"WA",
-    "city":"Seattle"
+    "state":"VA",
+    "city":"Charlottesville"
   },
   {
     "unitid":234924,
     "name":"Paul Mitchell the School-Richland",
     "state":"WA",
-    "city":"Seattle"
+    "city":"Richland"
   },
   {
     "unitid":235237,
     "name":"Pierce College District",
-    "state":"WV",
-    "city":"Glen Dale"
+    "state":"WA",
+    "city":"Lakewood"
   },
   {
     "unitid":236212,
     "name":"Perry Technical Institute",
-    "state":"WV",
-    "city":"Morgantown"
+    "state":"WA",
+    "city":"Yakima"
   },
   {
     "unitid":236230,
     "name":"Pacific Lutheran University",
-    "state":"WV",
-    "city":"Parkersburg"
+    "state":"WA",
+    "city":"Tacoma"
   },
   {
     "unitid":236258,
     "name":"Peninsula College",
-    "state":"WV",
-    "city":"Parkersburg"
+    "state":"WA",
+    "city":"Port Angeles"
   },
   {
     "unitid":237701,
     "name":"Potomac State College of West Virginia University",
-    "state":"WI",
-    "city":"Wausau"
+    "state":"WV",
+    "city":"Keyser"
   },
   {
     "unitid":241395,
     "name":"Pontifical Catholic University of Puerto Rico-Arecibo",
     "state":"PR",
-    "city":"Gurabo"
+    "city":"Arecibo"
   },
   {
     "unitid":241410,
     "name":"Pontifical Catholic University of Puerto Rico-Ponce",
-    "state":"FM",
-    "city":"Pohnpei"
+    "state":"PR",
+    "city":"Ponce"
   },
   {
     "unitid":241766,
     "name":"Puerto Rico Conservatory of Music",
-    "state":"MA",
-    "city":"Canton"
+    "state":"PR",
+    "city":"San Juan"
   },
   {
     "unitid":243081,
     "name":"Ponce Health Sciences University",
-    "state":"TX",
-    "city":"San Antonio"
+    "state":"PR",
+    "city":"Ponce"
   },
   {
     "unitid":243586,
     "name":"Pontifical Catholic University of Puerto Rico-Mayaguez",
-    "state":"LA",
-    "city":"Monroe"
+    "state":"PR",
+    "city":"Mayaguez"
   },
   {
     "unitid":243647,
     "name":"Palau Community College",
-    "state":"PA",
-    "city":"Chambersburg"
+    "state":"PW",
+    "city":"Koror"
   },
   {
     "unitid":243780,
     "name":"Purdue University-Main Campus",
-    "state":"TN",
-    "city":"Nashville"
+    "state":"IN",
+    "city":"West Lafayette"
   },
   {
     "unitid":243823,
     "name":"Parker University",
-    "state":"IL",
-    "city":"Hillside"
+    "state":"TX",
+    "city":"Dallas"
   },
   {
     "unitid":245980,
     "name":"Ponca City Beauty College",
-    "state":"IL",
-    "city":"Oak Lawn"
-  },
-  {
-    "unitid":246354,
-    "name":"Palo Alto College",
-    "state":"PA",
-    "city":"Mount Braddock"
-  },
-  {
-    "unitid":248660,
-    "name":"Paul Mitchell the School-Knoxville",
     "state":"OK",
     "city":"Ponca City"
   },
   {
+    "unitid":246354,
+    "name":"Palo Alto College",
+    "state":"TX",
+    "city":"San Antonio"
+  },
+  {
+    "unitid":248660,
+    "name":"Paul Mitchell the School-Knoxville",
+    "state":"TN",
+    "city":"Knoxville"
+  },
+  {
     "unitid":249238,
     "name":"Paul Mitchell the School-Houston",
-    "state":"GA",
-    "city":"Sandy Springs"
+    "state":"TX",
+    "city":"Houston"
   },
   {
     "unitid":260691,
     "name":"Pima Medical Institute-Mesa",
-    "state":"FL",
-    "city":"Deerfield Beach"
+    "state":"AZ",
+    "city":"Mesa"
   },
   {
     "unitid":260789,
     "name":"Platt College-Los Angeles",
-    "state":"LA",
-    "city":"Monroe"
+    "state":"CA",
+    "city":"Alhambra"
   },
   {
     "unitid":260813,
     "name":"Platt College-Aurora",
-    "state":"IL",
-    "city":"Lisle"
+    "state":"CO",
+    "city":"Greenwood Village"
   },
   {
     "unitid":260929,
     "name":"Paul Mitchell the School-Boise",
-    "state":"PA",
-    "city":"Williamsport"
+    "state":"ID",
+    "city":"Boise"
   },
   {
     "unitid":261773,
     "name":"Pike-Lincoln Technical Center",
-    "state":"CA",
-    "city":"Livermore"
+    "state":"MO",
+    "city":"Eolia"
   },
   {
     "unitid":364016,
     "name":"Paradise Valley Community College",
-    "state":"IL",
-    "city":"Springfield"
+    "state":"AZ",
+    "city":"Phoenix"
   },
   {
     "unitid":364627,
     "name":"Pioneer Technology Center",
-    "state":"PA",
-    "city":"Canonsburg"
+    "state":"OK",
+    "city":"Ponca City"
   },
   {
     "unitid":364636,
     "name":"Portage Lakes Career Center",
-    "state":"TN",
-    "city":"Clarksville"
+    "state":"OH",
+    "city":"Uniontown"
   },
   {
     "unitid":365125,
     "name":"Palomar Institute of Cosmetology",
     "state":"CA",
-    "city":"Tarzana"
+    "city":"San Marcos"
   },
   {
     "unitid":366252,
     "name":"Pennsylvania College of Technology",
-    "state":"CA",
-    "city":"Downey"
+    "state":"PA",
+    "city":"Williamsport"
   },
   {
     "unitid":368629,
     "name":"Pima Medical Institute-Seattle",
-    "state":"PA",
-    "city":"Philadelphia"
+    "state":"WA",
+    "city":"Seattle"
   },
   {
     "unitid":369783,
     "name":"PCI Health Training Center",
     "state":"TX",
-    "city":"Eagle Pass"
+    "city":"Dallas"
   },
   {
     "unitid":372082,
     "name":"Pomona Unified School District Adult and Career Education",
-    "state":"WV",
-    "city":"Beckley"
+    "state":"CA",
+    "city":"Pomona"
   },
   {
     "unitid":373216,
     "name":"Pivot Point Academy",
-    "state":"FL",
-    "city":"Clearwater"
+    "state":"IL",
+    "city":"Bloomingdale"
   },
   {
     "unitid":378576,
     "name":"Pacific College of Health and Science",
-    "state":"FL",
-    "city":"Pompano Beach"
+    "state":"CA",
+    "city":"San Diego"
   },
   {
     "unitid":380438,
     "name":"Provo College",
-    "state":"CA",
-    "city":"Westminster"
+    "state":"UT",
+    "city":"Provo"
   },
   {
     "unitid":381459,
     "name":"Phoenix Seminary",
-    "state":"CA",
-    "city":"San Bernardino"
+    "state":"AZ",
+    "city":"Scottsdale"
   },
   {
     "unitid":390905,
     "name":"Polaris Career Center",
     "state":"OH",
-    "city":"Chillicothe"
+    "city":"Middleburg Heights"
   },
   {
     "unitid":391005,
     "name":"P&A Scholars Beauty School",
-    "state":"OH",
-    "city":"Shelby"
+    "state":"MI",
+    "city":"Detroit"
   },
   {
     "unitid":404912,
     "name":"Pima Medical Institute-Denver",
-    "state":"NY",
-    "city":"Rochester"
+    "state":"CO",
+    "city":"Denver"
   },
   {
     "unitid":407513,
     "name":"Pickaway Ross Joint Vocational School District",
-    "state":"NY",
-    "city":"Jamaica"
+    "state":"OH",
+    "city":"Chillicothe"
   },
   {
     "unitid":407522,
     "name":"Pioneer Career and Technology Center",
-    "state":"CA",
-    "city":"Irwindale"
+    "state":"OH",
+    "city":"Shelby"
   },
   {
     "unitid":407610,
     "name":"Pacific Bible College",
-    "state":"CA",
-    "city":"Baldwin Park"
+    "state":"OR",
+    "city":"Medford"
   },
   {
     "unitid":408066,
@@ -1232,26 +1232,26 @@
   {
     "unitid":408163,
     "name":"Pinnacle Institute of Cosmetology",
-    "state":"MN",
-    "city":"Hastings"
+    "state":"NC",
+    "city":"Mooresville"
   },
   {
     "unitid":409193,
     "name":"Professional Technical Institution",
-    "state":"MO",
-    "city":"Saint Robert"
+    "state":"PR",
+    "city":"Bayamon"
   },
   {
     "unitid":409537,
     "name":"Pike County Joint Vocational School District",
-    "state":"PA",
-    "city":"Philadelphia"
+    "state":"OH",
+    "city":"Piketon"
   },
   {
     "unitid":414595,
     "name":"Pacific College of Health and Science",
-    "state":"PA",
-    "city":"York"
+    "state":"NY",
+    "city":"New York"
   },
   {
     "unitid":414911,
@@ -1262,650 +1262,650 @@
   {
     "unitid":414966,
     "name":"Phillips Theological Seminary",
-    "state":"PA",
-    "city":"Ford City"
+    "state":"OK",
+    "city":"Tulsa"
   },
   {
     "unitid":416458,
     "name":"Premiere Career College",
-    "state":"PA",
-    "city":"Indiana"
+    "state":"CA",
+    "city":"Irwindale"
   },
   {
     "unitid":417008,
     "name":"Paul Mitchell the School-Huntsville",
-    "state":"PA",
-    "city":"Hazle TWP."
+    "state":"AL",
+    "city":"Madison"
   },
   {
     "unitid":417840,
     "name":"Prism Career Institute-Philadelphia",
-    "state":"TX",
-    "city":"San Angelo"
+    "state":"PA",
+    "city":"Philadelphia"
   },
   {
     "unitid":418199,
     "name":"Penta County Joint Vocational School",
-    "state":"ME",
-    "city":"Wells"
+    "state":"OH",
+    "city":"Perrysburg"
   },
   {
     "unitid":418913,
     "name":"Pipo Academy of Hair Design",
-    "state":"NY",
-    "city":"New York"
+    "state":"TX",
+    "city":"El Paso"
   },
   {
     "unitid":419420,
     "name":"Putnam Career and Technical Center",
-    "state":"TX",
-    "city":"Houston"
+    "state":"WV",
+    "city":"Eleanor"
   },
   {
     "unitid":420130,
     "name":"Prism Career Institute-Cherry Hill",
-    "state":"NY",
-    "city":"New York"
+    "state":"NJ",
+    "city":"Cherry Hill"
   },
   {
     "unitid":421610,
     "name":"Paul Mitchell the School-St. George",
-    "state":"NY",
-    "city":"Ilion"
+    "state":"UT",
+    "city":"Saint George"
   },
   {
     "unitid":422695,
     "name":"Pacific College",
     "state":"CA",
-    "city":"Ontario"
+    "city":"Costa Mesa"
   },
   {
     "unitid":430403,
     "name":"Prism Career Institute-West Atlantic City",
-    "state":"PR",
-    "city":"Carolina"
+    "state":"NJ",
+    "city":"West  Atlantic City"
   },
   {
     "unitid":430582,
     "name":"Praxis Institute",
-    "state":"LA",
-    "city":"Shreveport"
+    "state":"FL",
+    "city":"Miami"
   },
   {
     "unitid":432384,
     "name":"Platt College-Ontario",
-    "state":"IN",
-    "city":"Fort Wayne"
+    "state":"CA",
+    "city":"Ontario"
   },
   {
     "unitid":434140,
     "name":"Pima Medical Institute-Chula Vista",
-    "state":"WA",
-    "city":"Bothell"
+    "state":"CA",
+    "city":"Chula Vista"
   },
   {
     "unitid":434283,
     "name":"Pathway Vocational Academy",
-    "state":"FL",
-    "city":"Fort Lauderdale"
+    "state":"TX",
+    "city":"Beaumont"
   },
   {
     "unitid":437750,
     "name":"Professional Golfers Career College",
-    "state":"TX",
-    "city":"Houston"
+    "state":"CA",
+    "city":"Temecula"
   },
   {
     "unitid":439862,
     "name":"Pacific Islands University",
-    "state":"CO",
-    "city":"Colorado Springs"
+    "state":"GU",
+    "city":"Mangilao"
   },
   {
     "unitid":439871,
     "name":"PCI College",
     "state":"CA",
-    "city":"Costa Mesa"
+    "city":"Cerritos"
   },
   {
     "unitid":440794,
     "name":"Pillar College",
-    "state":"CA",
-    "city":"Riverside"
+    "state":"NJ",
+    "city":"Newark"
   },
   {
     "unitid":442134,
     "name":"Pima Medical Institute-Colorado Springs",
-    "state":"PR",
-    "city":"Bayamon"
+    "state":"CO",
+    "city":"Colorado Springs"
   },
   {
     "unitid":442240,
     "name":"Paul Mitchell the School-Costa Mesa",
     "state":"CA",
-    "city":"Folsom"
+    "city":"Costa Mesa"
   },
   {
     "unitid":442356,
     "name":"Pennsylvania College of Health Sciences",
-    "state":"PR",
-    "city":"Caguas"
+    "state":"PA",
+    "city":"Lancaster"
   },
   {
     "unitid":442842,
     "name":"Pacific College of Health and Science",
-    "state":"NC",
-    "city":"Gastonia"
+    "state":"IL",
+    "city":"Chicago"
   },
   {
     "unitid":443216,
     "name":"P C Age-Jersey City",
-    "state":"UT",
-    "city":"Salt Lake City"
+    "state":"NJ",
+    "city":"Jersey City"
   },
   {
     "unitid":443225,
     "name":"PC AGE-Metropark",
-    "state":"SC",
-    "city":"Columbia"
+    "state":"NJ",
+    "city":"Iselin"
   },
   {
     "unitid":443492,
     "name":"Pierpont Community and Technical College",
-    "state":"TN",
-    "city":"Nashville"
+    "state":"WV",
+    "city":"Fairmont"
   },
   {
     "unitid":443641,
     "name":"Paul Mitchell the School-Rhode Island",
-    "state":"AR",
-    "city":"Conway"
+    "state":"RI",
+    "city":"Cranston"
   },
   {
     "unitid":443979,
     "name":"PCI Academy-Plymouth",
-    "state":"SC",
-    "city":"Spartanburg"
+    "state":"MN",
+    "city":"Plymouth"
   },
   {
     "unitid":444486,
     "name":"Paul Mitchell the School-Gastonia",
-    "state":"NJ",
-    "city":"Union"
+    "state":"NC",
+    "city":"Gastonia"
   },
   {
     "unitid":444811,
     "name":"PITC Institute",
-    "state":"AZ",
-    "city":"Avondale"
+    "state":"PA",
+    "city":"Wyncote"
   },
   {
     "unitid":445212,
     "name":"Paul Mitchell the School-Orlando",
-    "state":"CA",
-    "city":"West Covina"
+    "state":"FL",
+    "city":"Oviedo"
   },
   {
     "unitid":445230,
     "name":"Pima Medical Institute-Las Vegas",
-    "state":"GA",
-    "city":"Lawrenceville"
-  },
-  {
-    "unitid":446288,
-    "name":"Paul Mitchell the School-Great Lakes",
-    "state":"OH",
-    "city":"Brecksville"
-  },
-  {
-    "unitid":447698,
-    "name":"Phoenix Institute of Herbal Medicine & Acupuncture",
-    "state":"FL",
-    "city":"Pensacola"
-  },
-  {
-    "unitid":447722,
-    "name":"Palladium Technical Academy Inc",
-    "state":"LA",
-    "city":"Baton Rouge"
-  },
-  {
-    "unitid":448220,
-    "name":"Paul Mitchell the School-Logan",
-    "state":"OH",
-    "city":"Cincinnati"
-  },
-  {
-    "unitid":449074,
-    "name":"Pima Medical Institute-Renton",
-    "state":"CA",
-    "city":"Paramount"
-  },
-  {
-    "unitid":449490,
-    "name":"Palm Beach Academy of Health & Beauty",
-    "state":"MI",
-    "city":"Battle Creek"
-  },
-  {
-    "unitid":449533,
-    "name":"Pensacola School of Massage Therapy & Health Careers",
-    "state":"MS",
-    "city":"Corinth"
-  },
-  {
-    "unitid":449959,
-    "name":"Paul Mitchell the School-Tampa",
-    "state":"WI",
-    "city":"Wauwatosa"
-  },
-  {
-    "unitid":449968,
-    "name":"Paul Mitchell the School-San Diego",
-    "state":"TX",
-    "city":"Bastrop"
-  },
-  {
-    "unitid":449977,
-    "name":"Paul Mitchell the School-Michigan",
-    "state":"TX",
-    "city":"Webster"
-  },
-  {
-    "unitid":449986,
-    "name":"Paul Mitchell the School-Sherman Oaks",
-    "state":"LA",
-    "city":"Shreveport"
-  },
-  {
-    "unitid":449995,
-    "name":"Paul Mitchell the School-Tysons Corner",
-    "state":"TN",
-    "city":"Johnson City"
-  },
-  {
-    "unitid":451121,
-    "name":"Paul Mitchell the School-Miami",
-    "state":"CA",
-    "city":"Pasadena"
-  },
-  {
-    "unitid":451565,
-    "name":"Paul Mitchell the School-Austin",
-    "state":"NC",
-    "city":"Chapel Hill"
-  },
-  {
-    "unitid":451714,
-    "name":"Paul Mitchell the School-San Antonio",
-    "state":"NJ",
-    "city":"Piscataway"
-  },
-  {
-    "unitid":451927,
-    "name":"Patrick Henry College",
-    "state":"TX",
-    "city":"Dallas"
-  },
-  {
-    "unitid":454607,
-    "name":"Paul Mitchell the School-Esani",
-    "state":"NC",
-    "city":"Asheville"
-  },
-  {
-    "unitid":454652,
-    "name":"Paul Mitchell the School-Birmingham",
-    "state":"OK",
-    "city":"Oklahoma City"
-  },
-  {
-    "unitid":454768,
-    "name":"Paul Mitchell the School-Pasadena",
-    "state":"VT",
-    "city":"South Burlington"
-  },
-  {
-    "unitid":454926,
-    "name":"Paul Mitchell the School-Atlanta",
-    "state":"FL",
-    "city":"Orlando"
-  },
-  {
-    "unitid":454944,
-    "name":"Paul Mitchell the School-Rexburg",
-    "state":"MI",
-    "city":"Battle Creek"
-  },
-  {
-    "unitid":455080,
-    "name":"Paul Mitchell the School-Springfield",
-    "state":"TX",
-    "city":"Corpus Christi"
-  },
-  {
-    "unitid":455284,
-    "name":"Paul Mitchell the School-Cincinnati",
-    "state":"CA",
-    "city":"Santa Fe Springs"
-  },
-  {
-    "unitid":455406,
-    "name":"Pacific Northwest University of Health Sciences",
-    "state":"CT",
-    "city":"Guilford"
-  },
-  {
-    "unitid":455761,
-    "name":"Paul Mitchell the School-Sacramento",
-    "state":"GA",
-    "city":"Atlanta"
-  },
-  {
-    "unitid":455770,
-    "name":"Providence Christian College",
-    "state":"GA",
-    "city":"Lawrenceville"
-  },
-  {
-    "unitid":455813,
-    "name":"Pontifical John Paul II Institute for Studies on Marriage and Family",
-    "state":"IL",
-    "city":"Hoffman Estates"
-  },
-  {
-    "unitid":456029,
-    "name":"Paul Mitchell the School-Memphis",
-    "state":"NJ",
-    "city":"East Orange"
-  },
-  {
-    "unitid":456038,
-    "name":"Pima Medical Institute-East Valley",
-    "state":"NM",
-    "city":"Albuquerque"
-  },
-  {
-    "unitid":456065,
-    "name":"Paul Mitchell the School-Cleveland",
-    "state":"NV",
-    "city":"Reno"
-  },
-  {
-    "unitid":456074,
-    "name":"Paul Mitchell the School-Columbus",
-    "state":"NY",
-    "city":"Brooklyn"
-  },
-  {
-    "unitid":456481,
-    "name":"Polytechnic University of Puerto Rico-Miami",
-    "state":"PA",
-    "city":"Somerset"
-  },
-  {
-    "unitid":456490,
-    "name":"Polytechnic University of Puerto Rico-Orlando",
-    "state":"PA",
-    "city":"Allentown"
-  },
-  {
-    "unitid":456825,
-    "name":"Paul Mitchell the School-Baton Rouge",
-    "state":"VA",
-    "city":"Hampton"
-  },
-  {
-    "unitid":457323,
-    "name":"Paul Mitchell the School-Temecula",
-    "state":"MS",
-    "city":"Jackson"
-  },
-  {
-    "unitid":457466,
-    "name":"Profile Institute of Barber-Styling",
-    "state":"CA",
-    "city":"Fremont"
-  },
-  {
-    "unitid":457484,
-    "name":"Pacific Rim Christian University",
-    "state":"CA",
-    "city":"Pleasant Hill"
-  },
-  {
-    "unitid":457493,
-    "name":"Paul Mitchell the School-Twin Falls",
-    "state":"VA",
-    "city":"Glen Allen"
-  },
-  {
-    "unitid":457545,
-    "name":"Paul Mitchell the School-Normal",
-    "state":"CO",
-    "city":"Colorado Springs"
-  },
-  {
-    "unitid":457776,
-    "name":"Paul Mitchell the School-Albuquerque",
-    "state":"UT",
-    "city":"Payson"
-  },
-  {
-    "unitid":457855,
-    "name":"Paul Mitchell the School-NYC",
-    "state":"NV",
-    "city":"Henderson"
-  },
-  {
-    "unitid":457925,
-    "name":"Portland Actors Conservatory",
-    "state":"TX",
-    "city":"San Antonio"
-  },
-  {
-    "unitid":458274,
-    "name":"Paul Mitchell the School-Chicago",
-    "state":"VA",
-    "city":"Fairfax"
-  },
-  {
-    "unitid":459116,
-    "name":"Paul Mitchell the School-Phoenix",
-    "state":"AR",
-    "city":"Sherwood"
-  },
-  {
-    "unitid":459170,
-    "name":"Paul Mitchell the School-Modesto",
-    "state":"MO",
-    "city":"St. Charles"
-  },
-  {
-    "unitid":459198,
-    "name":"Paul Mitchell the School-Fresno",
-    "state":"AZ",
-    "city":"Phoenix"
-  },
-  {
-    "unitid":459231,
-    "name":"Paul Mitchell the School-East Bay",
-    "state":"OH",
-    "city":"Cleveland"
-  },
-  {
-    "unitid":459286,
-    "name":"Paul Mitchell the School-Colorado Springs",
-    "state":"CA",
-    "city":"Oakland"
-  },
-  {
-    "unitid":459301,
-    "name":"Paul Mitchell the School-Delaware",
-    "state":"PA",
-    "city":"Pittsburgh"
-  },
-  {
-    "unitid":459514,
-    "name":"Peloton College",
-    "state":"HI",
-    "city":"Kailua Kona"
-  },
-  {
-    "unitid":459578,
-    "name":"Paul Mitchell the School-Milwaukee",
-    "state":"MO",
-    "city":"St. Louis"
-  },
-  {
-    "unitid":460136,
-    "name":"Pima Medical Institute-Houston",
-    "state":"KY",
-    "city":"Bowling Green"
-  },
-  {
-    "unitid":460914,
-    "name":"Penrose Academy",
-    "state":"ME",
-    "city":"Portland"
-  },
-  {
-    "unitid":461421,
-    "name":"Paul Mitchell the School-St Louis",
-    "state":"TX",
-    "city":"Victoria"
-  },
-  {
-    "unitid":461591,
-    "name":"Paul Mitchell the School-Honolulu",
-    "state":"CA",
-    "city":"Temecula"
-  },
-  {
-    "unitid":461689,
-    "name":"Pima Medical Institute-Aurora",
     "state":"NV",
     "city":"Las Vegas"
   },
   {
-    "unitid":461713,
-    "name":"Pure Aesthetics Natural Skincare School",
-    "state":"NY",
-    "city":"white plains"
+    "unitid":446288,
+    "name":"Paul Mitchell the School-Great Lakes",
+    "state":"MI",
+    "city":"Port Huron"
   },
   {
-    "unitid":461917,
-    "name":"Paul Mitchell the School-Indianapolis",
+    "unitid":447698,
+    "name":"Phoenix Institute of Herbal Medicine & Acupuncture",
+    "state":"AZ",
+    "city":"Phoenix"
+  },
+  {
+    "unitid":447722,
+    "name":"Palladium Technical Academy Inc",
+    "state":"CA",
+    "city":"Temple City"
+  },
+  {
+    "unitid":448220,
+    "name":"Paul Mitchell the School-Logan",
     "state":"UT",
-    "city":"Tooele"
+    "city":"Logan"
   },
   {
-    "unitid":461944,
-    "name":"Protege Academy",
-    "state":"IN",
-    "city":"Indianapolis"
+    "unitid":449074,
+    "name":"Pima Medical Institute-Renton",
+    "state":"WA",
+    "city":"Renton"
   },
   {
-    "unitid":462008,
-    "name":"Paul Mitchell the School-Las Vegas",
-    "state":"WV",
-    "city":"Morgantown"
+    "unitid":449490,
+    "name":"Palm Beach Academy of Health & Beauty",
+    "state":"FL",
+    "city":"Lake Park"
   },
   {
-    "unitid":462071,
-    "name":"Paul Mitchell the School-Spokane",
+    "unitid":449533,
+    "name":"Pensacola School of Massage Therapy & Health Careers",
+    "state":"FL",
+    "city":"Pensacola"
+  },
+  {
+    "unitid":449959,
+    "name":"Paul Mitchell the School-Tampa",
+    "state":"FL",
+    "city":"Tampa"
+  },
+  {
+    "unitid":449968,
+    "name":"Paul Mitchell the School-San Diego",
+    "state":"CA",
+    "city":"San Diego"
+  },
+  {
+    "unitid":449977,
+    "name":"Paul Mitchell the School-Michigan",
+    "state":"MI",
+    "city":"Sterling Heights"
+  },
+  {
+    "unitid":449986,
+    "name":"Paul Mitchell the School-Sherman Oaks",
+    "state":"CA",
+    "city":"Sherman Oaks"
+  },
+  {
+    "unitid":449995,
+    "name":"Paul Mitchell the School-Tysons Corner",
+    "state":"VA",
+    "city":"McLean"
+  },
+  {
+    "unitid":451121,
+    "name":"Paul Mitchell the School-Miami",
+    "state":"FL",
+    "city":"Miami"
+  },
+  {
+    "unitid":451565,
+    "name":"Paul Mitchell the School-Austin",
+    "state":"TX",
+    "city":"Austin"
+  },
+  {
+    "unitid":451714,
+    "name":"Paul Mitchell the School-San Antonio",
     "state":"TX",
     "city":"San Antonio"
   },
   {
+    "unitid":451927,
+    "name":"Patrick Henry College",
+    "state":"VA",
+    "city":"Purcellville"
+  },
+  {
+    "unitid":454607,
+    "name":"Paul Mitchell the School-Esani",
+    "state":"GA",
+    "city":"Roswell"
+  },
+  {
+    "unitid":454652,
+    "name":"Paul Mitchell the School-Birmingham",
+    "state":"AL",
+    "city":"Hoover"
+  },
+  {
+    "unitid":454768,
+    "name":"Paul Mitchell the School-Pasadena",
+    "state":"CA",
+    "city":"Pasadena"
+  },
+  {
+    "unitid":454926,
+    "name":"Paul Mitchell the School-Atlanta",
+    "state":"GA",
+    "city":"Atlanta"
+  },
+  {
+    "unitid":454944,
+    "name":"Paul Mitchell the School-Rexburg",
+    "state":"ID",
+    "city":"Rexburg"
+  },
+  {
+    "unitid":455080,
+    "name":"Paul Mitchell the School-Springfield",
+    "state":"MO",
+    "city":"Springfield"
+  },
+  {
+    "unitid":455284,
+    "name":"Paul Mitchell the School-Cincinnati",
+    "state":"OH",
+    "city":"Cincinnati"
+  },
+  {
+    "unitid":455406,
+    "name":"Pacific Northwest University of Health Sciences",
+    "state":"WA",
+    "city":"Yakima"
+  },
+  {
+    "unitid":455761,
+    "name":"Paul Mitchell the School-Sacramento",
+    "state":"CA",
+    "city":"Sacramento"
+  },
+  {
+    "unitid":455770,
+    "name":"Providence Christian College",
+    "state":"CA",
+    "city":"Pasadena"
+  },
+  {
+    "unitid":455813,
+    "name":"Pontifical John Paul II Institute for Studies on Marriage and Family",
+    "state":"DC",
+    "city":"Washington"
+  },
+  {
+    "unitid":456029,
+    "name":"Paul Mitchell the School-Memphis",
+    "state":"TN",
+    "city":"Memphis"
+  },
+  {
+    "unitid":456038,
+    "name":"Pima Medical Institute-East Valley",
+    "state":"AZ",
+    "city":"Mesa"
+  },
+  {
+    "unitid":456065,
+    "name":"Paul Mitchell the School-Cleveland",
+    "state":"OH",
+    "city":"Twinsburg"
+  },
+  {
+    "unitid":456074,
+    "name":"Paul Mitchell the School-Columbus",
+    "state":"OH",
+    "city":"Columbus"
+  },
+  {
+    "unitid":456481,
+    "name":"Polytechnic University of Puerto Rico-Miami",
+    "state":"FL",
+    "city":"Miami"
+  },
+  {
+    "unitid":456490,
+    "name":"Polytechnic University of Puerto Rico-Orlando",
+    "state":"FL",
+    "city":"Orlando"
+  },
+  {
+    "unitid":456825,
+    "name":"Paul Mitchell the School-Baton Rouge",
+    "state":"LA",
+    "city":"Baton Rouge"
+  },
+  {
+    "unitid":457323,
+    "name":"Paul Mitchell the School-Temecula",
+    "state":"CA",
+    "city":"Temecula"
+  },
+  {
+    "unitid":457466,
+    "name":"Profile Institute of Barber-Styling",
+    "state":"GA",
+    "city":"Atlanta"
+  },
+  {
+    "unitid":457484,
+    "name":"Pacific Rim Christian University",
+    "state":"HI",
+    "city":"Honolulu"
+  },
+  {
+    "unitid":457493,
+    "name":"Paul Mitchell the School-Twin Falls",
+    "state":"ID",
+    "city":"TWIN FALLS"
+  },
+  {
+    "unitid":457545,
+    "name":"Paul Mitchell the School-Normal",
+    "state":"IL",
+    "city":"Normal"
+  },
+  {
+    "unitid":457776,
+    "name":"Paul Mitchell the School-Albuquerque",
+    "state":"NM",
+    "city":"Albuquerque"
+  },
+  {
+    "unitid":457855,
+    "name":"Paul Mitchell the School-NYC",
+    "state":"NY",
+    "city":"Staten Island"
+  },
+  {
+    "unitid":457925,
+    "name":"Portland Actors Conservatory",
+    "state":"OR",
+    "city":"Portland"
+  },
+  {
+    "unitid":458274,
+    "name":"Paul Mitchell the School-Chicago",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":459116,
+    "name":"Paul Mitchell the School-Phoenix",
+    "state":"AZ",
+    "city":"Phoenix"
+  },
+  {
+    "unitid":459170,
+    "name":"Paul Mitchell the School-Modesto",
+    "state":"CA",
+    "city":"Modesto"
+  },
+  {
+    "unitid":459198,
+    "name":"Paul Mitchell the School-Fresno",
+    "state":"CA",
+    "city":"Fresno"
+  },
+  {
+    "unitid":459231,
+    "name":"Paul Mitchell the School-East Bay",
+    "state":"CA",
+    "city":"Pleasant Hill"
+  },
+  {
+    "unitid":459286,
+    "name":"Paul Mitchell the School-Colorado Springs",
+    "state":"CO",
+    "city":"Colorado Springs"
+  },
+  {
+    "unitid":459301,
+    "name":"Paul Mitchell the School-Delaware",
+    "state":"DE",
+    "city":"Newark"
+  },
+  {
+    "unitid":459514,
+    "name":"Peloton College",
+    "state":"TX",
+    "city":"Dallas"
+  },
+  {
+    "unitid":459578,
+    "name":"Paul Mitchell the School-Milwaukee",
+    "state":"WI",
+    "city":"Wauwatosa"
+  },
+  {
+    "unitid":460136,
+    "name":"Pima Medical Institute-Houston",
+    "state":"TX",
+    "city":"Houston"
+  },
+  {
+    "unitid":460914,
+    "name":"Penrose Academy",
+    "state":"AZ",
+    "city":"Scottsdale"
+  },
+  {
+    "unitid":461421,
+    "name":"Paul Mitchell the School-St Louis",
+    "state":"MO",
+    "city":"St. Louis"
+  },
+  {
+    "unitid":461591,
+    "name":"Paul Mitchell the School-Honolulu",
+    "state":"HI",
+    "city":"Honolulu"
+  },
+  {
+    "unitid":461689,
+    "name":"Pima Medical Institute-Aurora",
+    "state":"CO",
+    "city":"Aurora"
+  },
+  {
+    "unitid":461713,
+    "name":"Pure Aesthetics Natural Skincare School",
+    "state":"AZ",
+    "city":"Tucson"
+  },
+  {
+    "unitid":461917,
+    "name":"Paul Mitchell the School-Indianapolis",
+    "state":"IN",
+    "city":"Indianapolis"
+  },
+  {
+    "unitid":461944,
+    "name":"Protege Academy",
+    "state":"MI",
+    "city":"East Lansing"
+  },
+  {
+    "unitid":462008,
+    "name":"Paul Mitchell the School-Las Vegas",
+    "state":"NV",
+    "city":"Las Vegas"
+  },
+  {
+    "unitid":462071,
+    "name":"Paul Mitchell the School-Spokane",
+    "state":"WA",
+    "city":"Spokane Valley"
+  },
+  {
     "unitid":467863,
     "name":"Paul Mitchell the School-Columbia",
-    "state":"TX",
-    "city":"Pharr"
+    "state":"SC",
+    "city":"West Columbia"
   },
   {
     "unitid":467872,
     "name":"Paul Mitchell the School-Charleston",
-    "state":"MA",
-    "city":"Lunenburg"
+    "state":"SC",
+    "city":"North Charleston"
   },
   {
     "unitid":468893,
     "name":"Paul Mitchell the School-New Orleans",
-    "state":"ID",
-    "city":"Boise"
+    "state":"LA",
+    "city":"Metairie"
   },
   {
     "unitid":475486,
     "name":"Paul Mitchell the School-Arlington",
     "state":"TX",
-    "city":"San Antonio"
+    "city":"Arlington"
   },
   {
     "unitid":475547,
     "name":"Paul Mitchell the School-Fort Myers",
-    "state":"OR",
-    "city":"Portland"
+    "state":"FL",
+    "city":"Fort Myers"
   },
   {
     "unitid":475556,
     "name":"Paul Mitchell the School-Raleigh",
-    "state":"CA",
-    "city":"Riverside"
+    "state":"NC",
+    "city":"Raleigh"
   },
   {
     "unitid":476841,
     "name":"Paul Mitchell the School-Reno",
-    "state":"CA",
-    "city":"Riverside"
+    "state":"NV",
+    "city":"Reno"
   },
   {
     "unitid":476984,
     "name":"Paul Mitchell the School-Overland Park",
-    "state":"TN",
-    "city":"Nashville"
+    "state":"KS",
+    "city":"Overland Park"
   },
   {
     "unitid":479956,
     "name":"Pennsylvania State University-World Campus",
-    "state":"MO",
-    "city":"Webb City"
+    "state":"PA",
+    "city":"University Park"
   },
   {
     "unitid":480204,
     "name":"Platt College-Riverside",
-    "state":"TX",
-    "city":"San Antonio"
+    "state":"CA",
+    "city":"Riverside"
   },
   {
     "unitid":480930,
     "name":"Paul Mitchell the School-Woodbridge",
-    "state":"NV",
-    "city":"Henderson"
+    "state":"VA",
+    "city":"Woodbridge"
   },
   {
     "unitid":481368,
     "name":"Prestige Health & Beauty Sciences Academy",
-    "state":"CA",
-    "city":"Pasadena"
+    "state":"FL",
+    "city":"Hallandale Beach"
   },
   {
     "unitid":482176,
     "name":"Paul Mitchell the School-Denver",
-    "state":"NY",
-    "city":"Schenectady"
+    "state":"CO",
+    "city":"Lakewood"
   },
   {
     "unitid":483328,
     "name":"Paul Mitchell the School-Lombard",
-    "state":"FL",
-    "city":"Doral"
+    "state":"IL",
+    "city":"Lombard"
   },
   {
     "unitid":483337,
     "name":"Paul Mitchell the School-Greenville",
-    "state":"FL",
-    "city":"Tampa"
+    "state":"SC",
+    "city":"Greenville"
   },
   {
     "unitid":483823,
@@ -1916,355 +1916,355 @@
   {
     "unitid":483896,
     "name":"Parisian Spa Institute",
-    "state":"NY",
-    "city":"Brooklyn"
+    "state":"FL",
+    "city":"Jacksonville"
   },
   {
     "unitid":484011,
     "name":"Paul Mitchell the School-Schenectady",
-    "state":"KY",
-    "city":"Louisville"
+    "state":"NY",
+    "city":"Schenectady"
   },
   {
     "unitid":484093,
     "name":"Paul Mitchell The School-Farmington Hills",
-    "state":"IL",
-    "city":"Chicago"
+    "state":"MI",
+    "city":"Farmington Hills"
   },
   {
     "unitid":484109,
     "name":"Paul Mitchell the School-Merrillville",
-    "state":"FL",
-    "city":"Miramar"
+    "state":"IN",
+    "city":"Merrillville"
   },
   {
     "unitid":484190,
     "name":"Park Place Premier Barber School",
-    "state":"NY",
-    "city":"Brooklyn"
+    "state":"LA",
+    "city":"New Orleans"
   },
   {
     "unitid":485032,
     "name":"Paul Mitchell the School-Toledo",
-    "state":"NY",
-    "city":"Oakdale"
+    "state":"OH",
+    "city":"Sylvania"
   },
   {
     "unitid":486433,
     "name":"Presidio Graduate School",
-    "state":"NY",
-    "city":"Brooklyn"
+    "state":"CA",
+    "city":"San Francisco"
   },
   {
     "unitid":486567,
     "name":"Paul Mitchell the School-Tulsa",
-    "state":"LA",
-    "city":"Houma"
+    "state":"OK",
+    "city":"Tulsa"
   },
   {
     "unitid":486576,
     "name":"PPG Technical College",
-    "state":"FL",
-    "city":"Homestead"
+    "state":"PR",
+    "city":"Caguas"
   },
   {
     "unitid":486813,
     "name":"Pima Medical Institute-El Paso",
-    "state":"WA",
-    "city":"Olympia"
+    "state":"TX",
+    "city":"El Paso"
   },
   {
     "unitid":486822,
     "name":"Pima Medical Institute-Phoenix",
-    "state":"FL",
-    "city":"Orlando"
+    "state":"AZ",
+    "city":"Phoenix"
   },
   {
     "unitid":486983,
     "name":"Paul Mitchell the School-Madison",
-    "state":"CA",
-    "city":"Roseville"
+    "state":"WI",
+    "city":"Madison"
   },
   {
     "unitid":487083,
     "name":"Protege Academy",
-    "state":"AR",
-    "city":"Fort Smith"
+    "state":"MI",
+    "city":"Mt. Pleasant"
   },
   {
     "unitid":488147,
     "name":"PiBerry Institute",
-    "state":"GA",
-    "city":"Cumming"
+    "state":"FL",
+    "city":"Homestead"
   },
   {
     "unitid":488369,
     "name":"Premier Barber Institute",
-    "state":"GA",
-    "city":"Lilburn"
+    "state":"PA",
+    "city":"Norristown"
   },
   {
     "unitid":488396,
     "name":"Phipps Academy of Barbering",
-    "state":"OH",
-    "city":"Ontario"
+    "state":"IL",
+    "city":"Richton Park"
   },
   {
     "unitid":488749,
     "name":"Paul Mitchell the School-Jessup",
-    "state":"OH",
-    "city":"Cincinnati"
+    "state":"MD",
+    "city":"Jessup"
   },
   {
     "unitid":488989,
     "name":"Paul Mitchell the School-Clear Lake",
-    "state":"FL",
-    "city":"Cutler Bay"
+    "state":"TX",
+    "city":"Webster"
   },
   {
     "unitid":488998,
     "name":"Paul Mitchell the School-Nampa",
-    "state":"NY",
-    "city":"Brooklyn"
+    "state":"ID",
+    "city":"Nampa"
   },
   {
     "unitid":489779,
     "name":"Purdue University Global",
-    "state":"WI",
-    "city":"Milwaukee"
+    "state":"IN",
+    "city":"West Lafayette"
   },
   {
     "unitid":489812,
     "name":"Pima Medical Institute-Dillon",
-    "state":"WI",
-    "city":"Kenosha"
+    "state":"MT",
+    "city":"Dillon"
   },
   {
     "unitid":490045,
     "name":"Presbyterian Theological Seminary in America",
     "state":"CA",
-    "city":"Clovis"
+    "city":"Santa Fe Springs"
   },
   {
     "unitid":490735,
     "name":"Peloton College",
-    "state":"AR",
-    "city":"Hot Springs"
+    "state":"TX",
+    "city":"Arlington"
   },
   {
     "unitid":490805,
     "name":"Purdue University Northwest",
-    "state":"MI",
-    "city":"Detroit"
+    "state":"IN",
+    "city":"Hammond"
   },
   {
     "unitid":490878,
     "name":"Platt College-Anaheim",
     "state":"CA",
-    "city":"Poway"
+    "city":"Anaheim"
   },
   {
     "unitid":491473,
     "name":"Polytech Adult Education",
-    "state":"NM",
-    "city":"Rio Rancho"
+    "state":"DE",
+    "city":"Woodside"
   },
   {
     "unitid":491534,
     "name":"Pets Playground Grooming School",
     "state":"FL",
-    "city":"Fort Myers"
+    "city":"Pompano Beach"
   },
   {
     "unitid":491853,
     "name":"Princess Institute of Beauty",
-    "state":"KS",
-    "city":"Topeka"
+    "state":"CA",
+    "city":"Reedley"
   },
   {
     "unitid":492315,
     "name":"Poway Adult School",
-    "state":"TX",
-    "city":"San Antonio"
+    "state":"CA",
+    "city":"Poway"
   },
   {
     "unitid":492449,
     "name":"Pima Medical Institute-San Marcos",
-    "state":"TX",
-    "city":"Beaumont"
+    "state":"CA",
+    "city":"San Marcos"
   },
   {
     "unitid":492704,
     "name":"Ponce Health Sciences University-Centro Universitario de San Juan",
-    "state":"NC",
-    "city":"Charlotte"
+    "state":"PR",
+    "city":"Santurce"
   },
   {
     "unitid":493488,
     "name":"Premiere International College",
-    "state":"TX",
-    "city":"Austin"
+    "state":"FL",
+    "city":"Fort Myers"
   },
   {
     "unitid":493576,
     "name":"PMCA Pittsburgh Multicultural Cosmetology Academy",
-    "state":"GA",
-    "city":"Macon"
+    "state":"PA",
+    "city":"Pittsburgh"
   },
   {
     "unitid":493628,
     "name":"Pro Beauty Academy",
-    "state":"OK",
-    "city":"Durant"
+    "state":"NJ",
+    "city":"Edison"
   },
   {
     "unitid":493673,
     "name":"Professional University Dr. Carlos J. Borrero Rios",
-    "state":"TX",
-    "city":"Laredo"
+    "state":"PR",
+    "city":"Hato Rey"
   },
   {
     "unitid":493691,
     "name":"Premier Academy of Cosmetology",
-    "state":"MI",
-    "city":"Southgate"
+    "state":"OK",
+    "city":"McAlester"
   },
   {
     "unitid":494010,
     "name":"Ponce Health Sciences University-St Louis",
-    "state":"CA",
-    "city":"Santa Maria"
+    "state":"MO",
+    "city":"St. Louis"
   },
   {
     "unitid":494588,
     "name":"Pima Medical Institute-San Antonio",
-    "state":"IL",
-    "city":"Evanston"
+    "state":"TX",
+    "city":"San Antonio"
   },
   {
     "unitid":494807,
     "name":"Ponce Health Sciences University-East",
-    "state":"DC",
-    "city":"Washington"
+    "state":"PR",
+    "city":"Ponce"
   },
   {
     "unitid":495077,
     "name":"Paul Mitchell the School-San Jose",
-    "state":"TX",
-    "city":"Austin"
+    "state":"CA",
+    "city":"San Jose"
   },
   {
     "unitid":495138,
     "name":"Professional Culinary Academy",
-    "state":"TN",
-    "city":"Chattanooga"
+    "state":"NY",
+    "city":"Buffalo"
   },
   {
     "unitid":495147,
     "name":"Pacific Northwest Christian College",
-    "state":"TX",
-    "city":"Brownsville"
+    "state":"WA",
+    "city":"Kennewick"
   },
   {
     "unitid":495244,
     "name":"Pearlands Innovative School of Beauty",
-    "state":"CA",
-    "city":"Bakersfield"
+    "state":"TX",
+    "city":"Pearland"
   },
   {
     "unitid":495262,
     "name":"Premiere Aesthetics Institute",
-    "state":"TX",
-    "city":"Lufkin"
+    "state":"OR",
+    "city":"Bend"
   },
   {
     "unitid":495350,
     "name":"Paul Mitchell the School-North Tahoe",
     "state":"CA",
-    "city":"Escondido"
+    "city":"Truckee"
   },
   {
     "unitid":495369,
     "name":"Paul Mitchell the School-Fort Lauderdale",
-    "state":"OK",
-    "city":"Stillwater"
+    "state":"FL",
+    "city":"Plantation"
   },
   {
     "unitid":495378,
     "name":"PCI Academy-Iowa City",
-    "state":"AR",
-    "city":"North Little Rock"
+    "state":"IA",
+    "city":"Iowa City"
   },
   {
     "unitid":495411,
     "name":"Paul Mitchell the School-Provo",
-    "state":"CA",
-    "city":"Oakland"
+    "state":"UT",
+    "city":"Provo"
   },
   {
     "unitid":495794,
     "name":"Paul Mitchell the School-Murfreesboro-Nashville",
-    "state":"IL",
-    "city":"Chicago"
+    "state":"TN",
+    "city":"Hendersonville"
   },
   {
     "unitid":495916,
     "name":"Pathways College",
-    "state":"MO",
-    "city":"Springfield"
+    "state":"Arizona",
+    "city":null
   },
   {
     "unitid":496283,
     "name":"Provo College-Idaho Falls Campus",
-    "state":"FL",
-    "city":"Gainesville"
+    "state":"ID",
+    "city":"Idaho Falls"
   },
   {
     "unitid":497471,
     "name":"Personal Touch Beauty and Barber College",
-    "state":"CA",
-    "city":"Los Angeles"
+    "state":"SC",
+    "city":"Kingstree"
   },
   {
     "unitid":498243,
     "name":"Pathways College-Arizona",
-    "state":"FL",
-    "city":"Pembroke Pines"
+    "state":"AZ",
+    "city":"Phoenix"
   },
   {
     "unitid":498289,
     "name":"Pontifex University",
-    "state":"FL",
-    "city":"Port St Lucie"
+    "state":"GA",
+    "city":"Atlanta"
   },
   {
     "unitid":498410,
     "name":"Premier Barber School",
-    "state":"FL",
-    "city":"Brandon"
+    "state":"TX",
+    "city":"Houston"
   },
   {
     "unitid":498571,
     "name":"Pennsylvania Western University",
-    "state":"IN",
-    "city":"Jeffersonville"
+    "state":"PA",
+    "city":"California"
   },
   {
     "unitid":498696,
     "name":"Phoenix Institute",
-    "state":"IN",
-    "city":"Columbus"
+    "state":"Georgia",
+    "city":null
   },
   {
     "unitid":499361,
     "name":"Premiere Aesthetics Institute-Meridian",
-    "state":"MI",
-    "city":"Hillsdale"
+    "state":"Idaho",
+    "city":null
   },
   {
     "unitid":499538,
     "name":"Puerto Rico Advance Institute",
-    "state":"MI",
-    "city":"Midland"
+    "state":"Puerto Rico",
+    "city":null
   }
 ]

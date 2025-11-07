@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 488721,
     "name": "NationsUniversity",
-    "city": "Joplin",
-    "state": "MO",
+    "city": "New Orleans",
+    "state": "LA",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.kansascity.edu/",
+    "website": "https://www.nationsu.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

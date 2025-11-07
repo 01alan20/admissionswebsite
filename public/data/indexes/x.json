@@ -2,31 +2,31 @@
   {
     "unitid":160904,
     "name":"Xavier University of Louisiana",
-    "state":"MD",
-    "city":"Baltimore"
+    "state":"LA",
+    "city":"New Orleans"
   },
   {
     "unitid":206622,
     "name":"Xavier University",
-    "state":"OK",
-    "city":"Durant"
+    "state":"OH",
+    "city":"Cincinnati"
   },
   {
     "unitid":481289,
     "name":"Xavier College School of Nursing",
-    "state":"OK",
-    "city":"Oklahoma City"
+    "state":"CA",
+    "city":"Stockton"
   },
   {
     "unitid":494700,
     "name":"Xtylo Beauty College",
-    "state":"FL",
-    "city":"Miramar"
+    "state":"AZ",
+    "city":"Phoenix"
   },
   {
     "unitid":498322,
     "name":"Xtylo Beauty College",
-    "state":"FL",
-    "city":"Ft Myers"
+    "state":"AZ",
+    "city":"Tolleson"
   }
 ]

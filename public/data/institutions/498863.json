@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 498863,
     "name": "Renaissance Beauty Academy",
-    "city": "Valparaiso",
-    "state": "IN",
+    "city": null,
+    "state": "Missouri",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.ivytech.edu/valparaiso",
+    "website": null,
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

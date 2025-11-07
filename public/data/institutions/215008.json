@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 215008,
     "name": "Pennsylvania Gunsmith School",
-    "city": "Bethlehem",
+    "city": "Pittsburgh",
     "state": "PA",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "https://www.slhn.org/bethlehem",
+    "website": "https://pagunsmith.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

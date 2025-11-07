@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 200341,
     "name": "Williston State College",
-    "city": "Blue Ash",
-    "state": "OH",
+    "city": "Williston",
+    "state": "ND",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: Mixed Transfer/Career & Technical-High Traditional",
-    "website": "www.ucblueash.edu/",
+    "website": "https://willistonstate.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

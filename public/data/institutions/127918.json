@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 127918,
     "name": "Regis University",
-    "city": "East Windsor",
-    "state": "CT",
+    "city": "Denver",
+    "state": "CO",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Doctoral/Professional Universities",
-    "website": "www.lincolntech.edu/campus/east-windsor-ct",
+    "website": "https://www.regis.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

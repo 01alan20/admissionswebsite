@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 227687,
     "name": "Ranger College",
-    "city": "Fort Worth",
+    "city": "Ranger",
     "state": "TX",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: High Transfer-High Traditional",
-    "website": "www.unthsc.edu/",
+    "website": "https://www.rangercollege.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

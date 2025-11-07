@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 127741,
     "name": "University of Northern Colorado",
-    "city": "Cromwell",
-    "state": "CT",
+    "city": "Greeley",
+    "state": "CO",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Doctoral/Professional Universities",
-    "website": "www.cortiva.edu/",
+    "website": "https://www.unco.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

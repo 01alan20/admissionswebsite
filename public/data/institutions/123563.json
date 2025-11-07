@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 123563,
     "name": "Solano Community College",
-    "city": "San Bernardino",
+    "city": "Fairfield",
     "state": "CA",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate/Associate's Colleges: Associate's Dominant",
-    "website": "https://www.concorde.edu/campus/san-bernardino-california",
+    "website": "www.solano.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 215974,
     "name": "UPMC Shadyside School of Nursing",
-    "city": "Providence",
-    "state": "RI",
+    "city": "Pittsburgh",
+    "state": "PA",
     "control": "Private nonprofit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.brown.edu/",
+    "website": "https://www.upmc.com/shyson",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

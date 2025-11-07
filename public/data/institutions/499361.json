@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 499361,
     "name": "Premiere Aesthetics Institute-Meridian",
-    "city": "Hillsdale",
-    "state": "MI",
+    "city": null,
+    "state": "Idaho",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "https://www.hillsdalebeautycollege.com/",
+    "website": null,
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

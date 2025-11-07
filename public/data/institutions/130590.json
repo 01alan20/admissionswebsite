@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 130590,
     "name": "Trinity College",
-    "city": "Washington",
-    "state": "DC",
+    "city": "Hartford",
+    "state": "CT",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate Colleges: Arts & Sciences Focus",
-    "website": "www.theconservatory.org/",
+    "website": "https://www.trincoll.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

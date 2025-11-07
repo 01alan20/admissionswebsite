@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 180328,
     "name": "Little Big Horn College",
-    "city": "Lincoln",
-    "state": "NE",
+    "city": "Crow Agency",
+    "state": "MT",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Tribal Colleges",
-    "website": "https://www.ucollege.edu/",
+    "website": "www.lbhc.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 239637,
     "name": "Sacred Heart Seminary and School of Theology",
-    "city": "Bayamon",
-    "state": "PR",
+    "city": null,
+    "state": "Wisconsin",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Special Focus Four-Year: Faith-Related Institutions",
-    "website": "www.caribbean.edu/",
+    "website": null,
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

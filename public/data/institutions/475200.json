@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 475200,
     "name": "Whitworth University-Adult Degree Programs",
-    "city": "Hayward",
-    "state": "CA",
+    "city": "Spokane",
+    "state": "WA",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
-    "website": "www.unitekcollege.edu/",
+    "website": "https://www.whitworth.edu/cms/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

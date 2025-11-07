@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 460093,
     "name": "Ross Medical Education Center-Davison",
-    "city": "Boise",
-    "state": "ID",
+    "city": "Davison",
+    "state": "MI",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.avedaidaho.com/",
+    "website": "https://rosseducation.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 230490,
     "name": "Ogden-Weber Technical College",
-    "city": "Hampden-Sydney",
-    "state": "VA",
+    "city": "Ogden",
+    "state": "UT",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.hsc.edu/",
+    "website": "www.otech.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

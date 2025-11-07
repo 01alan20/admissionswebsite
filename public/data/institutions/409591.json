@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 409591,
     "name": "Lorain County Joint Vocational School District",
-    "city": "Plattsburgh",
-    "state": "NY",
+    "city": "Oberlin",
+    "state": "OH",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.cves.org/",
+    "website": "https://www.lcjvs.com/loraincountyadultcareercenter_home.aspx",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 497392,
     "name": "Top of the Line Barber School",
-    "city": "San Jose",
-    "state": "CA",
+    "city": "San Antonio",
+    "state": "TX",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.fivebranches.edu/",
+    "website": "https://totlbarberschool.org/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

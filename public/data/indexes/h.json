@@ -3,91 +3,91 @@
     "unitid":101365,
     "name":"Herzing University-Birmingham",
     "state":"AL",
-    "city":"Montgomery"
+    "city":"Birmingham"
   },
   {
     "unitid":101435,
     "name":"Huntingdon College",
     "state":"AL",
-    "city":"Florence"
+    "city":"Montgomery"
   },
   {
     "unitid":101453,
     "name":"Heritage Christian University",
     "state":"AL",
-    "city":"Huntsville"
+    "city":"Florence"
   },
   {
     "unitid":102313,
     "name":"H Councill Trenholm State Community College",
     "state":"AL",
-    "city":"Troy"
+    "city":"Montgomery"
   },
   {
     "unitid":107044,
     "name":"Harding University",
     "state":"AR",
-    "city":"Hot Springs"
+    "city":"Searcy"
   },
   {
     "unitid":107071,
     "name":"Henderson State University",
     "state":"AR",
-    "city":"Pine Bluff"
+    "city":"Arkadelphia"
   },
   {
     "unitid":107080,
     "name":"Hendrix College",
     "state":"AR",
-    "city":"Siloam Springs"
+    "city":"Conway"
   },
   {
     "unitid":107099,
     "name":"Hot Springs Beauty College",
     "state":"AR",
-    "city":"Springdale"
+    "city":"Hot Springs"
   },
   {
     "unitid":111045,
     "name":"Haven University",
     "state":"CA",
-    "city":"Redwood City"
+    "city":"Garden Grove"
   },
   {
     "unitid":115393,
     "name":"Hartnell College",
     "state":"CA",
-    "city":"Newport Beach"
+    "city":"Salinas"
   },
   {
     "unitid":115409,
     "name":"Harvey Mudd College",
     "state":"CA",
-    "city":"Los Angeles"
+    "city":"Claremont"
   },
   {
     "unitid":115658,
     "name":"Hilltop Beauty School",
     "state":"CA",
-    "city":"Irvine"
+    "city":"Daly City"
   },
   {
     "unitid":115728,
     "name":"Holy Names University",
     "state":"CA",
-    "city":"El Cajon"
+    "city":"Oakland"
   },
   {
     "unitid":115773,
     "name":"Humphreys University-Stockton and Modesto Campuses",
     "state":"CA",
-    "city":"San Dimas"
+    "city":"Stockton"
   },
   {
     "unitid":120537,
     "name":"Hope International University",
     "state":"CA",
-    "city":"San Diego"
+    "city":"Fullerton"
   },
   {
     "unitid":129491,
@@ -99,505 +99,505 @@
     "unitid":129534,
     "name":"Holy Apostles College and Seminary",
     "state":"CT",
-    "city":"New London"
+    "city":"Cromwell"
   },
   {
     "unitid":131520,
     "name":"Howard University",
-    "state":"FL",
-    "city":"Jacksonville"
+    "state":"DC",
+    "city":"Washington"
   },
   {
     "unitid":134495,
     "name":"Hillsborough Community College",
     "state":"FL",
-    "city":"Miami"
+    "city":"Tampa"
   },
   {
     "unitid":134510,
     "name":"Hobe Sound Bible College",
     "state":"FL",
-    "city":"Coral Gables"
+    "city":"Hobe Sound"
   },
   {
     "unitid":134529,
     "name":"Hollywood Institute of Beauty Careers",
     "state":"FL",
-    "city":"Orlando"
+    "city":"Hollywood"
   },
   {
     "unitid":140340,
     "name":"Herzing University-Atlanta",
     "state":"GA",
-    "city":"Young Harris"
+    "city":"Atlanta"
   },
   {
     "unitid":141608,
     "name":"Hawaii Institute of Hair Design",
-    "state":"IL",
-    "city":"Chicago"
+    "state":"HI",
+    "city":"Honolulu"
   },
   {
     "unitid":141644,
     "name":"Hawaii Pacific University",
-    "state":"IL",
-    "city":"Chicago"
+    "state":"HI",
+    "city":"Honolulu"
   },
   {
     "unitid":141680,
     "name":"Honolulu Community College",
-    "state":"IL",
-    "city":"Chicago"
+    "state":"HI",
+    "city":"Honolulu"
   },
   {
     "unitid":145424,
     "name":"Hair Professionals Career College",
     "state":"IL",
-    "city":"Lake Forest"
+    "city":"Sycamore"
   },
   {
     "unitid":145433,
     "name":"Hair Professionals School of Cosmetology",
     "state":"IL",
-    "city":"Lake Forest"
+    "city":"Oswego"
   },
   {
     "unitid":145497,
     "name":"Hebrew Theological College",
     "state":"IL",
-    "city":"Mattoon"
+    "city":"Skokie"
   },
   {
     "unitid":145521,
     "name":"Highland Community College",
     "state":"IL",
-    "city":"Danville"
+    "city":"Freeport"
   },
   {
     "unitid":150756,
     "name":"Hanover College",
     "state":"IN",
-    "city":"Notre Dame"
+    "city":"Hanover"
   },
   {
     "unitid":150774,
     "name":"Holy Cross College",
     "state":"IN",
-    "city":"Richmond"
+    "city":"Notre Dame"
   },
   {
     "unitid":150941,
     "name":"Huntington University",
     "state":"IN",
-    "city":"Evansville"
+    "city":"Huntington"
   },
   {
     "unitid":153445,
     "name":"Hawkeye Community College",
     "state":"IA",
-    "city":"Des Moines"
+    "city":"Waterloo"
   },
   {
     "unitid":155140,
     "name":"Haskell Indian Nations University",
     "state":"KS",
-    "city":"Salina"
+    "city":"Lawrence"
   },
   {
     "unitid":155159,
     "name":"Hays Academy of Hair Design",
     "state":"KS",
-    "city":"Liberal"
+    "city":"Hays"
   },
   {
     "unitid":155177,
     "name":"Hesston College",
     "state":"KS",
-    "city":"Winfield"
+    "city":"Hesston"
   },
   {
     "unitid":155186,
     "name":"Highland Community College",
     "state":"KS",
-    "city":"Sterling"
+    "city":"Highland"
   },
   {
     "unitid":155195,
     "name":"Hutchinson Community College",
     "state":"KS",
-    "city":"Hillsboro"
+    "city":"Hutchinson"
   },
   {
     "unitid":156790,
     "name":"Hazard Community and Technical College",
     "state":"KY",
-    "city":"Florence"
+    "city":"Hazard"
   },
   {
     "unitid":156851,
     "name":"Henderson Community College",
     "state":"KY",
-    "city":"Cumberland"
+    "city":"Henderson"
   },
   {
     "unitid":156860,
     "name":"Hopkinsville Community College",
     "state":"KY",
-    "city":"Louisville"
+    "city":"Hopkinsville"
   },
   {
     "unitid":162690,
     "name":"Hagerstown Community College",
     "state":"MD",
-    "city":"Westminster"
+    "city":"Hagerstown"
   },
   {
     "unitid":162706,
     "name":"Harford Community College",
     "state":"MD",
-    "city":"Salisbury"
+    "city":"Bel Air"
   },
   {
     "unitid":162760,
     "name":"Hood College",
-    "state":"MA",
-    "city":"Cambridge"
+    "state":"MD",
+    "city":"Frederick"
   },
   {
     "unitid":162779,
     "name":"Howard Community College",
-    "state":"MA",
-    "city":"Springfield"
+    "state":"MD",
+    "city":"Columbia"
   },
   {
     "unitid":163541,
     "name":"Hair Academy",
-    "state":"MA",
-    "city":"Boston"
+    "state":"MD",
+    "city":"New Carrollton"
   },
   {
     "unitid":164368,
     "name":"Hult International Business School",
     "state":"MA",
-    "city":"Fall River"
+    "city":"Cambridge"
   },
   {
     "unitid":166018,
     "name":"Hampshire College",
     "state":"MA",
-    "city":"Dudley"
+    "city":"Amherst"
   },
   {
     "unitid":166027,
     "name":"Harvard University",
     "state":"MA",
-    "city":"North Adams"
+    "city":"Cambridge"
   },
   {
     "unitid":166045,
     "name":"Hebrew College",
     "state":"MA",
-    "city":"Boston"
+    "city":"Newton Centre"
   },
   {
     "unitid":166054,
     "name":"Hellenic College-Holy Cross Greek Orthodox School of Theology",
     "state":"MA",
-    "city":"Danvers"
+    "city":"Brookline"
   },
   {
     "unitid":166133,
     "name":"Holyoke Community College",
     "state":"MA",
-    "city":"Haverhill"
+    "city":"Holyoke"
   },
   {
     "unitid":168555,
     "name":"Hillsdale Beauty College",
     "state":"MI",
-    "city":"Grand Rapids"
+    "city":"Hillsdale"
   },
   {
     "unitid":170240,
     "name":"Henry Ford College",
     "state":"MI",
-    "city":"Waterford"
+    "city":"Dearborn"
   },
   {
     "unitid":170286,
     "name":"Hillsdale College",
     "state":"MI",
-    "city":"Grand Rapids"
+    "city":"Hillsdale"
   },
   {
     "unitid":170301,
     "name":"Hope College",
     "state":"MI",
-    "city":"Lansing"
+    "city":"Holland"
   },
   {
     "unitid":173665,
     "name":"Hamline University",
     "state":"MN",
-    "city":"Collegeville"
+    "city":"Saint Paul"
   },
   {
     "unitid":173683,
     "name":"Hazelden Betty Ford Graduate School",
     "state":"MN",
-    "city":"Winona"
+    "city":"Center City"
   },
   {
     "unitid":173708,
     "name":"Hennepin Technical College",
     "state":"MN",
-    "city":"Northfield"
+    "city":"Brooklyn Park"
   },
   {
     "unitid":174154,
     "name":"Herzing University-Minneapolis",
     "state":"MN",
-    "city":"Winona"
+    "city":"St. Louis Park"
   },
   {
     "unitid":175786,
     "name":"Hinds Community College",
-    "state":"MO",
-    "city":"Fayette"
+    "state":"MS",
+    "city":"Raymond"
   },
   {
     "unitid":175810,
     "name":"Holmes Community College",
-    "state":"MO",
-    "city":"Warrensburg"
+    "state":"MS",
+    "city":"Goodman"
   },
   {
     "unitid":176062,
     "name":"Hatfield's Mississippi College of Beauty Culture",
-    "state":"MO",
-    "city":"Webster Groves"
+    "state":"MS",
+    "city":"Laurel"
   },
   {
     "unitid":176716,
     "name":"House of Heavilin Beauty College-Blue Springs",
     "state":"MO",
-    "city":"Jefferson City"
+    "city":"Blue Springs"
   },
   {
     "unitid":177542,
     "name":"Hannibal-LaGrange University",
     "state":"MO",
-    "city":"Point Lookout"
+    "city":"Hannibal"
   },
   {
     "unitid":177551,
     "name":"Harris-Stowe State University",
     "state":"MO",
-    "city":"Parkville"
+    "city":"Saint Louis"
   },
   {
     "unitid":177588,
     "name":"House of Heavilin Beauty College-Kansas City",
     "state":"MO",
-    "city":"Saint Louis"
+    "city":"Kansas City"
   },
   {
     "unitid":180081,
     "name":"Highlands College of Montana Tech",
-    "state":"NE",
-    "city":"North Platte"
+    "state":"MT",
+    "city":"Butte"
   },
   {
     "unitid":180276,
     "name":"Helena College University of Montana",
-    "state":"NE",
-    "city":"Lincoln"
+    "state":"MT",
+    "city":"Helena"
   },
   {
     "unitid":181127,
     "name":"Hastings College",
-    "state":"NH",
-    "city":"Rindge"
+    "state":"NE",
+    "city":"Hastings"
   },
   {
     "unitid":184746,
     "name":"Hohokus School of Trade and Technical Sciences",
     "state":"NJ",
-    "city":"Carneys Point"
+    "city":"Paterson"
   },
   {
     "unitid":184968,
     "name":"Holy Name Medical Center-Sister Claire Tynan School of Nursing",
     "state":"NJ",
-    "city":"Galloway"
+    "city":"Englewood Cliffs"
   },
   {
     "unitid":184995,
     "name":"Hudson County Community College",
     "state":"NJ",
-    "city":"Adelphia"
+    "city":"Jersey City"
   },
   {
     "unitid":191515,
     "name":"Hamilton College",
     "state":"NY",
-    "city":"Brooklyn"
+    "city":"Clinton"
   },
   {
     "unitid":191533,
     "name":"Hartwick College",
     "state":"NY",
-    "city":"New York"
+    "city":"Oneonta"
   },
   {
     "unitid":191597,
     "name":"Helene Fuld College of Nursing",
     "state":"NY",
-    "city":"Albany"
+    "city":"New York"
   },
   {
     "unitid":191612,
     "name":"Herkimer County Community College",
     "state":"NY",
-    "city":"Brooklyn"
+    "city":"Herkimer"
   },
   {
     "unitid":191621,
     "name":"Hilbert College",
     "state":"NY",
-    "city":"Schenectady"
+    "city":"Hamburg"
   },
   {
     "unitid":191630,
     "name":"Hobart William Smith Colleges",
     "state":"NY",
-    "city":"Utica"
+    "city":"Geneva"
   },
   {
     "unitid":191649,
     "name":"Hofstra University",
     "state":"NY",
-    "city":"Rockville Centre"
+    "city":"Hempstead"
   },
   {
     "unitid":191676,
     "name":"Houghton University",
     "state":"NY",
-    "city":"Bronx"
+    "city":"Houghton"
   },
   {
     "unitid":191719,
     "name":"Hudson Valley Community College",
     "state":"NY",
-    "city":"Rochester"
+    "city":"Troy"
   },
   {
     "unitid":191728,
     "name":"Hunter Business School",
     "state":"NY",
-    "city":"Newburgh"
+    "city":"Levittown"
   },
   {
     "unitid":198640,
     "name":"Halifax Community College",
     "state":"NC",
-    "city":"Misenheimer"
+    "city":"Weldon"
   },
   {
     "unitid":198668,
     "name":"Haywood Community College",
     "state":"NC",
-    "city":"Roxboro"
+    "city":"Clyde"
   },
   {
     "unitid":198677,
     "name":"Heritage Bible College",
     "state":"NC",
-    "city":"Winterville"
+    "city":"Dunn"
   },
   {
     "unitid":198695,
     "name":"High Point University",
     "state":"NC",
-    "city":"Charlotte"
+    "city":"High Point"
   },
   {
     "unitid":200785,
     "name":"Herzing University-Akron",
     "state":"OH",
-    "city":"Columbus"
+    "city":"Akron"
   },
   {
     "unitid":202985,
     "name":"Hannah E Mullins School of Practical Nursing",
     "state":"OH",
-    "city":"Columbus"
+    "city":"Salem"
   },
   {
     "unitid":203067,
     "name":"Hebrew Union College-Jewish Institute of Religion",
-    "state":"OH",
-    "city":"Mount Vernon"
+    "state":"NY",
+    "city":"New York"
   },
   {
     "unitid":203085,
     "name":"Heidelberg University",
     "state":"OH",
-    "city":"Cincinnati"
+    "city":"Tiffin"
   },
   {
     "unitid":203128,
     "name":"Hiram College",
     "state":"OH",
-    "city":"Zanesville"
+    "city":"Hiram"
   },
   {
     "unitid":203146,
     "name":"Hobart Institute of Welding Technology",
     "state":"OH",
-    "city":"New Concord"
+    "city":"Troy"
   },
   {
     "unitid":203155,
     "name":"Hocking College",
     "state":"OH",
-    "city":"Canton"
+    "city":"Nelsonville"
   },
   {
     "unitid":203386,
     "name":"Hondros College of Nursing",
     "state":"OH",
-    "city":"Cleveland"
+    "city":"Westerville"
   },
   {
     "unitid":205559,
     "name":"Hussian College-Daymar College Columbus",
-    "state":"OK",
-    "city":"Moore"
+    "state":"OH",
+    "city":"Columbus"
   },
   {
     "unitid":208053,
     "name":"High Plains Technology Center",
-    "state":"OR",
-    "city":"Ashland"
+    "state":"OK",
+    "city":"Woodward"
   },
   {
     "unitid":212869,
     "name":"Harcum College",
     "state":"PA",
-    "city":"Philadelphia"
+    "city":"Bryn Mawr"
   },
   {
     "unitid":212878,
     "name":"Harrisburg Area Community College",
     "state":"PA",
-    "city":"Millersville"
+    "city":"Harrisburg"
   },
   {
     "unitid":212911,
     "name":"Haverford College",
     "state":"PA",
-    "city":"Dallas"
+    "city":"Haverford"
   },
   {
     "unitid":212984,
@@ -609,199 +609,199 @@
     "unitid":212993,
     "name":"Hussian College-Philadelphia",
     "state":"PA",
-    "city":"Bethlehem"
+    "city":"Philadelphia"
   },
   {
     "unitid":214476,
     "name":"Heritage Valley Health System School of Nursing",
     "state":"PA",
-    "city":"Beaver Falls"
+    "city":"McKees Rocks"
   },
   {
     "unitid":218140,
     "name":"Horry-Georgetown Technical College",
-    "state":"SD",
-    "city":"Yankton"
+    "state":"SC",
+    "city":"Conway"
   },
   {
     "unitid":220002,
     "name":"Hussian College-Daymar College Nashville",
     "state":"TN",
-    "city":"Ripley"
+    "city":"Nashville"
   },
   {
     "unitid":225201,
     "name":"Hallmark University",
     "state":"TX",
-    "city":"Houston"
+    "city":"San Antonio"
   },
   {
     "unitid":225247,
     "name":"Hardin-Simmons University",
     "state":"TX",
-    "city":"Odessa"
+    "city":"Abilene"
   },
   {
     "unitid":225371,
     "name":"Hill College",
     "state":"TX",
-    "city":"Fort Worth"
+    "city":"Hillsboro"
   },
   {
     "unitid":225399,
     "name":"Houston Christian University",
     "state":"TX",
-    "city":"San Antonio"
+    "city":"Houston"
   },
   {
     "unitid":225423,
     "name":"Houston Community College",
     "state":"TX",
-    "city":"Brownsville"
+    "city":"Houston"
   },
   {
     "unitid":225520,
     "name":"Howard College",
     "state":"TX",
-    "city":"Prairie View"
+    "city":"Big Spring"
   },
   {
     "unitid":225548,
     "name":"Howard Payne University",
     "state":"TX",
-    "city":"Ranger"
+    "city":"Brownwood"
   },
   {
     "unitid":225575,
     "name":"Huston-Tillotson University",
     "state":"TX",
-    "city":"Houston"
+    "city":"Austin"
   },
   {
     "unitid":232256,
     "name":"Hampden-Sydney College",
     "state":"VA",
-    "city":"Norfolk"
+    "city":"Hampden-Sydney"
   },
   {
     "unitid":232265,
     "name":"Hampton University",
     "state":"VA",
-    "city":"Richmond"
+    "city":"Hampton"
   },
   {
     "unitid":232308,
     "name":"Hollins University",
     "state":"VA",
-    "city":"Wise"
+    "city":"Roanoke"
   },
   {
     "unitid":235422,
     "name":"Heritage University",
-    "state":"WV",
-    "city":"Charleston"
+    "state":"WA",
+    "city":"Toppenish"
   },
   {
     "unitid":235431,
     "name":"Highline College",
-    "state":"WV",
-    "city":"Clarksburg"
+    "state":"WA",
+    "city":"Des Moines"
   },
   {
     "unitid":235583,
     "name":"Highlights Beauty Schools",
-    "state":"WV",
-    "city":"Fairmont"
+    "state":"WA",
+    "city":"Mountlake Terrace"
   },
   {
     "unitid":237437,
     "name":"Huntington Junior College",
-    "state":"WI",
-    "city":"Milwaukee"
+    "state":"WV",
+    "city":"Huntington"
   },
   {
     "unitid":240392,
     "name":"Herzing University-Madison",
-    "state":"PR",
-    "city":"Mayaguez"
+    "state":"WI",
+    "city":"Madison"
   },
   {
     "unitid":242112,
     "name":"Huertas College",
-    "state":"GA",
-    "city":"Clarkston"
+    "state":"PR",
+    "city":"Caguas"
   },
   {
     "unitid":242121,
     "name":"Humacao Community College",
-    "state":"IL",
-    "city":"Willowbrook"
+    "state":"PR",
+    "city":"Humacao"
   },
   {
     "unitid":246345,
     "name":"Houston Graduate School of Theology",
-    "state":"MO",
-    "city":"Eolia"
+    "state":"TX",
+    "city":"Houston"
   },
   {
     "unitid":246789,
     "name":"HJ International Graduate School for Peace and Public Leadership",
-    "state":"FL",
-    "city":"Sarasota"
+    "state":"NY",
+    "city":"New York"
   },
   {
     "unitid":247010,
     "name":"Headmasters School of Hair Design",
-    "state":"CA",
-    "city":"Fresno"
+    "state":"ID",
+    "city":"Lewiston"
   },
   {
     "unitid":367051,
     "name":"Hairmasters Institute of Cosmetology",
-    "state":"MA",
-    "city":"Worcester"
+    "state":"IL",
+    "city":"Bloomington"
   },
   {
     "unitid":367875,
     "name":"H W Brewster Technical College",
-    "state":"NY",
-    "city":"Brooklyn"
+    "state":"FL",
+    "city":"Tampa"
   },
   {
     "unitid":367884,
     "name":"Hodges University",
-    "state":"OH",
-    "city":"Mount Vernon"
+    "state":"FL",
+    "city":"Fort Myers"
   },
   {
     "unitid":367981,
     "name":"Hair Professionals Career College",
-    "state":"OH",
-    "city":"OREGON"
+    "state":"IL",
+    "city":"Palos Hills"
   },
   {
     "unitid":368443,
     "name":"Hussian College-Daymar College Clarksville",
-    "state":"OK",
-    "city":"McAlester"
+    "state":"TN",
+    "city":"Clarksville"
   },
   {
     "unitid":368771,
     "name":"Hypnosis Motivation Institute",
-    "state":"PR",
-    "city":"Arroyo"
+    "state":"CA",
+    "city":"Tarzana"
   },
   {
     "unitid":369950,
     "name":"Hamrick School",
-    "state":"TX",
-    "city":"Abilene"
+    "state":"OH",
+    "city":"Medina"
   },
   {
     "unitid":377643,
     "name":"Huntington School of Beauty Culture",
-    "state":"FL",
-    "city":"Melbourne"
+    "state":"WV",
+    "city":"Huntington"
   },
   {
     "unitid":380067,
@@ -812,38 +812,38 @@
   {
     "unitid":383084,
     "name":"Hacienda La Puente Adult Education",
-    "state":"AZ",
-    "city":"Tempe"
+    "state":"CA",
+    "city":"La Puente"
   },
   {
     "unitid":383190,
     "name":"Hawaii Community College",
-    "state":"FL",
-    "city":"Tampa"
+    "state":"HI",
+    "city":"Hilo"
   },
   {
     "unitid":384342,
     "name":"Heartland Community College",
-    "state":"PA",
-    "city":"Milton"
+    "state":"IL",
+    "city":"Normal"
   },
   {
     "unitid":386472,
     "name":"Herzing University-Orlando",
-    "state":"NY",
-    "city":"Albany"
+    "state":"FL",
+    "city":"Winter Park"
   },
   {
     "unitid":417600,
     "name":"Hastings Beauty School",
-    "state":"MA",
-    "city":"North Adams"
+    "state":"MN",
+    "city":"Hastings"
   },
   {
     "unitid":418612,
     "name":"Hazleton Area Career Center",
-    "state":"AZ",
-    "city":"Glendale"
+    "state":"PA",
+    "city":"Hazle TWP."
   },
   {
     "unitid":419217,
@@ -855,348 +855,348 @@
     "unitid":431266,
     "name":"Henrico County-Saint Marys Hospital School of Practical Nursing",
     "state":"VA",
-    "city":"Arlington"
+    "city":"Henrico"
   },
   {
     "unitid":431275,
     "name":"Herkimer County BOCES-Practical Nursing Program",
-    "state":"LA",
-    "city":"Baton Rouge"
+    "state":"NY",
+    "city":"Ilion"
   },
   {
     "unitid":433536,
     "name":"Herzing University-New Orleans",
-    "state":"IN",
-    "city":"Indianapolis"
+    "state":"LA",
+    "city":"Metairie"
   },
   {
     "unitid":436030,
     "name":"Hair Academy II",
-    "state":"CA",
-    "city":"Cerritos"
+    "state":"MD",
+    "city":"Hillcrest Heights"
   },
   {
     "unitid":439668,
     "name":"HDS Truck Driving Institute",
-    "state":"TX",
-    "city":"Beaumont"
-  },
-  {
-    "unitid":441830,
-    "name":"Healing Mountain Massage School",
-    "state":"TN",
-    "city":"Memphis"
-  },
-  {
-    "unitid":443076,
-    "name":"Hood Theological Seminary",
-    "state":"GA",
-    "city":"Marietta"
-  },
-  {
-    "unitid":443234,
-    "name":"Hollywood Institute",
-    "state":"DC",
-    "city":"Washington"
-  },
-  {
-    "unitid":444255,
-    "name":"Hussian College-Daymar College Murfreesboro",
-    "state":"FL",
-    "city":"Ave Maria"
-  },
-  {
-    "unitid":446303,
-    "name":"Healthcare Training Institute",
-    "state":"LA",
-    "city":"Houma"
-  },
-  {
-    "unitid":446640,
-    "name":"Harrisburg University of Science and Technology",
-    "state":"FL",
-    "city":"Miami"
-  },
-  {
-    "unitid":447971,
-    "name":"Hair Expressions Academy",
-    "state":"VA",
-    "city":"Oakwood"
-  },
-  {
-    "unitid":449348,
-    "name":"Huntsville Bible College",
-    "state":"FL",
-    "city":"Davie"
-  },
-  {
-    "unitid":450960,
-    "name":"Healthcare Career College",
-    "state":"KS",
-    "city":"Ottawa"
-  },
-  {
-    "unitid":454795,
-    "name":"Healing Hands School of Holistic Health",
-    "state":"OH",
-    "city":"Twinsburg"
-  },
-  {
-    "unitid":455071,
-    "name":"Healing Arts Center",
-    "state":"TX",
-    "city":"Brownsville"
-  },
-  {
-    "unitid":455327,
-    "name":"Hands on Therapy",
-    "state":"CA",
-    "city":"Los Angeles"
-  },
-  {
-    "unitid":456968,
-    "name":"Health And Style Institute",
-    "state":"CA",
-    "city":"Anaheim"
-  },
-  {
-    "unitid":457086,
-    "name":"Homestead Schools",
-    "state":"GA",
-    "city":"Columbus"
-  },
-  {
-    "unitid":457226,
-    "name":"Horizon University",
-    "state":"PA",
-    "city":"Springfield"
-  },
-  {
-    "unitid":458034,
-    "name":"Houston International College Cardiotech Ultrasound School",
-    "state":"SC",
-    "city":"Florence"
-  },
-  {
-    "unitid":459842,
-    "name":"Herzing University-Kenosha",
-    "state":"NC",
-    "city":"Fayetteville"
-  },
-  {
-    "unitid":459851,
-    "name":"Herzing University-Brookfield",
-    "state":"MO",
-    "city":"Washing"
-  },
-  {
-    "unitid":460756,
-    "name":"Hawaii Medical College",
-    "state":"UT",
-    "city":"St. George"
-  },
-  {
-    "unitid":461379,
-    "name":"Holistic Massage Training Institute",
-    "state":"LA",
-    "city":"Alexandria"
-  },
-  {
-    "unitid":478917,
-    "name":"Hays Academy of Hair Design",
-    "state":"UT",
-    "city":"Heber City"
-  },
-  {
-    "unitid":480000,
-    "name":"Hinton Barber and Beauty College",
-    "state":"NC",
-    "city":"High Point"
-  },
-  {
-    "unitid":481155,
-    "name":"Helms College",
-    "state":"PA",
-    "city":"Pittsburgh"
-  },
-  {
-    "unitid":481465,
-    "name":"Healthcare Training Institute",
-    "state":"FL",
-    "city":"Orlando"
-  },
-  {
-    "unitid":484002,
-    "name":"High Desert Medical College",
-    "state":"FL",
-    "city":"Vero Beach"
-  },
-  {
-    "unitid":484996,
-    "name":"Houston Training Schools-Gessner",
-    "state":"NE",
-    "city":"Lincoln"
-  },
-  {
-    "unitid":485379,
-    "name":"Hollywood Institute of Beauty Careers-West Palm Beach",
-    "state":"TN",
-    "city":"Memphis"
-  },
-  {
-    "unitid":485388,
-    "name":"Hollywood Institute of Beauty Careers-Casselberry",
-    "state":"LA",
-    "city":"New Orleans"
-  },
-  {
-    "unitid":485403,
-    "name":"High Tech High Graduate School of Education",
-    "state":"MI",
-    "city":"Mt. Pleasant"
-  },
-  {
-    "unitid":486345,
-    "name":"HVAC Technical Institute",
-    "state":"AZ",
-    "city":"Somerton"
-  },
-  {
-    "unitid":486965,
-    "name":"Hussian College-Los Angeles",
-    "state":"IL",
-    "city":"Richton Park"
-  },
-  {
-    "unitid":487524,
-    "name":"Husson University",
-    "state":"TX",
-    "city":"Webster"
-  },
-  {
-    "unitid":488068,
-    "name":"Huntington University of Health Sciences",
-    "state":"FL",
-    "city":"Tallahassee"
-  },
-  {
-    "unitid":488262,
-    "name":"Hair Academy School of Barbering & Beauty",
-    "state":"WA",
-    "city":"Yakima"
-  },
-  {
-    "unitid":488332,
-    "name":"Hope College of Arts and Sciences",
-    "state":"NH",
-    "city":"Merrimack"
-  },
-  {
-    "unitid":488411,
-    "name":"Hoss Lee Academy",
-    "state":"VA",
-    "city":"Vienna"
-  },
-  {
-    "unitid":490054,
-    "name":"HCI College",
-    "state":"IN",
-    "city":"Westfield"
-  },
-  {
-    "unitid":490382,
-    "name":"Harmony Health Care Institute",
-    "state":"CO",
-    "city":"Parker"
-  },
-  {
-    "unitid":490407,
-    "name":"Hogan Institute of Cosmetology and Esthetics",
-    "state":"NJ",
-    "city":"Lakewood"
-  },
-  {
-    "unitid":493585,
-    "name":"Health and Technology Training Institute",
-    "state":"FL",
-    "city":"Pensacola"
-  },
-  {
-    "unitid":493743,
-    "name":"Houston Barber School",
-    "state":"IA",
-    "city":"Iowa City"
-  },
-  {
-    "unitid":493752,
-    "name":"Health-Tech Institute of Memphis",
-    "state":"IL",
-    "city":"Chicago"
-  },
-  {
-    "unitid":495174,
-    "name":"Hollywood Cultural College",
-    "state":"FL",
-    "city":"Miami Beach"
-  },
-  {
-    "unitid":495314,
-    "name":"Hackensack Meridian School of Medicine",
     "state":"AZ",
     "city":"Tucson"
   },
   {
+    "unitid":441830,
+    "name":"Healing Mountain Massage School",
+    "state":"UT",
+    "city":"Salt Lake City"
+  },
+  {
+    "unitid":443076,
+    "name":"Hood Theological Seminary",
+    "state":"NC",
+    "city":"Salisbury"
+  },
+  {
+    "unitid":443234,
+    "name":"Hollywood Institute",
+    "state":"FL",
+    "city":"Margate"
+  },
+  {
+    "unitid":444255,
+    "name":"Hussian College-Daymar College Murfreesboro",
+    "state":"TN",
+    "city":"Murfreesboro"
+  },
+  {
+    "unitid":446303,
+    "name":"Healthcare Training Institute",
+    "state":"NJ",
+    "city":"Union"
+  },
+  {
+    "unitid":446640,
+    "name":"Harrisburg University of Science and Technology",
+    "state":"PA",
+    "city":"Harrisburg"
+  },
+  {
+    "unitid":447971,
+    "name":"Hair Expressions Academy",
+    "state":"MD",
+    "city":"Rockville"
+  },
+  {
+    "unitid":449348,
+    "name":"Huntsville Bible College",
+    "state":"AL",
+    "city":"Huntsville"
+  },
+  {
+    "unitid":450960,
+    "name":"Healthcare Career College",
+    "state":"CA",
+    "city":"Paramount"
+  },
+  {
+    "unitid":454795,
+    "name":"Healing Hands School of Holistic Health",
+    "state":"CA",
+    "city":"Escondido"
+  },
+  {
+    "unitid":455071,
+    "name":"Healing Arts Center",
+    "state":"MO",
+    "city":"St. Louis"
+  },
+  {
+    "unitid":455327,
+    "name":"Hands on Therapy",
+    "state":"TX",
+    "city":"Mesquite"
+  },
+  {
+    "unitid":456968,
+    "name":"Health And Style Institute",
+    "state":"NC",
+    "city":"Greensboro"
+  },
+  {
+    "unitid":457086,
+    "name":"Homestead Schools",
+    "state":"CA",
+    "city":"Torrance"
+  },
+  {
+    "unitid":457226,
+    "name":"Horizon University",
+    "state":"IN",
+    "city":"Indianapolis"
+  },
+  {
+    "unitid":458034,
+    "name":"Houston International College Cardiotech Ultrasound School",
+    "state":"TX",
+    "city":"Houston"
+  },
+  {
+    "unitid":459842,
+    "name":"Herzing University-Kenosha",
+    "state":"WI",
+    "city":"Kenosha"
+  },
+  {
+    "unitid":459851,
+    "name":"Herzing University-Brookfield",
+    "state":"WI",
+    "city":"Brookfield"
+  },
+  {
+    "unitid":460756,
+    "name":"Hawaii Medical College",
+    "state":"HI",
+    "city":"Honolulu"
+  },
+  {
+    "unitid":461379,
+    "name":"Holistic Massage Training Institute",
+    "state":"MD",
+    "city":"Baltimore"
+  },
+  {
+    "unitid":478917,
+    "name":"Hays Academy of Hair Design",
+    "state":"KS",
+    "city":"Salina"
+  },
+  {
+    "unitid":480000,
+    "name":"Hinton Barber and Beauty College",
+    "state":"CA",
+    "city":"Vallejo"
+  },
+  {
+    "unitid":481155,
+    "name":"Helms College",
+    "state":"GA",
+    "city":"Macon"
+  },
+  {
+    "unitid":481465,
+    "name":"Healthcare Training Institute",
+    "state":"LA",
+    "city":"Kenner"
+  },
+  {
+    "unitid":484002,
+    "name":"High Desert Medical College",
+    "state":"CA",
+    "city":"Lancaster"
+  },
+  {
+    "unitid":484996,
+    "name":"Houston Training Schools-Gessner",
+    "state":"TX",
+    "city":"Houston"
+  },
+  {
+    "unitid":485379,
+    "name":"Hollywood Institute of Beauty Careers-West Palm Beach",
+    "state":"FL",
+    "city":"West Palm Beach"
+  },
+  {
+    "unitid":485388,
+    "name":"Hollywood Institute of Beauty Careers-Casselberry",
+    "state":"FL",
+    "city":"Casselberry"
+  },
+  {
+    "unitid":485403,
+    "name":"High Tech High Graduate School of Education",
+    "state":"CA",
+    "city":"San Diego"
+  },
+  {
+    "unitid":486345,
+    "name":"HVAC Technical Institute",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":486965,
+    "name":"Hussian College-Los Angeles",
+    "state":"CA",
+    "city":"Los Angeles"
+  },
+  {
+    "unitid":487524,
+    "name":"Husson University",
+    "state":"ME",
+    "city":"Bangor"
+  },
+  {
+    "unitid":488068,
+    "name":"Huntington University of Health Sciences",
+    "state":"TN",
+    "city":"Knoxville"
+  },
+  {
+    "unitid":488262,
+    "name":"Hair Academy School of Barbering & Beauty",
+    "state":"DE",
+    "city":"Newark"
+  },
+  {
+    "unitid":488332,
+    "name":"Hope College of Arts and Sciences",
+    "state":"FL",
+    "city":"Pompano Beach"
+  },
+  {
+    "unitid":488411,
+    "name":"Hoss Lee Academy",
+    "state":"CA",
+    "city":"Roseville"
+  },
+  {
+    "unitid":490054,
+    "name":"HCI College",
+    "state":"FL",
+    "city":"West Palm Beach"
+  },
+  {
+    "unitid":490382,
+    "name":"Harmony Health Care Institute",
+    "state":"NH",
+    "city":"Merrimack"
+  },
+  {
+    "unitid":490407,
+    "name":"Hogan Institute of Cosmetology and Esthetics",
+    "state":"GA",
+    "city":"Lilburn"
+  },
+  {
+    "unitid":493585,
+    "name":"Health and Technology Training Institute",
+    "state":"PA",
+    "city":"Philadelphia"
+  },
+  {
+    "unitid":493743,
+    "name":"Houston Barber School",
+    "state":"TX",
+    "city":"Houston"
+  },
+  {
+    "unitid":493752,
+    "name":"Health-Tech Institute of Memphis",
+    "state":"TN",
+    "city":"Memphis"
+  },
+  {
+    "unitid":495174,
+    "name":"Hollywood Cultural College",
+    "state":"CA",
+    "city":"Los Angeles"
+  },
+  {
+    "unitid":495314,
+    "name":"Hackensack Meridian School of Medicine",
+    "state":"NJ",
+    "city":"Nutley"
+  },
+  {
     "unitid":496672,
     "name":"Hair Arts Institute",
-    "state":"VA",
-    "city":"Falls Church"
+    "state":"OK",
+    "city":"Oklahoma City"
   },
   {
     "unitid":496973,
     "name":"Herzing University-Tampa",
-    "state":"AZ",
-    "city":"Glendale"
+    "state":"FL",
+    "city":"Tampa"
   },
   {
     "unitid":497444,
     "name":"Hello Gorgeous Barbers Stillwater's School of Barbering",
-    "state":"CA",
-    "city":"Tustin"
+    "state":"OK",
+    "city":"Stillwater"
   },
   {
     "unitid":497657,
     "name":"Hawaii Tokai International College",
-    "state":"CA",
-    "city":"Berkeley"
+    "state":"Hawaii",
+    "city":null
   },
   {
     "unitid":497675,
     "name":"Hair Academy",
-    "state":"CA",
-    "city":"Victorville"
+    "state":"OH",
+    "city":"Chillicothe"
   },
   {
     "unitid":498845,
     "name":"Heartland Welding Academy",
-    "state":"IN",
-    "city":"Indianapolis"
+    "state":"Kansas",
+    "city":null
   },
   {
     "unitid":498960,
     "name":"Healthcare Workforce Training Institute",
-    "state":"KS",
-    "city":"Coffeyville"
+    "state":"Wisconsin",
+    "city":null
   },
   {
     "unitid":499103,
     "name":"Homestead Schools-Costa Mesa",
-    "state":"IN",
-    "city":"Greenfield"
+    "state":"California",
+    "city":null
   },
   {
     "unitid":499149,
     "name":"Herzing University-Nashville",
-    "state":"IN",
-    "city":"Indianapolis"
+    "state":"Tennessee",
+    "city":null
   }
 ]

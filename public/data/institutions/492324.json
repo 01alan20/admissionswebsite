@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 492324,
     "name": "Vista Adult School",
-    "city": "South Ogden",
-    "state": "UT",
+    "city": "Vista",
+    "state": "CA",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.esteem-academy.com/",
+    "website": "vistaadultschool.org/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

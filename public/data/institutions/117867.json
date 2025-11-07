@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 117867,
     "name": "Los Angeles Mission College",
-    "city": "Atherton",
+    "city": "Sylmar",
     "state": "CA",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: High Transfer-High Nontraditional",
-    "website": "www.menlo.edu/",
+    "website": "https://www.lamission.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

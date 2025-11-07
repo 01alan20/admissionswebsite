@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 434140,
     "name": "Pima Medical Institute-Chula Vista",
-    "city": "Bothell",
-    "state": "WA",
+    "city": "Chula Vista",
+    "state": "CA",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Special Focus Two-Year: Health Professions",
-    "website": "www.cascadia.edu/",
+    "website": "https://pmi.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

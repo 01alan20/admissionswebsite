@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 105297,
     "name": "Dine College",
-    "city": "Phoenix",
+    "city": "Tsaile",
     "state": "AZ",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Tribal Colleges",
-    "website": "www.phoenixcollege.edu/",
+    "website": "https://www.dinecollege.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

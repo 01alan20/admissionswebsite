@@ -3,187 +3,187 @@
     "unitid":101569,
     "name":"Lawson State Community College",
     "state":"AL",
-    "city":"Livingston"
+    "city":"Birmingham"
   },
   {
     "unitid":101602,
     "name":"Lurleen B Wallace Community College",
     "state":"AL",
-    "city":"Marion"
+    "city":"Andalusia"
   },
   {
     "unitid":106342,
     "name":"Lyon College",
     "state":"AR",
-    "city":"Fayetteville"
+    "city":"Batesville"
   },
   {
     "unitid":117104,
     "name":"Life Pacific University",
     "state":"CA",
-    "city":"Oakland"
+    "city":"San Dimas"
   },
   {
     "unitid":117168,
     "name":"Laguna College of Art and Design",
     "state":"CA",
-    "city":"Riverside"
+    "city":"Laguna Beach"
   },
   {
     "unitid":117195,
     "name":"Lake Tahoe Community College",
     "state":"CA",
-    "city":"Loma Linda"
+    "city":"South Lake Tahoe"
   },
   {
     "unitid":117238,
     "name":"Lancaster Beauty School",
     "state":"CA",
-    "city":"Long Beach"
+    "city":"Lancaster"
   },
   {
     "unitid":117247,
     "name":"Laney College",
     "state":"CA",
-    "city":"Whittier"
+    "city":"Oakland"
   },
   {
     "unitid":117274,
     "name":"Lassen Community College",
     "state":"CA",
-    "city":"Wilmington"
+    "city":"Susanville"
   },
   {
     "unitid":117283,
     "name":"Latin American Bible Institute",
     "state":"CA",
-    "city":"Woodland Hills"
+    "city":"La Puente"
   },
   {
     "unitid":117520,
     "name":"Life Chiropractic College West",
     "state":"CA",
-    "city":"Los Angeles"
+    "city":"Hayward"
   },
   {
     "unitid":117557,
     "name":"Lincoln University",
     "state":"CA",
-    "city":"Los Angeles"
+    "city":"Oakland"
   },
   {
     "unitid":117627,
     "name":"La Sierra University",
     "state":"CA",
-    "city":"Santa Clarita"
+    "city":"Riverside"
   },
   {
     "unitid":117636,
     "name":"Loma Linda University",
     "state":"CA",
-    "city":"Los Angeles"
+    "city":"Loma Linda"
   },
   {
     "unitid":117645,
     "name":"Long Beach City College",
     "state":"CA",
-    "city":"Los Angeles"
+    "city":"Long Beach"
   },
   {
     "unitid":117681,
     "name":"Los Angeles Community College District Office",
-    "state":"CA",
-    "city":"Pittsburg"
+    "state":"California",
+    "city":null
   },
   {
     "unitid":117690,
     "name":"Los Angeles Harbor College",
     "state":"CA",
-    "city":"Los Angeles"
+    "city":"Wilmington"
   },
   {
     "unitid":117706,
     "name":"Los Angeles Pierce College",
     "state":"CA",
-    "city":"Ventura"
+    "city":"Woodland Hills"
   },
   {
     "unitid":117715,
     "name":"Los Angeles Southwest College",
     "state":"CA",
-    "city":"Bakersfield"
+    "city":"Los Angeles"
   },
   {
     "unitid":117724,
     "name":"Los Angeles Trade Technical College",
     "state":"CA",
-    "city":"Fresno"
+    "city":"Los Angeles"
   },
   {
     "unitid":117733,
     "name":"Los Angeles Valley College",
     "state":"CA",
-    "city":"Santa Rosa"
+    "city":"Valley Glen"
   },
   {
     "unitid":117788,
     "name":"Los Angeles City College",
     "state":"CA",
-    "city":"Kentfield"
+    "city":"Los Angeles"
   },
   {
     "unitid":117803,
     "name":"Los Angeles County College of Nursing and Allied Health",
     "state":"CA",
-    "city":"Ukiah"
+    "city":"Los Angeles"
   },
   {
     "unitid":117867,
     "name":"Los Angeles Mission College",
     "state":"CA",
-    "city":"Atherton"
+    "city":"Sylmar"
   },
   {
     "unitid":117894,
     "name":"Los Medanos College",
     "state":"CA",
-    "city":"Merced"
+    "city":"Pittsburg"
   },
   {
     "unitid":117900,
     "name":"Los Rios Community College District Office",
-    "state":"CA",
-    "city":"Oakland"
+    "state":"California",
+    "city":null
   },
   {
     "unitid":117946,
     "name":"Loyola Marymount University",
     "state":"CA",
-    "city":"Oceanside"
+    "city":"Los Angeles"
   },
   {
     "unitid":117955,
     "name":"Lu Ross Academy",
     "state":"CA",
-    "city":"Santa Clara"
+    "city":"Ventura"
   },
   {
     "unitid":118134,
     "name":"Lyle's College of Beauty",
     "state":"CA",
-    "city":"Oxnard"
+    "city":"Bakersfield"
   },
   {
     "unitid":118143,
     "name":"Lyle's College of  Beauty",
     "state":"CA",
-    "city":"Modesto"
+    "city":"Fresno"
   },
   {
     "unitid":118161,
     "name":"Lytles Redwood Empire Beauty College",
     "state":"CA",
-    "city":"Oakland"
+    "city":"Santa Rosa"
   },
   {
     "unitid":126951,
@@ -195,241 +195,241 @@
     "unitid":127389,
     "name":"Lamar Community College",
     "state":"CO",
-    "city":"Gunnison"
+    "city":"Lamar"
   },
   {
     "unitid":129181,
     "name":"Lincoln Technical Institute-East Windsor",
     "state":"CT",
-    "city":"Waterbury"
+    "city":"East Windsor"
   },
   {
     "unitid":129923,
     "name":"Lincoln Technical Institute-New Britain",
-    "state":"DE",
-    "city":"Dover"
+    "state":"CT",
+    "city":"New Britain"
   },
   {
     "unitid":132657,
     "name":"Lynn University",
     "state":"FL",
-    "city":"Tampa"
+    "city":"Boca Raton"
   },
   {
     "unitid":133155,
     "name":"Lorenzo Walker Technical College",
     "state":"FL",
-    "city":"Gainesville"
+    "city":"Naples"
   },
   {
     "unitid":135142,
     "name":"La Belle Beauty School",
     "state":"FL",
-    "city":"West Palm Beach"
+    "city":"Hialeah"
   },
   {
     "unitid":135179,
     "name":"Lake Technical College",
     "state":"FL",
-    "city":"New Port Richey"
+    "city":"Eustis"
   },
   {
     "unitid":135188,
     "name":"Lake-Sumter State College",
     "state":"FL",
-    "city":"Pensacola"
+    "city":"Leesburg"
   },
   {
     "unitid":135276,
     "name":"Lively Technical College",
     "state":"FL",
-    "city":"Winter Haven"
+    "city":"Tallahassee"
   },
   {
     "unitid":135294,
     "name":"Lindsey Hopkins Technical College",
     "state":"FL",
-    "city":"Milton"
+    "city":"Miami"
   },
   {
     "unitid":135337,
     "name":"Loraines Academy & Spa",
     "state":"FL",
-    "city":"Boynton Beach"
+    "city":"Saint Petersburg"
   },
   {
     "unitid":135364,
     "name":"Luther Rice College & Seminary",
-    "state":"FL",
-    "city":"Winter Haven"
+    "state":"GA",
+    "city":"Lithonia"
   },
   {
     "unitid":140234,
     "name":"LaGrange College",
     "state":"GA",
-    "city":"Valdosta"
+    "city":"Lagrange"
   },
   {
     "unitid":140243,
     "name":"Lanier Technical College",
     "state":"GA",
-    "city":"Valdosta"
+    "city":"Gainesville"
   },
   {
     "unitid":140252,
     "name":"Life University",
     "state":"GA",
-    "city":"Macon"
+    "city":"Marietta"
   },
   {
     "unitid":141811,
     "name":"Leeward Community College",
-    "state":"IL",
-    "city":"Belleville"
+    "state":"HI",
+    "city":"Pearl City"
   },
   {
     "unitid":142328,
     "name":"Lewis-Clark State College",
-    "state":"IL",
-    "city":"Galesburg"
+    "state":"ID",
+    "city":"Lewiston"
   },
   {
     "unitid":146481,
     "name":"Lake Forest College",
     "state":"IL",
-    "city":"Niles"
+    "city":"Lake Forest"
   },
   {
     "unitid":146490,
     "name":"Lake Forest Graduate School of Management",
     "state":"IL",
-    "city":"Naperville"
+    "city":"Lake Forest"
   },
   {
     "unitid":146506,
     "name":"Lake Land College",
     "state":"IL",
-    "city":"Chicago"
+    "city":"Mattoon"
   },
   {
     "unitid":146533,
     "name":"Lakeview College of Nursing",
     "state":"IL",
-    "city":"Lisle"
+    "city":"Danville"
   },
   {
     "unitid":146603,
     "name":"Lewis and Clark Community College",
     "state":"IL",
-    "city":"Dekalb"
+    "city":"Godfrey"
   },
   {
     "unitid":146612,
     "name":"Lewis University",
     "state":"IL",
-    "city":"Evanston"
+    "city":"Romeoville"
   },
   {
     "unitid":146667,
     "name":"Lincoln Christian University",
     "state":"IL",
-    "city":"Chicago"
+    "city":"Lincoln"
   },
   {
     "unitid":146685,
     "name":"Lincoln Land Community College",
     "state":"IL",
-    "city":"Des Plaines"
+    "city":"Springfield"
   },
   {
     "unitid":146700,
     "name":"Lincoln College of Technology-Melrose Park",
     "state":"IL",
-    "city":"East Peoria"
+    "city":"Melrose Park"
   },
   {
     "unitid":146719,
     "name":"Loyola University Chicago",
     "state":"IL",
-    "city":"Bourbonnais"
+    "city":"Chicago"
   },
   {
     "unitid":146728,
     "name":"Lutheran School of Theology at Chicago",
     "state":"IL",
-    "city":"Champaign"
+    "city":"Chicago"
   },
   {
     "unitid":151661,
     "name":"Lincoln College of Technology-Indianapolis",
-    "state":"IA",
-    "city":"Cedar Rapids"
+    "state":"IN",
+    "city":"Indianapolis"
   },
   {
     "unitid":153746,
     "name":"La James International College-Cedar Falls",
     "state":"IA",
-    "city":"Fayette"
+    "city":"Cedar Falls"
   },
   {
     "unitid":153764,
     "name":"La James International College-Johnston",
     "state":"IA",
-    "city":"Forest City"
+    "city":"Johnston"
   },
   {
     "unitid":153773,
     "name":"La James College of Hairstyling and Cosmetology",
     "state":"IA",
-    "city":"Waverly"
+    "city":"Mason City"
   },
   {
     "unitid":153782,
     "name":"La James International College-Ft Dodge",
     "state":"IA",
-    "city":"Dubuque"
+    "city":"Fort Dodge"
   },
   {
     "unitid":153825,
     "name":"Loras College",
     "state":"IA",
-    "city":"Cedar Falls"
+    "city":"Dubuque"
   },
   {
     "unitid":153834,
     "name":"Luther College",
     "state":"IA",
-    "city":"Sioux City"
+    "city":"Decorah"
   },
   {
     "unitid":154332,
     "name":"La James International College-Davenport",
-    "state":"KS",
-    "city":"Emporia"
+    "state":"IA",
+    "city":"Davenport"
   },
   {
     "unitid":155450,
     "name":"Labette Community College",
-    "state":"KY",
-    "city":"Bowling Green"
+    "state":"KS",
+    "city":"Parsons"
   },
   {
     "unitid":157207,
     "name":"Lexington Theological Seminary",
-    "state":"LA",
-    "city":"Baton Rouge"
+    "state":"KY",
+    "city":"Lexington"
   },
   {
     "unitid":157216,
     "name":"Lindsey Wilson College",
-    "state":"LA",
-    "city":"Bossier City"
+    "state":"KY",
+    "city":"Columbia"
   },
   {
     "unitid":157298,
     "name":"Louisville Presbyterian Theological Seminary",
-    "state":"LA",
-    "city":"West Monroe"
+    "state":"KY",
+    "city":"Louisville"
   },
   {
     "unitid":159373,
@@ -441,7 +441,7 @@
     "unitid":159382,
     "name":"Louisiana State University-Alexandria",
     "state":"LA",
-    "city":"Hammond"
+    "city":"Alexandria"
   },
   {
     "unitid":159391,
@@ -453,7 +453,7 @@
     "unitid":159407,
     "name":"Louisiana State University-Eunice",
     "state":"LA",
-    "city":"New Orleans"
+    "city":"Eunice"
   },
   {
     "unitid":159416,
@@ -465,181 +465,181 @@
     "unitid":159531,
     "name":"Louisiana Academy of Beauty",
     "state":"LA",
-    "city":"New Orleans"
+    "city":"Eunice"
   },
   {
     "unitid":159568,
     "name":"Louisiana Christian University",
     "state":"LA",
-    "city":"New Orleans"
+    "city":"Pineville"
   },
   {
     "unitid":159647,
     "name":"Louisiana Tech University",
-    "state":"ME",
-    "city":"Lewiston"
+    "state":"LA",
+    "city":"Ruston"
   },
   {
     "unitid":159656,
     "name":"Loyola University New Orleans",
-    "state":"ME",
-    "city":"Bangor"
+    "state":"LA",
+    "city":"New Orleans"
   },
   {
     "unitid":160472,
     "name":"LaSalle Tech",
-    "state":"ME",
-    "city":"Presque Isle"
+    "state":"LA",
+    "city":"Houma"
   },
   {
     "unitid":163028,
     "name":"Lincoln College of Technology-Columbia",
-    "state":"MA",
-    "city":"Marlborough"
+    "state":"MD",
+    "city":"Columbia"
   },
   {
     "unitid":163046,
     "name":"Loyola University Maryland",
-    "state":"MA",
-    "city":"Worcester"
+    "state":"MD",
+    "city":"Baltimore"
   },
   {
     "unitid":165264,
     "name":"Laboure College of Healthcare",
     "state":"MA",
-    "city":"Boston"
+    "city":"Milton"
   },
   {
     "unitid":165556,
     "name":"Lincoln Technical Institute-Somerville",
     "state":"MA",
-    "city":"Cambridge"
+    "city":"Somerville"
   },
   {
     "unitid":166391,
     "name":"Lasell University",
     "state":"MA",
-    "city":"Chicopee"
+    "city":"Newton"
   },
   {
     "unitid":166407,
     "name":"Lawrence Memorial Hospital School of Nursing",
     "state":"MA",
-    "city":"Weston"
+    "city":"Medford"
   },
   {
     "unitid":166452,
     "name":"Lesley University",
     "state":"MA",
-    "city":"Quincy"
+    "city":"Cambridge"
   },
   {
     "unitid":166489,
     "name":"Longy School of Music of Bard College",
     "state":"MA",
-    "city":"Worcester"
+    "city":"Cambridge"
   },
   {
     "unitid":166498,
     "name":"Lowell Academy Hairstyling Institute",
     "state":"MA",
-    "city":"Weston"
+    "city":"Lowell"
   },
   {
     "unitid":170620,
     "name":"Lake Michigan College",
     "state":"MI",
-    "city":"Port Huron"
+    "city":"Benton Harbor"
   },
   {
     "unitid":170639,
     "name":"Lake Superior State University",
     "state":"MI",
-    "city":"Dowagiac"
+    "city":"Sault Ste Marie"
   },
   {
     "unitid":170657,
     "name":"Lansing Community College",
     "state":"MI",
-    "city":"Spring Arbor"
+    "city":"Lansing"
   },
   {
     "unitid":170675,
     "name":"Lawrence Technological University",
     "state":"MI",
-    "city":"Plainwell"
+    "city":"Southfield"
   },
   {
     "unitid":173461,
     "name":"Lake Superior College",
     "state":"MN",
-    "city":"Rochester"
+    "city":"Duluth"
   },
   {
     "unitid":173896,
     "name":"Luther Seminary",
     "state":"MN",
-    "city":"Bloomington"
+    "city":"Saint Paul"
   },
   {
     "unitid":177931,
     "name":"Lex La-Ray Technical Center",
     "state":"MO",
-    "city":"Bridgeton"
+    "city":"Lexington"
   },
   {
     "unitid":177940,
     "name":"Lincoln University",
-    "state":"KS",
-    "city":"Leawood"
+    "state":"MO",
+    "city":"Jefferson City"
   },
   {
     "unitid":177968,
     "name":"Lindenwood University",
     "state":"MO",
-    "city":"Bolivar"
+    "city":"Saint Charles"
   },
   {
     "unitid":177986,
     "name":"Logan University",
     "state":"MO",
-    "city":"Saint Louis"
+    "city":"Chesterfield"
   },
   {
     "unitid":180328,
     "name":"Little Big Horn College",
-    "state":"NE",
-    "city":"Lincoln"
+    "state":"MT",
+    "city":"Crow Agency"
   },
   {
     "unitid":182148,
     "name":"Las Vegas College",
-    "state":"NJ",
-    "city":"Mays Landing"
+    "state":"NV",
+    "city":"Las Vegas"
   },
   {
     "unitid":183123,
     "name":"Lakes Region Community College",
-    "state":"NJ",
-    "city":"Sewell"
+    "state":"NH",
+    "city":"Laconia"
   },
   {
     "unitid":184056,
     "name":"Lincoln Technical Institute-Iselin",
     "state":"NJ",
-    "city":"Princeton"
+    "city":"Iselin"
   },
   {
     "unitid":184427,
     "name":"Lincoln Technical Institute-South Plainfield",
     "state":"NJ",
-    "city":"Camden"
+    "city":"South Plainfield"
   },
   {
     "unitid":185396,
     "name":"Lincoln Technical Institute-Union",
     "state":"NJ",
-    "city":"Cranford"
+    "city":"Union"
   },
   {
     "unitid":192271,
@@ -651,822 +651,822 @@
     "unitid":192323,
     "name":"Le Moyne College",
     "state":"NY",
-    "city":"New York"
+    "city":"Syracuse"
   },
   {
     "unitid":192448,
     "name":"Long Island University",
     "state":"NY",
-    "city":"Sanborn"
+    "city":"Brookville"
   },
   {
     "unitid":192484,
     "name":"Long Island Beauty School-Hempstead",
     "state":"NY",
-    "city":"Niagara University"
+    "city":"Hempstead"
   },
   {
     "unitid":192509,
     "name":"Long Island Business Institute",
     "state":"NY",
-    "city":"Peekskill"
+    "city":"Flushing"
   },
   {
     "unitid":198808,
     "name":"Lees-McRae College",
     "state":"NC",
-    "city":"Lumberton"
+    "city":"Banner Elk"
   },
   {
     "unitid":198817,
     "name":"Lenoir Community College",
     "state":"NC",
-    "city":"Wentworth"
+    "city":"Kinston"
   },
   {
     "unitid":198835,
     "name":"Lenoir-Rhyne University",
     "state":"NC",
-    "city":"Salisbury"
+    "city":"Hickory"
   },
   {
     "unitid":198844,
     "name":"Leons Beauty School Inc",
     "state":"NC",
-    "city":"Raleigh"
+    "city":"Greensboro"
   },
   {
     "unitid":198862,
     "name":"Livingstone College",
     "state":"NC",
-    "city":"Winston-Salem"
+    "city":"Salisbury"
   },
   {
     "unitid":198871,
     "name":"Louisburg College",
     "state":"NC",
-    "city":"Clinton"
+    "city":"Louisburg"
   },
   {
     "unitid":200192,
     "name":"Lake Region State College",
-    "state":"OH",
-    "city":"Independence"
+    "state":"ND",
+    "city":"Devils Lake"
   },
   {
     "unitid":203580,
     "name":"Lake Erie College",
     "state":"OH",
-    "city":"Lima"
+    "city":"Painesville"
   },
   {
     "unitid":203599,
     "name":"Lakeland Community College",
     "state":"OH",
-    "city":"Columbus"
+    "city":"Kirtland"
   },
   {
     "unitid":203748,
     "name":"Lorain County Community College",
     "state":"OH",
-    "city":"Chillicothe"
+    "city":"Elyria"
   },
   {
     "unitid":203757,
     "name":"Lourdes University",
     "state":"OH",
-    "city":"Ironton"
+    "city":"Sylvania"
   },
   {
     "unitid":207209,
     "name":"Langston University",
-    "state":"OR",
-    "city":"Portland"
+    "state":"OK",
+    "city":"Langston"
   },
   {
     "unitid":209038,
     "name":"Lane Community College",
-    "state":"PA",
-    "city":"Pittsburgh"
+    "state":"OR",
+    "city":"Eugene"
   },
   {
     "unitid":209056,
     "name":"Lewis & Clark College",
-    "state":"PA",
-    "city":"Meadville"
+    "state":"OR",
+    "city":"Portland"
   },
   {
     "unitid":209065,
     "name":"Linfield University",
-    "state":"PA",
-    "city":"Whitehall"
+    "state":"OR",
+    "city":"McMinnville"
   },
   {
     "unitid":209074,
     "name":"Linn-Benton Community College",
-    "state":"PA",
-    "city":"Center Valley"
+    "state":"OR",
+    "city":"Albany"
   },
   {
     "unitid":213358,
     "name":"La Roche University",
     "state":"PA",
-    "city":"Malvern"
+    "city":"Pittsburgh"
   },
   {
     "unitid":213367,
     "name":"La Salle University",
     "state":"PA",
-    "city":"New Kensington"
+    "city":"Philadelphia"
   },
   {
     "unitid":213376,
     "name":"Lackawanna College",
     "state":"PA",
-    "city":"Sharon"
+    "city":"Scranton"
   },
   {
     "unitid":213385,
     "name":"Lafayette College",
     "state":"PA",
-    "city":"Dallas"
+    "city":"Easton"
   },
   {
     "unitid":213400,
     "name":"Lancaster Bible College",
     "state":"PA",
-    "city":"Dunmore"
+    "city":"Lancaster"
   },
   {
     "unitid":213446,
     "name":"Lancaster Theological Seminary",
     "state":"PA",
-    "city":"Center Valley"
+    "city":"Lancaster"
   },
   {
     "unitid":213455,
     "name":"Lancaster School of Cosmetology & Therapeutic Bodywork",
     "state":"PA",
-    "city":"Altoona"
+    "city":"Lancaster"
   },
   {
     "unitid":213473,
     "name":"Lansdale School of Business",
     "state":"PA",
-    "city":"Monaca"
+    "city":"North Wales"
   },
   {
     "unitid":213491,
     "name":"Lansdale School of Cosmetology Inc",
     "state":"PA",
-    "city":"Reading"
+    "city":"Lansdale"
   },
   {
     "unitid":213507,
     "name":"Lebanon Valley College",
     "state":"PA",
-    "city":"Middletown"
+    "city":"Annville"
   },
   {
     "unitid":213525,
     "name":"Lehigh Carbon Community College",
     "state":"PA",
-    "city":"Media"
+    "city":"Schnecksville"
   },
   {
     "unitid":213543,
     "name":"Lehigh University",
     "state":"PA",
-    "city":"Lemont Furnace"
+    "city":"Bethlehem"
   },
   {
     "unitid":213570,
     "name":"Lincoln Technical Institute-Allentown",
     "state":"PA",
-    "city":"Hazleton"
+    "city":"Allentown"
   },
   {
     "unitid":213589,
     "name":"Lincoln Technical Institute-Philadelphia",
     "state":"PA",
-    "city":"University Park"
+    "city":"Philadelphia"
   },
   {
     "unitid":213598,
     "name":"Lincoln University",
     "state":"PA",
-    "city":"McKeesport"
+    "city":"Lincoln University"
   },
   {
     "unitid":213659,
     "name":"Luzerne County Community College",
     "state":"PA",
-    "city":"Schuylkill Haven"
+    "city":"Nanticoke"
   },
   {
     "unitid":213668,
     "name":"Lycoming College",
     "state":"PA",
-    "city":"York"
+    "city":"Williamsport"
   },
   {
     "unitid":215992,
     "name":"Laurel Technical Institute",
-    "state":"RI",
-    "city":"Providence"
+    "state":"PA",
+    "city":"Hermitage"
   },
   {
     "unitid":218229,
     "name":"Lander University",
-    "state":"SD",
-    "city":"Aberdeen"
+    "state":"SC",
+    "city":"Greenwood"
   },
   {
     "unitid":218238,
     "name":"Limestone University",
-    "state":"SD",
-    "city":"Kyle"
+    "state":"SC",
+    "city":"Gaffney"
   },
   {
     "unitid":219143,
     "name":"Lake Area Technical College",
-    "state":"TN",
-    "city":"Chattanooga"
+    "state":"SD",
+    "city":"Watertown"
   },
   {
     "unitid":219976,
     "name":"Lipscomb University",
     "state":"TN",
-    "city":"Pulaski"
+    "city":"Nashville"
   },
   {
     "unitid":220598,
     "name":"Lane College",
     "state":"TN",
-    "city":"Nashville"
+    "city":"Jackson"
   },
   {
     "unitid":220604,
     "name":"Le Moyne-Owen College",
     "state":"TN",
-    "city":"Cookeville"
+    "city":"Memphis"
   },
   {
     "unitid":220613,
     "name":"Lee University",
     "state":"TN",
-    "city":"Nashville"
+    "city":"Cleveland"
   },
   {
     "unitid":220631,
     "name":"Lincoln Memorial University",
     "state":"TN",
-    "city":"Blountville"
+    "city":"Harrogate"
   },
   {
     "unitid":221148,
     "name":"Lincoln College of Technology-Nashville",
-    "state":"TX",
-    "city":"Houston"
+    "state":"TN",
+    "city":"Nashville"
   },
   {
     "unitid":226091,
     "name":"Lamar University",
     "state":"TX",
-    "city":"San Antonio"
+    "city":"Beaumont"
   },
   {
     "unitid":226107,
     "name":"Lamar State College-Orange",
     "state":"TX",
-    "city":"Pasadena"
+    "city":"Orange"
   },
   {
     "unitid":226116,
     "name":"Lamar State College-Port Arthur",
     "state":"TX",
-    "city":"Kerrville"
+    "city":"Port Arthur"
   },
   {
     "unitid":226125,
     "name":"Laredo Beauty College Inc",
     "state":"TX",
-    "city":"Seguin"
+    "city":"Laredo"
   },
   {
     "unitid":226134,
     "name":"Laredo College",
     "state":"TX",
-    "city":"San Antonio"
+    "city":"Laredo"
   },
   {
     "unitid":226204,
     "name":"Lee College",
     "state":"TX",
-    "city":"Corpus Christi"
+    "city":"Baytown"
   },
   {
     "unitid":226231,
     "name":"LeTourneau University",
     "state":"TX",
-    "city":"Houston"
+    "city":"Longview"
   },
   {
     "unitid":226277,
     "name":"Lincoln College of Technology-Grand Prairie",
     "state":"TX",
-    "city":"Weslaco"
+    "city":"Grand Prairie"
   },
   {
     "unitid":226383,
     "name":"Lubbock Christian University",
     "state":"TX",
-    "city":"McAllen"
+    "city":"Lubbock"
   },
   {
     "unitid":227182,
     "name":"Lone Star College System",
     "state":"TX",
-    "city":"Temple"
+    "city":"The Woodlands"
   },
   {
     "unitid":232557,
     "name":"Liberty University",
     "state":"VA",
-    "city":"Richmond"
+    "city":"Lynchburg"
   },
   {
     "unitid":232566,
     "name":"Longwood University",
     "state":"VA",
-    "city":"Charlottesville"
+    "city":"Farmville"
   },
   {
     "unitid":232575,
     "name":"Laurel Ridge Community College",
     "state":"VA",
-    "city":"Lexington"
+    "city":"Middletown"
   },
   {
     "unitid":235699,
     "name":"Lake Washington Institute of Technology",
-    "state":"WV",
-    "city":"Huntington"
+    "state":"WA",
+    "city":"Kirkland"
   },
   {
     "unitid":235750,
     "name":"Lower Columbia College",
-    "state":"WV",
-    "city":"Martinsburg"
+    "state":"WA",
+    "city":"Longview"
   },
   {
     "unitid":238980,
     "name":"Lakeland University",
-    "state":"WY",
-    "city":"Sheridan"
+    "state":"WI",
+    "city":"Plymouth"
   },
   {
     "unitid":239008,
     "name":"Lakeshore Technical College",
-    "state":"WY",
-    "city":"Rock Springs"
+    "state":"WI",
+    "city":"Cleveland"
   },
   {
     "unitid":239017,
     "name":"Lawrence University",
-    "state":"WY",
-    "city":"Cheyenne"
+    "state":"WI",
+    "city":"Appleton"
   },
   {
     "unitid":240620,
     "name":"Laramie County Community College",
-    "state":"PR",
-    "city":"San Juan"
+    "state":"WY",
+    "city":"Cheyenne"
   },
   {
     "unitid":242820,
     "name":"Liceo de Arte y Tecnologia",
-    "state":"PA",
-    "city":"Scranton"
+    "state":"PR",
+    "city":"San Juan"
   },
   {
     "unitid":247649,
     "name":"Landmark College",
-    "state":"MO",
-    "city":"St. Louis"
+    "state":"VT",
+    "city":"Putney"
   },
   {
     "unitid":250027,
     "name":"Laurel Business Institute",
-    "state":"OK",
-    "city":"Ardmore"
+    "state":"PA",
+    "city":"Uniontown"
   },
   {
     "unitid":260372,
     "name":"Lac Courte Oreilles Ojibwe University",
-    "state":"MI",
-    "city":"Roosevelt Park"
+    "state":"WI",
+    "city":"Hayward"
   },
   {
     "unitid":363633,
     "name":"Luna Community College",
-    "state":"NY",
-    "city":"Liverpool"
+    "state":"NM",
+    "city":"Las Vegas"
   },
   {
     "unitid":366401,
     "name":"Las Positas College",
     "state":"CA",
-    "city":"Los Angeles"
+    "city":"Livermore"
   },
   {
     "unitid":374574,
     "name":"Lincoln Technical Institute-Moorestown",
-    "state":"CA",
-    "city":"Oxnard"
+    "state":"NJ",
+    "city":"Moorestown"
   },
   {
     "unitid":376330,
     "name":"Liceo de Arte-Dise-O y Comercio",
-    "state":"HI",
-    "city":"Hilo"
+    "state":"PR",
+    "city":"Caguas"
   },
   {
     "unitid":383163,
     "name":"La Belle Beauty Academy",
-    "state":"PR",
-    "city":"Bayamon"
+    "state":"FL",
+    "city":"Miami"
   },
   {
     "unitid":383297,
     "name":"Long Island Beauty School-Hauppauge",
-    "state":"PR",
-    "city":"Juana Diaz"
+    "state":"NY",
+    "city":"Hauppauge"
   },
   {
     "unitid":400558,
     "name":"Los Angeles Pacific College",
-    "state":"GA",
-    "city":"Athens"
-  },
-  {
-    "unitid":403478,
-    "name":"Lincoln Trail College",
-    "state":"OH",
-    "city":"Oberlin"
-  },
-  {
-    "unitid":407629,
-    "name":"Lake Erie College of Osteopathic Medicine",
-    "state":"CA",
-    "city":"Ventura"
-  },
-  {
-    "unitid":408729,
-    "name":"Laurel Technical Institute",
-    "state":"MO",
-    "city":"West Plains"
-  },
-  {
-    "unitid":409591,
-    "name":"Lorain County Joint Vocational School District",
-    "state":"NY",
-    "city":"Plattsburgh"
-  },
-  {
-    "unitid":413626,
-    "name":"Leech Lake Tribal College",
-    "state":"OH",
-    "city":"Newark"
-  },
-  {
-    "unitid":418515,
-    "name":"Lenape Technical School Practical Nursing Program",
-    "state":"CA",
-    "city":"Fresno"
-  },
-  {
-    "unitid":418533,
-    "name":"Lancaster County Career and Technology Center",
-    "state":"CA",
-    "city":"Riverside"
-  },
-  {
-    "unitid":418542,
-    "name":"Lebanon County Area Vocational Technical School",
-    "state":"FL",
-    "city":"Hialeah"
-  },
-  {
-    "unitid":420343,
-    "name":"Lincoln Technical Institute-Mahwah",
-    "state":"WV",
-    "city":"Charleston"
-  },
-  {
-    "unitid":427335,
-    "name":"Lia Schorr Institute of Cosmetic Skin Care Training",
-    "state":"LA",
-    "city":"Metairie"
-  },
-  {
-    "unitid":433101,
-    "name":"Lincoln Technical Institute-Lincoln",
-    "state":"PR",
-    "city":"Carolina"
-  },
-  {
-    "unitid":434016,
-    "name":"Little Priest Tribal College",
-    "state":"IL",
-    "city":"Skokie"
-  },
-  {
-    "unitid":434159,
-    "name":"Lincoln College of Technology-Marietta",
     "state":"CA",
     "city":"Los Angeles"
   },
   {
+    "unitid":403478,
+    "name":"Lincoln Trail College",
+    "state":"IL",
+    "city":"Robinson"
+  },
+  {
+    "unitid":407629,
+    "name":"Lake Erie College of Osteopathic Medicine",
+    "state":"PA",
+    "city":"Erie"
+  },
+  {
+    "unitid":408729,
+    "name":"Laurel Technical Institute",
+    "state":"PA",
+    "city":"MEADVILLE"
+  },
+  {
+    "unitid":409591,
+    "name":"Lorain County Joint Vocational School District",
+    "state":"OH",
+    "city":"Oberlin"
+  },
+  {
+    "unitid":413626,
+    "name":"Leech Lake Tribal College",
+    "state":"MN",
+    "city":"Cass Lake"
+  },
+  {
+    "unitid":418515,
+    "name":"Lenape Technical School Practical Nursing Program",
+    "state":"PA",
+    "city":"Ford City"
+  },
+  {
+    "unitid":418533,
+    "name":"Lancaster County Career and Technology Center",
+    "state":"PA",
+    "city":"Willow Street"
+  },
+  {
+    "unitid":418542,
+    "name":"Lebanon County Area Vocational Technical School",
+    "state":"PA",
+    "city":"Lebanon"
+  },
+  {
+    "unitid":420343,
+    "name":"Lincoln Technical Institute-Mahwah",
+    "state":"NJ",
+    "city":"Mahwah"
+  },
+  {
+    "unitid":427335,
+    "name":"Lia Schorr Institute of Cosmetic Skin Care Training",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":433101,
+    "name":"Lincoln Technical Institute-Lincoln",
+    "state":"RI",
+    "city":"Lincoln"
+  },
+  {
+    "unitid":434016,
+    "name":"Little Priest Tribal College",
+    "state":"NE",
+    "city":"Winnebago"
+  },
+  {
+    "unitid":434159,
+    "name":"Lincoln College of Technology-Marietta",
+    "state":"GA",
+    "city":"Marietta"
+  },
+  {
     "unitid":435000,
     "name":"Louisiana State University Health Sciences Center-Shreveport",
-    "state":"GU",
-    "city":"Mangilao"
+    "state":"LA",
+    "city":"Shreveport"
   },
   {
     "unitid":436429,
     "name":"Los Angeles Film School",
-    "state":"OK",
-    "city":"Shawnee"
+    "state":"CA",
+    "city":"Hollywood"
   },
   {
     "unitid":441618,
     "name":"Leon Studio One School of Beauty Knowledge",
-    "state":"PR",
-    "city":"Hato Rey"
+    "state":"NY",
+    "city":"Williamsville"
   },
   {
     "unitid":441760,
     "name":"Lamar Institute of Technology",
-    "state":"IL",
-    "city":"Chicago"
+    "state":"TX",
+    "city":"Beaumont"
   },
   {
     "unitid":442073,
     "name":"Lincoln Technical Institute-Paramus",
-    "state":"CA",
-    "city":"San Diego"
+    "state":"NJ",
+    "city":"Paramus"
   },
   {
     "unitid":444228,
     "name":"LeGrand Institute of Cosmetology Inc",
-    "state":"AZ",
-    "city":"Tucson"
+    "state":"SC",
+    "city":"Camden"
   },
   {
     "unitid":444468,
     "name":"Lawrenceburg Technical College",
-    "state":"MI",
-    "city":"Port Huron"
+    "state":"TN",
+    "city":"Lawrenceburg"
   },
   {
     "unitid":444732,
     "name":"Leston College",
-    "state":"FL",
-    "city":"Ormond Beach"
+    "state":"PR",
+    "city":"Bayamon"
   },
   {
     "unitid":445911,
     "name":"Lincoln Technical Institute-Shelton",
-    "state":"CA",
-    "city":"El Dorado Hills"
+    "state":"CT",
+    "city":"Shelton"
   },
   {
     "unitid":446385,
     "name":"Los Angeles College of Music",
-    "state":"PA",
-    "city":"Bethlehem"
+    "state":"CA",
+    "city":"Pasadena"
   },
   {
     "unitid":447731,
     "name":"Los Angeles College of Aesthetics",
-    "state":"NJ",
-    "city":"Lakewood"
+    "state":"CA",
+    "city":"Los Angeles"
   },
   {
     "unitid":448594,
     "name":"Lemoore College",
-    "state":"PA",
-    "city":"Pittsburgh"
+    "state":"CA",
+    "city":"Lemoore"
   },
   {
     "unitid":449320,
     "name":"Lincoln Technical Institute-Whitestone",
-    "state":"FL",
-    "city":"Miami Springs"
+    "state":"NY",
+    "city":"Whitestone"
   },
   {
     "unitid":449612,
     "name":"Louisiana Culinary Institute",
-    "state":"NJ",
-    "city":"Lakewood"
+    "state":"LA",
+    "city":"Baton Rouge"
   },
   {
     "unitid":450632,
     "name":"Lexington Healing Arts Academy",
-    "state":"OH",
-    "city":"Columbus"
+    "state":"KY",
+    "city":"Lexington"
   },
   {
     "unitid":451291,
     "name":"Lakewood School of Therapeutic Massage",
-    "state":"FL",
-    "city":"Delray Beach"
+    "state":"MI",
+    "city":"Port Huron"
   },
   {
     "unitid":454786,
     "name":"Laurus College",
-    "state":"AZ",
-    "city":"Mesa"
+    "state":"CA",
+    "city":"San Luis Obispo"
   },
   {
     "unitid":456214,
     "name":"Lamson Institute",
-    "state":"OH",
-    "city":"Archbold"
+    "state":"TX",
+    "city":"San Antonio"
   },
   {
     "unitid":457633,
     "name":"L'esprit Academy",
     "state":"MI",
-    "city":"Grand Rapids"
+    "city":"Canton"
   },
   {
     "unitid":458007,
     "name":"Love Beauty School Inc",
-    "state":"DC",
-    "city":"Washington"
+    "state":"TN",
+    "city":"Manchester"
   },
   {
     "unitid":461722,
     "name":"Lindsey Institute of Cosmetology",
-    "state":"NY",
-    "city":"Geneva"
+    "state":"KY",
+    "city":"Bowling Green"
   },
   {
     "unitid":461838,
     "name":"Long Island Nail Skin & Hair Institute",
     "state":"NY",
-    "city":"New York"
+    "city":"Levittown"
   },
   {
     "unitid":474863,
     "name":"Los Angeles Pacific University",
-    "state":"MI",
-    "city":"Brighton"
+    "state":"CA",
+    "city":"San Dimas"
   },
   {
     "unitid":475574,
     "name":"Lil Lou's Beauty and Barber College",
-    "state":"AZ",
-    "city":"Scottsdale"
+    "state":"IN",
+    "city":"Gary"
   },
   {
     "unitid":476489,
     "name":"Larry's Barber College",
-    "state":"TX",
-    "city":"Austin"
+    "state":"IL",
+    "city":"Chicago"
   },
   {
     "unitid":481298,
     "name":"Lawrence & Company College of Cosmetology",
-    "state":"IL",
-    "city":"Lombard"
+    "state":"CA",
+    "city":"Hanford"
   },
   {
     "unitid":482246,
     "name":"Lynnes Welding Training",
-    "state":"FL",
-    "city":"Jacksonville"
+    "state":"ND",
+    "city":"Fargo"
   },
   {
     "unitid":483212,
     "name":"Louisiana Delta Community College",
-    "state":"NY",
-    "city":"Cheektowaga"
+    "state":"LA",
+    "city":"Monroe"
   },
   {
     "unitid":483221,
     "name":"Learnet Academy Inc",
-    "state":"OH",
-    "city":"Sylvania"
-  },
-  {
-    "unitid":483726,
-    "name":"Luckes Beauty Academy LLC",
     "state":"CA",
     "city":"Los Angeles"
   },
   {
+    "unitid":483726,
+    "name":"Luckes Beauty Academy LLC",
+    "state":"VA",
+    "city":"Newport  News"
+  },
+  {
     "unitid":483920,
     "name":"LaBarberia Institute of Hair",
-    "state":"MN",
-    "city":"Minneapolis"
+    "state":"OH",
+    "city":"Mayfield Hts"
   },
   {
     "unitid":483957,
     "name":"Lawrence & Company College of Cosmetology",
     "state":"CA",
-    "city":"Hollywood"
+    "city":"Selma"
   },
   {
     "unitid":484172,
     "name":"Lee Professional Institute",
-    "state":"WV",
-    "city":"Elkins"
+    "state":"FL",
+    "city":"Fort Myers"
   },
   {
     "unitid":485485,
     "name":"Latin Beauty Academy",
-    "state":"OH",
-    "city":"Cuyahoga Falls"
+    "state":"FL",
+    "city":"greenacres"
   },
   {
     "unitid":485519,
     "name":"Lionel University",
-    "state":"WA",
-    "city":"Vancouver"
+    "state":"CA",
+    "city":"Carpinteria"
   },
   {
     "unitid":486503,
     "name":"Laredo CHI Academy Beauty School",
-    "state":"TN",
-    "city":"Knoxville"
+    "state":"TX",
+    "city":"Laredo"
   },
   {
     "unitid":490124,
     "name":"Los Angeles Academy of Figurative Art",
-    "state":"TX",
-    "city":"Houston"
+    "state":"CA",
+    "city":"Van Nuys"
   },
   {
     "unitid":490717,
     "name":"L Makeup Institute",
-    "state":"FL",
-    "city":"Sarasota"
+    "state":"NV",
+    "city":"Las Vegas"
   },
   {
     "unitid":491677,
     "name":"Lehigh Valley Barber School",
-    "state":"NJ",
-    "city":"Edison"
+    "state":"PA",
+    "city":"Bethlehem"
   },
   {
     "unitid":494029,
     "name":"Lil Lou's Beauty and Barber College-Hammond",
-    "state":"PR",
-    "city":"Aguadilla"
+    "state":"IN",
+    "city":"Hammond"
   },
   {
     "unitid":494621,
     "name":"Lotus Professional College",
-    "state":"CA",
-    "city":"Elk Grove"
+    "state":"VA",
+    "city":"Richmond"
   },
   {
     "unitid":495387,
     "name":"Larry's Barber College",
-    "state":"TX",
-    "city":"Greenville"
+    "state":"IL",
+    "city":"Chicago"
   },
   {
     "unitid":496706,
     "name":"Lakewood University",
-    "state":"TX",
-    "city":"Houston"
+    "state":"OH",
+    "city":"Cleveland Heights"
   },
   {
     "unitid":496964,
     "name":"Larry's Barber College-Joliet",
-    "state":"GA",
-    "city":"Alpharetta"
+    "state":"IL",
+    "city":"Joliet"
   },
   {
     "unitid":497365,
     "name":"Legends Barber College",
-    "state":"CA",
-    "city":"Emeryville"
+    "state":"TX",
+    "city":"Lufkin"
   },
   {
     "unitid":498234,
     "name":"Larkin University",
     "state":"FL",
-    "city":"Tampa"
+    "city":"Miami"
   },
   {
     "unitid":498739,
     "name":"Lehigh Career & Technical Institute",
-    "state":"IN",
-    "city":"Muncie"
+    "state":"Pennsylvania",
+    "city":null
   }
 ]

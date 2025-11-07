@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 202222,
     "name": "Columbus State Community College",
-    "city": "Sheffield Village",
+    "city": "Columbus",
     "state": "OH",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: Mixed Transfer/Career & Technical-High Nontraditional",
-    "website": "www.ohiobusinesscollege.edu/",
+    "website": "https://www.cscc.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

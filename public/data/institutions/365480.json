@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 365480,
     "name": "Meridian Technology Center",
-    "city": "Niles",
-    "state": "IL",
+    "city": "Stillwater",
+    "state": "OK",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.roselschool.org/",
+    "website": "https://www.meridiantech.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

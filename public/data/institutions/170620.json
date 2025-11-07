@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 170620,
     "name": "Lake Michigan College",
-    "city": "Port Huron",
+    "city": "Benton Harbor",
     "state": "MI",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Baccalaureate/Associate's Colleges: Associate's Dominant",
-    "website": "www.sc4.edu/",
+    "website": "https://www.lakemichigancollege.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

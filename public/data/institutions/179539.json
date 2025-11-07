@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 179539,
     "name": "State Fair Community College",
-    "city": "Bellevue",
-    "state": "NE",
+    "city": "Sedalia",
+    "state": "MO",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: Mixed Transfer/Career & Technical-High Traditional",
-    "website": "www.bellevue.edu/",
+    "website": "https://www.sfccmo.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

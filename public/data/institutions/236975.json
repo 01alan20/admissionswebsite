@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 236975,
     "name": "Wenatchee Valley College",
-    "city": "Parkersburg",
-    "state": "WV",
+    "city": "Wenatchee",
+    "state": "WA",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate/Associate's Colleges: Associate's Dominant",
-    "website": "https://www.woodcountyschoolswv.com/o/wctc/page/practical-nursing",
+    "website": "www.wvc.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

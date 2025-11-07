@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 486813,
     "name": "Pima Medical Institute-El Paso",
-    "city": "Olympia",
-    "state": "WA",
+    "city": "El Paso",
+    "state": "TX",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Special Focus Two-Year: Health Professions",
-    "website": "www.fosbre-academy.com/",
+    "website": "https://pmi.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

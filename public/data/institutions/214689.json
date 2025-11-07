@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 214689,
     "name": "Pennsylvania State University-Penn State Altoona",
-    "city": "Moon Township",
+    "city": "Altoona",
     "state": "PA",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.rmu.edu/",
+    "website": "https://altoona.psu.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

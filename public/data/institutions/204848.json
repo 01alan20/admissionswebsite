@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 204848,
     "name": "Ohio University-Lancaster Campus",
-    "city": "Findlay",
+    "city": "Lancaster",
     "state": "OH",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Associate's Colleges: Mixed Transfer/Career & Technical-High Nontraditional",
-    "website": "winebrenner.edu/",
+    "website": "https://www.ohio.edu/lancaster/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

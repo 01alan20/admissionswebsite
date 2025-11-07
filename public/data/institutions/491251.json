@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 491251,
     "name": "The Culinary School of Fort Worth",
-    "city": "Miami",
-    "state": "FL",
+    "city": "Fort Worth",
+    "state": "TX",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.gmtti.edu/",
+    "website": "https://www.csftw.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

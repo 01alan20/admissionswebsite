@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 492449,
     "name": "Pima Medical Institute-San Marcos",
-    "city": "Beaumont",
-    "state": "TX",
+    "city": "San Marcos",
+    "state": "CA",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Special Focus Two-Year: Health Professions",
-    "website": "www.txinstitute.edu/",
+    "website": "https://pmi.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

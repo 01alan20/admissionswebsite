@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 163912,
     "name": "St. Mary's College of Maryland",
-    "city": "Boston",
-    "state": "MA",
+    "city": "St. Mary's City",
+    "state": "MD",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate Colleges: Arts & Sciences Focus",
-    "website": "www.bhcc.edu/",
+    "website": "https://www.smcm.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

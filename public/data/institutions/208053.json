@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 208053,
     "name": "High Plains Technology Center",
-    "city": "Ashland",
-    "state": "OR",
+    "city": "Woodward",
+    "state": "OK",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.sou.edu/",
+    "website": "https://www.hptc.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

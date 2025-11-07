@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 236753,
     "name": "Tacoma Community College",
-    "city": "Morgantown",
-    "state": "WV",
+    "city": "Tacoma",
+    "state": "WA",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate/Associate's Colleges: Associate's Dominant",
-    "website": "www.wvjc.edu/",
+    "website": "https://www.tacomacc.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 499325,
     "name": "Academy of Cosmetology, Barbering, and Esthetics",
-    "city": "Machias",
-    "state": "ME",
+    "city": null,
+    "state": "Oklahoma",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "https://machias.edu/",
+    "website": null,
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

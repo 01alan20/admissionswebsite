@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 200280,
     "name": "University of North Dakota",
-    "city": "Cincinnati",
-    "state": "OH",
+    "city": "Grand Forks",
+    "state": "ND",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Doctoral Universities: High Research Activity",
-    "website": "www.ccms.edu/",
+    "website": "https://und.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

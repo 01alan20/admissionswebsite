@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 435000,
     "name": "Louisiana State University Health Sciences Center-Shreveport",
-    "city": "Mangilao",
-    "state": "GU",
+    "city": "Shreveport",
+    "state": "LA",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Special Focus Four-Year: Medical Schools & Centers",
-    "website": "www.piu.edu/",
+    "website": "https://www.lsuhs.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

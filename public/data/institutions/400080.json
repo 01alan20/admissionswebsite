@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 400080,
     "name": "Summit College",
-    "city": "MEADVILLE",
-    "state": "PA",
+    "city": "San Bernardino",
+    "state": "CA",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.laurel.edu/",
+    "website": "https://www.summitcollege.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

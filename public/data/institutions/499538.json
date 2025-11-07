@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 499538,
     "name": "Puerto Rico Advance Institute",
-    "city": "Midland",
-    "state": "MI",
+    "city": null,
+    "state": "Puerto Rico",
     "control": "Private nonprofit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.davenport.edu/",
+    "website": null,
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

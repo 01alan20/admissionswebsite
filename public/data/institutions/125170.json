@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 125170,
     "name": "Berkeley City College",
-    "city": "Colorado Springs",
-    "state": "CO",
+    "city": "Berkeley",
+    "state": "CA",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: High Transfer-High Nontraditional",
-    "website": "https://www.uccs.edu/",
+    "website": "www.berkeleycitycollege.edu/wp/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

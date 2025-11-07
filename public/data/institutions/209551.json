@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 209551,
     "name": "University of Oregon",
-    "city": "Newtown",
-    "state": "PA",
+    "city": "Eugene",
+    "state": "OR",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Doctoral Universities: Very High Research Activity",
-    "website": "www.bucks.edu/",
+    "website": "https://www.uoregon.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

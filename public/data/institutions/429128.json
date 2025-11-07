@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 429128,
     "name": "Urban College of Boston",
-    "city": "Barrow",
-    "state": "AK",
+    "city": "Boston",
+    "state": "MA",
     "control": "Private nonprofit",
     "level": "2-year",
     "carnegie_basic": "Special Focus Two-Year: Other Fields",
-    "website": "www.ilisagvik.edu/",
+    "website": "https://www.urbancollege.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

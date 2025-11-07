@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 214768,
     "name": "Pennsylvania State University-Penn State Hazleton",
-    "city": "Frackville",
+    "city": "Hazleton",
     "state": "PA",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.stcenters.org/",
+    "website": "https://hazleton.psu.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

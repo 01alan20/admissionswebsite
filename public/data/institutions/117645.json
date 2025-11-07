@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 117645,
     "name": "Long Beach City College",
-    "city": "Los Angeles",
+    "city": "Long Beach",
     "state": "CA",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: High Transfer-High Traditional",
-    "website": "https://dhs.lacounty.gov/wps/portal/dhs/conah/",
+    "website": "www.lbcc.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

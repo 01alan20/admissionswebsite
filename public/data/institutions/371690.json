@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 371690,
     "name": "Downey Adult School",
-    "city": "Norfolk",
-    "state": "VA",
+    "city": "Downey",
+    "state": "CA",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "https://www.centuracollege.edu/campuses/norfolk",
+    "website": "www.das.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

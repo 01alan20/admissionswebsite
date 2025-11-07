@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 431600,
     "name": "UPMC Mercy School of Nursing",
-    "city": "Weslaco",
-    "state": "TX",
+    "city": "Pittsburgh",
+    "state": "PA",
     "control": "Private nonprofit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "abcrgv.com/",
+    "website": "https://www.upmc.com/mercyson",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

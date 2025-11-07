@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 200059,
     "name": "Dickinson State University",
-    "city": "Columbus",
-    "state": "OH",
+    "city": "Dickinson",
+    "state": "ND",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
-    "website": "https://www.capital.edu/",
+    "website": "www.dickinsonstate.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

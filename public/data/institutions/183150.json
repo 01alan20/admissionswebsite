@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 183150,
     "name": "Great Bay Community College",
-    "city": "Englewood Cliffs",
-    "state": "NJ",
+    "city": "Portsmouth",
+    "state": "NH",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: Mixed Transfer/Career & Technical-High Nontraditional",
-    "website": "holyname.org/SchoolofNursing",
+    "website": "https://www.greatbay.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

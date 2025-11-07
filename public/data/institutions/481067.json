@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 481067,
     "name": "World A Cuts Barber Institute",
-    "city": "Toms River",
-    "state": "NJ",
+    "city": null,
+    "state": "Pennsylvania",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.americaninstitute.com/",
+    "website": null,
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

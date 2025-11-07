@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 141565,
     "name": "University of Hawaii at Hilo",
-    "city": "Twin Falls",
-    "state": "ID",
+    "city": "Hilo",
+    "state": "HI",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Doctoral/Professional Universities",
-    "website": "www.csi.edu/",
+    "website": "https://hilo.hawaii.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

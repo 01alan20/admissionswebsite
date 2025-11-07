@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 128328,
     "name": "United States Air Force Academy",
-    "city": "Cromwell",
-    "state": "CT",
+    "city": "USAF Academy",
+    "state": "CO",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
-    "website": "www.holyapostles.edu/",
+    "website": "www.usafa.edu/",
     "admissions_url": null,
     "test_policy": "Required",
     "major_families": [

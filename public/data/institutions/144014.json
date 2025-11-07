@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 144014,
     "name": "Chicago Theological Seminary",
-    "city": "University Park",
+    "city": "Chicago",
     "state": "IL",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Special Focus Four-Year: Faith-Related Institutions",
-    "website": "www.govst.edu/",
+    "website": "https://www.ctschicago.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 204769,
     "name": "The Spa School",
-    "city": "Pepper Pike",
+    "city": "Columbus",
     "state": "OH",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.ursuline.edu/",
+    "website": "https://salonschools.ohiostate.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

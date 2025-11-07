@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 240505,
     "name": "Casper College",
-    "city": "Fajardo",
-    "state": "PR",
+    "city": "Casper",
+    "state": "WY",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: Mixed Transfer/Career & Technical-Mixed Traditional/Nontraditional",
-    "website": "www.fajardo.inter.edu/",
+    "website": "https://www.caspercollege.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

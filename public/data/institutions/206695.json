@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 206695,
     "name": "Youngstown State University",
-    "city": "Bethany",
-    "state": "OK",
+    "city": "Youngstown",
+    "state": "OH",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
-    "website": "www.swcu.edu/",
+    "website": "https://ysu.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

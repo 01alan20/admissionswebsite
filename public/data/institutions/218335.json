@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 218335,
     "name": "Medical University of South Carolina",
-    "city": "Aberdeen",
-    "state": "SD",
+    "city": "Charleston",
+    "state": "SC",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Special Focus Four-Year: Research Institutions",
-    "website": "www.presentation.edu/",
+    "website": "https://web.musc.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

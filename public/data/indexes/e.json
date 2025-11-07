@@ -3,91 +3,91 @@
     "unitid":101143,
     "name":"Enterprise State Community College",
     "state":"AL",
-    "city":"Bay Minette"
+    "city":"Enterprise"
   },
   {
     "unitid":103741,
     "name":"Empire Beauty School-Tucson",
     "state":"AZ",
-    "city":"Mesa"
+    "city":"Tucson"
   },
   {
     "unitid":104443,
     "name":"Empire Beauty School-Chandler",
     "state":"AZ",
-    "city":"Thatcher"
+    "city":"Chandler"
   },
   {
     "unitid":104577,
     "name":"Eastern Arizona College",
     "state":"AZ",
-    "city":"Paradise Valley"
+    "city":"Thatcher"
   },
   {
     "unitid":104586,
     "name":"Embry-Riddle Aeronautical University-Prescott",
     "state":"AZ",
-    "city":"Glendale"
+    "city":"Prescott"
   },
   {
     "unitid":106883,
     "name":"East Arkansas Community College",
     "state":"AR",
-    "city":"Batesville"
+    "city":"Forrest City"
   },
   {
     "unitid":113856,
     "name":"East Los Angeles College",
     "state":"CA",
-    "city":"Sacramento"
+    "city":"Monterey Park"
   },
   {
     "unitid":113980,
     "name":"El Camino Community College District",
     "state":"CA",
-    "city":"Santa Barbara"
+    "city":"Torrance"
   },
   {
     "unitid":114114,
     "name":"Emperor's College of Traditional Oriental Medicine",
     "state":"CA",
-    "city":"Santa Cruz"
+    "city":"Santa Monica"
   },
   {
     "unitid":114123,
     "name":"Empire College",
     "state":"CA",
-    "city":"Torrance"
+    "city":"Santa Rosa"
   },
   {
     "unitid":114266,
     "name":"Evergreen Valley College",
     "state":"CA",
-    "city":"Los Altos Hills"
+    "city":"San Jose"
   },
   {
     "unitid":124487,
     "name":"Epic Bible College & Graduate School",
     "state":"CA",
-    "city":"Burbank"
+    "city":"Sacramento"
   },
   {
     "unitid":127158,
     "name":"Emily Griffith Technical College",
     "state":"CO",
-    "city":"Colorado Springs"
+    "city":"Denver"
   },
   {
     "unitid":128337,
     "name":"Empire Beauty School-Thornton",
-    "state":"CT",
-    "city":"Bridgeport"
+    "state":"CO",
+    "city":"Thornton"
   },
   {
     "unitid":129215,
     "name":"Eastern Connecticut State University",
     "state":"CT",
-    "city":"Danielson"
+    "city":"Willimantic"
   },
   {
     "unitid":132693,
@@ -99,31 +99,31 @@
     "unitid":133492,
     "name":"Eckerd College",
     "state":"FL",
-    "city":"Pensacola"
+    "city":"Saint Petersburg"
   },
   {
     "unitid":133526,
     "name":"Edward Waters University",
     "state":"FL",
-    "city":"Panama City"
+    "city":"Jacksonville"
   },
   {
     "unitid":133553,
     "name":"Embry-Riddle Aeronautical University-Daytona Beach",
     "state":"FL",
-    "city":"Fort Lauderdale"
+    "city":"Daytona Beach"
   },
   {
     "unitid":139621,
     "name":"East Georgia State College",
     "state":"GA",
-    "city":"Atlanta"
+    "city":"Swainsboro"
   },
   {
     "unitid":139630,
     "name":"Emmanuel University",
     "state":"GA",
-    "city":"Atlanta"
+    "city":"Franklin Springs"
   },
   {
     "unitid":139658,
@@ -135,127 +135,127 @@
     "unitid":144883,
     "name":"East-West University",
     "state":"IL",
-    "city":"Normal"
+    "city":"Chicago"
   },
   {
     "unitid":144892,
     "name":"Eastern Illinois University",
     "state":"IL",
-    "city":"Oglesby"
+    "city":"Charleston"
   },
   {
     "unitid":144944,
     "name":"Elgin Community College",
     "state":"IL",
-    "city":"Chicago"
+    "city":"Elgin"
   },
   {
     "unitid":144962,
     "name":"Elmhurst University",
     "state":"IL",
-    "city":"Carterville"
+    "city":"Elmhurst"
   },
   {
     "unitid":144971,
     "name":"Eureka College",
     "state":"IL",
-    "city":"Quincy"
+    "city":"Eureka"
   },
   {
     "unitid":146454,
     "name":"Educators of Beauty College of Cosmetology-Peru",
     "state":"IL",
-    "city":"Chicago"
+    "city":"PERU"
   },
   {
     "unitid":149204,
     "name":"Educators of Beauty College of Cosmetology-Sterling",
-    "state":"IN",
-    "city":"Richmond"
+    "state":"IL",
+    "city":"Sterling"
   },
   {
     "unitid":150455,
     "name":"Earlham College",
     "state":"IN",
-    "city":"Marion"
+    "city":"Richmond"
   },
   {
     "unitid":153296,
     "name":"Ellsworth Community College",
     "state":"IA",
-    "city":"Sioux City"
+    "city":"Iowa Falls"
   },
   {
     "unitid":153302,
     "name":"Emmaus Bible College",
     "state":"IA",
-    "city":"Cedar Rapids"
+    "city":"Dubuque"
   },
   {
     "unitid":153311,
     "name":"Eastern Iowa Community College District",
-    "state":"CA",
-    "city":"San Diego"
+    "state":"IA",
+    "city":"Davenport"
   },
   {
     "unitid":155025,
     "name":"Emporia State University",
     "state":"KS",
-    "city":"Beloit"
+    "city":"Emporia"
   },
   {
     "unitid":156620,
     "name":"Eastern Kentucky University",
     "state":"KY",
-    "city":"Pikeville"
+    "city":"Richmond"
   },
   {
     "unitid":156648,
     "name":"Elizabethtown Community and Technical College",
     "state":"KY",
-    "city":"Prestonsburg"
+    "city":"Elizabethtown"
   },
   {
     "unitid":157614,
     "name":"Empire Beauty School-Chenoweth",
-    "state":"LA",
-    "city":"New Orleans"
+    "state":"KY",
+    "city":"Louisville"
   },
   {
     "unitid":157650,
     "name":"Empire Beauty School-Elizabethtown",
-    "state":"LA",
-    "city":"Alexandria"
+    "state":"KY",
+    "city":"Elizabethtown"
   },
   {
     "unitid":157669,
     "name":"Empire Beauty School-Dixie",
-    "state":"LA",
-    "city":"Baton Rouge"
+    "state":"KY",
+    "city":"Louisville"
   },
   {
     "unitid":157678,
     "name":"Empire Beauty School-Florence",
-    "state":"LA",
-    "city":"Eunice"
+    "state":"KY",
+    "city":"Florence"
   },
   {
     "unitid":161138,
     "name":"Eastern Maine Community College",
-    "state":"MD",
-    "city":"Takoma Park"
+    "state":"ME",
+    "city":"Bangor"
   },
   {
     "unitid":161493,
     "name":"Empire Beauty School-Maine",
-    "state":"MD",
-    "city":"Bel Air"
+    "state":"ME",
+    "city":"Portland"
   },
   {
     "unitid":164845,
     "name":"Empire Beauty School-Boston",
     "state":"MA",
-    "city":"Amherst"
+    "city":"Boston"
   },
   {
     "unitid":165644,
@@ -267,241 +267,241 @@
     "unitid":165662,
     "name":"Emerson College",
     "state":"MA",
-    "city":"Brockton"
+    "city":"Boston"
   },
   {
     "unitid":165671,
     "name":"Emmanuel College",
     "state":"MA",
-    "city":"North Andover"
+    "city":"Boston"
   },
   {
     "unitid":165699,
     "name":"Endicott College",
     "state":"MA",
-    "city":"Boston"
+    "city":"Beverly"
   },
   {
     "unitid":169284,
     "name":"Empire Beauty School-Michigan",
     "state":"MI",
-    "city":"Lansing"
+    "city":"Grand Rapids"
   },
   {
     "unitid":169798,
     "name":"Eastern Michigan University",
     "state":"MI",
-    "city":"Harrison"
+    "city":"Ypsilanti"
   },
   {
     "unitid":174978,
     "name":"Empire Beauty School-Bloomington",
-    "state":"MS",
-    "city":"Itta Bena"
+    "state":"MN",
+    "city":"Bloomington"
   },
   {
     "unitid":175643,
     "name":"East Central Community College",
-    "state":"MO",
-    "city":"Springfield"
+    "state":"MS",
+    "city":"Decatur"
   },
   {
     "unitid":175652,
     "name":"East Mississippi Community College",
-    "state":"MO",
-    "city":"Kansas City"
+    "state":"MS",
+    "city":"Scooba"
   },
   {
     "unitid":177250,
     "name":"East Central College",
     "state":"MO",
-    "city":"Saint Louis"
+    "city":"Union"
   },
   {
     "unitid":177278,
     "name":"Eden Theological Seminary",
     "state":"MO",
-    "city":"Moberly"
+    "city":"Webster Groves"
   },
   {
     "unitid":177339,
     "name":"Evangel University",
     "state":"MO",
-    "city":"Neosho"
+    "city":"Springfield"
   },
   {
     "unitid":182704,
     "name":"Empire Beauty School-Laconia",
-    "state":"NJ",
-    "city":"Blackwood"
+    "state":"NH",
+    "city":"Laconia"
   },
   {
     "unitid":182722,
     "name":"Empire Beauty School-Somersworth",
-    "state":"NJ",
-    "city":"Hackettstown"
+    "state":"NH",
+    "city":"Somersworth"
   },
   {
     "unitid":183488,
     "name":"Eastwick College-Hackensack",
     "state":"NJ",
-    "city":"Edison"
+    "city":"Hackensack"
   },
   {
     "unitid":184481,
     "name":"Essex County College",
     "state":"NJ",
-    "city":"New Brunswick"
+    "city":"Newark"
   },
   {
     "unitid":184506,
     "name":"Empire Beauty School-Union",
     "state":"NJ",
-    "city":"Newark"
+    "city":"Union"
   },
   {
     "unitid":184816,
     "name":"Empire Beauty School-Cherry Hill",
     "state":"NJ",
-    "city":"Branchburg"
+    "city":"Cherry Hill"
   },
   {
     "unitid":184959,
     "name":"Eastwick College-Ramsey",
     "state":"NJ",
-    "city":"Hoboken"
+    "city":"Ramsey"
   },
   {
     "unitid":185721,
     "name":"Eastwick College-Nutley",
-    "state":"NM",
-    "city":"Portales"
+    "state":"NJ",
+    "city":"Nutley"
   },
   {
     "unitid":187648,
     "name":"Eastern New Mexico University-Main Campus",
-    "state":"NY",
-    "city":"Long Island City"
+    "state":"NM",
+    "city":"Portales"
   },
   {
     "unitid":187666,
     "name":"Eastern New Mexico University-Roswell Campus",
-    "state":"NY",
-    "city":"Elmira"
+    "state":"NM",
+    "city":"Roswell"
   },
   {
     "unitid":190239,
     "name":"Empire Beauty School-Queens",
     "state":"NY",
-    "city":"Johnstown"
+    "city":"Astoria"
   },
   {
     "unitid":190983,
     "name":"Elmira College",
     "state":"NY",
-    "city":"Albany"
+    "city":"Elmira"
   },
   {
     "unitid":191083,
     "name":"Erie Community College",
     "state":"NY",
-    "city":"Geneva"
+    "city":"Buffalo"
   },
   {
     "unitid":193991,
     "name":"Empire Beauty School-Peekskill",
     "state":"NY",
-    "city":"Lawrence"
+    "city":"Peekskill"
   },
   {
     "unitid":195067,
     "name":"Empire Beauty School-Manhattan",
     "state":"NY",
-    "city":"Oneonta"
+    "city":"New York"
   },
   {
     "unitid":196264,
     "name":"Empire State University",
-    "state":"NC",
-    "city":"Wilson"
+    "state":"NY",
+    "city":"Saratoga Springs"
   },
   {
     "unitid":196680,
     "name":"Excelsior University",
-    "state":"NC",
-    "city":"Morehead City"
+    "state":"NY",
+    "city":"Albany"
   },
   {
     "unitid":198464,
     "name":"East Carolina University",
     "state":"NC",
-    "city":"Asheville"
+    "city":"Greenville"
   },
   {
     "unitid":198491,
     "name":"Edgecombe Community College",
     "state":"NC",
-    "city":"Chapel Hill"
+    "city":"Tarboro"
   },
   {
     "unitid":198507,
     "name":"Elizabeth City State University",
     "state":"NC",
-    "city":"Charlotte"
+    "city":"Elizabeth City"
   },
   {
     "unitid":198516,
     "name":"Elon University",
     "state":"NC",
-    "city":"Greensboro"
+    "city":"Elon"
   },
   {
     "unitid":200590,
     "name":"ETI Technical College",
     "state":"OH",
-    "city":"Lisbon"
+    "city":"Niles"
   },
   {
     "unitid":202648,
     "name":"Edison State Community College",
     "state":"OH",
-    "city":"Medina"
+    "city":"Piqua"
   },
   {
     "unitid":202657,
     "name":"EHOVE Career Center",
     "state":"OH",
-    "city":"Toledo"
+    "city":"Milan"
   },
   {
     "unitid":203331,
     "name":"Eastern Gateway Community College",
     "state":"OH",
-    "city":"Archbold"
+    "city":"Steubenville"
   },
   {
     "unitid":204884,
     "name":"East Ohio College",
     "state":"OH",
-    "city":"Dayton"
+    "city":"East Liverpool"
   },
   {
     "unitid":207041,
     "name":"East Central University",
-    "state":"OR",
-    "city":"Salem"
+    "state":"OK",
+    "city":"Ada"
   },
   {
     "unitid":207050,
     "name":"Eastern Oklahoma State College",
-    "state":"OR",
-    "city":"Oregon City"
+    "state":"OK",
+    "city":"Wilburton"
   },
   {
     "unitid":207102,
     "name":"Eves College of Hairstyling",
-    "state":"OR",
-    "city":"Portland"
+    "state":"OK",
+    "city":"Lawton"
   },
   {
     "unitid":208637,
@@ -512,302 +512,302 @@
   {
     "unitid":208646,
     "name":"Eastern Oregon University",
-    "state":"PA",
-    "city":"Bryn Athyn"
+    "state":"OR",
+    "city":"La Grande"
   },
   {
     "unitid":212115,
     "name":"East Stroudsburg University of Pennsylvania",
     "state":"PA",
-    "city":"Lancaster"
+    "city":"East Stroudsburg"
   },
   {
     "unitid":212133,
     "name":"Eastern University",
     "state":"PA",
-    "city":"Lancaster"
+    "city":"Saint Davids"
   },
   {
     "unitid":212197,
     "name":"Elizabethtown College",
     "state":"PA",
-    "city":"Lancaster"
+    "city":"Elizabethtown"
   },
   {
     "unitid":212230,
     "name":"Empire Beauty School-Lebanon",
     "state":"PA",
-    "city":"North Wales"
+    "city":"Lebanon"
   },
   {
     "unitid":212267,
     "name":"Empire Beauty School-York",
     "state":"PA",
-    "city":"Lansdale"
+    "city":"York"
   },
   {
     "unitid":212276,
     "name":"Empire Beauty School-Lancaster",
     "state":"PA",
-    "city":"Annville"
+    "city":"Lancaster"
   },
   {
     "unitid":212294,
     "name":"Empire Beauty School-Shamokin Dam",
     "state":"PA",
-    "city":"Schnecksville"
+    "city":"Shamokin Dam"
   },
   {
     "unitid":212300,
     "name":"Empire Beauty School-Pottsville",
     "state":"PA",
-    "city":"Wyomissing"
+    "city":"Pottsville"
   },
   {
     "unitid":212328,
     "name":"Empire Beauty  School-Lehigh Valley",
     "state":"PA",
-    "city":"Bethlehem"
+    "city":"Whitehall"
   },
   {
     "unitid":212337,
     "name":"Empire Beauty School-Gwinnett",
-    "state":"PA",
-    "city":"Allentown"
+    "state":"GA",
+    "city":"Lawrenceville"
   },
   {
     "unitid":212355,
     "name":"Empire Beauty School-Wyoming Valley",
     "state":"PA",
-    "city":"Philadelphia"
+    "city":"Moosic"
   },
   {
     "unitid":212382,
     "name":"Empire Beauty School-Harrisburg",
     "state":"PA",
-    "city":"Lincoln University"
+    "city":"Harrisburg"
   },
   {
     "unitid":212391,
     "name":"Empire Beauty School-Reading",
     "state":"PA",
-    "city":"Pittsburgh"
+    "city":"Reading"
   },
   {
     "unitid":212434,
     "name":"Erie Institute of Technology Inc",
     "state":"PA",
-    "city":"Gettysburg"
+    "city":"Erie"
   },
   {
     "unitid":212753,
     "name":"Empire Beauty School-NE Philadelphia",
     "state":"PA",
-    "city":"Pittsburgh"
+    "city":"Philadelphia"
   },
   {
     "unitid":217581,
     "name":"Empire Beauty School-Warwick",
-    "state":"SC",
-    "city":"Columbia"
+    "state":"RI",
+    "city":"Providence"
   },
   {
     "unitid":217998,
     "name":"Erskine College",
-    "state":"SD",
-    "city":"Mitchell"
+    "state":"SC",
+    "city":"Due West"
   },
   {
     "unitid":220075,
     "name":"East Tennessee State University",
     "state":"TN",
-    "city":"Crump"
+    "city":"Johnson City"
   },
   {
     "unitid":224527,
     "name":"East Texas Baptist University",
     "state":"TX",
-    "city":"Belton"
+    "city":"Marshall"
   },
   {
     "unitid":224642,
     "name":"El Paso Community College",
     "state":"TX",
-    "city":"Midland"
+    "city":"El Paso"
   },
   {
     "unitid":224712,
     "name":"Episcopal Theological Seminary of the Southwest",
     "state":"TX",
-    "city":"Dallas"
+    "city":"Austin"
   },
   {
     "unitid":224758,
     "name":"Exposito School of Hair Design",
     "state":"TX",
-    "city":"Austin"
+    "city":"Amarillo"
   },
   {
     "unitid":230199,
     "name":"Evans Hairstyling College-Cedar City",
-    "state":"VA",
-    "city":"Harrisonburg"
+    "state":"UT",
+    "city":"Cedar City"
   },
   {
     "unitid":230205,
     "name":"Evans Hairstyling College-St George",
-    "state":"VA",
-    "city":"Melfa"
+    "state":"UT",
+    "city":"Saint George"
   },
   {
     "unitid":230366,
     "name":"Eagle Gate College-Murray",
-    "state":"VA",
-    "city":"Fairfax"
+    "state":"UT",
+    "city":"Murray"
   },
   {
     "unitid":230418,
     "name":"Ensign College",
-    "state":"VA",
-    "city":"Locust Grove"
+    "state":"UT",
+    "city":"Salt Lake City"
   },
   {
     "unitid":231970,
     "name":"Eastern Virginia Medical School",
-    "state":"NC",
-    "city":"Wendell"
+    "state":"VA",
+    "city":"Norfolk"
   },
   {
     "unitid":232025,
     "name":"Emory & Henry University",
     "state":"VA",
-    "city":"Alberta"
+    "city":"Emory"
   },
   {
     "unitid":232043,
     "name":"Eastern Mennonite University",
     "state":"VA",
-    "city":"Cedar Bluff"
+    "city":"Harrisonburg"
   },
   {
     "unitid":232052,
     "name":"Eastern Shore Community College",
     "state":"VA",
-    "city":"Staunton"
+    "city":"Melfa"
   },
   {
     "unitid":235097,
     "name":"Eastern Washington University",
     "state":"WA",
-    "city":"Yakima"
+    "city":"Cheney"
   },
   {
     "unitid":235103,
     "name":"Edmonds College",
-    "state":"WV",
-    "city":"Philippi"
+    "state":"WA",
+    "city":"Lynnwood"
   },
   {
     "unitid":235149,
     "name":"Everett Community College",
-    "state":"KY",
-    "city":"Belfry"
+    "state":"WA",
+    "city":"Everett"
   },
   {
     "unitid":238661,
     "name":"Edgewood College",
-    "state":"WY",
-    "city":"Riverton"
+    "state":"WI",
+    "city":"Madison"
   },
   {
     "unitid":240596,
     "name":"Eastern Wyoming College",
-    "state":"PR",
-    "city":"Bayamon"
+    "state":"WY",
+    "city":"Torrington"
   },
   {
     "unitid":241836,
     "name":"EDP University of Puerto Rico Inc-San Sebastian",
     "state":"PR",
-    "city":"San Juan"
+    "city":"San Sebastian"
   },
   {
     "unitid":241906,
     "name":"Emma's Beauty Academy-Mayaguez",
     "state":"PR",
-    "city":"Hato Rey"
+    "city":"Mayaguez"
   },
   {
     "unitid":241951,
     "name":"Escuela de Artes Plasticas y Diseno de Puerto Rico",
-    "state":"FL",
-    "city":"Fort Lauderdale"
+    "state":"PR",
+    "city":"San Juan"
   },
   {
     "unitid":243832,
     "name":"EDP University of Puerto Rico Inc-San Juan",
-    "state":"TX",
-    "city":"Houston"
+    "state":"PR",
+    "city":"San Juan"
   },
   {
     "unitid":244613,
     "name":"ETI School of Skilled Trades",
-    "state":"OK",
-    "city":"Duncan"
+    "state":"IL",
+    "city":"Willowbrook"
   },
   {
     "unitid":247162,
     "name":"Ecumenical Theological Seminary",
-    "state":"OH",
-    "city":"Alliance"
+    "state":"MI",
+    "city":"Detroit"
   },
   {
     "unitid":248934,
     "name":"ECPI University",
-    "state":"OK",
-    "city":"Fort Cobb"
+    "state":"VA",
+    "city":"Virginia Beach"
   },
   {
     "unitid":260965,
     "name":"Educators of Beauty College of Cosmetology-Rockford",
-    "state":"TX",
-    "city":"Houston"
+    "state":"IL",
+    "city":"Rockford"
   },
   {
     "unitid":362782,
     "name":"Elizabeth Grady School of Esthetics and Massage Therapy",
-    "state":"IN",
-    "city":"Bloomington"
+    "state":"MA",
+    "city":"Medford"
   },
   {
     "unitid":368230,
     "name":"Empire Beauty School-Bloomfield",
-    "state":"OH",
-    "city":"Bethel"
+    "state":"NJ",
+    "city":"Bloomfield"
   },
   {
     "unitid":369419,
     "name":"Erwin Technical College",
-    "state":"TN",
-    "city":"Cookeville"
+    "state":"FL",
+    "city":"Tampa"
   },
   {
     "unitid":375966,
     "name":"Eastern Center for Arts and Technology",
-    "state":"TX",
-    "city":"Big Spring"
+    "state":"PA",
+    "city":"Willow Grove"
   },
   {
     "unitid":375984,
     "name":"Empire Beauty School-Center City Philadelphia",
-    "state":"VA",
-    "city":"Richmond"
+    "state":"PA",
+    "city":"Philadelphia"
   },
   {
     "unitid":383525,
     "name":"Erie 2 Chautauqua Cattaraugus BOCES-Practical Nursing Program",
-    "state":"TX",
-    "city":"Corpus Christi"
+    "state":"NY",
+    "city":"Angola"
   },
   {
     "unitid":383765,
@@ -818,691 +818,691 @@
   {
     "unitid":383996,
     "name":"Eastern New Mexico University Ruidoso Branch Community College",
-    "state":"MD",
-    "city":"Westminster"
+    "state":"NM",
+    "city":"Ruidoso"
   },
   {
     "unitid":384333,
     "name":"Estrella Mountain Community College",
-    "state":"NY",
-    "city":"Norwich"
+    "state":"AZ",
+    "city":"Avondale"
   },
   {
     "unitid":385619,
     "name":"Everglades University",
-    "state":"MA",
-    "city":"Malden"
+    "state":"FL",
+    "city":"Boca Raton"
   },
   {
     "unitid":404684,
     "name":"Emma's Beauty Academy-Juana Diaz",
-    "state":"FL",
-    "city":"West Palm Beach"
+    "state":"PR",
+    "city":"Juana Diaz"
   },
   {
     "unitid":407179,
     "name":"Empire Beauty School-Malden",
-    "state":"IN",
-    "city":"Angola"
+    "state":"MA",
+    "city":"Malden"
   },
   {
     "unitid":407461,
     "name":"Eastland-Fairfield Career and Technical Schools",
-    "state":"OK",
-    "city":"Tulsa"
+    "state":"OH",
+    "city":"Groveport"
   },
   {
     "unitid":407470,
     "name":"Empire Beauty School-Cincinnati",
-    "state":"PA",
-    "city":"Hanover"
+    "state":"OH",
+    "city":"Cincinnati"
   },
   {
     "unitid":407735,
     "name":"Empire Beauty School-Green Bay",
-    "state":"FL",
-    "city":"Altamonte Springs"
+    "state":"WI",
+    "city":"Ashwaubenon"
   },
   {
     "unitid":409254,
     "name":"Erikson Institute",
-    "state":"MO",
-    "city":"Cape Girardeau"
+    "state":"IL",
+    "city":"Chicago"
   },
   {
     "unitid":410964,
     "name":"EINE Inc",
-    "state":"NY",
-    "city":"Newburgh"
+    "state":"MA",
+    "city":"Tewksbury"
   },
   {
     "unitid":415039,
     "name":"Empire Beauty School-Hanover",
     "state":"PA",
-    "city":"Oil City"
+    "city":"Hanover"
   },
   {
     "unitid":417062,
     "name":"Estes Institute of Cosmetology Arts and Science",
-    "state":"PA",
-    "city":"West Mifflin"
+    "state":"CA",
+    "city":"Visalia"
   },
   {
     "unitid":418065,
     "name":"Eastern Suffolk BOCES",
-    "state":"NJ",
-    "city":"Mahwah"
+    "state":"NY",
+    "city":"Brentwood"
   },
   {
     "unitid":418348,
     "name":"Eastern Oklahoma County Technology Center",
-    "state":"MI",
-    "city":"Cadillac"
+    "state":"OK",
+    "city":"Choctaw"
   },
   {
     "unitid":420255,
     "name":"Escuela de Peritos Electricistas de Isabela Inc",
     "state":"PR",
-    "city":"Caguas"
+    "city":"Isabela"
   },
   {
     "unitid":421878,
     "name":"Eastern International College-Jersey City",
-    "state":"SC",
-    "city":"Rock Hill"
+    "state":"NJ",
+    "city":"Jersey City"
   },
   {
     "unitid":426314,
     "name":"Embry-Riddle Aeronautical University-Worldwide",
-    "state":"UT",
-    "city":"Salt Lake City"
+    "state":"FL",
+    "city":"Daytona Beach"
   },
   {
     "unitid":430227,
     "name":"Empire Beauty School-Monroeville",
-    "state":"MN",
-    "city":"Mahnomen"
+    "state":"PA",
+    "city":"Monroeville"
   },
   {
     "unitid":431123,
     "name":"Escuela Tecnica de Electricidad",
-    "state":"TX",
-    "city":"Plano"
+    "state":"PR",
+    "city":"Ponce"
   },
   {
     "unitid":438708,
     "name":"Eastern West Virginia Community and Technical College",
-    "state":"FL",
-    "city":"Miami"
+    "state":"WV",
+    "city":"Moorefield"
   },
   {
     "unitid":439394,
     "name":"East West College of Natural Medicine",
-    "state":"OH",
-    "city":"Columbus"
+    "state":"FL",
+    "city":"Sarasota"
   },
   {
     "unitid":439622,
     "name":"Erie 1 BOCES",
-    "state":"TX",
-    "city":"Grand Prairie"
+    "state":"NY",
+    "city":"West Seneca"
   },
   {
     "unitid":440101,
     "name":"Empire Beauty School-Kennesaw",
-    "state":"AK",
-    "city":"Soldotna"
+    "state":"GA",
+    "city":"Kennesaw"
   },
   {
     "unitid":441210,
     "name":"East Valley Institute of Technology",
-    "state":"CA",
-    "city":"Santa Fe Springs"
+    "state":"AZ",
+    "city":"Mesa"
   },
   {
     "unitid":441858,
     "name":"Eastern Virginia Career College",
-    "state":"PA",
-    "city":"Trevose"
+    "state":"VA",
+    "city":"Fredericksburg"
   },
   {
     "unitid":442806,
     "name":"Edward Via College of Osteopathic Medicine",
-    "state":"TN",
-    "city":"Lawrenceburg"
+    "state":"VA",
+    "city":"Blacksburg"
   },
   {
     "unitid":444282,
     "name":"Empire Beauty School-Midlothian",
-    "state":"CA",
-    "city":"Yuba City"
+    "state":"VA",
+    "city":"Midlothian"
   },
   {
     "unitid":444291,
     "name":"Empire Beauty School-Owings Mills",
-    "state":"FL",
-    "city":"Altamonte Springs"
+    "state":"MD",
+    "city":"Owings Mills"
   },
   {
     "unitid":444307,
     "name":"Empire Beauty School-West Mifflin",
-    "state":"CA",
-    "city":"Lancaster"
+    "state":"PA",
+    "city":"West Mifflin"
   },
   {
     "unitid":444583,
     "name":"Escuela Hotelera de San Juan",
-    "state":"FL",
-    "city":"Orlando"
+    "state":"PR",
+    "city":"Hato Rey"
   },
   {
     "unitid":446224,
     "name":"Eastern School of Acupuncture and Traditional Medicine",
-    "state":"WV",
-    "city":"Charleston"
+    "state":"NJ",
+    "city":"Bloomfield"
   },
   {
     "unitid":446233,
     "name":"Ecclesia College",
-    "state":"CA",
-    "city":"Rancho Cordova"
+    "state":"AR",
+    "city":"Springdale"
   },
   {
     "unitid":446242,
     "name":"Employment Solutions-College for Technical Education",
-    "state":"OK",
-    "city":"Tulsa"
+    "state":"KY",
+    "city":"Lexington"
   },
   {
     "unitid":446251,
     "name":"Estelle Medical Academy",
-    "state":"CA",
-    "city":"Sacramento"
+    "state":"IL",
+    "city":"Skokie"
   },
   {
     "unitid":446260,
     "name":"Evergreen Beauty and Barber College-Everett",
-    "state":"CA",
-    "city":"Lemoore"
+    "state":"WA",
+    "city":"Everett"
   },
   {
     "unitid":447148,
     "name":"Empire Beauty School-Avondale",
-    "state":"WV",
-    "city":"Charles Town"
+    "state":"AZ",
+    "city":"Avondale"
   },
   {
     "unitid":447166,
     "name":"Empire Beauty School-Littleton",
-    "state":"AL",
-    "city":"Huntsville"
+    "state":"CO",
+    "city":"Littleton"
   },
   {
     "unitid":447175,
     "name":"Empire Beauty School-Aurora",
-    "state":"CA",
-    "city":"Beaumont"
+    "state":"CO",
+    "city":"Aurora"
   },
   {
     "unitid":447421,
     "name":"Eagle Gate College-Layton",
-    "state":"CA",
-    "city":"West Hills"
+    "state":"UT",
+    "city":"Layton"
   },
   {
     "unitid":448798,
     "name":"Empire Beauty School-Milwaukee",
-    "state":"TX",
-    "city":"Houston"
+    "state":"WI",
+    "city":"Milwaukee"
   },
   {
     "unitid":450599,
     "name":"Empire Beauty School-Richmond",
-    "state":"NC",
-    "city":"Greensboro"
+    "state":"VA",
+    "city":"Richmond"
   },
   {
     "unitid":450605,
     "name":"Empire Beauty School-North Hills",
-    "state":"NJ",
-    "city":"Piscataway"
+    "state":"PA",
+    "city":"Pittsburgh"
   },
   {
     "unitid":450614,
     "name":"Empire Beauty School-Concord",
-    "state":"OH",
-    "city":"Chesterland"
+    "state":"NC",
+    "city":"Concord"
   },
   {
     "unitid":450641,
     "name":"Empire Beauty School-Hooksett",
-    "state":"OH",
-    "city":"Dayton"
+    "state":"NH",
+    "city":"Hooksett"
   },
   {
     "unitid":450720,
     "name":"Euphoria Institute of Beauty Arts & Sciences-Summerlin",
-    "state":"WI",
-    "city":"Appleton"
+    "state":"NV",
+    "city":"Las Vegas"
   },
   {
     "unitid":451282,
     "name":"Elevate Salon Institute",
-    "state":"CO",
-    "city":"Denver"
+    "state":"MI",
+    "city":"Royal Oak"
   },
   {
     "unitid":451529,
     "name":"Elite College of Cosmetology",
-    "state":"MO",
-    "city":"Wentzville"
+    "state":"TN",
+    "city":"Lexington"
   },
   {
     "unitid":452106,
     "name":"Escuela De Troqueleria Y Herramentaje",
-    "state":"CA",
-    "city":"Anaheim"
+    "state":"PR",
+    "city":"Bayamon"
   },
   {
     "unitid":452887,
     "name":"Elite Welding Academy LLC",
-    "state":"CA",
-    "city":"Los Angeles"
+    "state":"OH",
+    "city":"Cincinnati"
   },
   {
     "unitid":454935,
     "name":"Evans Hairstyling College-Rexburg",
-    "state":"IN",
-    "city":"Fort Wayne"
+    "state":"ID",
+    "city":"Rexburg"
   },
   {
     "unitid":456135,
     "name":"Empire Beauty School-Spring Lake Park",
-    "state":"NY",
-    "city":"Flushing"
+    "state":"MN",
+    "city":"Spring Lake Park"
   },
   {
     "unitid":457378,
     "name":"Emerald Coast Technical College",
-    "state":"NC",
-    "city":"Charlotte"
+    "state":"FL",
+    "city":"DeFuniak Springs"
   },
   {
     "unitid":457581,
     "name":"Eric Fisher Academy",
-    "state":"FL",
-    "city":"Fort Myers"
+    "state":"KS",
+    "city":"Wichita"
   },
   {
     "unitid":457794,
     "name":"EDP School",
-    "state":"WI",
-    "city":"Wauwatosa"
+    "state":"NY",
+    "city":"Brooklyn"
   },
   {
     "unitid":458423,
     "name":"European Massage Therapy School-Las Vegas",
-    "state":"CA",
-    "city":"Moreno Valley"
+    "state":"Nevada",
+    "city":null
   },
   {
     "unitid":458803,
     "name":"Empire Beauty School-E Memphis",
-    "state":"TX",
-    "city":"El Paso"
+    "state":"TN",
+    "city":"Memphis"
   },
   {
     "unitid":458812,
     "name":"Empire Beauty School-Nashville",
-    "state":"TX",
-    "city":"Irving"
+    "state":"TN",
+    "city":"Brentwood"
   },
   {
     "unitid":458821,
     "name":"Empire Beauty School-Jackson",
-    "state":"PR",
-    "city":"Manati"
+    "state":"TN",
+    "city":"Jackson"
   },
   {
     "unitid":458830,
     "name":"Empire Beauty School-Springfield",
-    "state":"FL",
-    "city":"Lakeland"
+    "state":"PA",
+    "city":"Springfield"
   },
   {
     "unitid":458858,
     "name":"Empire Beauty School-Speedway",
-    "state":"HI",
-    "city":"Honolulu"
+    "state":"IN",
+    "city":"Speedway"
   },
   {
     "unitid":458867,
     "name":"Empire Beauty School-Morrow",
-    "state":"NC",
-    "city":"Asheville"
+    "state":"GA",
+    "city":"Morrow"
   },
   {
     "unitid":459019,
     "name":"Empire Beauty School-Charlotte",
-    "state":"AZ",
-    "city":"Scottsdale"
+    "state":"NC",
+    "city":"Charlotte"
   },
   {
     "unitid":459046,
     "name":"Empire Beauty School-Winston-Salem",
-    "state":"MO",
-    "city":"Saint Louis"
+    "state":"NC",
+    "city":"Winston-Salem"
   },
   {
     "unitid":459055,
     "name":"Empire Beauty School-West Palm",
     "state":"FL",
-    "city":"Hialeah Gardens"
+    "city":"West Palm Beach"
   },
   {
     "unitid":459064,
     "name":"Empire Beauty School-Pineville",
-    "state":"TX",
-    "city":"Dallas"
+    "state":"NC",
+    "city":"Charlotte"
   },
   {
     "unitid":461537,
     "name":"Evolve Beauty Academy",
-    "state":"NJ",
-    "city":"Lawrenceville"
+    "state":"MO",
+    "city":"Washing"
   },
   {
     "unitid":461582,
     "name":"Estelle Skin Care and Spa Institute",
-    "state":"GA",
-    "city":"Savannah"
+    "state":"IL",
+    "city":"Skokie"
   },
   {
     "unitid":461607,
     "name":"Elite Cosmetology School",
-    "state":"WA",
-    "city":"Spokane"
+    "state":"CA",
+    "city":"PALM DESERT"
   },
   {
     "unitid":461999,
     "name":"Elite School of Cosmetology",
-    "state":"VA",
-    "city":"Virginia Beach"
+    "state":"OH",
+    "city":"Norwalk"
   },
   {
     "unitid":476179,
     "name":"Empire Beauty School-Virginia Beach",
-    "state":"FL",
-    "city":"Jacksonville"
+    "state":"VA",
+    "city":"Virginia Beach"
   },
   {
     "unitid":476887,
     "name":"Elaine Sterling Institute",
-    "state":"FL",
-    "city":"Royal Palm Beach"
+    "state":"GA",
+    "city":"Atlanta"
   },
   {
     "unitid":477233,
     "name":"Evangel University-James River Assembly of God Church",
-    "state":"NY",
-    "city":"Monsey"
+    "state":"MO",
+    "city":"Ozark"
   },
   {
     "unitid":478582,
     "name":"Empire Beauty School-Savannah",
-    "state":"NJ",
-    "city":"Perth Amboy"
+    "state":"GA",
+    "city":"Savannah"
   },
   {
     "unitid":478616,
     "name":"Empire Beauty School-West Greensboro",
-    "state":"NJ",
-    "city":"Voorhees"
+    "state":"NC",
+    "city":"Greensboro"
   },
   {
     "unitid":479983,
     "name":"Elevate Salon Institute-Westminster",
-    "state":"CT",
-    "city":"Waterbury"
+    "state":"CO",
+    "city":"Westminster"
   },
   {
     "unitid":480310,
     "name":"Empire Beauty School-Glen Burnie",
-    "state":"CA",
-    "city":"Merced"
+    "state":"MD",
+    "city":"Glen Burnie"
   },
   {
     "unitid":481678,
     "name":"Empire Beauty School-Augusta",
-    "state":"VA",
-    "city":"Vienna"
+    "state":"GA",
+    "city":"Augusta"
   },
   {
     "unitid":481739,
     "name":"Empire Beauty School-Vernon Hills",
-    "state":"VA",
-    "city":"Falls Church"
+    "state":"IL",
+    "city":"Vernon Hills"
   },
   {
     "unitid":481748,
     "name":"Empire Beauty School-Stone Park",
-    "state":"PA",
-    "city":"Philadelphia"
+    "state":"IL",
+    "city":"Stone Park"
   },
   {
     "unitid":481845,
     "name":"Empire Beauty School-Rochester",
     "state":"NY",
-    "city":"Flushing"
+    "city":"Rochester"
   },
   {
     "unitid":483382,
     "name":"Electrical and HVAC\/R Training Center",
-    "state":"CA",
-    "city":"San Diego"
+    "state":"NY",
+    "city":"Copiague"
   },
   {
     "unitid":483799,
     "name":"East-West Healing Arts Institute",
-    "state":"FL",
-    "city":"Miami"
+    "state":"WI",
+    "city":"Madison"
   },
   {
     "unitid":485014,
     "name":"Empire Beauty School-Buffalo",
     "state":"NY",
-    "city":"Riverhead"
+    "city":"Cheektowaga"
   },
   {
     "unitid":485397,
     "name":"Empire Beauty School-Cheltenham",
-    "state":"TX",
-    "city":"Lubbock"
+    "state":"PA",
+    "city":"Wyncote"
   },
   {
     "unitid":486080,
     "name":"Elmezzi Graduate School of Molecular Medicine",
-    "state":"LA",
-    "city":"Monroe"
+    "state":"NY",
+    "city":"Manhasset"
   },
   {
     "unitid":486691,
     "name":"Empire Beauty School-Northlake",
-    "state":"KY",
-    "city":"Bowling Green"
+    "state":"GA",
+    "city":"Atlanta"
   },
   {
     "unitid":486859,
     "name":"Entourage Institute of Beauty and Esthetics",
-    "state":"NY",
-    "city":"Lima"
+    "state":"NE",
+    "city":"Lincoln"
   },
   {
     "unitid":486877,
     "name":"Eastern Suffolk BOCES",
-    "state":"NJ",
-    "city":"Lakewood"
+    "state":"NY",
+    "city":"Riverhead"
   },
   {
     "unitid":486886,
     "name":"Eastern Suffolk BOCES",
-    "state":"FL",
-    "city":"Pompano Beach"
+    "state":"NY",
+    "city":"Oakdale"
   },
   {
     "unitid":487092,
     "name":"Emory University-Oxford College",
-    "state":"NM",
-    "city":"Las Cruces"
+    "state":"GA",
+    "city":"Oxford"
   },
   {
     "unitid":488174,
     "name":"Ea La Mar's Cosmetology & Barber College",
-    "state":"GA",
-    "city":"Lawrenceville"
+    "state":"MO",
+    "city":"Kansas City"
   },
   {
     "unitid":488305,
     "name":"Elim Bible Institute and College",
     "state":"NY",
-    "city":"Brooklyn"
+    "city":"Lima"
   },
   {
     "unitid":490294,
     "name":"Elite Cosmetology, Barber & Spa Academy",
-    "state":"HI",
-    "city":"Kahului"
+    "state":"WA",
+    "city":"Yakima"
   },
   {
     "unitid":490346,
     "name":"Elyon College",
     "state":"NY",
-    "city":"Flushing"
+    "city":"Brooklyn"
   },
   {
     "unitid":490461,
     "name":"EduMed Partners",
-    "state":"CA",
-    "city":"Sacramento"
+    "state":"TN",
+    "city":"Goodlettsville"
   },
   {
     "unitid":491136,
     "name":"Empire Beauty School-Tampa",
     "state":"FL",
-    "city":"Jacksonville"
+    "city":"Tampa"
   },
   {
     "unitid":491145,
     "name":"Empire Beauty School-Lakeland",
-    "state":"CA",
-    "city":"Stockton"
+    "state":"FL",
+    "city":"Lakeland"
   },
   {
     "unitid":491598,
     "name":"European Medical School of Massage",
     "state":"PA",
-    "city":"Liverpool"
+    "city":"Sinking Spring"
   },
   {
     "unitid":492005,
     "name":"Elite Academy of Hair Design",
-    "state":"PR",
-    "city":"Humacao"
+    "state":"OH",
+    "city":"Bridgeport"
   },
   {
     "unitid":492148,
     "name":"Elite Beauty College",
-    "state":"NY",
-    "city":"New York"
+    "state":"OK",
+    "city":"Muskogee"
   },
   {
     "unitid":492306,
     "name":"Escondido Adult School",
-    "state":"VA",
-    "city":"Richmond"
+    "state":"CA",
+    "city":"Escondido"
   },
   {
     "unitid":492476,
     "name":"EDP University of Puerto Rico-Villalba",
-    "state":"AZ",
-    "city":"Phoenix"
+    "state":"PR",
+    "city":"Villalba"
   },
   {
     "unitid":494001,
     "name":"Elevate Salon Institute",
-    "state":"CA",
-    "city":"Rancho Mirage"
+    "state":"NC",
+    "city":"Durham"
   },
   {
     "unitid":494278,
     "name":"EDP University of Puerto Rico-Humacao",
-    "state":"OH",
-    "city":"Columbus"
+    "state":"PR",
+    "city":"Humacao"
   },
   {
     "unitid":494287,
     "name":"EDP University of Puerto Rico-Manati",
-    "state":"CA",
-    "city":"National City"
+    "state":"PR",
+    "city":"Manati"
   },
   {
     "unitid":494472,
     "name":"Evvaylois Academy School of Beauty",
-    "state":"OH",
-    "city":"South Point"
+    "state":"TX",
+    "city":"Brenham"
   },
   {
     "unitid":494649,
     "name":"Esteem Academy of Beauty",
-    "state":"NJ",
-    "city":"Westampton"
+    "state":"UT",
+    "city":"South Ogden"
   },
   {
     "unitid":495518,
     "name":"Empire Beauty School-Newport News",
-    "state":"KS",
-    "city":"Wichita"
+    "state":"VA",
+    "city":"Newport News"
   },
   {
     "unitid":495776,
     "name":"Elite Welding Academy",
-    "state":"CA",
-    "city":"Santa Ana"
+    "state":"TX",
+    "city":"Houston"
   },
   {
     "unitid":496326,
     "name":"Eagle Gate College-Boise Campus",
-    "state":"VA",
-    "city":"Richmond"
+    "state":"ID",
+    "city":"Boise"
   },
   {
     "unitid":496371,
     "name":"Elite Welding Academy South Point",
-    "state":"SC",
-    "city":"Myrtle Beach"
+    "state":"OH",
+    "city":"South Point"
   },
   {
     "unitid":497824,
     "name":"Evangel University-College of Online Learning",
-    "state":"CT",
-    "city":"Enfield"
+    "state":"MO",
+    "city":"Springfield"
   },
   {
     "unitid":498401,
     "name":"Edge Academy of Beauty",
-    "state":"FL",
-    "city":"Fort Myers"
+    "state":"KY",
+    "city":"Manchester"
   },
   {
     "unitid":498890,
     "name":"East Texas Cosmetology College",
-    "state":"IN",
-    "city":"Anderson"
+    "state":"Texas",
+    "city":null
   },
   {
     "unitid":499635,
     "name":"EDP University of Puerto Rico-Caguas",
-    "state":"MN",
-    "city":"Cambridge"
+    "state":"Puerto Rico",
+    "city":null
   }
 ]

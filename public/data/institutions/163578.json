@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 163578,
     "name": "Notre Dame of Maryland University",
-    "city": "Waltham",
-    "state": "MA",
+    "city": "Baltimore",
+    "state": "MD",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
-    "website": "https://www.brandeis.edu/",
+    "website": "www.ndm.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

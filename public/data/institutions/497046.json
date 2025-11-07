@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 497046,
     "name": "Madera Community College",
-    "city": "Lake Havasu City",
-    "state": "AZ",
+    "city": "Madera",
+    "state": "CA",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.asu.edu/",
+    "website": "https://www.maderacollege.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

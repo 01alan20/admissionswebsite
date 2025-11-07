@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 234845,
     "name": "Centralia College",
-    "city": "College Place",
+    "city": "Centralia",
     "state": "WA",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate/Associate's Colleges: Mixed Baccalaureate/Associate's",
-    "website": "www.wallawalla.edu/",
+    "website": "www.centralia.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

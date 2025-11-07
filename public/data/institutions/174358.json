@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 174358,
     "name": "Minnesota State University Moorhead",
-    "city": "Blue Mountain",
-    "state": "MS",
+    "city": "Moorhead",
+    "state": "MN",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
-    "website": "www.bmc.edu/",
+    "website": "https://www.mnstate.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

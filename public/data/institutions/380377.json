@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 380377,
     "name": "Northwest Indian College",
-    "city": "Gardena",
-    "state": "CA",
+    "city": "Bellingham",
+    "state": "WA",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Tribal Colleges",
-    "website": "https://www.uei.edu/",
+    "website": "www.nwic.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

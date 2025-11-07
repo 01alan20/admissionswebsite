@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 497657,
     "name": "Hawaii Tokai International College",
-    "city": "Berkeley",
-    "state": "CA",
+    "city": null,
+    "state": "Hawaii",
     "control": "Private nonprofit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.scu.edu/jst",
+    "website": null,
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

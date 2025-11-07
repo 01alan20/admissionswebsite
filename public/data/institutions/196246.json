@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 196246,
     "name": "SUNY College at Plattsburgh",
-    "city": "Boone",
-    "state": "NC",
+    "city": "Plattsburgh",
+    "state": "NY",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Master's Colleges & Universities: Medium Programs",
-    "website": "www.appstate.edu/",
+    "website": "https://www.plattsburgh.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

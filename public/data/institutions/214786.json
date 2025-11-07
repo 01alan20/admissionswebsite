@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 214786,
     "name": "Pennsylvania State University-Penn State Greater Allegheny",
-    "city": "Greensburg",
+    "city": "McKeesport",
     "state": "PA",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.setonhill.edu/",
+    "website": "https://greaterallegheny.psu.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

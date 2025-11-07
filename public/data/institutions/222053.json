@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 222053,
     "name": "Volunteer State Community College",
-    "city": "Dallas",
-    "state": "TX",
+    "city": "Gallatin",
+    "state": "TN",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: High Transfer-High Traditional",
-    "website": "www.dallascollege.edu/pages/default.aspx",
+    "website": "www.volstate.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

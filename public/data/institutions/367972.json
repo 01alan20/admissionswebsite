@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 367972,
     "name": "Capital Area Career Center",
-    "city": "Cleveland",
-    "state": "OH",
+    "city": "Springfield",
+    "state": "IL",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "https://www.remingtoncollege.edu/locations/cleveland/",
+    "website": "https://caspn.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 491288,
     "name": "University of Wisconsin-Milwaukee Flex",
-    "city": "Fort Wayne",
-    "state": "IN",
+    "city": "Milwaukee",
+    "state": "WI",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
-    "website": "cps.indianatech.edu/",
+    "website": "https://flex.wisconsin.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

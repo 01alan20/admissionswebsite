@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 219824,
     "name": "Chattanooga State Community College",
-    "city": "Murfreesboro",
+    "city": "Chattanooga",
     "state": "TN",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: Mixed Transfer/Career & Technical-High Traditional",
-    "website": "www.mtsu.edu/",
+    "website": "https://www.chattanoogastate.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

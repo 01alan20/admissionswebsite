@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 228796,
     "name": "The University of Texas at El Paso",
-    "city": "Logan",
-    "state": "UT",
+    "city": "El Paso",
+    "state": "TX",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Doctoral Universities: Very High Research Activity",
-    "website": "https://www.usu.edu/",
+    "website": "www.utep.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 497745,
     "name": "Aviation Institute of Maintenance-Chicago",
-    "city": "Bridgeport",
-    "state": "CT",
+    "city": "Chicago",
+    "state": "IL",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": null,
+    "website": "https://aviationmaintenance.edu/campuses/chicago-il",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

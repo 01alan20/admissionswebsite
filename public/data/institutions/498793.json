@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 498793,
     "name": "All In The Wrist Barber Academy",
-    "city": "Terre Haute",
-    "state": "IN",
+    "city": null,
+    "state": "Delaware",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.ivytech.edu/terrehaute/index.html",
+    "website": null,
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 122180,
     "name": "Sacramento City College",
-    "city": "Bakersfield",
+    "city": "Sacramento",
     "state": "CA",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: Mixed Transfer/Career & Technical-High Traditional",
-    "website": "www.sjvc.edu/",
+    "website": "https://www.scc.losrios.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

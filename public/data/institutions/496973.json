@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 496973,
     "name": "Herzing University-Tampa",
-    "city": "Glendale",
-    "state": "AZ",
+    "city": "Tampa",
+    "state": "FL",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.asu.edu/",
+    "website": "https://herzing.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

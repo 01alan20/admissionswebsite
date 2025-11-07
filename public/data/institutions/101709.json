@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 101709,
     "name": "University of Montevallo",
-    "city": "Muscle Shoals",
+    "city": "Montevallo",
     "state": "AL",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Master's Colleges & Universities: Medium Programs",
-    "website": "https://www.nwscc.edu/",
+    "website": "www.montevallo.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

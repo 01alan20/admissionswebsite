@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 499662,
     "name": "Aviation Institute of Maintenance-Phoenix",
-    "city": "Staples",
-    "state": "MN",
+    "city": null,
+    "state": "Arizona",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.clcmn.edu/",
+    "website": null,
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

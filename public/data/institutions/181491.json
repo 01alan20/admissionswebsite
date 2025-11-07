@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 181491,
     "name": "Northeast Community College",
-    "city": "Berlin",
-    "state": "NH",
+    "city": "Norfolk",
+    "state": "NE",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: High Career & Technical-Mixed Traditional/Nontraditional",
-    "website": "www.wmcc.edu/",
+    "website": "https://northeast.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

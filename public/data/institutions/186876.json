@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 186876,
     "name": "Stockton University",
-    "city": "Queensbury",
-    "state": "NY",
+    "city": "Galloway",
+    "state": "NJ",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Doctoral/Professional Universities",
-    "website": "www.sunyacc.edu/",
+    "website": "https://www.stockton.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

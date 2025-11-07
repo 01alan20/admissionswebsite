@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 217624,
     "name": "Allen University",
-    "city": "Sumter",
+    "city": "Columbia",
     "state": "SC",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate Colleges: Arts & Sciences Focus",
-    "website": "www.sc.edu/about/system_and_campuses/sumter/index.php",
+    "website": "https://www.allenuniversity.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

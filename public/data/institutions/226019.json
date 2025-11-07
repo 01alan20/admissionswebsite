@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 226019,
     "name": "Kilgore College",
-    "city": "Huntsville",
+    "city": "Kilgore",
     "state": "TX",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: Mixed Transfer/Career & Technical-Mixed Traditional/Nontraditional",
-    "website": "www.shsu.edu/",
+    "website": "https://www.kilgore.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 482699,
     "name": "South Georgia State College",
-    "city": "Phoenix",
-    "state": "AZ",
+    "city": "Douglas",
+    "state": "GA",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate/Associate's Colleges: Mixed Baccalaureate/Associate's",
-    "website": "https://www.phoenix.edu/",
+    "website": "www.sgsc.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

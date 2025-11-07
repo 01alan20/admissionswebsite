@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 468848,
     "name": "UEI College-Oceanside",
-    "city": "Reno",
-    "state": "NV",
+    "city": "Oceanside",
+    "state": "CA",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "paulmitchell.edu/reno",
+    "website": "https://www.uei.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

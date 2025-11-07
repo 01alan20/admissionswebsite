@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 382258,
     "name": "Mt. Diablo Adult Education-Mt. Diablo USD",
-    "city": "Los Angeles",
+    "city": "Concord",
     "state": "CA",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "yosan.edu/",
+    "website": "https://mdae.mdusd.org/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 220853,
     "name": "Tennessee College of Applied Technology-Memphis",
-    "city": "Abilene",
-    "state": "TX",
+    "city": "Memphis",
+    "state": "TN",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.acu.edu/",
+    "website": "www.tcatmemphis.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

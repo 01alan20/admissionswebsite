@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 104160,
     "name": "Arizona Western College",
-    "city": "Coolidge",
+    "city": "Yuma",
     "state": "AZ",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: High Transfer-Mixed Traditional/Nontraditional",
-    "website": "www.centralaz.edu/",
+    "website": "https://www.azwestern.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

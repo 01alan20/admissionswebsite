@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 123095,
     "name": "Saybrook University",
-    "city": "Orange",
+    "city": "Pasadena",
     "state": "CA",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Doctoral/Professional Universities",
-    "website": "www.southcoastcollege.edu/",
+    "website": "https://www.saybrook.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

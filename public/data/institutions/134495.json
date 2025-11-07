@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 134495,
     "name": "Hillsborough Community College",
-    "city": "Miami",
+    "city": "Tampa",
     "state": "FL",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Associate's Colleges: High Transfer-Mixed Traditional/Nontraditional",
-    "website": "www.mdc.edu/",
+    "website": "https://www.hccfl.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

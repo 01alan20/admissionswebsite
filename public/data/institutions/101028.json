@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 101028,
     "name": "Chattahoochee Valley Community College",
-    "city": "Montgomery",
+    "city": "Phenix City",
     "state": "AL",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: Mixed Transfer/Career & Technical-High Traditional",
-    "website": "www.southuniversity.edu/",
+    "website": "https://www.cv.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

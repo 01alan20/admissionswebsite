@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 496469,
     "name": "Daybreak University",
-    "city": "Phoenix",
-    "state": "AZ",
+    "city": "Anaheim",
+    "state": "CA",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "https://www.pathwayscollege.edu/",
+    "website": "daybreak.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

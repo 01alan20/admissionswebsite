@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 236939,
     "name": "Washington State University",
-    "city": "Morgantown",
-    "state": "WV",
+    "city": "Pullman",
+    "state": "WA",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Doctoral Universities: Very High Research Activity",
-    "website": "www.wvu.edu/",
+    "website": "https://wsu.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

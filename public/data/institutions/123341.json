@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 123341,
     "name": "Sierra College",
-    "city": "Fullerton",
+    "city": "Rocklin",
     "state": "CA",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: Mixed Transfer/Career & Technical-High Traditional",
-    "website": "www.ketchum.edu/",
+    "website": "https://www.sierracollege.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

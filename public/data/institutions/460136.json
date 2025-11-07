@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 460136,
     "name": "Pima Medical Institute-Houston",
-    "city": "Bowling Green",
-    "state": "KY",
+    "city": "Houston",
+    "state": "TX",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Special Focus Two-Year: Health Professions",
-    "website": "www.lindseyinstitute.com/",
+    "website": "https://pmi.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

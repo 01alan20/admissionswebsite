@@ -3,151 +3,151 @@
     "unitid":101994,
     "name":"Reid State Technical College",
     "state":"AL",
-    "city":"Mobile"
+    "city":"Evergreen"
   },
   {
     "unitid":105659,
     "name":"Refrigeration School Inc",
     "state":"AZ",
-    "city":"Scottsdale"
+    "city":"Phoenix"
   },
   {
     "unitid":105668,
     "name":"Rio Salado College",
     "state":"AZ",
-    "city":"Phoenix"
+    "city":"Tempe"
   },
   {
     "unitid":105677,
     "name":"Roberto-Venn School of Luthiery",
     "state":"AZ",
-    "city":"Glendale"
+    "city":"Phoenix"
   },
   {
     "unitid":114637,
     "name":"Redondo Beach Beauty College",
     "state":"CA",
-    "city":"Fullerton"
+    "city":"Torrance"
   },
   {
     "unitid":117052,
     "name":"Reedley College",
     "state":"CA",
-    "city":"Hayward"
+    "city":"Reedley"
   },
   {
     "unitid":121886,
     "name":"Rio Hondo College",
     "state":"CA",
-    "city":"Clovis"
+    "city":"Whittier"
   },
   {
     "unitid":121901,
     "name":"Riverside City College",
     "state":"CA",
-    "city":"Stockton"
+    "city":"Riverside"
   },
   {
     "unitid":127909,
     "name":"Red Rocks Community College",
-    "state":"CT",
-    "city":"East Hartford"
+    "state":"CO",
+    "city":"Lakewood"
   },
   {
     "unitid":127918,
     "name":"Regis University",
-    "state":"CT",
-    "city":"East Windsor"
+    "state":"CO",
+    "city":"Denver"
   },
   {
     "unitid":127945,
     "name":"Rocky Mountain College of Art and Design",
-    "state":"CT",
-    "city":"Willimantic"
+    "state":"CO",
+    "city":"Lakewood"
   },
   {
     "unitid":129428,
     "name":"Rensselaer at Hartford",
     "state":"CT",
-    "city":"New Haven"
+    "city":"Hartford"
   },
   {
     "unitid":136659,
     "name":"Radford M Locklin Technical College",
     "state":"FL",
-    "city":"Miami Beach"
+    "city":"Milton"
   },
   {
     "unitid":136765,
     "name":"Ridge Technical College",
     "state":"FL",
-    "city":"Tampa"
+    "city":"Winter Haven"
   },
   {
     "unitid":136774,
     "name":"Ringling College of Art and Design",
     "state":"FL",
-    "city":"Perry"
+    "city":"Sarasota"
   },
   {
     "unitid":136826,
     "name":"Robert Morgan Educational Center and Technical College",
     "state":"FL",
-    "city":"Panama City"
+    "city":"Miami"
   },
   {
     "unitid":136950,
     "name":"Rollins College",
     "state":"FL",
-    "city":"Jacksonville"
+    "city":"Winter Park"
   },
   {
     "unitid":137713,
     "name":"Riveroak Technical College",
-    "state":"GA",
-    "city":"Albany"
+    "state":"FL",
+    "city":"Live Oak"
   },
   {
     "unitid":138309,
     "name":"Rasmussen University-Florida",
-    "state":"GA",
-    "city":"Gainesville"
+    "state":"FL",
+    "city":"Ocala"
   },
   {
     "unitid":140872,
     "name":"Reinhardt University",
-    "state":"HI",
-    "city":"Kahului"
+    "state":"GA",
+    "city":"Waleska"
   },
   {
     "unitid":145558,
     "name":"Rosalind Franklin University of Medicine and Science",
     "state":"IL",
-    "city":"Godfrey"
+    "city":"North Chicago"
   },
   {
     "unitid":148256,
     "name":"Rend Lake College",
     "state":"IL",
-    "city":"Palos Heights"
+    "city":"Ina"
   },
   {
     "unitid":148292,
     "name":"Richland Community College",
     "state":"IL",
-    "city":"Deerfield"
+    "city":"Decatur"
   },
   {
     "unitid":148380,
     "name":"Rock Valley College",
     "state":"IL",
-    "city":"River Grove"
+    "city":"Rockford"
   },
   {
     "unitid":148405,
     "name":"Rockford University",
     "state":"IL",
-    "city":"Springfield"
+    "city":"Rockford"
   },
   {
     "unitid":148487,
@@ -159,397 +159,397 @@
     "unitid":148511,
     "name":"Rush University",
     "state":"IL",
-    "city":"Oak Brook"
+    "city":"Chicago"
   },
   {
     "unitid":152275,
     "name":"Ravenscroft Beauty College",
-    "state":"IA",
-    "city":"Dubuque"
+    "state":"IN",
+    "city":"Fort Wayne"
   },
   {
     "unitid":152309,
     "name":"Rogers Academy of Hair Design",
-    "state":"IA",
-    "city":"Davenport"
+    "state":"IN",
+    "city":"Evansville"
   },
   {
     "unitid":152318,
     "name":"Rose-Hulman Institute of Technology",
-    "state":"IA",
-    "city":"Ankeny"
+    "state":"IN",
+    "city":"Terre Haute"
   },
   {
     "unitid":160524,
     "name":"Remington College-Lafayette Campus",
-    "state":"ME",
-    "city":"Portland"
+    "state":"LA",
+    "city":"Lafayette"
   },
   {
     "unitid":165750,
     "name":"Rob Roy Academy-Fall River",
     "state":"MA",
-    "city":"Bedford"
+    "city":"Fall River"
   },
   {
     "unitid":167039,
     "name":"Rob Roy Academy-New Bedford",
     "state":"MA",
-    "city":"Williamstown"
+    "city":"New Bedford"
   },
   {
     "unitid":167598,
     "name":"Regis College",
-    "state":"MI",
-    "city":"Grand Rapids"
+    "state":"MA",
+    "city":"Weston"
   },
   {
     "unitid":167631,
     "name":"Roxbury Community College",
-    "state":"MI",
-    "city":"Grand Rapids"
+    "state":"MA",
+    "city":"Roxbury Crossing"
   },
   {
     "unitid":168032,
     "name":"Rob Roy Academy-Taunton",
-    "state":"MI",
-    "city":"University Center"
+    "state":"MA",
+    "city":"Taunton"
   },
   {
     "unitid":170967,
     "name":"Rochester University",
     "state":"MI",
-    "city":"Troy"
+    "city":"Rochester Hills"
   },
   {
     "unitid":171988,
     "name":"Ross Medical Education Center-Lansing",
-    "state":"MN",
-    "city":"Moorhead"
+    "state":"MI",
+    "city":"Lansing"
   },
   {
     "unitid":171997,
     "name":"Ross Medical Education Center-Warren",
-    "state":"MN",
-    "city":"Saint Paul"
+    "state":"MI",
+    "city":"Warren"
   },
   {
     "unitid":172015,
     "name":"Ross Medical Education Center-Flint",
-    "state":"MN",
-    "city":"Rosemount"
+    "state":"MI",
+    "city":"Flint"
   },
   {
     "unitid":173063,
     "name":"Riverland Community College",
     "state":"MN",
-    "city":"Morris"
+    "city":"Austin"
   },
   {
     "unitid":174738,
     "name":"Rochester Community and Technical College",
-    "state":"MS",
-    "city":"Raymond"
+    "state":"MN",
+    "city":"Rochester"
   },
   {
     "unitid":175014,
     "name":"Rasmussen University-Minnesota",
-    "state":"MS",
-    "city":"Laurel"
+    "state":"MN",
+    "city":"St. Cloud"
   },
   {
     "unitid":175236,
     "name":"Ridgewater College",
-    "state":"MS",
-    "city":"Holly Springs"
+    "state":"MN",
+    "city":"Willmar"
   },
   {
     "unitid":176318,
     "name":"Rust College",
-    "state":"MO",
-    "city":"Hannibal"
+    "state":"MS",
+    "city":"Holly Springs"
   },
   {
     "unitid":178891,
     "name":"Ranken Technical College",
-    "state":"MT",
-    "city":"Great Falls"
+    "state":"MO",
+    "city":"Saint Louis"
   },
   {
     "unitid":178989,
     "name":"Research College of Nursing",
-    "state":"MT",
-    "city":"Helena"
+    "state":"MO",
+    "city":"Kansas City"
   },
   {
     "unitid":179043,
     "name":"Rockhurst University",
-    "state":"MT",
-    "city":"Crow Agency"
+    "state":"MO",
+    "city":"Kansas City"
   },
   {
     "unitid":180595,
     "name":"Rocky Mountain College",
-    "state":"NV",
-    "city":"Sparks"
+    "state":"MT",
+    "city":"Billings"
   },
   {
     "unitid":183114,
     "name":"River Valley Community College",
-    "state":"NJ",
-    "city":"Glassboro"
+    "state":"NH",
+    "city":"Claremont"
   },
   {
     "unitid":183211,
     "name":"Rivier University",
-    "state":"NJ",
-    "city":"Jersey City"
+    "state":"NH",
+    "city":"Nashua"
   },
   {
     "unitid":183877,
     "name":"Rowan College at Burlington County",
     "state":"NJ",
-    "city":"Gloucester"
+    "city":"Mount Laurel"
   },
   {
     "unitid":184205,
     "name":"Rowan College of South Jersey-Cumberland Campus",
-    "state":"FL",
-    "city":"Boynton Beach"
+    "state":"NJ",
+    "city":"Vineland"
   },
   {
     "unitid":184782,
     "name":"Rowan University",
     "state":"NJ",
-    "city":"Egg Harbor Township"
+    "city":"Glassboro"
   },
   {
     "unitid":184791,
     "name":"Rowan College of South Jersey-Gloucester Campus",
     "state":"NJ",
-    "city":"Morristown"
+    "city":"Sewell"
   },
   {
     "unitid":185466,
     "name":"Rizzieri Aveda School for Beauty and Wellness",
     "state":"NJ",
-    "city":"Wayne"
+    "city":"Voorhees"
   },
   {
     "unitid":185767,
     "name":"Robert Fiance Beauty Schools-West New York",
-    "state":"NM",
-    "city":"Santa Fe"
+    "state":"NJ",
+    "city":"West New York"
   },
   {
     "unitid":186186,
     "name":"Rabbinical College of America",
-    "state":"NM",
-    "city":"Carlsbad"
+    "state":"NJ",
+    "city":"Morristown"
   },
   {
     "unitid":186201,
     "name":"Ramapo College of New Jersey",
-    "state":"NM",
-    "city":"Grants"
+    "state":"NJ",
+    "city":"Mahwah"
   },
   {
     "unitid":186274,
     "name":"Robert Fiance Beauty Schools",
-    "state":"NM",
-    "city":"Las Cruces"
+    "state":"FL",
+    "city":"Boynton Beach"
   },
   {
     "unitid":186283,
     "name":"Rider University",
-    "state":"NM",
-    "city":"Los Lunas"
+    "state":"NJ",
+    "city":"Lawrenceville"
   },
   {
     "unitid":186371,
     "name":"Rutgers University-Camden",
-    "state":"NM",
-    "city":"Espanola"
+    "state":"NJ",
+    "city":"Camden"
   },
   {
     "unitid":186380,
     "name":"Rutgers University-New Brunswick",
-    "state":"NM",
-    "city":"Farmington"
+    "state":"NJ",
+    "city":"New Brunswick"
   },
   {
     "unitid":186399,
     "name":"Rutgers University-Newark",
-    "state":"NM",
-    "city":"Santa Fe"
+    "state":"NJ",
+    "city":"Newark"
   },
   {
     "unitid":186645,
     "name":"Raritan Valley Community College",
-    "state":"NY",
-    "city":"Flushing"
+    "state":"NJ",
+    "city":"Branchburg"
   },
   {
     "unitid":194657,
     "name":"Rabbinical Academy Mesivta Rabbi Chaim Berlin",
     "state":"NY",
-    "city":"Albany"
+    "city":"Brooklyn"
   },
   {
     "unitid":194666,
     "name":"Rabbinical College Bobover Yeshiva Bnei Zion",
     "state":"NY",
-    "city":"Vestal"
+    "city":"Brooklyn"
   },
   {
     "unitid":194693,
     "name":"Rabbinical College Beth Shraga",
     "state":"NY",
-    "city":"Buffalo"
+    "city":"Monsey"
   },
   {
     "unitid":194718,
     "name":"Rabbinical Seminary Mkor Chaim",
-    "state":"NY",
-    "city":"Stony Brook"
+    "state":"NJ",
+    "city":"Lakewood"
   },
   {
     "unitid":194736,
     "name":"Rabbinical College of Long Island",
     "state":"NY",
-    "city":"Syracuse"
+    "city":"Long Beach"
   },
   {
     "unitid":194763,
     "name":"Rabbinical Seminary of America",
     "state":"NY",
-    "city":"Utica"
+    "city":"Flushing"
   },
   {
     "unitid":194824,
     "name":"Rensselaer Polytechnic Institute",
     "state":"NY",
-    "city":"Brockport"
+    "city":"Troy"
   },
   {
     "unitid":194958,
     "name":"Roberts Wesleyan University",
     "state":"NY",
-    "city":"Buffalo"
+    "city":"Rochester"
   },
   {
     "unitid":195003,
     "name":"Rochester Institute of Technology",
     "state":"NY",
-    "city":"Cortland"
+    "city":"Rochester"
   },
   {
     "unitid":195058,
     "name":"Rockland Community College",
     "state":"NY",
-    "city":"New Paltz"
+    "city":"Suffern"
   },
   {
     "unitid":195128,
     "name":"Russell Sage College",
     "state":"NY",
-    "city":"Oswego"
+    "city":"Troy"
   },
   {
     "unitid":199421,
     "name":"Randolph Community College",
-    "state":"ND",
-    "city":"Fort Totten"
+    "state":"NC",
+    "city":"Asheboro"
   },
   {
     "unitid":199449,
     "name":"Richmond Community College",
-    "state":"ND",
-    "city":"Bismarck"
+    "state":"NC",
+    "city":"Hamlet"
   },
   {
     "unitid":199467,
     "name":"Roanoke-Chowan Community College",
-    "state":"ND",
-    "city":"Minot"
+    "state":"NC",
+    "city":"Ahoskie"
   },
   {
     "unitid":199476,
     "name":"Robeson Community College",
-    "state":"ND",
-    "city":"Grand Forks"
+    "state":"NC",
+    "city":"Lumberton"
   },
   {
     "unitid":199485,
     "name":"Rockingham Community College",
-    "state":"ND",
-    "city":"Wahpeton"
+    "state":"NC",
+    "city":"Wentworth"
   },
   {
     "unitid":199494,
     "name":"Rowan-Cabarrus Community College",
-    "state":"ND",
-    "city":"Bottineau"
+    "state":"NC",
+    "city":"Salisbury"
   },
   {
     "unitid":200013,
     "name":"Rasmussen University-North Dakota",
-    "state":"OH",
-    "city":"Monroe"
+    "state":"ND",
+    "city":"Fargo"
   },
   {
     "unitid":203234,
     "name":"Ross Medical Education Center-Cincinnati",
     "state":"OH",
-    "city":"Mansfield"
+    "city":"Cincinnati"
   },
   {
     "unitid":205124,
     "name":"Rabbinical College Telshe",
-    "state":"OK",
-    "city":"Edmond"
+    "state":"OH",
+    "city":"Wickliffe"
   },
   {
     "unitid":205142,
     "name":"Raphael's School of Beauty Culture Inc-Niles",
-    "state":"OK",
-    "city":"Warner"
+    "state":"OH",
+    "city":"Niles"
   },
   {
     "unitid":207069,
     "name":"Redlands Community College",
-    "state":"OR",
-    "city":"Astoria"
+    "state":"OK",
+    "city":"El Reno"
   },
   {
     "unitid":207157,
     "name":"Randall University",
-    "state":"OR",
-    "city":"Portland"
+    "state":"OK",
+    "city":"Moore"
   },
   {
     "unitid":207661,
     "name":"Rogers State University",
-    "state":"OR",
-    "city":"Corvallis"
+    "state":"OK",
+    "city":"Claremore"
   },
   {
     "unitid":207670,
     "name":"Rose State College",
-    "state":"OR",
-    "city":"Eugene"
+    "state":"OK",
+    "city":"Midwest City"
   },
   {
     "unitid":209922,
     "name":"Reed College",
-    "state":"PA",
-    "city":"Cheyney"
+    "state":"OR",
+    "city":"Portland"
   },
   {
     "unitid":209940,
     "name":"Rogue Community College",
-    "state":"PA",
-    "city":"Tarentum"
+    "state":"OR",
+    "city":"Grants Pass"
   },
   {
     "unitid":213932,
@@ -561,720 +561,720 @@
     "unitid":215585,
     "name":"Reading Area Community College",
     "state":"PA",
-    "city":"Waynesburg"
+    "city":"Reading"
   },
   {
     "unitid":215594,
     "name":"Reading Hospital School of Health Sciences",
     "state":"PA",
-    "city":"Allentown"
+    "city":"Reading"
   },
   {
     "unitid":215619,
     "name":"Reconstructionist Rabbinical College",
     "state":"PA",
-    "city":"West Chester"
+    "city":"Wyncote"
   },
   {
     "unitid":215655,
     "name":"Robert Morris University",
     "state":"PA",
-    "city":"New Wilmington"
+    "city":"Moon Township"
   },
   {
     "unitid":215682,
     "name":"Rosedale Technical College",
     "state":"PA",
-    "city":"Glenside"
+    "city":"Pittsburgh"
   },
   {
     "unitid":215691,
     "name":"Rosemont College",
     "state":"PA",
-    "city":"Youngwood"
+    "city":"Rosemont"
   },
   {
     "unitid":217420,
     "name":"Rhode Island College",
-    "state":"SC",
-    "city":"Tigerville"
+    "state":"RI",
+    "city":"Providence"
   },
   {
     "unitid":217493,
     "name":"Rhode Island School of Design",
-    "state":"SC",
-    "city":"Clinton"
+    "state":"RI",
+    "city":"Providence"
   },
   {
     "unitid":217518,
     "name":"Roger Williams University",
-    "state":"SC",
-    "city":"Aiken"
+    "state":"RI",
+    "city":"Bristol"
   },
   {
     "unitid":221351,
     "name":"Rhodes College",
-    "state":"TX",
-    "city":"San Antonio"
+    "state":"TN",
+    "city":"Memphis"
   },
   {
     "unitid":221397,
     "name":"Roane State Community College",
-    "state":"TX",
-    "city":"Houston"
+    "state":"TN",
+    "city":"Harriman"
   },
   {
     "unitid":223463,
     "name":"Remington College-Dallas Campus",
     "state":"TX",
-    "city":"Brownwood"
+    "city":"Dallas"
   },
   {
     "unitid":227687,
     "name":"Ranger College",
     "state":"TX",
-    "city":"Fort Worth"
+    "city":"Ranger"
   },
   {
     "unitid":227757,
     "name":"Rice University",
     "state":"TX",
-    "city":"Odessa"
+    "city":"Houston"
   },
   {
     "unitid":231651,
     "name":"Regent University",
     "state":"VA",
-    "city":"South Prince George"
+    "city":"Virginia Beach"
   },
   {
     "unitid":233277,
     "name":"Radford University",
-    "state":"WA",
-    "city":"Seattle"
+    "state":"VA",
+    "city":"Radford"
   },
   {
     "unitid":233295,
     "name":"Randolph-Macon College",
-    "state":"WA",
-    "city":"Lynnwood"
+    "state":"VA",
+    "city":"Ashland"
   },
   {
     "unitid":233301,
     "name":"Randolph College",
-    "state":"WA",
-    "city":"Everett"
+    "state":"VA",
+    "city":"Lynchburg"
   },
   {
     "unitid":233310,
     "name":"Rappahannock Community College",
-    "state":"WA",
-    "city":"Olympia"
+    "state":"VA",
+    "city":"Glenns"
   },
   {
     "unitid":233338,
     "name":"Richard Bland College",
-    "state":"WA",
-    "city":"Spokane"
+    "state":"VA",
+    "city":"South Prince George"
   },
   {
     "unitid":233408,
     "name":"Riverside College of Health Careers",
-    "state":"WA",
-    "city":"Auburn"
+    "state":"VA",
+    "city":"Newport News"
   },
   {
     "unitid":233426,
     "name":"Roanoke College",
-    "state":"WA",
-    "city":"Shoreline"
+    "state":"VA",
+    "city":"Salem"
   },
   {
     "unitid":236382,
     "name":"Renton Technical College",
-    "state":"WV",
-    "city":"Beckley"
+    "state":"WA",
+    "city":"Renton"
   },
   {
     "unitid":237491,
     "name":"Ralph R Willis Career and Technical Center",
-    "state":"WI",
-    "city":"Milwaukee"
+    "state":"WV",
+    "city":"Stollings"
   },
   {
     "unitid":239628,
     "name":"Ripon College",
-    "state":"PR",
-    "city":"San Juan"
+    "state":"WI",
+    "city":"Ripon"
   },
   {
     "unitid":247409,
     "name":"Ross Medical Education Center-Saginaw",
-    "state":"OK",
-    "city":"Oklahoma City"
+    "state":"MI",
+    "city":"Saginaw"
   },
   {
     "unitid":250993,
     "name":"Red River Technology Center",
-    "state":"PA",
-    "city":"Wilkes Barre"
+    "state":"OK",
+    "city":"Duncan"
   },
   {
     "unitid":261676,
     "name":"Ross Medical Education Center-Brighton",
-    "state":"MT",
-    "city":"Box Elder"
+    "state":"MI",
+    "city":"Brighton"
   },
   {
     "unitid":261685,
     "name":"Ross Medical Education Center-Ann Arbor",
-    "state":"NY",
-    "city":"New York"
+    "state":"MI",
+    "city":"Ann Arbor"
   },
   {
     "unitid":363013,
     "name":"Ross Medical Education Center-Port Huron",
-    "state":"KY",
-    "city":"Newport"
+    "state":"MI",
+    "city":"Port Huron"
   },
   {
     "unitid":363147,
     "name":"Raphael's School of Beauty Culture Inc-Alliance",
-    "state":"LA",
-    "city":"Monroe"
+    "state":"OH",
+    "city":"Alliance"
   },
   {
     "unitid":363882,
     "name":"Raphael's School of Beauty Culture Inc-Brunswick",
-    "state":"AR",
-    "city":"Bentonville"
+    "state":"OH",
+    "city":"Brunswick"
   },
   {
     "unitid":364575,
     "name":"Roane-Jackson Technical Center",
-    "state":"OK",
-    "city":"Altus"
+    "state":"WV",
+    "city":"Leroy"
   },
   {
     "unitid":365824,
     "name":"Ross Medical Education Center-Roosevelt Park",
-    "state":"PA",
-    "city":"Pleasant Gap"
+    "state":"MI",
+    "city":"Roosevelt Park"
   },
   {
     "unitid":365833,
     "name":"Ross Medical Education Center-Kentwood",
-    "state":"TX",
-    "city":"Houston"
+    "state":"MI",
+    "city":"Kentwood"
   },
   {
     "unitid":366535,
     "name":"Remington College-Mobile Campus",
-    "state":"FL",
-    "city":"Merritt Island"
+    "state":"AL",
+    "city":"Mobile"
   },
   {
     "unitid":367158,
     "name":"Ross Medical Education Center-Taylor",
-    "state":"MS",
-    "city":"Jackson"
+    "state":"MI",
+    "city":"Taylor"
   },
   {
     "unitid":369446,
     "name":"Rosel School of Cosmetology",
-    "state":"TN",
-    "city":"Clarksville"
+    "state":"IL",
+    "city":"Niles"
   },
   {
     "unitid":373085,
     "name":"Ross College-Davenport",
-    "state":"FL",
-    "city":"Tampa"
+    "state":"IA",
+    "city":"Davenport"
   },
   {
     "unitid":373696,
     "name":"Rob Roy Academy-Worcester",
-    "state":"TX",
-    "city":"Houston"
+    "state":"MA",
+    "city":"Worcester"
   },
   {
     "unitid":375416,
     "name":"Remington College-Cleveland Campus",
-    "state":"IA",
-    "city":"Spirit Lake"
+    "state":"OH",
+    "city":"Cleveland"
   },
   {
     "unitid":377111,
     "name":"Remington College-Fort Worth Campus",
     "state":"TX",
-    "city":"Temple"
+    "city":"Fort Worth"
   },
   {
     "unitid":383279,
     "name":"Robert Fiance Beauty Schools-North Plainfield",
-    "state":"AZ",
-    "city":"Flagstaff"
+    "state":"NJ",
+    "city":"North Plainfield"
   },
   {
     "unitid":384421,
     "name":"Rabbi Jacob Joseph School",
-    "state":"FL",
-    "city":"Gainesville"
+    "state":"NJ",
+    "city":"Edison"
   },
   {
     "unitid":405854,
     "name":"Rabbinical College of Ohr Shimon Yisroel",
-    "state":"WI",
-    "city":"Keshena"
+    "state":"NY",
+    "city":"Brooklyn"
   },
   {
     "unitid":407568,
     "name":"Raphael's School of Beauty Culture Inc-Boardman",
-    "state":"TX",
-    "city":"Houston"
+    "state":"OH",
+    "city":"Boardman"
   },
   {
     "unitid":409616,
     "name":"Roger Williams University School of Law",
-    "state":"NY",
-    "city":"Watertown"
+    "state":"RI",
+    "city":"Bristol"
   },
   {
     "unitid":412599,
     "name":"Remington College-Memphis Campus",
-    "state":"NY",
-    "city":"West Nyack"
+    "state":"TN",
+    "city":"Memphis"
   },
   {
     "unitid":418083,
     "name":"Rockland County BOCES-Practical Nursing Program",
-    "state":"DC",
-    "city":"Washington"
+    "state":"NY",
+    "city":"West Nyack"
   },
   {
     "unitid":419235,
     "name":"Rivertown School of Beauty Barber Skin Care and Nails",
-    "state":"PR",
-    "city":"Bayamon"
+    "state":"GA",
+    "city":"Columbus"
   },
   {
     "unitid":421513,
     "name":"Ross College-Hopkinsville",
-    "state":"VA",
-    "city":"Henrico"
+    "state":"KY",
+    "city":"Hopkinsville"
   },
   {
     "unitid":436304,
     "name":"River Parishes Community College",
-    "state":"WA",
-    "city":"Seattle"
+    "state":"LA",
+    "city":"Gonzales"
   },
   {
     "unitid":437857,
     "name":"Rudae's School of Beauty Culture-Ft Wayne",
-    "state":"MI",
-    "city":"Mount Pleasant"
+    "state":"IN",
+    "city":"Fort Wayne"
   },
   {
     "unitid":438665,
     "name":"Rancho Santiago Community College District Office",
-    "state":"FL",
-    "city":"Plantation"
+    "state":"California",
+    "city":null
   },
   {
     "unitid":439899,
     "name":"Rosedale Bible College",
-    "state":"FL",
-    "city":"Naples"
+    "state":"OH",
+    "city":"Irwin"
   },
   {
     "unitid":440271,
     "name":"Remington College-Baton Rouge Campus",
-    "state":"NC",
-    "city":"Mooresville"
+    "state":"LA",
+    "city":"Baton Rouge"
   },
   {
     "unitid":441104,
     "name":"Richmont Graduate University",
-    "state":"PR",
-    "city":"Arecibo"
+    "state":"TN",
+    "city":"Chattanooga"
   },
   {
     "unitid":441876,
     "name":"Rudy & Kelly Academy, A Paul Mitchell Partner School",
-    "state":"PR",
-    "city":"Aguadilla"
+    "state":"VA",
+    "city":"Virginia Beach"
   },
   {
     "unitid":445203,
     "name":"Remington College-North Houston Campus",
-    "state":"CA",
-    "city":"Chula Vista"
-  },
-  {
-    "unitid":445249,
-    "name":"Remington College-Nashville Campus",
-    "state":"AZ",
-    "city":"Phoenix"
-  },
-  {
-    "unitid":445735,
-    "name":"Roseman University of Health Sciences",
-    "state":"CA",
-    "city":"Vacaville"
-  },
-  {
-    "unitid":446516,
-    "name":"Rosslyn Training Academy of Cosmetology",
-    "state":"PA",
-    "city":"Warminster"
-  },
-  {
-    "unitid":448673,
-    "name":"Rasmussen University-Illinois",
-    "state":"WI",
-    "city":"Milwaukee"
-  },
-  {
-    "unitid":450571,
-    "name":"Rasmussen University-Wisconsin",
-    "state":"OH",
-    "city":"Cincinnati"
-  },
-  {
-    "unitid":451857,
-    "name":"Remington College-Houston Southeast Campus",
-    "state":"OH",
-    "city":"Columbus"
-  },
-  {
-    "unitid":451866,
-    "name":"Remington College-Shreveport Campus",
-    "state":"OH",
-    "city":"Cincinnati"
-  },
-  {
-    "unitid":452072,
-    "name":"Ross Medical Education Center-New Baltimore",
-    "state":"UT",
-    "city":"Sandy"
-  },
-  {
-    "unitid":452081,
-    "name":"Ross College-Sylvania",
-    "state":"WA",
-    "city":"Yakima"
-  },
-  {
-    "unitid":456506,
-    "name":"Ross Medical Education Center-Fort Wayne",
-    "state":"SC",
-    "city":"Mullins"
-  },
-  {
-    "unitid":456515,
-    "name":"Ross Medical Education Center-Battle Creek",
-    "state":"TN",
-    "city":"Manchester"
-  },
-  {
-    "unitid":458104,
-    "name":"Renaissance Academie",
-    "state":"MI",
-    "city":"Canton"
-  },
-  {
-    "unitid":460093,
-    "name":"Ross Medical Education Center-Davison",
-    "state":"ID",
-    "city":"Boise"
-  },
-  {
-    "unitid":460109,
-    "name":"Ross Medical Education Center-Granger",
-    "state":"CO",
-    "city":"Aurora"
-  },
-  {
-    "unitid":460118,
-    "name":"Ross Medical Education Center-Niles",
-    "state":"ME",
-    "city":"Augusta"
-  },
-  {
-    "unitid":460127,
-    "name":"Ross Medical Education Center-Canton",
-    "state":"AZ",
-    "city":"Tucson"
-  },
-  {
-    "unitid":475033,
-    "name":"Relay Graduate School of Education",
-    "state":"NC",
-    "city":"Greensboro"
-  },
-  {
-    "unitid":475495,
-    "name":"Rocky Mountain University of Health Professions",
-    "state":"KY",
-    "city":"Louisville"
-  },
-  {
-    "unitid":475653,
-    "name":"Reflections Academy of Beauty",
-    "state":"OH",
-    "city":"Ontario"
-  },
-  {
-    "unitid":476230,
-    "name":"Ross Medical Education Center-Morgantown",
-    "state":"FL",
-    "city":"Doral"
-  },
-  {
-    "unitid":476726,
-    "name":"Rio Grande Valley College",
-    "state":"NY",
-    "city":"New York"
-  },
-  {
-    "unitid":480523,
-    "name":"Ross Medical Education Center-Dayton",
-    "state":"GA",
-    "city":"Macon"
-  },
-  {
-    "unitid":480532,
-    "name":"Ross Medical Education Center-Ontario",
-    "state":"IL",
-    "city":"Calumet City"
-  },
-  {
-    "unitid":480550,
-    "name":"Ross Medical Education Center-Bowling Green",
-    "state":"CO",
-    "city":"Lakewood"
-  },
-  {
-    "unitid":480657,
-    "name":"Rasmussen University-Kansas",
-    "state":"NY",
-    "city":"New York"
-  },
-  {
-    "unitid":480790,
-    "name":"Rocky Vista University",
-    "state":"ND",
-    "city":"Fargo"
-  },
-  {
-    "unitid":481191,
-    "name":"Riverside County Office of Education-School of Career Education",
-    "state":"AZ",
-    "city":"Scottsdale"
-  },
-  {
-    "unitid":481863,
-    "name":"Ross Medical Education Center-Kokomo",
-    "state":"FL",
-    "city":"Miami"
-  },
-  {
-    "unitid":481890,
-    "name":"Ross Medical Education Center-Erlanger",
-    "state":"CA",
-    "city":"San Francisco"
-  },
-  {
-    "unitid":481906,
-    "name":"Ross Medical Education Center-Charleston",
-    "state":"TN",
-    "city":"Madison"
-  },
-  {
-    "unitid":484330,
-    "name":"Ross Medical Education Center-Owensboro",
-    "state":"TN",
-    "city":"New Tazewell"
-  },
-  {
-    "unitid":484349,
-    "name":"Ross Medical Education Center-Evansville",
-    "state":"WI",
-    "city":"Elkhorn"
-  },
-  {
-    "unitid":484358,
-    "name":"Ross Medical Education Center-Johnson City",
-    "state":"CA",
-    "city":"Berkeley"
-  },
-  {
-    "unitid":484871,
-    "name":"Rabbinical College Ohr Yisroel",
-    "state":"IN",
-    "city":"Muncie"
-  },
-  {
-    "unitid":485704,
-    "name":"River Valley School of Massage",
-    "state":"FL",
-    "city":"Jacksonville"
-  },
-  {
-    "unitid":486406,
-    "name":"Randolph Technical Center",
-    "state":"IL",
-    "city":"Matteson"
-  },
-  {
-    "unitid":486707,
-    "name":"Ross Medical Education Center-Huntsville",
-    "state":"CA",
-    "city":"Modesto"
-  },
-  {
-    "unitid":486716,
-    "name":"Ross Medical Education Center-Knoxville",
-    "state":"KY",
-    "city":"Richmond"
-  },
-  {
-    "unitid":486752,
-    "name":"Ross Medical Education Center-Muncie",
-    "state":"FL",
-    "city":"Clearwater"
-  },
-  {
-    "unitid":487889,
-    "name":"Regional Center for Border Health",
-    "state":"MT",
-    "city":"Dillon"
-  },
-  {
-    "unitid":488183,
-    "name":"Regina Webb Academy",
-    "state":"NJ",
-    "city":"South Hackensack"
-  },
-  {
-    "unitid":488952,
-    "name":"Ross Medical Education Center-Elyria",
-    "state":"CA",
-    "city":"Anaheim"
-  },
-  {
-    "unitid":488961,
-    "name":"Ross Medical Education Center-Lafayette",
-    "state":"NJ",
-    "city":"Eatontown"
-  },
-  {
-    "unitid":488970,
-    "name":"Ross Medical Education Center-Midland",
-    "state":"NC",
-    "city":"Durham"
-  },
-  {
-    "unitid":490197,
-    "name":"Regan Career Institute",
-    "state":"NJ",
-    "city":"Lakewood"
-  },
-  {
-    "unitid":490230,
-    "name":"Reformed University",
-    "state":"PA",
-    "city":"Bethlehem"
-  },
-  {
-    "unitid":490531,
-    "name":"Ray J's College of Hair",
-    "state":"CA",
-    "city":"Antioch"
-  },
-  {
-    "unitid":490814,
-    "name":"Ross Medical Education Center-Portage",
-    "state":"OK",
-    "city":"Muskogee"
-  },
-  {
-    "unitid":490832,
-    "name":"Ross College-Canton",
-    "state":"CA",
-    "city":"Los Angeles"
-  },
-  {
-    "unitid":490841,
-    "name":"Ross College-Grand Rapids North",
-    "state":"AR",
-    "city":"Little Rock"
-  },
-  {
-    "unitid":491701,
-    "name":"Rexburg College of Massage Therapy",
-    "state":"TX",
-    "city":"El Paso"
-  },
-  {
-    "unitid":491844,
-    "name":"Red Lake Nation College",
-    "state":"RI",
-    "city":"Providence"
-  },
-  {
-    "unitid":492209,
-    "name":"Reiss-Davis Graduate School",
-    "state":"TX",
-    "city":"San Antonio"
-  },
-  {
-    "unitid":495165,
-    "name":"Royal Learning Institute",
-    "state":"WA",
-    "city":"Spokane"
-  },
-  {
-    "unitid":495396,
-    "name":"Royal Learning Institute",
-    "state":"SC",
-    "city":"Kingstree"
-  },
-  {
-    "unitid":496052,
-    "name":"Ruben's Five Star Academy",
-    "state":"PR",
-    "city":"Fajardo"
-  },
-  {
-    "unitid":496663,
-    "name":"Riggins Urban Barber College",
     "state":"TX",
     "city":"Houston"
   },
   {
+    "unitid":445249,
+    "name":"Remington College-Nashville Campus",
+    "state":"TN",
+    "city":"Nashville"
+  },
+  {
+    "unitid":445735,
+    "name":"Roseman University of Health Sciences",
+    "state":"NV",
+    "city":"Henderson"
+  },
+  {
+    "unitid":446516,
+    "name":"Rosslyn Training Academy of Cosmetology",
+    "state":"PR",
+    "city":"Aguada"
+  },
+  {
+    "unitid":448673,
+    "name":"Rasmussen University-Illinois",
+    "state":"IL",
+    "city":"Rockford"
+  },
+  {
+    "unitid":450571,
+    "name":"Rasmussen University-Wisconsin",
+    "state":"WI",
+    "city":"Green Bay"
+  },
+  {
+    "unitid":451857,
+    "name":"Remington College-Houston Southeast Campus",
+    "state":"TX",
+    "city":"Webster"
+  },
+  {
+    "unitid":451866,
+    "name":"Remington College-Shreveport Campus",
+    "state":"LA",
+    "city":"Shreveport"
+  },
+  {
+    "unitid":452072,
+    "name":"Ross Medical Education Center-New Baltimore",
+    "state":"MI",
+    "city":"New Baltimore"
+  },
+  {
+    "unitid":452081,
+    "name":"Ross College-Sylvania",
+    "state":"OH",
+    "city":"Sylvania"
+  },
+  {
+    "unitid":456506,
+    "name":"Ross Medical Education Center-Fort Wayne",
+    "state":"IN",
+    "city":"Fort Wayne"
+  },
+  {
+    "unitid":456515,
+    "name":"Ross Medical Education Center-Battle Creek",
+    "state":"MI",
+    "city":"Battle Creek"
+  },
+  {
+    "unitid":458104,
+    "name":"Renaissance Academie",
+    "state":"UT",
+    "city":"Provo"
+  },
+  {
+    "unitid":460093,
+    "name":"Ross Medical Education Center-Davison",
+    "state":"MI",
+    "city":"Davison"
+  },
+  {
+    "unitid":460109,
+    "name":"Ross Medical Education Center-Granger",
+    "state":"IN",
+    "city":"Granger"
+  },
+  {
+    "unitid":460118,
+    "name":"Ross Medical Education Center-Niles",
+    "state":"OH",
+    "city":"Niles"
+  },
+  {
+    "unitid":460127,
+    "name":"Ross Medical Education Center-Canton",
+    "state":"MI",
+    "city":"Canton"
+  },
+  {
+    "unitid":475033,
+    "name":"Relay Graduate School of Education",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":475495,
+    "name":"Rocky Mountain University of Health Professions",
+    "state":"UT",
+    "city":"Provo"
+  },
+  {
+    "unitid":475653,
+    "name":"Reflections Academy of Beauty",
+    "state":"IL",
+    "city":"Decatur"
+  },
+  {
+    "unitid":476230,
+    "name":"Ross Medical Education Center-Morgantown",
+    "state":"WV",
+    "city":"Morgantown"
+  },
+  {
+    "unitid":476726,
+    "name":"Rio Grande Valley College",
+    "state":"TX",
+    "city":"Pharr"
+  },
+  {
+    "unitid":480523,
+    "name":"Ross Medical Education Center-Dayton",
+    "state":"OH",
+    "city":"Dayton"
+  },
+  {
+    "unitid":480532,
+    "name":"Ross Medical Education Center-Ontario",
+    "state":"OH",
+    "city":"Ontario"
+  },
+  {
+    "unitid":480550,
+    "name":"Ross Medical Education Center-Bowling Green",
+    "state":"KY",
+    "city":"Bowling Green"
+  },
+  {
+    "unitid":480657,
+    "name":"Rasmussen University-Kansas",
+    "state":"KS",
+    "city":"Topeka"
+  },
+  {
+    "unitid":480790,
+    "name":"Rocky Vista University",
+    "state":"CO",
+    "city":"Parker"
+  },
+  {
+    "unitid":481191,
+    "name":"Riverside County Office of Education-School of Career Education",
+    "state":"CA",
+    "city":"Riverside"
+  },
+  {
+    "unitid":481863,
+    "name":"Ross Medical Education Center-Kokomo",
+    "state":"IN",
+    "city":"Kokomo"
+  },
+  {
+    "unitid":481890,
+    "name":"Ross Medical Education Center-Erlanger",
+    "state":"KY",
+    "city":"Erlanger"
+  },
+  {
+    "unitid":481906,
+    "name":"Ross Medical Education Center-Charleston",
+    "state":"WV",
+    "city":"Charleston"
+  },
+  {
+    "unitid":484330,
+    "name":"Ross Medical Education Center-Owensboro",
+    "state":"KY",
+    "city":"Owensboro"
+  },
+  {
+    "unitid":484349,
+    "name":"Ross Medical Education Center-Evansville",
+    "state":"IN",
+    "city":"Evansville"
+  },
+  {
+    "unitid":484358,
+    "name":"Ross Medical Education Center-Johnson City",
+    "state":"TN",
+    "city":"Johnson City"
+  },
+  {
+    "unitid":484871,
+    "name":"Rabbinical College Ohr Yisroel",
+    "state":"NY",
+    "city":"Brooklyn"
+  },
+  {
+    "unitid":485704,
+    "name":"River Valley School of Massage",
+    "state":"AR",
+    "city":"Russellville"
+  },
+  {
+    "unitid":486406,
+    "name":"Randolph Technical Center",
+    "state":"WV",
+    "city":"Elkins"
+  },
+  {
+    "unitid":486707,
+    "name":"Ross Medical Education Center-Huntsville",
+    "state":"AL",
+    "city":"Huntsville"
+  },
+  {
+    "unitid":486716,
+    "name":"Ross Medical Education Center-Knoxville",
+    "state":"TN",
+    "city":"Knoxville"
+  },
+  {
+    "unitid":486752,
+    "name":"Ross Medical Education Center-Muncie",
+    "state":"IN",
+    "city":"Muncie"
+  },
+  {
+    "unitid":487889,
+    "name":"Regional Center for Border Health",
+    "state":"AZ",
+    "city":"Somerton"
+  },
+  {
+    "unitid":488183,
+    "name":"Regina Webb Academy",
+    "state":"KY",
+    "city":"Bowling Green"
+  },
+  {
+    "unitid":488952,
+    "name":"Ross Medical Education Center-Elyria",
+    "state":"OH",
+    "city":"Elyria"
+  },
+  {
+    "unitid":488961,
+    "name":"Ross Medical Education Center-Lafayette",
+    "state":"IN",
+    "city":"Lafayette"
+  },
+  {
+    "unitid":488970,
+    "name":"Ross Medical Education Center-Midland",
+    "state":"MI",
+    "city":"Midland"
+  },
+  {
+    "unitid":490197,
+    "name":"Regan Career Institute",
+    "state":"CA",
+    "city":"El Monte"
+  },
+  {
+    "unitid":490230,
+    "name":"Reformed University",
+    "state":"GA",
+    "city":"Lawrenceville"
+  },
+  {
+    "unitid":490531,
+    "name":"Ray J's College of Hair",
+    "state":"LA",
+    "city":"Baton Rouge"
+  },
+  {
+    "unitid":490814,
+    "name":"Ross Medical Education Center-Portage",
+    "state":"MI",
+    "city":"Kalamazoo"
+  },
+  {
+    "unitid":490832,
+    "name":"Ross College-Canton",
+    "state":"OH",
+    "city":"Canton"
+  },
+  {
+    "unitid":490841,
+    "name":"Ross College-Grand Rapids North",
+    "state":"MI",
+    "city":"Grand Rapids"
+  },
+  {
+    "unitid":491701,
+    "name":"Rexburg College of Massage Therapy",
+    "state":"ID",
+    "city":"Rexburg"
+  },
+  {
+    "unitid":491844,
+    "name":"Red Lake Nation College",
+    "state":"MN",
+    "city":"Red Lake"
+  },
+  {
+    "unitid":492209,
+    "name":"Reiss-Davis Graduate School",
+    "state":"CA",
+    "city":"Los Angeles"
+  },
+  {
+    "unitid":495165,
+    "name":"Royal Learning Institute",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":495396,
+    "name":"Royal Learning Institute",
+    "state":"NY",
+    "city":"Jackson Heights"
+  },
+  {
+    "unitid":496052,
+    "name":"Ruben's Five Star Academy",
+    "state":"FL",
+    "city":"Lake Wales"
+  },
+  {
+    "unitid":496663,
+    "name":"Riggins Urban Barber College",
+    "state":"CA",
+    "city":"San Diego"
+  },
+  {
     "unitid":497000,
     "name":"Remington College-Online Dallas",
-    "state":"AZ",
-    "city":"Phoenix"
+    "state":"TN",
+    "city":"Knoxville"
   },
   {
     "unitid":497462,
     "name":"Redeemers University North America",
-    "state":"CA",
-    "city":"Cardiff"
+    "state":"TX",
+    "city":"Greenville"
   },
   {
     "unitid":497480,
     "name":"Reach University",
     "state":"CA",
-    "city":"Calexico"
+    "city":"Oakland"
   },
   {
     "unitid":498863,
     "name":"Renaissance Beauty Academy",
-    "state":"IN",
-    "city":"Valparaiso"
+    "state":"Missouri",
+    "city":null
   }
 ]

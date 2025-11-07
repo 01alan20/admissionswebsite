@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 214634,
     "name": "Pennsylvania State University-Penn State Shenango",
-    "city": "Altoona",
+    "city": "Sharon",
     "state": "PA",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.tspaaltoona.com/",
+    "website": "https://shenango.psu.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

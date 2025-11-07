@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 187134,
     "name": "The College of New Jersey",
-    "city": "Albany",
-    "state": "NY",
+    "city": "Ewing",
+    "state": "NJ",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
-    "website": "www.amc.edu/",
+    "website": "https://www.tcnj.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

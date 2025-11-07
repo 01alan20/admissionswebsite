@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 497277,
     "name": "Arizona College-Glendale",
-    "city": "Siloam Springs",
-    "state": "AR",
+    "city": "Glendale",
+    "state": "AZ",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.beautynwa.com/",
+    "website": "https://www.arizonacollege.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

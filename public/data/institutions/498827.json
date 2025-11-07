@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 498827,
     "name": "JT's Cuts Academy",
-    "city": "Madison",
-    "state": "IN",
+    "city": null,
+    "state": "Florida",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.ivytech.edu/madison/",
+    "website": null,
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

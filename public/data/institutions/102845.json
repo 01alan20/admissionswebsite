@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 102845,
     "name": "Charter College",
-    "city": "Anchorage",
-    "state": "AK",
+    "city": "Vancouver",
+    "state": "WA",
     "control": "Private for-profit",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate/Associate's Colleges: Mixed Baccalaureate/Associate's",
-    "website": "www.alaskacareercollege.edu/",
+    "website": "https://chartercollege.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

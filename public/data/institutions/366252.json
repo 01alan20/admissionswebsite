@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 366252,
     "name": "Pennsylvania College of Technology",
-    "city": "Downey",
-    "state": "CA",
+    "city": "Williamsport",
+    "state": "PA",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate/Associate's Colleges: Mixed Baccalaureate/Associate's",
-    "website": "www.das.edu/",
+    "website": "https://www.pct.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

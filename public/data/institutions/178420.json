@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 178420,
     "name": "University of Missouri-St Louis",
-    "city": "Browning",
-    "state": "MT",
+    "city": "Saint Louis",
+    "state": "MO",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Doctoral Universities: High Research Activity",
-    "website": "bfcc.edu/",
+    "website": "https://www.umsl.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 499255,
     "name": "Baltimore Beauty & Barber School II",
-    "city": "Baton Rouge",
-    "state": "LA",
+    "city": null,
+    "state": "Maryland",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.southeastern.edu/",
+    "website": null,
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 484473,
     "name": "University of Florida-Online",
-    "city": "Memphis",
-    "state": "TN",
+    "city": "Gainesville",
+    "state": "FL",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
-    "website": "www.gouldsacademy.com/",
+    "website": "https://www.ufonline.ufl.edu/",
     "admissions_url": null,
     "test_policy": "Required",
     "major_families": [

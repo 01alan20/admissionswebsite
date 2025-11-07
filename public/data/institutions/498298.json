@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 498298,
     "name": "The Salon Professional Academy Maplewood",
-    "city": "West Palm Beach",
-    "state": "FL",
+    "city": null,
+    "state": "Minnesota",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.keiseruniversity.edu/west-palm-beach/",
+    "website": null,
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

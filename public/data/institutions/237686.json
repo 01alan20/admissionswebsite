@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 237686,
     "name": "West Virginia University at Parkersburg",
-    "city": "Rhinelander",
-    "state": "WI",
+    "city": "Parkersburg",
+    "state": "WV",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate/Associate's Colleges: Mixed Baccalaureate/Associate's",
-    "website": "https://www.nicoletcollege.edu/",
+    "website": "www.wvup.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

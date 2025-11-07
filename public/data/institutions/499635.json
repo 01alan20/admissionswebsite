@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 499635,
     "name": "EDP University of Puerto Rico-Caguas",
-    "city": "Cambridge",
-    "state": "MN",
+    "city": null,
+    "state": "Puerto Rico",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.anokaramsey.edu/",
+    "website": null,
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

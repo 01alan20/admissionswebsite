@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 233277,
     "name": "Radford University",
-    "city": "Seattle",
-    "state": "WA",
+    "city": "Radford",
+    "state": "VA",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Doctoral/Professional Universities",
-    "website": "www.diversinstitute.edu/",
+    "website": "https://www.radford.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

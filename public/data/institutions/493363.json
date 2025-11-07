@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 493363,
     "name": "Institute of Lutheran Theology",
-    "city": "Rialto",
-    "state": "CA",
+    "city": null,
+    "state": "South Dakota",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "https://oakvalley.edu/",
+    "website": null,
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

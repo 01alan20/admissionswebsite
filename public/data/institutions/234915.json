@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 234915,
     "name": "City University of Seattle",
-    "city": "Pullman",
+    "city": "Seattle",
     "state": "WA",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Doctoral/Professional Universities",
-    "website": "https://wsu.edu/",
+    "website": "www.cityu.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

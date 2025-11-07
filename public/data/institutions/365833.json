@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 365833,
     "name": "Ross Medical Education Center-Kentwood",
-    "city": "Houston",
-    "state": "TX",
+    "city": "Kentwood",
+    "state": "MI",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "nwec.edu/",
+    "website": "https://rosseducation.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

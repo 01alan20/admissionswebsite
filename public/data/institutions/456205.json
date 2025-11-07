@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 456205,
     "name": "Miller-Motte College-Raleigh",
-    "city": "Staten Island",
-    "state": "NY",
+    "city": "Raleigh",
+    "state": "NC",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Special Focus Two-Year: Health Professions",
-    "website": "paulmitchell.edu/nyc",
+    "website": "https://www.miller-motte.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

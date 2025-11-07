@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 128106,
     "name": "Colorado State University Pueblo",
-    "city": "North Haven",
-    "state": "CT",
+    "city": "Pueblo",
+    "state": "CO",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Master's Colleges & Universities: Medium Programs",
-    "website": "paulmitchell.edu/northhaven",
+    "website": "https://www.csupueblo.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

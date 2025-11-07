@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 228723,
     "name": "Texas A & M University-College Station",
-    "city": "Salt Lake City",
-    "state": "UT",
+    "city": "College Station",
+    "state": "TX",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Doctoral Universities: Very High Research Activity",
-    "website": "www.ensign.edu/",
+    "website": "https://www.tamu.edu/",
     "admissions_url": null,
     "test_policy": "Required",
     "major_families": [

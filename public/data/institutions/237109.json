@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 237109,
     "name": "Yakima Valley College",
-    "city": "Beloit",
-    "state": "WI",
+    "city": "Yakima",
+    "state": "WA",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate/Associate's Colleges: Associate's Dominant",
-    "website": "www.beloit.edu/",
+    "website": "https://www.yvcc.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

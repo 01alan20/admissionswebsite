@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 376677,
     "name": "Queen City College",
-    "city": "Sandusky",
-    "state": "OH",
+    "city": "Clarksville",
+    "state": "TN",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.sanduskycareercenter.org/",
+    "website": "https://queencitycollege.com/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

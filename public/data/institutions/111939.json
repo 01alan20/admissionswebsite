@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 111939,
     "name": "Chaffey College",
-    "city": "Berkeley",
+    "city": "Rancho Cucamonga",
     "state": "CA",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: High Transfer-High Traditional",
-    "website": "www.cdsp.edu/",
+    "website": "https://www.chaffey.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

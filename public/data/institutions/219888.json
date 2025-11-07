@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 219888,
     "name": "Columbia State Community College",
-    "city": "Nashville",
+    "city": "Columbia",
     "state": "TN",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: High Transfer-High Traditional",
-    "website": "www.lincolntech.edu/campus/nashville-tn",
+    "website": "https://www.columbiastate.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

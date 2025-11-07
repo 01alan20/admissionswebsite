@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 161545,
     "name": "Southern Maine Community College",
-    "city": "Adelphi",
-    "state": "MD",
+    "city": "South Portland",
+    "state": "ME",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: Mixed Transfer/Career & Technical-Mixed Traditional/Nontraditional",
-    "website": "www.umgc.edu/",
+    "website": "https://www.smccme.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

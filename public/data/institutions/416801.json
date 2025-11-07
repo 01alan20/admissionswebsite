@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 416801,
     "name": "The University of Texas MD Anderson Cancer Center",
-    "city": "Towanda",
-    "state": "PA",
+    "city": "Houston",
+    "state": "TX",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Special Focus Four-Year: Other Health Professions Schools",
-    "website": "https://www.ntccschool.org/",
+    "website": "www.mdanderson.org/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

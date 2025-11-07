@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 499671,
     "name": "Galen Health Institutes-Las Vegas",
-    "city": "Detroit Lakes",
-    "state": "MN",
+    "city": null,
+    "state": "Nevada",
     "control": "Private for-profit",
     "level": "4-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.minnesota.edu/",
+    "website": null,
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

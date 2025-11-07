@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 483212,
     "name": "Louisiana Delta Community College",
-    "city": "Cheektowaga",
-    "state": "NY",
+    "city": "Monroe",
+    "state": "LA",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Associate's Colleges: High Career & Technical-High Traditional",
-    "website": "www.empire.edu/",
+    "website": "https://www.ladelta.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

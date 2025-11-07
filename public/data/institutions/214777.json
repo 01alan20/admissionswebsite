@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 214777,
     "name": "Pennsylvania State University-Main Campus",
-    "city": "Scranton",
+    "city": "University Park",
     "state": "PA",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Doctoral Universities: Very High Research Activity",
-    "website": "www.scranton.edu/",
+    "website": "https://www.psu.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

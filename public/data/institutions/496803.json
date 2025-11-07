@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 496803,
     "name": "NewU University",
-    "city": "Phenix City",
-    "state": "AL",
+    "city": "Washington",
+    "state": "DC",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.troy.edu/about-us/phenix-city-campus/index.html",
+    "website": "https://newu.university/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

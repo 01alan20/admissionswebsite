@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 125037,
     "name": "The Colleges of Law at Ventura",
-    "city": "Littleton",
-    "state": "CO",
+    "city": "Ventura",
+    "state": "CA",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Special Focus Four-Year: Law Schools",
-    "website": "www.arapahoe.edu/",
+    "website": "https://www.collegesoflaw.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

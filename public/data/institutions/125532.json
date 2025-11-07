@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 125532,
     "name": "Carrington College-Sacramento",
-    "city": "Rangely",
-    "state": "CO",
+    "city": "Sacramento",
+    "state": "CA",
     "control": "Private for-profit",
     "level": "4-year",
     "carnegie_basic": "Special Focus Two-Year: Health Professions",
-    "website": "www.cncc.edu/",
+    "website": "https://carrington.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 172200,
     "name": "Schoolcraft Community College District",
-    "city": "Fergus Falls",
-    "state": "MN",
+    "city": "Livonia",
+    "state": "MI",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate/Associate's Colleges: Associate's Dominant",
-    "website": "www.minnesota.edu/",
+    "website": "https://www.schoolcraft.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

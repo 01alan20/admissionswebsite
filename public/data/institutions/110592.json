@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 110592,
     "name": "California State University-Los Angeles",
-    "city": "Irvine",
+    "city": "Los Angeles",
     "state": "CA",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
-    "website": "www.uci.edu/",
+    "website": "https://www.calstatela.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

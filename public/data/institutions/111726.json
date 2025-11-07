@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 111726,
     "name": "CET-El Centro",
-    "city": "Ridgecrest",
+    "city": "El Centro",
     "state": "CA",
     "control": "Private nonprofit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "cerrocoso.edu/",
+    "website": "https://cetweb.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

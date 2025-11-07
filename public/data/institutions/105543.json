@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 105543,
     "name": "Pima Medical Institute-Albuquerque",
-    "city": "Tempe",
-    "state": "AZ",
+    "city": "Albuquerque",
+    "state": "NM",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Special Focus Two-Year: Health Professions",
-    "website": "www.rio.maricopa.edu/",
+    "website": "https://pmi.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 228653,
     "name": "The University of Texas Medical Branch at Galveston",
-    "city": "Saint George",
-    "state": "UT",
+    "city": "Galveston",
+    "state": "TX",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Special Focus Four-Year: Research Institutions",
-    "website": "evanscollege.com/",
+    "website": "https://www.utmb.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

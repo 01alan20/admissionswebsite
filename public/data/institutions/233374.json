@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 233374,
     "name": "University of Richmond",
-    "city": "Aberdeen",
-    "state": "WA",
+    "city": "University of Richmond",
+    "state": "VA",
     "control": "Private nonprofit",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate Colleges: Arts & Sciences Focus",
-    "website": "www.ghc.edu/",
+    "website": "https://www.richmond.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

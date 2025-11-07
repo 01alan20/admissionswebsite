@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 214607,
     "name": "Pennsylvania State University-Penn State Great Valley",
-    "city": "Pittsburgh",
+    "city": "Malvern",
     "state": "PA",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.pointpark.edu/",
+    "website": "https://greatvalley.psu.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

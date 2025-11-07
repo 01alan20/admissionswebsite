@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 136303,
     "name": "Orange Technical College",
-    "city": "Tampa",
+    "city": "Orlando",
     "state": "FL",
     "control": "Public",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.usf.edu/",
+    "website": "https://www.orangetechcollege.net/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

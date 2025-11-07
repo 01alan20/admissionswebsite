@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 109819,
     "name": "Bakersfield College",
-    "city": "La Mirada",
+    "city": "Bakersfield",
     "state": "CA",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate/Associate's Colleges: Associate's Dominant",
-    "website": "https://www.biola.edu/",
+    "website": "www.bakersfieldcollege.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

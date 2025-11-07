@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 235334,
     "name": "Grays Harbor College",
-    "city": "Bluefield",
-    "state": "WV",
+    "city": "Aberdeen",
+    "state": "WA",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate/Associate's Colleges: Associate's Dominant",
-    "website": "https://bluefieldstate.edu/",
+    "website": "www.ghc.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

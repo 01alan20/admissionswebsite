@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 499404,
     "name": "Arizona College of Nursing-Cleveland",
-    "city": "Ionia",
-    "state": "MI",
+    "city": null,
+    "state": "Ohio",
     "control": "Private for-profit",
     "level": "4-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "https://calvin.edu/prison-initiative/index.html",
+    "website": null,
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

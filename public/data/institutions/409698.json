@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 409698,
     "name": "California State University-Monterey Bay",
-    "city": "Hicksville",
-    "state": "NY",
+    "city": "Seaside",
+    "state": "CA",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
-    "website": "www.veebpnprogram.org/",
+    "website": "https://csumb.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

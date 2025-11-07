@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 240693,
     "name": "Western Wyoming Community College",
-    "city": "Arecibo",
-    "state": "PR",
+    "city": "Rock Springs",
+    "state": "WY",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Associate's Colleges: High Career & Technical-High Nontraditional",
-    "website": "www.modern.edu/",
+    "website": "https://www.westernwyoming.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

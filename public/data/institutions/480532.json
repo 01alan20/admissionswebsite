@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 480532,
     "name": "Ross Medical Education Center-Ontario",
-    "city": "Calumet City",
-    "state": "IL",
+    "city": "Ontario",
+    "state": "OH",
     "control": "Private for-profit",
     "level": "2-year",
     "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
-    "website": "www.trenzbeautyacademy.com/",
+    "website": "https://rosseducation.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

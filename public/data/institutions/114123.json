@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 114123,
     "name": "Empire College",
-    "city": "Torrance",
+    "city": "Santa Rosa",
     "state": "CA",
     "control": "Private for-profit",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate/Associate's Colleges: Mixed Baccalaureate/Associate's",
-    "website": "rbbeautycollege.com/",
+    "website": "https://empcol.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [

@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 196121,
     "name": "SUNY Brockport",
-    "city": "Valhalla",
+    "city": "Brockport",
     "state": "NY",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
-    "website": "www.sunywcc.edu/",
+    "website": "https://www.brockport.edu/",
     "admissions_url": null,
     "test_policy": "Test flexible",
     "major_families": [

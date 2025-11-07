@@ -2,12 +2,12 @@
   "profile": {
     "unitid": 409315,
     "name": "South Texas College",
-    "city": "Bedford",
+    "city": "McAllen",
     "state": "TX",
     "control": "Public",
     "level": "4-year",
     "carnegie_basic": "Baccalaureate/Associate's Colleges: Associate's Dominant",
-    "website": "www.messengercollege.edu/",
+    "website": "https://www.southtexascollege.edu/",
     "admissions_url": null,
     "test_policy": "Test optional",
     "major_families": [
