@@ -13,7 +13,7 @@
     "major_families": [],
     "intl_enrollment_pct": null,
     "tuition_summary": {
-      "sticker": NaN,
+      "sticker": null,
       "in_state": 16680.0,
       "out_of_state": 16680.0
     },

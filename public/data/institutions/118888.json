@@ -19,8 +19,8 @@
     "intl_enrollment_pct": 21,
     "tuition_summary": {
       "sticker": 63949.0,
-      "in_state": NaN,
-      "out_of_state": NaN
+      "in_state": null,
+      "out_of_state": null
     },
     "outcomes": {
       "acceptance_rate": 17,

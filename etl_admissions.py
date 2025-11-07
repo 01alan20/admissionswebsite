@@ -1,5 +1,6 @@
 import argparse
 import json
+import math
 import re
 from collections import defaultdict
 from pathlib import Path
@@ -128,6 +129,28 @@ def to_records(df: pd.DataFrame) -> List[dict]:
         return []
     clean = df.where(pd.notnull(df), None)
     return json.loads(clean.to_json(orient="records"))
+
+
+def scrub_json(value):
+    """
+    Recursively replace pandas/NumPy NaN or NA values with None so we emit valid JSON.
+    """
+    if isinstance(value, dict):
+        return {k: scrub_json(v) for k, v in value.items()}
+    if isinstance(value, list):
+        return [scrub_json(v) for v in value]
+    if isinstance(value, tuple):
+        return tuple(scrub_json(list(value)))
+
+    try:
+        if pd.isna(value):
+            return None
+    except Exception:
+        pass
+
+    if isinstance(value, float) and (math.isnan(value) or math.isinf(value)):
+        return None
+    return value
 
 
 # ---------- loaders ----------
@@ -608,7 +631,7 @@ def write_institution_details(
                 "deadlines": None,
             },
         }
-        detail_path.write_text(json.dumps(detail_payload, indent=2), encoding="utf-8")
+        detail_path.write_text(json.dumps(scrub_json(detail_payload), indent=2), encoding="utf-8")
 
         metric_rows = metrics_group.get(unitid, pd.DataFrame())
         tuition_rows = tuition_group.get(unitid, pd.DataFrame())

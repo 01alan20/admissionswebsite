@@ -18,7 +18,7 @@
     ],
     "intl_enrollment_pct": 3,
     "tuition_summary": {
-      "sticker": NaN,
+      "sticker": null,
       "in_state": 3251.0,
       "out_of_state": 11118.0
     },
