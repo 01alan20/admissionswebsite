@@ -93,10 +93,42 @@ export default function Explore() {
   const [testPolicy, setTestPolicy] = useState("any");
 
   useEffect(() => {
-    fetch("/data/institutions.json")
-      .then(r => r.json())
-      .then(data => setRows(data.map(enrichRow)))
-      .catch(() => setRows([]));
+    async function load() {
+      try {
+        const [instRes, metricsRes] = await Promise.all([
+          fetch("/data/institutions.json"),
+          fetch("/data/metrics_by_year.json")
+        ]);
+        const instJson = await instRes.json();
+        const metricsJson = await metricsRes.json();
+        const latestApplicants = new Map();
+
+        for (const metric of metricsJson) {
+          const unitid = Number(metric.unitid);
+          const applicants = Number(metric.applicants_total);
+          if (!Number.isFinite(unitid) || !Number.isFinite(applicants)) continue;
+          const year = Number(metric.year) || 0;
+          const prior = latestApplicants.get(unitid);
+          if (!prior || year > prior.year || (year === prior.year && applicants > prior.applicants)) {
+            latestApplicants.set(unitid, { applicants, year });
+          }
+        }
+
+        const enriched = instJson.map(row => {
+          const volume = latestApplicants.get(Number(row.unitid));
+          return enrichRow({
+            ...row,
+            applicants_total: volume?.applicants ?? null,
+            applicants_year: volume?.year ?? null
+          });
+        });
+        setRows(enriched);
+      } catch (err) {
+        console.error("Failed to load explore data", err);
+        setRows([]);
+      }
+    }
+    load();
   }, []);
 
   const majorOptions = useMemo(() => {
@@ -135,13 +167,17 @@ export default function Explore() {
 
     const sorted = result.sort((a, b) => {
       if (hasQuery) return b.score - a.score;
-      const aRate = Number(a.row.acceptance_rate);
-      const bRate = Number(b.row.acceptance_rate);
-      if (Number.isFinite(aRate) && Number.isFinite(bRate)) return aRate - bRate;
+      const aApps = Number(a.row.applicants_total);
+      const bApps = Number(b.row.applicants_total);
+      const bothFinite = Number.isFinite(aApps) && Number.isFinite(bApps);
+      if (bothFinite && aApps !== bApps) return bApps - aApps;
+      if (Number.isFinite(bApps) && !Number.isFinite(aApps)) return 1;
+      if (Number.isFinite(aApps) && !Number.isFinite(bApps)) return -1;
       return a.row.name.localeCompare(b.row.name);
     });
 
-    return sorted.slice(0, 60).map(item => item.row);
+    const limit = hasQuery ? 60 : 10;
+    return sorted.slice(0, limit).map(item => item.row);
   }, [rows, query, budget, acceptanceBand, majorFamily, testPolicy]);
 
   return (
@@ -151,6 +187,7 @@ export default function Explore() {
         <p className="sub">
           Filter thousands of accredited undergraduate institutions by budget, selectivity, academic focus, and testing
           policy. Use these results to build a balanced reach/target/safety list before diving into individual profiles.
+          When no search is applied, we highlight the 10 schools receiving the highest volume of applications.
         </p>
       </div>
 
@@ -229,6 +266,11 @@ export default function Explore() {
             </div>
 
             <div style={{ marginTop: 12, display: "flex", gap: 16, flexWrap: "wrap", fontSize: 14 }}>
+              {row.applicants_total != null && (
+                <span>
+                  Applications ({row.applicants_year ?? "latest"}): {Number(row.applicants_total).toLocaleString()}
+                </span>
+              )}
               <span>Acceptance: {row.acceptance_rate != null ? `${row.acceptance_rate}%` : "Not reported"}</span>
               <span>Yield: {row.yield != null ? `${row.yield}%` : "Not reported"}</span>
               <span>Tuition (intl): {formatTuitionPair(row.tuition_2023_24_in_state, row.tuition_2023_24_out_of_state, row.tuition_2023_24)}</span>
