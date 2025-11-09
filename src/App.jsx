@@ -4,6 +4,7 @@ import Home from "./pages/Home.jsx";
 import Explore from "./pages/Explore.jsx";
 import Compare from "./pages/Compare.jsx";
 import HighSchoolPathways from "./pages/HighSchoolPathways.jsx";
+import AdmissionsTimeline from "./pages/AdmissionsTimeline.jsx";
 import ErrorBoundary from "./components/ErrorBoundary.jsx";
 import "./styles/modern.css";
 
@@ -30,6 +31,9 @@ export default function App() {
             <NavLink to="/compare" className={({ isActive }) => (isActive ? "active" : "")}>
               Compare
             </NavLink>
+            <NavLink to="/timeline" className={({ isActive }) => (isActive ? "active" : "")}>
+              Timeline
+            </NavLink>
             <NavLink to="/pathways" className={({ isActive }) => (isActive ? "active" : "")}>
               High School Pathways
             </NavLink>
@@ -49,6 +53,7 @@ export default function App() {
               <Route path="/" element={<Home />} />
               <Route path="/explore" element={<Explore />} />
               <Route path="/compare" element={<Compare />} />
+              <Route path="/timeline" element={<AdmissionsTimeline />} />
               <Route path="/pathways" element={<HighSchoolPathways />} />
               <Route path="/institution/:unitid" element={<Detail />} />
               <Route path="/review" element={<ProfileReview />} />
