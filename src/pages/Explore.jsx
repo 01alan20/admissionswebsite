@@ -184,11 +184,6 @@ export default function Explore() {
     <section>
       <div className="page-intro">
         <h1 className="h1">Explore US universities</h1>
-        <p className="sub">
-          Filter thousands of accredited undergraduate institutions by budget, selectivity, academic focus, and testing
-          policy. Use these results to build a balanced reach/target/safety list before diving into individual profiles.
-          When no search is applied, we highlight the 10 schools receiving the highest volume of applications.
-        </p>
       </div>
 
       <div
