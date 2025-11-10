@@ -110,13 +110,15 @@ export default function ProfileReview() {
   }
 
   return (
-    <div style={{ maxWidth: 1000, margin: "24px auto", padding: "16px" }}>
-      <h1 style={{ marginTop: 0 }}>Profile Review</h1>
-      <p style={{ color: "#444", marginTop: -8 }}>
-        Tell us about yourself and pick up to three universities. We will help you identify priorities and follow up by email.
-      </p>
+    <section>
+      <div className="page-intro">
+        <h1 className="h1">Profile Review</h1>
+        <p className="sub">
+          Tell us about yourself and pick up to three universities. We will help you identify priorities and follow up by email.
+        </p>
+      </div>
 
-      <form onSubmit={onSubmit} style={{ display: "grid", gap: 16 }}>
+      <form onSubmit={onSubmit} className="card" style={{ display: "grid", gap: 16, padding: 24 }}>
         <div style={{ display: "grid", gap: 8 }}>
           <label>
             Your Name (optional)
@@ -286,6 +288,6 @@ export default function ProfileReview() {
           {error && <span style={{ color: "crimson" }}>{error}</span>}
         </div>
       </form>
-    </div>
+    </section>
   );
 }

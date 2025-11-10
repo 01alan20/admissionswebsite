@@ -89,7 +89,7 @@ export default function Explore() {
   const [budgets, setBudgets] = useState([]);
   const [acceptanceBands, setAcceptanceBands] = useState([]);
   const [majorFamilies, setMajorFamilies] = useState([]);
-  const [testPolicy, setTestPolicy] = useState("any");
+  const [testPolicies, setTestPolicies] = useState([]);
   const [specificMajors, setSpecificMajors] = useState([]);
   const [specificMajorInput, setSpecificMajorInput] = useState("");
   const [majorsById, setMajorsById] = useState({});
@@ -157,8 +157,7 @@ export default function Explore() {
 
   const testPolicyOptions = useMemo(() => {
     const set = new Set(rows.map(r => r.test_policy || "Not reported"));
-    const sorted = Array.from(set).sort((a, b) => TEST_POLICY_ORDER.indexOf(a) - TEST_POLICY_ORDER.indexOf(b));
-    return ["any", ...sorted];
+    return Array.from(set).sort((a, b) => TEST_POLICY_ORDER.indexOf(a) - TEST_POLICY_ORDER.indexOf(b));
   }, [rows]);
 
   const allMajors = useMemo(() => {
@@ -208,7 +207,7 @@ export default function Explore() {
       if (!passesBudget(row, budgets)) continue;
       if (!passesAcceptance(row, acceptanceBands)) continue;
       if (!passesMajor(row, majorFamilies)) continue;
-      if (!passesTestPolicy(row, testPolicy)) continue;
+      if (!passesTestPolicy(row, testPolicies)) continue;
       if (!passesSpecificMajor(row, normalizedSpecificMajorsSet, majorsById)) continue;
 
       if (hasQuery) {
@@ -232,7 +231,7 @@ export default function Explore() {
 
     const limit = hasQuery ? 60 : 10;
     return sorted.slice(0, limit).map(item => item.row);
-  }, [rows, query, budgets, acceptanceBands, majorFamilies, testPolicy, normalizedSpecificMajorsSet, majorsById]);
+  }, [rows, query, budgets, acceptanceBands, majorFamilies, testPolicies, normalizedSpecificMajorsSet, majorsById]);
 
   return (
     <section>
@@ -279,32 +278,29 @@ export default function Explore() {
         </div>
 
         <div style={{ display: "grid", gap: 16, gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))" }}>
-          <FilterChipGroup
+          <FilterDropdownMulti
             label="Budget (out-of-state tuition)"
             values={budgets}
             onChange={setBudgets}
             options={BUDGET_OPTIONS}
           />
-          <FilterChipGroup
+          <FilterDropdownMulti
             label="Selectivity band"
             values={acceptanceBands}
             onChange={setAcceptanceBands}
             options={ACCEPTANCE_OPTIONS}
           />
-          <FilterChipGroup
+          <FilterDropdownMulti
             label="Major family"
             values={majorFamilies}
             onChange={setMajorFamilies}
             options={majorOptions.map(value => ({ value, label: value }))}
           />
-          <FilterSelect
+          <FilterDropdownMulti
             label="Testing expectations"
-            value={testPolicy}
-            onChange={setTestPolicy}
-            options={testPolicyOptions.map(value => ({
-              value,
-              label: value === "any" ? "Any testing policy" : value
-            }))}
+            values={testPolicies}
+            onChange={setTestPolicies}
+            options={testPolicyOptions.map(v => ({ value: v, label: v }))}
           />
           <label style={{ display: "grid", gap: 6, fontSize: 14 }}>
             <span style={{ fontWeight: 600 }}>Specific majors</span>
@@ -452,10 +448,10 @@ function passesMajor(row, selected) {
   return selected.some(f => row.major_families.includes(f));
 }
 
-function passesTestPolicy(row, policy) {
-  if (policy === "any") return true;
+function passesTestPolicy(row, selectedPolicies) {
+  if (!selectedPolicies?.length) return true;
   const value = row.test_policy || "Not reported";
-  return value === policy;
+  return selectedPolicies.includes(value);
 }
 
 function passesSpecificMajor(row, selectedSet, majorsById = {}) {
@@ -485,69 +481,82 @@ function FilterSelect({ label, value, onChange, options }) {
   );
 }
 
-function FilterChipGroup({ label, values = [], onChange, options }) {
-  const resolved = options ?? [];
-  const toggle = value => {
-    if (!value) return;
-    if (values.includes(value)) {
-      onChange(values.filter(v => v !== value));
-    } else {
-      onChange([...values, value]);
+function FilterDropdownMulti({ label, values = [], onChange, options = [] }) {
+  const [open, setOpen] = useState(false);
+  const id = useMemo(() => `ms-${Math.random().toString(36).slice(2)}`, []);
+
+  useEffect(() => {
+    function onDoc(e) {
+      const within = e.target.closest ? e.target.closest(`#${id}`) : null;
+      if (!within) setOpen(false);
     }
-  };
+    document.addEventListener("click", onDoc);
+    return () => document.removeEventListener("click", onDoc);
+  }, [id]);
+
+  function toggle(value) {
+    if (!value) return;
+    if (values.includes(value)) onChange(values.filter(v => v !== value));
+    else onChange([...values, value]);
+  }
+
+  const text = values.length === 0
+    ? "Any"
+    : (options
+        .filter(o => values.includes(o.value ?? o))
+        .map(o => (o.label ?? o))
+        .slice(0, 2)
+        .join(", ") + (values.length > 2 ? ` +${values.length - 2}` : ""));
 
   return (
-    <div style={{ display: "grid", gap: 8, fontSize: 14 }}>
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-        <span style={{ fontWeight: 600 }}>{label}</span>
-        {values.length > 0 && (
-          <button
-            type="button"
-            onClick={() => onChange([])}
-            style={{
-              border: "none",
-              background: "none",
-              color: "var(--primary-600)",
-              cursor: "pointer",
-              fontSize: 12,
-              fontWeight: 600
-            }}
+    <label style={{ display: "grid", gap: 6, fontSize: 14 }} id={id}>
+      <span style={{ fontWeight: 600 }}>{label}</span>
+      <div style={{ position: "relative" }}>
+        <button
+          type="button"
+          onClick={() => setOpen(v => !v)}
+          style={{
+            width: "100%",
+            textAlign: "left",
+            padding: "10px 12px",
+            borderRadius: 12,
+            border: "1px solid var(--border)",
+            background: "#fff",
+            cursor: "pointer"
+          }}
+          aria-haspopup="listbox"
+          aria-expanded={open}
+        >
+          {text}
+        </button>
+        {open && (
+          <div
+            className="card"
+            role="listbox"
+            style={{ position: "absolute", zIndex: 60, marginTop: 8, left: 0, right: 0, maxHeight: 260, overflow: "auto" }}
           >
-            Clear
-          </button>
+            <div style={{ display: "grid", gap: 6 }}>
+              {options.map(opt => {
+                const value = opt.value ?? opt;
+                const labelText = opt.label ?? opt;
+                const active = values.includes(value);
+                return (
+                  <label key={value} style={{ display: "flex", alignItems: "center", gap: 8, padding: "6px 2px" }}>
+                    <input type="checkbox" checked={active} onChange={() => toggle(value)} />
+                    <span>{labelText}</span>
+                  </label>
+                );
+              })}
+            </div>
+            {values.length > 0 && (
+              <div style={{ display: "flex", justifyContent: "flex-end", marginTop: 8 }}>
+                <button type="button" onClick={() => onChange([])} className="btn-outline">Clear</button>
+              </div>
+            )}
+          </div>
         )}
       </div>
-      <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-        {resolved.length === 0 ? (
-          <span className="sub" style={{ fontSize: 12 }}>Loading options...</span>
-        ) : (
-          resolved.map(opt => {
-            const value = opt.value ?? opt;
-            const labelText = opt.label ?? opt;
-            const active = values.includes(value);
-            return (
-              <button
-                type="button"
-                key={value}
-                onClick={() => toggle(value)}
-                style={{
-                  borderRadius: 9999,
-                  border: active ? "1px solid var(--primary)" : "1px solid var(--border)",
-                  background: active ? "rgba(79,70,229,.15)" : "var(--surface)",
-                  color: active ? "var(--primary-600)" : "inherit",
-                  padding: "6px 12px",
-                  fontSize: 13,
-                  cursor: "pointer",
-                  fontWeight: 600
-                }}
-              >
-                {labelText}
-              </button>
-            );
-          })
-        )}
-      </div>
-    </div>
+    </label>
   );
 }
 
