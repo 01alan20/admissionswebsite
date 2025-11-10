@@ -87,12 +87,12 @@ const TEST_POLICY_ORDER = ["Test optional", "Test flexible", "Required", "Not re
 export default function Explore() {
   const [query, setQuery] = useState("");
   const [rows, setRows] = useState([]);
-  // Multi-select filter state
-  const [budgets, setBudgets] = useState([]);
-  const [acceptanceBands, setAcceptanceBands] = useState([]);
-  const [majorFamilies, setMajorFamilies] = useState([]);
-  const [testPolicies, setTestPolicies] = useState([]);
-  const [specificMajors, setSpecificMajors] = useState([]);
+  // Single-select filters for search controls
+  const [budget, setBudget] = useState("any");
+  const [acceptanceBand, setAcceptanceBand] = useState("any");
+  const [majorFamily, setMajorFamily] = useState("any");
+  const [testPolicy, setTestPolicy] = useState("any");
+  const [specificMajor, setSpecificMajor] = useState("any");
   const [majorsById, setMajorsById] = useState({});
 
   useEffect(() => {
