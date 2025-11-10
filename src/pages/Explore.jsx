@@ -67,7 +67,6 @@ function getAcceptanceBand(rate) {
 }
 
 const BUDGET_OPTIONS = [
-  { value: "any", label: "Any budget" },
   { value: "under20", label: "Up to $20k" },
   { value: "20to40", label: "$20k - $40k" },
   { value: "40to60", label: "$40k - $60k" },
@@ -75,7 +74,6 @@ const BUDGET_OPTIONS = [
 ];
 
 const ACCEPTANCE_OPTIONS = [
-  { value: "any", label: "All selectivity" },
   { value: "safety", label: "Safety (>=70% admit)" },
   { value: "balanced", label: "Balanced (50% - 69%)" },
   { value: "target", label: "Target (25% - 49%)" },
@@ -87,12 +85,13 @@ const TEST_POLICY_ORDER = ["Test optional", "Test flexible", "Required", "Not re
 export default function Explore() {
   const [query, setQuery] = useState("");
   const [rows, setRows] = useState([]);
-  // Single-select filters for search controls
-  const [budget, setBudget] = useState("any");
-  const [acceptanceBand, setAcceptanceBand] = useState("any");
-  const [majorFamily, setMajorFamily] = useState("any");
+  // Multi-select filters for search controls
+  const [budgets, setBudgets] = useState([]);
+  const [acceptanceBands, setAcceptanceBands] = useState([]);
+  const [majorFamilies, setMajorFamilies] = useState([]);
   const [testPolicy, setTestPolicy] = useState("any");
-  const [specificMajor, setSpecificMajor] = useState("any");
+  const [specificMajors, setSpecificMajors] = useState([]);
+  const [specificMajorInput, setSpecificMajorInput] = useState("");
   const [majorsById, setMajorsById] = useState({});
 
   useEffect(() => {
@@ -153,7 +152,7 @@ export default function Explore() {
   const majorOptions = useMemo(() => {
     const set = new Set();
     rows.forEach(row => (row.major_families ?? []).forEach(f => set.add(f)));
-    return ["any", ...Array.from(set).sort()];
+    return Array.from(set).sort();
   }, [rows]);
 
   const testPolicyOptions = useMemo(() => {
@@ -173,6 +172,30 @@ export default function Explore() {
     return Array.from(set).sort();
   }, [majorsById]);
 
+  const normalizedSpecificMajors = useMemo(
+    () => specificMajors.map(value => normalize(value)),
+    [specificMajors]
+  );
+  const normalizedSpecificMajorsSet = useMemo(
+    () => new Set(normalizedSpecificMajors),
+    [normalizedSpecificMajors]
+  );
+
+  const handleSpecificMajorAdd = () => {
+    const value = specificMajorInput.trim();
+    if (!value) return;
+    const normalizedValue = normalize(value);
+    setSpecificMajors(prev => {
+      if (prev.some(existing => normalize(existing) === normalizedValue)) return prev;
+      return [...prev, value];
+    });
+    setSpecificMajorInput("");
+  };
+
+  const handleSpecificMajorRemove = title => {
+    setSpecificMajors(prev => prev.filter(item => item !== title));
+  };
+
   const filtered = useMemo(() => {
     if (!rows.length) return [];
 
@@ -182,11 +205,11 @@ export default function Explore() {
     const qCompact = hasQuery ? normalize(query).replace(/\s+/g, "") : "";
 
     for (const row of rows) {
-      if (!passesBudget(row, budget)) continue;
-      if (!passesAcceptance(row, acceptanceBand)) continue;
-      if (!passesMajor(row, majorFamily)) continue;
+      if (!passesBudget(row, budgets)) continue;
+      if (!passesAcceptance(row, acceptanceBands)) continue;
+      if (!passesMajor(row, majorFamilies)) continue;
       if (!passesTestPolicy(row, testPolicy)) continue;
-      if (!passesSpecificMajor(row, specificMajor, majorsById)) continue;
+      if (!passesSpecificMajor(row, normalizedSpecificMajorsSet, majorsById)) continue;
 
       if (hasQuery) {
         const sc = scoreRow(row, qTokens, qCompact);
@@ -209,11 +232,11 @@ export default function Explore() {
 
     const limit = hasQuery ? 60 : 10;
     return sorted.slice(0, limit).map(item => item.row);
-  }, [rows, query, budget, acceptanceBand, majorFamily, testPolicy, specificMajor, majorsById]);
+  }, [rows, query, budgets, acceptanceBands, majorFamilies, testPolicy, normalizedSpecificMajorsSet, majorsById]);
 
   return (
     <section>
-      <div className="page-intro" style={{ maxWidth: "100%" }}>
+      <div className="page-intro">
         <h1 className="h1">Explore US universities</h1>
       </div>
 
@@ -255,30 +278,91 @@ export default function Explore() {
           />
         </div>
 
-        <div style={{ display: "grid", gap: 16, gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))" }}>
-          <FilterSelect label="Budget (out-of-state tuition)" value={budget} onChange={setBudget} options={BUDGET_OPTIONS} />
-          <FilterSelect label="Selectivity band" value={acceptanceBand} onChange={setAcceptanceBand} options={ACCEPTANCE_OPTIONS} />
-          <FilterSelect
+        <div style={{ display: "grid", gap: 16, gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))" }}>
+          <FilterChipGroup
+            label="Budget (out-of-state tuition)"
+            values={budgets}
+            onChange={setBudgets}
+            options={BUDGET_OPTIONS}
+          />
+          <FilterChipGroup
+            label="Selectivity band"
+            values={acceptanceBands}
+            onChange={setAcceptanceBands}
+            options={ACCEPTANCE_OPTIONS}
+          />
+          <FilterChipGroup
             label="Major family"
-            value={majorFamily}
-            onChange={setMajorFamily}
-            options={majorOptions.map(value => ({ value, label: value === "any" ? "Any major" : value }))}
+            values={majorFamilies}
+            onChange={setMajorFamilies}
+            options={majorOptions.map(value => ({ value, label: value }))}
+          />
+          <FilterSelect
+            label="Testing expectations"
+            value={testPolicy}
+            onChange={setTestPolicy}
+            options={testPolicyOptions.map(value => ({
+              value,
+              label: value === "any" ? "Any testing policy" : value
+            }))}
           />
           <label style={{ display: "grid", gap: 6, fontSize: 14 }}>
-            <span style={{ fontWeight: 600 }}>Specific major</span>
-            <input
-              value={specificMajor === "any" ? "" : specificMajor}
-              onChange={e => setSpecificMajor(e.target.value ? e.target.value : "any")}
-              list="majors-suggest"
-              placeholder="Type a major (e.g., Computer and Information Sciences, General.)"
-              style={{ padding: "10px 12px", borderRadius: 12, border: "1px solid var(--border)" }}
-            />
+            <span style={{ fontWeight: 600 }}>Specific majors</span>
+            <div style={{ display: "flex", gap: 8 }}>
+              <input
+                value={specificMajorInput}
+                onChange={e => setSpecificMajorInput(e.target.value)}
+                onKeyDown={e => {
+                  if (e.key === "Enter") {
+                    e.preventDefault();
+                    handleSpecificMajorAdd();
+                  }
+                }}
+                list="majors-suggest"
+                placeholder="Type a major and press Enter to add"
+                style={{ flex: 1, padding: "10px 12px", borderRadius: 12, border: "1px solid var(--border)" }}
+              />
+              <button
+                type="button"
+                onClick={handleSpecificMajorAdd}
+                style={{
+                  borderRadius: 12,
+                  border: "1px solid var(--border)",
+                  padding: "10px 16px",
+                  background: "var(--surface)",
+                  cursor: "pointer",
+                  fontWeight: 600
+                }}
+              >
+                Add
+              </button>
+            </div>
             <datalist id="majors-suggest">
               {allMajors.slice(0, 1000).map(title => (
                 <option key={title} value={title} />
               ))}
             </datalist>
-            <span className="sub" style={{ fontSize: 12 }}>{allMajors.length ? `${allMajors.length.toLocaleString()} majors loaded` : "Majors list loading..."}</span>
+            {specificMajors.length > 0 && (
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+                {specificMajors.map(title => (
+                  <button
+                    type="button"
+                    key={title}
+                    onClick={() => handleSpecificMajorRemove(title)}
+                    style={{
+                      borderRadius: 9999,
+                      border: "1px solid var(--border)",
+                      background: "#f4f4fb",
+                      padding: "4px 10px",
+                      fontSize: 12,
+                      cursor: "pointer"
+                    }}
+                  >
+                    {title} ✕
+                  </button>
+                ))}
+              </div>
+            )}
           </label>
         </div>
       </div>
@@ -333,11 +417,15 @@ export default function Explore() {
   );
 }
 
-function passesBudget(row, budget) {
-  if (budget === "any") return true;
+function passesBudget(row, selectedBudgets) {
+  if (!selectedBudgets?.length) return true;
+  return selectedBudgets.some(bucket => matchesBudget(row, bucket));
+}
+
+function matchesBudget(row, bucket) {
   const tuition = Number(row.tuition_2023_24_out_of_state ?? row.tuition_2023_24 ?? row.tuition_2023_24_in_state);
   if (!Number.isFinite(tuition) || tuition <= 0) return false;
-  switch (budget) {
+  switch (bucket) {
     case "under20":
       return tuition < 20000;
     case "20to40":
@@ -351,14 +439,17 @@ function passesBudget(row, budget) {
   }
 }
 
-function passesAcceptance(row, band) {
-  if (band === "any") return true;
-  return getAcceptanceBand(row.acceptance_rate) === band;
+function passesAcceptance(row, selectedBands) {
+  if (!selectedBands?.length) return true;
+  const band = getAcceptanceBand(row.acceptance_rate);
+  if (band === "unknown") return false;
+  return selectedBands.includes(band);
 }
 
 function passesMajor(row, selected) {
-  if (selected === "any") return true;
-  return Array.isArray(row.major_families) && row.major_families.includes(selected);
+  if (!selected?.length) return true;
+  if (!Array.isArray(row.major_families)) return false;
+  return selected.some(f => row.major_families.includes(f));
 }
 
 function passesTestPolicy(row, policy) {
@@ -367,13 +458,12 @@ function passesTestPolicy(row, policy) {
   return value === policy;
 }
 
-function passesSpecificMajor(row, selected, majorsById = {}) {
-  if (!selected || selected === "any" || !selected.trim()) return true;
+function passesSpecificMajor(row, selectedSet, majorsById = {}) {
+  if (!selectedSet || selectedSet.size === 0) return true;
   if (!majorsById || Object.keys(majorsById).length === 0) return true; // no majors data loaded yet
   const arr = majorsById?.[row.unitid] || majorsById?.[String(row.unitid)] || [];
   if (!Array.isArray(arr) || arr.length === 0) return false;
-  const target = normalize(selected);
-  return arr.some(title => normalize(title) === target);
+  return arr.some(title => selectedSet.has(normalize(title)));
 }
 
 function FilterSelect({ label, value, onChange, options }) {
@@ -392,6 +482,72 @@ function FilterSelect({ label, value, onChange, options }) {
         ))}
       </select>
     </label>
+  );
+}
+
+function FilterChipGroup({ label, values = [], onChange, options }) {
+  const resolved = options ?? [];
+  const toggle = value => {
+    if (!value) return;
+    if (values.includes(value)) {
+      onChange(values.filter(v => v !== value));
+    } else {
+      onChange([...values, value]);
+    }
+  };
+
+  return (
+    <div style={{ display: "grid", gap: 8, fontSize: 14 }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+        <span style={{ fontWeight: 600 }}>{label}</span>
+        {values.length > 0 && (
+          <button
+            type="button"
+            onClick={() => onChange([])}
+            style={{
+              border: "none",
+              background: "none",
+              color: "var(--primary-600)",
+              cursor: "pointer",
+              fontSize: 12,
+              fontWeight: 600
+            }}
+          >
+            Clear
+          </button>
+        )}
+      </div>
+      <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+        {resolved.length === 0 ? (
+          <span className="sub" style={{ fontSize: 12 }}>Loading options...</span>
+        ) : (
+          resolved.map(opt => {
+            const value = opt.value ?? opt;
+            const labelText = opt.label ?? opt;
+            const active = values.includes(value);
+            return (
+              <button
+                type="button"
+                key={value}
+                onClick={() => toggle(value)}
+                style={{
+                  borderRadius: 9999,
+                  border: active ? "1px solid var(--primary)" : "1px solid var(--border)",
+                  background: active ? "rgba(79,70,229,.15)" : "var(--surface)",
+                  color: active ? "var(--primary-600)" : "inherit",
+                  padding: "6px 12px",
+                  fontSize: 13,
+                  cursor: "pointer",
+                  fontWeight: 600
+                }}
+              >
+                {labelText}
+              </button>
+            );
+          })
+        )}
+      </div>
+    </div>
   );
 }
 
