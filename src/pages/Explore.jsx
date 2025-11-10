@@ -182,7 +182,7 @@ export default function Explore() {
 
   return (
     <section>
-      <div className="page-intro">
+      <div className="page-intro" style={{ maxWidth: "100%" }}>
         <h1 className="h1">Explore US universities</h1>
       </div>
 
