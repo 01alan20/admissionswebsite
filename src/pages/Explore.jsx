@@ -1,5 +1,5 @@
-import { useEffect, useMemo, useState } from "react";
-import { Link } from "react-router-dom";
+﻿import { useEffect, useMemo, useState } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 
 function normalize(s = "") {
   return s
@@ -85,6 +85,7 @@ const ACCEPTANCE_OPTIONS = [
 const TEST_POLICY_ORDER = ["Test optional", "Test flexible", "Required", "Not reported"];
 
 export default function Explore() {
+  const [searchParams, setSearchParams] = useSearchParams();
   const [query, setQuery] = useState("");
   const [rows, setRows] = useState([]);
   const [budget, setBudget] = useState("any");
@@ -93,6 +94,7 @@ export default function Explore() {
   const [testPolicy, setTestPolicy] = useState("any");
   const [specificMajor, setSpecificMajor] = useState("any");
   const [majorsById, setMajorsById] = useState({});
+  const [sortBy, setSortBy] = useState("default");
 
   useEffect(() => {
     async function load() {
@@ -131,6 +133,19 @@ export default function Explore() {
       }
     }
     load();
+  }, []);
+
+  // Initialize state from URL query params (once)
+  useEffect(() => {
+    const qp = Object.fromEntries(searchParams.entries());
+    if (qp.q != null) setQuery(qp.q);
+    if (qp.budget) setBudget(qp.budget);
+    if (qp.accept) setAcceptanceBand(qp.accept);
+    if (qp.family) setMajorFamily(qp.family);
+    if (qp.test) setTestPolicy(qp.test);
+    if (qp.major) setSpecificMajor(qp.major);
+    if (qp.sort) setSortBy(qp.sort);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Load majors by institution if available (generated via Scorecard script)
@@ -193,20 +208,50 @@ export default function Explore() {
       }
     }
 
-    const sorted = result.sort((a, b) => {
-      if (hasQuery) return b.score - a.score;
-      const aApps = Number(a.row.applicants_total);
-      const bApps = Number(b.row.applicants_total);
-      const bothFinite = Number.isFinite(aApps) && Number.isFinite(bApps);
-      if (bothFinite && aApps !== bApps) return bApps - aApps;
-      if (Number.isFinite(bApps) && !Number.isFinite(aApps)) return 1;
-      if (Number.isFinite(aApps) && !Number.isFinite(bApps)) return -1;
-      return a.row.name.localeCompare(b.row.name);
-    });
+    let sorted = result;
+    if (sortBy === "default") {
+      sorted = result.sort((a, b) => {
+        if (hasQuery) return b.score - a.score;
+        const aApps = Number(a.row.applicants_total);
+        const bApps = Number(b.row.applicants_total);
+        const bothFinite = Number.isFinite(aApps) && Number.isFinite(bApps);
+        if (bothFinite && aApps !== bApps) return bApps - aApps;
+        if (Number.isFinite(bApps) && !Number.isFinite(aApps)) return 1;
+        if (Number.isFinite(aApps) && !Number.isFinite(bApps)) return -1;
+        return a.row.name.localeCompare(b.row.name);
+      });
+    } else {
+      const tuitionVal = (r) => {
+        const v = Number(r.row.tuition_2023_24_out_of_state ?? r.row.tuition_2023_24 ?? r.row.tuition_2023_24_in_state);
+        return Number.isFinite(v) ? v : Number.POSITIVE_INFINITY;
+      };
+      if (sortBy === "tuition_asc") {
+        sorted = result.sort((a, b) => tuitionVal(a) - tuitionVal(b));
+      } else if (sortBy === "acceptance_asc") {
+        sorted = result.sort((a, b) => Number(a.row.acceptance_rate ?? 999) - Number(b.row.acceptance_rate ?? 999));
+      } else if (sortBy === "acceptance_desc") {
+        sorted = result.sort((a, b) => Number(b.row.acceptance_rate ?? -1) - Number(a.row.acceptance_rate ?? -1));
+      } else if (sortBy === "name") {
+        sorted = result.sort((a, b) => a.row.name.localeCompare(b.row.name));
+      }
+    }
 
     const limit = hasQuery ? 60 : 10;
     return sorted.slice(0, limit).map(item => item.row);
-  }, [rows, query, budget, acceptanceBand, majorFamily, testPolicy]);
+  }, [rows, query, budget, acceptanceBand, majorFamily, testPolicy, specificMajor, majorsById, sortBy]);
+
+  // Sync filters to URL query params for shareable state
+  useEffect(() => {
+    const qp = new URLSearchParams();
+    if (query) qp.set("q", query);
+    if (budget !== "any") qp.set("budget", budget);
+    if (acceptanceBand !== "any") qp.set("accept", acceptanceBand);
+    if (majorFamily !== "any") qp.set("family", majorFamily);
+    if (testPolicy !== "any") qp.set("test", testPolicy);
+    if (specificMajor !== "any") qp.set("major", specificMajor);
+    if (sortBy !== "default") qp.set("sort", sortBy);
+    setSearchParams(qp, { replace: false });
+  }, [query, budget, acceptanceBand, majorFamily, testPolicy, specificMajor, sortBy]);
 
   return (
     <section>
@@ -266,6 +311,18 @@ export default function Explore() {
             value={specificMajor}
             onChange={setSpecificMajor}
             options={[{ value: "any", label: "Any specific major" }, ...specificMajorOptions.map(title => ({ value: title, label: title }))]}
+          />
+          <FilterSelect
+            label="Sort by"
+            value={sortBy}
+            onChange={setSortBy}
+            options={[
+              { value: "default", label: "Default" },
+              { value: "tuition_asc", label: "Tuition (asc)" },
+              { value: "acceptance_asc", label: "Acceptance rate (asc)" },
+              { value: "acceptance_desc", label: "Acceptance rate (desc)" },
+              { value: "name", label: "Name (Aâ€“Z)" },
+            ]}
           />
         </div>
       </div>
@@ -381,3 +438,4 @@ function FilterSelect({ label, value, onChange, options }) {
     </label>
   );
 }
+

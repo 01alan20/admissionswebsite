@@ -4,6 +4,23 @@ import { supabase } from "../lib/supabaseClient";
 
 function normalize(s = "") { return s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim(); }
 
+function getAcceptanceBand(rate) {
+  const v = Number(rate);
+  if (!Number.isFinite(v)) return "unknown";
+  if (v < 25) return "Reach";
+  if (v < 50) return "Target";
+  if (v < 70) return "Balanced";
+  return "Safety";
+}
+
+function sizeBucket(total) {
+  const n = Number(total);
+  if (!Number.isFinite(n)) return "unknown";
+  if (n < 5000) return "Small (<5k)";
+  if (n < 15000) return "Medium (5k-15k)";
+  return "Large (15k+)";
+}
+
 export default function Dashboard() {
   const [onboarding, setOnboarding] = useState(null);
   const [rows, setRows] = useState([]);
@@ -29,16 +46,64 @@ export default function Dashboard() {
   const recs = useMemo(() => {
     if (!onboarding || !rows.length) return [];
     const preferMajors = (onboarding.majors || []).map(normalize);
-    return rows.filter(r => {
-      // Major filter: either family overlap or specific majors map
-      const hasSpecific = (majorsById?.[r.unitid] || majorsById?.[String(r.unitid)] || []).some(t => preferMajors.includes(normalize(t)));
+    const preferStates = onboarding.target_states || [];
+    const preferSize = onboarding.university_size || "No Preference";
+    const preferTypes = new Set(onboarding.university_types || []);
+
+    function majorMatchScore(r) {
+      const specific = (majorsById?.[r.unitid] || majorsById?.[String(r.unitid)] || []);
+      const hasSpecific = specific.some(t => preferMajors.includes(normalize(t)));
       const hasFamily = (r.major_families || []).some(f => preferMajors.includes(normalize(f)));
-      if (preferMajors.length && !(hasSpecific || hasFamily)) return false;
-      // States filter
-      if ((onboarding.target_states || []).length && !onboarding.target_states.includes(r.state)) return false;
-      // Size preference (rough proxy using total enrollment buckets if present)
-      return true;
-    }).slice(0, 24);
+      if (!preferMajors.length) return 0;
+      return hasSpecific ? 5 : hasFamily ? 2 : -5; // penalize if user chose majors but school doesn't match
+    }
+
+    function typeScore(r) {
+      if (preferTypes.has("No Preference") || preferTypes.size === 0) return 0;
+      let s = 0;
+      if (preferTypes.has("Public") && r.control === "Public") s += 1;
+      if (preferTypes.has("Private") && (r.control || "").startsWith("Private")) s += 1;
+      if (preferTypes.has("Liberal Arts") && /Baccalaureate|Arts/.test(r.carnegie_basic || "")) s += 1;
+      return s;
+    }
+
+    function stateScore(r) {
+      if (!preferStates.length) return 0;
+      return preferStates.includes(r.state) ? 1 : 0;
+    }
+
+    function sizeScore(r) {
+      if (!preferSize || preferSize === "No Preference") return 0;
+      return sizeBucket(r.total_enrollment) === preferSize ? 1 : 0;
+    }
+
+    function tuitionValue(r) {
+      const v = Number(r.tuition_2023_24_out_of_state ?? r.tuition_2023_24 ?? r.tuition_2023_24_in_state);
+      return Number.isFinite(v) ? v : Number.POSITIVE_INFINITY;
+    }
+
+    const scored = rows.map(r => {
+      const score = 0
+        + majorMatchScore(r)
+        + stateScore(r)
+        + sizeScore(r)
+        + typeScore(r);
+      return { r, score, band: getAcceptanceBand(r.acceptance_rate), tuition: tuitionValue(r) };
+    })
+    // Filter out clear non-matches if majors were provided
+    .filter(x => !(preferMajors.length && x.score < 0));
+
+    const ranked = scored.sort((a, b) => {
+      if (b.score !== a.score) return b.score - a.score;
+      if (a.band !== b.band) {
+        // Prefer Target/Balanced over Reach; simple order
+        const order = { "Target": 0, "Balanced": 1, "Safety": 2, "Reach": 3, "unknown": 4 };
+        return order[a.band] - order[b.band];
+      }
+      return a.tuition - b.tuition; // cheaper first
+    });
+
+    return ranked.slice(0, 24);
   }, [onboarding, rows, majorsById]);
 
   return (
@@ -55,10 +120,16 @@ export default function Dashboard() {
       </div>
 
       <div className="grid" style={{ marginTop: 20 }}>
-        {recs.map(row => (
-          <Link key={row.unitid} to={`/institution/${row.unitid}`} className="card" style={{ textDecoration: "none", color: "inherit" }}>
-            <div style={{ fontWeight: 700, marginBottom: 4 }}>{row.name}</div>
-            <div className="sub" style={{ fontSize: 13 }}>{row.city ? `${row.city}, ` : ""}{row.state} - {row.control} - {row.level}</div>
+        {recs.map(item => (
+          <Link key={item.r.unitid} to={`/institution/${item.r.unitid}`} className="card" style={{ textDecoration: "none", color: "inherit" }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <div>
+                <div style={{ fontWeight: 700, marginBottom: 4 }}>{item.r.name}</div>
+                <div className="sub" style={{ fontSize: 13 }}>{item.r.city ? `${item.r.city}, ` : ""}{item.r.state} - {item.r.control} - {item.r.level}</div>
+              </div>
+              <span className="badge">{item.band}</span>
+            </div>
+            <div style={{ marginTop: 8, fontSize: 13, color: '#475569' }}>Est. tuition: {formatCurrency(item.tuition)}</div>
           </Link>
         ))}
       </div>
@@ -108,4 +179,3 @@ function NeedHelpModal({ onClose }) {
     </div>
   );
 }
-
