@@ -110,7 +110,7 @@ export default function ProfileReview() {
   }
 
   return (
-    <section>
+    <section className="page">
       <div className="page-intro">
         <h1 className="h1">Profile Review</h1>
         <p className="sub">

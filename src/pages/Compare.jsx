@@ -232,7 +232,7 @@ export default function Compare() {
   const gridColumns = `220px repeat(${Math.max(selectedInstitutions.length, 1)}, minmax(220px, 1fr))`;
 
   return (
-    <section>
+    <section className="page">
       <div className="page-intro">
         <h1 className="h1">Compare institutions</h1>
         <p className="sub">

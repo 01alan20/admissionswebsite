@@ -1,6 +1,6 @@
 export default function AdmissionsTimeline() {
   return (
-    <section>
+    <section className="page">
       <div className="page-intro">
         <h1 className="h1">US Admissions Timeline</h1>
       </div>

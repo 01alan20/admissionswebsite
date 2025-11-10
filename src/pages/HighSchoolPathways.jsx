@@ -1,6 +1,6 @@
 export default function HighSchoolPathways() {
   return (
-    <section>
+    <section className="page">
       <div className="page-intro">
         <h1 className="h1">High School Pathways</h1>
         <p className="sub">

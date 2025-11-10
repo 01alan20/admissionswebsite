@@ -234,7 +234,7 @@ export default function Explore() {
   }, [rows, query, budgets, acceptanceBands, majorFamilies, testPolicies, normalizedSpecificMajorsSet, majorsById]);
 
   return (
-    <section>
+    <section className="page">
       <div className="page-intro">
         <h1 className="h1">Explore US universities</h1>
       </div>
@@ -302,64 +302,13 @@ export default function Explore() {
             onChange={setTestPolicies}
             options={testPolicyOptions.map(v => ({ value: v, label: v }))}
           />
-          <label style={{ display: "grid", gap: 6, fontSize: 14 }}>
-            <span style={{ fontWeight: 600 }}>Specific majors</span>
-            <div style={{ display: "flex", gap: 8 }}>
-              <input
-                value={specificMajorInput}
-                onChange={e => setSpecificMajorInput(e.target.value)}
-                onKeyDown={e => {
-                  if (e.key === "Enter") {
-                    e.preventDefault();
-                    handleSpecificMajorAdd();
-                  }
-                }}
-                list="majors-suggest"
-                placeholder="Type a major and press Enter to add"
-                style={{ flex: 1, padding: "10px 12px", borderRadius: 12, border: "1px solid var(--border)" }}
-              />
-              <button
-                type="button"
-                onClick={handleSpecificMajorAdd}
-                style={{
-                  borderRadius: 12,
-                  border: "1px solid var(--border)",
-                  padding: "10px 16px",
-                  background: "var(--surface)",
-                  cursor: "pointer",
-                  fontWeight: 600
-                }}
-              >
-                Add
-              </button>
-            </div>
-            <datalist id="majors-suggest">
-              {allMajors.slice(0, 1000).map(title => (
-                <option key={title} value={title} />
-              ))}
-            </datalist>
-            {specificMajors.length > 0 && (
-              <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
-                {specificMajors.map(title => (
-                  <button
-                    type="button"
-                    key={title}
-                    onClick={() => handleSpecificMajorRemove(title)}
-                    style={{
-                      borderRadius: 9999,
-                      border: "1px solid var(--border)",
-                      background: "#f4f4fb",
-                      padding: "4px 10px",
-                      fontSize: 12,
-                      cursor: "pointer"
-                    }}
-                  >
-                    {title} ✕
-                  </button>
-                ))}
-              </div>
-            )}
-          </label>
+          <FilterDropdownSearchMulti
+            label="Specific majors"
+            values={specificMajors}
+            onChange={setSpecificMajors}
+            options={allMajors}
+            limit={MAX_SPECIFIC_MAJORS}
+          />
         </div>
       </div>
 
@@ -553,6 +502,92 @@ function FilterDropdownMulti({ label, values = [], onChange, options = [] }) {
                 <button type="button" onClick={() => onChange([])} className="btn-outline">Clear</button>
               </div>
             )}
+          </div>
+        )}
+      </div>
+    </label>
+  );
+}
+
+function FilterDropdownSearchMulti({ label, values = [], onChange, options = [], limit = 5 }) {
+  const [open, setOpen] = useState(false);
+  const [q, setQ] = useState("");
+  const id = useMemo(() => `sm-${Math.random().toString(36).slice(2)}`, []);
+
+  useEffect(() => {
+    function onDoc(e) {
+      const within = e.target.closest ? e.target.closest(`#${id}`) : null;
+      if (!within) setOpen(false);
+    }
+    document.addEventListener("click", onDoc);
+    return () => document.removeEventListener("click", onDoc);
+  }, [id]);
+
+  const filtered = useMemo(() => {
+    const n = normalize(q);
+    if (!n) return options;
+    return options.filter(title => normalize(title).includes(n));
+  }, [q, options]);
+
+  function toggle(value) {
+    if (!value) return;
+    if (values.includes(value)) onChange(values.filter(v => v !== value));
+    else if (values.length < limit) onChange([...values, value]);
+  }
+
+  const text = values.length === 0
+    ? "Any"
+    : values.slice(0, 2).join(", ") + (values.length > 2 ? ` +${values.length - 2}` : "");
+
+  const limitReached = values.length >= limit;
+
+  return (
+    <label style={{ display: "grid", gap: 6, fontSize: 14 }} id={id}>
+      <span style={{ fontWeight: 600 }}>{label}</span>
+      <div style={{ position: "relative" }}>
+        <button
+          type="button"
+          onClick={() => setOpen(v => !v)}
+          style={{
+            width: "100%",
+            textAlign: "left",
+            padding: "10px 12px",
+            borderRadius: 12,
+            border: "1px solid var(--border)",
+            background: "#fff",
+            cursor: "pointer"
+          }}
+          aria-haspopup="listbox"
+          aria-expanded={open}
+        >
+          {text}
+        </button>
+        {open && (
+          <div className="card" role="listbox" style={{ position: "absolute", zIndex: 60, marginTop: 8, left: 0, right: 0, maxHeight: 320, overflow: "auto" }}>
+            <input
+              value={q}
+              onChange={e => setQ(e.target.value)}
+              placeholder="Search majors"
+              style={{ width: "100%", padding: 10, border: "1px solid var(--border)", borderRadius: 8 }}
+            />
+            <div style={{ display: "grid", gap: 6, marginTop: 8 }}>
+              {filtered.slice(0, 1000).map(title => {
+                const active = values.includes(title);
+                const disabled = !active && limitReached;
+                return (
+                  <label key={title} style={{ display: "flex", alignItems: "center", gap: 8, opacity: disabled ? .6 : 1 }}>
+                    <input type="checkbox" checked={active} disabled={disabled} onChange={() => toggle(title)} />
+                    <span>{title}</span>
+                  </label>
+                );
+              })}
+            </div>
+            <div style={{ display: "flex", justifyContent: "space-between", marginTop: 8, fontSize: 12, color: "#64748b" }}>
+              <span>{limitReached ? `Limit ${limit} reached` : `Select up to ${limit}`}</span>
+              {values.length > 0 && (
+                <button type="button" onClick={() => onChange([])} className="btn-outline">Clear</button>
+              )}
+            </div>
           </div>
         )}
       </div>

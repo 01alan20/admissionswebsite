@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       <section
-        className="hero"
+        className="hero page"
         style={{
           display: "flex",
           flexDirection: "column",
@@ -30,7 +30,7 @@ export default function Home() {
       <div className="divider" />
 
       <section
-        className="section"
+        className="section page"
         style={{
           display: "grid",
           gap: "20px",

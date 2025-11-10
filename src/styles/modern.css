@@ -32,6 +32,9 @@ a{color:inherit;text-decoration:none}
 .container{width:min(var(--container-max), 92%); margin-inline:auto;}
 .main-pad{padding:36px 0 60px}
 
+/* Consistent page body width across routes */
+.page{width:min(1080px, 92%); margin-inline:auto;}
+
 .page-intro{
   display:flex;
   flex-direction:column;
