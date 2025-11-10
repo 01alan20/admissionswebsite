@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+﻿import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 
 function normalize(s = "") {
@@ -87,11 +87,12 @@ const TEST_POLICY_ORDER = ["Test optional", "Test flexible", "Required", "Not re
 export default function Explore() {
   const [query, setQuery] = useState("");
   const [rows, setRows] = useState([]);
-  const [budget, setBudget] = useState("any");
-  const [acceptanceBand, setAcceptanceBand] = useState("any");
-  const [majorFamily, setMajorFamily] = useState("any");
-  const [testPolicy, setTestPolicy] = useState("any");
-  const [specificMajor, setSpecificMajor] = useState("any");
+  // Multi-select filter state
+  const [budgets, setBudgets] = useState([]);
+  const [acceptanceBands, setAcceptanceBands] = useState([]);
+  const [majorFamilies, setMajorFamilies] = useState([]);
+  const [testPolicies, setTestPolicies] = useState([]);
+  const [specificMajors, setSpecificMajors] = useState([]);
   const [majorsById, setMajorsById] = useState({});
 
   useEffect(() => {
@@ -136,12 +137,14 @@ export default function Explore() {
   // Load majors by institution if available (generated via Scorecard script)
   useEffect(() => {
     let cancelled = false;
-    fetch("/data/majors_by_institution.json")
+    fetch(`/data/majors_by_institution.json?t=${Date.now()}`)
       .then(r => (r.ok ? r.json() : null))
       .then(json => {
         if (!cancelled && json && typeof json === "object") setMajorsById(json);
       })
-      .catch(() => {});
+      .catch(err => {
+        console.error("Failed to load majors_by_institution.json", err);
+      });
     return () => {
       cancelled = true;
     };
@@ -159,12 +162,12 @@ export default function Explore() {
     return ["any", ...sorted];
   }, [rows]);
 
-  const specificMajorOptions = useMemo(() => {
+  const allMajors = useMemo(() => {
     const set = new Set();
     try {
       for (const key of Object.keys(majorsById || {})) {
         const arr = majorsById[key] || [];
-        for (const title of arr) if (title) set.add(title);
+        for (const title of arr) if (title) set.add(String(title).replace(/\.$/, ""));
       }
     } catch {}
     return Array.from(set).sort();
@@ -206,7 +209,7 @@ export default function Explore() {
 
     const limit = hasQuery ? 60 : 10;
     return sorted.slice(0, limit).map(item => item.row);
-  }, [rows, query, budget, acceptanceBand, majorFamily, testPolicy]);
+  }, [rows, query, budget, acceptanceBand, majorFamily, testPolicy, specificMajor, majorsById]);
 
   return (
     <section>
@@ -261,12 +264,22 @@ export default function Explore() {
             onChange={setMajorFamily}
             options={majorOptions.map(value => ({ value, label: value === "any" ? "Any major" : value }))}
           />
-          <FilterSelect
-            label="Specific major"
-            value={specificMajor}
-            onChange={setSpecificMajor}
-            options={[{ value: "any", label: "Any specific major" }, ...specificMajorOptions.map(title => ({ value: title, label: title }))]}
-          />
+          <label style={{ display: "grid", gap: 6, fontSize: 14 }}>
+            <span style={{ fontWeight: 600 }}>Specific major</span>
+            <input
+              value={specificMajor === "any" ? "" : specificMajor}
+              onChange={e => setSpecificMajor(e.target.value ? e.target.value : "any")}
+              list="majors-suggest"
+              placeholder="Type a major (e.g., Computer and Information Sciences, General.)"
+              style={{ padding: "10px 12px", borderRadius: 12, border: "1px solid var(--border)" }}
+            />
+            <datalist id="majors-suggest">
+              {allMajors.slice(0, 1000).map(title => (
+                <option key={title} value={title} />
+              ))}
+            </datalist>
+            <span className="sub" style={{ fontSize: 12 }}>{allMajors.length ? `${allMajors.length.toLocaleString()} majors loaded` : "Majors list loading..."}</span>
+          </label>
         </div>
       </div>
 
@@ -381,3 +394,5 @@ function FilterSelect({ label, value, onChange, options }) {
     </label>
   );
 }
+
+
