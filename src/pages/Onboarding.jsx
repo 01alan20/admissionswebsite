@@ -34,10 +34,22 @@ export default function Onboarding() {
   ]), []);
 
   useEffect(() => {
+    const norm = (s = "") => s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9\s]/g, " ").replace(/\s+/g, " ").trim();
     fetch("/data/majors_by_institution.json").then(r => r.json()).then(json => {
       const set = new Set();
-      Object.values(json).forEach(arr => (arr || []).forEach(t => set.add(t)));
-      setAllMajors(Array.from(set).sort());
+      Object.values(json).forEach(arr => (arr || []).forEach(t => {
+        if (!t) return;
+        const cleaned = String(t).replace(/\.$/, "");
+        set.add(cleaned);
+      }));
+      // Also merge in major families for broader search terms (e.g., "Business")
+      fetch("/data/institutions.json").then(r => r.json()).then(rows => {
+        rows.forEach(row => (row.major_families || []).forEach(f => set.add(f)));
+        // Add simple aliases for common intents
+        const aliases = ["Business", "Computer Science", "Biology", "Engineering", "Economics", "Psychology", "Nursing", "Mathematics", "Physics", "Chemistry", "Finance", "Marketing"];
+        aliases.forEach(a => set.add(a));
+        setAllMajors(Array.from(set).sort((a,b) => a.localeCompare(b)));
+      }).catch(() => setAllMajors(Array.from(set).sort((a,b)=>a.localeCompare(b))));
     }).catch(() => setAllMajors([]));
     // Use full state names for selection
     setStateOptions(US_STATES.map(([, name]) => name));
@@ -269,7 +281,7 @@ function AutoSuggestMultiSelect({ label, values, setValues, options, max = 5, da
   const [input, setInput] = useState("");
   const [active, setActive] = useState(-1);
   const [open, setOpen] = useState(false);
-  const norm = (s = "") => s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
+  const norm = (s = "") => s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9\s]/g, " ").replace(/\s+/g, " ").trim();
   const opts = options || [];
 
   const filtered = useMemo(() => {
