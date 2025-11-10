@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { supabase } from "../lib/supabaseClient";
 
 function normalize(s = "") { return s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim(); }
+function formatCurrency(v){ const n=Number(v); return Number.isFinite(n)&&n>0?`$${n.toLocaleString()}`:"Not reported"; }
 
 function getAcceptanceBand(rate) {
   const v = Number(rate);
@@ -46,7 +47,11 @@ export default function Dashboard() {
   const recs = useMemo(() => {
     if (!onboarding || !rows.length) return [];
     const preferMajors = (onboarding.majors || []).map(normalize);
-    const preferStates = onboarding.target_states || [];
+    const preferStatesNames = onboarding.target_states || [];
+    const NAME_TO_CODE = {
+      "Alabama":"AL","Alaska":"AK","Arizona":"AZ","Arkansas":"AR","California":"CA","Colorado":"CO","Connecticut":"CT","Delaware":"DE","District of Columbia":"DC","Florida":"FL","Georgia":"GA","Hawaii":"HI","Idaho":"ID","Illinois":"IL","Indiana":"IN","Iowa":"IA","Kansas":"KS","Kentucky":"KY","Louisiana":"LA","Maine":"ME","Maryland":"MD","Massachusetts":"MA","Michigan":"MI","Minnesota":"MN","Mississippi":"MS","Missouri":"MO","Montana":"MT","Nebraska":"NE","Nevada":"NV","New Hampshire":"NH","New Jersey":"NJ","New Mexico":"NM","New York":"NY","North Carolina":"NC","North Dakota":"ND","Ohio":"OH","Oklahoma":"OK","Oregon":"OR","Pennsylvania":"PA","Rhode Island":"RI","South Carolina":"SC","South Dakota":"SD","Tennessee":"TN","Texas":"TX","Utah":"UT","Vermont":"VT","Virginia":"VA","Washington":"WA","West Virginia":"WV","Wisconsin":"WI","Wyoming":"WY"
+    };
+    const preferStates = preferStatesNames.map(n => NAME_TO_CODE[n]).filter(Boolean);
     const preferSize = onboarding.university_size || "No Preference";
     const preferTypes = new Set(onboarding.university_types || []);
 

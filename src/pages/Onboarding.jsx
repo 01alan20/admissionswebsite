@@ -11,9 +11,7 @@ export default function Onboarding() {
   const navigate = useNavigate();
 
   const [profile, setProfile] = useState({
-    gpa_type: "None",
     gpa_value: "",
-    curriculum: "US High School",
     sat_total: "",
     sat_math: "",
     act_composite: "",
@@ -22,7 +20,6 @@ export default function Onboarding() {
   const [prefs, setPrefs] = useState({
     majors: [],
     states: [],
-    cities: [],
     campus_setting: "No Preference",
     size: "No Preference",
     types: new Set(["No Preference"]),
@@ -32,17 +29,19 @@ export default function Onboarding() {
   const [allMajors, setAllMajors] = useState([]);
   const [stateOptions, setStateOptions] = useState([]);
 
+  const US_STATES = useMemo(() => ([
+    ["AL","Alabama"],["AK","Alaska"],["AZ","Arizona"],["AR","Arkansas"],["CA","California"],["CO","Colorado"],["CT","Connecticut"],["DE","Delaware"],["DC","District of Columbia"],["FL","Florida"],["GA","Georgia"],["HI","Hawaii"],["ID","Idaho"],["IL","Illinois"],["IN","Indiana"],["IA","Iowa"],["KS","Kansas"],["KY","Kentucky"],["LA","Louisiana"],["ME","Maine"],["MD","Maryland"],["MA","Massachusetts"],["MI","Michigan"],["MN","Minnesota"],["MS","Mississippi"],["MO","Missouri"],["MT","Montana"],["NE","Nebraska"],["NV","Nevada"],["NH","New Hampshire"],["NJ","New Jersey"],["NM","New Mexico"],["NY","New York"],["NC","North Carolina"],["ND","North Dakota"],["OH","Ohio"],["OK","Oklahoma"],["OR","Oregon"],["PA","Pennsylvania"],["RI","Rhode Island"],["SC","South Carolina"],["SD","South Dakota"],["TN","Tennessee"],["TX","Texas"],["UT","Utah"],["VT","Vermont"],["VA","Virginia"],["WA","Washington"],["WV","West Virginia"],["WI","Wisconsin"],["WY","Wyoming"]
+  ]), []);
+
   useEffect(() => {
     fetch("/data/majors_by_institution.json").then(r => r.json()).then(json => {
       const set = new Set();
       Object.values(json).forEach(arr => (arr || []).forEach(t => set.add(t)));
       setAllMajors(Array.from(set).sort());
     }).catch(() => setAllMajors([]));
-    fetch("/data/institutions.json").then(r => r.json()).then(rows => {
-      const states = Array.from(new Set(rows.map(r => r.state))).filter(Boolean).sort();
-      setStateOptions(states);
-    }).catch(() => setStateOptions([]));
-  }, []);
+    // Use full state names for selection
+    setStateOptions(US_STATES.map(([, name]) => name));
+  }, [US_STATES]);
 
   function addOrRemove(list, value, limit) {
     const arr = Array.from(list);
@@ -52,12 +51,9 @@ export default function Onboarding() {
   }
 
   function validateStep1() {
-    if (!profile.gpa_type) return "Select GPA type";
-    if (profile.gpa_type !== "None") {
-      const v = Number(profile.gpa_value);
-      if (!Number.isFinite(v)) return "Enter a GPA number";
-      if (v <= 0 || v > 5) return "GPA must be between 1.0 and 5.0";
-    }
+    const v = Number(profile.gpa_value);
+    if (!Number.isFinite(v)) return "Enter GPA on a 4.0 scale";
+    if (v <= 0 || v > 4) return "GPA must be between 1.0 and 4.0";
     if (profile.sat_total) {
       const v = Number(profile.sat_total); if (v < 400 || v > 1600) return "SAT total 400–1600";
     }
@@ -82,15 +78,15 @@ export default function Onboarding() {
       if (!user) throw new Error("You must be signed in");
       const payload = {
         user_id: user.id,
-        gpa_type: profile.gpa_type,
-        gpa_value: profile.gpa_type === "None" ? null : Number(profile.gpa_value),
-        curriculum: profile.curriculum,
+        gpa_type: 'Converted 4.0',
+        gpa_value: Number(profile.gpa_value),
+        curriculum: 'N/A',
         sat_total: profile.sat_total ? Number(profile.sat_total) : null,
         sat_math: profile.sat_math ? Number(profile.sat_math) : null,
         act_composite: profile.act_composite ? Number(profile.act_composite) : null,
         majors: prefs.majors,
         target_states: prefs.states,
-        target_cities: prefs.cities,
+        target_cities: [],
         campus_setting: prefs.campus_setting,
         university_size: prefs.size,
         university_types: Array.from(prefs.types),
@@ -116,27 +112,9 @@ export default function Onboarding() {
         {step === 1 && (
           <div style={{ display: "grid", gap: 12 }}>
             <label style={{ display: "grid", gap: 6 }}>
-              <span style={{ fontWeight: 600 }}>GPA type</span>
-              <select value={profile.gpa_type} onChange={e => setProfile(p => ({ ...p, gpa_type: e.target.value }))} className="search" style={{ height: 44 }}>
-                <option>Weighted GPA</option>
-                <option>Unweighted GPA</option>
-                <option>None</option>
-              </select>
-            </label>
-            {profile.gpa_type !== "None" && (
-              <label style={{ display: "grid", gap: 6 }}>
-                <span style={{ fontWeight: 600 }}>GPA value</span>
-                <input type="number" step="0.01" placeholder="e.g., 3.7" value={profile.gpa_value} onChange={e => setProfile(p => ({ ...p, gpa_value: e.target.value }))} className="search" style={{ height: 44 }} />
-                <span className="sub" style={{ fontSize: 12 }}>Allowed range 1.0–5.0 depending on school scale</span>
-              </label>
-            )}
-            <label style={{ display: "grid", gap: 6 }}>
-              <span style={{ fontWeight: 600 }}>Curriculum</span>
-              <select value={profile.curriculum} onChange={e => setProfile(p => ({ ...p, curriculum: e.target.value }))} className="search" style={{ height: 44 }}>
-                <option>US High School</option>
-                <option>International (IB/A-Levels)</option>
-                <option>GED/HiSET</option>
-              </select>
+              <span style={{ fontWeight: 600 }}>GPA (4.0 scale)</span>
+              <input type="number" step="0.01" min="1" max="4" placeholder="e.g., 3.7" value={profile.gpa_value} onChange={e => setProfile(p => ({ ...p, gpa_value: e.target.value }))} className="search" style={{ height: 44 }} />
+              <span className="sub" style={{ fontSize: 12 }}>If your school uses a different scale, please convert to 4.0.</span>
             </label>
             <div style={{ display: "grid", gap: 10, gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))" }}>
               <label style={{ display: "grid", gap: 6 }}>
@@ -162,30 +140,25 @@ export default function Onboarding() {
 
         {step === 2 && (
           <div style={{ display: "grid", gap: 12 }}>
-            <label style={{ display: "grid", gap: 6 }}>
-              <span style={{ fontWeight: 600 }}>Primary major</span>
-              <select value={prefs.majors[0] || ""} onChange={e => setPrefs(p => ({ ...p, majors: e.target.value ? [e.target.value, ...p.majors.slice(1)] : [] }))} className="search" style={{ height: 44 }}>
-                <option value="">Select major</option>
-                {allMajors.map(m => <option key={m} value={m}>{m}</option>)}
-              </select>
-            </label>
-            <div className="sub" style={{ fontSize: 12 }}>Add up to 4 additional majors</div>
-            {[1,2,3,4].map(i => (
-              <label key={i} style={{ display: "grid", gap: 6 }}>
-                <span style={{ fontWeight: 600 }}>Major {i+1} (optional)</span>
-                <select value={prefs.majors[i] || ""} onChange={e => setPrefs(p => { const arr = [...(p.majors||[])]; arr[i] = e.target.value || undefined; return { ...p, majors: arr.filter(Boolean) }; })} className="search" style={{ height: 44 }}>
-                  <option value="">Select major</option>
-                  {allMajors.map(m => <option key={m} value={m}>{m}</option>)}
-                </select>
-              </label>
-            ))}
+            <MultiSelect
+              label="Intended majors (up to 5)"
+              placeholder="Type to search majors, then press Enter"
+              values={prefs.majors}
+              setValues={vals => setPrefs(p => ({ ...p, majors: vals }))}
+              options={allMajors}
+              max={5}
+              datalistId="majors-suggest"
+            />
 
-            <label style={{ display: "grid", gap: 6 }}>
-              <span style={{ fontWeight: 600 }}>Target states (up to 5)</span>
-              <select multiple value={prefs.states} onChange={e => setPrefs(p => ({ ...p, states: Array.from(e.target.selectedOptions).map(o => o.value).slice(0,5) }))} className="search" style={{ height: 120 }}>
-                {stateOptions.map(s => <option key={s} value={s}>{s}</option>)}
-              </select>
-            </label>
+            <MultiSelect
+              label="Target states (up to 5)"
+              placeholder="Type to search states, then press Enter"
+              values={prefs.states}
+              setValues={vals => setPrefs(p => ({ ...p, states: vals }))}
+              options={stateOptions}
+              max={5}
+              datalistId="states-suggest"
+            />
 
             <div style={{ display: "flex", gap: 8 }}>
               <button className="btn-outline" onClick={() => setStep(1)}>Back</button>
@@ -231,6 +204,60 @@ function RadioGroup({ label, value, onChange, options }) {
   );
 }
 
+function MultiSelect({ label, values, setValues, options, max = 5, datalistId, placeholder }) {
+  const [input, setInput] = useState("");
+  const norm = (s="") => s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
+  const opts = options || [];
+
+  function add(val) {
+    if (!val) return;
+    // Prefer exact match; fallback to first includes
+    const exact = opts.find(o => norm(o) === norm(val));
+    const picked = exact || opts.find(o => norm(o).includes(norm(val)));
+    if (!picked) return;
+    if (values.includes(picked)) return;
+    if (values.length >= max) return;
+    setValues([...values, picked]);
+    setInput("");
+  }
+
+  function onKey(e) {
+    if (e.key === 'Enter' || e.key === ',') { e.preventDefault(); add(input); }
+  }
+
+  function remove(item) {
+    setValues(values.filter(v => v !== item));
+  }
+
+  return (
+    <div style={{ display: 'grid', gap: 6 }}>
+      <span style={{ fontWeight: 600 }}>{label}</span>
+      <div className="card" style={{ display: 'flex', flexWrap: 'wrap', gap: 8, padding: 10 }}>
+        {values.map(v => (
+          <span key={v} className="badge" style={{ display:'inline-flex', alignItems:'center', gap:6 }}>
+            {v}
+            <button type="button" onClick={() => remove(v)} style={{ border:'none', background:'transparent', cursor:'pointer' }}>×</button>
+          </span>
+        ))}
+        {values.length < max && (
+          <input
+            list={datalistId}
+            value={input}
+            onChange={e => setInput(e.target.value)}
+            onKeyDown={onKey}
+            placeholder={placeholder}
+            style={{ flex: 1, minWidth: 220, border: '1px solid var(--border)', borderRadius: 8, padding: '8px 10px' }}
+          />
+        )}
+      </div>
+      <datalist id={datalistId}>
+        {opts.slice(0, 500).map(o => <option key={o} value={o} />)}
+      </datalist>
+      <span className="sub" style={{ fontSize: 12 }}>{values.length}/{max} selected</span>
+    </div>
+  );
+}
+
 function CheckboxGroup({ label, values, onToggle, options }) {
   return (
     <label style={{ display: "grid", gap: 6 }}>
@@ -246,4 +273,3 @@ function CheckboxGroup({ label, values, onToggle, options }) {
     </label>
   );
 }
-
