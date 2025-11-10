@@ -16,7 +16,7 @@
 }
 
 *{box-sizing:border-box}
-html,body,#root{height:100%}
+html,body,#root{min-height:100%}
 body{
   margin:0;
   font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
@@ -132,3 +132,26 @@ a{color:inherit;text-decoration:none}
 .footer{
   padding:24px 0 40px; color:var(--muted); font-size:14px;
 }
+
+/* ---------- Timeline (road) ---------- */
+.timeline{
+  position:relative;
+  margin-top:24px;
+}
+.timeline:before{
+  content:"";
+  position:absolute; left:18px; top:0; bottom:0;
+  width:6px; border-radius:6px;
+  background:linear-gradient(180deg,#c7d2fe 0%, #93c5fd 100%);
+}
+.milestone{position:relative; margin-left:48px; margin-bottom:18px}
+.milestone .dot{
+  position:absolute; left:-36px; top:10px; width:14px; height:14px; border-radius:50%;
+  background:linear-gradient(45deg, var(--primary), #22d3ee);
+  box-shadow:0 0 0 6px rgba(79,70,229,.12);
+}
+.milestone details{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); box-shadow:var(--shadow); padding:14px}
+.milestone summary{cursor:pointer; list-style:none; font-weight:700}
+.milestone summary::-webkit-details-marker{display:none}
+.milestone .summary-row{display:flex; align-items:center; justify-content:space-between}
+.milestone .summary-sub{color:var(--muted); font-size:13px}

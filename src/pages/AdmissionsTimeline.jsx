@@ -3,86 +3,71 @@ export default function AdmissionsTimeline() {
     <section>
       <div className="page-intro">
         <h1 className="h1">US Admissions Timeline</h1>
-        <p className="sub">
-          A grade-by-grade roadmap from four years out to application deadlines, including platform steps for Common App and Coalition.
-        </p>
       </div>
+      <div className="timeline">
+        <Milestone id="grade-9" title="4 Years Out (Grade 9)" summary="Build foundations and explore interests">
+          <Checklist items={[
+            "Build study habits; target strong GPA",
+            "Place into appropriate math and world‑language tracks",
+            "Sample clubs/sports/arts; begin depth in 1–2 areas",
+            "Start an activity log (hours, roles, impact)",
+          ]} />
+        </Milestone>
 
-      <div
-        className="section"
-        style={{
-          display: "grid",
-          gap: "24px",
-          marginTop: 24,
-          gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-          alignItems: "start",
-        }}
-      >
-        <article id="grade-9" className="card">
-          <h2>4 Years Out (Grade 9)</h2>
-          <ul>
-            <li><strong>Academics:</strong> Build study habits, target strong GPA; place into appropriate math/world language tracks.</li>
-            <li><strong>Activities:</strong> Sample broadly, then begin depth in 1–2 areas (clubs, sports, arts, community).</li>
-            <li><strong>Exploration:</strong> Note interests and possible majors; light college awareness.</li>
-            <li><strong>Records:</strong> Start an activity log (hours, roles, impact).</li>
-          </ul>
-        </article>
+        <Milestone id="grade-10" title="3 Years Out (Grade 10)" summary="Choose rigor, diagnostics, deepen activities">
+          <Checklist items={[
+            "Plan next‑year schedule (honors/AP/IB/dual when ready)",
+            "Take diagnostics (PSAT/Pre‑ACT) and set a testing plan",
+            "Pursue roles or measurable outcomes in activities",
+            "Visit campuses/virtual tours; note preferences (size, setting, majors)",
+            "Use summer for programs, work, volunteering, or self‑driven projects",
+          ]} />
+        </Milestone>
 
-        <article id="grade-10" className="card">
-          <h2>3 Years Out (Grade 10)</h2>
-          <ul>
-            <li><strong>Rigor:</strong> Choose next-year courses thoughtfully (honors/AP/IB/dual when prepared).</li>
-            <li><strong>Testing:</strong> Take diagnostics (PSAT/Pre‑ACT) to set a plan; no high stakes yet.</li>
-            <li><strong>Activities:</strong> Deepen commitment; pursue roles or measurable outcomes.</li>
-            <li><strong>Exploration:</strong> Visit local campuses or virtual tours; note preferences (size, setting, majors).</li>
-            <li><strong>Summer:</strong> Programs, work, volunteering, or self-driven projects.</li>
-          </ul>
-        </article>
+        <Milestone id="grade-11" title="2 Years Out (Grade 11)" summary="Testing + leadership; build the college list">
+          <Checklist items={[
+            "Take the most challenging courses you can succeed in",
+            "SAT/ACT in spring; retake in fall if needed",
+            "AP/IB exams in May",
+            "Document outcomes (awards, code, recordings, press)",
+            "Build reach/target/safety list; track testing policy and costs",
+            "Draft personal statement over summer; outline activities and research prompts",
+          ]} />
+        </Milestone>
 
-        <article id="grade-11" className="card">
-          <h2>2 Years Out (Grade 11)</h2>
-          <ul>
-            <li><strong>Course Load:</strong> Take the most challenging courses you can do well in.</li>
-            <li><strong>Testing:</strong> SAT/ACT in spring (and a fall retake if needed); AP/IB exams in May.</li>
-            <li><strong>Activities:</strong> Leadership and impact; document outcomes (awards, code, recordings, press, recommendations).</li>
-            <li><strong>College List:</strong> Build an initial reach/target/safety list; track testing policy and costs.</li>
-            <li><strong>Summer before Grade 12:</strong> Draft personal statement; outline activity descriptions; research supplemental prompts.</li>
-          </ul>
-        </article>
+        <Milestone id="grade-12" title="1 Year Out (Grade 12)" summary="Applications, essays, recommendations, aid (more detail)">
+          <Checklist items={[
+            "Finalize college list and choose ED/EA/RD strategy",
+            "Create Common App and Coalition accounts; complete profile + FERPA",
+            "Request teacher/counselor recommendations and provide resume",
+            "Write and refine personal statement + all supplements",
+            "File FAFSA and CSS Profile (if required); track scholarships",
+            "Send test scores if needed; request transcripts",
+            "Submit apps; check portals and to‑do items",
+          ]} />
+          <div className="card" style={{ marginTop: 12 }}>
+            <div style={{ fontWeight: 700, marginBottom: 6 }}>Estimated Windows (typical)</div>
+            <ul>
+              <li><strong>ED I:</strong> often Nov 1 (mid‑Oct–Nov 15); decisions mid‑Dec; binding</li>
+              <li><strong>EA:</strong> often Nov 1 (mid‑Oct–Nov 15); decisions mid‑Dec–Jan; non‑binding; Restrictive EA similar</li>
+              <li><strong>ED II:</strong> Jan 1–15; decisions mid‑Feb; binding</li>
+              <li><strong>RD:</strong> Jan 1–15 (some Dec 15–Jan 31); decisions Mar–Apr</li>
+              <li><strong>Reply by:</strong> May 1 at most colleges</li>
+            </ul>
+          </div>
+        </Milestone>
 
-        <article id="grade-12" className="card">
-          <h2>1 Year Out (Grade 12)</h2>
-          <ul>
-            <li><strong>Applications:</strong> Finalize list, decide EA/ED/RD strategy; track deadlines.</li>
-            <li><strong>Essays:</strong> Personal statement + supplements; tailor to academic fit and campus resources.</li>
-            <li><strong>Recs:</strong> Ask teachers early; provide resume/activity log; waive FERPA where required.</li>
-            <li><strong>Financial Aid:</strong> File FAFSA (and CSS Profile if required); organize scholarship apps.</li>
-            <li><strong>Submit:</strong> Pay fees or use waivers; send test scores if needed; ensure transcripts are requested.</li>
-          </ul>
-          <h3 style={{ marginTop: 12 }}>Estimated Windows (typical)</h3>
-          <ul>
-            <li><strong>Early Decision I (ED I):</strong> deadline often Nov 1 (range mid‑Oct to Nov 15); decisions mid‑December; binding if admitted.</li>
-            <li><strong>Early Action (EA):</strong> deadline often Nov 1 (range mid‑Oct to Nov 15); decisions mid‑Dec to Jan; non‑binding. Restrictive EA follows similar dates with limitations.</li>
-            <li><strong>Early Decision II (ED II):</strong> deadline often Jan 1–15; decisions mid‑February; binding.</li>
-            <li><strong>Regular Decision (RD):</strong> deadlines typically Jan 1–15 (some Dec 15–Jan 31); decisions March–April.</li>
-            <li><strong>Response Deadline:</strong> most colleges require an enrollment decision by May 1 (check each college; occasionally later).</li>
-          </ul>
-        </article>
-
-        <article id="platforms" className="card" style={{ background: "#ecfeff" }}>
-          <h2>Platforms: Common App & Coalition</h2>
-          <ul style={{ color: "#0f766e" }}>
-            <li><strong>Accounts (Summer before Grade 12):</strong> Create accounts on <a href="https://www.commonapp.org/" target="_blank" rel="noreferrer">Common App</a> and <a href="https://www.coalitionforcollegeaccess.org/" target="_blank" rel="noreferrer">Coalition</a>; previous year data can roll over on Common App.</li>
-            <li><strong>Profile & Family Info:</strong> Fill demographics, schooling history, coursework, activities, and honors once per platform.</li>
-            <li><strong>College Lists:</strong> Add colleges on each platform; note some schools are platform‑specific or support both.</li>
-            <li><strong>Recommenders & FERPA:</strong> Complete FERPA release; invite counselor and teachers within the platform; align with Naviance/Scoir if your school uses it.</li>
-            <li><strong>Essays:</strong> Common App personal statement prompts are shared across colleges on that platform; Coalition uses its own essay set or college‑specific questions.</li>
-            <li><strong>Supplements:</strong> Many colleges add extra questions/essays per platform (majors, short answers, portfolios).</li>
-            <li><strong>Fee Waivers:</strong> Request via platform eligibility or counselor approval; some colleges provide codes.</li>
-            <li><strong>Deadlines & Rounds:</strong> Track ED/EA/RD per college within each platform; requirements can differ slightly between platforms.</li>
-            <li><strong>After Submit:</strong> Monitor portals for checklists; link test scores and financial aid forms.</li>
-          </ul>
-        </article>
+        <Milestone id="platforms" title="Platforms: Common App & Coalition" summary="Accounts, recommenders, essays, supplements, waivers">
+          <Checklist items={[
+            "Create accounts (summer before Grade 12); Common App rollover supported",
+            "Complete profile, schooling history, coursework, activities, honors",
+            "Add colleges; note platform‑specific requirements",
+            "Complete FERPA; invite counselor/teachers; align with Naviance/Scoir if used",
+            "Review essay prompts; many colleges add platform‑specific supplements",
+            "Request fee waivers if eligible; track rounds and deadlines in each platform",
+            "After submit: monitor college portals; link test scores and aid forms",
+          ]} />
+        </Milestone>
       </div>
 
       <div className="card" style={{ marginTop: 24 }}>
@@ -94,5 +79,37 @@ export default function AdmissionsTimeline() {
         </ul>
       </div>
     </section>
+  );
+}
+
+function Milestone({ id, title, summary, children }) {
+  return (
+    <div id={id} className="milestone">
+      <span className="dot" aria-hidden="true" />
+      <details open={id === 'grade-12'}>
+        <summary>
+          <div className="summary-row">
+            <span>{title}</span>
+            <span className="summary-sub">{summary}</span>
+          </div>
+        </summary>
+        <div style={{ marginTop: 10 }}>{children}</div>
+      </details>
+    </div>
+  );
+}
+
+function Checklist({ items = [] }) {
+  return (
+    <ul style={{ paddingLeft: 18, margin: 0 }}>
+      {items.map((text, i) => (
+        <li key={i} style={{ marginBottom: 6 }}>
+          <label style={{ display: 'inline-flex', alignItems: 'center', gap: 8 }}>
+            <input type="checkbox" />
+            <span>{text}</span>
+          </label>
+        </li>
+      ))}
+    </ul>
   );
 }

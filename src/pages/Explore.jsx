@@ -91,6 +91,9 @@ export default function Explore() {
   const [acceptanceBand, setAcceptanceBand] = useState("any");
   const [majorFamily, setMajorFamily] = useState("any");
   const [testPolicy, setTestPolicy] = useState("any");
+  const [specificMajor, setSpecificMajor] = useState("");
+  const [exactMajor, setExactMajor] = useState(false);
+  const [majorsById, setMajorsById] = useState({});
 
   useEffect(() => {
     async function load() {
@@ -131,6 +134,20 @@ export default function Explore() {
     load();
   }, []);
 
+  // Load majors by institution if available (generated via Scorecard script)
+  useEffect(() => {
+    let cancelled = false;
+    fetch("/data/majors_by_institution.json")
+      .then(r => (r.ok ? r.json() : null))
+      .then(json => {
+        if (!cancelled && json && typeof json === "object") setMajorsById(json);
+      })
+      .catch(() => {});
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
   const majorOptions = useMemo(() => {
     const set = new Set();
     rows.forEach(row => (row.major_families ?? []).forEach(f => set.add(f)));
@@ -142,6 +159,17 @@ export default function Explore() {
     const sorted = Array.from(set).sort((a, b) => TEST_POLICY_ORDER.indexOf(a) - TEST_POLICY_ORDER.indexOf(b));
     return ["any", ...sorted];
   }, [rows]);
+
+  const specificMajorOptions = useMemo(() => {
+    const set = new Set();
+    try {
+      for (const key of Object.keys(majorsById || {})) {
+        const arr = majorsById[key] || [];
+        for (const title of arr) if (title) set.add(title);
+      }
+    } catch {}
+    return Array.from(set).sort();
+  }, [majorsById]);
 
   const filtered = useMemo(() => {
     if (!rows.length) return [];
@@ -156,6 +184,7 @@ export default function Explore() {
       if (!passesAcceptance(row, acceptanceBand)) continue;
       if (!passesMajor(row, majorFamily)) continue;
       if (!passesTestPolicy(row, testPolicy)) continue;
+      if (!passesSpecificMajor(row, specificMajor, majorsById, exactMajor)) continue;
 
       if (hasQuery) {
         const sc = scoreRow(row, qTokens, qCompact);
@@ -239,6 +268,27 @@ export default function Explore() {
             onChange={setTestPolicy}
             options={testPolicyOptions.map(value => ({ value, label: value === "any" ? "Any policy" : value }))}
           />
+          <div style={{ display: "grid", gap: 6, fontSize: 14 }}>
+            <span style={{ fontWeight: 600 }}>Specific major</span>
+            <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
+              <input
+                value={specificMajor}
+                onChange={e => setSpecificMajor(e.target.value)}
+                list="major-suggestions"
+                placeholder="Type a major (e.g., Computer Science)"
+                style={{ flex: 1, padding: "10px 12px", borderRadius: 12, border: "1px solid var(--border)" }}
+              />
+              <label style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
+                <input type="checkbox" checked={exactMajor} onChange={e => setExactMajor(e.target.checked)} />
+                <span style={{ fontSize: 13 }}>Exact match</span>
+              </label>
+            </div>
+            <datalist id="major-suggestions">
+              {specificMajorOptions.slice(0, 400).map(title => (
+                <option key={title} value={title} />
+              ))}
+            </datalist>
+          </div>
         </div>
       </div>
 
@@ -324,6 +374,18 @@ function passesTestPolicy(row, policy) {
   if (policy === "any") return true;
   const value = row.test_policy || "Not reported";
   return value === policy;
+}
+
+function passesSpecificMajor(row, selected, majorsById = {}, exact = false) {
+  if (!selected || !selected.trim()) return true;
+  if (!majorsById || Object.keys(majorsById).length === 0) return true; // no majors data loaded yet
+  const arr = majorsById?.[row.unitid] || majorsById?.[String(row.unitid)] || [];
+  if (!Array.isArray(arr) || arr.length === 0) return false;
+  const target = normalize(selected);
+  return arr.some(title => {
+    const norm = normalize(title);
+    return exact ? norm === target : norm.includes(target);
+  });
 }
 
 function FilterSelect({ label, value, onChange, options }) {

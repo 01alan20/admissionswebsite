@@ -72,6 +72,8 @@ export default function Detail() {
   const [metricsBundle, setMetricsBundle] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [majors, setMajors] = useState([]);
+  const [showAllMajors, setShowAllMajors] = useState(false);
 
   useEffect(() => {
     let cancelled = false;
@@ -98,6 +100,27 @@ export default function Detail() {
       }
     }
     load();
+    return () => { cancelled = true; };
+  }, [unitid]);
+
+  // Load majors list for this institution from generated JSON
+  useEffect(() => {
+    let cancelled = false;
+    async function loadMajors() {
+      try {
+        const res = await fetch('/data/majors_by_institution.json');
+        if (!res.ok) return;
+        const json = await res.json();
+        if (!cancelled) {
+          const list = json?.[unitid] || json?.[String(unitid)] || [];
+          setMajors(Array.isArray(list) ? list : []);
+          setShowAllMajors(false);
+        }
+      } catch {
+        if (!cancelled) setMajors([]);
+      }
+    }
+    loadMajors();
     return () => { cancelled = true; };
   }, [unitid]);
 
@@ -257,6 +280,26 @@ export default function Detail() {
                 }
               ]}
             />
+
+            {Array.isArray(majors) && majors.length > 0 && (
+              <div className="card" style={{ marginTop: 16 }}>
+                <h3 style={{ marginTop: 0 }}>Undergraduate majors</h3>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
+                  {(showAllMajors ? majors : majors.slice(0, 24)).map(title => (
+                    <span key={`major-${title}`} className="badge">{title}</span>
+                  ))}
+                </div>
+                {majors.length > 24 && (
+                  <button
+                    className="btn-outline"
+                    style={{ marginTop: 12 }}
+                    onClick={() => setShowAllMajors(v => !v)}
+                  >
+                    {showAllMajors ? 'Show fewer' : `Show all ${majors.length}`}
+                  </button>
+                )}
+              </div>
+            )}
 
             <ScoreSection
               title="ACT"
