@@ -91,8 +91,7 @@ export default function Explore() {
   const [acceptanceBand, setAcceptanceBand] = useState("any");
   const [majorFamily, setMajorFamily] = useState("any");
   const [testPolicy, setTestPolicy] = useState("any");
-  const [specificMajor, setSpecificMajor] = useState("");
-  const [exactMajor, setExactMajor] = useState(false);
+  const [specificMajor, setSpecificMajor] = useState("any");
   const [majorsById, setMajorsById] = useState({});
 
   useEffect(() => {
@@ -184,7 +183,7 @@ export default function Explore() {
       if (!passesAcceptance(row, acceptanceBand)) continue;
       if (!passesMajor(row, majorFamily)) continue;
       if (!passesTestPolicy(row, testPolicy)) continue;
-      if (!passesSpecificMajor(row, specificMajor, majorsById, exactMajor)) continue;
+      if (!passesSpecificMajor(row, specificMajor, majorsById)) continue;
 
       if (hasQuery) {
         const sc = scoreRow(row, qTokens, qCompact);
@@ -263,32 +262,11 @@ export default function Explore() {
             options={majorOptions.map(value => ({ value, label: value === "any" ? "Any major" : value }))}
           />
           <FilterSelect
-            label="Test policy"
-            value={testPolicy}
-            onChange={setTestPolicy}
-            options={testPolicyOptions.map(value => ({ value, label: value === "any" ? "Any policy" : value }))}
+            label="Specific major"
+            value={specificMajor}
+            onChange={setSpecificMajor}
+            options={[{ value: "any", label: "Any specific major" }, ...specificMajorOptions.map(title => ({ value: title, label: title }))]}
           />
-          <div style={{ display: "grid", gap: 6, fontSize: 14 }}>
-            <span style={{ fontWeight: 600 }}>Specific major</span>
-            <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
-              <input
-                value={specificMajor}
-                onChange={e => setSpecificMajor(e.target.value)}
-                list="major-suggestions"
-                placeholder="Type a major (e.g., Computer Science)"
-                style={{ flex: 1, padding: "10px 12px", borderRadius: 12, border: "1px solid var(--border)" }}
-              />
-              <label style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
-                <input type="checkbox" checked={exactMajor} onChange={e => setExactMajor(e.target.checked)} />
-                <span style={{ fontSize: 13 }}>Exact match</span>
-              </label>
-            </div>
-            <datalist id="major-suggestions">
-              {specificMajorOptions.slice(0, 400).map(title => (
-                <option key={title} value={title} />
-              ))}
-            </datalist>
-          </div>
         </div>
       </div>
 
@@ -376,16 +354,13 @@ function passesTestPolicy(row, policy) {
   return value === policy;
 }
 
-function passesSpecificMajor(row, selected, majorsById = {}, exact = false) {
-  if (!selected || !selected.trim()) return true;
+function passesSpecificMajor(row, selected, majorsById = {}) {
+  if (!selected || selected === "any" || !selected.trim()) return true;
   if (!majorsById || Object.keys(majorsById).length === 0) return true; // no majors data loaded yet
   const arr = majorsById?.[row.unitid] || majorsById?.[String(row.unitid)] || [];
   if (!Array.isArray(arr) || arr.length === 0) return false;
   const target = normalize(selected);
-  return arr.some(title => {
-    const norm = normalize(title);
-    return exact ? norm === target : norm.includes(target);
-  });
+  return arr.some(title => normalize(title) === target);
 }
 
 function FilterSelect({ label, value, onChange, options }) {
