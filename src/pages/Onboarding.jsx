@@ -140,7 +140,7 @@ export default function Onboarding() {
 
         {step === 2 && (
           <div style={{ display: "grid", gap: 12 }}>
-            <MultiSelect
+            <AutoSuggestMultiSelect
               label="Intended majors (up to 5)"
               placeholder="Type to search majors, then press Enter"
               values={prefs.majors}
@@ -150,7 +150,7 @@ export default function Onboarding() {
               datalistId="majors-suggest"
             />
 
-            <MultiSelect
+            <AutoSuggestMultiSelect
               label="Target states (up to 5)"
               placeholder="Type to search states, then press Enter"
               values={prefs.states}
@@ -260,6 +260,86 @@ function MultiSelect({ label, values, setValues, options, max = 5, datalistId, p
         {opts.slice(0, 500).map(o => <option key={o} value={o} />)}
       </datalist>
       <span className="sub" style={{ fontSize: 12 }}>{values.length}/{max} selected</span>
+    </div>
+  );
+}
+
+// Suggest-as-you-type multi-select with dropdown and Enter add
+function AutoSuggestMultiSelect({ label, values, setValues, options, max = 5, datalistId, placeholder }) {
+  const [input, setInput] = useState("");
+  const [active, setActive] = useState(-1);
+  const [open, setOpen] = useState(false);
+  const norm = (s = "") => s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
+  const opts = options || [];
+
+  const filtered = useMemo(() => {
+    const q = norm(input);
+    if (!q) return [];
+    return opts.filter(o => norm(o).includes(q)).slice(0, 12);
+  }, [input, opts]);
+
+  function add(val) {
+    if (!val) return;
+    const exact = opts.find(o => norm(o) === norm(val));
+    const picked = exact || filtered[0];
+    if (!picked) return; // no-op if it doesn't match
+    if (values.includes(picked)) return;
+    if (values.length >= max) return;
+    setValues([...(values || []), picked]);
+    setInput("");
+    setActive(-1);
+    setOpen(false);
+  }
+
+  function onKey(e) {
+    if (e.key === 'ArrowDown') { e.preventDefault(); setOpen(true); setActive(a => Math.min((a < 0 ? 0 : a + 1), filtered.length - 1)); return; }
+    if (e.key === 'ArrowUp') { e.preventDefault(); setActive(a => Math.max(a - 1, 0)); return; }
+    if (e.key === 'Enter' || e.key === ',') { e.preventDefault(); if (active >= 0 && filtered[active]) add(filtered[active]); else add(input); return; }
+    if (e.key === 'Escape') { setOpen(false); setActive(-1); }
+  }
+
+  function remove(item) { setValues((values || []).filter(v => v !== item)); }
+
+  return (
+    <div style={{ display: 'grid', gap: 6 }}>
+      <span style={{ fontWeight: 600 }}>{label}</span>
+      <div className="card" style={{ display: 'flex', flexWrap: 'wrap', gap: 8, padding: 10 }}>
+        {(values || []).map(v => (
+          <span key={v} className="badge" style={{ display:'inline-flex', alignItems:'center', gap:6 }}>
+            {v}
+            <button type="button" onClick={() => remove(v)} style={{ border:'none', background:'transparent', cursor:'pointer' }}>×</button>
+          </span>
+        ))}
+        {(values || []).length < max && (
+          <div style={{ position: 'relative', flex: 1, minWidth: 220 }}>
+            <input
+              value={input}
+              onFocus={() => setOpen(true)}
+              onChange={e => { setInput(e.target.value); setOpen(true); setActive(-1); }}
+              onKeyDown={onKey}
+              placeholder={placeholder}
+              style={{ width:'100%', border: '1px solid var(--border)', borderRadius: 8, padding: '8px 10px' }}
+            />
+            {open && filtered.length > 0 && (
+              <div className="suggest" role="listbox">
+                {filtered.map((o, i) => (
+                  <div
+                    key={o}
+                    className={`row ${i === active ? 'active' : ''}`}
+                    onMouseDown={e => { e.preventDefault(); add(o); }}
+                    onMouseEnter={() => setActive(i)}
+                    role="option"
+                    aria-selected={i === active}
+                  >
+                    <span className="name">{o}</span>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+      <span className="sub" style={{ fontSize: 12 }}>{(values || []).length}/{max} selected</span>
     </div>
   );
 }
