@@ -143,7 +143,7 @@ export default function Explore() {
     if (qp.accept) setAcceptanceBand(qp.accept);
     if (qp.family) setMajorFamily(qp.family);
     if (qp.test) setTestPolicy(qp.test);
-    if (qp.major) setSpecificMajor(qp.major);
+    if (qp.major) { setSpecificMajors(qp.major.split("|").filter(Boolean)); }
     if (qp.sort) setSortBy(qp.sort);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -198,7 +198,7 @@ export default function Explore() {
       if (!passesAcceptance(row, acceptanceBand)) continue;
       if (!passesMajor(row, majorFamily)) continue;
       if (!passesTestPolicy(row, testPolicy)) continue;
-      if (!passesSpecificMajor(row, specificMajor, majorsById)) continue;
+      if (!passesSpecificMajors(row, specificMajors, majorsById)) continue;
 
       if (hasQuery) {
         const sc = scoreRow(row, qTokens, qCompact);
@@ -439,3 +439,76 @@ function FilterSelect({ label, value, onChange, options }) {
   );
 }
 
+
+
+
+
+
+
+
+
+function passesSpecificMajors(row, selectedList = [], majorsById = {}) {
+  if (!Array.isArray(selectedList) || selectedList.length === 0) return true;
+  const arr = majorsById?.[row.unitid] || majorsById?.[String(row.unitid)] || [];
+  if (!Array.isArray(arr) || arr.length === 0) return false;
+  const norm = s => (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').trim();
+  const titles = new Set(arr.map(t => norm(String(t).replace(/\.$/, ''))));
+  return selectedList.some(sel => titles.has(norm(sel)));
+}
+
+function AutoSuggestMulti({ label, values, setValues, options, max = 6, placeholder }) {
+  const [input, setInput] = useState('');
+  const [active, setActive] = useState(-1);
+  const [open, setOpen] = useState(false);
+  const norm = s => (s||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/\s+/g,' ').trim();
+  const opts = options || [];
+  const filtered = useMemo(() => {
+    const q = norm(input);
+    if (!q) return [];
+    return opts.filter(o => norm(o).includes(q)).slice(0, 12);
+  }, [input, opts]);
+  function add(val){
+    if (!val) return;
+    const exact = opts.find(o => norm(o) === norm(val));
+    const picked = exact || filtered[0];
+    if (!picked) return;
+    if (values.includes(picked)) return;
+    if (values.length >= max) return;
+    setValues([...values, picked]);
+    setInput(''); setActive(-1); setOpen(false);
+  }
+  function remove(item){ setValues(values.filter(v => v !== item)); }
+  function onKey(e){
+    if (e.key==='ArrowDown'){e.preventDefault(); setOpen(true); setActive(a=>Math.min((a<0?0:a+1), filtered.length-1));}
+    else if (e.key==='ArrowUp'){e.preventDefault(); setActive(a=>Math.max(a-1,0));}
+    else if (e.key==='Enter' || e.key===','){e.preventDefault(); if (active>=0 && filtered[active]) add(filtered[active]); else add(input);} 
+    else if (e.key==='Escape'){ setOpen(false); setActive(-1);} 
+  }
+  return (
+    <label style={{ display:'grid', gap:6, fontSize:14 }}>
+      <span style={{ fontWeight:600 }}>{label}</span>
+      <div className='card' style={{ display:'flex', flexWrap:'wrap', gap:8, padding:10 }}>
+        {values.map(v => (
+          <span key={v} className='badge' style={{ display:'inline-flex', alignItems:'center', gap:6 }}>
+            {v}
+            <button type='button' onClick={() => remove(v)} style={{ border:'none', background:'transparent', cursor:'pointer' }}>×</button>
+          </span>
+        ))}
+        {values.length < max && (
+          <div style={{ position:'relative', flex:1, minWidth:220 }}>
+            <input value={input} onFocus={()=>setOpen(true)} onChange={e=>{setInput(e.target.value); setOpen(true); setActive(-1);}} onKeyDown={onKey} placeholder={placeholder} style={{ width:'100%', border:'1px solid var(--border)', borderRadius:8, padding:'8px 10px' }}/>
+            {open && filtered.length>0 && (
+              <div className='suggest' role='listbox'>
+                {filtered.map((o,i)=>(
+                  <div key={o} className={ow } onMouseDown={e=>{e.preventDefault(); add(o);}} onMouseEnter={()=>setActive(i)} role='option' aria-selected={i===active}>
+                    <span className='name'>{o}</span>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+    </label>
+  );
+}
