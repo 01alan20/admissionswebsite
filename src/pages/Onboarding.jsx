@@ -209,11 +209,11 @@ function MultiSelect({ label, values, setValues, options, max = 5, datalistId, p
   const norm = (s="") => s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
   const opts = options || [];
 
-  function add(val) {
+  function add(val, strict = true) {
     if (!val) return;
-    // Prefer exact match; fallback to first includes
+    // Only accept exact match when strict
     const exact = opts.find(o => norm(o) === norm(val));
-    const picked = exact || opts.find(o => norm(o).includes(norm(val)));
+    const picked = strict ? exact : (exact || opts.find(o => norm(o).includes(norm(val))));
     if (!picked) return;
     if (values.includes(picked)) return;
     if (values.length >= max) return;
@@ -222,7 +222,7 @@ function MultiSelect({ label, values, setValues, options, max = 5, datalistId, p
   }
 
   function onKey(e) {
-    if (e.key === 'Enter' || e.key === ',') { e.preventDefault(); add(input); }
+    if (e.key === 'Enter' || e.key === ',') { e.preventDefault(); add(input, true); }
   }
 
   function remove(item) {
@@ -243,7 +243,13 @@ function MultiSelect({ label, values, setValues, options, max = 5, datalistId, p
           <input
             list={datalistId}
             value={input}
-            onChange={e => setInput(e.target.value)}
+            onChange={e => {
+              const v = e.target.value;
+              setInput(v);
+              // If user picked from dropdown (exact), auto-confirm
+              const exact = opts.find(o => norm(o) === norm(v));
+              if (exact) add(v, true);
+            }}
             onKeyDown={onKey}
             placeholder={placeholder}
             style={{ flex: 1, minWidth: 220, border: '1px solid var(--border)', borderRadius: 8, padding: '8px 10px' }}
