@@ -25,3 +25,8 @@ dist-ssr
 
 # Local Netlify folder
 .netlify
+
+# Local content not to commit
+assessment scores - guide.docx
+.env
+.env.*
