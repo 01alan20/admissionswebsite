@@ -177,11 +177,11 @@ export default function Explore() {
     const qCompact = hasQuery ? normalize(query).replace(/\s+/g, "") : "";
 
     for (const row of rows) {
-      if (!passesBudgetMulti(row, budgets)) continue;
-      if (!passesAcceptanceMulti(row, acceptanceBands)) continue;
-      if (!passesMajorMulti(row, majorFamilies)) continue;
-      if (!passesTestPolicyMulti(row, testPolicies)) continue;
-      if (!passesSpecificMajors(row, specificMajors, majorsById)) continue;
+      if (!passesBudget(row, budget)) continue;
+      if (!passesAcceptance(row, acceptanceBand)) continue;
+      if (!passesMajor(row, majorFamily)) continue;
+      if (!passesTestPolicy(row, testPolicy)) continue;
+      if (!passesSpecificMajor(row, specificMajor, majorsById, exactMajor)) continue;
 
       if (hasQuery) {
         const sc = scoreRow(row, qTokens, qCompact);
@@ -204,7 +204,7 @@ export default function Explore() {
 
     const limit = hasQuery ? 60 : 10;
     return sorted.slice(0, limit).map(item => item.row);
-  }, [rows, query, budgets, acceptanceBands, majorFamilies, testPolicies, specificMajors, majorsById]);
+  }, [rows, query, budget, acceptanceBand, majorFamily, testPolicy]);
 
   return (
     <section>
@@ -451,3 +451,4 @@ function FilterDropdownSearchMulti({ label, values = [], onChange, options = [] 
     </label>
   );
 }
+
