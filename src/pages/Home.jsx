@@ -12,7 +12,6 @@ export default function Home() {
         }}
       >
         <div className="page-intro">
-          <div className="kicker">Undergraduate admissions - United States</div>
           <h1 className="h1">
             <span className="gradient-text">Find your US fit, understand costs, plan your visa.</span>
           </h1>

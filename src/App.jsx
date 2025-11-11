@@ -9,7 +9,7 @@ import ErrorBoundary from "./components/ErrorBoundary.jsx";
 import "./styles/modern.css";
 
 const Detail = lazy(() => import("./pages/Detail.jsx"));
-const ProfileReview = lazy(() => import("./pages/ProfileReview.jsx"));
+import ProfileReview from "./pages/ProfileReview.jsx";
 
 export default function App() {
   return (

@@ -505,6 +505,42 @@ function FilterDropdownMulti({ label, values = [], onChange, options = [] }) {
           </div>
         )}
       </div>
+
+      {(budgets.length || acceptanceBands.length || majorFamilies.length || testPolicies.length || specificMajors.length) > 0 && (
+        <div style={{ marginTop: 8, display: "flex", gap: 8, flexWrap: "wrap" }}>
+          {budgets.map(v => {
+            const opt = BUDGET_OPTIONS.find(o => (o.value ?? o) === v);
+            return (
+              <button key={`b-${v}`} type="button" onClick={() => setBudgets(budgets.filter(x => x !== v))} className="badge" style={{ cursor: "pointer" }}>
+                {(opt?.label ?? v)} ✕
+              </button>
+            );
+          })}
+          {acceptanceBands.map(v => {
+            const opt = ACCEPTANCE_OPTIONS.find(o => (o.value ?? o) === v);
+            return (
+              <button key={`a-${v}`} type="button" onClick={() => setAcceptanceBands(acceptanceBands.filter(x => x !== v))} className="badge" style={{ cursor: "pointer" }}>
+                {(opt?.label ?? v)} ✕
+              </button>
+            );
+          })}
+          {majorFamilies.map(v => (
+            <button key={`m-${v}`} type="button" onClick={() => setMajorFamilies(majorFamilies.filter(x => x !== v))} className="badge" style={{ cursor: "pointer" }}>
+              {v} ✕
+            </button>
+          ))}
+          {testPolicies.map(v => (
+            <button key={`t-${v}`} type="button" onClick={() => setTestPolicies(testPolicies.filter(x => x !== v))} className="badge" style={{ cursor: "pointer" }}>
+              {v} ✕
+            </button>
+          ))}
+          {specificMajors.map(v => (
+            <button key={`s-${v}`} type="button" onClick={() => handleSpecificMajorRemove(v)} className="badge" style={{ cursor: "pointer" }}>
+              {v} ✕
+            </button>
+          ))}
+        </div>
+      )}
     </label>
   );
 }
