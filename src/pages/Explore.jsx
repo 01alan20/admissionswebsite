@@ -439,6 +439,11 @@ function FilterDropdownSearchMulti({ label, values = [], onChange, options = [] 
                   <span>{title}</span>
                 </label>
               );})}
+              {q && !values.includes(q) && !filtered.includes(q) && (
+                <button type="button" onClick={() => toggle(q)} style={{ textAlign: "left", padding: "8px 10px", border: "1px solid var(--border)", borderRadius: 8, background: "#f8f9fc", cursor: "pointer" }}>
+                  Add "{q}"
+                </button>
+              )}
             </div>
             {values.length>0 && (
               <div style={{ display: "flex", justifyContent: "flex-end", marginTop: 8 }}>
