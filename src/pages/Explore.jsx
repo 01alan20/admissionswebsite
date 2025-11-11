@@ -81,6 +81,7 @@ const ACCEPTANCE_OPTIONS = [
 ];
 
 const TEST_POLICY_ORDER = ["Test optional", "Test flexible", "Required", "Not reported"];
+const MAX_SPECIFIC_MAJORS = 5;
 
 export default function Explore() {
   const [query, setQuery] = useState("");
