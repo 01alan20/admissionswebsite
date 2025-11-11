@@ -22,7 +22,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div style={{ maxWidth: "min(1040px, 100%)" }}>
+        <div style={{ maxWidth: "100%" }}>
           <SearchBox />
         </div>
       </section>
