@@ -8,8 +8,10 @@ import AdmissionsTimeline from "./pages/AdmissionsTimeline.jsx";
 import ErrorBoundary from "./components/ErrorBoundary.jsx";
 import "./styles/modern.css";
 
+// Keep Detail lazy, but import ProfileReview statically to avoid dev server
+// dynamic import fetch issues some users reported locally.
 const Detail = lazy(() => import("./pages/Detail.jsx"));
-const ProfileReview = lazy(() => import("./pages/ProfileReview.jsx"));
+import ProfileReview from "./pages/ProfileReview.jsx";
 
 export default function App() {
   return (
