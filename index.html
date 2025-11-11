@@ -3,12 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>USA Admissions</title>
+    <title>SeeThroughAdmissions</title>
     <script defer src="https://cloud.umami.is/script.js" data-website-id="666649c2-3c3a-4833-b30d-0d89d18be5cc"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'brand-primary': '#003366',
+              'brand-secondary': '#007A87',
+              'brand-accent': '#F2A900',
+              'brand-light': '#F0F4F8',
+              'brand-dark': '#0A2240',
+            },
+          }
+        }
+      }
+    </script>
   </head>
-  <body>
+  <body class="bg-brand-light">
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <script type="module" src="/geminibuild/index.tsx"></script>
     <!-- Hidden form so Netlify detects & provisions it at deploy
     <form name="profile-review" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
       <input type="text" name="name" />
