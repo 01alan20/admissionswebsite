@@ -31,11 +31,7 @@ jobs:
         run: npm ci
 
       - name: Build
-        # For project pages, assets must be served from /<repo>/
-        # Vite's --base flag overrides vite.config.js
-        run: |
-          REPO_NAME="${GITHUB_REPOSITORY##*/}"
-          npm run build -- --base="/${REPO_NAME}/"
+        run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

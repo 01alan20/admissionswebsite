@@ -187,12 +187,34 @@ const ExplorePage: React.FC = () => {
     setMajorQuery('');
   };
 
-  // State dropdown helpers
+  // State dropdown helpers (match by full state name)
+  const STATE_NAMES: Record<string, string> = {
+    AL: 'Alabama', AK: 'Alaska', AZ: 'Arizona', AR: 'Arkansas', CA: 'California', CO: 'Colorado', CT: 'Connecticut',
+    DE: 'Delaware', FL: 'Florida', GA: 'Georgia', HI: 'Hawaii', ID: 'Idaho', IL: 'Illinois', IN: 'Indiana', IA: 'Iowa',
+    KS: 'Kansas', KY: 'Kentucky', LA: 'Louisiana', ME: 'Maine', MD: 'Maryland', MA: 'Massachusetts', MI: 'Michigan',
+    MN: 'Minnesota', MS: 'Mississippi', MO: 'Missouri', MT: 'Montana', NE: 'Nebraska', NV: 'Nevada', NH: 'New Hampshire',
+    NJ: 'New Jersey', NM: 'New Mexico', NY: 'New York', NC: 'North Carolina', ND: 'North Dakota', OH: 'Ohio',
+    OK: 'Oklahoma', OR: 'Oregon', PA: 'Pennsylvania', RI: 'Rhode Island', SC: 'South Carolina', SD: 'South Dakota',
+    TN: 'Tennessee', TX: 'Texas', UT: 'Utah', VT: 'Vermont', VA: 'Virginia', WA: 'Washington', WV: 'West Virginia',
+    WI: 'Wisconsin', WY: 'Wyoming', DC: 'District of Columbia', PR: 'Puerto Rico', GU: 'Guam', AS: 'American Samoa',
+    MP: 'Northern Mariana Islands', VI: 'U.S. Virgin Islands'
+  };
+
+  function toFullStateName(value?: string | null): string {
+    if (!value) return '';
+    const v = value.trim();
+    if (!v) return '';
+    if (v.length === 2) {
+      return STATE_NAMES[v.toUpperCase()] || v;
+    }
+    return v;
+  }
+
   const allStates = useMemo(() => {
     const set = new Set<string>();
     for (const i of index) {
-      const st = (i.state || '').toString().trim();
-      if (st) set.add(st);
+      const full = toFullStateName(i.state);
+      if (full) set.add(full);
     }
     return Array.from(set).sort((a, b) => a.localeCompare(b));
   }, [index]);
@@ -276,7 +298,7 @@ const ExplorePage: React.FC = () => {
           </details>
 
           <details className="border rounded-md">
-            <summary className="cursor-pointer px-3 py-2 font-semibold">State</summary>
+            <summary className="cursor-pointer px-3 py-2 font-semibold">State (full name)</summary>
             <div className="px-3 py-2 space-y-2">
               <input
                 type="search"
@@ -442,7 +464,10 @@ function filterInstitutions(
 
   if (selectedStates.length > 0) {
     const set = new Set(selectedStates.map((s) => s.toLowerCase()));
-    results = results.filter((inst) => set.has((inst.state || '').toString().toLowerCase()));
+    results = results.filter((inst) => {
+      const full = toFullStateName(inst.state).toLowerCase();
+      return set.has(full);
+    });
   }
 
   return results;
