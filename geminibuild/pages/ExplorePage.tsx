@@ -1,11 +1,13 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
-import { Institution } from '../types';
+import { Institution, InstitutionMajorsByInstitution, MajorsMeta } from '../types';
 import {
   getInstitutionIndex,
   getTopUnitIdsByApplicants,
   getInstitutionsSummariesByIds,
   getAllInstitutions,
+  getMajorsMeta,
+  getMajorsByInstitution,
   InstitutionIndex,
 } from '../data/api';
 
@@ -18,13 +20,26 @@ const InstitutionCard: React.FC<{ institution: Institution }> = ({ institution }
         <p className="text-gray-600 mb-4">{institution.city}, {institution.state}</p>
         <div className="flex flex-wrap gap-2 mb-4 text-sm">
           <span className="bg-brand-light text-brand-dark px-2 py-1 rounded-full">{institution.control}</span>
-          {institution.acceptance_rate != null && <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full">{(institution.acceptance_rate * 100).toFixed(0)}% Acceptance</span>}
-          {tuition != null && <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full">${tuition.toLocaleString()}/yr</span>}
+          {institution.acceptance_rate != null && (
+            <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full">
+              {(institution.acceptance_rate * 100).toFixed(0)}% Acceptance
+            </span>
+          )}
+          {tuition != null && (
+            <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full">
+              ${tuition.toLocaleString()}/yr
+            </span>
+          )}
         </div>
-        <p className="text-gray-700 text-sm line-clamp-2">Test Policy: {institution.test_policy}</p>
+        <p className="text-gray-700 text-sm line-clamp-2">
+          Test Policy: {formatTestPolicy(institution.test_policy)}
+        </p>
       </div>
       <div className="p-4 bg-gray-50">
-        <Link to={`/institution/${institution.unitid}`} className="w-full text-center block bg-brand-secondary text-white font-semibold py-2 px-4 rounded-lg hover:bg-brand-primary transition-colors">
+        <Link
+          to={`/institution/${institution.unitid}`}
+          className="w-full text-center block bg-brand-secondary text-white font-semibold py-2 px-4 rounded-lg hover:bg-brand-primary transition-colors"
+        >
           View Details
         </Link>
       </div>
@@ -47,10 +62,12 @@ const ExplorePage: React.FC = () => {
   // Filters (dropdowns)
   const [budget, setBudget] = useState<string[]>([]); // tuition buckets, e.g. "0-10000", "70000+"
   const [selectivity, setSelectivity] = useState<string[]>([]); // selective, reach, target, balanced, safety, supersafe
-  const [testPolicy, setTestPolicy] = useState<string[]>([]); // optional, required
+  const [testPolicy, setTestPolicy] = useState<string[]>([]); // optional, required, notconsidered
   const [majorQuery, setMajorQuery] = useState<string>('');
-  const [selectedMajors, setSelectedMajors] = useState<string[]>([]);
+  const [selectedMajors, setSelectedMajors] = useState<string[]>([]); // CIP 4-digit codes
   const [allInstitutions, setAllInstitutions] = useState<Institution[] | null>(null);
+  const [majorsMeta, setMajorsMeta] = useState<MajorsMeta | null>(null);
+  const [majorsByInstitution, setMajorsByInstitution] = useState<InstitutionMajorsByInstitution | null>(null);
   // State filter
   const [stateQuery, setStateQuery] = useState<string>('');
   const [selectedStates, setSelectedStates] = useState<string[]>([]);
@@ -79,7 +96,12 @@ const ExplorePage: React.FC = () => {
     const run = async () => {
       const q = query.trim().toLowerCase();
       const hasQuery = q.length >= 3;
-      const hasFilter = budget.length > 0 || selectivity.length > 0 || testPolicy.length > 0 || selectedMajors.length > 0 || selectedStates.length > 0;
+      const hasFilter =
+        budget.length > 0 ||
+        selectivity.length > 0 ||
+        testPolicy.length > 0 ||
+        selectedMajors.length > 0 ||
+        selectedStates.length > 0;
 
       if (!hasQuery && !hasFilter) {
         setFilteredUnitIds(defaultUnitIds);
@@ -102,7 +124,15 @@ const ExplorePage: React.FC = () => {
       if (hasFilter) {
         const all = allInstitutions || await getAllInstitutions();
         if (!allInstitutions) setAllInstitutions(all);
-        filterUnitIds = filterInstitutions(all, budget, selectivity, testPolicy, selectedMajors, selectedStates).map((i) => i.unitid);
+        filterUnitIds = filterInstitutions(
+          all,
+          budget,
+          selectivity,
+          testPolicy,
+          selectedMajors,
+          selectedStates,
+          majorsByInstitution,
+        ).map((i) => i.unitid);
       }
 
       let ids: number[];
@@ -116,11 +146,23 @@ const ExplorePage: React.FC = () => {
       } else {
         ids = defaultUnitIds;
       }
+
       setFilteredUnitIds(ids);
       setPage(1);
     };
     run();
-  }, [query, budget, selectivity, testPolicy, selectedMajors, selectedStates, index, defaultUnitIds, allInstitutions]);
+  }, [
+    query,
+    budget,
+    selectivity,
+    testPolicy,
+    selectedMajors,
+    selectedStates,
+    index,
+    defaultUnitIds,
+    allInstitutions,
+    majorsByInstitution,
+  ]);
 
   // Update URL params as user types
   useEffect(() => {
@@ -136,7 +178,6 @@ const ExplorePage: React.FC = () => {
   // Load current page worth of institutions with request guard
   useEffect(() => {
     let cancelled = false;
-    const requestId = Math.random().toString(36).slice(2);
     (async () => {
       setLoading(true);
       try {
@@ -153,7 +194,9 @@ const ExplorePage: React.FC = () => {
         if (!cancelled) setLoading(false);
       }
     })();
-    return () => { cancelled = true; };
+    return () => {
+      cancelled = true;
+    };
   }, [filteredUnitIds, page]);
 
   const prevPage = () => setPage((p) => Math.max(1, p - 1));
@@ -167,23 +210,33 @@ const ExplorePage: React.FC = () => {
   const handleSelectivityChange = (value: string) => setSelectivity((s) => toggleFromList(s, value));
   const handleTestPolicyChange = (value: string) => setTestPolicy((t) => toggleFromList(t, value));
 
-  const allMajors = useMemo(() => {
-    if (!allInstitutions) return [] as string[];
-    const set = new Set<string>();
-    for (const i of allInstitutions) {
-      (i.major_families || []).forEach((m) => set.add(m));
-    }
-    return Array.from(set).sort();
-  }, [allInstitutions]);
+  type CipMajorOption = { code: string; title: string; label: string };
 
-  const majorSuggestions = useMemo(() => {
+  const allMajors = useMemo<CipMajorOption[]>(() => {
+    if (!majorsMeta) return [];
+    const entries = Object.entries(majorsMeta.four_digit || {});
+    return entries
+      .map(([code, rawTitle]) => {
+        const title = cleanCipTitle(rawTitle);
+        return {
+          code,
+          title,
+          label: title,
+        };
+      })
+      .sort((a, b) => a.title.localeCompare(b.title) || a.code.localeCompare(b.code));
+  }, [majorsMeta]);
+
+  const majorSuggestions = useMemo<CipMajorOption[]>(() => {
     const q = majorQuery.trim().toLowerCase();
-    if (!q || q.length < 2) return [] as string[];
-    return allMajors.filter((m) => m.toLowerCase().includes(q)).slice(0, 10);
+    if (!q || q.length < 2) return [];
+    return allMajors
+      .filter((m) => m.title.toLowerCase().includes(q) || m.code.toLowerCase().includes(q))
+      .slice(0, 10);
   }, [majorQuery, allMajors]);
 
-  const addMajor = (m: string) => {
-    if (!selectedMajors.includes(m)) setSelectedMajors((prev) => [...prev, m]);
+  const addMajor = (m: CipMajorOption) => {
+    if (!selectedMajors.includes(m.code)) setSelectedMajors((prev) => [...prev, m.code]);
     setMajorQuery('');
   };
 
@@ -197,7 +250,7 @@ const ExplorePage: React.FC = () => {
     OK: 'Oklahoma', OR: 'Oregon', PA: 'Pennsylvania', RI: 'Rhode Island', SC: 'South Carolina', SD: 'South Dakota',
     TN: 'Tennessee', TX: 'Texas', UT: 'Utah', VT: 'Vermont', VA: 'Virginia', WA: 'Washington', WV: 'West Virginia',
     WI: 'Wisconsin', WY: 'Wyoming', DC: 'District of Columbia', PR: 'Puerto Rico', GU: 'Guam', AS: 'American Samoa',
-    MP: 'Northern Mariana Islands', VI: 'U.S. Virgin Islands'
+    MP: 'Northern Mariana Islands', VI: 'U.S. Virgin Islands',
   };
 
   function toFullStateName(value?: string | null): string {
@@ -234,11 +287,11 @@ const ExplorePage: React.FC = () => {
     <div className="flex flex-col md:flex-row gap-6">
       <aside className="w-full md:w-72">
         <div className="bg-white p-4 rounded-lg shadow-md sticky top-24 space-y-4">
-          <form onSubmit={(e) => e.preventDefault()} className="">
+          <form onSubmit={(e) => e.preventDefault()}>
             <input
               type="search"
               value={query}
-              onChange={(e) => { setQuery(e.target.value); }}
+              onChange={(e) => setQuery(e.target.value)}
               placeholder="Type at least 3 letters to search..."
               className="w-full p-3 border border-gray-300 rounded-md focus:ring-brand-secondary focus:border-brand-secondary"
             />
@@ -260,8 +313,12 @@ const ExplorePage: React.FC = () => {
                 <button
                   key={value}
                   onClick={() => handleBudgetChange(value)}
-                  className={`w-full text-left px-3 py-2 rounded border ${budget.includes(value) ? 'bg-brand-light border-brand-secondary' : 'bg-white border-gray-300'}`}
-                >{label}</button>
+                  className={`w-full text-left px-3 py-2 rounded border ${
+                    budget.includes(value) ? 'bg-brand-light border-brand-secondary' : 'bg-white border-gray-300'
+                  }`}
+                >
+                  {label}
+                </button>
               ))}
             </div>
           </details>
@@ -280,8 +337,12 @@ const ExplorePage: React.FC = () => {
                 <button
                   key={value}
                   onClick={() => handleSelectivityChange(value)}
-                  className={`w-full text-left px-3 py-2 rounded border ${selectivity.includes(value) ? 'bg-brand-light border-brand-secondary' : 'bg-white border-gray-300'}`}
-                >{label}</button>
+                  className={`w-full text-left px-3 py-2 rounded border ${
+                    selectivity.includes(value) ? 'bg-brand-light border-brand-secondary' : 'bg-white border-gray-300'
+                  }`}
+                >
+                  {label}
+                </button>
               ))}
             </div>
           </details>
@@ -290,14 +351,19 @@ const ExplorePage: React.FC = () => {
             <summary className="cursor-pointer px-3 py-2 font-semibold">Testing Expectations</summary>
             <div className="px-3 py-2 space-y-2">
               {[
-                { value: 'optional', label: 'Test Optional/Flexible' },
+                { value: 'optional', label: 'Test Optional' },
                 { value: 'required', label: 'Test Required' },
+                { value: 'notconsidered', label: 'Test Not Considered' },
               ].map(({ value, label }) => (
                 <button
                   key={value}
                   onClick={() => handleTestPolicyChange(value)}
-                  className={`w-full text-left px-3 py-2 rounded border ${testPolicy.includes(value) ? 'bg-brand-light border-brand-secondary' : 'bg-white border-gray-300'}`}
-                >{label}</button>
+                  className={`w-full text-left px-3 py-2 rounded border ${
+                    testPolicy.includes(value) ? 'bg-brand-light border-brand-secondary' : 'bg-white border-gray-300'
+                  }`}
+                >
+                  {label}
+                </button>
               ))}
             </div>
           </details>
@@ -316,7 +382,12 @@ const ExplorePage: React.FC = () => {
                 <ul className="border border-gray-200 rounded-md divide-y max-h-80 overflow-auto">
                   {stateSuggestions.map((s) => (
                     <li key={s}>
-                      <button className="w-full text-left px-3 py-2 hover:bg-brand-light" onClick={() => addState(s)}>{s}</button>
+                      <button
+                        className="w-full text-left px-3 py-2 hover:bg-brand-light"
+                        onClick={() => addState(s)}
+                      >
+                        {s}
+                      </button>
                     </li>
                   ))}
                 </ul>
@@ -324,9 +395,17 @@ const ExplorePage: React.FC = () => {
               {selectedStates.length > 0 && (
                 <div className="flex flex-wrap gap-2">
                   {selectedStates.map((s) => (
-                    <span key={s} className="inline-flex items-center gap-2 px-2 py-1 bg-brand-light text-brand-dark rounded-full text-xs">
+                    <span
+                      key={s}
+                      className="inline-flex items-center gap-2 px-2 py-1 bg-brand-light text-brand-dark rounded-full text-xs"
+                    >
                       {s}
-                      <button className="text-red-600" onClick={() => setSelectedStates(selectedStates.filter((x) => x !== s))}>&times;</button>
+                      <button
+                        className="text-red-600"
+                        onClick={() => setSelectedStates(selectedStates.filter((x) => x !== s))}
+                      >
+                        &times;
+                      </button>
                     </span>
                   ))}
                 </div>
@@ -334,66 +413,105 @@ const ExplorePage: React.FC = () => {
             </div>
           </details>
 
-          <details className="border rounded-md" onToggle={(e:any) => {
-            // Load majors list when opened for the first time
-            if (e.currentTarget.open && !allInstitutions) {
-              getAllInstitutions().then(setAllInstitutions);
-            }
-          }}>
+          <details
+            className="border rounded-md"
+            onToggle={(e: any) => {
+              if (e.currentTarget.open) {
+                if (!allInstitutions) {
+                  getAllInstitutions().then(setAllInstitutions);
+                }
+                if (!majorsMeta) {
+                  getMajorsMeta().then(setMajorsMeta);
+                }
+                if (!majorsByInstitution) {
+                  getMajorsByInstitution().then(setMajorsByInstitution);
+                }
+              }
+            }}
+          >
             <summary className="cursor-pointer px-3 py-2 font-semibold">Major</summary>
             <div className="px-3 py-2 space-y-2">
               <input
                 type="search"
                 value={majorQuery}
-                onChange={(e) => {
-                  const v = e.target.value;
-                  setMajorQuery(v);
-                }}
+                onChange={(e) => setMajorQuery(e.target.value)}
                 placeholder="Search majors..."
                 className="w-full p-2 border border-gray-300 rounded-md"
               />
               {(majorSuggestions.length > 0 || (majorQuery.trim().length < 2 && allMajors.length > 0)) && (
                 <ul className="border border-gray-200 rounded-md divide-y max-h-80 overflow-auto">
                   {(majorQuery.trim().length < 2 ? allMajors : majorSuggestions).map((m) => (
-                    <li key={m}>
-                      <button className="w-full text-left px-3 py-2 hover:bg-brand-light" onClick={() => addMajor(m)}>{m}</button>
+                    <li key={m.code}>
+                      <button
+                        className="w-full text-left px-3 py-2 hover:bg-brand-light"
+                        onClick={() => addMajor(m)}
+                      >
+                        {m.label}
+                      </button>
                     </li>
                   ))}
                 </ul>
               )}
               {selectedMajors.length > 0 && (
                 <div className="flex flex-wrap gap-2">
-                  {selectedMajors.map((m) => (
-                    <span key={m} className="inline-flex items-center gap-2 px-2 py-1 bg-brand-light text-brand-dark rounded-full text-xs">
-                      {m}
-                      <button className="text-red-600" onClick={() => setSelectedMajors(selectedMajors.filter((x) => x !== m))}>&times;</button>
-                    </span>
-                  ))}
+                  {selectedMajors.map((code) => {
+                    const rawTitle = majorsMeta?.four_digit?.[code] || code;
+                    const title = cleanCipTitle(rawTitle);
+                    return (
+                      <span
+                        key={code}
+                        className="inline-flex items-center gap-2 px-2 py-1 bg-brand-light text-brand-dark rounded-full text-xs"
+                      >
+                        {title}
+                        <button
+                          className="text-red-600"
+                          onClick={() => setSelectedMajors(selectedMajors.filter((x) => x !== code))}
+                        >
+                          &times;
+                        </button>
+                      </span>
+                    );
+                  })}
                 </div>
               )}
             </div>
           </details>
-
         </div>
       </aside>
 
       <main className="flex-1">
         <div className="mb-2">
-          <p className="text-gray-600">Showing {displayed.length} of {filteredUnitIds.length || 0} result(s)</p>
+          <p className="text-gray-600">
+            Showing {displayed.length} of {filteredUnitIds.length || 0} result(s)
+          </p>
         </div>
         {loading ? (
           <p>Loading universities...</p>
         ) : displayed.length > 0 ? (
           <>
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
-              {displayed.map(inst => (
+              {displayed.map((inst) => (
                 <InstitutionCard key={inst.unitid} institution={inst} />
               ))}
             </div>
             <div className="flex items-center justify-center gap-4 mt-6">
-              <button onClick={prevPage} disabled={page === 1} className="px-3 py-2 rounded bg-gray-100 text-gray-700 disabled:opacity-50">Prev</button>
-              <span className="text-gray-700">Page {page} of {totalPages}</span>
-              <button onClick={nextPage} disabled={page === totalPages} className="px-3 py-2 rounded bg-gray-100 text-gray-700 disabled:opacity-50">Next</button>
+              <button
+                onClick={prevPage}
+                disabled={page === 1}
+                className="px-3 py-2 rounded bg-gray-100 text-gray-700 disabled:opacity-50"
+              >
+                Prev
+              </button>
+              <span className="text-gray-700">
+                Page {page} of {totalPages}
+              </span>
+              <button
+                onClick={nextPage}
+                disabled={page === totalPages}
+                className="px-3 py-2 rounded bg-gray-100 text-gray-700 disabled:opacity-50"
+              >
+                Next
+              </button>
             </div>
           </>
         ) : (
@@ -424,6 +542,27 @@ function matchesTuitionBucket(tuition: number, bucket: string): boolean {
   return tuition >= min && tuition < max;
 }
 
+function formatTestPolicy(value: string | null | undefined): string {
+  if (!value) return 'Unknown';
+  const raw = value.trim();
+  const lower = raw.toLowerCase();
+  if (lower === 'test flexible') return 'Flex optional';
+  if (lower === 'test optional') return 'Test optional';
+  return raw;
+}
+
+function cleanCipTitle(value: string | null | undefined): string {
+  if (!value) return "";
+  let t = String(value).trim();
+  if ((t.startsWith('"') && t.endsWith('"')) || (t.startsWith("'") && t.endsWith("'"))) {
+    t = t.slice(1, -1).trim();
+  } else {
+    if (t.startsWith('"') || t.startsWith("'")) t = t.slice(1).trim();
+    if (t.endsWith('"') || t.endsWith("'")) t = t.slice(0, -1).trim();
+  }
+  return t;
+}
+
 function filterInstitutions(
   institutions: Institution[],
   budget: string[],
@@ -431,6 +570,7 @@ function filterInstitutions(
   testPolicy: string[],
   selectedMajors: string[],
   selectedStates: string[],
+  majorsByInstitution: InstitutionMajorsByInstitution | null,
 ): Institution[] {
   let results = institutions.slice();
 
@@ -464,15 +604,18 @@ function filterInstitutions(
       return testPolicy.some((tp) => {
         if (tp === 'optional') return policy.includes('optional') || policy.includes('flexible');
         if (tp === 'required') return policy.includes('required');
+        if (tp === 'notconsidered') return policy.includes('not considered');
         return false;
       });
     });
   }
 
-  if (selectedMajors.length > 0) {
+  if (selectedMajors.length > 0 && majorsByInstitution) {
+    const selectedSet = new Set(selectedMajors);
     results = results.filter((inst) => {
-      const majors = inst.major_families || [];
-      return selectedMajors.some((m) => majors.includes(m));
+      const entry = majorsByInstitution[String(inst.unitid)];
+      if (!entry || !entry.four_digit || entry.four_digit.length === 0) return false;
+      return entry.four_digit.some((code) => selectedSet.has(code));
     });
   }
 

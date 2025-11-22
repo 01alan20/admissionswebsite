@@ -10,6 +10,10 @@ export interface Institution {
   yield: number | null;
   test_policy: string;
   major_families: string[];
+  // Optional CIP-based majors (built from IPEDS degrees data)
+  majors_cip_two_digit?: string[];
+  majors_cip_four_digit?: string[];
+  majors_cip_six_digit?: string[];
   tuition_2023_24_in_state?: number;
   tuition_2023_24_out_of_state?: number;
   tuition_2023_24?: number;
@@ -25,7 +29,8 @@ export interface InstitutionProfile {
   level: string;
   carnegie_basic: string;
   website: string;
-  admissions_url: string;
+  admissions_url: string | null;
+  financial_aid_url?: string | null;
   test_policy: string;
   major_families: string[];
   intl_enrollment_pct: number | null;
@@ -90,4 +95,21 @@ export interface Tuition {
 export interface InstitutionMetrics {
   metrics: Metric[];
   tuition: Tuition[];
+}
+
+// Majors (from IPEDS bachelor degrees CSV)
+export interface InstitutionMajors {
+  two_digit: string[];
+  four_digit: string[];
+  six_digit: string[];
+}
+
+export interface InstitutionMajorsByInstitution {
+  [unitid: string]: InstitutionMajors;
+}
+
+export interface MajorsMeta {
+  two_digit: Record<string, string>;
+  four_digit: Record<string, string>;
+  six_digit: Record<string, string>;
 }

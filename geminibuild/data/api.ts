@@ -1,4 +1,10 @@
-import { Institution, InstitutionDetail, InstitutionMetrics } from "../types";
+import {
+  Institution,
+  InstitutionDetail,
+  InstitutionMetrics,
+  InstitutionMajorsByInstitution,
+  MajorsMeta,
+} from "../types";
 
 export interface InstitutionIndex {
   unitid: number;
@@ -19,6 +25,34 @@ function pctToDecimal(value: number | null | undefined): number | null {
   return value > 1 ? value / 100 : value;
 }
 
+type InstitutionSites = {
+  website?: string | null;
+  admissions_url?: string | null;
+  financial_aid_url?: string | null;
+};
+
+let institutionSitesPromise: Promise<Map<number, InstitutionSites>> | null = null;
+
+async function getInstitutionSitesMap(): Promise<Map<number, InstitutionSites>> {
+  if (!institutionSitesPromise) {
+    institutionSitesPromise = (async () => {
+      const data = await getJSON<any[]>("/data/institutions.json");
+      const map = new Map<number, InstitutionSites>();
+      for (const d of data) {
+        const id = Number(d.unitid);
+        if (!Number.isFinite(id)) continue;
+        map.set(id, {
+          website: d.website ?? null,
+          admissions_url: d.admissions_url ?? null,
+          financial_aid_url: d.financial_aid_url ?? null,
+        });
+      }
+      return map;
+    })();
+  }
+  return institutionSitesPromise;
+}
+
 export async function getAllInstitutions(): Promise<Institution[]> {
   const data = await getJSON<any[]>("/data/institutions.json");
   return data.map((d) => ({
@@ -32,6 +66,9 @@ export async function getAllInstitutions(): Promise<Institution[]> {
     yield: pctToDecimal(d.yield),
     test_policy: d.test_policy,
     major_families: Array.isArray(d.major_families) ? d.major_families : [],
+    majors_cip_two_digit: Array.isArray(d.majors_cip_two_digit) ? d.majors_cip_two_digit : undefined,
+    majors_cip_four_digit: Array.isArray(d.majors_cip_four_digit) ? d.majors_cip_four_digit : undefined,
+    majors_cip_six_digit: Array.isArray(d.majors_cip_six_digit) ? d.majors_cip_six_digit : undefined,
     tuition_2023_24_in_state: d.tuition_2023_24_in_state ?? undefined,
     tuition_2023_24_out_of_state: d.tuition_2023_24_out_of_state ?? undefined,
     tuition_2023_24: d.tuition_2023_24 ?? undefined,
@@ -49,6 +86,22 @@ export async function getInstitutionDetail(unitid: string | number): Promise<Ins
     .filter(([, v]) => v != null && String(v).trim() !== "")
     .map(([k, v]) => `${k.replace(/_/g, " ")}: ${v}`);
 
+  let website: string | null | undefined = profile.website;
+  let admissions_url: string | null | undefined = profile.admissions_url;
+  let financial_aid_url: string | null | undefined = profile.financial_aid_url;
+
+  try {
+    const sitesMap = await getInstitutionSitesMap();
+    const sites = sitesMap.get(Number(profile.unitid));
+    if (sites) {
+      if (!website && sites.website) website = sites.website;
+      if (!admissions_url && sites.admissions_url) admissions_url = sites.admissions_url;
+      if (!financial_aid_url && sites.financial_aid_url) financial_aid_url = sites.financial_aid_url;
+    }
+  } catch {
+    // fall back to detail file values only
+  }
+
   return {
     profile: {
       unitid: profile.unitid,
@@ -58,8 +111,9 @@ export async function getInstitutionDetail(unitid: string | number): Promise<Ins
       control: profile.control,
       level: profile.level,
       carnegie_basic: profile.carnegie_basic,
-      website: profile.website,
-      admissions_url: profile.admissions_url,
+      website: website ?? "",
+      admissions_url: admissions_url ?? null,
+      financial_aid_url: financial_aid_url ?? null,
       test_policy: profile.test_policy,
       major_families: Array.isArray(profile.major_families) ? profile.major_families : [],
       intl_enrollment_pct: pctToDecimal(profile.intl_enrollment_pct),
@@ -121,6 +175,14 @@ export async function getInstitutionMetrics(unitid: string | number): Promise<In
       tuition_and_fees: t.tuition_and_fees ?? undefined,
     })),
   } as InstitutionMetrics;
+}
+
+export async function getMajorsMeta(): Promise<MajorsMeta> {
+  return getJSON<MajorsMeta>("/data/majors_bachelor_meta.json");
+}
+
+export async function getMajorsByInstitution(): Promise<InstitutionMajorsByInstitution> {
+  return getJSON<InstitutionMajorsByInstitution>("/data/majors_bachelor_by_institution.json");
 }
 
 export async function getInstitutionIndex(): Promise<InstitutionIndex[]> {
