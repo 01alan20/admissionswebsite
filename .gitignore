@@ -30,3 +30,6 @@ dist-ssr
 assessment scores - guide.docx
 .env
 .env.*
+
+# Large/local datasets (served from public but not tracked)
+public/data/
