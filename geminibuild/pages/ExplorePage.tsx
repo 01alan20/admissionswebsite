@@ -45,8 +45,8 @@ const ExplorePage: React.FC = () => {
   const [page, setPage] = useState<number>(1);
 
   // Filters (dropdowns)
-  const [budget, setBudget] = useState<string[]>([]); // under20, 20to40, 40to60, over60
-  const [selectivity, setSelectivity] = useState<string[]>([]); // selective, reach, target, balanced, safety
+  const [budget, setBudget] = useState<string[]>([]); // tuition buckets, e.g. "0-10000", "70000+"
+  const [selectivity, setSelectivity] = useState<string[]>([]); // selective, reach, target, balanced, safety, supersafe
   const [testPolicy, setTestPolicy] = useState<string[]>([]); // optional, required
   const [majorQuery, setMajorQuery] = useState<string>('');
   const [selectedMajors, setSelectedMajors] = useState<string[]>([]);
@@ -120,7 +120,7 @@ const ExplorePage: React.FC = () => {
       setPage(1);
     };
     run();
-  }, [query, budget, selectivity, testPolicy, selectedMajors, index, defaultUnitIds, allInstitutions]);
+  }, [query, budget, selectivity, testPolicy, selectedMajors, selectedStates, index, defaultUnitIds, allInstitutions]);
 
   // Update URL params as user types
   useEffect(() => {
@@ -245,13 +245,17 @@ const ExplorePage: React.FC = () => {
           </form>
 
           <details className="border rounded-md">
-            <summary className="cursor-pointer px-3 py-2 font-semibold">Budget (Out-of-State)</summary>
+            <summary className="cursor-pointer px-3 py-2 font-semibold">Tuition Budget (per year)</summary>
             <div className="px-3 py-2 space-y-2">
               {[
-                { value: 'under20', label: '< $20k' },
-                { value: '20to40', label: '$20k - $40k' },
-                { value: '40to60', label: '$40k - $60k' },
-                { value: 'over60', label: '> $60k' },
+                { value: '0-10000', label: '< $10k' },
+                { value: '10000-20000', label: '$10k - $20k' },
+                { value: '20000-30000', label: '$20k - $30k' },
+                { value: '30000-40000', label: '$30k - $40k' },
+                { value: '40000-50000', label: '$40k - $50k' },
+                { value: '50000-60000', label: '$50k - $60k' },
+                { value: '60000-70000', label: '$60k - $70k' },
+                { value: '70000+', label: '$70k+' },
               ].map(({ value, label }) => (
                 <button
                   key={value}
@@ -270,7 +274,8 @@ const ExplorePage: React.FC = () => {
                 { value: 'reach', label: 'Reach (10% - 25%)' },
                 { value: 'target', label: 'Target (25% - 49%)' },
                 { value: 'balanced', label: 'Balanced (50% - 69%)' },
-                { value: 'safety', label: 'Safety (>=70%)' },
+                { value: 'safety', label: 'Safety (70% - 90%)' },
+                { value: 'supersafe', label: 'Super Safe (91%+)' },
               ].map(({ value, label }) => (
                 <button
                   key={value}
@@ -405,6 +410,20 @@ const ExplorePage: React.FC = () => {
 export default ExplorePage;
 
 // Helpers
+function matchesTuitionBucket(tuition: number, bucket: string): boolean {
+  if (!Number.isFinite(tuition)) return false;
+  if (bucket.endsWith('+')) {
+    const min = Number(bucket.slice(0, -1));
+    if (Number.isNaN(min)) return false;
+    return tuition >= min;
+  }
+  const [minStr, maxStr] = bucket.split('-');
+  const min = Number(minStr);
+  const max = Number(maxStr);
+  if (Number.isNaN(min) || Number.isNaN(max)) return false;
+  return tuition >= min && tuition < max;
+}
+
 function filterInstitutions(
   institutions: Institution[],
   budget: string[],
@@ -419,13 +438,7 @@ function filterInstitutions(
     results = results.filter((inst) => {
       const tuition = inst.tuition_2023_24_out_of_state ?? inst.tuition_2023_24_in_state ?? inst.tuition_2023_24;
       if (tuition == null) return false;
-      return budget.some((b) => {
-        if (b === 'under20') return tuition < 20000;
-        if (b === '20to40') return tuition >= 20000 && tuition < 40000;
-        if (b === '40to60') return tuition >= 40000 && tuition < 60000;
-        if (b === 'over60') return tuition >= 60000;
-        return false;
-      });
+      return budget.some((b) => matchesTuitionBucket(tuition, b));
     });
   }
 
@@ -438,7 +451,8 @@ function filterInstitutions(
         if (s === 'reach') return rate >= 0.1 && rate < 0.25;
         if (s === 'target') return rate >= 0.25 && rate < 0.5;
         if (s === 'balanced') return rate >= 0.5 && rate < 0.7;
-        if (s === 'safety') return rate >= 0.7;
+        if (s === 'safety') return rate >= 0.7 && rate < 0.91;
+        if (s === 'supersafe') return rate >= 0.91;
         return false;
       });
     });
