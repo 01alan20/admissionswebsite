@@ -8,7 +8,7 @@ Key features
 - Details: profile overview, admissions funnel, requirements, test score ranges, cost summary.
 
 Tech stack
-- Build: Vite + React (TypeScript in `geminibuild/`)
+- Build: Vite + React (TypeScript in `frontend/`)
 - Data: static JSON under `public/data/**` (consumed client‑side)
 - Deploy: GitHub Pages via Actions (`.github/workflows/deploy-pages.yml`)
 
@@ -21,7 +21,7 @@ npm install
 npm run dev
 ```
 
-App entry is `index.html` which mounts `geminibuild/index.tsx`.
+App entry is `index.html` which mounts `frontend/index.tsx`.
 
 ## Build
 
@@ -57,4 +57,4 @@ Ignored files (see `.gitignore`):
 ## Notes
 
 - AI (Gemini) features are disabled; no API key required.
-- Old `src/` app was removed; active app lives under `geminibuild/`.
+- Old `src/` app was removed; active app lives under `frontend/`.
