@@ -332,10 +332,7 @@ const DetailPage: React.FC = () => {
                     <p className="text-sm mb-4">
                       Test submission:{' '}
                       <strong>
-                        {(
-                          latestMetric.percent_of_first_time_degree_certificate_seeking_students_submitting_sat_scores *
-                          100
-                        ).toFixed(0)}
+                        {latestMetric.percent_of_first_time_degree_certificate_seeking_students_submitting_sat_scores.toFixed(0)}
                         %
                       </strong>{' '}
                       (
@@ -368,10 +365,7 @@ const DetailPage: React.FC = () => {
                     <p className="text-sm mb-4">
                       Test submission:{' '}
                       <strong>
-                        {(
-                          latestMetric.percent_of_first_time_degree_certificate_seeking_students_submitting_act_scores *
-                          100
-                        ).toFixed(0)}
+                        {latestMetric.percent_of_first_time_degree_certificate_seeking_students_submitting_act_scores.toFixed(0)}
                         %
                       </strong>{' '}
                       (
