@@ -19,6 +19,12 @@ async function getJSON<T>(path: string): Promise<T> {
   return res.json() as Promise<T>;
 }
 
+async function getText(path: string): Promise<string> {
+  const res = await fetch(path, { cache: "no-store" });
+  if (!res.ok) throw new Error(`Failed to fetch ${path}: ${res.status}`);
+  return res.text();
+}
+
 // Map acceptance/yield ints (0-100) to decimals (0-1)
 function pctToDecimal(value: number | null | undefined): number | null {
   if (value === null || value === undefined) return null;
@@ -51,6 +57,64 @@ async function getInstitutionSitesMap(): Promise<Map<number, InstitutionSites>> 
     })();
   }
   return institutionSitesPromise;
+}
+
+function parseCsvLine(line: string): string[] {
+  const result: string[] = [];
+  let current = "";
+  let inQuotes = false;
+
+  for (let i = 0; i < line.length; i++) {
+    const ch = line[i];
+    if (ch === '"') {
+      if (inQuotes && line[i + 1] === '"') {
+        current += '"';
+        i++;
+      } else {
+        inQuotes = !inQuotes;
+      }
+    } else if (ch === "," && !inQuotes) {
+      result.push(current);
+      current = "";
+    } else {
+      current += ch;
+    }
+  }
+  result.push(current);
+  return result;
+}
+
+let locationTypeMapPromise: Promise<Map<number, string>> | null = null;
+
+export async function getLocationTypeMap(): Promise<Map<number, string>> {
+  if (!locationTypeMapPromise) {
+    locationTypeMapPromise = (async () => {
+      const text = await getText("/data/uni_location_size.csv");
+      const lines = text.split(/\r?\n/).filter((l) => l.trim().length > 0);
+      const map = new Map<number, string>();
+      if (lines.length <= 1) return map;
+
+      const headerCols = parseCsvLine(lines[0]);
+      const unitidIdx = headerCols.findIndex((h) => h.trim().toLowerCase() === "unitid");
+      const locationIdx = headerCols.findIndex((h) => h.trim().toLowerCase() === "unilocation");
+      if (unitidIdx === -1 || locationIdx === -1) return map;
+
+      for (let i = 1; i < lines.length; i++) {
+        const line = lines[i];
+        if (!line.trim()) continue;
+        const cols = parseCsvLine(line);
+        if (cols.length <= Math.max(unitidIdx, locationIdx)) continue;
+        const id = Number(cols[unitidIdx]);
+        if (!Number.isFinite(id)) continue;
+        const locRaw = cols[locationIdx].trim();
+        if (!locRaw) continue;
+        map.set(id, locRaw);
+      }
+
+      return map;
+    })();
+  }
+  return locationTypeMapPromise;
 }
 
 export async function getAllInstitutions(): Promise<Institution[]> {

@@ -8,6 +8,7 @@ import {
   getAllInstitutions,
   getMajorsMeta,
   getMajorsByInstitution,
+  getLocationTypeMap,
   InstitutionIndex,
 } from '../data/api';
 
@@ -71,6 +72,8 @@ const ExplorePage: React.FC = () => {
   // State filter
   const [stateQuery, setStateQuery] = useState<string>('');
   const [selectedStates, setSelectedStates] = useState<string[]>([]);
+  // Location type filter
+  const [locationTypes, setLocationTypes] = useState<string[]>([]);
 
   // Load index and default top 10 by applicants
   useEffect(() => {
@@ -101,7 +104,8 @@ const ExplorePage: React.FC = () => {
         selectivity.length > 0 ||
         testPolicy.length > 0 ||
         selectedMajors.length > 0 ||
-        selectedStates.length > 0;
+        selectedStates.length > 0 ||
+        locationTypes.length > 0;
 
       if (!hasQuery && !hasFilter) {
         setFilteredUnitIds(defaultUnitIds);
@@ -124,6 +128,7 @@ const ExplorePage: React.FC = () => {
       if (hasFilter) {
         const all = allInstitutions || await getAllInstitutions();
         if (!allInstitutions) setAllInstitutions(all);
+        const locationMap = await getLocationTypeMap();
         filterUnitIds = filterInstitutions(
           all,
           budget,
@@ -131,7 +136,9 @@ const ExplorePage: React.FC = () => {
           testPolicy,
           selectedMajors,
           selectedStates,
+          locationTypes,
           majorsByInstitution,
+          locationMap,
         ).map((i) => i.unitid);
       }
 
@@ -158,6 +165,7 @@ const ExplorePage: React.FC = () => {
     testPolicy,
     selectedMajors,
     selectedStates,
+    locationTypes,
     index,
     defaultUnitIds,
     allInstitutions,
@@ -413,6 +421,34 @@ const ExplorePage: React.FC = () => {
             </div>
           </details>
 
+          <details className="border rounded-md">
+            <summary className="cursor-pointer px-3 py-2 font-semibold">Location Type</summary>
+            <div className="px-3 py-2 space-y-2">
+              {[
+                { value: 'city', label: 'City' },
+                { value: 'suburban', label: 'Suburban' },
+                { value: 'town', label: 'Town' },
+                { value: 'rural', label: 'Rural' },
+              ].map(({ value, label }) => (
+                <button
+                  key={value}
+                  onClick={() =>
+                    setLocationTypes((curr) =>
+                      curr.includes(value) ? curr.filter((v) => v !== value) : [...curr, value]
+                    )
+                  }
+                  className={`w-full text-left px-3 py-2 rounded border ${
+                    locationTypes.includes(value)
+                      ? 'bg-brand-light border-brand-secondary'
+                      : 'bg-white border-gray-300'
+                  }`}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
+          </details>
+
           <details
             className="border rounded-md"
             onToggle={(e: any) => {
@@ -563,6 +599,17 @@ function cleanCipTitle(value: string | null | undefined): string {
   return t;
 }
 
+function normalizeLocationType(raw: string | null | undefined): string | null {
+  if (!raw) return null;
+  const v = raw.trim().toLowerCase();
+  if (!v) return null;
+  if (v.startsWith('city')) return 'city';
+  if (v.startsWith('suburb')) return 'suburban';
+  if (v.startsWith('town')) return 'town';
+  if (v.startsWith('rural')) return 'rural';
+  return null;
+}
+
 function filterInstitutions(
   institutions: Institution[],
   budget: string[],
@@ -570,7 +617,9 @@ function filterInstitutions(
   testPolicy: string[],
   selectedMajors: string[],
   selectedStates: string[],
+  selectedLocationTypes: string[],
   majorsByInstitution: InstitutionMajorsByInstitution | null,
+  locationMap: Map<number, string> | null,
 ): Institution[] {
   let results = institutions.slice();
 
@@ -624,6 +673,16 @@ function filterInstitutions(
     results = results.filter((inst) => {
       const full = toFullStateName(inst.state).toLowerCase();
       return set.has(full);
+    });
+  }
+
+  if (selectedLocationTypes.length > 0 && locationMap) {
+    const typeSet = new Set(selectedLocationTypes);
+    results = results.filter((inst) => {
+      const rawLoc = locationMap.get(inst.unitid);
+      const normalized = normalizeLocationType(rawLoc);
+      if (!normalized) return false;
+      return typeSet.has(normalized);
     });
   }
 
