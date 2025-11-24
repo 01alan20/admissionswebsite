@@ -274,6 +274,9 @@ const ExplorePage: React.FC = () => {
   const allStates = useMemo(() => {
     const set = new Set<string>();
     for (const i of index) {
+      const raw = (i.state || "").trim().toUpperCase();
+      // Filter out non-U.S. codes that can appear in IPEDS data
+      if (raw === "FM" || raw === "TW") continue;
       const full = toFullStateName(i.state);
       if (full) set.add(full);
     }
@@ -377,7 +380,7 @@ const ExplorePage: React.FC = () => {
           </details>
 
           <details className="border rounded-md">
-            <summary className="cursor-pointer px-3 py-2 font-semibold">State (full name)</summary>
+            <summary className="cursor-pointer px-3 py-2 font-semibold">State</summary>
             <div className="px-3 py-2 space-y-2">
               <input
                 type="search"

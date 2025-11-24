@@ -7,8 +7,20 @@ import DetailPage from './pages/DetailPage';
 import HighSchoolPathwaysPage from './pages/HighSchoolPathwaysPage';
 import ProfileReviewPage from './pages/ProfileReviewPage';
 import TimelinesPage from './pages/TimelinesPage';
+import ProfileRoutePage from './pages/ProfileRoutePage';
+import ProfileLoginPage from './pages/ProfileLoginPage';
+import ProfileNameStepPage from './pages/ProfileNameStepPage';
+import ProfileLocationStepPage from './pages/ProfileLocationStepPage';
+import ProfileGpaStepPage from './pages/ProfileGpaStepPage';
+import ProfileTestsStepPage from './pages/ProfileTestsStepPage';
+import ProfileActivitiesStepPage from './pages/ProfileActivitiesStepPage';
+import ProfileRecommendationsStepPage from './pages/ProfileRecommendationsStepPage';
+import ProfileTargetsStepPage from './pages/ProfileTargetsStepPage';
+import ProfileDashboardPage from './pages/ProfileDashboardPage';
+import { OnboardingProvider, useOnboardingContext } from './context/OnboardingContext';
 
 const Header: React.FC = () => {
+  const { user, loading } = useOnboardingContext();
   const linkClass = "text-white hover:bg-brand-secondary px-3 py-2 rounded-md text-sm font-medium transition-colors";
   const activeLinkClass = "bg-brand-secondary text-white px-3 py-2 rounded-md text-sm font-medium";
 
@@ -29,7 +41,22 @@ const Header: React.FC = () => {
               <NavLink to="/compare" className={({ isActive }) => isActive ? activeLinkClass : linkClass}>Compare</NavLink>
               <NavLink to="/pathways" className={({ isActive }) => isActive ? activeLinkClass : linkClass}>Pathways</NavLink>
               <NavLink to="/timelines" className={({ isActive }) => isActive ? activeLinkClass : linkClass}>Timelines</NavLink>
-              <NavLink to="/review" className={({ isActive }) => isActive ? activeLinkClass : linkClass}>Profile Review</NavLink>
+              {(!loading && !user) && (
+                <NavLink
+                  to="/profile/login"
+                  className={({ isActive }) => isActive ? activeLinkClass : linkClass}
+                >
+                  Make Your Profile
+                </NavLink>
+              )}
+              {(!loading && user) && (
+                <NavLink
+                  to="/profile/dashboard"
+                  className={({ isActive }) => isActive ? activeLinkClass : linkClass}
+                >
+                  Profile Review
+                </NavLink>
+              )}
             </div>
           </div>
         </div>
@@ -50,21 +77,34 @@ const Footer: React.FC = () => (
 const App: React.FC = () => {
   return (
     <HashRouter>
-      <div className="flex flex-col min-h-screen font-sans text-gray-800">
-        <Header />
-        <main className="flex-grow container mx-auto p-4 sm:p-6 lg:p-8">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/explore" element={<ExplorePage />} />
-            <Route path="/compare" element={<ComparePage />} />
-            <Route path="/institution/:unitid" element={<DetailPage />} />
-            <Route path="/pathways" element={<HighSchoolPathwaysPage />} />
-            <Route path="/timelines" element={<TimelinesPage />} />
-            <Route path="/review" element={<ProfileReviewPage />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
+      <OnboardingProvider>
+        <div className="flex flex-col min-h-screen font-sans text-gray-800">
+          <Header />
+          <main className="flex-grow container mx-auto p-4 sm:p-6 lg:p-8">
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/explore" element={<ExplorePage />} />
+              <Route path="/compare" element={<ComparePage />} />
+              <Route path="/institution/:unitid" element={<DetailPage />} />
+              <Route path="/pathways" element={<HighSchoolPathwaysPage />} />
+              <Route path="/timelines" element={<TimelinesPage />} />
+              <Route path="/review" element={<ProfileReviewPage />} />
+              <Route path="/profile" element={<ProfileRoutePage />} />
+              <Route path="/profile/route" element={<ProfileRoutePage />} />
+              <Route path="/profile/login" element={<ProfileLoginPage />} />
+              <Route path="/profile/name" element={<ProfileNameStepPage />} />
+              <Route path="/profile/location" element={<ProfileLocationStepPage />} />
+              <Route path="/profile/gpa" element={<ProfileGpaStepPage />} />
+              <Route path="/profile/tests" element={<ProfileTestsStepPage />} />
+              <Route path="/profile/activities" element={<ProfileActivitiesStepPage />} />
+              <Route path="/profile/recs" element={<ProfileRecommendationsStepPage />} />
+              <Route path="/profile/targets" element={<ProfileTargetsStepPage />} />
+              <Route path="/profile/dashboard" element={<ProfileDashboardPage />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </OnboardingProvider>
     </HashRouter>
   );
 };
