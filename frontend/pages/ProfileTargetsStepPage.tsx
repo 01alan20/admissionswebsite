@@ -248,19 +248,25 @@ const ProfileTargetsStepPage: React.FC = () => {
     return new Set(results.map((r) => r.unitid));
   }, [allInstitutions, budget, selectivity, testPolicy, selectedStates, locationTypes, locationMap]);
 
-  const results = useMemo(() => {
+  const results = useMemo<Institution[]>(() => {
+    if (!allInstitutions) return [];
     const q = query.trim().toLowerCase();
-    const base = filteredIdSet
-      ? index.filter((i) => filteredIdSet.has(i.unitid))
-      : index;
 
-    if (!q) return base.slice(0, 30);
-    const filtered = base.filter((i) => {
-      const hay = `${i.name ?? ""} ${i.city ?? ""} ${i.state ?? ""}`.toLowerCase();
+    // Start from full institutions list, then apply the unitid set produced by
+    // the filter pipeline above (tuition, selectivity, test policy, state, location).
+    let base = allInstitutions;
+    if (filteredIdSet) {
+      base = base.filter((inst) => filteredIdSet.has(inst.unitid));
+    }
+
+    if (!q) return base.slice(0, 50);
+
+    const filtered = base.filter((inst) => {
+      const hay = `${inst.name ?? ""} ${inst.city ?? ""} ${inst.state ?? ""}`.toLowerCase();
       return hay.includes(q);
     });
     return filtered.slice(0, 50);
-  }, [index, query, filteredIdSet]);
+  }, [allInstitutions, query, filteredIdSet]);
 
   if (loading) {
     return (
