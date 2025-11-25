@@ -41,6 +41,14 @@ const Header: React.FC = () => {
               <NavLink to="/compare" className={({ isActive }) => isActive ? activeLinkClass : linkClass}>Compare</NavLink>
               <NavLink to="/pathways" className={({ isActive }) => isActive ? activeLinkClass : linkClass}>Pathways</NavLink>
               <NavLink to="/timelines" className={({ isActive }) => isActive ? activeLinkClass : linkClass}>Timelines</NavLink>
+              {(!loading && !user) && (
+                <NavLink
+                  to="/profile/login"
+                  className={({ isActive }) => isActive ? activeLinkClass : linkClass}
+                >
+                  Make Your Profile
+                </NavLink>
+              )}
               {(!loading && user) && (
                 <NavLink
                   to="/profile/dashboard"
