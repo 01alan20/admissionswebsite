@@ -53,7 +53,10 @@ const ProfileLoginPage: React.FC = () => {
           password,
         });
         if (signInError) throw signInError;
-        // OnboardingProvider will detect the logged-in user and navigate.
+        // After a successful login, send the user through the profile router so
+        // onboarding state is re-evaluated and they land on the right step or
+        // the dashboard.
+        window.location.href = `${window.location.origin}/#/profile/route`;
       }
     } catch (err: any) {
       setError(err.message ?? "Authentication failed. Please try again.");
