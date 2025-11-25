@@ -46,23 +46,27 @@ export const scoreTestsCombined = (
 ): UiScore | null => {
   if (satTotal == null && actComposite == null) return null;
 
-  // SAT thresholds roughly matching earlier logic.
+  // SAT thresholds using requested buckets:
+  // < 800  -> red
+  // 800-999 -> orange
+  // 1000-1299 -> yellow
+  // 1300-1499 -> green
+  // 1500-1600 -> dark green
   if (satTotal != null) {
-    if (satTotal >= 1550) return 6;
-    if (satTotal >= 1500) return 5;
-    if (satTotal >= 1350) return 4;
-    if (satTotal >= 1200) return 3;
-    if (satTotal >= 1000) return 2;
-    return 1;
+    if (satTotal >= 1500) return 6; // dark green / top-tier
+    if (satTotal >= 1300) return 5; // strong / green
+    if (satTotal >= 1000) return 4; // above average / yellow
+    if (satTotal >= 800) return 3; // below-average but workable / orange
+    return 1; // red
   }
 
   // ACT thresholds if SAT missing.
   if (actComposite != null) {
-    if (actComposite >= 35) return 6;
-    if (actComposite >= 33) return 5;
-    if (actComposite >= 29) return 4;
-    if (actComposite >= 26) return 3;
-    if (actComposite >= 22) return 2;
+    // Roughly analogous bands for ACT composite.
+    if (actComposite >= 34) return 6;
+    if (actComposite >= 31) return 5;
+    if (actComposite >= 26) return 4;
+    if (actComposite >= 22) return 3;
     return 1;
   }
 
@@ -226,7 +230,17 @@ export const computeTierLabel = (opts: {
     return "Super Safe";
   }
 
-  const diff = academicScore - selectivity;
+  // Be more generous as acceptance rate climbs: give a small "boost" to the
+  // student's academic score for higher-admit schools so tiers lean safer.
+  let generosityBoost = 0;
+  if (acceptanceRate >= 0.75) {
+    generosityBoost = 1;
+  } else if (acceptanceRate >= 0.5) {
+    generosityBoost = 0.5;
+  }
+
+  const effectiveAcademic = academicScore + generosityBoost;
+  const diff = effectiveAcademic - selectivity;
 
   if (diff <= -2) return "Reach";
   if (diff === -1) return "Reach";
@@ -277,4 +291,3 @@ export const buildSchoolMetricsFromInstitution = (
     act75: m.act75 ?? null,
   };
 };
-

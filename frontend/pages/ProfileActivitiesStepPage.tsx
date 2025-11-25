@@ -24,7 +24,7 @@ const ProfileActivitiesStepPage: React.FC = () => {
   const handleNext = async (e: React.FormEvent) => {
     e.preventDefault();
     setStudentProfile({ activities });
-    await setOnboardingStepRemote(5);
+    await setOnboardingStepRemote(5, { activities });
     navigate("/profile/recs");
   };
 
