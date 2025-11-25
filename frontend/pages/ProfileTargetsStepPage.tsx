@@ -163,102 +163,13 @@ const ProfileTargetsStepPage: React.FC = () => {
   const handleTestPolicyChange = (value: string) =>
     setTestPolicy((t) => toggleFromList(t, value));
 
-  const filteredIdSet = useMemo<Set<number> | null>(() => {
-    if (!allInstitutions) return null;
-    let results = allInstitutions.slice();
-
-    if (budget.length > 0) {
-      results = results.filter((inst) => {
-        const tuition =
-          inst.tuition_2023_24_out_of_state ??
-          inst.tuition_2023_24_in_state ??
-          inst.tuition_2023_24;
-        if (tuition == null) return false;
-        return budget.some((b) => {
-          if (b === "0-10000") return tuition < 10000;
-          if (b === "10000-20000") return tuition >= 10000 && tuition < 20000;
-          if (b === "20000-30000") return tuition >= 20000 && tuition < 30000;
-          if (b === "30000-40000") return tuition >= 30000 && tuition < 40000;
-          if (b === "40000-50000") return tuition >= 40000 && tuition < 50000;
-          if (b === "50000-60000") return tuition >= 50000 && tuition < 60000;
-          if (b === "60000-70000") return tuition >= 60000 && tuition < 70000;
-          if (b === "70000+") return tuition >= 70000;
-          return false;
-        });
-      });
-    }
-
-    if (selectivity.length > 0) {
-      results = results.filter((inst) => {
-        const rate = inst.acceptance_rate;
-        if (rate == null) return false;
-        return selectivity.some((s) => {
-          if (s === "selective") return rate < 0.1;
-          if (s === "reach") return rate >= 0.1 && rate < 0.25;
-          if (s === "target") return rate >= 0.25 && rate < 0.5;
-          if (s === "balanced") return rate >= 0.5 && rate < 0.7;
-          if (s === "safety") return rate >= 0.7 && rate < 0.91;
-          if (s === "supersafe") return rate >= 0.91;
-          return false;
-        });
-      });
-    }
-
-    if (testPolicy.length > 0) {
-      results = results.filter((inst) => {
-        const policy = (inst.test_policy || "").toLowerCase();
-        return testPolicy.some((tp) => {
-          if (tp === "optional")
-            return policy.includes("optional") || policy.includes("flexible");
-          if (tp === "required") return policy.includes("required");
-          if (tp === "notconsidered") return policy.includes("not considered");
-          return false;
-        });
-      });
-    }
-
-    if (selectedStates.length > 0) {
-      const set = new Set(selectedStates.map((s) => s.toLowerCase()));
-      results = results.filter((inst) =>
-        set.has(toFullStateName(inst.state).toLowerCase())
-      );
-    }
-
-    if (locationTypes.length > 0 && locationMap) {
-      const typeSet = new Set(locationTypes);
-      const normalizeLocationType = (raw: string | null | undefined): string | null => {
-        if (!raw) return null;
-        const v = raw.trim().toLowerCase();
-        if (!v) return null;
-        if (v.startsWith("city")) return "city";
-        if (v.startsWith("suburb")) return "suburban";
-        if (v.startsWith("town")) return "town";
-        if (v.startsWith("rural")) return "rural";
-        return null;
-      };
-
-      results = results.filter((inst) => {
-        const rawLoc = locationMap.get(inst.unitid);
-        const normalized = normalizeLocationType(rawLoc);
-        if (!normalized) return false;
-        return typeSet.has(normalized);
-      });
-    }
-
-    return new Set(results.map((r) => r.unitid));
-  }, [allInstitutions, budget, selectivity, testPolicy, selectedStates, locationTypes, locationMap]);
-
   const results = useMemo<Institution[]>(() => {
     if (!allInstitutions) return [];
     const q = query.trim().toLowerCase();
-
-    // Start from full institutions list, then apply the unitid set produced by
-    // the filter pipeline above (tuition, selectivity, test policy, state, location).
     let base = allInstitutions;
-    if (filteredIdSet) {
-      base = base.filter((inst) => filteredIdSet.has(inst.unitid));
-    }
 
+    // For now, ignore the advanced filters and just apply the search text so
+    // we always show universities during onboarding.
     if (!q) return base.slice(0, 50);
 
     const filtered = base.filter((inst) => {
@@ -266,7 +177,7 @@ const ProfileTargetsStepPage: React.FC = () => {
       return hay.includes(q);
     });
     return filtered.slice(0, 50);
-  }, [allInstitutions, query, filteredIdSet]);
+  }, [allInstitutions, query]);
 
   if (loading) {
     return (
