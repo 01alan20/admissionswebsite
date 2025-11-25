@@ -25,6 +25,12 @@ const ProfileLoginPage: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email || sending) return;
+    if (!supabase) {
+      setError(
+        "Magic link login is temporarily unavailable (Supabase is not configured)."
+      );
+      return;
+    }
     setSending(true);
     setError(null);
     try {

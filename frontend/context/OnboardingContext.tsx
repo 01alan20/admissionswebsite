@@ -62,6 +62,18 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
   useEffect(() => {
     let cancelled = false;
     (async () => {
+      // If Supabase is not configured (e.g., missing env vars in production),
+      // skip auth/profile loading and treat the user as logged out so the rest
+      // of the site still works.
+      if (!supabase) {
+        if (!cancelled) {
+          setUser(null);
+          setOnboardingStep(0);
+          setLoading(false);
+        }
+        return;
+      }
+
       try {
         const { data } = await supabase.auth.getUser();
         const currentUser = data?.user ?? null;
@@ -153,7 +165,7 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
     step: number,
     override?: Partial<StudentProfileSummary>
   ) => {
-    if (!user) return;
+    if (!user || !supabase) return;
     const next = step > onboardingStep ? step : onboardingStep;
 
     // Merge any overrides into the current student profile (so updates from
