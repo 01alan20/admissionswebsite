@@ -75,6 +75,35 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
       }
 
       try {
+        // Handle magic-link callback: if the URL fragment contains access / refresh
+        // tokens, hydrate the Supabase session before we ask for the current user.
+        try {
+          const fullHash = window.location.hash || "";
+          if (fullHash.includes("access_token=") && fullHash.includes("refresh_token=")) {
+            const parts = fullHash.split("#");
+            const lastFragment = parts[parts.length - 1] || "";
+            const params = new URLSearchParams(lastFragment);
+            const accessToken = params.get("access_token");
+            const refreshToken = params.get("refresh_token");
+            if (accessToken && refreshToken) {
+              await supabase.auth.setSession({
+                access_token: accessToken,
+                refresh_token: refreshToken,
+              });
+              // Preserve the router hash (first segment like #/profile/route) and
+              // drop the token fragment so the URL looks clean.
+              const routeFragment = parts.length > 2 ? `#${parts[1]}` : "#/profile/route";
+              window.history.replaceState(
+                window.history.state,
+                document.title,
+                `${window.location.pathname}${window.location.search}${routeFragment}`
+              );
+            }
+          }
+        } catch {
+          // If token parsing fails, continue with best-effort getUser below.
+        }
+
         const { data } = await supabase.auth.getUser();
         const currentUser = data?.user ?? null;
         if (!currentUser) {
