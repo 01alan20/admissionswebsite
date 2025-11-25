@@ -12,7 +12,7 @@ const ProfileLoginPage: React.FC = () => {
   const [sending, setSending] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const { user, onboardingStep, loading } = useOnboardingContext();
+  const { user, onboardingStep, loading, setUserDirect } = useOnboardingContext();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -44,15 +44,17 @@ const ProfileLoginPage: React.FC = () => {
         );
         setMode("login");
       } else {
-        const { error: signInError } = await supabase.auth.signInWithPassword({
+        const { data, error: signInError } = await supabase.auth.signInWithPassword({
           email,
           password,
         });
         if (signInError) throw signInError;
-        // After a successful login, send the user through the profile router so
-        // onboarding state is re-evaluated and they land on the right step or
-        // the dashboard.
-        window.location.href = `${window.location.origin}/#/profile/route`;
+        // Hydrate context immediately so guards see the logged-in user without
+        // waiting for a full app reload.
+        if (data?.user) {
+          setUserDirect(data.user);
+        }
+        navigate("/profile/route", { replace: true });
       }
     } catch (err: any) {
       setError(err.message ?? "Authentication failed. Please try again.");

@@ -31,6 +31,7 @@ type OnboardingContextValue = {
   studentProfile: StudentProfileSummary;
   setStudentProfile: (update: Partial<StudentProfileSummary>) => void;
   logout: () => Promise<void>;
+  setUserDirect: (user: User | null) => void;
 };
 
 const OnboardingContext = createContext<OnboardingContextValue | undefined>(
@@ -246,6 +247,7 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
     studentProfile,
     setStudentProfile,
     logout,
+    setUserDirect: setUser,
   };
 
   return (
