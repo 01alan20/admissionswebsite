@@ -24,7 +24,8 @@ type OnboardingContextValue = {
   loading: boolean;
   setOnboardingStepRemote: (
     step: number,
-    override?: Partial<StudentProfileSummary>
+    override?: Partial<StudentProfileSummary>,
+    overrideTargetIds?: number[]
   ) => Promise<void>;
   targetUnitIds: number[];
   setTargetUnitIds: (ids: number[]) => void;
@@ -60,6 +61,11 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
   const [studentProfile, setStudentProfileState] = useState<StudentProfileSummary>(
     {}
   );
+
+  const setUserDirect = (u: User | null) => {
+    setLoading(true);
+    setUser(u);
+  };
 
   const loadProfileForUser = async (currentUser: User, cancelledRef: { value: boolean }) => {
     const { data: profile } = await supabase
@@ -191,10 +197,13 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
     const cancelled = { value: false };
     (async () => {
       if (!user) return;
+      setLoading(true);
       try {
         await loadProfileForUser(user, cancelled);
       } catch {
         // ignore; initial load effect will have handled first render case
+      } finally {
+        if (!cancelled.value) setLoading(false);
       }
     })();
     return () => {
@@ -204,7 +213,8 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
 
   const setOnboardingStepRemote = async (
     step: number,
-    override?: Partial<StudentProfileSummary>
+    override?: Partial<StudentProfileSummary>,
+    overrideTargetIds?: number[]
   ) => {
     if (!user) return;
     const next = step > onboardingStep ? step : onboardingStep;
@@ -213,6 +223,10 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
     // an individual step are included in the Supabase write).
     const merged: StudentProfileSummary = { ...studentProfile, ...override };
     setStudentProfileState(merged);
+    const mergedTargets = overrideTargetIds ?? targetUnitIds;
+    if (overrideTargetIds) {
+      setTargetUnitIds(overrideTargetIds);
+    }
 
     const academicStats = {
       first_name: merged.firstName ?? null,
@@ -233,7 +247,7 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
         onboarding_step: next,
         academic_stats: academicStats,
         extracurriculars: merged.activities ?? null,
-        target_universities: targetUnitIds.length ? targetUnitIds : null,
+        target_universities: mergedTargets && mergedTargets.length ? mergedTargets : null,
       },
       { onConflict: "user_id" }
     );
@@ -269,7 +283,7 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
     studentProfile,
     setStudentProfile,
     logout,
-    setUserDirect: setUser,
+    setUserDirect,
   };
 
   return (

@@ -190,7 +190,7 @@ const ProfileTargetsStepPage: React.FC = () => {
       const hay = `${inst.name ?? ""} ${inst.city ?? ""} ${inst.state ?? ""}`.toLowerCase();
       return hay.includes(q);
     });
-    return filtered.slice(0, 50);
+    return filtered.length > 0 ? filtered.slice(0, 50) : base.slice(0, 50);
   }, [allInstitutions, query]);
 
   if (loading) {
@@ -214,7 +214,7 @@ const ProfileTargetsStepPage: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (selectedIds.length === 0) return;
-    await setOnboardingStepRemote(6);
+    await setOnboardingStepRemote(7, undefined, selectedIds);
     setTargetUnitIds(selectedIds);
     navigate("/profile/dashboard");
   };
