@@ -212,6 +212,7 @@ const ProfileDashboardPage: React.FC = () => {
         </div>
 
         {/* Student snapshot */}
+        {false && (
         <section className="mb-8">
           <h2 className="text-sm font-semibold text-slate-700 mb-3">
             Your Profile Snapshot
@@ -275,69 +276,78 @@ const ProfileDashboardPage: React.FC = () => {
             </div> */}
           </div>
         </section>
+        )}
 
         {/* Profile summary */}
         <section className="mb-8">
           <h2 className="text-sm font-semibold text-slate-700 mb-3">
             Profile Summary
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
-            {/* GPA */}
-            <div className="flex items-center justify-between border border-slate-200 rounded-lg px-4 py-2">
-              <span className="font-semibold text-slate-700">GPA</span>
-              <span
-                className={`inline-flex items-center px-3 py-1 rounded-full font-semibold ${scoreColor(
-                  gpaScore
-                )}`}
-              >
-                {studentProfile.gpa != null
-                  ? studentProfile.gpa.toFixed(2)
-                  : "Not entered"}
-              </span>
-            </div>
+          <div className="space-y-3 text-xs">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+              {/* GPA */}
+              <div className="flex items-center justify-between border border-slate-200 rounded-lg px-4 py-2">
+                <span className="font-semibold text-slate-700">GPA</span>
+                <span
+                  className={`inline-flex items-center px-3 py-1 rounded-full font-semibold ${scoreColor(
+                    gpaScore
+                  )}`}
+                >
+                  {studentProfile.gpa != null
+                    ? studentProfile.gpa.toFixed(2)
+                    : "Not entered"}
+                </span>
+              </div>
 
-            {/* SAT */}
-            <div className="flex items-center justify-between border border-slate-200 rounded-lg px-4 py-2">
-              <span className="font-semibold text-slate-700">SAT</span>
-              <span
-                className={`inline-flex items-center px-3 py-1 rounded-full font-semibold ${scoreColor(
-                  satOnlyScore
-                )}`}
-              >
-                {studentSatTotal != null ? `Total ${studentSatTotal}` : "Not entered"}
-              </span>
-            </div>
+              {/* SAT */}
+              <div className="flex items-center justify-between border border-slate-200 rounded-lg px-4 py-2">
+                <span className="font-semibold text-slate-700">SAT</span>
+                <span
+                  className={`inline-flex items-center px-3 py-1 rounded-full font-semibold ${scoreColor(
+                    satOnlyScore
+                  )}`}
+                >
+                  {studentSatTotal != null
+                    ? `Total ${studentSatTotal}`
+                    : "Not entered"}
+                </span>
+              </div>
 
-            {/* ACT */}
-            <div className="flex items-center justify-between border border-slate-200 rounded-lg px-4 py-2">
-              <span className="font-semibold text-slate-700">ACT</span>
-              <span
-                className={`inline-flex items-center px-3 py-1 rounded-full font-semibold ${scoreColor(
-                  actOnlyScore
-                )}`}
-              >
-                {studentAct != null ? `Composite ${studentAct}` : "Not entered"}
-              </span>
+              {/* ACT */}
+              <div className="flex items-center justify-between border border-slate-200 rounded-lg px-4 py-2">
+                <span className="font-semibold text-slate-700">ACT</span>
+                <span
+                  className={`inline-flex items-center px-3 py-1 rounded-full font-semibold ${scoreColor(
+                    actOnlyScore
+                  )}`}
+                >
+                  {studentAct != null ? `Composite ${studentAct}` : "Not entered"}
+                </span>
+              </div>
             </div>
 
             {/* Extracurriculars */}
-            <div className="flex items-start justify-between border border-slate-200 rounded-lg px-4 py-2">
-              <span className="font-semibold text-slate-700">
+            <div className="border border-slate-200 rounded-lg px-4 py-2">
+              <div className="font-semibold text-slate-700 mb-2">
                 Extracurriculars
-              </span>
+              </div>
               {activitiesForDisplay ? (
-                <div className="flex-1 ml-4">
-                  <div className="grid grid-cols-3 gap-x-2 text-[11px] font-semibold text-slate-500 mb-1">
+                <div className="mt-1">
+                  <div className="grid grid-cols-3 gap-x-2 text-xs font-semibold text-slate-500 mb-1 text-center">
                     <span>Activity</span>
-                    <span>Role</span>
-                    <span>Level</span>
+                    <span className="border-l border-slate-200 pl-2">Role</span>
+                    <span className="border-l border-slate-200 pl-2">Level</span>
                   </div>
-                  <div className="grid grid-cols-3 gap-x-2 gap-y-0.5 text-[11px] text-slate-700">
+                  <div className="grid grid-cols-3 gap-x-2 gap-y-0.5 text-xs text-slate-700 text-center">
                     {activitiesForDisplay.map((a) => (
                       <React.Fragment key={a.id}>
                         <span>{a.name || "Activity"}</span>
-                        <span>{a.role}</span>
-                        <span>{a.level}</span>
+                        <span className="border-l border-slate-200 pl-2">
+                          {a.role}
+                        </span>
+                        <span className="border-l border-slate-200 pl-2">
+                          {a.level}
+                        </span>
                       </React.Fragment>
                     ))}
                   </div>
