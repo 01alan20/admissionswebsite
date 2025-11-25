@@ -113,3 +113,49 @@ export interface MajorsMeta {
   four_digit: Record<string, string>;
   six_digit: Record<string, string>;
 }
+
+// Admissions / profile review types
+export interface Activity {
+  id: string;
+  name: string;
+  role: "Member" | "Leader/Captain" | "Founder";
+  level: "School Level" | "Regional/State" | "National/International";
+}
+
+export interface StudentProfile {
+  firstName: string;
+  lastName: string;
+  country: string;
+  city: string;
+  gpa: string;
+  classRank: string;
+  satMath: string;
+  satEBRW: string;
+  actScore: string;
+  intendedMajor: string;
+  demographics: string[];
+  activities: Activity[];
+  essayDraft: string;
+}
+
+export interface University {
+  unitid: number;
+  name: string;
+  city: string | null;
+  state: string | null;
+  acceptance_rate: number | null;
+}
+
+export interface AIAnalysisResponse {
+  scores: {
+    academics: { score: number; potential_impact_msg: string };
+    extracurriculars: { score: number; level_up_advice: string };
+    athletics: { score: number; level_up_advice: string };
+    personal: { score: number; analysis: string };
+    recommendations: { score: number; advice: string };
+  };
+  essay_feedback: {
+    current_personal_rating_impact: string;
+    improvement_strategy: string;
+  };
+}
