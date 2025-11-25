@@ -250,7 +250,25 @@ export async function getMajorsByInstitution(): Promise<InstitutionMajorsByInsti
 }
 
 export async function getInstitutionIndex(): Promise<InstitutionIndex[]> {
-  return getJSON<InstitutionIndex[]>("/data/institutions_index.json");
+  try {
+    const data = await getJSON<InstitutionIndex[]>("/data/institutions_index.json");
+    if (Array.isArray(data) && data.length > 0) {
+      return data;
+    }
+  } catch {
+    // Fall through to synthesize from full institutions.
+  }
+
+  // Fallback: build a minimal index from the full institutions list so that
+  // search and onboarding still work even if the compact index file is missing
+  // or fails to load in production.
+  const all = await getAllInstitutions();
+  return all.map((d) => ({
+    unitid: d.unitid,
+    name: d.name,
+    city: d.city,
+    state: d.state,
+  }));
 }
 
 export async function getTopUnitIdsByApplicants(limit = 10): Promise<number[]> {
