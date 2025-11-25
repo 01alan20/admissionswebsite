@@ -1,25 +1,17 @@
 import { createClient } from "@supabase/supabase-js";
 
+// Prefer env vars, but fall back to the project's known Supabase URL + anon key
+// so production always has a working client even if build-time env is missing.
 const supabaseUrl =
   (import.meta as any).env?.VITE_SUPABASE_URL ||
-  (typeof process !== "undefined" ? process.env.VITE_SUPABASE_URL : undefined);
+  "https://ngvdluvechfpojchrrtx.supabase.co";
 const supabaseAnonKey =
   (import.meta as any).env?.VITE_SUPABASE_ANON_KEY ||
-  (typeof process !== "undefined" ? process.env.VITE_SUPABASE_ANON_KEY : undefined);
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5ndmRsdXZlY2hmcG9qY2hycnR4Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjIyNzE1MTcsImV4cCI6MjA3Nzg0NzUxN30.W54eXStAxl55zpP_PXFDQxXH_9CGPb5sInfT73l-KqE";
 
-let supabaseInstance: ReturnType<typeof createClient> | null = null;
-
-if (!supabaseUrl || !supabaseAnonKey) {
-  console.warn(
-    "Missing VITE_SUPABASE_URL or VITE_SUPABASE_ANON_KEY. Supabase-backed profile features will be disabled."
-  );
-} else {
-  supabaseInstance = createClient(supabaseUrl, supabaseAnonKey, {
-    auth: {
-      persistSession: true,
-    },
-  });
-}
-
-export const supabase = supabaseInstance;
+export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+  auth: {
+    persistSession: true,
+  },
+});
 

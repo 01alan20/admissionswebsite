@@ -29,10 +29,6 @@ const ProfileLoginPage: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email || !password || sending) return;
-    if (!supabase) {
-      setError("Authentication is temporarily unavailable (Supabase is not configured).");
-      return;
-    }
     setSending(true);
     setError(null);
     setMessage(null);
@@ -67,10 +63,6 @@ const ProfileLoginPage: React.FC = () => {
 
   const handlePasswordReset = async () => {
     if (!email || sending) return;
-    if (!supabase) {
-      setError("Password reset is temporarily unavailable (Supabase is not configured).");
-      return;
-    }
     setSending(true);
     setError(null);
     setMessage(null);
