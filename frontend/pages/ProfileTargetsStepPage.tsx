@@ -34,17 +34,27 @@ const ProfileTargetsStepPage: React.FC = () => {
     (async () => {
       setLocalLoading(true);
       try {
-        const [idx, inst, locMap] = await Promise.all([
+        const [idxRes, instRes, locRes] = await Promise.allSettled([
           getInstitutionIndex(),
           getAllInstitutions(),
-          getLocationTypeMap(),
+          getLocationTypeMap(), // non-critical; can 404 on GH Pages
         ]);
         if (!cancelled) {
-          // Fallback: if the compact index fails or is empty but we have full
-          // institution records, synthesize an index from those so onboarding
-          // still works even if /data/institutions_index.json is missing.
+          const inst =
+            instRes.status === "fulfilled" && Array.isArray(instRes.value)
+              ? instRes.value
+              : [];
+          const idx =
+            idxRes.status === "fulfilled" && Array.isArray(idxRes.value)
+              ? idxRes.value
+              : [];
+          const locMap =
+            locRes.status === "fulfilled" && locRes.value instanceof Map
+              ? locRes.value
+              : null;
+
           const effectiveIndex =
-            idx && idx.length > 0 && Array.isArray(idx)
+            idx && idx.length > 0
               ? idx
               : inst.map((d) => ({
                   unitid: d.unitid,
@@ -58,7 +68,11 @@ const ProfileTargetsStepPage: React.FC = () => {
           setLocationMap(locMap);
         }
       } catch (_err) {
-        // ignore for now
+        if (!cancelled) {
+          setIndex([]);
+          setAllInstitutions([]);
+          setLocationMap(null);
+        }
       } finally {
         if (!cancelled) setLocalLoading(false);
       }
