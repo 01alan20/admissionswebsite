@@ -40,7 +40,20 @@ const ProfileTargetsStepPage: React.FC = () => {
           getLocationTypeMap(),
         ]);
         if (!cancelled) {
-          setIndex(idx);
+          // Fallback: if the compact index fails or is empty but we have full
+          // institution records, synthesize an index from those so onboarding
+          // still works even if /data/institutions_index.json is missing.
+          const effectiveIndex =
+            idx && idx.length > 0 && Array.isArray(idx)
+              ? idx
+              : inst.map((d) => ({
+                  unitid: d.unitid,
+                  name: d.name,
+                  city: d.city,
+                  state: d.state,
+                }));
+
+          setIndex(effectiveIndex);
           setAllInstitutions(inst);
           setLocationMap(locMap);
         }
