@@ -18,7 +18,7 @@ import {
 
 const ProfileDashboardPage: React.FC = () => {
   const loading = useOnboardingGuard(7);
-  const { targetUnitIds, user, studentProfile } = useOnboardingContext();
+  const { targetUnitIds, user, studentProfile, logout } = useOnboardingContext();
   const [institutions, setInstitutions] = useState<Institution[]>([]);
   const [fetching, setFetching] = useState(false);
   const [metricsByUnit, setMetricsByUnit] = useState<
@@ -202,13 +202,25 @@ const ProfileDashboardPage: React.FC = () => {
           <h1 className="text-3xl font-bold text-brand-dark">
             Your Admissions Dashboard
           </h1>
-          <button
-            type="button"
-            onClick={() => navigate("/profile/name")}
-            className="px-4 py-2 text-sm font-semibold rounded-lg border border-brand-secondary text-brand-secondary bg-white hover:bg-brand-secondary hover:text-white transition"
-          >
-            Edit Profile
-          </button>
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              onClick={() => navigate("/profile/name")}
+              className="px-4 py-2 text-sm font-semibold rounded-lg border border-brand-secondary text-brand-secondary bg-white hover:bg-brand-secondary hover:text-white transition"
+            >
+              Edit Profile
+            </button>
+            <button
+              type="button"
+              onClick={async () => {
+                await logout();
+                navigate("/", { replace: true });
+              }}
+              className="px-4 py-2 text-sm font-semibold rounded-lg border border-slate-300 text-slate-600 bg-white hover:bg-slate-100 transition"
+            >
+              Log Out
+            </button>
+          </div>
         </div>
 
         {/* Student snapshot */}

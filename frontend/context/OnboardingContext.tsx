@@ -30,6 +30,7 @@ type OnboardingContextValue = {
   setTargetUnitIds: (ids: number[]) => void;
   studentProfile: StudentProfileSummary;
   setStudentProfile: (update: Partial<StudentProfileSummary>) => void;
+  logout: () => Promise<void>;
 };
 
 const OnboardingContext = createContext<OnboardingContextValue | undefined>(
@@ -232,6 +233,21 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
     setStudentProfileState((prev) => ({ ...prev, ...update }));
   };
 
+  const logout = async () => {
+    try {
+      if (supabase) {
+        await supabase.auth.signOut();
+      }
+    } catch {
+      // ignore sign-out errors; we'll still clear local state
+    } finally {
+      setUser(null);
+      setOnboardingStep(0);
+      setTargetUnitIds([]);
+      setStudentProfileState({});
+    }
+  };
+
   const value: OnboardingContextValue = {
     user,
     onboardingStep,
@@ -241,6 +257,7 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
     setTargetUnitIds,
     studentProfile,
     setStudentProfile,
+    logout,
   };
 
   return (
