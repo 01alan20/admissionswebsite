@@ -58,7 +58,7 @@ const ProfileLoginPage: React.FC = () => {
         </p>
 
         <h2 className="text-xl font-semibold text-gray-800 mb-2">
-          Step 0: Secure your profile with a magic link
+          Secure your profile with a magic link
         </h2>
         <p className="text-sm text-gray-600 mb-4">
           Enter your email to get a one-time magic link. Use the same email any time to
