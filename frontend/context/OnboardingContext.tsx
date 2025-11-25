@@ -61,8 +61,70 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
     {}
   );
 
+  const loadProfileForUser = async (currentUser: User, cancelledRef: { value: boolean }) => {
+    const { data: profile } = await supabase
+      .from("profiles")
+      .select("onboarding_step, academic_stats, target_universities, extracurriculars")
+      .eq("user_id", currentUser.id)
+      .maybeSingle();
+
+    if (cancelledRef.value) return;
+
+    setOnboardingStep(profile?.onboarding_step ?? 0);
+
+    const academic = (profile?.academic_stats || {}) as any;
+    const extras = (profile?.extracurriculars || []) as any;
+    setStudentProfileState({
+      firstName: academic.first_name ?? undefined,
+      lastName: academic.last_name ?? undefined,
+      country: academic.country ?? undefined,
+      city: academic.city ?? undefined,
+      gpa:
+        typeof academic.gpa === "number"
+          ? academic.gpa
+          : academic.gpa != null
+          ? Number(academic.gpa)
+          : null,
+      classRank: academic.class_rank ?? null,
+      satMath:
+        typeof academic.sat_math === "number"
+          ? academic.sat_math
+          : academic.sat_math != null
+          ? Number(academic.sat_math)
+          : null,
+      satEBRW:
+        typeof academic.sat_ebrwr === "number"
+          ? academic.sat_ebrwr
+          : academic.sat_ebrwr != null
+          ? Number(academic.sat_ebrwr)
+          : null,
+      actComposite:
+        typeof academic.act_composite === "number"
+          ? academic.act_composite
+          : academic.act_composite != null
+          ? Number(academic.act_composite)
+          : null,
+      recScore:
+        typeof academic.rec_score === "number"
+          ? academic.rec_score
+          : academic.rec_score != null
+          ? Number(academic.rec_score)
+          : null,
+      activities: Array.isArray(extras) ? (extras as Activity[]) : [],
+    });
+
+    const targets = (profile?.target_universities as any) || [];
+    if (Array.isArray(targets)) {
+      setTargetUnitIds(
+        targets
+          .map((v) => Number(v))
+          .filter((v) => Number.isFinite(v)) as number[]
+      );
+    }
+  };
+
   useEffect(() => {
-    let cancelled = false;
+    const cancelled = { value: false };
     (async () => {
       try {
         // Handle magic-link callback: if the URL fragment contains access / refresh
@@ -97,7 +159,7 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
         const { data } = await supabase.auth.getUser();
         const currentUser = data?.user ?? null;
         if (!currentUser) {
-          if (!cancelled) {
+          if (!cancelled.value) {
             setUser(null);
             setOnboardingStep(0);
             setLoading(false);
@@ -105,70 +167,13 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
           return;
         }
 
-        const { data: profile } = await supabase
-          .from("profiles")
-          .select("onboarding_step, academic_stats, target_universities, extracurriculars")
-          .eq("user_id", currentUser.id)
-          .maybeSingle();
-
-        if (!cancelled) {
+        if (!cancelled.value) {
           setUser(currentUser);
-          setOnboardingStep(profile?.onboarding_step ?? 0);
-
-          const academic = (profile?.academic_stats || {}) as any;
-          const extras = (profile?.extracurriculars || []) as any;
-          setStudentProfileState({
-            firstName: academic.first_name ?? undefined,
-            lastName: academic.last_name ?? undefined,
-            country: academic.country ?? undefined,
-            city: academic.city ?? undefined,
-            gpa:
-              typeof academic.gpa === "number"
-                ? academic.gpa
-                : academic.gpa != null
-                ? Number(academic.gpa)
-                : null,
-            classRank: academic.class_rank ?? null,
-            satMath:
-              typeof academic.sat_math === "number"
-                ? academic.sat_math
-                : academic.sat_math != null
-                ? Number(academic.sat_math)
-                : null,
-            satEBRW:
-              typeof academic.sat_ebrwr === "number"
-                ? academic.sat_ebrwr
-                : academic.sat_ebrwr != null
-                ? Number(academic.sat_ebrwr)
-                : null,
-            actComposite:
-              typeof academic.act_composite === "number"
-                ? academic.act_composite
-                : academic.act_composite != null
-                ? Number(academic.act_composite)
-                : null,
-            recScore:
-              typeof academic.rec_score === "number"
-                ? academic.rec_score
-                : academic.rec_score != null
-                ? Number(academic.rec_score)
-                : null,
-            activities: Array.isArray(extras) ? (extras as Activity[]) : [],
-          });
-
-          const targets = (profile?.target_universities as any) || [];
-          if (Array.isArray(targets)) {
-            setTargetUnitIds(
-              targets
-                .map((v) => Number(v))
-                .filter((v) => Number.isFinite(v)) as number[]
-            );
-          }
-
+          await loadProfileForUser(currentUser, cancelled);
           setLoading(false);
         }
       } catch (_err) {
-        if (!cancelled) {
+        if (!cancelled.value) {
           setUser(null);
           setOnboardingStep(0);
           setLoading(false);
@@ -176,9 +181,26 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
       }
     })();
     return () => {
-      cancelled = true;
+      cancelled.value = true;
     };
   }, []);
+
+  // When a user is set directly (e.g., after password login), refresh their profile
+  // from Supabase so onboarding picks up existing data.
+  useEffect(() => {
+    const cancelled = { value: false };
+    (async () => {
+      if (!user) return;
+      try {
+        await loadProfileForUser(user, cancelled);
+      } catch {
+        // ignore; initial load effect will have handled first render case
+      }
+    })();
+    return () => {
+      cancelled.value = true;
+    };
+  }, [user?.id]);
 
   const setOnboardingStepRemote = async (
     step: number,
