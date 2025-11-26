@@ -366,6 +366,7 @@ const ExplorePage: React.FC = () => {
                 { value: 'required', label: 'Test Required' },
                 { value: 'flexible', label: 'Test Flexible' },
                 { value: 'optional', label: 'Test Optional' },
+                { value: 'blind', label: 'Test Blind / Not Considered' },
               ].map(({ value, label }) => (
                 <button
                   key={value}
@@ -583,12 +584,12 @@ function matchesTuitionBucket(tuition: number, bucket: string): boolean {
 }
 
 function formatTestPolicy(value: string | null | undefined): string {
+  const category = categorizeTestPolicy(value ?? '');
+  if (category === 'flexible') return 'Test flexible';
+  if (category === 'optional') return 'Test optional';
+  if (category === 'not_considered') return 'Test blind';
   if (!value) return 'Unknown';
-  const raw = value.trim();
-  const lower = raw.toLowerCase();
-  if (lower === 'test flexible') return 'Test flexible';
-  if (lower === 'test optional') return 'Test optional';
-  return raw;
+  return 'Required';
 }
 
 function cleanCipTitle(value: string | null | undefined): string {
@@ -657,7 +658,8 @@ function filterInstitutions(
       return testPolicy.some((tp) => {
         if (tp === 'required') return policyCategory === 'required';
         if (tp === 'flexible') return policyCategory === 'flexible';
-        if (tp === 'optional') return policyCategory === 'optional' || policyCategory === 'not_considered';
+        if (tp === 'optional') return policyCategory === 'optional';
+        if (tp === 'blind') return policyCategory === 'not_considered';
         return false;
       });
     });

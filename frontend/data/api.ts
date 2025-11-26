@@ -37,6 +37,33 @@ type InstitutionSites = {
   financial_aid_url?: string | null;
 };
 
+const TEST_POLICY_OVERRIDES: Record<number, string> = {
+  130794: "Test flexible", // Yale University
+};
+
+const applyTestPolicyOverride = (
+  unitid: number | null | undefined,
+  policy: string | null | undefined
+): string => {
+  const id = Number(unitid);
+  const override = Number.isFinite(id) ? TEST_POLICY_OVERRIDES[id] : undefined;
+  const base = (policy ?? "").trim();
+  return override ?? base;
+};
+
+const normalizeTestPolicy = (
+  unitid: number | null | undefined,
+  policy: string | null | undefined
+): string => {
+  const raw = applyTestPolicyOverride(unitid, policy);
+  const lower = raw.toLowerCase();
+  if (lower.includes("blind") || lower.includes("not considered")) return "Test blind";
+  if (lower.includes("flexible") || lower.includes("recommended")) return "Test flexible";
+  if (lower.includes("optional")) return "Test optional";
+  if (lower.includes("required")) return "Required";
+  return raw || "Required";
+};
+
 let institutionSitesPromise: Promise<Map<number, InstitutionSites>> | null = null;
 
 async function getInstitutionSitesMap(): Promise<Map<number, InstitutionSites>> {
@@ -119,25 +146,28 @@ export async function getLocationTypeMap(): Promise<Map<number, string>> {
 
 export async function getAllInstitutions(): Promise<Institution[]> {
   const data = await getJSON<any[]>("/data/institutions.json");
-  return data.map((d) => ({
-    unitid: d.unitid,
-    name: d.name,
-    city: d.city,
-    state: d.state,
-    control: d.control,
-    level: d.level,
-    acceptance_rate: pctToDecimal(d.acceptance_rate),
-    yield: pctToDecimal(d.yield),
-    test_policy: d.test_policy,
-    major_families: Array.isArray(d.major_families) ? d.major_families : [],
-    majors_cip_two_digit: Array.isArray(d.majors_cip_two_digit) ? d.majors_cip_two_digit : undefined,
-    majors_cip_four_digit: Array.isArray(d.majors_cip_four_digit) ? d.majors_cip_four_digit : undefined,
-    majors_cip_six_digit: Array.isArray(d.majors_cip_six_digit) ? d.majors_cip_six_digit : undefined,
-    tuition_2023_24_in_state: d.tuition_2023_24_in_state ?? undefined,
-    tuition_2023_24_out_of_state: d.tuition_2023_24_out_of_state ?? undefined,
-    tuition_2023_24: d.tuition_2023_24 ?? undefined,
-    intl_enrollment_pct: pctToDecimal(d.intl_enrollment_pct),
-  }));
+  return data.map((d) => {
+    const unitid = Number(d.unitid);
+    return {
+      unitid,
+      name: d.name,
+      city: d.city,
+      state: d.state,
+      control: d.control,
+      level: d.level,
+      acceptance_rate: pctToDecimal(d.acceptance_rate),
+      yield: pctToDecimal(d.yield),
+      test_policy: normalizeTestPolicy(unitid, d.test_policy),
+      major_families: Array.isArray(d.major_families) ? d.major_families : [],
+      majors_cip_two_digit: Array.isArray(d.majors_cip_two_digit) ? d.majors_cip_two_digit : undefined,
+      majors_cip_four_digit: Array.isArray(d.majors_cip_four_digit) ? d.majors_cip_four_digit : undefined,
+      majors_cip_six_digit: Array.isArray(d.majors_cip_six_digit) ? d.majors_cip_six_digit : undefined,
+      tuition_2023_24_in_state: d.tuition_2023_24_in_state ?? undefined,
+      tuition_2023_24_out_of_state: d.tuition_2023_24_out_of_state ?? undefined,
+      tuition_2023_24: d.tuition_2023_24 ?? undefined,
+      intl_enrollment_pct: pctToDecimal(d.intl_enrollment_pct),
+    };
+  });
 }
 
 export async function getInstitutionDetail(unitid: string | number): Promise<InstitutionDetail> {
@@ -153,10 +183,12 @@ export async function getInstitutionDetail(unitid: string | number): Promise<Ins
   let website: string | null | undefined = profile.website;
   let admissions_url: string | null | undefined = profile.admissions_url;
   let financial_aid_url: string | null | undefined = profile.financial_aid_url;
+  const unitIdNum = Number(profile.unitid);
+  const testPolicy = normalizeTestPolicy(unitIdNum, profile.test_policy);
 
   try {
     const sitesMap = await getInstitutionSitesMap();
-    const sites = sitesMap.get(Number(profile.unitid));
+    const sites = sitesMap.get(unitIdNum);
     if (sites) {
       if (!website && sites.website) website = sites.website;
       if (!admissions_url && sites.admissions_url) admissions_url = sites.admissions_url;
@@ -166,9 +198,20 @@ export async function getInstitutionDetail(unitid: string | number): Promise<Ins
     // fall back to detail file values only
   }
 
+  const requirementsRaw = detail.requirements ?? {
+    required: [],
+    considered: [],
+    not_considered: [],
+    test_policy: testPolicy ?? "",
+  };
+  const requirements = {
+    ...requirementsRaw,
+    test_policy: normalizeTestPolicy(unitIdNum, requirementsRaw.test_policy || testPolicy),
+  };
+
   return {
     profile: {
-      unitid: profile.unitid,
+      unitid: unitIdNum,
       name: profile.name,
       city: profile.city,
       state: profile.state,
@@ -178,7 +221,7 @@ export async function getInstitutionDetail(unitid: string | number): Promise<Ins
       website: website ?? "",
       admissions_url: admissions_url ?? null,
       financial_aid_url: financial_aid_url ?? null,
-      test_policy: profile.test_policy,
+      test_policy: testPolicy,
       major_families: Array.isArray(profile.major_families) ? profile.major_families : [],
       intl_enrollment_pct: pctToDecimal(profile.intl_enrollment_pct),
       tuition_summary: {
@@ -195,12 +238,7 @@ export async function getInstitutionDetail(unitid: string | number): Promise<Ins
         total_enrollment: outcomes.total_enrollment ?? null,
       },
     },
-    requirements: detail.requirements ?? {
-      required: [],
-      considered: [],
-      not_considered: [],
-      test_policy: profile.test_policy ?? "",
-    },
+    requirements,
     support_notes,
   } as InstitutionDetail;
 }

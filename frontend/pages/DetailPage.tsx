@@ -6,6 +6,7 @@ import {
   InstitutionMajorsByInstitution,
   MajorsMeta,
 } from '../types';
+import { categorizeTestPolicy } from '../utils/admissionsModel';
 // removed tuition trend chart
 import {
   getInstitutionDetail,
@@ -488,10 +489,10 @@ function cleanCipTitle(value: string | null | undefined): string {
 }
 
 function formatTestPolicy(value: string | null | undefined): string {
+  const category = categorizeTestPolicy(value ?? '');
+  if (category === 'flexible') return 'Test flexible';
+  if (category === 'optional') return 'Test optional';
+  if (category === 'not_considered') return 'Test blind';
   if (!value) return 'Unknown';
-  const raw = value.trim();
-  const lower = raw.toLowerCase();
-  if (lower === 'test flexible') return 'Test flexible';
-  if (lower === 'test optional') return 'Test optional';
-  return raw;
+  return 'Required';
 }
