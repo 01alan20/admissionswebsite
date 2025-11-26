@@ -127,20 +127,37 @@ const ExplorePage: React.FC = () => {
 
       let filterUnitIds: number[] | null = null;
       if (hasFilter) {
-        const all = allInstitutions || await getAllInstitutions();
-        if (!allInstitutions) setAllInstitutions(all);
-        const locationMap = await getLocationTypeMap();
-        filterUnitIds = filterInstitutions(
-          all,
-          budget,
-          selectivity,
-          testPolicy,
-          selectedMajors,
-          selectedStates,
-          locationTypes,
-          majorsByInstitution,
-          locationMap,
-        ).map((i) => i.unitid);
+        try {
+          const all = allInstitutions || await getAllInstitutions();
+          if (!allInstitutions) setAllInstitutions(all);
+          const locationMap = await getLocationTypeMap();
+          filterUnitIds = filterInstitutions(
+            all,
+            budget,
+            selectivity,
+            testPolicy,
+            selectedMajors,
+            selectedStates,
+            locationTypes,
+            majorsByInstitution,
+            locationMap,
+          ).map((i) => i.unitid);
+        } catch (err) {
+          // If location CSV or other optional data fails, fall back to filtering without location
+          const all = allInstitutions || await getAllInstitutions();
+          if (!allInstitutions) setAllInstitutions(all);
+          filterUnitIds = filterInstitutions(
+            all,
+            budget,
+            selectivity,
+            testPolicy,
+            selectedMajors,
+            selectedStates,
+            [],
+            majorsByInstitution,
+            null,
+          ).map((i) => i.unitid);
+        }
       }
 
       let ids: number[];
@@ -683,6 +700,9 @@ function filterInstitutions(
   }
 
   if (selectedLocationTypes.length > 0 && locationMap) {
+    if (locationMap.size === 0) {
+      return results;
+    }
     const typeSet = new Set(selectedLocationTypes);
     results = results.filter((inst) => {
       const rawLoc = locationMap.get(inst.unitid);

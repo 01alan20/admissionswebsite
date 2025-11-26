@@ -116,26 +116,35 @@ let locationTypeMapPromise: Promise<Map<number, string>> | null = null;
 export async function getLocationTypeMap(): Promise<Map<number, string>> {
   if (!locationTypeMapPromise) {
     locationTypeMapPromise = (async () => {
-      const text = await getText("/data/uni_location_size.csv");
-      const lines = text.split(/\r?\n/).filter((l) => l.trim().length > 0);
       const map = new Map<number, string>();
-      if (lines.length <= 1) return map;
+      const tryPaths = ["/data/uni_location_size.csv", "/uni_location_size.csv"];
+      for (const path of tryPaths) {
+        try {
+          const text = await getText(path);
+          const lines = text.split(/\r?\n/).filter((l) => l.trim().length > 0);
+          if (lines.length <= 1) continue;
 
-      const headerCols = parseCsvLine(lines[0]);
-      const unitidIdx = headerCols.findIndex((h) => h.trim().toLowerCase() === "unitid");
-      const locationIdx = headerCols.findIndex((h) => h.trim().toLowerCase() === "unilocation");
-      if (unitidIdx === -1 || locationIdx === -1) return map;
+          const headerCols = parseCsvLine(lines[0]);
+          const unitidIdx = headerCols.findIndex((h) => h.trim().toLowerCase() === "unitid");
+          const locationIdx = headerCols.findIndex((h) => h.trim().toLowerCase() === "unilocation");
+          if (unitidIdx === -1 || locationIdx === -1) continue;
 
-      for (let i = 1; i < lines.length; i++) {
-        const line = lines[i];
-        if (!line.trim()) continue;
-        const cols = parseCsvLine(line);
-        if (cols.length <= Math.max(unitidIdx, locationIdx)) continue;
-        const id = Number(cols[unitidIdx]);
-        if (!Number.isFinite(id)) continue;
-        const locRaw = cols[locationIdx].trim();
-        if (!locRaw) continue;
-        map.set(id, locRaw);
+          for (let i = 1; i < lines.length; i++) {
+            const line = lines[i];
+            if (!line.trim()) continue;
+            const cols = parseCsvLine(line);
+            if (cols.length <= Math.max(unitidIdx, locationIdx)) continue;
+            const id = Number(cols[unitidIdx]);
+            if (!Number.isFinite(id)) continue;
+            const locRaw = cols[locationIdx].trim();
+            if (!locRaw) continue;
+            map.set(id, locRaw);
+          }
+
+          if (map.size > 0) break;
+        } catch {
+          // try next path
+        }
       }
 
       return map;

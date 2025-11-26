@@ -579,6 +579,9 @@ function filterInstitutions(
   }
 
   if (selectedLocationTypes.length > 0 && locationMap) {
+    if (locationMap.size === 0) {
+      return results;
+    }
     const typeSet = new Set(selectedLocationTypes);
     results = results.filter((inst) => {
       const rawLoc = locationMap.get(inst.unitid);
