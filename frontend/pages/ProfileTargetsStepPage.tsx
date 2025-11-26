@@ -312,9 +312,9 @@ const ProfileTargetsStepPage: React.FC = () => {
                 </summary>
                 <div className="px-3 py-2 space-y-2">
                   {[
-                    { value: "optional", label: "Test Optional" },
                     { value: "required", label: "Test Required" },
-                    { value: "notconsidered", label: "Test Not Considered" },
+                    { value: "flexible", label: "Test Flexible" },
+                    { value: "optional", label: "Test Optional" },
                   ].map(({ value, label }) => (
                     <button
                       key={value}

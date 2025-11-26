@@ -1,6 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
 import { Institution, InstitutionMajorsByInstitution, MajorsMeta } from '../types';
+import { categorizeTestPolicy } from '../utils/admissionsModel';
 import {
   getInstitutionIndex,
   getTopUnitIdsByApplicants,
@@ -63,7 +64,7 @@ const ExplorePage: React.FC = () => {
   // Filters (dropdowns)
   const [budget, setBudget] = useState<string[]>([]); // tuition buckets, e.g. "0-10000", "70000+"
   const [selectivity, setSelectivity] = useState<string[]>([]); // selective, reach, target, balanced, safety, supersafe
-  const [testPolicy, setTestPolicy] = useState<string[]>([]); // optional, required, notconsidered
+  const [testPolicy, setTestPolicy] = useState<string[]>([]); // required, flexible, optional
   const [majorQuery, setMajorQuery] = useState<string>('');
   const [selectedMajors, setSelectedMajors] = useState<string[]>([]); // CIP 4-digit codes
   const [allInstitutions, setAllInstitutions] = useState<Institution[] | null>(null);
@@ -362,9 +363,9 @@ const ExplorePage: React.FC = () => {
             <summary className="cursor-pointer px-3 py-2 font-semibold">Testing Expectations</summary>
             <div className="px-3 py-2 space-y-2">
               {[
-                { value: 'optional', label: 'Test Optional' },
                 { value: 'required', label: 'Test Required' },
-                { value: 'notconsidered', label: 'Test Not Considered' },
+                { value: 'flexible', label: 'Test Flexible' },
+                { value: 'optional', label: 'Test Optional' },
               ].map(({ value, label }) => (
                 <button
                   key={value}
@@ -585,7 +586,7 @@ function formatTestPolicy(value: string | null | undefined): string {
   if (!value) return 'Unknown';
   const raw = value.trim();
   const lower = raw.toLowerCase();
-  if (lower === 'test flexible') return 'Flex optional';
+  if (lower === 'test flexible') return 'Test flexible';
   if (lower === 'test optional') return 'Test optional';
   return raw;
 }
@@ -652,11 +653,11 @@ function filterInstitutions(
 
   if (testPolicy.length > 0) {
     results = results.filter((inst) => {
-      const policy = (inst.test_policy || '').toLowerCase();
+      const policyCategory = categorizeTestPolicy(inst.test_policy);
       return testPolicy.some((tp) => {
-        if (tp === 'optional') return policy.includes('optional') || policy.includes('flexible');
-        if (tp === 'required') return policy.includes('required');
-        if (tp === 'notconsidered') return policy.includes('not considered');
+        if (tp === 'required') return policyCategory === 'required';
+        if (tp === 'flexible') return policyCategory === 'flexible';
+        if (tp === 'optional') return policyCategory === 'optional' || policyCategory === 'not_considered';
         return false;
       });
     });

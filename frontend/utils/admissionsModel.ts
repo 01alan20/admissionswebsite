@@ -108,7 +108,11 @@ export type SchoolTestMetrics = {
   act75?: number | null;
 };
 
-export type TestPolicyCategory = "required" | "optional" | "not_considered";
+export type TestPolicyCategory =
+  | "required"
+  | "flexible"
+  | "optional"
+  | "not_considered";
 
 export const categorizeTestPolicy = (
   rawPolicy: string | null | undefined
@@ -117,6 +121,9 @@ export const categorizeTestPolicy = (
   const lower = rawPolicy.toLowerCase();
   if (lower.includes("blind") || lower.includes("not considered")) {
     return "not_considered";
+  }
+  if (lower.includes("flexible") || lower.includes("recommended")) {
+    return "flexible";
   }
   if (lower.includes("optional")) {
     return "optional";

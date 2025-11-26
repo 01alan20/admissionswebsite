@@ -491,7 +491,7 @@ function formatTestPolicy(value: string | null | undefined): string {
   if (!value) return 'Unknown';
   const raw = value.trim();
   const lower = raw.toLowerCase();
-  if (lower === 'test flexible') return 'Flex optional';
+  if (lower === 'test flexible') return 'Test flexible';
   if (lower === 'test optional') return 'Test optional';
   return raw;
 }
