@@ -9,6 +9,76 @@ import {
   type InstitutionIndex,
   type Institution,
 } from "../data/api";
+import { categorizeTestPolicy } from "../utils/admissionsModel";
+
+const STATE_NAMES: Record<string, string> = {
+  AL: "Alabama",
+  AK: "Alaska",
+  AZ: "Arizona",
+  AR: "Arkansas",
+  CA: "California",
+  CO: "Colorado",
+  CT: "Connecticut",
+  DE: "Delaware",
+  FL: "Florida",
+  GA: "Georgia",
+  HI: "Hawaii",
+  ID: "Idaho",
+  IL: "Illinois",
+  IN: "Indiana",
+  IA: "Iowa",
+  KS: "Kansas",
+  KY: "Kentucky",
+  LA: "Louisiana",
+  ME: "Maine",
+  MD: "Maryland",
+  MA: "Massachusetts",
+  MI: "Michigan",
+  MN: "Minnesota",
+  MS: "Mississippi",
+  MO: "Missouri",
+  MT: "Montana",
+  NE: "Nebraska",
+  NV: "Nevada",
+  NH: "New Hampshire",
+  NJ: "New Jersey",
+  NM: "New Mexico",
+  NY: "New York",
+  NC: "North Carolina",
+  ND: "North Dakota",
+  OH: "Ohio",
+  OK: "Oklahoma",
+  OR: "Oregon",
+  PA: "Pennsylvania",
+  RI: "Rhode Island",
+  SC: "South Carolina",
+  SD: "South Dakota",
+  TN: "Tennessee",
+  TX: "Texas",
+  UT: "Utah",
+  VT: "Vermont",
+  VA: "Virginia",
+  WA: "Washington",
+  WV: "West Virginia",
+  WI: "Wisconsin",
+  WY: "Wyoming",
+  DC: "District of Columbia",
+  PR: "Puerto Rico",
+  GU: "Guam",
+  AS: "American Samoa",
+  MP: "Northern Mariana Islands",
+  VI: "U.S. Virgin Islands",
+};
+
+const toFullStateName = (value?: string | null): string => {
+  if (!value) return "";
+  const v = value.trim();
+  if (!v) return "";
+  if (v.length === 2) {
+    return STATE_NAMES[v.toUpperCase()] || v;
+  }
+  return v;
+};
 
 const ProfileTargetsStepPage: React.FC = () => {
   const loading = useOnboardingGuard(7);
@@ -82,76 +152,6 @@ const ProfileTargetsStepPage: React.FC = () => {
     };
   }, [loading]);
 
-  // State helpers (reuse logic from ExplorePage)
-  const STATE_NAMES: Record<string, string> = {
-    AL: "Alabama",
-    AK: "Alaska",
-    AZ: "Arizona",
-    AR: "Arkansas",
-    CA: "California",
-    CO: "Colorado",
-    CT: "Connecticut",
-    DE: "Delaware",
-    FL: "Florida",
-    GA: "Georgia",
-    HI: "Hawaii",
-    ID: "Idaho",
-    IL: "Illinois",
-    IN: "Indiana",
-    IA: "Iowa",
-    KS: "Kansas",
-    KY: "Kentucky",
-    LA: "Louisiana",
-    ME: "Maine",
-    MD: "Maryland",
-    MA: "Massachusetts",
-    MI: "Michigan",
-    MN: "Minnesota",
-    MS: "Mississippi",
-    MO: "Missouri",
-    MT: "Montana",
-    NE: "Nebraska",
-    NV: "Nevada",
-    NH: "New Hampshire",
-    NJ: "New Jersey",
-    NM: "New Mexico",
-    NY: "New York",
-    NC: "North Carolina",
-    ND: "North Dakota",
-    OH: "Ohio",
-    OK: "Oklahoma",
-    OR: "Oregon",
-    PA: "Pennsylvania",
-    RI: "Rhode Island",
-    SC: "South Carolina",
-    SD: "South Dakota",
-    TN: "Tennessee",
-    TX: "Texas",
-    UT: "Utah",
-    VT: "Vermont",
-    VA: "Virginia",
-    WA: "Washington",
-    WV: "West Virginia",
-    WI: "Wisconsin",
-    WY: "Wyoming",
-    DC: "District of Columbia",
-    PR: "Puerto Rico",
-    GU: "Guam",
-    AS: "American Samoa",
-    MP: "Northern Mariana Islands",
-    VI: "U.S. Virgin Islands",
-  };
-
-  const toFullStateName = (value?: string | null): string => {
-    if (!value) return "";
-    const v = value.trim();
-    if (!v) return "";
-    if (v.length === 2) {
-      return STATE_NAMES[v.toUpperCase()] || v;
-    }
-    return v;
-  };
-
   const allStates = useMemo(() => {
     const set = new Set<string>();
     for (const i of index) {
@@ -180,23 +180,30 @@ const ProfileTargetsStepPage: React.FC = () => {
   const results = useMemo<Institution[]>(() => {
     if (!allInstitutions) return [];
     const q = query.trim().toLowerCase();
-    let base = allInstitutions;
+    const filtered = filterInstitutions(
+      allInstitutions,
+      budget,
+      selectivity,
+      testPolicy,
+      selectedStates,
+      locationTypes,
+      locationMap
+    );
 
-    // For now, ignore the advanced filters and just apply the search text so
-    // we always show universities during onboarding.
-    if (!q) return base.slice(0, 50);
+    const searched = q
+      ? filtered.filter((inst) => {
+          const hay = `${inst.name ?? ""} ${inst.city ?? ""} ${inst.state ?? ""}`.toLowerCase();
+          return hay.includes(q);
+        })
+      : filtered;
 
-    const filtered = base.filter((inst) => {
-      const hay = `${inst.name ?? ""} ${inst.city ?? ""} ${inst.state ?? ""}`.toLowerCase();
-      return hay.includes(q);
-    });
-    return filtered.length > 0 ? filtered.slice(0, 50) : base.slice(0, 50);
-  }, [allInstitutions, query]);
+    return searched.slice(0, 50);
+  }, [allInstitutions, budget, selectivity, testPolicy, selectedStates, locationTypes, locationMap, query]);
 
   if (loading) {
     return (
       <div className="max-w-xl mx-auto text-center py-12">
-        <p className="text-gray-600 text-sm">Loading…</p>
+        <p className="text-gray-600 text-sm">Loading...</p>
       </div>
     );
   }
@@ -315,6 +322,7 @@ const ProfileTargetsStepPage: React.FC = () => {
                     { value: "required", label: "Test Required" },
                     { value: "flexible", label: "Test Flexible" },
                     { value: "optional", label: "Test Optional" },
+                    { value: "notconsidered", label: "Test Not Considered" },
                   ].map(({ value, label }) => (
                     <button
                       key={value}
@@ -423,7 +431,7 @@ const ProfileTargetsStepPage: React.FC = () => {
 
             <div className="space-y-3 max-h-[420px] overflow-y-auto pr-1">
               {localLoading && (
-                <p className="text-sm text-slate-500">Loading universities…</p>
+                <p className="text-sm text-slate-500">Loading universities...</p>
               )}
               {!localLoading &&
                 results.map((inst) => {
@@ -485,3 +493,100 @@ const ProfileTargetsStepPage: React.FC = () => {
 };
 
 export default ProfileTargetsStepPage;
+
+function matchesTuitionBucket(tuition: number, bucket: string): boolean {
+  if (!Number.isFinite(tuition)) return false;
+  if (bucket.endsWith("+")) {
+    const min = Number(bucket.slice(0, -1));
+    if (Number.isNaN(min)) return false;
+    return tuition >= min;
+  }
+  const [minStr, maxStr] = bucket.split("-");
+  const min = Number(minStr);
+  const max = Number(maxStr);
+  if (Number.isNaN(min) || Number.isNaN(max)) return false;
+  return tuition >= min && tuition < max;
+}
+
+function normalizeLocationType(raw: string | null | undefined): string | null {
+  if (!raw) return null;
+  const v = raw.trim().toLowerCase();
+  if (!v) return null;
+  if (v.startsWith("city")) return "city";
+  if (v.startsWith("suburb")) return "suburban";
+  if (v.startsWith("town")) return "town";
+  if (v.startsWith("rural")) return "rural";
+  return null;
+}
+
+function filterInstitutions(
+  institutions: Institution[],
+  budget: string[],
+  selectivity: string[],
+  testPolicy: string[],
+  selectedStates: string[],
+  selectedLocationTypes: string[],
+  locationMap: Map<number, string> | null
+): Institution[] {
+  let results = institutions.slice();
+
+  if (budget.length > 0) {
+    results = results.filter((inst) => {
+      const tuition =
+        inst.tuition_2023_24_out_of_state ??
+        inst.tuition_2023_24_in_state ??
+        inst.tuition_2023_24;
+      if (tuition == null) return false;
+      return budget.some((b) => matchesTuitionBucket(tuition, b));
+    });
+  }
+
+  if (selectivity.length > 0) {
+    results = results.filter((inst) => {
+      const rate = inst.acceptance_rate;
+      if (rate == null) return false;
+      return selectivity.some((s) => {
+        if (s === "selective") return rate < 0.1;
+        if (s === "reach") return rate >= 0.1 && rate < 0.25;
+        if (s === "target") return rate >= 0.25 && rate < 0.5;
+        if (s === "balanced") return rate >= 0.5 && rate < 0.7;
+        if (s === "safety") return rate >= 0.7 && rate < 0.91;
+        if (s === "supersafe") return rate >= 0.91;
+        return false;
+      });
+    });
+  }
+
+  if (testPolicy.length > 0) {
+    results = results.filter((inst) => {
+      const policyCategory = categorizeTestPolicy(inst.test_policy);
+      return testPolicy.some((tp) => {
+        if (tp === "required") return policyCategory === "required";
+        if (tp === "flexible") return policyCategory === "flexible";
+        if (tp === "optional") return policyCategory === "optional";
+        if (tp === "notconsidered") return policyCategory === "not_considered";
+        return false;
+      });
+    });
+  }
+
+  if (selectedStates.length > 0) {
+    const set = new Set(selectedStates.map((s) => s.toLowerCase()));
+    results = results.filter((inst) => {
+      const full = toFullStateName(inst.state).toLowerCase();
+      return set.has(full);
+    });
+  }
+
+  if (selectedLocationTypes.length > 0 && locationMap) {
+    const typeSet = new Set(selectedLocationTypes);
+    results = results.filter((inst) => {
+      const rawLoc = locationMap.get(inst.unitid);
+      const normalized = normalizeLocationType(rawLoc);
+      if (!normalized) return false;
+      return typeSet.has(normalized);
+    });
+  }
+
+  return results;
+}
