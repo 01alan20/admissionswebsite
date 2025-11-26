@@ -37,6 +37,12 @@ type InstitutionSites = {
   financial_aid_url?: string | null;
 };
 
+type LocationEntry = {
+  unitid: number;
+  location: string | null;
+  size?: string | null;
+};
+
 const TEST_POLICY_OVERRIDES: Record<number, string> = {
   130794: "Test flexible", // Yale University
 };
@@ -117,8 +123,30 @@ export async function getLocationTypeMap(): Promise<Map<number, string>> {
   if (!locationTypeMapPromise) {
     locationTypeMapPromise = (async () => {
       const map = new Map<number, string>();
-      const tryPaths = ["/data/uni_location_size.csv", "/uni_location_size.csv"];
-      for (const path of tryPaths) {
+      const normalizeEntry = (entry: LocationEntry) => {
+        const id = Number(entry.unitid);
+        if (!Number.isFinite(id)) return;
+        const loc = (entry.location ?? "").trim();
+        if (!loc) return;
+        map.set(id, loc);
+      };
+
+      const jsonPaths = ["/data/uni_location_size.json", "/uni_location_size.json"];
+      for (const path of jsonPaths) {
+        try {
+          const data = await getJSON<LocationEntry[]>(path);
+          if (Array.isArray(data) && data.length > 0) {
+            data.forEach(normalizeEntry);
+          }
+          if (map.size > 0) return map;
+        } catch {
+          // try next path
+        }
+      }
+
+      // Fallback to CSV parsing for older deployments
+      const csvPaths = ["/data/uni_location_size.csv", "/uni_location_size.csv"];
+      for (const path of csvPaths) {
         try {
           const text = await getText(path);
           const lines = text.split(/\r?\n/).filter((l) => l.trim().length > 0);

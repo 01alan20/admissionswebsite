@@ -261,8 +261,8 @@ const ExplorePage: React.FC = () => {
       .slice(0, 10);
   }, [majorQuery, allMajors]);
 
-  const addMajor = (m: CipMajorOption) => {
-    if (!selectedMajors.includes(m.code)) setSelectedMajors((prev) => [...prev, m.code]);
+  const toggleMajor = (m: CipMajorOption) => {
+    setSelectedMajors((prev) => toggleFromList(prev, m.code));
     setMajorQuery('');
   };
 
@@ -307,8 +307,8 @@ const ExplorePage: React.FC = () => {
     return allStates.filter((s) => s.toLowerCase().includes(q)).slice(0, 50);
   }, [stateQuery, allStates]);
 
-  const addState = (s: string) => {
-    if (!selectedStates.includes(s)) setSelectedStates((prev) => [...prev, s]);
+  const toggleState = (s: string) => {
+    setSelectedStates((prev) => toggleFromList(prev, s));
     setStateQuery('');
   };
 
@@ -409,35 +409,23 @@ const ExplorePage: React.FC = () => {
                 className="w-full p-2 border border-gray-300 rounded-md"
               />
               {stateSuggestions.length > 0 && (
-                <ul className="border border-gray-200 rounded-md divide-y max-h-80 overflow-auto">
-                  {stateSuggestions.map((s) => (
-                    <li key={s}>
+                <div className="space-y-2 max-h-80 overflow-auto">
+                  {stateSuggestions.map((s) => {
+                    const isSelected = selectedStates.includes(s);
+                    return (
                       <button
-                        className="w-full text-left px-3 py-2 hover:bg-brand-light"
-                        onClick={() => addState(s)}
+                        key={s}
+                        className={`w-full text-left px-3 py-2 rounded border ${
+                          isSelected
+                            ? 'bg-brand-light border-brand-secondary text-brand-dark'
+                            : 'bg-white border-gray-300 hover:bg-brand-light'
+                        }`}
+                        onClick={() => toggleState(s)}
                       >
                         {s}
                       </button>
-                    </li>
-                  ))}
-                </ul>
-              )}
-              {selectedStates.length > 0 && (
-                <div className="flex flex-wrap gap-2">
-                  {selectedStates.map((s) => (
-                    <span
-                      key={s}
-                      className="inline-flex items-center gap-2 px-2 py-1 bg-brand-light text-brand-dark rounded-full text-xs"
-                    >
-                      {s}
-                      <button
-                        className="text-red-600"
-                        onClick={() => setSelectedStates(selectedStates.filter((x) => x !== s))}
-                      >
-                        &times;
-                      </button>
-                    </span>
-                  ))}
+                    );
+                  })}
                 </div>
               )}
             </div>
@@ -497,37 +485,21 @@ const ExplorePage: React.FC = () => {
                 className="w-full p-2 border border-gray-300 rounded-md"
               />
               {(majorSuggestions.length > 0 || (majorQuery.trim().length < 2 && allMajors.length > 0)) && (
-                <ul className="border border-gray-200 rounded-md divide-y max-h-80 overflow-auto">
-                  {(majorQuery.trim().length < 2 ? allMajors : majorSuggestions).map((m) => (
-                    <li key={m.code}>
+                <div className="space-y-2 max-h-80 overflow-auto">
+                  {(majorQuery.trim().length < 2 ? allMajors : majorSuggestions).map((m) => {
+                    const isSelected = selectedMajors.includes(m.code);
+                    return (
                       <button
-                        className="w-full text-left px-3 py-2 hover:bg-brand-light"
-                        onClick={() => addMajor(m)}
+                        key={m.code}
+                        className={`w-full text-left px-3 py-2 rounded border ${
+                          isSelected
+                            ? 'bg-brand-light border-brand-secondary text-brand-dark'
+                            : 'bg-white border-gray-300 hover:bg-brand-light'
+                        }`}
+                        onClick={() => toggleMajor(m)}
                       >
                         {m.label}
                       </button>
-                    </li>
-                  ))}
-                </ul>
-              )}
-              {selectedMajors.length > 0 && (
-                <div className="flex flex-wrap gap-2">
-                  {selectedMajors.map((code) => {
-                    const rawTitle = majorsMeta?.four_digit?.[code] || code;
-                    const title = cleanCipTitle(rawTitle);
-                    return (
-                      <span
-                        key={code}
-                        className="inline-flex items-center gap-2 px-2 py-1 bg-brand-light text-brand-dark rounded-full text-xs"
-                      >
-                        {title}
-                        <button
-                          className="text-red-600"
-                          onClick={() => setSelectedMajors(selectedMajors.filter((x) => x !== code))}
-                        >
-                          &times;
-                        </button>
-                      </span>
                     );
                   })}
                 </div>
