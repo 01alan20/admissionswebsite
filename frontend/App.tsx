@@ -18,6 +18,7 @@ import ProfileRecommendationsStepPage from './pages/ProfileRecommendationsStepPa
 import ProfileTargetsStepPage from './pages/ProfileTargetsStepPage';
 import ProfileDashboardPage from './pages/ProfileDashboardPage';
 import { OnboardingProvider, useOnboardingContext } from './context/OnboardingContext';
+import ContactHelpPage from './pages/ContactHelpPage';
 
 const Header: React.FC = () => {
   const { user, loading } = useOnboardingContext();
@@ -41,6 +42,16 @@ const Header: React.FC = () => {
               <NavLink to="/compare" className={({ isActive }) => isActive ? activeLinkClass : linkClass}>Compare</NavLink>
               <NavLink to="/pathways" className={({ isActive }) => isActive ? activeLinkClass : linkClass}>Pathways</NavLink>
               <NavLink to="/timelines" className={({ isActive }) => isActive ? activeLinkClass : linkClass}>Timelines</NavLink>
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  isActive
+                    ? activeLinkClass
+                    : `${linkClass} border border-white/70`
+                }
+              >
+                Need Personalized Help?
+              </NavLink>
               {(!loading && !user) && (
                 <NavLink
                   to="/profile/login"
@@ -91,6 +102,7 @@ const App: React.FC = () => {
               <Route path="/review" element={<ProfileReviewPage />} />
               <Route path="/profile" element={<ProfileRoutePage />} />
               <Route path="/profile/route" element={<ProfileRoutePage />} />
+              <Route path="/contact" element={<ContactHelpPage />} />
               <Route path="/profile/login" element={<ProfileLoginPage />} />
               <Route path="/profile/name" element={<ProfileNameStepPage />} />
               <Route path="/profile/location" element={<ProfileLocationStepPage />} />

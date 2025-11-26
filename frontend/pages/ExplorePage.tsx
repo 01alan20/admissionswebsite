@@ -316,6 +316,18 @@ const ExplorePage: React.FC = () => {
     <div className="flex flex-col md:flex-row gap-6">
       <aside className="w-full md:w-72">
         <div className="bg-white p-4 rounded-lg shadow-md sticky top-24 space-y-4">
+          <div className="bg-brand-dark text-white rounded-md p-3 space-y-2">
+            <h2 className="text-sm font-semibold">Need Personalized Help?</h2>
+            <p className="text-xs text-gray-100">
+              A real person can review your profile and questions and send guidance. It&apos;s 100% free.
+            </p>
+            <Link
+              to="/contact"
+              className="inline-block mt-1 px-3 py-1 text-sm font-semibold rounded bg-white text-brand-primary hover:bg-brand-light"
+            >
+              Get personalized help
+            </Link>
+          </div>
           <form onSubmit={(e) => e.preventDefault()}>
             <input
               type="search"
