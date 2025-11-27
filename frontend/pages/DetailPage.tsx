@@ -185,9 +185,9 @@ const DetailPage: React.FC = () => {
         Back to Explore
       </Link>
 
-      <header>
-        <h1 className="text-4xl font-extrabold text-brand-dark">{profile.name}</h1>
-        <p className="text-lg text-gray-600 mt-1">
+      <header className="space-y-2">
+        <h1 className="text-3xl sm:text-4xl font-extrabold text-brand-dark leading-tight">{profile.name}</h1>
+        <p className="text-base sm:text-lg text-gray-600">
           {profile.city}, {profile.state} - {profile.control} - {profile.level}
         </p>
         <div className="flex flex-wrap gap-2 mt-4 text-sm">
@@ -202,10 +202,10 @@ const DetailPage: React.FC = () => {
         </div>
       </header>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10 items-start">
         <main className="lg:col-span-2 space-y-8">
           <div className="bg-white p-6 rounded-lg shadow-md">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
               <StatCard
                 label="Acceptance rate"
                 value={profile.outcomes.acceptance_rate ? `${(profile.outcomes.acceptance_rate * 100).toFixed(0)}%` : 'N/A'}
@@ -422,7 +422,7 @@ const DetailPage: React.FC = () => {
             </div>
           )}
         </main>
-        <aside className="space-y-6 sticky top-24">
+        <aside className="space-y-6 lg:sticky lg:top-24">
           <div className="bg-white p-6 rounded-lg shadow-md">
             <h3 className="text-xl font-bold text-brand-dark mb-4">Quick links</h3>
             <ul className="space-y-2">
@@ -465,7 +465,7 @@ const DetailPage: React.FC = () => {
             </ul>
             <p className="text-xs text-gray-500 mt-3">
               Always confirm visa requirements, scholarship forms, and exact deadlines on the official admissions and
-              financial aid sites—dates vary by program and citizenship.
+              financial aid sites - dates vary by program and citizenship.
             </p>
           </div>
         </aside>

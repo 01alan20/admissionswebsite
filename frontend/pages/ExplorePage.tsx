@@ -75,6 +75,7 @@ const ExplorePage: React.FC = () => {
   const [selectedStates, setSelectedStates] = useState<string[]>([]);
   // Location type filter
   const [locationTypes, setLocationTypes] = useState<string[]>([]);
+  const [filtersOpen, setFiltersOpen] = useState<boolean>(false);
 
   // Load index and default top 10 by applicants
   useEffect(() => {
@@ -312,258 +313,312 @@ const ExplorePage: React.FC = () => {
     setStateQuery('');
   };
 
-  return (
-    <div className="flex flex-col md:flex-row gap-6">
-      <aside className="w-full md:w-72">
-        <div className="bg-white p-4 rounded-lg shadow-md sticky top-24 space-y-4">
-          <div className="bg-brand-dark text-white rounded-md p-3 space-y-2">
-            <h2 className="text-sm font-semibold">Need Personalized Help?</h2>
-            <p className="text-xs text-gray-100">
-              A real person can review your profile and questions and send guidance. It&apos;s 100% free.
-            </p>
-            <Link
-              to="/contact"
-              className="inline-block mt-1 px-3 py-1 text-sm font-semibold rounded bg-white text-brand-primary hover:bg-brand-light"
+  const FiltersContent: React.FC<{ onClose?: () => void }> = ({ onClose }) => (
+    <div className="space-y-4">
+      <div className="bg-brand-dark text-white rounded-md p-3 space-y-2">
+        <h2 className="text-sm font-semibold">Need Personalized Help?</h2>
+        <p className="text-xs text-gray-100">
+          A real person can review your profile and questions and send guidance. It&apos;s 100% free.
+        </p>
+        <Link
+          to="/contact"
+          className="inline-block mt-1 px-3 py-1 text-sm font-semibold rounded bg-white text-brand-primary hover:bg-brand-light"
+          onClick={onClose}
+        >
+          Get personalized help
+        </Link>
+      </div>
+      <form onSubmit={(e) => e.preventDefault()}>
+        <input
+          type="search"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="Type at least 3 letters to search..."
+          className="w-full p-3 border border-gray-300 rounded-md focus:ring-brand-secondary focus:border-brand-secondary"
+        />
+      </form>
+
+      <details className="border rounded-md">
+        <summary className="cursor-pointer px-3 py-2 font-semibold">Tuition Budget (per year)</summary>
+        <div className="px-3 py-2 space-y-2">
+          {[
+            { value: '0-10000', label: '< $10k' },
+            { value: '10000-20000', label: '$10k - $20k' },
+            { value: '20000-30000', label: '$20k - $30k' },
+            { value: '30000-40000', label: '$30k - $40k' },
+            { value: '40000-50000', label: '$40k - $50k' },
+            { value: '50000-60000', label: '$50k - $60k' },
+            { value: '60000-70000', label: '$60k - $70k' },
+            { value: '70000+', label: '$70k+' },
+          ].map(({ value, label }) => (
+            <button
+              key={value}
+              onClick={() => handleBudgetChange(value)}
+              className={`w-full text-left px-3 py-2 rounded border ${
+                budget.includes(value) ? 'bg-brand-light border-brand-secondary' : 'bg-white border-gray-300'
+              }`}
             >
-              Get personalized help
-            </Link>
-          </div>
-          <form onSubmit={(e) => e.preventDefault()}>
-            <input
-              type="search"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder="Type at least 3 letters to search..."
-              className="w-full p-3 border border-gray-300 rounded-md focus:ring-brand-secondary focus:border-brand-secondary"
-            />
-          </form>
+              {label}
+            </button>
+          ))}
+        </div>
+      </details>
 
-          <details className="border rounded-md">
-            <summary className="cursor-pointer px-3 py-2 font-semibold">Tuition Budget (per year)</summary>
-            <div className="px-3 py-2 space-y-2">
-              {[
-                { value: '0-10000', label: '< $10k' },
-                { value: '10000-20000', label: '$10k - $20k' },
-                { value: '20000-30000', label: '$20k - $30k' },
-                { value: '30000-40000', label: '$30k - $40k' },
-                { value: '40000-50000', label: '$40k - $50k' },
-                { value: '50000-60000', label: '$50k - $60k' },
-                { value: '60000-70000', label: '$60k - $70k' },
-                { value: '70000+', label: '$70k+' },
-              ].map(({ value, label }) => (
-                <button
-                  key={value}
-                  onClick={() => handleBudgetChange(value)}
-                  className={`w-full text-left px-3 py-2 rounded border ${
-                    budget.includes(value) ? 'bg-brand-light border-brand-secondary' : 'bg-white border-gray-300'
-                  }`}
-                >
-                  {label}
-                </button>
-              ))}
+      <details className="border rounded-md">
+        <summary className="cursor-pointer px-3 py-2 font-semibold">Selectivity</summary>
+        <div className="px-3 py-2 space-y-2">
+          {[
+            { value: 'selective', label: 'Selective (<10%)' },
+            { value: 'reach', label: 'Reach (10% - 25%)' },
+            { value: 'target', label: 'Target (25% - 49%)' },
+            { value: 'balanced', label: 'Balanced (50% - 69%)' },
+            { value: 'safety', label: 'Safety (70% - 90%)' },
+            { value: 'supersafe', label: 'Super Safe (91%+)' },
+          ].map(({ value, label }) => (
+            <button
+              key={value}
+              onClick={() => handleSelectivityChange(value)}
+              className={`w-full text-left px-3 py-2 rounded border ${
+                selectivity.includes(value) ? 'bg-brand-light border-brand-secondary' : 'bg-white border-gray-300'
+              }`}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+      </details>
+
+      <details className="border rounded-md">
+        <summary className="cursor-pointer px-3 py-2 font-semibold">Testing Expectations</summary>
+        <div className="px-3 py-2 space-y-2">
+          {[
+            { value: 'required', label: 'Test Required' },
+            { value: 'flexible', label: 'Test Flexible' },
+            { value: 'optional', label: 'Test Optional' },
+            { value: 'blind', label: 'Test Blind / Not Considered' },
+          ].map(({ value, label }) => (
+            <button
+              key={value}
+              onClick={() => handleTestPolicyChange(value)}
+              className={`w-full text-left px-3 py-2 rounded border ${
+                testPolicy.includes(value) ? 'bg-brand-light border-brand-secondary' : 'bg-white border-gray-300'
+              }`}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+      </details>
+
+      <details className="border rounded-md">
+        <summary className="cursor-pointer px-3 py-2 font-semibold">State</summary>
+        <div className="px-3 py-2 space-y-2">
+          <input
+            type="search"
+            value={stateQuery}
+            onChange={(e) => setStateQuery(e.target.value)}
+            placeholder="Search state..."
+            className="w-full p-2 border border-gray-300 rounded-md"
+          />
+          {stateSuggestions.length > 0 && (
+            <div className="space-y-2 max-h-80 overflow-auto">
+              {stateSuggestions.map((s) => {
+                const isSelected = selectedStates.includes(s);
+                return (
+                  <button
+                    key={s}
+                    className={`w-full text-left px-3 py-2 rounded border ${
+                      isSelected
+                        ? 'bg-brand-light border-brand-secondary text-brand-dark'
+                        : 'bg-white border-gray-300 hover:bg-brand-light'
+                    }`}
+                    onClick={() => toggleState(s)}
+                  >
+                    {s}
+                  </button>
+                );
+              })}
             </div>
-          </details>
+          )}
+        </div>
+      </details>
 
-          <details className="border rounded-md">
-            <summary className="cursor-pointer px-3 py-2 font-semibold">Selectivity</summary>
-            <div className="px-3 py-2 space-y-2">
-              {[
-                { value: 'selective', label: 'Selective (<10%)' },
-                { value: 'reach', label: 'Reach (10% - 25%)' },
-                { value: 'target', label: 'Target (25% - 49%)' },
-                { value: 'balanced', label: 'Balanced (50% - 69%)' },
-                { value: 'safety', label: 'Safety (70% - 90%)' },
-                { value: 'supersafe', label: 'Super Safe (91%+)' },
-              ].map(({ value, label }) => (
-                <button
-                  key={value}
-                  onClick={() => handleSelectivityChange(value)}
-                  className={`w-full text-left px-3 py-2 rounded border ${
-                    selectivity.includes(value) ? 'bg-brand-light border-brand-secondary' : 'bg-white border-gray-300'
-                  }`}
-                >
-                  {label}
-                </button>
-              ))}
-            </div>
-          </details>
-
-          <details className="border rounded-md">
-            <summary className="cursor-pointer px-3 py-2 font-semibold">Testing Expectations</summary>
-            <div className="px-3 py-2 space-y-2">
-              {[
-                { value: 'required', label: 'Test Required' },
-                { value: 'flexible', label: 'Test Flexible' },
-                { value: 'optional', label: 'Test Optional' },
-                { value: 'blind', label: 'Test Blind / Not Considered' },
-              ].map(({ value, label }) => (
-                <button
-                  key={value}
-                  onClick={() => handleTestPolicyChange(value)}
-                  className={`w-full text-left px-3 py-2 rounded border ${
-                    testPolicy.includes(value) ? 'bg-brand-light border-brand-secondary' : 'bg-white border-gray-300'
-                  }`}
-                >
-                  {label}
-                </button>
-              ))}
-            </div>
-          </details>
-
-          <details className="border rounded-md">
-            <summary className="cursor-pointer px-3 py-2 font-semibold">State</summary>
-            <div className="px-3 py-2 space-y-2">
-              <input
-                type="search"
-                value={stateQuery}
-                onChange={(e) => setStateQuery(e.target.value)}
-                placeholder="Search state..."
-                className="w-full p-2 border border-gray-300 rounded-md"
-              />
-              {stateSuggestions.length > 0 && (
-                <div className="space-y-2 max-h-80 overflow-auto">
-                  {stateSuggestions.map((s) => {
-                    const isSelected = selectedStates.includes(s);
-                    return (
-                      <button
-                        key={s}
-                        className={`w-full text-left px-3 py-2 rounded border ${
-                          isSelected
-                            ? 'bg-brand-light border-brand-secondary text-brand-dark'
-                            : 'bg-white border-gray-300 hover:bg-brand-light'
-                        }`}
-                        onClick={() => toggleState(s)}
-                      >
-                        {s}
-                      </button>
-                    );
-                  })}
-                </div>
-              )}
-            </div>
-          </details>
-
-          <details className="border rounded-md">
-            <summary className="cursor-pointer px-3 py-2 font-semibold">Location Type</summary>
-            <div className="px-3 py-2 space-y-2">
-              {[
-                { value: 'city', label: 'City' },
-                { value: 'suburban', label: 'Suburban' },
-                { value: 'town', label: 'Town' },
-                { value: 'rural', label: 'Rural' },
-              ].map(({ value, label }) => (
-                <button
-                  key={value}
-                  onClick={() =>
-                    setLocationTypes((curr) =>
-                      curr.includes(value) ? curr.filter((v) => v !== value) : [...curr, value]
-                    )
-                  }
-                  className={`w-full text-left px-3 py-2 rounded border ${
-                    locationTypes.includes(value)
-                      ? 'bg-brand-light border-brand-secondary'
-                      : 'bg-white border-gray-300'
-                  }`}
-                >
-                  {label}
-                </button>
-              ))}
-            </div>
-          </details>
-
-          <details
-            className="border rounded-md"
-            onToggle={(e: any) => {
-              if (e.currentTarget.open) {
-                if (!allInstitutions) {
-                  getAllInstitutions().then(setAllInstitutions);
-                }
-                if (!majorsMeta) {
-                  getMajorsMeta().then(setMajorsMeta);
-                }
-                if (!majorsByInstitution) {
-                  getMajorsByInstitution().then(setMajorsByInstitution);
-                }
+      <details className="border rounded-md">
+        <summary className="cursor-pointer px-3 py-2 font-semibold">Location Type</summary>
+        <div className="px-3 py-2 space-y-2">
+          {[
+            { value: 'city', label: 'City' },
+            { value: 'suburban', label: 'Suburban' },
+            { value: 'town', label: 'Town' },
+            { value: 'rural', label: 'Rural' },
+          ].map(({ value, label }) => (
+            <button
+              key={value}
+              onClick={() =>
+                setLocationTypes((curr) =>
+                  curr.includes(value) ? curr.filter((v) => v !== value) : [...curr, value]
+                )
               }
-            }}
-          >
-            <summary className="cursor-pointer px-3 py-2 font-semibold">Major</summary>
-            <div className="px-3 py-2 space-y-2">
-              <input
-                type="search"
-                value={majorQuery}
-                onChange={(e) => setMajorQuery(e.target.value)}
-                placeholder="Search majors..."
-                className="w-full p-2 border border-gray-300 rounded-md"
-              />
-              {(majorSuggestions.length > 0 || (majorQuery.trim().length < 2 && allMajors.length > 0)) && (
-                <div className="space-y-2 max-h-80 overflow-auto">
-                  {(majorQuery.trim().length < 2 ? allMajors : majorSuggestions).map((m) => {
-                    const isSelected = selectedMajors.includes(m.code);
-                    return (
-                      <button
-                        key={m.code}
-                        className={`w-full text-left px-3 py-2 rounded border ${
-                          isSelected
-                            ? 'bg-brand-light border-brand-secondary text-brand-dark'
-                            : 'bg-white border-gray-300 hover:bg-brand-light'
-                        }`}
-                        onClick={() => toggleMajor(m)}
-                      >
-                        {m.label}
-                      </button>
-                    );
-                  })}
-                </div>
-              )}
-            </div>
-          </details>
+              className={`w-full text-left px-3 py-2 rounded border ${
+                locationTypes.includes(value)
+                  ? 'bg-brand-light border-brand-secondary'
+                  : 'bg-white border-gray-300'
+              }`}
+            >
+              {label}
+            </button>
+          ))}
         </div>
-      </aside>
+      </details>
 
-      <main className="flex-1">
-        <div className="mb-2">
-          <p className="text-gray-600">
-            Showing {displayed.length} of {filteredUnitIds.length || 0} result(s)
-          </p>
+      <details
+        className="border rounded-md"
+        onToggle={(e: any) => {
+          if (e.currentTarget.open) {
+            if (!allInstitutions) {
+              getAllInstitutions().then(setAllInstitutions);
+            }
+            if (!majorsMeta) {
+              getMajorsMeta().then(setMajorsMeta);
+            }
+            if (!majorsByInstitution) {
+              getMajorsByInstitution().then(setMajorsByInstitution);
+            }
+          }
+        }}
+      >
+        <summary className="cursor-pointer px-3 py-2 font-semibold">Major</summary>
+        <div className="px-3 py-2 space-y-2">
+          <input
+            type="search"
+            value={majorQuery}
+            onChange={(e) => setMajorQuery(e.target.value)}
+            placeholder="Search majors..."
+            className="w-full p-2 border border-gray-300 rounded-md"
+          />
+          {(majorSuggestions.length > 0 || (majorQuery.trim().length < 2 && allMajors.length > 0)) && (
+            <div className="space-y-2 max-h-80 overflow-auto">
+              {(majorQuery.trim().length < 2 ? allMajors : majorSuggestions).map((m) => {
+                const isSelected = selectedMajors.includes(m.code);
+                return (
+                  <button
+                    key={m.code}
+                    className={`w-full text-left px-3 py-2 rounded border ${
+                      isSelected
+                        ? 'bg-brand-light border-brand-secondary text-brand-dark'
+                        : 'bg-white border-gray-300 hover:bg-brand-light'
+                    }`}
+                    onClick={() => toggleMajor(m)}
+                  >
+                    {m.label}
+                  </button>
+                );
+              })}
+            </div>
+          )}
         </div>
-        {loading ? (
-          <p>Loading universities...</p>
-        ) : displayed.length > 0 ? (
-          <>
-            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
-              {displayed.map((inst) => (
-                <InstitutionCard key={inst.unitid} institution={inst} />
-              ))}
-            </div>
-            <div className="flex items-center justify-center gap-4 mt-6">
-              <button
-                onClick={prevPage}
-                disabled={page === 1}
-                className="px-3 py-2 rounded bg-gray-100 text-gray-700 disabled:opacity-50"
-              >
-                Prev
-              </button>
-              <span className="text-gray-700">
-                Page {page} of {totalPages}
-              </span>
-              <button
-                onClick={nextPage}
-                disabled={page === totalPages}
-                className="px-3 py-2 rounded bg-gray-100 text-gray-700 disabled:opacity-50"
-              >
-                Next
-              </button>
-            </div>
-          </>
-        ) : (
-          <div className="text-center py-12 bg-white rounded-lg shadow-md">
-            <h3 className="text-xl font-semibold text-gray-800">No Universities Found</h3>
-            <p className="text-gray-500 mt-2">Try a different search term or adjust filters.</p>
-          </div>
-        )}
-      </main>
+      </details>
+      {onClose && (
+        <button
+          type="button"
+          onClick={onClose}
+          className="w-full px-4 py-2 rounded-md bg-brand-primary text-white font-semibold hover:bg-brand-dark"
+        >
+          Close filters
+        </button>
+      )}
     </div>
+  );
+
+  return (
+    <>
+      <div className="flex flex-col md:flex-row gap-6">
+        <aside className="hidden md:block w-full md:w-72">
+          <div className="bg-white p-4 rounded-lg shadow-md sticky top-24 space-y-4">
+            <FiltersContent />
+          </div>
+        </aside>
+
+        <main className="flex-1">
+          <div className="flex items-center justify-between md:justify-start md:gap-4 mb-3">
+            <button
+              type="button"
+              className="md:hidden inline-flex items-center gap-2 px-4 py-2 rounded-md bg-brand-primary text-white font-semibold shadow hover:bg-brand-dark"
+              onClick={() => setFiltersOpen(true)}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h10M4 18h6" />
+              </svg>
+              Filters
+            </button>
+            <p className="text-gray-600">
+              Showing {displayed.length} of {filteredUnitIds.length || 0} result(s)
+            </p>
+          </div>
+          {loading ? (
+            <p>Loading universities...</p>
+          ) : displayed.length > 0 ? (
+            <>
+              <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+                {displayed.map((inst) => (
+                  <InstitutionCard key={inst.unitid} institution={inst} />
+                ))}
+              </div>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-6">
+                <button
+                  onClick={prevPage}
+                  disabled={page === 1}
+                  className="px-3 py-2 rounded bg-gray-100 text-gray-700 disabled:opacity-50 w-full sm:w-auto text-center"
+                >
+                  Prev
+                </button>
+                <span className="text-gray-700">
+                  Page {page} of {totalPages}
+                </span>
+                <button
+                  onClick={nextPage}
+                  disabled={page === totalPages}
+                  className="px-3 py-2 rounded bg-gray-100 text-gray-700 disabled:opacity-50 w-full sm:w-auto text-center"
+                >
+                  Next
+                </button>
+              </div>
+            </>
+          ) : (
+            <div className="text-center py-12 bg-white rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold text-gray-800">No Universities Found</h3>
+              <p className="text-gray-500 mt-2">Try a different search term or adjust filters.</p>
+            </div>
+          )}
+        </main>
+      </div>
+
+      {filtersOpen && (
+        <div className="fixed inset-0 z-50 md:hidden">
+          <div className="absolute inset-0 bg-black/40" onClick={() => setFiltersOpen(false)}></div>
+          <div className="absolute inset-y-0 right-0 w-full max-w-sm bg-white shadow-2xl p-4 overflow-y-auto">
+            <div className="flex items-center justify-between mb-3">
+              <h3 className="text-lg font-semibold text-brand-dark">Filters</h3>
+              <button
+                type="button"
+                onClick={() => setFiltersOpen(false)}
+                className="p-2 rounded-md text-brand-dark hover:bg-brand-light"
+                aria-label="Close filters"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path
+                    fillRule="evenodd"
+                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
+            <FiltersContent onClose={() => setFiltersOpen(false)} />
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 

@@ -16,17 +16,17 @@ const SearchBox: React.FC = () => {
 
   return (
     <form onSubmit={handleSearch} className="w-full max-w-2xl">
-      <div className="relative">
+      <div className="flex flex-col sm:flex-row gap-3">
         <input
           type="search"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search for a university by name, city, or state..."
-          className="w-full p-4 pr-16 text-lg text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-brand-secondary focus:border-brand-secondary"
+          className="w-full sm:flex-1 min-w-0 p-3 sm:p-4 text-base sm:text-lg text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-brand-secondary focus:border-brand-secondary"
         />
         <button
           type="submit"
-          className="text-white absolute right-2.5 bottom-2.5 bg-brand-primary hover:bg-brand-dark focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2"
+          className="w-full sm:w-auto text-white bg-brand-primary hover:bg-brand-dark focus:ring-4 focus:outline-none focus:ring-blue-300 font-semibold rounded-lg text-sm px-5 py-3 sm:py-2"
         >
           Search
         </button>
@@ -38,11 +38,11 @@ const SearchBox: React.FC = () => {
 const HomePage: React.FC = () => {
   return (
     <div className="text-center">
-      <section className="bg-white rounded-lg shadow-xl p-8 md:p-16 my-8 md:my-16">
-        <h1 className="text-4xl md:text-6xl font-extrabold text-brand-dark mb-4">
+      <section className="bg-white rounded-lg shadow-xl p-6 sm:p-10 md:p-16 my-8 md:my-16">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-brand-dark mb-4 leading-tight">
           Find Your Future US University
         </h1>
-        <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+        <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
           Explore thousands of universities, compare your options, and get personalized insights to start your journey in the United States.
         </p>
         <div className="flex justify-center">
@@ -50,7 +50,7 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-      <section className="grid md:grid-cols-3 gap-8 text-left">
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 text-left">
         <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow">
           <h3 className="text-2xl font-bold text-brand-primary mb-2">Explore Schools</h3>
           <p className="text-gray-600">Use our powerful filters to narrow down schools by budget, selectivity, majors, and more to discover the perfect fit for you.</p>
