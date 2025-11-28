@@ -19,6 +19,7 @@ import ProfileTargetsStepPage from './pages/ProfileTargetsStepPage';
 import ProfileDashboardPage from './pages/ProfileDashboardPage';
 import { OnboardingProvider, useOnboardingContext } from './context/OnboardingContext';
 import ContactHelpPage from './pages/ContactHelpPage';
+import FaqPage from './pages/FaqPage';
 
 const Header: React.FC = () => {
   const { user, loading } = useOnboardingContext();
@@ -33,6 +34,7 @@ const Header: React.FC = () => {
     { label: 'Compare', to: '/compare' },
     { label: 'Pathways', to: '/pathways' },
     { label: 'Timelines', to: '/timelines' },
+    { label: 'FAQ', to: '/faq' },
     { label: 'Need Personalized Help?', to: '/contact', extra: 'border border-white/70' },
   ];
 
@@ -176,6 +178,7 @@ const App: React.FC = () => {
               <Route path="/institution/:unitid" element={<DetailPage />} />
               <Route path="/pathways" element={<HighSchoolPathwaysPage />} />
               <Route path="/timelines" element={<TimelinesPage />} />
+              <Route path="/faq" element={<FaqPage />} />
               <Route path="/review" element={<ProfileReviewPage />} />
               <Route path="/profile" element={<ProfileRoutePage />} />
               <Route path="/profile/route" element={<ProfileRoutePage />} />
