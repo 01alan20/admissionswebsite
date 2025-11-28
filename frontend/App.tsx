@@ -20,6 +20,7 @@ import ProfileDashboardPage from './pages/ProfileDashboardPage';
 import { OnboardingProvider, useOnboardingContext } from './context/OnboardingContext';
 import ContactHelpPage from './pages/ContactHelpPage';
 import FaqPage from './pages/FaqPage';
+import ProfileMajorsStepPage from './pages/ProfileMajorsStepPage';
 
 const Header: React.FC = () => {
   const { user, loading } = useOnboardingContext();
@@ -190,6 +191,7 @@ const App: React.FC = () => {
               <Route path="/profile/tests" element={<ProfileTestsStepPage />} />
               <Route path="/profile/activities" element={<ProfileActivitiesStepPage />} />
               <Route path="/profile/recs" element={<ProfileRecommendationsStepPage />} />
+              <Route path="/profile/majors" element={<ProfileMajorsStepPage />} />
               <Route path="/profile/targets" element={<ProfileTargetsStepPage />} />
               <Route path="/profile/dashboard" element={<ProfileDashboardPage />} />
             </Routes>

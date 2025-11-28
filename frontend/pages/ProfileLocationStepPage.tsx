@@ -30,7 +30,7 @@ const ProfileLocationStepPage: React.FC = () => {
     <div className="max-w-xl mx-auto">
       <div className="bg-white p-6 md:p-8 rounded-lg shadow-xl">
         <h1 className="text-2xl font-bold text-slate-900 mb-4">
-          Step 2 of 7: Where You Live
+          Step 2 of 8: Where You Live
         </h1>
         <form onSubmit={handleNext} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

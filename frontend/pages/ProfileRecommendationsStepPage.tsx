@@ -71,14 +71,14 @@ const ProfileRecommendationsStepPage: React.FC = () => {
     if (selectedScore == null) return;
     // Reverse mapping: higher internal score means better recs.
     await setOnboardingStepRemote(6, { recScore: selectedScore });
-    navigate("/profile/targets");
+    navigate("/profile/majors");
   };
 
   return (
     <div className="max-w-3xl mx-auto">
       <div className="bg-white p-6 md:p-8 rounded-lg shadow-xl">
         <h1 className="text-2xl font-bold text-slate-900 mb-4">
-          Step 6 of 7: Teacher Recommendations
+          Step 6 of 8: Teacher Recommendations
         </h1>
         <p className="text-sm text-slate-600 mb-4">
           Reflect honestly on how strong your teacher recommendations are likely to be.
@@ -143,7 +143,7 @@ const ProfileRecommendationsStepPage: React.FC = () => {
               disabled={selectedScore == null}
               className="px-8 py-3 bg-brand-primary text-white rounded-lg font-bold shadow-md hover:bg-brand-dark transition-transform active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Continue to Targets
+              Continue to Majors
             </button>
           </div>
         </form>
