@@ -89,7 +89,7 @@ const ProfileTestsStepPage: React.FC = () => {
     <div className="max-w-xl mx-auto">
       <div className="bg-white p-6 md:p-8 rounded-lg shadow-xl">
         <h1 className="text-2xl font-bold text-slate-900 mb-4">
-          Step 4 of 7: Tests (Optional)
+          Step 4 of 8: Tests (Optional)
         </h1>
         <form onSubmit={handleNext} className="space-y-6">
           <p className="text-sm text-slate-600">

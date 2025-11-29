@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
+﻿import React, { createContext, useContext, useEffect, useState } from "react";
 import type { ReactNode } from "react";
 import type { User } from "@supabase/supabase-js";
 import { supabase } from "../services/supabaseClient";
@@ -15,6 +15,7 @@ export type StudentProfileSummary = {
   satEBRW?: number | null;
   actComposite?: number | null;
   recScore?: number | null; // 1-6, higher is stronger
+   majors?: string[];
   activities?: Activity[];
 };
 
@@ -47,7 +48,8 @@ export const determineNextPath = (step: number | null | undefined): string => {
   if (s < 4) return "/profile/tests";
   if (s < 5) return "/profile/activities";
   if (s < 6) return "/profile/recs";
-  if (s < 7) return "/profile/targets";
+  if (s < 7) return "/profile/majors";
+  if (s < 8) return "/profile/targets";
   return "/profile/dashboard";
 };
 
@@ -116,6 +118,9 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
           : academic.rec_score != null
           ? Number(academic.rec_score)
           : null,
+      majors: Array.isArray(academic.majors)
+        ? (academic.majors as string[]).filter((m) => typeof m === "string" && m.trim())
+        : undefined,
       activities: Array.isArray(extras) ? (extras as Activity[]) : [],
     });
 
@@ -228,6 +233,11 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
       setTargetUnitIds(overrideTargetIds);
     }
 
+    const majorsClean = merged.majors
+      ?.filter((m) => typeof m === "string" && m.trim())
+      .map((m) => m.trim())
+      .slice(0, 3);
+
     const academicStats = {
       first_name: merged.firstName ?? null,
       last_name: merged.lastName ?? null,
@@ -239,6 +249,7 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
       sat_ebrwr: merged.satEBRW ?? null,
       act_composite: merged.actComposite ?? null,
       rec_score: merged.recScore ?? null,
+      majors: majorsClean && majorsClean.length ? majorsClean : null,
     };
 
     await supabase.from("profiles").upsert(

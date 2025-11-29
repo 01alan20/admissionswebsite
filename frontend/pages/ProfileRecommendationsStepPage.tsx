@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+﻿import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useOnboardingGuard } from "../hooks/useOnboardingGuard";
 import { useOnboardingContext } from "../context/OnboardingContext";
@@ -18,7 +18,7 @@ const REC_OPTIONS: RecOption[] = [
   {
     id: 5,
     label: "Very Strong Praise",
-    description: "“Best this year” or clearly top of class.",
+    description: "Best this year or clearly top of class.",
   },
   {
     id: 4,
@@ -61,7 +61,7 @@ const ProfileRecommendationsStepPage: React.FC = () => {
   if (loading) {
     return (
       <div className="max-w-xl mx-auto text-center py-12">
-        <p className="text-gray-600 text-sm">Loading…</p>
+        <p className="text-gray-600 text-sm">LoadingΓÇª</p>
       </div>
     );
   }
@@ -71,18 +71,18 @@ const ProfileRecommendationsStepPage: React.FC = () => {
     if (selectedScore == null) return;
     // Reverse mapping: higher internal score means better recs.
     await setOnboardingStepRemote(6, { recScore: selectedScore });
-    navigate("/profile/targets");
+    navigate("/profile/majors");
   };
 
   return (
     <div className="max-w-3xl mx-auto">
       <div className="bg-white p-6 md:p-8 rounded-lg shadow-xl">
         <h1 className="text-2xl font-bold text-slate-900 mb-4">
-          Step 6 of 7: Teacher Recommendations
+          Step 6 of 8: Teacher Recommendations
         </h1>
         <p className="text-sm text-slate-600 mb-4">
           Reflect honestly on how strong your teacher recommendations are likely to be.
-          This uses an inverted 1–6 scale, but we show only color (red = weaker, green =
+          This uses an inverted 1ΓÇô6 scale, but we show only color (red = weaker, green =
           stronger).
         </p>
 
@@ -143,7 +143,7 @@ const ProfileRecommendationsStepPage: React.FC = () => {
               disabled={selectedScore == null}
               className="px-8 py-3 bg-brand-primary text-white rounded-lg font-bold shadow-md hover:bg-brand-dark transition-transform active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Continue to Targets
+              Continue to Majors
             </button>
           </div>
         </form>

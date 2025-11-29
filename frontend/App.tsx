@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React, { useState } from 'react';
 import { HashRouter, Route, Routes, NavLink } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import ExplorePage from './pages/ExplorePage';
@@ -19,11 +19,31 @@ import ProfileTargetsStepPage from './pages/ProfileTargetsStepPage';
 import ProfileDashboardPage from './pages/ProfileDashboardPage';
 import { OnboardingProvider, useOnboardingContext } from './context/OnboardingContext';
 import ContactHelpPage from './pages/ContactHelpPage';
+import FaqPage from './pages/FaqPage';
+import ProfileMajorsStepPage from './pages/ProfileMajorsStepPage';
 
 const Header: React.FC = () => {
   const { user, loading } = useOnboardingContext();
+  const [mobileOpen, setMobileOpen] = useState(false);
+
   const linkClass = "text-white hover:bg-brand-secondary px-3 py-2 rounded-md text-sm font-medium transition-colors";
   const activeLinkClass = "bg-brand-secondary text-white px-3 py-2 rounded-md text-sm font-medium";
+
+  const navLinks = [
+    { label: 'Home', to: '/' },
+    { label: 'Explore', to: '/explore' },
+    { label: 'Compare', to: '/compare' },
+    { label: 'Pathways', to: '/pathways' },
+    { label: 'Timelines', to: '/timelines' },
+    { label: 'FAQ', to: '/faq' },
+    { label: 'Need Personalized Help?', to: '/contact', extra: 'border border-white/70' },
+  ];
+
+  const profileLink = !loading && user
+    ? { label: 'Profile Review', to: '/profile/dashboard' }
+    : { label: 'Make Your Profile', to: '/profile/login' };
+
+  const closeMobile = () => setMobileOpen(false);
 
   return (
     <header className="bg-brand-primary shadow-lg sticky top-0 z-50">
@@ -35,23 +55,43 @@ const Header: React.FC = () => {
               <span>SeeThroughAdmissions</span>
             </NavLink>
           </div>
+          <div className="flex items-center md:hidden">
+            <button
+              type="button"
+              aria-label="Toggle navigation"
+              onClick={() => setMobileOpen((o) => !o)}
+              className="inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-brand-secondary focus:outline-none focus:ring-2 focus:ring-white"
+            >
+              <svg
+                className="h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                {mobileOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
+          </div>
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
-              <NavLink to="/" className={({ isActive }) => isActive ? activeLinkClass : linkClass}>Home</NavLink>
-              <NavLink to="/explore" className={({ isActive }) => isActive ? activeLinkClass : linkClass}>Explore</NavLink>
-              <NavLink to="/compare" className={({ isActive }) => isActive ? activeLinkClass : linkClass}>Compare</NavLink>
-              <NavLink to="/pathways" className={({ isActive }) => isActive ? activeLinkClass : linkClass}>Pathways</NavLink>
-              <NavLink to="/timelines" className={({ isActive }) => isActive ? activeLinkClass : linkClass}>Timelines</NavLink>
-              <NavLink
-                to="/contact"
-                className={({ isActive }) =>
-                  isActive
-                    ? activeLinkClass
-                    : `${linkClass} border border-white/70`
-                }
-              >
-                Need Personalized Help?
-              </NavLink>
+              {navLinks.map(({ label, to, extra }) => (
+                <NavLink
+                  key={to}
+                  to={to}
+                  className={({ isActive }) =>
+                    isActive
+                      ? activeLinkClass
+                      : `${linkClass} ${extra ?? ''}`
+                  }
+                >
+                  {label}
+                </NavLink>
+              ))}
               {(!loading && !user) && (
                 <NavLink
                   to="/profile/login"
@@ -72,6 +112,46 @@ const Header: React.FC = () => {
           </div>
         </div>
       </nav>
+      {mobileOpen && (
+        <div className="md:hidden fixed inset-0 z-50">
+          <div className="absolute inset-0 bg-black/40" onClick={closeMobile}></div>
+          <div className="absolute inset-y-0 right-0 w-full max-w-xs bg-white shadow-2xl p-6 overflow-y-auto">
+            <div className="flex items-center justify-between mb-4">
+              <span className="font-semibold text-brand-dark">Menu</span>
+              <button
+                type="button"
+                aria-label="Close navigation"
+                onClick={closeMobile}
+                className="p-2 rounded-md text-brand-dark hover:bg-brand-light"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                  <path
+                    fillRule="evenodd"
+                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div className="flex flex-col gap-2">
+              {[...navLinks, profileLink].map(({ label, to, extra }) => (
+                <NavLink
+                  key={to}
+                  to={to}
+                  onClick={closeMobile}
+                  className={({ isActive }) =>
+                    `block px-3 py-2 rounded-md text-base font-medium ${
+                      isActive ? 'bg-brand-secondary text-white' : 'text-brand-dark hover:bg-brand-light'
+                    } ${extra ?? ''}`
+                  }
+                >
+                  {label}
+                </NavLink>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
     </header>
   );
 };
@@ -91,7 +171,7 @@ const App: React.FC = () => {
       <OnboardingProvider>
         <div className="flex flex-col min-h-screen font-sans text-gray-800">
           <Header />
-          <main className="flex-grow container mx-auto p-4 sm:p-6 lg:p-8">
+          <main className="flex-grow container mx-auto px-4 py-4 sm:px-6 sm:py-6 lg:px-8 lg:py-8">
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/explore" element={<ExplorePage />} />
@@ -99,6 +179,7 @@ const App: React.FC = () => {
               <Route path="/institution/:unitid" element={<DetailPage />} />
               <Route path="/pathways" element={<HighSchoolPathwaysPage />} />
               <Route path="/timelines" element={<TimelinesPage />} />
+              <Route path="/faq" element={<FaqPage />} />
               <Route path="/review" element={<ProfileReviewPage />} />
               <Route path="/profile" element={<ProfileRoutePage />} />
               <Route path="/profile/route" element={<ProfileRoutePage />} />
@@ -110,6 +191,7 @@ const App: React.FC = () => {
               <Route path="/profile/tests" element={<ProfileTestsStepPage />} />
               <Route path="/profile/activities" element={<ProfileActivitiesStepPage />} />
               <Route path="/profile/recs" element={<ProfileRecommendationsStepPage />} />
+              <Route path="/profile/majors" element={<ProfileMajorsStepPage />} />
               <Route path="/profile/targets" element={<ProfileTargetsStepPage />} />
               <Route path="/profile/dashboard" element={<ProfileDashboardPage />} />
             </Routes>

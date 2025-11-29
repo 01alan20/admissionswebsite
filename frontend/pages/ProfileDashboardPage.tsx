@@ -1,9 +1,14 @@
-import React, { useEffect, useState } from "react";
+﻿import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useOnboardingGuard } from "../hooks/useOnboardingGuard";
 import { useOnboardingContext } from "../context/OnboardingContext";
-import { getInstitutionsSummariesByIds, getInstitutionMetrics } from "../data/api";
-import type { Institution, InstitutionMetrics, Metric } from "../types";
+import {
+  getAllInstitutions,
+  getInstitutionsSummariesByIds,
+  getInstitutionMetrics,
+  getMajorsMeta,
+} from "../data/api";
+import type { Institution, InstitutionMetrics, MajorsMeta, Metric } from "../types";
 import {
   scoreGpa,
   scoreTestsCombined,
@@ -17,9 +22,10 @@ import {
 } from "../utils/admissionsModel";
 
 const ProfileDashboardPage: React.FC = () => {
-  const loading = useOnboardingGuard(7);
+  const loading = useOnboardingGuard(9);
   const { targetUnitIds, user, studentProfile, logout } = useOnboardingContext();
   const [institutions, setInstitutions] = useState<Institution[]>([]);
+  const [recommendedInstitutions, setRecommendedInstitutions] = useState<Institution[]>([]);
   const [fetching, setFetching] = useState(false);
   const [metricsByUnit, setMetricsByUnit] = useState<
     Record<
@@ -34,7 +40,46 @@ const ProfileDashboardPage: React.FC = () => {
       }
     >
   >({});
+  const [majorsMeta, setMajorsMeta] = useState<MajorsMeta | null>(null);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      try {
+        const meta = await getMajorsMeta();
+        if (!cancelled) setMajorsMeta(meta);
+      } catch {
+        if (!cancelled) setMajorsMeta(null);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const displayMajorLabel = (value: string): string => {
+    if (!majorsMeta) return value;
+    const code = (value || "").trim();
+    if (!code) return value;
+    const raw =
+      majorsMeta.two_digit?.[code] ??
+      majorsMeta.four_digit?.[code] ??
+      majorsMeta.six_digit?.[code] ??
+      null;
+    if (!raw) return value;
+    let t = String(raw).trim();
+    if (
+      (t.startsWith('"') && t.endsWith('"')) ||
+      (t.startsWith("'") && t.endsWith("'"))
+    ) {
+      t = t.slice(1, -1).trim();
+    } else {
+      if (t.startsWith('"') || t.startsWith("'")) t = t.slice(1).trim();
+      if (t.endsWith('"') || t.endsWith("'")) t = t.slice(0, -1).trim();
+    }
+    return t || value;
+  };
 
   useEffect(() => {
     if (!targetUnitIds || targetUnitIds.length === 0) return;
@@ -109,7 +154,7 @@ const ProfileDashboardPage: React.FC = () => {
   if (loading) {
     return (
       <div className="max-w-4xl mx-auto text-center py-12">
-        <p className="text-gray-600 text-sm">Loading your dashboard…</p>
+        <p className="text-gray-600 text-sm">Loading your dashboardΓÇª</p>
       </div>
     );
   }
@@ -122,7 +167,7 @@ const ProfileDashboardPage: React.FC = () => {
 
   const computeScoreFromGpa = (gpa: number | null | undefined): number | null => {
     if (gpa == null) return null;
-    // 4.0 is highest; 3.5–4.0 strongest; 3.0–3.49 next; then three more bands.
+    // 4.0 is highest; 3.5ΓÇô4.0 strongest; 3.0ΓÇô3.49 next; then three more bands.
     if (gpa >= 3.5) return 5;
     if (gpa >= 3.0) return 4;
     if (gpa >= 2.5) return 3;
@@ -159,6 +204,86 @@ const ProfileDashboardPage: React.FC = () => {
   const satOnlyScore = scoreSatOnly(studentSatTotal);
   const actOnlyScore = scoreActOnly(studentAct);
   const overallAcademic = scoreAcademicOverall(gpaScore, testScore, 0);
+
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      try {
+        const all = await getAllInstitutions();
+        if (cancelled) return;
+
+        const targetSet = new Set(targetUnitIds);
+        const majors = (studentProfile.majors || []).map((m) => m.toLowerCase());
+
+        const targetAcceptanceAcademic = (() => {
+          if (overallAcademic == null) return 0.45;
+          if (overallAcademic >= 5) return 0.15;
+          if (overallAcademic >= 4) return 0.25;
+          if (overallAcademic >= 3) return 0.35;
+          if (overallAcademic >= 2) return 0.55;
+          return 0.65;
+        })();
+
+        const targetAcceptanceFromTargets = (() => {
+          const rates = institutions
+            .map((inst) => inst.acceptance_rate)
+            .filter((r): r is number => r != null);
+          if (!rates.length) return null;
+          const avg = rates.reduce((sum, r) => sum + r, 0) / rates.length;
+          return avg;
+        })();
+
+        const targetAcceptance =
+          targetAcceptanceFromTargets != null
+            ? (targetAcceptanceAcademic + targetAcceptanceFromTargets) / 2
+            : targetAcceptanceAcademic;
+
+        const countryLower = (studentProfile.country ?? "").toLowerCase();
+        const internationalBonus =
+          countryLower && countryLower !== "united states" ? 2 : 0;
+
+        const scored = all
+          .filter((inst) => !targetSet.has(inst.unitid))
+          .map((inst) => {
+            const acceptance = inst.acceptance_rate ?? 0.5;
+            const intl = inst.intl_enrollment_pct ?? 0;
+            const acceptanceScore = -Math.abs(acceptance - targetAcceptance) * 100;
+            const intlScore = intl >= 0.1 ? 8 : intl >= 0.05 ? 5 : intl >= 0.02 ? 2 : 0;
+            const fitsIntlProfile = intlScore > 0 ? internationalBonus : 0;
+            const testRequiredPenalty =
+              (studentSatTotal == null && studentAct == null && inst.test_policy === "Required") ? -8 : 0;
+            const majorMatches =
+              majors.length === 0
+                ? 0
+                : (inst.major_families || []).filter((m) => {
+                    const name = (m ?? "").toLowerCase();
+                    if (!name) return false;
+                    return majors.some((sel) => sel.includes(name) || name.includes(sel));
+                  }).length;
+            const majorScore =
+              majors.length === 0
+                ? 0
+                : majorMatches > 0
+                ? 12 + majorMatches * 2
+                : -12;
+
+            const totalScore = acceptanceScore + intlScore + fitsIntlProfile + testRequiredPenalty + majorScore;
+            return { inst, score: totalScore };
+          })
+          .sort((a, b) => b.score - a.score)
+          .slice(0, 3)
+          .map((r) => r.inst);
+
+        setRecommendedInstitutions(scored);
+      } catch {
+        if (!cancelled) setRecommendedInstitutions([]);
+      }
+    })();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [overallAcademic, studentAct, studentSatTotal, studentProfile.country, studentProfile.majors, targetUnitIds]);
 
   const scoreColor = (score: number | null) => {
     if (score == null) return "bg-slate-300 text-slate-700";
@@ -268,7 +393,7 @@ const ProfileDashboardPage: React.FC = () => {
                   <>
                     GPA: {studentProfile.gpa.toFixed(2)}
                     {studentProfile.classRank
-                      ? ` • Class Rank: ${studentProfile.classRank}`
+                      ? ` ΓÇó Class Rank: ${studentProfile.classRank}`
                       : ""}
                     <br />
                     {studentSatTotal != null && (
@@ -276,7 +401,7 @@ const ProfileDashboardPage: React.FC = () => {
                     )}
                     {studentAct != null && (
                       <>
-                        {studentSatTotal != null ? " • " : ""}
+                        {studentSatTotal != null ? " ΓÇó " : ""}
                         ACT: {studentAct}
                       </>
                     )}
@@ -336,6 +461,27 @@ const ProfileDashboardPage: React.FC = () => {
                   {studentAct != null ? `Composite ${studentAct}` : "Not entered"}
                 </span>
               </div>
+            </div>
+
+            {/* Intended majors */}
+            <div className="border border-slate-200 rounded-lg px-4 py-2">
+              <div className="font-semibold text-slate-700 mb-2">Intended Majors</div>
+              {studentProfile.majors && studentProfile.majors.length > 0 ? (
+                <div className="flex flex-wrap gap-2">
+                  {studentProfile.majors.slice(0, 3).map((m) => (
+                    <span
+                      key={m}
+                      className="inline-flex items-center px-3 py-1 rounded-full font-semibold bg-brand-light text-brand-dark"
+                    >
+                      {displayMajorLabel(m)}
+                    </span>
+                  ))}
+                </div>
+              ) : (
+                <span className="inline-flex items-center px-3 py-1 rounded-full font-semibold bg-slate-300 text-slate-700">
+                  Not entered
+                </span>
+              )}
             </div>
 
             {/* Extracurriculars */}
@@ -410,7 +556,7 @@ const ProfileDashboardPage: React.FC = () => {
           {targetUnitIds.length > 0 && (
             <div className="space-y-4">
               {fetching && (
-                <p className="text-sm text-slate-500">Loading universities…</p>
+                <p className="text-sm text-slate-500">Loading universitiesΓÇª</p>
               )}
               {!fetching &&
                 institutions.map((inst) => {
@@ -658,6 +804,94 @@ const ProfileDashboardPage: React.FC = () => {
                   );
                 })}
             </div>
+          )}
+        </section>
+
+        {/* Recommended universities based on your profile */}
+        <section className="mt-10">
+          <h2 className="text-sm font-semibold text-slate-700 mb-3">
+            Suggested Universities For You
+          </h2>
+          {recommendedInstitutions.length === 0 ? (
+            <p className="text-sm text-slate-600">
+              We will suggest options once we have enough data about your academics and targets.
+            </p>
+          ) : (
+            (() => {
+              const targetStates = new Set(
+                institutions
+                  .map((inst) => inst.state)
+                  .filter((s): s is string => !!s)
+              );
+              const nearby = recommendedInstitutions.filter((inst) => inst.state && targetStates.has(inst.state));
+              const others = recommendedInstitutions.filter((inst) => !inst.state || !targetStates.has(inst.state));
+              const renderCards = (list: Institution[]) => (
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  {list.map((inst) => {
+                    const intlPct =
+                      inst.intl_enrollment_pct != null
+                        ? `${Math.round(inst.intl_enrollment_pct * 100)}% international students`
+                        : null;
+                    const acceptance =
+                      inst.acceptance_rate != null
+                        ? `${Math.round(inst.acceptance_rate * 100)}% acceptance`
+                        : "Acceptance unknown";
+                    const matchingMajors =
+                      studentProfile.majors && studentProfile.majors.length > 0
+                        ? (inst.major_families || []).filter((m) =>
+                            studentProfile.majors?.some((sel) => sel.toLowerCase() === (m ?? "").toLowerCase())
+                          )
+                        : [];
+                    return (
+                      <div
+                        key={inst.unitid}
+                        className="border border-slate-200 rounded-lg p-4 flex flex-col gap-2 bg-white shadow-sm"
+                      >
+                        <div>
+                          <div className="font-semibold text-slate-900">{inst.name}</div>
+                          <div className="text-xs text-slate-500">
+                            {[inst.city, inst.state].filter(Boolean).join(", ")}
+                          </div>
+                        </div>
+                        <div className="text-xs text-slate-600">
+                          {acceptance}
+                          {intlPct ? ` \u2022 ${intlPct}` : ""}
+                        </div>
+                        {studentProfile.majors && studentProfile.majors.length > 0 && (
+                          <div className="text-xs text-slate-600">
+                            Major fit:{" "}
+                            {matchingMajors.length > 0
+                              ? matchingMajors.join(", ")
+                              : "No exact match listed (still a balanced option)."}
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              );
+
+              return (
+                <div className="space-y-6">
+                  <div>
+                    <h3 className="text-sm font-semibold text-slate-800 mb-2">Near your target locations</h3>
+                    {nearby.length === 0 ? (
+                      <p className="text-xs text-slate-600">No nearby options yet. Add targets to see location-based ideas.</p>
+                    ) : (
+                      renderCards(nearby)
+                    )}
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-semibold text-slate-800 mb-2">Similar fits in other locations</h3>
+                    {others.length === 0 ? (
+                      <p className="text-xs text-slate-600">No additional fits yet.</p>
+                    ) : (
+                      renderCards(others)
+                    )}
+                  </div>
+                </div>
+              );
+            })()
           )}
         </section>
       </div>

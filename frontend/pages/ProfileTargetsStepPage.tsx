@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+﻿import React, { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useOnboardingGuard } from "../hooks/useOnboardingGuard";
 import { useOnboardingContext } from "../context/OnboardingContext";
@@ -81,7 +81,7 @@ const toFullStateName = (value?: string | null): string => {
 };
 
 const ProfileTargetsStepPage: React.FC = () => {
-  const loading = useOnboardingGuard(7);
+  const loading = useOnboardingGuard(8);
   const { setOnboardingStepRemote, setTargetUnitIds } = useOnboardingContext();
   const [index, setIndex] = useState<InstitutionIndex[]>([]);
   const [allInstitutions, setAllInstitutions] = useState<Institution[] | null>(null);
@@ -196,7 +196,6 @@ const ProfileTargetsStepPage: React.FC = () => {
           return hay.includes(q);
         })
       : filtered;
-
     return searched.slice(0, 50);
   }, [allInstitutions, budget, selectivity, testPolicy, selectedStates, locationTypes, locationMap, query]);
 
@@ -221,7 +220,7 @@ const ProfileTargetsStepPage: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (selectedIds.length === 0) return;
-    await setOnboardingStepRemote(7, undefined, selectedIds);
+    await setOnboardingStepRemote(8, undefined, selectedIds);
     setTargetUnitIds(selectedIds);
     navigate("/profile/dashboard");
   };
@@ -230,11 +229,10 @@ const ProfileTargetsStepPage: React.FC = () => {
     <div className="max-w-5xl mx-auto">
       <div className="bg-white p-6 md:p-8 rounded-lg shadow-xl">
         <h1 className="text-2xl font-bold text-slate-900 mb-4">
-          Step 7 of 7: Target Universities
+          Step 8 of 8: Target Universities
         </h1>
         <p className="text-sm text-slate-600 mb-4">
-          Choose up to 3 universities you care most about. We&apos;ll use these as the
-          focus for your admissions strategy.
+          Choose up to 3 universities you care most about. We&apos;ll use these as the focus for your admissions strategy and pair them with your intended majors.
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-6">
@@ -386,7 +384,7 @@ const ProfileTargetsStepPage: React.FC = () => {
                               setSelectedStates(selectedStates.filter((x) => x !== s))
                             }
                           >
-                            ×
+                            ├ù
                           </button>
                         </span>
                       ))}
@@ -457,7 +455,7 @@ const ProfileTargetsStepPage: React.FC = () => {
                           {inst.city ?? ""}, {inst.state ?? ""}
                         </div>
                       </div>
-                      {isSelected && <span className="text-xl">✓</span>}
+                      {isSelected && <span className="text-xl">Γ£ô</span>}
                     </button>
                   );
                 })}
@@ -473,7 +471,7 @@ const ProfileTargetsStepPage: React.FC = () => {
           <div className="flex justify-between">
             <button
               type="button"
-              onClick={() => navigate("/profile/recs")}
+              onClick={() => navigate("/profile/majors")}
               className="px-6 py-2 rounded-lg font-semibold border border-brand-secondary text-brand-secondary bg-white hover:bg-brand-secondary hover:text-white transition"
             >
               Back

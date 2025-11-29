@@ -62,11 +62,13 @@ const ExplorePage: React.FC = () => {
   const [page, setPage] = useState<number>(1);
 
   // Filters (dropdowns)
-  const [budget, setBudget] = useState<string[]>([]); // tuition buckets, e.g. "0-10000", "70000+"
+  const [budget, setBudget] = useState<string[]>([]); // tuition buckets, e.g. "0-10000", "60000+"
   const [selectivity, setSelectivity] = useState<string[]>([]); // selective, reach, target, balanced, safety, supersafe
   const [testPolicy, setTestPolicy] = useState<string[]>([]); // required, flexible, optional
-  const [majorQuery, setMajorQuery] = useState<string>('');
-  const [selectedMajors, setSelectedMajors] = useState<string[]>([]); // CIP 4-digit codes
+  const [majorAreaQuery, setMajorAreaQuery] = useState<string>('');
+  const [specificMajorQuery, setSpecificMajorQuery] = useState<string>('');
+  const [selectedMajorAreas, setSelectedMajorAreas] = useState<string[]>([]); // CIP 2-digit codes
+  const [selectedSpecificMajors, setSelectedSpecificMajors] = useState<string[]>([]); // CIP 6-digit codes
   const [allInstitutions, setAllInstitutions] = useState<Institution[] | null>(null);
   const [majorsMeta, setMajorsMeta] = useState<MajorsMeta | null>(null);
   const [majorsByInstitution, setMajorsByInstitution] = useState<InstitutionMajorsByInstitution | null>(null);
@@ -104,7 +106,8 @@ const ExplorePage: React.FC = () => {
         budget.length > 0 ||
         selectivity.length > 0 ||
         testPolicy.length > 0 ||
-        selectedMajors.length > 0 ||
+        selectedMajorAreas.length > 0 ||
+        selectedSpecificMajors.length > 0 ||
         selectedStates.length > 0 ||
         locationTypes.length > 0;
 
@@ -136,7 +139,8 @@ const ExplorePage: React.FC = () => {
             budget,
             selectivity,
             testPolicy,
-            selectedMajors,
+            selectedMajorAreas,
+            selectedSpecificMajors,
             selectedStates,
             locationTypes,
             majorsByInstitution,
@@ -151,7 +155,8 @@ const ExplorePage: React.FC = () => {
             budget,
             selectivity,
             testPolicy,
-            selectedMajors,
+            selectedMajorAreas,
+            selectedSpecificMajors,
             selectedStates,
             [],
             majorsByInstitution,
@@ -181,7 +186,8 @@ const ExplorePage: React.FC = () => {
     budget,
     selectivity,
     testPolicy,
-    selectedMajors,
+    selectedMajorAreas,
+    selectedSpecificMajors,
     selectedStates,
     locationTypes,
     index,
@@ -236,34 +242,57 @@ const ExplorePage: React.FC = () => {
   const handleSelectivityChange = (value: string) => setSelectivity((s) => toggleFromList(s, value));
   const handleTestPolicyChange = (value: string) => setTestPolicy((t) => toggleFromList(t, value));
 
-  type CipMajorOption = { code: string; title: string; label: string };
+  type CipMajorOption = {
+    code: string;
+    title: string;
+    label: string;
+  };
 
-  const allMajors = useMemo<CipMajorOption[]>(() => {
+  const majorAreaOptions = useMemo<CipMajorOption[]>(() => {
     if (!majorsMeta) return [];
-    const entries = Object.entries(majorsMeta.four_digit || {});
-    return entries
+    const two = majorsMeta.two_digit || {};
+    return Object.entries(two)
       .map(([code, rawTitle]) => {
         const title = cleanCipTitle(rawTitle);
-        return {
-          code,
-          title,
-          label: title,
-        };
+        if (!title || /^\d+$/.test(title)) return null;
+        return { code, title, label: title };
       })
+      .filter((v): v is CipMajorOption => !!v)
       .sort((a, b) => a.title.localeCompare(b.title) || a.code.localeCompare(b.code));
   }, [majorsMeta]);
 
-  const majorSuggestions = useMemo<CipMajorOption[]>(() => {
-    const q = majorQuery.trim().toLowerCase();
-    if (!q || q.length < 2) return [];
-    return allMajors
-      .filter((m) => m.title.toLowerCase().includes(q) || m.code.toLowerCase().includes(q))
-      .slice(0, 10);
-  }, [majorQuery, allMajors]);
+  const specificMajorOptions = useMemo<CipMajorOption[]>(() => {
+    if (!majorsMeta) return [];
+    const six = majorsMeta.six_digit || {};
+    return Object.entries(six)
+      .map(([code, rawTitle]) => {
+        const title = cleanCipTitle(rawTitle);
+        if (!title || /^\d+$/.test(title)) return null;
+        return { code, title, label: title };
+      })
+      .filter((v): v is CipMajorOption => !!v)
+      .sort((a, b) => a.title.localeCompare(b.title) || a.code.localeCompare(b.code));
+  }, [majorsMeta]);
 
-  const toggleMajor = (m: CipMajorOption) => {
-    setSelectedMajors((prev) => toggleFromList(prev, m.code));
-    setMajorQuery('');
+  const filteredMajorAreas = useMemo<CipMajorOption[]>(() => {
+    const q = majorAreaQuery.trim().toLowerCase();
+    if (!q) return majorAreaOptions;
+    return majorAreaOptions.filter((m) => m.title.toLowerCase().includes(q));
+  }, [majorAreaQuery, majorAreaOptions]);
+
+  const filteredSpecificMajors = useMemo<CipMajorOption[]>(() => {
+    const q = specificMajorQuery.trim().toLowerCase();
+    if (!q) return specificMajorOptions;
+    return specificMajorOptions.filter((m) => m.title.toLowerCase().includes(q));
+  }, [specificMajorQuery, specificMajorOptions]);
+
+  const toggleMajorArea = (code: string) => {
+    setSelectedMajorAreas((prev) => toggleFromList(prev, code));
+  };
+
+  const toggleSpecificMajor = (m: CipMajorOption) => {
+    setSelectedSpecificMajors((prev) => toggleFromList(prev, m.code));
+    setSpecificMajorQuery('');
   };
 
   // State dropdown helpers (match by full state name)
@@ -275,8 +304,7 @@ const ExplorePage: React.FC = () => {
     NJ: 'New Jersey', NM: 'New Mexico', NY: 'New York', NC: 'North Carolina', ND: 'North Dakota', OH: 'Ohio',
     OK: 'Oklahoma', OR: 'Oregon', PA: 'Pennsylvania', RI: 'Rhode Island', SC: 'South Carolina', SD: 'South Dakota',
     TN: 'Tennessee', TX: 'Texas', UT: 'Utah', VT: 'Vermont', VA: 'Virginia', WA: 'Washington', WV: 'West Virginia',
-    WI: 'Wisconsin', WY: 'Wyoming', DC: 'District of Columbia', PR: 'Puerto Rico', GU: 'Guam', AS: 'American Samoa',
-    MP: 'Northern Mariana Islands', VI: 'U.S. Virgin Islands',
+    WI: 'Wisconsin', WY: 'Wyoming', DC: 'District of Columbia',
   };
 
   function toFullStateName(value?: string | null): string {
@@ -290,11 +318,11 @@ const ExplorePage: React.FC = () => {
   }
 
   const allStates = useMemo(() => {
+    const allowed = new Set(Object.keys(STATE_NAMES).map((c) => c.toUpperCase()));
     const set = new Set<string>();
     for (const i of index) {
       const raw = (i.state || "").trim().toUpperCase();
-      // Filter out non-U.S. codes that can appear in IPEDS data
-      if (raw === "FM" || raw === "TW") continue;
+      if (!allowed.has(raw)) continue;
       const full = toFullStateName(i.state);
       if (full) set.add(full);
     }
@@ -339,22 +367,21 @@ const ExplorePage: React.FC = () => {
           </form>
 
           <details className="border rounded-md">
-            <summary className="cursor-pointer px-3 py-2 font-semibold">Tuition Budget (per year)</summary>
-            <div className="px-3 py-2 space-y-2">
-              {[
-                { value: '0-10000', label: '< $10k' },
-                { value: '10000-20000', label: '$10k - $20k' },
-                { value: '20000-30000', label: '$20k - $30k' },
-                { value: '30000-40000', label: '$30k - $40k' },
-                { value: '40000-50000', label: '$40k - $50k' },
-                { value: '50000-60000', label: '$50k - $60k' },
-                { value: '60000-70000', label: '$60k - $70k' },
-                { value: '70000+', label: '$70k+' },
-              ].map(({ value, label }) => (
-                <button
-                  key={value}
-                  onClick={() => handleBudgetChange(value)}
-                  className={`w-full text-left px-3 py-2 rounded border ${
+              <summary className="cursor-pointer px-3 py-2 font-semibold">Tuition Budget (per year)</summary>
+              <div className="px-3 py-2 space-y-2">
+                {[
+                  { value: '0-10000', label: '< $10k' },
+                  { value: '10000-20000', label: '$10k - $20k' },
+                  { value: '20000-30000', label: '$20k - $30k' },
+                  { value: '30000-40000', label: '$30k - $40k' },
+                  { value: '40000-50000', label: '$40k - $50k' },
+                  { value: '50000-60000', label: '$50k - $60k' },
+                  { value: '60000+', label: '$60k+' },
+                ].map(({ value, label }) => (
+                  <button
+                    key={value}
+                    onClick={() => handleBudgetChange(value)}
+                    className={`w-full text-left px-3 py-2 rounded border ${
                     budget.includes(value) ? 'bg-brand-light border-brand-secondary' : 'bg-white border-gray-300'
                   }`}
                 >
@@ -488,34 +515,113 @@ const ExplorePage: React.FC = () => {
             }}
           >
             <summary className="cursor-pointer px-3 py-2 font-semibold">Major</summary>
-            <div className="px-3 py-2 space-y-2">
-              <input
-                type="search"
-                value={majorQuery}
-                onChange={(e) => setMajorQuery(e.target.value)}
-                placeholder="Search majors..."
-                className="w-full p-2 border border-gray-300 rounded-md"
-              />
-              {(majorSuggestions.length > 0 || (majorQuery.trim().length < 2 && allMajors.length > 0)) && (
-                <div className="space-y-2 max-h-80 overflow-auto">
-                  {(majorQuery.trim().length < 2 ? allMajors : majorSuggestions).map((m) => {
-                    const isSelected = selectedMajors.includes(m.code);
+            <div className="px-3 py-2 space-y-4">
+              <div>
+                <div className="text-xs font-semibold text-slate-700 mb-2">Major areas</div>
+                <input
+                  type="search"
+                  value={majorAreaQuery}
+                  onChange={(e) => setMajorAreaQuery(e.target.value)}
+                  placeholder="Search major areas..."
+                  className="w-full p-2 border border-gray-300 rounded-md text-sm"
+                />
+                <div className="mt-2 space-y-1 max-h-52 overflow-auto">
+                  {filteredMajorAreas.map((m) => {
+                    const selected = selectedMajorAreas.includes(m.code);
                     return (
                       <button
                         key={m.code}
-                        className={`w-full text-left px-3 py-2 rounded border ${
-                          isSelected
-                            ? 'bg-brand-light border-brand-secondary text-brand-dark'
-                            : 'bg-white border-gray-300 hover:bg-brand-light'
+                        type="button"
+                        onClick={() => toggleMajorArea(m.code)}
+                        className={`w-full text-left px-3 py-1.5 rounded border text-xs ${
+                          selected
+                            ? "bg-brand-light border-brand-secondary text-brand-dark"
+                            : "bg-white border-gray-300 hover:bg-brand-light"
                         }`}
-                        onClick={() => toggleMajor(m)}
                       >
                         {m.label}
                       </button>
                     );
                   })}
                 </div>
-              )}
+              </div>
+
+              <div className="border-t border-gray-200 pt-3">
+                <div className="text-xs font-semibold text-slate-700 mb-2">Specific majors</div>
+                <input
+                  type="search"
+                  value={specificMajorQuery}
+                  onChange={(e) => setSpecificMajorQuery(e.target.value)}
+                  placeholder="Search specific majors..."
+                  className="w-full p-2 border border-gray-300 rounded-md text-sm"
+                />
+                <div className="mt-2 space-y-1 max-h-52 overflow-auto">
+                  {filteredSpecificMajors.map((m) => {
+                    const selected = selectedSpecificMajors.includes(m.code);
+                    return (
+                      <button
+                        key={m.code}
+                        type="button"
+                        className={`w-full text-left px-3 py-1.5 rounded border text-xs ${
+                          selected
+                            ? "bg-brand-light border-brand-secondary text-brand-dark"
+                            : "bg-white border-gray-300 hover:bg-brand-light"
+                        }`}
+                        onClick={() => toggleSpecificMajor(m)}
+                      >
+                        {m.label}
+                      </button>
+                    );
+                  })}
+                </div>
+
+                {(selectedMajorAreas.length > 0 || selectedSpecificMajors.length > 0) && (
+                  <div className="flex flex-wrap gap-2 mt-3">
+                    {selectedMajorAreas.map((code) => {
+                      const opt = majorAreaOptions.find((m) => m.code === code);
+                      const label = opt?.label ?? code;
+                      return (
+                        <span
+                          key={`area-${code}`}
+                          className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-brand-light text-brand-dark text-xs"
+                        >
+                          {label}
+                          <button
+                            type="button"
+                            className="text-red-600 font-bold"
+                            onClick={() =>
+                              setSelectedMajorAreas((prev) => prev.filter((v) => v !== code))
+                            }
+                          >
+                            ×
+                          </button>
+                        </span>
+                      );
+                    })}
+                    {selectedSpecificMajors.map((code) => {
+                      const opt = specificMajorOptions.find((m) => m.code === code);
+                      const label = opt?.label ?? code;
+                      return (
+                        <span
+                          key={`spec-${code}`}
+                          className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-brand-light text-brand-dark text-xs"
+                        >
+                          {label}
+                          <button
+                            type="button"
+                            className="text-red-600 font-bold"
+                            onClick={() =>
+                              setSelectedSpecificMajors((prev) => prev.filter((v) => v !== code))
+                            }
+                          >
+                            ×
+                          </button>
+                        </span>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
             </div>
           </details>
         </div>
@@ -621,7 +727,8 @@ function filterInstitutions(
   budget: string[],
   selectivity: string[],
   testPolicy: string[],
-  selectedMajors: string[],
+  selectedMajorAreas: string[],
+  selectedSpecificMajors: string[],
   selectedStates: string[],
   selectedLocationTypes: string[],
   majorsByInstitution: InstitutionMajorsByInstitution | null,
@@ -666,12 +773,21 @@ function filterInstitutions(
     });
   }
 
-  if (selectedMajors.length > 0 && majorsByInstitution) {
-    const selectedSet = new Set(selectedMajors);
+  if ((selectedMajorAreas.length > 0 || selectedSpecificMajors.length > 0) && majorsByInstitution) {
+    const areaSet = new Set(selectedMajorAreas);
+    const specificSet = new Set(selectedSpecificMajors);
     results = results.filter((inst) => {
       const entry = majorsByInstitution[String(inst.unitid)];
-      if (!entry || !entry.four_digit || entry.four_digit.length === 0) return false;
-      return entry.four_digit.some((code) => selectedSet.has(code));
+      if (!entry) return false;
+      const hasArea =
+        selectedMajorAreas.length === 0
+          ? true
+          : (entry.two_digit || []).some((code) => areaSet.has(code));
+      const hasSpecific =
+        selectedSpecificMajors.length === 0
+          ? true
+          : (entry.six_digit || []).some((code) => specificSet.has(code));
+      return hasArea && hasSpecific;
     });
   }
 

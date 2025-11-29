@@ -57,7 +57,7 @@ const ProfileActivitiesStepPage: React.FC = () => {
     <div className="max-w-xl mx-auto">
       <div className="bg-white p-6 md:p-8 rounded-lg shadow-xl">
         <h1 className="text-2xl font-bold text-slate-900 mb-4">
-          Step 5 of 7: Activities
+          Step 5 of 8: Activities
         </h1>
         <p className="text-sm text-slate-600 mb-6">
           Add your top activities (max 5). The AI looks for leadership and national or

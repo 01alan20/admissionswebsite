@@ -32,7 +32,7 @@ const ProfileGpaStepPage: React.FC = () => {
     <div className="max-w-xl mx-auto">
       <div className="bg-white p-6 md:p-8 rounded-lg shadow-xl">
         <h1 className="text-2xl font-bold text-slate-900 mb-4">
-          Step 3 of 7: Academic Performance (GPA)
+          Step 3 of 8: Academic Performance (GPA)
         </h1>
         <form onSubmit={handleNext} className="space-y-6">
           <div>
