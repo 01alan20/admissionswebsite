@@ -9,10 +9,17 @@ const MAX_SELECTED = 3;
 
 type MajorOption = { code: string; label: string };
 
+const cleanLabel = (raw: unknown): string => {
+  const s = String(raw ?? "").trim();
+  return s.replace(/["'*]/g, "").trim();
+};
+
 const ProfileMajorsStepPage: React.FC = () => {
   const loading = useOnboardingGuard(7);
   const { setOnboardingStepRemote, studentProfile } = useOnboardingContext();
-  const [selectedMajors, setSelectedMajors] = useState<string[]>(studentProfile.majors ?? []);
+  const [selectedMajors, setSelectedMajors] = useState<string[]>(
+    () => (studentProfile.majors ?? []).map((m) => cleanLabel(m)).filter(Boolean)
+  );
   const [majorAreaQuery, setMajorAreaQuery] = useState("");
   const [specificMajorQuery, setSpecificMajorQuery] = useState("");
   const [majorsMeta, setMajorsMeta] = useState<MajorsMeta | null>(null);
@@ -43,7 +50,7 @@ const ProfileMajorsStepPage: React.FC = () => {
     const two = majorsMeta.two_digit || {};
     return Object.entries(two)
       .map(([code, raw]) => {
-        const label = String(raw || "").trim();
+        const label = cleanLabel(raw);
         return label && !/^\d+$/.test(label) ? { code, label } : null;
       })
       .filter((v): v is MajorOption => !!v)
@@ -55,7 +62,7 @@ const ProfileMajorsStepPage: React.FC = () => {
     const six = majorsMeta.six_digit || {};
     return Object.entries(six)
       .map(([code, raw]) => {
-        const label = String(raw || "").trim();
+        const label = cleanLabel(raw);
         return label && !/^\d+$/.test(label) ? { code, label } : null;
       })
       .filter((v): v is MajorOption => !!v)
