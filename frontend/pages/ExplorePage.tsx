@@ -336,7 +336,10 @@ const ExplorePage: React.FC = () => {
   }, [stateQuery, allStates]);
 
   const toggleState = (s: string) => {
-    setSelectedStates((prev) => toggleFromList(prev, s));
+    const lower = s.trim().toLowerCase();
+    const entry = Object.entries(STATE_NAMES).find(([, name]) => name.toLowerCase() === lower);
+    const code = entry ? entry[0] : s;
+    setSelectedStates((prev) => toggleFromList(prev, code));
     setStateQuery('');
   };
 
@@ -449,22 +452,25 @@ const ExplorePage: React.FC = () => {
               />
               {stateSuggestions.length > 0 && (
                 <div className="space-y-2 max-h-80 overflow-auto">
-                  {stateSuggestions.map((s) => {
-                    const isSelected = selectedStates.includes(s);
-                    return (
-                      <button
-                        key={s}
-                        className={`w-full text-left px-3 py-2 rounded border ${
-                          isSelected
-                            ? 'bg-brand-light border-brand-secondary text-brand-dark'
-                            : 'bg-white border-gray-300 hover:bg-brand-light'
-                        }`}
-                        onClick={() => toggleState(s)}
-                      >
-                        {s}
-                      </button>
-                    );
-                  })}
+              {stateSuggestions.map((s) => {
+                const lower = s.trim().toLowerCase();
+                const entry = Object.entries(STATE_NAMES).find(([, name]) => name.toLowerCase() === lower);
+                const code = entry ? entry[0] : s;
+                const isSelected = selectedStates.includes(code);
+                return (
+                  <button
+                    key={s}
+                    className={`w-full text-left px-3 py-2 rounded border ${
+                      isSelected
+                        ? 'bg-brand-light border-brand-secondary text-brand-dark'
+                        : 'bg-white border-gray-300 hover:bg-brand-light'
+                    }`}
+                    onClick={() => toggleState(s)}
+                  >
+                    {s}
+                  </button>
+                );
+              })}
                 </div>
               )}
             </div>
@@ -792,10 +798,10 @@ function filterInstitutions(
   }
 
   if (selectedStates.length > 0) {
-    const set = new Set(selectedStates.map((s) => s.toLowerCase()));
+    const set = new Set(selectedStates.map((s) => s.toUpperCase()));
     results = results.filter((inst) => {
-      const full = toFullStateName(inst.state).toLowerCase();
-      return set.has(full);
+      const code = (inst.state || '').trim().toUpperCase();
+      return code !== '' && set.has(code);
     });
   }
 
