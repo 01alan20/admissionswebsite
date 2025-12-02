@@ -40,7 +40,7 @@ const ProfileLoginPage: React.FC = () => {
         });
         if (signUpError) throw signUpError;
         setMessage(
-          "Account created. If email confirmation is required, check your inbox, then log in with your password."
+          "Account created. Check your inbox for a verification email from Supabase (our authentication provider), then log in here with your password after confirming."
         );
         setMode("login");
       } else {
@@ -175,7 +175,7 @@ const ProfileLoginPage: React.FC = () => {
         </form>
 
         {message && (
-          <p className="text-sm text-green-700 mt-3">
+          <p className="text-green-700 mt-3 text-[2.2rem] leading-snug">
             {message}
           </p>
         )}

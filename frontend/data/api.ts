@@ -43,6 +43,15 @@ type LocationEntry = {
   size?: string | null;
 };
 
+export type TestScoreType = "sat" | "act";
+
+export interface InstitutionTestScores {
+  sat_total_25?: number | null;
+  sat_total_75?: number | null;
+  act_composite_25?: number | null;
+  act_composite_75?: number | null;
+}
+
 const TEST_POLICY_OVERRIDES: Record<number, string> = {
   130794: "Test flexible", // Yale University
 };
@@ -118,6 +127,7 @@ function parseCsvLine(line: string): string[] {
 }
 
 let locationTypeMapPromise: Promise<Map<number, string>> | null = null;
+let institutionTestScoreMapPromise: Promise<Map<number, InstitutionTestScores>> | null = null;
 
 export async function getLocationTypeMap(): Promise<Map<number, string>> {
   if (!locationTypeMapPromise) {
@@ -179,6 +189,68 @@ export async function getLocationTypeMap(): Promise<Map<number, string>> {
     })();
   }
   return locationTypeMapPromise;
+}
+
+export async function getInstitutionTestScoreMap(): Promise<Map<number, InstitutionTestScores>> {
+  if (!institutionTestScoreMapPromise) {
+    institutionTestScoreMapPromise = (async () => {
+      const rows = await getJSON<any[]>("/data/metrics_by_year.json");
+      const latestByUnit = new Map<number, any>();
+
+      for (const r of rows) {
+        const unitid = Number(r.unitid);
+        const year = Number(r.year);
+        if (!Number.isFinite(unitid) || !Number.isFinite(year)) continue;
+        const existing = latestByUnit.get(unitid);
+        if (!existing || year > existing.year) {
+          latestByUnit.set(unitid, r);
+        }
+      }
+
+      const map = new Map<number, InstitutionTestScores>();
+      for (const [unitid, r] of latestByUnit.entries()) {
+        const satEbrw25 = r.sat_evidence_based_reading_and_writing_25th_percentile_score;
+        const satMath25 = r.sat_math_25th_percentile_score;
+        const satEbrw75 = r.sat_evidence_based_reading_and_writing_75th_percentile_score;
+        const satMath75 = r.sat_math_75th_percentile_score;
+
+        const sat_total_25 =
+          satEbrw25 != null && satMath25 != null
+            ? Number(satEbrw25) + Number(satMath25)
+            : null;
+        const sat_total_75 =
+          satEbrw75 != null && satMath75 != null
+            ? Number(satEbrw75) + Number(satMath75)
+            : null;
+
+        const act_composite_25 =
+          r.act_composite_25th_percentile_score != null
+            ? Number(r.act_composite_25th_percentile_score)
+            : null;
+        const act_composite_75 =
+          r.act_composite_75th_percentile_score != null
+            ? Number(r.act_composite_75th_percentile_score)
+            : null;
+
+        if (
+          sat_total_25 != null ||
+          sat_total_75 != null ||
+          act_composite_25 != null ||
+          act_composite_75 != null
+        ) {
+          map.set(unitid, {
+            sat_total_25,
+            sat_total_75,
+            act_composite_25,
+            act_composite_75,
+          });
+        }
+      }
+
+      return map;
+    })();
+  }
+  return institutionTestScoreMapPromise;
 }
 
 export async function getAllInstitutions(): Promise<Institution[]> {

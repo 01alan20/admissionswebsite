@@ -10,7 +10,10 @@ import {
   getMajorsMeta,
   getMajorsByInstitution,
   getLocationTypeMap,
+  getInstitutionTestScoreMap,
   InstitutionIndex,
+  InstitutionTestScores,
+  TestScoreType,
 } from '../data/api';
 
 const InstitutionCard: React.FC<{ institution: Institution }> = ({ institution }) => {
@@ -77,6 +80,9 @@ const ExplorePage: React.FC = () => {
   const [selectedStates, setSelectedStates] = useState<string[]>([]);
   // Location type filter
   const [locationTypes, setLocationTypes] = useState<string[]>([]);
+  // Test score filter
+  const [testScoreType, setTestScoreType] = useState<TestScoreType | ''>('');
+  const [testScoreValue, setTestScoreValue] = useState<string>('');
 
   // Load index and default top 10 by applicants
   useEffect(() => {
@@ -102,6 +108,13 @@ const ExplorePage: React.FC = () => {
     const run = async () => {
       const q = query.trim().toLowerCase();
       const hasQuery = q.length >= 3;
+      const parsedScore = Number(testScoreValue);
+      const isValidTestScore =
+        Number.isFinite(parsedScore) &&
+        parsedScore > 0 &&
+        ((testScoreType === 'sat' && parsedScore >= 400 && parsedScore <= 1600) ||
+          (testScoreType === 'act' && parsedScore >= 1 && parsedScore <= 36));
+      const hasTestScoreFilter = testScoreType !== '' && isValidTestScore;
       const hasFilter =
         budget.length > 0 ||
         selectivity.length > 0 ||
@@ -109,7 +122,8 @@ const ExplorePage: React.FC = () => {
         selectedMajorAreas.length > 0 ||
         selectedSpecificMajors.length > 0 ||
         selectedStates.length > 0 ||
-        locationTypes.length > 0;
+        locationTypes.length > 0 ||
+        hasTestScoreFilter;
 
       if (!hasQuery && !hasFilter) {
         setFilteredUnitIds(defaultUnitIds);
@@ -134,6 +148,14 @@ const ExplorePage: React.FC = () => {
           const all = allInstitutions || await getAllInstitutions();
           if (!allInstitutions) setAllInstitutions(all);
           const locationMap = await getLocationTypeMap();
+          let testScoreMap: Map<number, InstitutionTestScores> | null = null;
+          if (hasTestScoreFilter) {
+            try {
+              testScoreMap = await getInstitutionTestScoreMap();
+            } catch {
+              testScoreMap = null;
+            }
+          }
           filterUnitIds = filterInstitutions(
             all,
             budget,
@@ -145,11 +167,23 @@ const ExplorePage: React.FC = () => {
             locationTypes,
             majorsByInstitution,
             locationMap,
+            hasTestScoreFilter && testScoreType !== ''
+              ? { type: testScoreType, value: parsedScore }
+              : null,
+            testScoreMap,
           ).map((i) => i.unitid);
         } catch (err) {
           // If location CSV or other optional data fails, fall back to filtering without location
           const all = allInstitutions || await getAllInstitutions();
           if (!allInstitutions) setAllInstitutions(all);
+          let testScoreMap: Map<number, InstitutionTestScores> | null = null;
+          if (hasTestScoreFilter) {
+            try {
+              testScoreMap = await getInstitutionTestScoreMap();
+            } catch {
+              testScoreMap = null;
+            }
+          }
           filterUnitIds = filterInstitutions(
             all,
             budget,
@@ -161,6 +195,10 @@ const ExplorePage: React.FC = () => {
             [],
             majorsByInstitution,
             null,
+            hasTestScoreFilter && testScoreType !== ''
+              ? { type: testScoreType, value: parsedScore }
+              : null,
+            testScoreMap,
           ).map((i) => i.unitid);
         }
       }
@@ -190,6 +228,8 @@ const ExplorePage: React.FC = () => {
     selectedSpecificMajors,
     selectedStates,
     locationTypes,
+    testScoreType,
+    testScoreValue,
     index,
     defaultUnitIds,
     allInstitutions,
@@ -437,6 +477,89 @@ const ExplorePage: React.FC = () => {
                   {label}
                 </button>
               ))}
+            </div>
+          </details>
+
+          <details className="border rounded-md">
+            <summary className="cursor-pointer px-3 py-2 font-semibold">Test Score</summary>
+            <div className="px-3 py-2 space-y-3">
+              <div className="flex gap-2">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setTestScoreType((prev) => (prev === 'sat' ? '' : 'sat'));
+                    setTestScoreValue('');
+                  }}
+                  className={`flex-1 text-center px-3 py-2 rounded border text-sm ${
+                    testScoreType === 'sat'
+                      ? 'bg-brand-light border-brand-secondary text-brand-dark'
+                      : 'bg-white border-gray-300 hover:bg-brand-light'
+                  }`}
+                >
+                  SAT Total
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setTestScoreType((prev) => (prev === 'act' ? '' : 'act'));
+                    setTestScoreValue('');
+                  }}
+                  className={`flex-1 text-center px-3 py-2 rounded border text-sm ${
+                    testScoreType === 'act'
+                      ? 'bg-brand-light border-brand-secondary text-brand-dark'
+                      : 'bg-white border-gray-300 hover:bg-brand-light'
+                  }`}
+                >
+                  ACT Composite
+                </button>
+              </div>
+
+              {testScoreType === 'sat' && (
+                <div className="space-y-1">
+                  <label className="block text-xs font-semibold text-gray-700">
+                    SAT Total (400-1600)
+                  </label>
+                  <input
+                    type="number"
+                    min={400}
+                    max={1600}
+                    value={testScoreValue}
+                    onChange={(e) => setTestScoreValue(e.target.value)}
+                    placeholder="e.g. 1450"
+                    className="w-full p-2 border border-gray-300 rounded-md text-sm"
+                  />
+                </div>
+              )}
+
+              {testScoreType === 'act' && (
+                <div className="space-y-1">
+                  <label className="block text-xs font-semibold text-gray-700">
+                    ACT Composite (1-36)
+                  </label>
+                  <input
+                    type="number"
+                    min={1}
+                    max={36}
+                    value={testScoreValue}
+                    onChange={(e) => setTestScoreValue(e.target.value)}
+                    placeholder="e.g. 33"
+                    className="w-full p-2 border border-gray-300 rounded-md text-sm"
+                  />
+                </div>
+              )}
+
+              {testScoreType !== '' && (
+                <button
+                  type="button"
+                  onClick={() => {
+                    setTestScoreType('');
+                    setTestScoreValue('');
+                  }}
+                  className="text-xs text-red-600 underline"
+                >
+                  Clear test score filter
+                </button>
+              )}
             </div>
           </details>
 
@@ -739,6 +862,8 @@ function filterInstitutions(
   selectedLocationTypes: string[],
   majorsByInstitution: InstitutionMajorsByInstitution | null,
   locationMap: Map<number, string> | null,
+  testScoreFilter: { type: TestScoreType; value: number } | null,
+  testScoreMap: Map<number, InstitutionTestScores> | null,
 ): Institution[] {
   let results = institutions.slice();
 
@@ -815,6 +940,30 @@ function filterInstitutions(
       const normalized = normalizeLocationType(rawLoc);
       if (!normalized) return false;
       return typeSet.has(normalized);
+    });
+  }
+
+  if (testScoreFilter && testScoreMap) {
+    const { type, value } = testScoreFilter;
+    results = results.filter((inst) => {
+      const scores = testScoreMap.get(inst.unitid);
+      if (!scores) return false;
+
+      if (type === 'sat') {
+        const low = scores.sat_total_25 ?? null;
+        const high = scores.sat_total_75 ?? null;
+        if (low == null || high == null) return false;
+        return value >= low && value <= high;
+      }
+
+      if (type === 'act') {
+        const low = scores.act_composite_25 ?? null;
+        const high = scores.act_composite_75 ?? null;
+        if (low == null || high == null) return false;
+        return value >= low && value <= high;
+      }
+
+      return false;
     });
   }
 
