@@ -115,6 +115,8 @@ const ExplorePage: React.FC = () => {
         ((testScoreType === 'sat' && parsedScore >= 400 && parsedScore <= 1600) ||
           (testScoreType === 'act' && parsedScore >= 1 && parsedScore <= 36));
       const hasTestScoreFilter = testScoreType !== '' && isValidTestScore;
+      const testScoreFilter =
+        hasTestScoreFilter ? { type: testScoreType as TestScoreType, value: parsedScore } : null;
       const hasFilter =
         budget.length > 0 ||
         selectivity.length > 0 ||
@@ -167,9 +169,7 @@ const ExplorePage: React.FC = () => {
             locationTypes,
             majorsByInstitution,
             locationMap,
-            hasTestScoreFilter && testScoreType !== ''
-              ? { type: testScoreType, value: parsedScore }
-              : null,
+            testScoreFilter,
             testScoreMap,
           ).map((i) => i.unitid);
         } catch (err) {
@@ -195,9 +195,7 @@ const ExplorePage: React.FC = () => {
             [],
             majorsByInstitution,
             null,
-            hasTestScoreFilter && testScoreType !== ''
-              ? { type: testScoreType, value: parsedScore }
-              : null,
+            testScoreFilter,
             testScoreMap,
           ).map((i) => i.unitid);
         }
@@ -295,6 +293,8 @@ const ExplorePage: React.FC = () => {
       .map(([code, rawTitle]) => {
         const title = cleanCipTitle(rawTitle);
         if (!title || /^\d+$/.test(title)) return null;
+        const lower = title.toLowerCase();
+        if (lower === 'first major' || lower === 'area') return null;
         return { code, title, label: title };
       })
       .filter((v): v is CipMajorOption => !!v)
