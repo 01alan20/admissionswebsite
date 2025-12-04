@@ -123,7 +123,7 @@ const HomePage: React.FC = () => {
           <h2 className="text-2xl font-bold text-brand-primary">Why Work With an Independent College Counselor</h2>
           <p className="text-gray-700">
             School counselors are often overloaded and online forums can be noisy. You get university leadership experience,
-            transparent advice, and ethical supportΓÇöno guarantees, no ghostwritingΓÇöfocused on your studentΓÇÖs fit.
+            transparent advice, and ethical support with a focus on your best fit.
           </p>
         </div>
         <div className="bg-white p-6 sm:p-7 rounded-lg shadow-md space-y-3">
@@ -142,7 +142,7 @@ const HomePage: React.FC = () => {
             <li>Choose a package or one-off session with clear timelines.</li>
           </ol>
           <Link to="/contact" className="text-brand-secondary font-semibold hover:text-brand-primary">
-            Get personalized help ΓåÆ
+            Get personalized help
           </Link>
         </div>
       </section>
