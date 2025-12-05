@@ -1,5 +1,8 @@
 ﻿import React, { useState } from 'react';
 import { HashRouter, Route, Routes, NavLink } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import { trackPageView } from './utils/analytics';
 import HomePage from './pages/HomePage';
 import ExplorePage from './pages/ExplorePage';
 import ComparePage from './pages/ComparePage';
@@ -165,37 +168,50 @@ const Footer: React.FC = () => (
   </footer>
 );
 
+const AppRoutes: React.FC = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    const path = `${location.pathname}${location.search}${location.hash}`;
+    trackPageView(path);
+  }, [location]);
+
+  return (
+    <main className="flex-grow container mx-auto px-4 py-4 sm:px-6 sm:py-6 lg:px-8 lg:py-8">
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/explore" element={<ExplorePage />} />
+        <Route path="/compare" element={<ComparePage />} />
+        <Route path="/institution/:unitid" element={<DetailPage />} />
+        <Route path="/pathways" element={<HighSchoolPathwaysPage />} />
+        <Route path="/timelines" element={<TimelinesPage />} />
+        <Route path="/faq" element={<FaqPage />} />
+        <Route path="/review" element={<ProfileReviewPage />} />
+        <Route path="/profile" element={<ProfileRoutePage />} />
+        <Route path="/profile/route" element={<ProfileRoutePage />} />
+        <Route path="/contact" element={<ContactHelpPage />} />
+        <Route path="/profile/login" element={<ProfileLoginPage />} />
+        <Route path="/profile/name" element={<ProfileNameStepPage />} />
+        <Route path="/profile/location" element={<ProfileLocationStepPage />} />
+        <Route path="/profile/gpa" element={<ProfileGpaStepPage />} />
+        <Route path="/profile/tests" element={<ProfileTestsStepPage />} />
+        <Route path="/profile/activities" element={<ProfileActivitiesStepPage />} />
+        <Route path="/profile/recs" element={<ProfileRecommendationsStepPage />} />
+        <Route path="/profile/majors" element={<ProfileMajorsStepPage />} />
+        <Route path="/profile/targets" element={<ProfileTargetsStepPage />} />
+        <Route path="/profile/dashboard" element={<ProfileDashboardPage />} />
+      </Routes>
+    </main>
+  );
+};
+
 const App: React.FC = () => {
   return (
     <HashRouter>
       <OnboardingProvider>
         <div className="flex flex-col min-h-screen font-sans text-gray-800">
           <Header />
-          <main className="flex-grow container mx-auto px-4 py-4 sm:px-6 sm:py-6 lg:px-8 lg:py-8">
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/explore" element={<ExplorePage />} />
-              <Route path="/compare" element={<ComparePage />} />
-              <Route path="/institution/:unitid" element={<DetailPage />} />
-              <Route path="/pathways" element={<HighSchoolPathwaysPage />} />
-              <Route path="/timelines" element={<TimelinesPage />} />
-              <Route path="/faq" element={<FaqPage />} />
-              <Route path="/review" element={<ProfileReviewPage />} />
-              <Route path="/profile" element={<ProfileRoutePage />} />
-              <Route path="/profile/route" element={<ProfileRoutePage />} />
-              <Route path="/contact" element={<ContactHelpPage />} />
-              <Route path="/profile/login" element={<ProfileLoginPage />} />
-              <Route path="/profile/name" element={<ProfileNameStepPage />} />
-              <Route path="/profile/location" element={<ProfileLocationStepPage />} />
-              <Route path="/profile/gpa" element={<ProfileGpaStepPage />} />
-              <Route path="/profile/tests" element={<ProfileTestsStepPage />} />
-              <Route path="/profile/activities" element={<ProfileActivitiesStepPage />} />
-              <Route path="/profile/recs" element={<ProfileRecommendationsStepPage />} />
-              <Route path="/profile/majors" element={<ProfileMajorsStepPage />} />
-              <Route path="/profile/targets" element={<ProfileTargetsStepPage />} />
-              <Route path="/profile/dashboard" element={<ProfileDashboardPage />} />
-            </Routes>
-          </main>
+          <AppRoutes />
           <Footer />
         </div>
       </OnboardingProvider>

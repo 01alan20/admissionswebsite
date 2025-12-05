@@ -37,9 +37,9 @@ const SearchBox: React.FC = () => {
 
 const HomePage: React.FC = () => {
   useEffect(() => {
-    const title = 'College Admissions Consultant for International Students | SeeThrough Admissions';
+    const title = 'US College Admissions Guidance for Students & Families | SeeThrough Admissions';
     const description =
-      'Transparent US college admissions guidance for international students and families. Former university leader helping you plan, apply, and stand out with less stress.';
+      'Former university dean guiding US and international students and parents to build realistic college lists, plan courses and activities, and submit stronger applications with less stress.';
 
     document.title = title;
     let meta = document.querySelector('meta[name=\"description\"]');
@@ -57,15 +57,14 @@ const HomePage: React.FC = () => {
         <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-brand-light/40 via-white to-brand-accent/10" />
         <div className="relative max-w-4xl text-left space-y-6">
           <p className="text-sm font-semibold text-brand-secondary uppercase tracking-wide">
-            College admissions consultant for international students
+            College admissions guidance for US and international students
           </p>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-brand-dark leading-tight">
-            Transparent US College Admissions Guidance for International Students and Families
+            Realistic US College Admissions Plans for Students and Families
           </h1>
           <p className="text-base sm:text-lg text-gray-700">
-            I am a former university dean and student services leader who now helps international students and parents
-            in Asia and worldwide build a realistic US college list, plan courses and activities, and submit stronger applications
-            with less stress.
+            I am a former university dean and student services leader who now coaches students in the US and abroad to build
+            a balanced college list, map courses, testing, and activities, and submit stronger applications with less stress.
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <Link
@@ -80,6 +79,12 @@ const HomePage: React.FC = () => {
             >
               Check the "Are We On Track?" timelines
             </Link>
+            <Link
+              to="/explore"
+              className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-white bg-brand-secondary hover:bg-brand-primary rounded-md shadow-sm transition-colors"
+            >
+              Explore universities now
+            </Link>
           </div>
         </div>
       </section>
@@ -88,9 +93,9 @@ const HomePage: React.FC = () => {
         <div className="bg-white p-6 sm:p-8 rounded-lg shadow-md space-y-4">
           <h2 className="text-2xl font-bold text-brand-primary">Who We Help</h2>
           <ul className="list-disc list-inside text-gray-700 space-y-2">
+            <li>US students in public, private, or homeschool settings who want a clear, realistic US college plan.</li>
             <li>International students in IB, A Levels, AP, or local curricula planning a US college path.</li>
-            <li>Parents in Singapore, Asia, and worldwide who want clear US college admissions help for their child.</li>
-            <li>Students aiming for selective US universities who need honest feedback on competitiveness.</li>
+            <li>Parents and guardians worldwide who want honest feedback on competitiveness, budget, and fit.</li>
           </ul>
         </div>
         <div className="bg-white p-6 sm:p-8 rounded-lg shadow-md space-y-4">
@@ -105,7 +110,7 @@ const HomePage: React.FC = () => {
             <div>
               <h3 className="text-lg font-semibold text-brand-dark">2. College List, Essays, and Application Support</h3>
               <p className="text-gray-700">
-                Common App help, realistic college list building for international students, essay brainstorming and review.
+                Common App help, realistic college list building for US and international students, essay brainstorming and review.
               </p>
             </div>
             <div>
@@ -152,7 +157,7 @@ const HomePage: React.FC = () => {
           <div>
             <h2 className="text-2xl font-bold text-brand-primary">Research US Universities With Our Tools</h2>
             <p className="text-gray-700">
-              Explore data, compare schools, and see AI-powered insights built for international students.
+              Explore data, compare schools, and see AI-powered insights built for students and families in the US and abroad.
             </p>
           </div>
           <Link
@@ -169,7 +174,7 @@ const HomePage: React.FC = () => {
           {[
             { title: 'Explore Schools', body: 'Filter by budget, selectivity, majors, and more to find a strong-fit list.' },
             { title: 'Compare Side-by-Side', body: 'See tuition, acceptance rates, and outcomes in one clean view.' },
-            { title: 'AI-Powered Insights', body: 'Get quick summaries tailored to international students on every university.' },
+            { title: 'AI-Powered Insights', body: 'Get quick summaries tailored to US and international students on every university.' },
           ].map((item) => (
             <div key={item.title} className="border border-gray-200 rounded-md p-4 bg-gray-50">
               <h3 className="text-lg font-semibold text-brand-dark mb-1">{item.title}</h3>
@@ -184,7 +189,7 @@ const HomePage: React.FC = () => {
           <div>
             <h2 className="text-2xl font-bold text-brand-primary">Common Questions</h2>
             <p className="text-gray-700">
-              Answers for international students and parents considering US college counseling.
+              Answers for US and international students and parents considering US college counseling.
             </p>
           </div>
           <Link
@@ -197,20 +202,20 @@ const HomePage: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {[
             {
-              q: 'What does a college admissions consultant do for international students?',
-              a: 'Clarifies options, builds a realistic college list, guides essays, and keeps you on track.',
+              q: 'What does a college admissions consultant do for students?',
+              a: 'Clarifies options, builds a realistic college list, guides essays, and keeps you on track from anywhere.',
             },
             {
               q: 'When should we start working together?',
-              a: 'Ideally end of Grade 9 or 10; Grade 11ΓÇô12 is still impactful for list, essays, and strategy.',
+              a: 'Ideally end of Grade 9 or 10; Grade 11-12 is still impactful for list, essays, and strategy.',
             },
             {
               q: 'Do you guarantee admission to a specific college?',
               a: 'No ethical counselor can guarantee admission; we focus on fit and stronger applications.',
             },
             {
-              q: 'Do you work with parents and time zones in Asia?',
-              a: 'Yes. We schedule across time zones and keep parents updated at every step.',
+              q: 'Do you work with US and international families across time zones?',
+              a: 'Yes. We schedule across US and overseas time zones and keep parents updated at every step.',
             },
           ].map((item) => (
             <details key={item.q} className="group border border-gray-200 rounded-md p-4 bg-gray-50">
@@ -227,7 +232,7 @@ const HomePage: React.FC = () => {
       <section className="bg-brand-primary text-white rounded-lg shadow-lg p-8 sm:p-10 text-center space-y-4">
         <h2 className="text-3xl font-bold">Ready To Get Clear On US Admissions?</h2>
         <p className="text-lg text-white/90 max-w-3xl mx-auto">
-          Get honest, research-based guidance from an independent college counselor for international students and families.
+          Get honest, research-based guidance from an independent college counselor for students and families in the US and worldwide.
         </p>
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <Link
