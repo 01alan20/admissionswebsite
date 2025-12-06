@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import {
   InstitutionDetail,
@@ -267,21 +267,19 @@ const DetailPage: React.FC = () => {
       .filter((node) => node.fours.length > 0);
   })();
 
-  const percentByKey = useMemo(() => {
+  const percentByKey = (() => {
     const map = new Map<string, number>();
     (demographics?.breakdown || []).forEach((slice) => {
       if (slice.percent != null) map.set(slice.key, slice.percent);
     });
     return map;
-  }, [demographics]);
+  })();
 
-  const demographicGroups: DemographicGroupSlice[] = useMemo(() => {
-    return DEMOGRAPHIC_GROUPS.map((g) => {
-      const pct = g.sourceKeys.reduce((sum, key) => sum + (percentByKey.get(key) ?? 0), 0);
-      const hasData = g.sourceKeys.some((key) => percentByKey.has(key));
-      return { ...g, percent: hasData ? pct : null };
-    }).filter((g) => g.percent != null);
-  }, [percentByKey]);
+  const demographicGroups: DemographicGroupSlice[] = DEMOGRAPHIC_GROUPS.map((g) => {
+    const pct = g.sourceKeys.reduce((sum, key) => sum + (percentByKey.get(key) ?? 0), 0);
+    const hasData = g.sourceKeys.some((key) => percentByKey.has(key));
+    return { ...g, percent: hasData ? pct : null };
+  }).filter((g) => g.percent != null);
 
   const hasDemographics = demographicGroups.length > 0;
 

@@ -20,6 +20,7 @@ import {
   tierColorClass,
   buildSchoolMetricsFromInstitution,
 } from "../utils/admissionsModel";
+import DashboardLayout from "../components/DashboardLayout";
 
 const ProfileDashboardPage: React.FC = () => {
   const loading = useOnboardingGuard(9);
@@ -321,8 +322,9 @@ const ProfileDashboardPage: React.FC = () => {
   })();
 
   return (
-    <div className="max-w-5xl mx-auto">
-      <div className="bg-white p-6 md:p-8 rounded-lg shadow-xl">
+    <DashboardLayout>
+      <div className="max-w-5xl mx-auto">
+        <div className="bg-white p-6 md:p-8 rounded-lg shadow-xl">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-4">
           <h1 className="text-3xl font-bold text-brand-dark">
             Your Admissions Dashboard
@@ -895,7 +897,8 @@ const ProfileDashboardPage: React.FC = () => {
           )}
         </section>
       </div>
-    </div>
+      </div>
+    </DashboardLayout>
   );
 };
 
