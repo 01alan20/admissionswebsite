@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import {
   InstitutionDetail,
   InstitutionMetrics,
   InstitutionMajorsByInstitution,
+  InstitutionDemographics,
   MajorsMeta,
 } from '../types';
 import { categorizeTestPolicy } from '../utils/admissionsModel';
@@ -13,6 +14,7 @@ import {
   getInstitutionMetrics,
   getMajorsMeta,
   getMajorsByInstitution,
+  getInstitutionDemographics,
 } from '../data/api';
 
 const StatCard: React.FC<{ label: string; value: string | number | null | undefined }> = ({
@@ -74,6 +76,77 @@ const TestScoreRange: React.FC<{
   );
 };
 
+const DEMOGRAPHIC_COLORS: Record<string, string> = {
+  american_indian_or_alaska_native: '#a855f7',
+  asian: '#06b6d4',
+  black_or_african_american: '#4f46e5',
+  hispanic_or_latino: '#f97316',
+  native_hawaiian_or_pacific_islander: '#0ea5e9',
+  white: '#22c55e',
+  two_or_more_races: '#ec4899',
+  unknown: '#94a3b8',
+  nonresident: '#eab308',
+};
+
+const DEMOGRAPHIC_FALLBACK_COLORS = [
+  '#2563eb',
+  '#14b8a6',
+  '#f59e0b',
+  '#ef4444',
+  '#22c55e',
+  '#6366f1',
+  '#f97316',
+  '#c084fc',
+  '#0ea5e9',
+];
+
+type DemographicBar = InstitutionDemographics['breakdown'][number] & { color: string };
+
+const DemographicsMiniChart: React.FC<{ slices: DemographicBar[] }> = ({ slices }) => {
+  if (!slices.length) return null;
+  return (
+    <div className="space-y-4">
+      <div className="flex items-end gap-3 h-44">
+        {slices.map((slice) => {
+          const pct = slice.percent ?? 0;
+          const display = slice.percent != null ? (pct >= 10 ? pct.toFixed(0) : pct.toFixed(1)) : 'N/A';
+          const height = slice.percent == null ? 0 : Math.max(3, Math.min(100, pct));
+          return (
+            <div key={slice.key} className="flex-1 min-w-[32px] flex flex-col items-center gap-2">
+              <div className="w-full max-w-[32px] bg-gray-100 rounded-md h-full flex items-end overflow-hidden">
+                <div
+                  className="w-full rounded-md"
+                  style={{ height: `${height}%`, backgroundColor: slice.color }}
+                  aria-label={`${slice.label}: ${display === 'N/A' ? 'No data' : `${display}%`}`}
+                ></div>
+              </div>
+              <div className="text-center leading-tight text-[11px] text-gray-700">
+                <div className="font-semibold">{display === 'N/A' ? 'N/A' : `${display}%`}</div>
+                <div className="text-[10px] text-gray-500">{slice.label}</div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-2 text-xs text-gray-700">
+        {slices.map((slice) => {
+          const display = slice.percent != null ? (slice.percent >= 10 ? slice.percent.toFixed(0) : slice.percent.toFixed(1)) : 'N/A';
+          return (
+            <div key={`${slice.key}-legend`} className="flex items-center gap-2">
+              <span
+                className="h-3 w-3 rounded-sm border border-gray-200"
+                style={{ backgroundColor: slice.color }}
+              ></span>
+              <span className="truncate">{slice.label}</span>
+              <span className="ml-auto font-semibold">{display === 'N/A' ? 'N/A' : `${display}%`}</span>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
 const DetailPage: React.FC = () => {
   const { unitid } = useParams<{ unitid: string }>();
   const [detail, setDetail] = useState<InstitutionDetail | null>(null);
@@ -82,6 +155,7 @@ const DetailPage: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const [majorsMeta, setMajorsMeta] = useState<MajorsMeta | null>(null);
   const [majorsByInstitution, setMajorsByInstitution] = useState<InstitutionMajorsByInstitution | null>(null);
+  const [demographics, setDemographics] = useState<InstitutionDemographics | null>(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -107,6 +181,22 @@ const DetailPage: React.FC = () => {
     };
 
     fetchData();
+  }, [unitid]);
+
+  useEffect(() => {
+    if (!unitid) return;
+    let cancelled = false;
+    (async () => {
+      try {
+        const data = await getInstitutionDemographics(unitid);
+        if (!cancelled) setDemographics(data);
+      } catch {
+        if (!cancelled) setDemographics(null);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
   }, [unitid]);
 
   useEffect(() => {
@@ -168,6 +258,17 @@ const DetailPage: React.FC = () => {
       })
       .filter((node) => node.fours.length > 0);
   })();
+
+  const demographicSlices = useMemo(
+    () =>
+      (demographics?.breakdown || []).map((slice, idx) => ({
+        ...slice,
+        color: DEMOGRAPHIC_COLORS[slice.key] ?? DEMOGRAPHIC_FALLBACK_COLORS[idx % DEMOGRAPHIC_FALLBACK_COLORS.length],
+      })),
+    [demographics]
+  );
+
+  const hasDemographics = demographicSlices.some((d) => d.percent != null);
 
   return (
     <div className="space-y-6">
@@ -236,6 +337,31 @@ const DetailPage: React.FC = () => {
               />
             </div>
           </div>
+
+          {hasDemographics && (
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="flex items-start justify-between gap-4 flex-wrap">
+                <div>
+                  <h2 className="text-2xl font-bold text-brand-dark mb-1">Undergrad student body</h2>
+                  <p className="text-sm text-gray-600">
+                    Share of undergraduates by race/ethnicity
+                    {demographics?.year ? ` (latest ${demographics.year})` : ''}.
+                  </p>
+                </div>
+                {demographics?.total_undergrad != null && (
+                  <div className="text-sm text-gray-600">
+                    Total undergrads:{' '}
+                    <span className="font-semibold text-gray-800">
+                      {demographics.total_undergrad.toLocaleString()}
+                    </span>
+                  </div>
+                )}
+              </div>
+              <div className="mt-5">
+                <DemographicsMiniChart slices={demographicSlices} />
+              </div>
+            </div>
+          )}
 
           {applicants && (
             <div className="bg-white p-6 rounded-lg shadow-md">

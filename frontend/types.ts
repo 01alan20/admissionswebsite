@@ -49,6 +49,31 @@ export interface InstitutionProfile {
   };
 }
 
+export type DemographicGroupKey =
+  | 'american_indian_or_alaska_native'
+  | 'asian'
+  | 'black_or_african_american'
+  | 'hispanic_or_latino'
+  | 'native_hawaiian_or_pacific_islander'
+  | 'white'
+  | 'two_or_more_races'
+  | 'unknown'
+  | 'nonresident';
+
+export interface DemographicSlice {
+  key: DemographicGroupKey;
+  label: string;
+  percent: number | null;
+  count: number | null;
+}
+
+export interface InstitutionDemographics {
+  unitid: number;
+  year: number | null;
+  total_undergrad: number | null;
+  breakdown: DemographicSlice[];
+}
+
 export interface InstitutionRequirements {
   required: string[];
   considered: string[];

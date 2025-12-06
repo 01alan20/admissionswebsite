@@ -3,6 +3,7 @@ import {
   InstitutionDetail,
   InstitutionMetrics,
   InstitutionMajorsByInstitution,
+  InstitutionDemographics,
   MajorsMeta,
 } from "../types";
 
@@ -124,6 +125,161 @@ function parseCsvLine(line: string): string[] {
   }
   result.push(current);
   return result;
+}
+
+const toNumberOrNull = (value: string | null | undefined): number | null => {
+  if (value === null || value === undefined) return null;
+  const parsed = Number(String(value).replace(/,/g, "").trim());
+  return Number.isFinite(parsed) ? parsed : null;
+};
+
+type DemographicColumn = {
+  key: InstitutionDemographics["breakdown"][number]["key"];
+  header: string;
+  label: string;
+};
+
+const DEMOGRAPHIC_COLUMNS: DemographicColumn[] = [
+  {
+    key: "american_indian_or_alaska_native",
+    header: "EFFY2024.American Indian or Alaska Native total",
+    label: "American Indian or Alaska Native",
+  },
+  { key: "asian", header: "EFFY2024.Asian total", label: "Asian" },
+  {
+    key: "black_or_african_american",
+    header: "EFFY2024.Black or African American total",
+    label: "Black or African American",
+  },
+  {
+    key: "hispanic_or_latino",
+    header: "EFFY2024.Hispanic or Latino total",
+    label: "Hispanic or Latino",
+  },
+  {
+    key: "native_hawaiian_or_pacific_islander",
+    header: "EFFY2024.Native Hawaiian or Other Pacific Islander total",
+    label: "Native Hawaiian or Pacific Islander",
+  },
+  { key: "white", header: "EFFY2024.White total", label: "White" },
+  {
+    key: "two_or_more_races",
+    header: "EFFY2024.Two or more races total",
+    label: "Two or more races",
+  },
+  {
+    key: "unknown",
+    header: "EFFY2024.Race/ethnicity unknown total",
+    label: "Race/ethnicity unknown",
+  },
+  {
+    key: "nonresident",
+    header: "EFFY2024.U.S. Nonresident total",
+    label: "Nonresident",
+  },
+];
+
+let undergradDemographicsMapPromise: Promise<Map<number, InstitutionDemographics>> | null = null;
+
+export async function getUndergradDemographicsMap(): Promise<Map<number, InstitutionDemographics>> {
+  if (!undergradDemographicsMapPromise) {
+    undergradDemographicsMapPromise = (async () => {
+      const map = new Map<number, InstitutionDemographics>();
+      const paths = ["/data/uni_demographics.csv", "/uni_demographics.csv"];
+      let csvText: string | null = null;
+
+      for (const path of paths) {
+        try {
+          csvText = await getText(path);
+          break;
+        } catch {
+          // try next path
+        }
+      }
+
+      if (!csvText) return map;
+      const lines = csvText.split(/\r?\n/).filter((l) => l.trim().length > 0);
+      if (lines.length <= 1) return map;
+
+      const headerCols = parseCsvLine(lines[0]);
+      const headerLookup = new Map<string, number>();
+      headerCols.forEach((h, idx) => headerLookup.set(h.trim().toLowerCase(), idx));
+      const getIdx = (name: string) => headerLookup.get(name.toLowerCase()) ?? -1;
+
+      const unitidIdx = getIdx("unitid");
+      const yearIdx = getIdx("year");
+      const levelIdx = getIdx("effy2024.level and degree/certificate-seeking status of student");
+      const ugGradIdx = getIdx("effy2024.undergraduate or graduate level of student");
+      const totalIdx = getIdx("effy2024.grand total");
+
+      if (unitidIdx === -1 || totalIdx === -1) return map;
+
+      const columnIndexByKey = DEMOGRAPHIC_COLUMNS.reduce<Record<string, number>>((acc, col) => {
+        acc[col.key] = getIdx(col.header);
+        return acc;
+      }, {});
+
+      for (let i = 1; i < lines.length; i++) {
+        const row = lines[i];
+        if (!row.trim()) continue;
+        const cols = parseCsvLine(row);
+        if (cols.length <= Math.max(unitidIdx, totalIdx)) continue;
+
+        const levelRaw = levelIdx !== -1 ? cols[levelIdx]?.trim().toLowerCase() : "";
+        const levelType = ugGradIdx !== -1 ? cols[ugGradIdx]?.trim().toLowerCase() : "";
+        const isUndergradRow =
+          levelRaw.includes("all students, undergraduate total") ||
+          (levelType === "undergraduate" && levelRaw.includes("undergraduate"));
+
+        if (!isUndergradRow) continue;
+
+        const unitid = Number(cols[unitidIdx]);
+        if (!Number.isFinite(unitid)) continue;
+
+        const total = toNumberOrNull(cols[totalIdx]);
+        if (total == null || total <= 0) continue;
+
+        const yearVal = yearIdx !== -1 ? Number(cols[yearIdx]) : NaN;
+        const currentYear = Number.isFinite(yearVal) ? yearVal : null;
+
+        const breakdown = DEMOGRAPHIC_COLUMNS.map((col) => {
+          const idx = columnIndexByKey[col.key];
+          const count = idx != null && idx >= 0 ? toNumberOrNull(cols[idx]) : null;
+          const percent =
+            total > 0 && count != null
+              ? (count / total) * 100
+              : count === 0
+              ? 0
+              : null;
+          return { key: col.key, label: col.label, percent, count };
+        });
+
+        const entry: InstitutionDemographics = {
+          unitid,
+          year: currentYear,
+          total_undergrad: total,
+          breakdown,
+        };
+
+        const existing = map.get(unitid);
+        if (!existing || (entry.year ?? -Infinity) > (existing.year ?? -Infinity)) {
+          map.set(unitid, entry);
+        }
+      }
+
+      return map;
+    })();
+  }
+  return undergradDemographicsMapPromise;
+}
+
+export async function getInstitutionDemographics(
+  unitid: number | string
+): Promise<InstitutionDemographics | null> {
+  const id = Number(unitid);
+  if (!Number.isFinite(id)) return null;
+  const map = await getUndergradDemographicsMap();
+  return map.get(id) ?? null;
 }
 
 let locationTypeMapPromise: Promise<Map<number, string>> | null = null;
