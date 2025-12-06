@@ -201,16 +201,18 @@ export async function getUndergradDemographicsMap(): Promise<Map<number, Institu
       const lines = csvText.split(/\r?\n/).filter((l) => l.trim().length > 0);
       if (lines.length <= 1) return map;
 
-      const headerCols = parseCsvLine(lines[0]);
-      const headerLookup = new Map<string, number>();
-      headerCols.forEach((h, idx) => headerLookup.set(h.trim().toLowerCase(), idx));
-      const getIdx = (name: string) => headerLookup.get(name.toLowerCase()) ?? -1;
+  const headerCols = parseCsvLine(lines[0]);
+  const headerLookup = new Map<string, number>();
+  headerCols.forEach((h, idx) => headerLookup.set(h.trim().toLowerCase(), idx));
+  const getIdx = (name: string) => headerLookup.get(name.toLowerCase()) ?? -1;
 
-      const unitidIdx = getIdx("unitid");
-      const yearIdx = getIdx("year");
-      const levelIdx = getIdx("effy2024.level and degree/certificate-seeking status of student");
-      const ugGradIdx = getIdx("effy2024.undergraduate or graduate level of student");
-      const totalIdx = getIdx("effy2024.grand total");
+  const unitidIdx = getIdx("unitid");
+  const yearIdx = getIdx("year");
+  const levelIdx = getIdx("effy2024.level and degree/certificate-seeking status of student");
+  const ugGradIdx = getIdx("effy2024.undergraduate or graduate level of student");
+  const totalIdx = getIdx("effy2024.grand total");
+  const menIdx = getIdx("effy2024.grand total men");
+  const womenIdx = getIdx("effy2024.grand total women");
 
       if (unitidIdx === -1 || totalIdx === -1) return map;
 
@@ -254,10 +256,15 @@ export async function getUndergradDemographicsMap(): Promise<Map<number, Institu
           return { key: col.key, label: col.label, percent, count };
         });
 
+        const totalMen = menIdx !== -1 ? toNumberOrNull(cols[menIdx]) : null;
+        const totalWomen = womenIdx !== -1 ? toNumberOrNull(cols[womenIdx]) : null;
+
         const entry: InstitutionDemographics = {
           unitid,
           year: currentYear,
           total_undergrad: total,
+          total_undergrad_men: totalMen,
+          total_undergrad_women: totalWomen,
           breakdown,
         };
 

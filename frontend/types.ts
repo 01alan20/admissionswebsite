@@ -71,6 +71,8 @@ export interface InstitutionDemographics {
   unitid: number;
   year: number | null;
   total_undergrad: number | null;
+  total_undergrad_men?: number | null;
+  total_undergrad_women?: number | null;
   breakdown: DemographicSlice[];
 }
 

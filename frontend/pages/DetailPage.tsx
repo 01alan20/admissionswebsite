@@ -77,71 +77,79 @@ const TestScoreRange: React.FC<{
 };
 
 const DEMOGRAPHIC_COLORS: Record<string, string> = {
-  american_indian_or_alaska_native: '#a855f7',
-  asian: '#06b6d4',
-  black_or_african_american: '#4f46e5',
-  hispanic_or_latino: '#f97316',
-  native_hawaiian_or_pacific_islander: '#0ea5e9',
-  white: '#22c55e',
-  two_or_more_races: '#ec4899',
-  unknown: '#94a3b8',
-  nonresident: '#eab308',
+  white: '#4b5563',
+  asian: '#0ea5e9',
+  black_or_african_american: '#7c3aed',
+  hispanic_or_latino: '#f59e0b',
+  native_hawaiian_or_pacific_islander: '#14b8a6',
+  nonresident: '#22c55e',
+  other: '#94a3b8',
 };
 
-const DEMOGRAPHIC_FALLBACK_COLORS = [
-  '#2563eb',
-  '#14b8a6',
-  '#f59e0b',
-  '#ef4444',
-  '#22c55e',
-  '#6366f1',
-  '#f97316',
-  '#c084fc',
-  '#0ea5e9',
+type GroupDef = {
+  key: string;
+  label: string;
+  sourceKeys: string[];
+  color: string;
+};
+
+const DEMOGRAPHIC_GROUPS: GroupDef[] = [
+  { key: 'white', label: 'White', sourceKeys: ['white'], color: DEMOGRAPHIC_COLORS.white },
+  { key: 'asian', label: 'Asian', sourceKeys: ['asian'], color: DEMOGRAPHIC_COLORS.asian },
+  { key: 'black', label: 'Black', sourceKeys: ['black_or_african_american'], color: DEMOGRAPHIC_COLORS.black_or_african_american },
+  { key: 'latino', label: 'Latino', sourceKeys: ['hispanic_or_latino'], color: DEMOGRAPHIC_COLORS.hispanic_or_latino },
+  { key: 'pacific', label: 'Hawaii/Pacific', sourceKeys: ['native_hawaiian_or_pacific_islander'], color: DEMOGRAPHIC_COLORS.native_hawaiian_or_pacific_islander },
+  { key: 'international', label: 'International', sourceKeys: ['nonresident'], color: DEMOGRAPHIC_COLORS.nonresident },
+  {
+    key: 'other',
+    label: 'Other',
+    sourceKeys: ['american_indian_or_alaska_native', 'two_or_more_races', 'unknown'],
+    color: DEMOGRAPHIC_COLORS.other,
+  },
 ];
 
-type DemographicBar = InstitutionDemographics['breakdown'][number] & { color: string };
+type DemographicGroupSlice = GroupDef & { percent: number | null };
 
-const DemographicsMiniChart: React.FC<{ slices: DemographicBar[] }> = ({ slices }) => {
-  if (!slices.length) return null;
+const DemographicsDonut: React.FC<{ groups: DemographicGroupSlice[] }> = ({ groups }) => {
+  if (!groups.length) return null;
+
+  const totalPct = groups.reduce((sum, g) => sum + (g.percent ?? 0), 0);
+  let cursor = 0;
+  const stops: string[] = [];
+  groups.forEach((g) => {
+    const pct = g.percent ?? 0;
+    const next = cursor + pct;
+    stops.push(`${g.color} ${cursor}% ${next}%`);
+    cursor = next;
+  });
+  if (cursor < 100) {
+    stops.push(`#e5e7eb ${cursor}% 100%`);
+  }
+
   return (
-    <div className="space-y-4">
-      <div className="flex items-end gap-3 h-44">
-        {slices.map((slice) => {
-          const pct = slice.percent ?? 0;
-          const display = slice.percent != null ? (pct >= 10 ? pct.toFixed(0) : pct.toFixed(1)) : 'N/A';
-          const height = slice.percent == null ? 0 : Math.max(3, Math.min(100, pct));
-          return (
-            <div key={slice.key} className="flex-1 min-w-[32px] flex flex-col items-center gap-2">
-              <div className="w-full max-w-[32px] bg-gray-100 rounded-md h-full flex items-end overflow-hidden">
-                <div
-                  className="w-full rounded-md"
-                  style={{ height: `${height}%`, backgroundColor: slice.color }}
-                  aria-label={`${slice.label}: ${display === 'N/A' ? 'No data' : `${display}%`}`}
-                ></div>
+    <div className="flex flex-col gap-4">
+      <div className="flex items-center gap-4">
+        <div
+          className="w-32 h-32 rounded-full border border-gray-100 shadow-sm"
+          style={{ backgroundImage: `conic-gradient(${stops.join(', ')})` }}
+          aria-label="Demographic distribution"
+        >
+          <div className="w-16 h-16 bg-white rounded-full m-auto relative top-8 shadow-inner flex items-center justify-center text-xs font-semibold text-gray-700">
+            {totalPct ? `${Math.min(100, totalPct).toFixed(0)}%` : '—'}
+          </div>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 text-sm text-gray-800">
+          {groups.map((g) => {
+            const label = g.percent != null ? (g.percent >= 10 ? g.percent.toFixed(0) : g.percent.toFixed(1)) : '—';
+            return (
+              <div key={g.key} className="flex items-center gap-2">
+                <span className="h-3 w-3 rounded-sm border border-gray-200" style={{ backgroundColor: g.color }}></span>
+                <span className="truncate">{g.label}</span>
+                <span className="ml-auto font-semibold">{label}%</span>
               </div>
-              <div className="text-center leading-tight text-[11px] text-gray-700">
-                <div className="font-semibold">{display === 'N/A' ? 'N/A' : `${display}%`}</div>
-                <div className="text-[10px] text-gray-500">{slice.label}</div>
-              </div>
-            </div>
-          );
-        })}
-      </div>
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-2 text-xs text-gray-700">
-        {slices.map((slice) => {
-          const display = slice.percent != null ? (slice.percent >= 10 ? slice.percent.toFixed(0) : slice.percent.toFixed(1)) : 'N/A';
-          return (
-            <div key={`${slice.key}-legend`} className="flex items-center gap-2">
-              <span
-                className="h-3 w-3 rounded-sm border border-gray-200"
-                style={{ backgroundColor: slice.color }}
-              ></span>
-              <span className="truncate">{slice.label}</span>
-              <span className="ml-auto font-semibold">{display === 'N/A' ? 'N/A' : `${display}%`}</span>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </div>
   );
@@ -259,16 +267,23 @@ const DetailPage: React.FC = () => {
       .filter((node) => node.fours.length > 0);
   })();
 
-  const demographicSlices = useMemo(
-    () =>
-      (demographics?.breakdown || []).map((slice, idx) => ({
-        ...slice,
-        color: DEMOGRAPHIC_COLORS[slice.key] ?? DEMOGRAPHIC_FALLBACK_COLORS[idx % DEMOGRAPHIC_FALLBACK_COLORS.length],
-      })),
-    [demographics]
-  );
+  const percentByKey = useMemo(() => {
+    const map = new Map<string, number>();
+    (demographics?.breakdown || []).forEach((slice) => {
+      if (slice.percent != null) map.set(slice.key, slice.percent);
+    });
+    return map;
+  }, [demographics]);
 
-  const hasDemographics = demographicSlices.some((d) => d.percent != null);
+  const demographicGroups: DemographicGroupSlice[] = useMemo(() => {
+    return DEMOGRAPHIC_GROUPS.map((g) => {
+      const pct = g.sourceKeys.reduce((sum, key) => sum + (percentByKey.get(key) ?? 0), 0);
+      const hasData = g.sourceKeys.some((key) => percentByKey.has(key));
+      return { ...g, percent: hasData ? pct : null };
+    }).filter((g) => g.percent != null);
+  }, [percentByKey]);
+
+  const hasDemographics = demographicGroups.length > 0;
 
   return (
     <div className="space-y-6">
@@ -337,31 +352,6 @@ const DetailPage: React.FC = () => {
               />
             </div>
           </div>
-
-          {hasDemographics && (
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="flex items-start justify-between gap-4 flex-wrap">
-                <div>
-                  <h2 className="text-2xl font-bold text-brand-dark mb-1">Undergrad student body</h2>
-                  <p className="text-sm text-gray-600">
-                    Share of undergraduates by race/ethnicity
-                    {demographics?.year ? ` (latest ${demographics.year})` : ''}.
-                  </p>
-                </div>
-                {demographics?.total_undergrad != null && (
-                  <div className="text-sm text-gray-600">
-                    Total undergrads:{' '}
-                    <span className="font-semibold text-gray-800">
-                      {demographics.total_undergrad.toLocaleString()}
-                    </span>
-                  </div>
-                )}
-              </div>
-              <div className="mt-5">
-                <DemographicsMiniChart slices={demographicSlices} />
-              </div>
-            </div>
-          )}
 
           {applicants && (
             <div className="bg-white p-6 rounded-lg shadow-md">
@@ -511,6 +501,48 @@ const DetailPage: React.FC = () => {
                     />
                   </div>
                 </div>
+              </div>
+            </div>
+          )}
+
+          {hasDemographics && (
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <div className="flex items-start justify-between gap-4 flex-wrap">
+                <div>
+                  <h2 className="text-2xl font-bold text-brand-dark mb-1">Campus diversity</h2>
+                  {demographics?.total_undergrad != null && (
+                    <p className="text-sm text-gray-600">
+                      Total undergrads:{' '}
+                      <span className="font-semibold text-gray-800">
+                        {demographics.total_undergrad.toLocaleString()}
+                      </span>
+                    </p>
+                  )}
+                </div>
+                {(() => {
+                  const men = demographics?.total_undergrad_men ?? null;
+                  const women = demographics?.total_undergrad_women ?? null;
+                  const total = (demographics?.total_undergrad ?? (men ?? 0) + (women ?? 0)) || null;
+                  if (men == null || women == null || !total) return null;
+                  const menPct = (men / total) * 100;
+                  const womenPct = (women / total) * 100;
+                  return (
+                    <div className="text-sm text-gray-700 min-w-[200px]">
+                      <div className="font-semibold mb-1">Gender balance</div>
+                      <div className="w-full h-2 rounded-full bg-gray-100 overflow-hidden flex">
+                        <div className="h-2 bg-blue-500" style={{ width: `${menPct}%` }} title={`Men: ${menPct.toFixed(1)}%`} />
+                        <div className="h-2 bg-pink-400" style={{ width: `${womenPct}%` }} title={`Women: ${womenPct.toFixed(1)}%`} />
+                      </div>
+                      <div className="flex justify-between text-[12px] text-gray-600 mt-1">
+                        <span>Men {menPct.toFixed(1)}%</span>
+                        <span>Women {womenPct.toFixed(1)}%</span>
+                      </div>
+                    </div>
+                  );
+                })()}
+              </div>
+              <div className="mt-5">
+                <DemographicsDonut groups={demographicGroups} />
               </div>
             </div>
           )}

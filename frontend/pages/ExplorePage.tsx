@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
-import { Institution, InstitutionMajorsByInstitution, MajorsMeta } from '../types';
+import { Institution, InstitutionDemographics, InstitutionMajorsByInstitution, MajorsMeta } from '../types';
 import { categorizeTestPolicy } from '../utils/admissionsModel';
 import {
   getInstitutionIndex,
@@ -11,12 +11,93 @@ import {
   getMajorsByInstitution,
   getLocationTypeMap,
   getInstitutionTestScoreMap,
+  getUndergradDemographicsMap,
   InstitutionIndex,
   InstitutionTestScores,
   TestScoreType,
 } from '../data/api';
 
-const InstitutionCard: React.FC<{ institution: Institution }> = ({ institution }) => {
+const DEMOGRAPHIC_COLORS: Record<string, string> = {
+  white: '#4b5563',
+  asian: '#0ea5e9',
+  black_or_african_american: '#7c3aed',
+  hispanic_or_latino: '#f59e0b',
+  native_hawaiian_or_pacific_islander: '#14b8a6',
+  nonresident: '#22c55e',
+  other: '#94a3b8',
+};
+
+type GroupDef = {
+  key: string;
+  label: string;
+  sourceKeys: string[];
+  color: string;
+};
+
+const DEMOGRAPHIC_GROUPS: GroupDef[] = [
+  { key: 'white', label: 'White', sourceKeys: ['white'], color: DEMOGRAPHIC_COLORS.white },
+  { key: 'asian', label: 'Asian', sourceKeys: ['asian'], color: DEMOGRAPHIC_COLORS.asian },
+  { key: 'black', label: 'Black', sourceKeys: ['black_or_african_american'], color: DEMOGRAPHIC_COLORS.black_or_african_american },
+  { key: 'latino', label: 'Latino', sourceKeys: ['hispanic_or_latino'], color: DEMOGRAPHIC_COLORS.hispanic_or_latino },
+  { key: 'pacific', label: 'Hawaii/Pacific', sourceKeys: ['native_hawaiian_or_pacific_islander'], color: DEMOGRAPHIC_COLORS.native_hawaiian_or_pacific_islander },
+  { key: 'international', label: 'International', sourceKeys: ['nonresident'], color: DEMOGRAPHIC_COLORS.nonresident },
+  {
+    key: 'other',
+    label: 'Other',
+    sourceKeys: ['american_indian_or_alaska_native', 'two_or_more_races', 'unknown'],
+    color: DEMOGRAPHIC_COLORS.other,
+  },
+];
+
+const DemographicsMiniBars: React.FC<{ data: InstitutionDemographics | null | undefined }> = ({ data }) => {
+  if (!data || !data.breakdown?.length) return null;
+
+  const percentByKey = new Map<string, number>();
+  for (const slice of data.breakdown) {
+    if (slice.percent == null) continue;
+    percentByKey.set(slice.key, slice.percent);
+  }
+
+  const groups = DEMOGRAPHIC_GROUPS.map((g) => {
+    const pct = g.sourceKeys.reduce((sum, key) => sum + (percentByKey.get(key) ?? 0), 0);
+    const hasData = g.sourceKeys.some((key) => percentByKey.has(key));
+    return { ...g, percent: hasData ? pct : null };
+  }).filter((g) => g.percent != null);
+
+  if (groups.length === 0) return null;
+
+  return (
+    <div className="mt-3 bg-white border border-gray-100 rounded-md p-2 shadow-sm">
+      <div className="h-3 w-full rounded-full bg-white overflow-hidden border border-gray-200 flex">
+        {groups.map((g) => {
+          const pct = g.percent ?? 0;
+          if (pct <= 0) return null;
+          return (
+            <div
+              key={g.key}
+              className="h-full"
+              style={{ width: `${pct}%`, minWidth: '4px', backgroundColor: g.color }}
+              title={`${g.label}: ${pct.toFixed(1)}%`}
+            />
+          );
+        })}
+      </div>
+      <div className="mt-2 flex flex-wrap gap-x-2 gap-y-1 text-[10px] text-gray-700">
+        {groups.map((g) => (
+          <span key={`legend-${g.key}`} className="inline-flex items-center gap-1">
+            <span className="h-2.5 w-2.5 rounded-sm" style={{ backgroundColor: g.color }} />
+            <span className="truncate" title={g.label}>{g.label}</span>
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const InstitutionCard: React.FC<{ institution: Institution; demographics?: InstitutionDemographics | null }> = ({
+  institution,
+  demographics,
+}) => {
   const tuition = institution.tuition_2023_24_out_of_state ?? institution.tuition_2023_24_in_state ?? institution.tuition_2023_24;
   return (
     <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col">
@@ -39,6 +120,7 @@ const InstitutionCard: React.FC<{ institution: Institution }> = ({ institution }
         <p className="text-gray-700 text-sm line-clamp-2">
           Test Policy: {formatTestPolicy(institution.test_policy)}
         </p>
+        <DemographicsMiniBars data={demographics} />
       </div>
       <div className="p-4 bg-gray-50">
         <Link
@@ -83,6 +165,8 @@ const ExplorePage: React.FC = () => {
   // Test score filter
   const [testScoreType, setTestScoreType] = useState<TestScoreType | ''>('');
   const [testScoreValue, setTestScoreValue] = useState<string>('');
+  // Demographics map (undergrad)
+  const [demographicsMap, setDemographicsMap] = useState<Map<number, InstitutionDemographics> | null>(null);
 
   // Load index and default top 10 by applicants
   useEffect(() => {
@@ -101,6 +185,22 @@ const ExplorePage: React.FC = () => {
         setLoading(false);
       }
     })();
+  }, []);
+
+  // Load demographics CSV once
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      try {
+        const map = await getUndergradDemographicsMap();
+        if (!cancelled) setDemographicsMap(map);
+      } catch {
+        if (!cancelled) setDemographicsMap(null);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
   // Apply query + filters (search only after 3+ letters)
@@ -768,7 +868,11 @@ const ExplorePage: React.FC = () => {
           <>
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
               {displayed.map((inst) => (
-                <InstitutionCard key={inst.unitid} institution={inst} />
+                <InstitutionCard
+                  key={inst.unitid}
+                  institution={inst}
+                  demographics={demographicsMap?.get(inst.unitid)}
+                />
               ))}
             </div>
             <div className="flex items-center justify-center gap-4 mt-6">
