@@ -20,6 +20,7 @@ import ProfileActivitiesStepPage from './pages/ProfileActivitiesStepPage';
 import ProfileRecommendationsStepPage from './pages/ProfileRecommendationsStepPage';
 import ProfileTargetsStepPage from './pages/ProfileTargetsStepPage';
 import ProfileDashboardPage from './pages/ProfileDashboardPage';
+import MyCollegeListPage from './pages/MyCollegeListPage';
 import { OnboardingProvider, useOnboardingContext } from './context/OnboardingContext';
 import ContactHelpPage from './pages/ContactHelpPage';
 import FaqPage from './pages/FaqPage';
@@ -27,7 +28,15 @@ import ProfileMajorsStepPage from './pages/ProfileMajorsStepPage';
 
 const Header: React.FC = () => {
   const { user, loading } = useOnboardingContext();
+  const location = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
+
+  // For the new CollegeBase-style experience, hide the
+  // marketing header on profile/dashboard routes so the
+  // sidebar layout can take over the full canvas.
+  if (location.pathname.startsWith("/profile")) {
+    return null;
+  }
 
   const linkClass = "text-white hover:bg-brand-secondary px-3 py-2 rounded-md text-sm font-medium transition-colors";
   const activeLinkClass = "bg-brand-secondary text-white px-3 py-2 rounded-md text-sm font-medium";
@@ -199,6 +208,7 @@ const AppRoutes: React.FC = () => {
         <Route path="/profile/recs" element={<ProfileRecommendationsStepPage />} />
         <Route path="/profile/majors" element={<ProfileMajorsStepPage />} />
         <Route path="/profile/targets" element={<ProfileTargetsStepPage />} />
+        <Route path="/profile/college-list" element={<MyCollegeListPage />} />
         <Route path="/profile/dashboard" element={<ProfileDashboardPage />} />
       </Routes>
     </main>
