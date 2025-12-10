@@ -1,4 +1,5 @@
 import React, {
+  useCallback,
   useEffect,
   useMemo,
   useState,
@@ -131,8 +132,13 @@ const newId = () =>
 const ProfileDashboardPage: React.FC = () => {
   const navigate = useNavigate();
   const loadingGuard = useOnboardingGuard(9);
-  const { studentProfile, targetUnitIds, logout } =
-    useOnboardingContext();
+  const {
+    studentProfile,
+    targetUnitIds,
+    setTargetUnitIds,
+    setStudentProfile,
+    logout,
+  } = useOnboardingContext();
 
   const [majorOptions, setMajorOptions] = useState<MajorOption[]>([]);
   const [majorSearch, setMajorSearch] = useState("");
@@ -214,6 +220,20 @@ const ProfileDashboardPage: React.FC = () => {
   const [customSchoolName, setCustomSchoolName] = useState("");
   const [customSchoolCity, setCustomSchoolCity] = useState("");
   const [customSchoolState, setCustomSchoolState] = useState("");
+
+  const syncTargetUnitIds = useCallback(
+    (nextColleges: CollegeRow[]) => {
+      const ids = Array.from(
+        new Set(
+          nextColleges
+            .map((c) => c.unitid)
+            .filter((v): v is number => typeof v === "number")
+        )
+      );
+      setTargetUnitIds(ids);
+    },
+    [setTargetUnitIds]
+  );
 
   useEffect(() => {
     (async () => {
@@ -423,7 +443,7 @@ const ProfileDashboardPage: React.FC = () => {
   const handleAddFromIndex = (item: InstitutionIndex) => {
     setColleges((prev) => {
       if (prev.some((c) => c.unitid === item.unitid)) return prev;
-      return [
+      const next: CollegeRow[] = [
         ...prev,
         {
           id: String(item.unitid),
@@ -434,6 +454,8 @@ const ProfileDashboardPage: React.FC = () => {
           category: null,
         },
       ];
+      void syncTargetUnitIds(next);
+      return next;
     });
   };
 
@@ -441,20 +463,32 @@ const ProfileDashboardPage: React.FC = () => {
     e.preventDefault();
     const name = customSchoolName.trim();
     if (!name) return;
-    setColleges((prev) => [
-      ...prev,
-      {
-        id: newId(),
-        name,
-        city: customSchoolCity.trim() || null,
-        state: customSchoolState.trim() || null,
-        category: null,
-      },
-    ]);
+    setColleges((prev) => {
+      const next: CollegeRow[] = [
+        ...prev,
+        {
+          id: newId(),
+          name,
+          city: customSchoolCity.trim() || null,
+          state: customSchoolState.trim() || null,
+          category: null,
+        },
+      ];
+      void syncTargetUnitIds(next);
+      return next;
+    });
     setCustomSchoolName("");
     setCustomSchoolCity("");
     setCustomSchoolState("");
     setShowAddSchoolModal(false);
+  };
+
+  const handleRemoveCollege = (id: string) => {
+    setColleges((prev) => {
+      const next = prev.filter((c) => c.id !== id);
+      void syncTargetUnitIds(next);
+      return next;
+    });
   };
 
   const renderCategoryBadge = (value: AdmissionCategory | null) => {
@@ -695,15 +729,15 @@ const ProfileDashboardPage: React.FC = () => {
               </div>
             </section>
 
-            {/* College list */}
+            {/* Target schools */}
             <section className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
               <header className="flex flex-col gap-1 px-4 py-3 border-b border-slate-200 sm:flex-row sm:items-center sm:justify-between">
                 <div>
                   <h2 className="text-sm font-semibold text-slate-900">
-                    My College List
+                    My Target Schools
                   </h2>
                   <p className="mt-0.5 text-xs text-slate-500">
-                    A working list of schools you&apos;re tracking.
+                    A working list of schools you&apos;re actively targeting.
                   </p>
                 </div>
                 <div className="mt-2 flex items-center gap-2 sm:mt-0">
@@ -741,7 +775,16 @@ const ProfileDashboardPage: React.FC = () => {
                       {colleges.map((row) => (
                         <tr key={row.id} className="hover:bg-slate-50">
                           <td className="px-4 py-2 whitespace-nowrap text-slate-900">
-                            {row.name}
+                            <div className="flex items-center justify-between gap-3">
+                              <span className="truncate">{row.name}</span>
+                              <button
+                                type="button"
+                                onClick={() => handleRemoveCollege(row.id)}
+                                className="text-[11px] text-slate-400 hover:text-red-500"
+                              >
+                                Remove
+                              </button>
+                            </div>
                           </td>
                           <td className="px-4 py-2 whitespace-nowrap text-center">
                             {renderCategoryBadge(row.category)}
@@ -1193,16 +1236,16 @@ const ProfileDashboardPage: React.FC = () => {
           className="space-y-4"
           onSubmit={(e) => {
             e.preventDefault();
-            setActivities((prev) =>
-              prev
-                .map((a) => ({
-                  ...a,
-                  name: a.name.trim(),
-                  role: a.role.trim(),
-                }))
-                .filter((a) => a.name || a.role)
-                .slice(0, 10)
-            );
+            const cleaned = activities
+              .map((a) => ({
+                ...a,
+                name: a.name.trim(),
+                role: a.role.trim(),
+              }))
+              .filter((a) => a.name || a.role)
+              .slice(0, 10);
+            setActivities(cleaned);
+            setStudentProfile({ activities: cleaned as any });
             setShowActModal(false);
           }}
         >

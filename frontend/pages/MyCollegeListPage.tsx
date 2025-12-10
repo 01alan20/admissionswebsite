@@ -10,7 +10,7 @@ const MyCollegeListPage: React.FC = () => {
     return (
       <DashboardLayout>
         <div className="max-w-5xl mx-auto py-8 text-sm text-slate-600">
-          Loading your college list…
+          Loading your college list...
         </div>
       </DashboardLayout>
     );
@@ -25,8 +25,7 @@ const MyCollegeListPage: React.FC = () => {
               My College List
             </h1>
             <p className="mt-1 text-sm text-slate-500">
-              A live table of the schools you&apos;re tracking, with
-              admit rates and your chances.
+              A dynamic list of colleges based on your profile and the schools you choose to track.
             </p>
           </div>
         </div>
@@ -37,4 +36,3 @@ const MyCollegeListPage: React.FC = () => {
 };
 
 export default MyCollegeListPage;
-

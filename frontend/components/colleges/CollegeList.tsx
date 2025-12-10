@@ -10,6 +10,11 @@ import {
   calculateChances,
   type CollegeMetrics,
 } from "../../lib/admissions";
+import {
+  getAllInstitutions,
+  getInstitutionTestScoreMap,
+} from "../../data/api";
+import type { Institution, InstitutionTestScores } from "../../types";
 
 type CollegeRow = {
   unitid: number;
@@ -66,8 +71,180 @@ const normalizeAcademicStats = (raw: any): AcademicStats => {
   };
 };
 
+const buildRecommendedRows = async (
+  stats: AcademicStats,
+  homeState: string | null,
+  userMajors: string[] | undefined,
+  desiredCount = 20
+): Promise<CollegeRow[]> => {
+  const [allInstitutions, testScoreMap] = await Promise.all([
+    getAllInstitutions(),
+    getInstitutionTestScoreMap(),
+  ]);
+
+  const majorPrefixes = new Set(
+    (userMajors || [])
+      .map((m) => String(m).trim())
+      .filter((m) => /^\d{2}/.test(m))
+      .map((m) => m.slice(0, 2))
+  );
+
+  const scoreInstitution = (inst: Institution): {
+    unitid: number;
+    chance: AdmissionCategory;
+    isSameState: boolean;
+    majorMatch: boolean;
+  } | null => {
+    if (!inst.acceptance_rate || inst.level !== "4-year") return null;
+    const test: InstitutionTestScores | undefined =
+      testScoreMap.get(inst.unitid);
+    const metrics: CollegeMetrics = {
+      acceptanceRate: inst.acceptance_rate,
+      sat25: test?.sat_total_25 ?? null,
+      sat75: test?.sat_total_75 ?? null,
+      act25: test?.act_composite_25 ?? null,
+      act75: test?.act_composite_75 ?? null,
+    };
+    const chance = calculateChances(stats, metrics);
+    const isSameState =
+      !!homeState &&
+      typeof inst.state === "string" &&
+      inst.state.toUpperCase() === homeState.toUpperCase();
+    const majorMatch =
+      majorPrefixes.size > 0 &&
+      Array.isArray(inst.majors_cip_two_digit) &&
+      inst.majors_cip_two_digit.some((code) =>
+        majorPrefixes.has(String(code).slice(0, 2))
+      );
+    return { unitid: inst.unitid, chance, isSameState, majorMatch };
+  };
+
+  const safety: number[] = [];
+  const target: number[] = [];
+  const reach: number[] = [];
+
+  for (const inst of allInstitutions) {
+    const scored = scoreInstitution(inst);
+    if (!scored) continue;
+    const bucket =
+      scored.chance === "Safety"
+        ? safety
+        : scored.chance === "Target"
+        ? target
+        : reach;
+    if (scored.isSameState) {
+      bucket.unshift(scored.unitid);
+    } else {
+      bucket.push(scored.unitid);
+    }
+  }
+
+  const recommendedIds: number[] = [
+    ...target.slice(0, 10),
+    ...safety.slice(0, 5),
+    ...reach.slice(0, 5),
+  ].slice(0, desiredCount);
+
+  const institutionById = new Map<number, Institution>();
+  for (const inst of allInstitutions) {
+    institutionById.set(inst.unitid, inst);
+  }
+
+  const rows = recommendedIds
+    .map((id) => {
+      const inst = institutionById.get(id);
+      if (!inst) return null;
+      const scores = testScoreMap.get(id);
+
+      const metrics: CollegeMetrics | null = scores
+        ? {
+            acceptanceRate: inst.acceptance_rate ?? null,
+            sat25: scores.sat_total_25 ?? null,
+            sat75: scores.sat_total_75 ?? null,
+            act25: scores.act_composite_25 ?? null,
+            act75: scores.act_composite_75 ?? null,
+          }
+        : null;
+
+      const chance =
+        metrics && (metrics.sat25 != null || metrics.act25 != null)
+          ? calculateChances(stats, metrics)
+          : null;
+
+      let tuition: number | null = inst.tuition_2023_24 ?? null;
+      if (homeState && inst.state) {
+        const instState = String(inst.state).toUpperCase();
+        if (instState === homeState) {
+          tuition =
+            inst.tuition_2023_24_in_state ??
+            inst.tuition_2023_24 ??
+            inst.tuition_2023_24_out_of_state ??
+            null;
+        } else {
+          tuition =
+            inst.tuition_2023_24_out_of_state ??
+            inst.tuition_2023_24 ??
+            inst.tuition_2023_24_in_state ??
+            null;
+        }
+      }
+
+      const satMid =
+        scores &&
+        scores.sat_total_25 != null &&
+        scores.sat_total_75 != null
+          ? Math.round(
+              (scores.sat_total_25 + scores.sat_total_75) / 2
+            )
+          : null;
+      const actMid =
+        scores &&
+        scores.act_composite_25 != null &&
+        scores.act_composite_75 != null
+          ? Math.round(
+              (scores.act_composite_25 + scores.act_composite_75) / 2
+            )
+          : null;
+
+      const row: CollegeRow = {
+        unitid: inst.unitid,
+        name: inst.name,
+        city: inst.city ?? null,
+        state: inst.state ?? null,
+        acceptanceRate: inst.acceptance_rate ?? null,
+        sat: satMid,
+        act: actMid,
+        tuition,
+        chance,
+      };
+
+      return row;
+    })
+    .filter((row): row is CollegeRow => row != null);
+
+  const chanceOrder: Record<AdmissionCategory, number> = {
+    Reach: 0,
+    Target: 1,
+    Safety: 2,
+  };
+
+  rows.sort((a, b) => {
+    const aChanceRank =
+      a.chance != null ? chanceOrder[a.chance] ?? 3 : 3;
+    const bChanceRank =
+      b.chance != null ? chanceOrder[b.chance] ?? 3 : 3;
+    if (aChanceRank !== bChanceRank) return aChanceRank - bChanceRank;
+
+    const aAcc = a.acceptanceRate ?? 1;
+    const bAcc = b.acceptanceRate ?? 1;
+    return aAcc - bAcc;
+  });
+
+  return rows;
+};
+
 const CollegeList: React.FC = () => {
-  const { user } = useOnboardingContext();
+  const { user, studentProfile } = useOnboardingContext();
   const [rows, setRows] = useState<CollegeRow[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -99,133 +276,19 @@ const CollegeList: React.FC = () => {
         if (profileError) throw profileError;
 
         const demo = (profile?.demographics || {}) as DemographicsJson;
-        setStudentState(
-          demo.location_state
+        const homeState =
+          demo.location_state && String(demo.location_state).trim()
             ? String(demo.location_state).toUpperCase()
-            : null
-        );
-        setStudentStats(normalizeAcademicStats(profile?.academic_stats));
+            : null;
+        setStudentState(homeState);
+        const stats = normalizeAcademicStats(profile?.academic_stats);
+        setStudentStats(stats);
 
-        const rawTargets = (profile?.target_universities ||
-          []) as any[];
-        const unitids: number[] = [];
-        for (const t of rawTargets) {
-          if (typeof t === "number") {
-            if (Number.isFinite(t)) unitids.push(t);
-          } else if (t && typeof t === "object" && "unitid" in t) {
-            const id = Number((t as any).unitid);
-            if (Number.isFinite(id)) unitids.push(id);
-          }
-        }
-        if (unitids.length === 0) {
-          if (!cancelled) setRows([]);
-          return;
-        }
-
-        const { data: instRows, error: instError } = await supabase
-          .from("institutions")
-          .select(
-            "unitid, name, city, state, acceptance_rate, tuition_2023_24, tuition_2023_24_in_state, tuition_2023_24_out_of_state"
-          )
-          .in("unitid", unitids);
-        if (instError) throw instError;
-
-        const { data: metricRows, error: metricsError } = await supabase
-          .from("institution_metrics")
-          .select(
-            "unitid, year, sat_evidence_based_reading_and_writing_25th_percentile_score, sat_evidence_based_reading_and_writing_75th_percentile_score, sat_math_25th_percentile_score, sat_math_75th_percentile_score, act_composite_25th_percentile_score, act_composite_75th_percentile_score"
-          )
-          .in("unitid", unitids)
-          .order("year", { ascending: false });
-        if (metricsError) throw metricsError;
-
-        const latestMetrics = new Map<number, CollegeMetrics>();
-        for (const m of metricRows || []) {
-          const id = Number((m as any).unitid);
-          if (!Number.isFinite(id)) continue;
-          if (latestMetrics.has(id)) continue;
-          const sat25 =
-            (m as any).sat_math_25th_percentile_score != null &&
-            (m as any)
-              .sat_evidence_based_reading_and_writing_25th_percentile_score !=
-              null
-              ? (m as any).sat_math_25th_percentile_score +
-                (m as any)
-                  .sat_evidence_based_reading_and_writing_25th_percentile_score
-              : null;
-          const sat75 =
-            (m as any).sat_math_75th_percentile_score != null &&
-            (m as any)
-              .sat_evidence_based_reading_and_writing_75th_percentile_score !=
-              null
-              ? (m as any).sat_math_75th_percentile_score +
-                (m as any)
-                  .sat_evidence_based_reading_and_writing_75th_percentile_score
-              : null;
-          latestMetrics.set(id, {
-            sat25,
-            sat75,
-            act25: (m as any).act_composite_25th_percentile_score ?? null,
-            act75: (m as any).act_composite_75th_percentile_score ?? null,
-          });
-        }
-
-        const tableRows: CollegeRow[] = (instRows || []).map(
-          (inst: any) => {
-            const id = Number(inst.unitid);
-            const metrics = latestMetrics.get(id);
-            const chance =
-              studentStats &&
-              (metrics?.sat25 != null || metrics?.act25 != null)
-                ? calculateChances(studentStats, {
-                    acceptanceRate: inst.acceptance_rate ?? null,
-                    sat25: metrics?.sat25 ?? null,
-                    sat75: metrics?.sat75 ?? null,
-                    act25: metrics?.act25 ?? null,
-                    act75: metrics?.act75 ?? null,
-                  })
-                : null;
-
-            let tuition: number | null =
-              inst.tuition_2023_24 ?? null;
-            if (studentState && inst.state) {
-              const instState = String(inst.state).toUpperCase();
-              if (instState === studentState) {
-                tuition =
-                  inst.tuition_2023_24_in_state ??
-                  inst.tuition_2023_24 ??
-                  inst.tuition_2023_24_out_of_state ??
-                  null;
-              } else {
-                tuition =
-                  inst.tuition_2023_24_out_of_state ??
-                  inst.tuition_2023_24 ??
-                  inst.tuition_2023_24_in_state ??
-                  null;
-              }
-            }
-
-            const metricsSatMid =
-              metrics && metrics.sat25 != null && metrics.sat75 != null
-                ? Math.round((metrics.sat25 + metrics.sat75) / 2)
-                : null;
-            const metricsActMid =
-              metrics && metrics.act25 != null && metrics.act75 != null
-                ? Math.round((metrics.act25 + metrics.act75) / 2)
-                : null;
-
-            return {
-              unitid: id,
-              name: inst.name ?? "Unknown",
-              city: inst.city ?? null,
-              state: inst.state ?? null,
-              acceptanceRate: inst.acceptance_rate ?? null,
-              sat: metricsSatMid,
-              act: metricsActMid,
-              tuition,
-              chance,
-            };
-          }
+        const tableRows = await buildRecommendedRows(
+          stats,
+          homeState,
+          studentProfile.majors,
+          20
         );
 
         if (!cancelled) {
@@ -339,14 +402,13 @@ const CollegeList: React.FC = () => {
       </div>
       {loading ? (
         <div className="px-4 py-6 text-sm text-slate-600">
-          Loading your colleges…
+          Loading your colleges...
         </div>
       ) : error ? (
         <div className="px-4 py-6 text-sm text-red-600">{error}</div>
       ) : !hasColleges ? (
         <div className="px-4 py-6 text-sm text-slate-600">
-          You don&apos;t have any colleges saved yet. Add targets in
-          your profile to see them here.
+          You don&apos;t have any colleges saved yet. Use &quot;My Profile&quot; or College Search to start building your list.
         </div>
       ) : (
         <div className="overflow-x-auto">
@@ -417,4 +479,3 @@ const CollegeList: React.FC = () => {
 };
 
 export default CollegeList;
-

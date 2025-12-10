@@ -53,13 +53,77 @@ export const determineNextPath = (step: number | null | undefined): string => {
   return "/profile/dashboard";
 };
 
+const TARGETS_STORAGE_KEY_PREFIX = "sta_targets_";
+const PROFILE_STORAGE_KEY_PREFIX = "sta_profile_";
+
+const loadTargetsFromStorage = (userId: string | null): number[] => {
+  if (typeof window === "undefined" || !userId) return [];
+  try {
+    const raw = window.localStorage.getItem(
+      `${TARGETS_STORAGE_KEY_PREFIX}${userId}`
+    );
+    if (!raw) return [];
+    const parsed = JSON.parse(raw);
+    if (!Array.isArray(parsed)) return [];
+    return parsed
+      .map((v: any) => Number(v))
+      .filter((v: number) => Number.isFinite(v));
+  } catch {
+    return [];
+  }
+};
+
+const saveTargetsToStorage = (userId: string | null, ids: number[]) => {
+  if (typeof window === "undefined" || !userId) return;
+  try {
+    window.localStorage.setItem(
+      `${TARGETS_STORAGE_KEY_PREFIX}${userId}`,
+      JSON.stringify(ids)
+    );
+  } catch {
+    // ignore
+  }
+};
+
+const loadProfileFromStorage = (
+  userId: string | null
+): Partial<StudentProfileSummary> | null => {
+  if (typeof window === "undefined" || !userId) return null;
+  try {
+    const raw = window.localStorage.getItem(
+      `${PROFILE_STORAGE_KEY_PREFIX}${userId}`
+    );
+    if (!raw) return null;
+    const parsed = JSON.parse(raw);
+    if (!parsed || typeof parsed !== "object") return null;
+    return parsed as Partial<StudentProfileSummary>;
+  } catch {
+    return null;
+  }
+};
+
+const saveProfileToStorage = (
+  userId: string | null,
+  profile: StudentProfileSummary
+) => {
+  if (typeof window === "undefined" || !userId) return;
+  try {
+    window.localStorage.setItem(
+      `${PROFILE_STORAGE_KEY_PREFIX}${userId}`,
+      JSON.stringify(profile)
+    );
+  } catch {
+    // ignore
+  }
+};
+
 export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
   const [user, setUser] = useState<User | null>(null);
   const [onboardingStep, setOnboardingStep] = useState(0);
   const [loading, setLoading] = useState(true);
-  const [targetUnitIds, setTargetUnitIds] = useState<number[]>([]);
+  const [targetUnitIds, setTargetUnitIdsState] = useState<number[]>([]);
   const [studentProfile, setStudentProfileState] = useState<StudentProfileSummary>(
     {}
   );
@@ -82,7 +146,8 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
 
     const academic = (profile?.academic_stats || {}) as any;
     const extras = (profile?.extracurriculars || []) as any;
-    setStudentProfileState({
+
+    const fromDb: StudentProfileSummary = {
       firstName: academic.first_name ?? undefined,
       lastName: academic.last_name ?? undefined,
       country: academic.country ?? undefined,
@@ -119,19 +184,31 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
           ? Number(academic.rec_score)
           : null,
       majors: Array.isArray(academic.majors)
-        ? (academic.majors as string[]).filter((m) => typeof m === "string" && m.trim())
+        ? (academic.majors as string[]).filter(
+            (m) => typeof m === "string" && m.trim()
+          )
         : undefined,
       activities: Array.isArray(extras) ? (extras as Activity[]) : [],
-    });
+    };
 
-    const targets = (profile?.target_universities as any) || [];
-    if (Array.isArray(targets)) {
-      setTargetUnitIds(
-        targets
-          .map((v) => Number(v))
-          .filter((v) => Number.isFinite(v)) as number[]
-      );
+    const storedProfile = loadProfileFromStorage(currentUser.id);
+    const mergedProfile: StudentProfileSummary = {
+      ...fromDb,
+      ...(storedProfile || {}),
+    };
+
+    setStudentProfileState(mergedProfile);
+
+    const targetsFromDb = (profile?.target_universities as any) || [];
+    let ids: number[] = [];
+    if (Array.isArray(targetsFromDb)) {
+      ids = targetsFromDb
+        .map((v) => Number(v))
+        .filter((v) => Number.isFinite(v)) as number[];
     }
+    const storedTargets = loadTargetsFromStorage(currentUser.id);
+    const finalIds = storedTargets.length ? storedTargets : ids;
+    setTargetUnitIdsState(finalIds);
   };
 
   useEffect(() => {
@@ -228,9 +305,11 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
     // an individual step are included in the Supabase write).
     const merged: StudentProfileSummary = { ...studentProfile, ...override };
     setStudentProfileState(merged);
+    saveProfileToStorage(user.id, merged);
     const mergedTargets = overrideTargetIds ?? targetUnitIds;
     if (overrideTargetIds) {
-      setTargetUnitIds(overrideTargetIds);
+      setTargetUnitIdsState(overrideTargetIds);
+      saveTargetsToStorage(user.id, overrideTargetIds);
     }
 
     const majorsClean = merged.majors
@@ -266,7 +345,16 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
   };
 
   const setStudentProfile = (update: Partial<StudentProfileSummary>) => {
-    setStudentProfileState((prev) => ({ ...prev, ...update }));
+    setStudentProfileState((prev) => {
+      const merged: StudentProfileSummary = { ...prev, ...update };
+      saveProfileToStorage(user?.id ?? null, merged);
+      return merged;
+    });
+  };
+
+  const setTargetUnitIds = (ids: number[]) => {
+    setTargetUnitIdsState(ids);
+    saveTargetsToStorage(user?.id ?? null, ids);
   };
 
   const logout = async () => {
