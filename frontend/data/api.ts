@@ -14,15 +14,47 @@ export interface InstitutionIndex {
   city: string | null;
 }
 
+const ABSOLUTE_URL_REGEX = /^https?:\/\//i;
+
+const normalizeBasePath = (value: string | null | undefined): string => {
+  if (!value) return "/";
+  let base = value;
+  if (base.endsWith("index.html")) {
+    base = base.slice(0, -10);
+  }
+  if (!base.endsWith("/")) {
+    base += "/";
+  }
+  return base || "/";
+};
+
+const getBasePath = (): string => {
+  if (typeof window !== "undefined" && window.location?.pathname) {
+    return normalizeBasePath(window.location.pathname);
+  }
+  return normalizeBasePath(import.meta.env.BASE_URL);
+};
+
+const resolvePublicPath = (path: string): string => {
+  if (!path) return getBasePath();
+  if (ABSOLUTE_URL_REGEX.test(path)) return path;
+  const normalized = path.startsWith("/") ? path.slice(1) : path;
+  const base = getBasePath();
+  if (base === "/") return `/${normalized}`;
+  return `${base}${normalized}`;
+};
+
 async function getJSON<T>(path: string): Promise<T> {
-  const res = await fetch(path, { cache: "no-store" });
-  if (!res.ok) throw new Error(`Failed to fetch ${path}: ${res.status}`);
+  const target = resolvePublicPath(path);
+  const res = await fetch(target, { cache: "no-store" });
+  if (!res.ok) throw new Error(`Failed to fetch ${target}: ${res.status}`);
   return res.json() as Promise<T>;
 }
 
 async function getText(path: string): Promise<string> {
-  const res = await fetch(path, { cache: "no-store" });
-  if (!res.ok) throw new Error(`Failed to fetch ${path}: ${res.status}`);
+  const target = resolvePublicPath(path);
+  const res = await fetch(target, { cache: "no-store" });
+  if (!res.ok) throw new Error(`Failed to fetch ${target}: ${res.status}`);
   return res.text();
 }
 
