@@ -84,20 +84,24 @@ const buildRowForInstitution = (
   stats: AcademicStats,
   homeState: string | null
 ): CollegeRow => {
-  const metrics: CollegeMetrics | null = scores
-    ? {
-        acceptanceRate: inst.acceptance_rate ?? null,
-        sat25: scores.sat_total_25 ?? null,
-        sat75: scores.sat_total_75 ?? null,
-        act25: scores.act_composite_25 ?? null,
-        act75: scores.act_composite_75 ?? null,
-      }
-    : null;
+  const metrics: CollegeMetrics = {
+    acceptanceRate: inst.acceptance_rate ?? null,
+    sat25: scores?.sat_total_25 ?? null,
+    sat75: scores?.sat_total_75 ?? null,
+    act25: scores?.act_composite_25 ?? null,
+    act75: scores?.act_composite_75 ?? null,
+  };
 
-  const chance =
-    metrics && (metrics.sat25 != null || metrics.act25 != null)
-      ? calculateChances(stats, metrics)
-      : null;
+  const hasScoreOrAcceptance =
+    metrics.sat25 != null ||
+    metrics.sat75 != null ||
+    metrics.act25 != null ||
+    metrics.act75 != null ||
+    metrics.acceptanceRate != null;
+
+  const chance = hasScoreOrAcceptance
+    ? calculateChances(stats, metrics)
+    : null;
 
   let tuition: number | null = inst.tuition_2023_24 ?? null;
   if (homeState && inst.state) {
