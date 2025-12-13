@@ -43,16 +43,23 @@ export function calculateChances(
   }
 
   if (acceptance != null) {
-    if (acceptance <= 0.25) score -= 1;
-    else if (acceptance >= 0.5) score += 1;
+    if (acceptance <= 0.25) {
+      score -= 1;
+    } else if (acceptance >= 0.75) {
+      score += 2;
+    } else if (acceptance >= 0.5) {
+      score += 1;
+    }
   }
 
   // TODO: Adjust weighting logic here if you want
   // to tune how GPA, scores, and admit rate contribute
   // to Safety / Target / Reach thresholds.
 
+  // Treat clearly stronger profiles or very high admit-rate schools
+  // as Safety. Only clearly weaker profiles are Reach.
   if (score >= 2) return "Safety";
-  if (score <= 0) return "Reach";
+  if (score <= -1) return "Reach";
   return "Target";
 }
 

@@ -185,8 +185,13 @@ const AppRoutes: React.FC = () => {
     trackPageView(path);
   }, [location]);
 
+  const isProfileRoute = location.pathname.startsWith("/profile");
+  const mainClassName = isProfileRoute
+    ? "flex-grow bg-slate-50"
+    : "flex-grow container mx-auto px-4 py-4 sm:px-6 sm:py-6 lg:px-8 lg:py-8";
+
   return (
-    <main className="flex-grow container mx-auto px-4 py-4 sm:px-6 sm:py-6 lg:px-8 lg:py-8">
+    <main className={mainClassName}>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/explore" element={<ExplorePage />} />

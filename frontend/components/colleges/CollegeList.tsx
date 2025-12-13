@@ -26,6 +26,7 @@ type CollegeRow = {
   act: number | null;
   tuition: number | null;
   chance: AdmissionCategory | null;
+  isTarget?: boolean;
 };
 
 const currencyFormatter = new Intl.NumberFormat("en-US", {
@@ -68,6 +69,81 @@ const normalizeAcademicStats = (raw: any): AcademicStats => {
         : rankRaw != null
         ? Number(rankRaw)
         : null,
+  };
+};
+
+const chanceOrder: Record<AdmissionCategory, number> = {
+  Reach: 0,
+  Target: 1,
+  Safety: 2,
+};
+
+const buildRowForInstitution = (
+  inst: Institution,
+  scores: InstitutionTestScores | undefined,
+  stats: AcademicStats,
+  homeState: string | null
+): CollegeRow => {
+  const metrics: CollegeMetrics | null = scores
+    ? {
+        acceptanceRate: inst.acceptance_rate ?? null,
+        sat25: scores.sat_total_25 ?? null,
+        sat75: scores.sat_total_75 ?? null,
+        act25: scores.act_composite_25 ?? null,
+        act75: scores.act_composite_75 ?? null,
+      }
+    : null;
+
+  const chance =
+    metrics && (metrics.sat25 != null || metrics.act25 != null)
+      ? calculateChances(stats, metrics)
+      : null;
+
+  let tuition: number | null = inst.tuition_2023_24 ?? null;
+  if (homeState && inst.state) {
+    const instState = String(inst.state).toUpperCase();
+    if (instState === homeState) {
+      tuition =
+        inst.tuition_2023_24_in_state ??
+        inst.tuition_2023_24 ??
+        inst.tuition_2023_24_out_of_state ??
+        null;
+    } else {
+      tuition =
+        inst.tuition_2023_24_out_of_state ??
+        inst.tuition_2023_24 ??
+        inst.tuition_2023_24_in_state ??
+        null;
+    }
+  }
+
+  const satMid =
+    scores &&
+    scores.sat_total_25 != null &&
+    scores.sat_total_75 != null
+      ? Math.round(
+          (scores.sat_total_25 + scores.sat_total_75) / 2
+        )
+      : null;
+  const actMid =
+    scores &&
+    scores.act_composite_25 != null &&
+    scores.act_composite_75 != null
+      ? Math.round(
+          (scores.act_composite_25 + scores.act_composite_75) / 2
+        )
+      : null;
+
+  return {
+    unitid: inst.unitid,
+    name: inst.name,
+    city: inst.city ?? null,
+    state: inst.state ?? null,
+    acceptanceRate: inst.acceptance_rate ?? null,
+    sat: satMid,
+    act: actMid,
+    tuition,
+    chance,
   };
 };
 
@@ -155,78 +231,52 @@ const buildRecommendedRows = async (
       const inst = institutionById.get(id);
       if (!inst) return null;
       const scores = testScoreMap.get(id);
-
-      const metrics: CollegeMetrics | null = scores
-        ? {
-            acceptanceRate: inst.acceptance_rate ?? null,
-            sat25: scores.sat_total_25 ?? null,
-            sat75: scores.sat_total_75 ?? null,
-            act25: scores.act_composite_25 ?? null,
-            act75: scores.act_composite_75 ?? null,
-          }
-        : null;
-
-      const chance =
-        metrics && (metrics.sat25 != null || metrics.act25 != null)
-          ? calculateChances(stats, metrics)
-          : null;
-
-      let tuition: number | null = inst.tuition_2023_24 ?? null;
-      if (homeState && inst.state) {
-        const instState = String(inst.state).toUpperCase();
-        if (instState === homeState) {
-          tuition =
-            inst.tuition_2023_24_in_state ??
-            inst.tuition_2023_24 ??
-            inst.tuition_2023_24_out_of_state ??
-            null;
-        } else {
-          tuition =
-            inst.tuition_2023_24_out_of_state ??
-            inst.tuition_2023_24 ??
-            inst.tuition_2023_24_in_state ??
-            null;
-        }
-      }
-
-      const satMid =
-        scores &&
-        scores.sat_total_25 != null &&
-        scores.sat_total_75 != null
-          ? Math.round(
-              (scores.sat_total_25 + scores.sat_total_75) / 2
-            )
-          : null;
-      const actMid =
-        scores &&
-        scores.act_composite_25 != null &&
-        scores.act_composite_75 != null
-          ? Math.round(
-              (scores.act_composite_25 + scores.act_composite_75) / 2
-            )
-          : null;
-
-      const row: CollegeRow = {
-        unitid: inst.unitid,
-        name: inst.name,
-        city: inst.city ?? null,
-        state: inst.state ?? null,
-        acceptanceRate: inst.acceptance_rate ?? null,
-        sat: satMid,
-        act: actMid,
-        tuition,
-        chance,
-      };
-
-      return row;
+      return buildRowForInstitution(inst, scores, stats, homeState);
     })
     .filter((row): row is CollegeRow => row != null);
 
-  const chanceOrder: Record<AdmissionCategory, number> = {
-    Reach: 0,
-    Target: 1,
-    Safety: 2,
-  };
+  rows.sort((a, b) => {
+    const aChanceRank =
+      a.chance != null ? chanceOrder[a.chance] ?? 3 : 3;
+    const bChanceRank =
+      b.chance != null ? chanceOrder[b.chance] ?? 3 : 3;
+    if (aChanceRank !== bChanceRank) return aChanceRank - bChanceRank;
+
+    const aAcc = a.acceptanceRate ?? 1;
+    const bAcc = b.acceptanceRate ?? 1;
+    return aAcc - bAcc;
+  });
+
+  return rows;
+};
+
+const buildTargetRows = async (
+  stats: AcademicStats,
+  homeState: string | null,
+  targetUnitIds: number[]
+): Promise<CollegeRow[]> => {
+  if (!targetUnitIds.length) return [];
+
+  const [allInstitutions, testScoreMap] = await Promise.all([
+    getAllInstitutions(),
+    getInstitutionTestScoreMap(),
+  ]);
+
+  const institutionById = new Map<number, Institution>();
+  for (const inst of allInstitutions) {
+    institutionById.set(inst.unitid, inst);
+  }
+
+  const uniqueIds = Array.from(new Set(targetUnitIds));
+
+  const rows = uniqueIds
+    .map((id) => {
+      const inst = institutionById.get(id);
+      if (!inst) return null;
+      const scores = testScoreMap.get(id);
+      return buildRowForInstitution(inst, scores, stats, homeState);
+    })
+    .filter((row): row is CollegeRow => row != null);
 
   rows.sort((a, b) => {
     const aChanceRank =
@@ -244,19 +294,10 @@ const buildRecommendedRows = async (
 };
 
 const CollegeList: React.FC = () => {
-  const { user, studentProfile } = useOnboardingContext();
+  const { user, studentProfile, targetUnitIds } = useOnboardingContext();
   const [rows, setRows] = useState<CollegeRow[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-
-  const [studentState, setStudentState] = useState<string | null>(null);
-  const [studentStats, setStudentStats] = useState<AcademicStats>({
-    gpa: null,
-    gpaScale: "4.0",
-    sat: null,
-    act: null,
-    rank: null,
-  });
 
   useEffect(() => {
     if (!user) {
@@ -270,7 +311,7 @@ const CollegeList: React.FC = () => {
       try {
         const { data: profile, error: profileError } = await supabase
           .from("profiles")
-          .select("demographics, academic_stats, target_universities")
+          .select("demographics, academic_stats")
           .eq("user_id", user.id)
           .maybeSingle();
         if (profileError) throw profileError;
@@ -280,19 +321,40 @@ const CollegeList: React.FC = () => {
           demo.location_state && String(demo.location_state).trim()
             ? String(demo.location_state).toUpperCase()
             : null;
-        setStudentState(homeState);
         const stats = normalizeAcademicStats(profile?.academic_stats);
-        setStudentStats(stats);
-
-        const tableRows = await buildRecommendedRows(
+        const recommendedRows = await buildRecommendedRows(
           stats,
           homeState,
           studentProfile.majors,
           20
         );
 
+        let combinedRows: CollegeRow[] = recommendedRows;
+
+        if (targetUnitIds && targetUnitIds.length) {
+          const targetRows = await buildTargetRows(
+            stats,
+            homeState,
+            targetUnitIds
+          );
+          const recommendedIds = new Set(
+            recommendedRows.map((r) => r.unitid)
+          );
+          const extraTargetRows = targetRows.filter(
+            (row) => !recommendedIds.has(row.unitid)
+          );
+          combinedRows = [...extraTargetRows, ...recommendedRows];
+          const targetIdSet = new Set(
+            targetUnitIds.map((id) => Number(id))
+          );
+          combinedRows = combinedRows.map((row) => ({
+            ...row,
+            isTarget: targetIdSet.has(row.unitid),
+          }));
+        }
+
         if (!cancelled) {
-          setRows(tableRows);
+          setRows(combinedRows);
         }
       } catch (e: any) {
         if (!cancelled) {
@@ -306,7 +368,7 @@ const CollegeList: React.FC = () => {
     return () => {
       cancelled = true;
     };
-  }, [user?.id]);
+  }, [user?.id, targetUnitIds]);
 
   const handleDownload = () => {
     if (!rows.length) return;
@@ -319,6 +381,7 @@ const CollegeList: React.FC = () => {
       "Avg ACT",
       "Tuition",
       "My Chance",
+      "My Target",
     ];
     const lines = [header.join(",")];
     for (const r of rows) {
@@ -334,6 +397,7 @@ const CollegeList: React.FC = () => {
           ? currencyFormatter.format(r.tuition)
           : "";
       const chance = r.chance ?? "";
+      const isTarget = r.isTarget ? "My Target" : "";
       lines.push(
         [
           r.unitid,
@@ -344,6 +408,7 @@ const CollegeList: React.FC = () => {
           act,
           tuition,
           chance,
+          isTarget,
         ].join(",")
       );
     }
@@ -401,18 +466,18 @@ const CollegeList: React.FC = () => {
         </div>
       </div>
       {loading ? (
-        <div className="px-4 py-6 text-sm text-slate-600">
+        <div className="px-4 py-6 text-base text-slate-600">
           Loading your colleges...
         </div>
       ) : error ? (
-        <div className="px-4 py-6 text-sm text-red-600">{error}</div>
+        <div className="px-4 py-6 text-base text-red-600">{error}</div>
       ) : !hasColleges ? (
-        <div className="px-4 py-6 text-sm text-slate-600">
+        <div className="px-4 py-6 text-base text-slate-600">
           You don&apos;t have any colleges saved yet. Use &quot;My Profile&quot; or College Search to start building your list.
         </div>
       ) : (
         <div className="overflow-x-auto">
-          <table className="min-w-full divide-y divide-slate-200 text-xs">
+          <table className="min-w-full divide-y divide-slate-200 text-sm">
             <thead className="bg-slate-50">
               <tr>
                 <th className="px-4 py-2 text-left font-semibold text-slate-600">
@@ -442,7 +507,14 @@ const CollegeList: React.FC = () => {
               {rows.map((row) => (
                 <tr key={row.unitid} className="hover:bg-slate-50">
                   <td className="px-4 py-2 whitespace-nowrap text-slate-900">
-                    {row.name}
+                    <div className="flex items-center gap-2">
+                      <span>{row.name}</span>
+                      {row.isTarget && (
+                        <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200 text-[10px] font-semibold uppercase tracking-wide">
+                          My Target
+                        </span>
+                      )}
+                    </div>
                   </td>
                   <td className="px-4 py-2 whitespace-nowrap text-slate-600">
                     {[row.city, row.state]

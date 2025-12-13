@@ -63,9 +63,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
         </div>
       </aside>
       <main className="flex-1 bg-slate-50">
-        <div className="max-w-6xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
-          {children}
-        </div>
+        <div className="px-4 py-6 sm:px-6 lg:px-8">{children}</div>
       </main>
     </div>
   );
