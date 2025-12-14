@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { useOnboardingContext } from '../context/OnboardingContext';
 import {
   InstitutionDetail,
   InstitutionMetrics,
@@ -151,6 +152,16 @@ const DemographicsDonut: React.FC<{ groups: DemographicGroupSlice[] }> = ({ grou
           })}
         </div>
       </div>
+
+      <div className="flex justify-center">
+        <button
+          type="button"
+          onClick={addToTargets}
+          className="inline-flex items-center gap-2 rounded-lg bg-brand-secondary px-5 py-2.5 text-white text-sm font-semibold shadow-sm hover:bg-brand-primary transition"
+        >
+          Add to My Target Schools
+        </button>
+      </div>
     </div>
   );
 };
@@ -164,20 +175,24 @@ const DetailPage: React.FC = () => {
   const [majorsMeta, setMajorsMeta] = useState<MajorsMeta | null>(null);
   const [majorsByInstitution, setMajorsByInstitution] = useState<InstitutionMajorsByInstitution | null>(null);
   const [demographics, setDemographics] = useState<InstitutionDemographics | null>(null);
+  const { targetUnitIds, setTargetUnitIds } = useOnboardingContext();
+  const unitIdNumber = unitid ? Number(unitid) : null;
 
   useEffect(() => {
     const fetchData = async () => {
       if (!unitid) return;
       try {
         setLoading(true);
-
         const detailData = await getInstitutionDetail(unitid);
-        const metricsData = await getInstitutionMetrics(unitid);
-
-        if (!detailData || !metricsData) {
+        let metricsData: InstitutionMetrics | null = null;
+        try {
+          metricsData = await getInstitutionMetrics(unitid);
+        } catch {
+          metricsData = null;
+        }
+        if (!detailData) {
           throw new Error('University data not found.');
         }
-
         setDetail(detailData);
         setMetrics(metricsData);
         setError(null);
@@ -224,7 +239,9 @@ const DetailPage: React.FC = () => {
   if (!detail) return <div className="text-center p-10">University not found.</div>;
 
   const profile = detail.profile;
-  const latestMetric = metrics?.metrics?.sort((a, b) => b.year - a.year)[0];
+  const latestMetric = metrics?.metrics && metrics.metrics.length
+    ? [...metrics.metrics].sort((a, b) => b.year - a.year)[0]
+    : null;
 
   const applicants = latestMetric?.applicants_total;
   const admitted = latestMetric?.admissions_total ?? latestMetric?.admitted_est;
@@ -283,7 +300,23 @@ const DetailPage: React.FC = () => {
     }).filter((g) => g.percent != null);
   }, [percentByKey]);
 
+  const genderBalance = useMemo(() => {
+    const men = demographics?.total_undergrad_men ?? null;
+    const women = demographics?.total_undergrad_women ?? null;
+    const total = demographics?.total_undergrad ?? null;
+    if (!total || total <= 0 || men == null || women == null) return null;
+    return {
+      men: Math.max(0, Math.min(100, (men / total) * 100)),
+      women: Math.max(0, Math.min(100, (women / total) * 100)),
+    };
+  }, [demographics]);
+
   const hasDemographics = demographicGroups.length > 0;
+  const addToTargets = () => {
+    if (!unitIdNumber) return;
+    const next = Array.from(new Set([...(targetUnitIds || []), unitIdNumber]));
+    setTargetUnitIds(next);
+  };
 
   return (
     <div className="space-y-6">
@@ -315,6 +348,15 @@ const DetailPage: React.FC = () => {
               {major}
             </span>
           ))}
+        </div>
+        <div className="mt-4 flex flex-wrap gap-3">
+          <button
+            type="button"
+            onClick={addToTargets}
+            className="inline-flex items-center gap-2 rounded-lg bg-brand-secondary px-4 py-2 text-white text-sm font-semibold shadow-sm hover:bg-brand-primary transition"
+          >
+            Add to My Target Schools
+          </button>
         </div>
       </header>
 
@@ -506,7 +548,7 @@ const DetailPage: React.FC = () => {
           )}
 
           {hasDemographics && (
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="bg-white p-6 rounded-lg shadow-md space-y-5">
               <div className="flex items-start justify-between gap-4 flex-wrap">
                 <div>
                   <h2 className="text-2xl font-bold text-brand-dark mb-1">Campus diversity</h2>
@@ -519,29 +561,29 @@ const DetailPage: React.FC = () => {
                     </p>
                   )}
                 </div>
-                {(() => {
-                  const men = demographics?.total_undergrad_men ?? null;
-                  const women = demographics?.total_undergrad_women ?? null;
-                  const total = (demographics?.total_undergrad ?? (men ?? 0) + (women ?? 0)) || null;
-                  if (men == null || women == null || !total) return null;
-                  const menPct = (men / total) * 100;
-                  const womenPct = (women / total) * 100;
-                  return (
-                    <div className="text-sm text-gray-700 min-w-[200px]">
-                      <div className="font-semibold mb-1">Gender balance</div>
-                      <div className="w-full h-2 rounded-full bg-gray-100 overflow-hidden flex">
-                        <div className="h-2 bg-blue-500" style={{ width: `${menPct}%` }} title={`Men: ${menPct.toFixed(1)}%`} />
-                        <div className="h-2 bg-pink-400" style={{ width: `${womenPct}%` }} title={`Women: ${womenPct.toFixed(1)}%`} />
-                      </div>
-                      <div className="flex justify-between text-[12px] text-gray-600 mt-1">
-                        <span>Men {menPct.toFixed(1)}%</span>
-                        <span>Women {womenPct.toFixed(1)}%</span>
-                      </div>
+                {genderBalance && (
+                  <div className="text-sm text-gray-700 min-w-[220px]">
+                    <div className="font-semibold mb-1">Gender balance</div>
+                    <div className="w-full h-2 rounded-full bg-gray-100 overflow-hidden flex">
+                      <div
+                        className="h-2 bg-blue-500"
+                        style={{ width: `${genderBalance.men}%` }}
+                        title={`Men: ${genderBalance.men.toFixed(1)}%`}
+                      />
+                      <div
+                        className="h-2 bg-pink-400"
+                        style={{ width: `${genderBalance.women}%` }}
+                        title={`Women: ${genderBalance.women.toFixed(1)}%`}
+                      />
                     </div>
-                  );
-                })()}
+                    <div className="flex justify-between text-[12px] text-gray-600 mt-1">
+                      <span>Men {genderBalance.men.toFixed(1)}%</span>
+                      <span>Women {genderBalance.women.toFixed(1)}%</span>
+                    </div>
+                  </div>
+                )}
               </div>
-              <div className="mt-5">
+              <div className="mt-2">
                 <DemographicsDonut groups={demographicGroups} />
               </div>
             </div>

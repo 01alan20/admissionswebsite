@@ -21,6 +21,9 @@ import ProfileRecommendationsStepPage from './pages/ProfileRecommendationsStepPa
 import ProfileTargetsStepPage from './pages/ProfileTargetsStepPage';
 import ProfileDashboardPage from './pages/ProfileDashboardPage';
 import MyCollegeListPage from './pages/MyCollegeListPage';
+import ProfileCollegesPage from './pages/ProfileCollegesPage';
+import ApplicationsPage from './pages/ApplicationsPage';
+import EssaysPage from './pages/EssaysPage';
 import { OnboardingProvider, useOnboardingContext } from './context/OnboardingContext';
 import ContactHelpPage from './pages/ContactHelpPage';
 import FaqPage from './pages/FaqPage';
@@ -214,6 +217,9 @@ const AppRoutes: React.FC = () => {
         <Route path="/profile/majors" element={<ProfileMajorsStepPage />} />
         <Route path="/profile/targets" element={<ProfileTargetsStepPage />} />
         <Route path="/profile/college-list" element={<MyCollegeListPage />} />
+        <Route path="/profile/colleges" element={<ProfileCollegesPage />} />
+        <Route path="/profile/applications" element={<ApplicationsPage />} />
+        <Route path="/profile/essays" element={<EssaysPage />} />
         <Route path="/profile/dashboard" element={<ProfileDashboardPage />} />
       </Routes>
     </main>

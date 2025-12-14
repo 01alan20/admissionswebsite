@@ -15,6 +15,7 @@ import {
   getInstitutionTestScoreMap,
 } from "../../data/api";
 import type { Institution, InstitutionTestScores } from "../../types";
+import { getTwoDigitPrefix } from "../../utils/majors";
 
 type CollegeRow = {
   unitid: number;
@@ -164,9 +165,8 @@ const buildRecommendedRows = async (
 
   const majorPrefixes = new Set(
     (userMajors || [])
-      .map((m) => String(m).trim())
-      .filter((m) => /^\d{2}/.test(m))
-      .map((m) => m.slice(0, 2))
+      .map((m) => getTwoDigitPrefix(m))
+      .filter((prefix): prefix is string => Boolean(prefix))
   );
 
   const scoreInstitution = (inst: Institution): {

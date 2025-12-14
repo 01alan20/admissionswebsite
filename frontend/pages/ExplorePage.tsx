@@ -98,31 +98,43 @@ const InstitutionCard: React.FC<{ institution: Institution; demographics?: Insti
   institution,
   demographics,
 }) => {
-  const tuition = institution.tuition_2023_24_out_of_state ?? institution.tuition_2023_24_in_state ?? institution.tuition_2023_24;
+  const tuition =
+    institution.tuition_2023_24_out_of_state ??
+    institution.tuition_2023_24_in_state ??
+    institution.tuition_2023_24;
+  const acceptanceLabel =
+    institution.acceptance_rate != null
+      ? `${(institution.acceptance_rate * 100).toFixed(0)}% Acceptance`
+      : "Acceptance unknown";
+
   return (
-    <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col">
-      <div className="p-6 flex-grow">
-        <h3 className="text-xl font-bold text-brand-primary mb-1">{institution.name}</h3>
-        <p className="text-gray-600 mb-4">{institution.city}, {institution.state}</p>
-        <div className="flex flex-wrap gap-2 mb-4 text-sm">
-          <span className="bg-brand-light text-brand-dark px-2 py-1 rounded-full">{institution.control}</span>
-          {institution.acceptance_rate != null && (
-            <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full">
-              {(institution.acceptance_rate * 100).toFixed(0)}% Acceptance
-            </span>
-          )}
+    <div className="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden border border-slate-100 flex flex-col">
+      <div className="p-5 flex-grow flex flex-col gap-3">
+        <div className="space-y-1">
+          <h3 className="text-lg font-bold text-slate-900 leading-snug">{institution.name}</h3>
+          <p className="text-sm text-slate-600">
+            {institution.city}, {institution.state}
+          </p>
+        </div>
+        <div className="flex flex-wrap gap-2 text-xs font-semibold">
+          <span className="px-3 py-1 rounded-full bg-slate-100 text-slate-800">{institution.control}</span>
+          <span className="px-3 py-1 rounded-full bg-blue-50 text-blue-800 border border-blue-200">
+            {acceptanceLabel}
+          </span>
           {tuition != null && (
-            <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full">
+            <span className="px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 border border-emerald-200">
               ${tuition.toLocaleString()}/yr
             </span>
           )}
+          <span className="px-3 py-1 rounded-full bg-amber-50 text-amber-800 border border-amber-200">
+            {formatTestPolicy(institution.test_policy)}
+          </span>
         </div>
-        <p className="text-gray-700 text-sm line-clamp-2">
-          Test Policy: {formatTestPolicy(institution.test_policy)}
-        </p>
-        <DemographicsMiniBars data={demographics} />
+        <div className="mt-2">
+          <DemographicsMiniBars data={demographics} />
+        </div>
       </div>
-      <div className="p-4 bg-gray-50">
+      <div className="p-4 bg-slate-50">
         <Link
           to={`/institution/${institution.unitid}`}
           className="w-full text-center block bg-brand-secondary text-white font-semibold py-2 px-4 rounded-lg hover:bg-brand-primary transition-colors"
@@ -134,7 +146,15 @@ const InstitutionCard: React.FC<{ institution: Institution; demographics?: Insti
   );
 };
 
-const ExplorePage: React.FC = () => {
+type ExplorePageProps = {
+  initialSpecificMajors?: string[];
+  initialMajorAreas?: string[];
+};
+
+const ExplorePage: React.FC<ExplorePageProps> = ({
+  initialSpecificMajors = [],
+  initialMajorAreas = [],
+}) => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [index, setIndex] = useState<InstitutionIndex[]>([]);
   const [defaultUnitIds, setDefaultUnitIds] = useState<number[]>([]);
@@ -152,8 +172,12 @@ const ExplorePage: React.FC = () => {
   const [testPolicy, setTestPolicy] = useState<string[]>([]); // required, flexible, optional
   const [majorAreaQuery, setMajorAreaQuery] = useState<string>('');
   const [specificMajorQuery, setSpecificMajorQuery] = useState<string>('');
-  const [selectedMajorAreas, setSelectedMajorAreas] = useState<string[]>([]); // CIP 2-digit codes
-  const [selectedSpecificMajors, setSelectedSpecificMajors] = useState<string[]>([]); // CIP 6-digit codes
+  const [selectedMajorAreas, setSelectedMajorAreas] = useState<string[]>(() =>
+    Array.from(new Set(initialMajorAreas))
+  ); // CIP 2-digit codes
+  const [selectedSpecificMajors, setSelectedSpecificMajors] = useState<string[]>(() =>
+    Array.from(new Set(initialSpecificMajors))
+  ); // CIP 4/6-digit codes
   const [allInstitutions, setAllInstitutions] = useState<Institution[] | null>(null);
   const [majorsMeta, setMajorsMeta] = useState<MajorsMeta | null>(null);
   const [majorsByInstitution, setMajorsByInstitution] = useState<InstitutionMajorsByInstitution | null>(null);
@@ -487,18 +511,6 @@ const ExplorePage: React.FC = () => {
     <div className="flex flex-col md:flex-row gap-6">
       <aside className="w-full md:w-72">
         <div className="bg-white p-4 rounded-lg shadow-md sticky top-24 space-y-4">
-          <div className="bg-brand-dark text-white rounded-md p-3 space-y-2">
-            <h2 className="text-sm font-semibold">Need Personalized Help?</h2>
-            <p className="text-xs text-gray-100">
-              A real person can review your profile and questions and send guidance. It&apos;s 100% free.
-            </p>
-            <Link
-              to="/contact"
-              className="inline-block mt-1 px-3 py-1 text-sm font-semibold rounded bg-white text-brand-primary hover:bg-brand-light"
-            >
-              Get personalized help
-            </Link>
-          </div>
           <form onSubmit={(e) => e.preventDefault()}>
             <input
               type="search"

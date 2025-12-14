@@ -17,6 +17,15 @@ import {
 } from "../data/api";
 import { COUNTRY_OPTIONS } from "../constants";
 import type { Activity, MajorsMeta } from "../types";
+import { supabase } from "../services/supabaseClient";
+import {
+  buildMajorAreaOptions,
+  buildSpecificMajorOptions,
+  extractMajorCode,
+  extractMajorLabel,
+  formatMajorSelection,
+  normalizeMajorSelectionList,
+} from "../utils/majors";
 import type { AdmissionCategory } from "../types/supabase";
 
 type DemographicsState = {
@@ -133,12 +142,20 @@ const ProfileDashboardPage: React.FC = () => {
   const navigate = useNavigate();
   const loadingGuard = useOnboardingGuard(9);
   const {
+    user,
     studentProfile,
     targetUnitIds,
     setTargetUnitIds,
     setStudentProfile,
     logout,
   } = useOnboardingContext();
+
+  const initialMajorSelections =
+    normalizeMajorSelectionList(studentProfile.majors) ?? [];
+  const initialMajorCodes = initialMajorSelections
+    .map((entry) => extractMajorCode(entry) ?? extractMajorLabel(entry))
+    .filter((val): val is string => Boolean(val))
+    .slice(0, 3);
 
   const [majorOptions, setMajorOptions] = useState<MajorOption[]>([]);
   const [majorSearch, setMajorSearch] = useState("");
@@ -151,9 +168,7 @@ const ProfileDashboardPage: React.FC = () => {
       locationState: "",
       city: studentProfile.city || "",
       gradYear: "",
-      majorCodes:
-        (studentProfile.majors && studentProfile.majors.slice(0, 3)) ||
-        [],
+      majorCodes: initialMajorCodes.length ? initialMajorCodes : [],
     })
   );
 
@@ -205,6 +220,12 @@ const ProfileDashboardPage: React.FC = () => {
   });
 
   const [colleges, setColleges] = useState<CollegeRow[]>([]);
+  const [academicSnapshot, setAcademicSnapshot] = useState<Record<string, any> | null>(null);
+  const [gpaMode, setGpaMode] = useState<"band" | "custom">(
+    typeof studentProfile.gpa === "number" ? "custom" : "band"
+  );
+  const [savingDemo, setSavingDemo] = useState(false);
+  const [savingAcad, setSavingAcad] = useState(false);
 
   const [showDemoModal, setShowDemoModal] = useState(false);
   const [showAcadModal, setShowAcadModal] = useState(false);
@@ -239,27 +260,20 @@ const ProfileDashboardPage: React.FC = () => {
     (async () => {
       try {
         const meta: MajorsMeta = await getMajorsMeta();
-        const four = meta.four_digit ?? {};
-        const six = meta.six_digit ?? {};
-        const entries: Array<[string, string]> = [
-          ...Object.entries(four),
-          ...Object.entries(six),
+        const combined = [
+          ...buildSpecificMajorOptions(meta),
+          ...buildMajorAreaOptions(meta),
         ];
         const seen = new Set<string>();
         const options: MajorOption[] = [];
-        for (const [codeRaw, nameRaw] of entries) {
-          const code = codeRaw.trim();
-          if (!/^\d{2}\.\d{2,4}$/.test(code)) continue;
-          const raw = String(nameRaw ?? "").trim();
-          let cleanName = raw.replace(/^"+/, "").replace(/"+$/, "");
-          cleanName = cleanName.replace(/\bArea\b/gi, "").replace(/\s{2,}/g, " ").trim();
-          const key = cleanName.toLowerCase();
-          if (!cleanName || seen.has(key)) continue;
-          seen.add(key);
+        for (const entry of combined) {
+          if (!entry.code || !entry.label) continue;
+          if (seen.has(entry.code)) continue;
+          seen.add(entry.code);
           options.push({
-            code,
-            name: cleanName,
-            label: cleanName,
+            code: entry.code,
+            name: entry.label,
+            label: entry.label,
           });
         }
         options.sort((a, b) => a.name.localeCompare(b.name));
@@ -269,6 +283,69 @@ const ProfileDashboardPage: React.FC = () => {
       }
     })();
   }, []);
+
+  useEffect(() => {
+    if (!user) return;
+    let cancelled = false;
+    (async () => {
+      try {
+        const { data, error } = await supabase
+          .from("profiles")
+          .select("demographics, academic_stats")
+          .eq("user_id", user.id)
+          .maybeSingle();
+        if (cancelled || error || !data) return;
+        const demo = (data.demographics || {}) as Record<string, any>;
+        setDemographics((prev) => ({
+          ...prev,
+          gender: demo.gender ?? prev.gender,
+          race: demo.race ?? prev.race,
+          country: demo.country ?? prev.country,
+          city: demo.city ?? prev.city,
+          locationState: demo.location_state ?? prev.locationState,
+          gradYear:
+            demo.grad_year != null ? String(demo.grad_year) : prev.gradYear,
+        }));
+        const stats = (data.academic_stats || {}) as Record<string, any>;
+        setAcademicSnapshot(stats);
+        setAcademics((prev) => ({
+          ...prev,
+          gpaValue:
+            typeof stats.gpa === "number" ? stats.gpa : prev.gpaValue,
+          customGpa:
+            typeof stats.gpa === "number" ? stats.gpa : prev.customGpa,
+          sat:
+            typeof stats.sat_total === "number"
+              ? stats.sat_total
+              : prev.sat,
+          act:
+            typeof stats.act_composite === "number"
+              ? stats.act_composite
+              : prev.act,
+          apCourses:
+            typeof stats.ap_courses === "string"
+              ? stats.ap_courses
+              : prev.apCourses,
+          ibCourses:
+            typeof stats.ib_courses === "string"
+              ? stats.ib_courses
+              : prev.ibCourses,
+          ibScore:
+            typeof stats.ib_score === "string"
+              ? stats.ib_score
+              : prev.ibScore,
+        }));
+        if (typeof stats.gpa === "number") {
+          setGpaMode("custom");
+        }
+      } catch {
+        // ignore best-effort load
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [user?.id]);
 
   useEffect(() => {
     if (!showDemoModal) return;
@@ -356,8 +433,8 @@ const ProfileDashboardPage: React.FC = () => {
   }, [institutionIndex, existingUnitIds, searchQuery, searchState]);
 
   const gpaDisplay =
-    academics.customGpa != null
-      ? academics.customGpa
+    gpaMode === "custom"
+      ? academics.customGpa ?? studentProfile.gpa ?? null
       : academics.gpaValue != null
       ? academics.gpaValue
       : typeof studentProfile.gpa === "number"
@@ -405,7 +482,10 @@ const ProfileDashboardPage: React.FC = () => {
       return names.join(", ");
     }
     if (studentProfile.majors && studentProfile.majors.length) {
-      return studentProfile.majors.slice(0, 3).join(", ");
+      return studentProfile.majors
+        .slice(0, 3)
+        .map((value) => extractMajorLabel(value) || value)
+        .join(", ");
     }
     return "Undeclared";
   }, [demographics.majorCodes, majorOptions, studentProfile.majors]);
@@ -513,6 +593,30 @@ const ProfileDashboardPage: React.FC = () => {
 
   const hasColleges = colleges.length > 0;
   const isUS = demographics.country === "United States";
+
+  const updateProfileData = useCallback(
+    async (updates: {
+      demographics?: Record<string, any>;
+      academic?: Record<string, any>;
+    }) => {
+      if (!user) return;
+      const payload: Record<string, any> = {};
+      if (updates.demographics) {
+        payload.demographics = updates.demographics;
+      }
+      if (updates.academic) {
+        const merged = { ...(academicSnapshot || {}), ...updates.academic };
+        payload.academic_stats = merged;
+        setAcademicSnapshot(merged);
+      }
+      if (!Object.keys(payload).length) return;
+      await supabase
+        .from("profiles")
+        .update(payload)
+        .eq("user_id", user.id);
+    },
+    [user?.id, academicSnapshot]
+  );
 
   if (loadingGuard) {
     return (
@@ -911,9 +1015,10 @@ const ProfileDashboardPage: React.FC = () => {
             <button
               type="submit"
               form="demo-form"
-              className="rounded-md bg-blue-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-blue-700"
+              disabled={savingDemo}
+              className="rounded-md bg-blue-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-blue-700 disabled:opacity-60"
             >
-              Save
+              {savingDemo ? "Saving..." : "Save"}
             </button>
           </>
         }
@@ -921,24 +1026,53 @@ const ProfileDashboardPage: React.FC = () => {
         <form
           id="demo-form"
           className="space-y-4"
-          onSubmit={(e) => {
+          onSubmit={async (e) => {
             e.preventDefault();
-            setDemographics((prev) => {
-              const cleaned = {
-                ...prev,
-                locationState: prev.locationState.trim().toUpperCase(),
-                city: prev.city.trim(),
-                gradYear: prev.gradYear.trim(),
-              };
-              if (!cleaned.majorCodes.length && majorSearch.trim()) {
-                return {
-                  ...cleaned,
-                  majorCodes: [majorSearch.trim()],
-                };
-              }
-              return cleaned;
-            });
-            setShowDemoModal(false);
+            const cleaned: DemographicsState = {
+              ...demographics,
+              country: demographics.country.trim(),
+              city: demographics.city.trim(),
+              locationState: demographics.locationState.trim().toUpperCase(),
+              gradYear: demographics.gradYear.trim(),
+            };
+            if (!cleaned.majorCodes.length && majorSearch.trim()) {
+              cleaned.majorCodes = [majorSearch.trim()];
+            }
+            setDemographics(cleaned);
+            const normalizedMajors = cleaned.majorCodes
+              .map((code) => {
+                const opt = majorOptions.find((m) => m.code === code);
+                return opt ? formatMajorSelection(opt.code, opt.label) : code;
+              })
+              .slice(0, 3);
+            setSavingDemo(true);
+            try {
+              await updateProfileData({
+                demographics: {
+                  gender: cleaned.gender || null,
+                  race: cleaned.race || null,
+                  country: cleaned.country || null,
+                  city: cleaned.city || null,
+                  location_state: cleaned.locationState || null,
+                  grad_year: cleaned.gradYear ? Number(cleaned.gradYear) : null,
+                },
+                academic: {
+                  country: cleaned.country || null,
+                  city: cleaned.city || null,
+                  majors: normalizedMajors.length ? normalizedMajors : null,
+                },
+              });
+              setStudentProfile({
+                country: cleaned.country || "",
+                city: cleaned.city || "",
+                majors: normalizedMajors,
+              });
+            } catch (err) {
+              console.error("Failed to save demographics", err);
+            } finally {
+              setSavingDemo(false);
+              setShowDemoModal(false);
+            }
           }}
         >
           {/* Intended major */}
@@ -1490,9 +1624,10 @@ const ProfileDashboardPage: React.FC = () => {
             <button
               type="submit"
               form="acad-form"
-              className="rounded-md bg-blue-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-blue-700"
+              disabled={savingAcad}
+              className="rounded-md bg-blue-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-blue-700 disabled:opacity-60"
             >
-              Save
+              {savingAcad ? "Saving..." : "Save"}
             </button>
           </>
         }
@@ -1500,92 +1635,163 @@ const ProfileDashboardPage: React.FC = () => {
         <form
           id="acad-form"
           className="space-y-4"
-          onSubmit={(e) => {
+          onSubmit={async (e) => {
             e.preventDefault();
-            setAcademics((prev) => {
-              const sat =
-                prev.sat != null
-                  ? Math.min(Math.max(prev.sat, 0), 1600)
-                  : null;
-              const act =
-                prev.act != null
-                  ? Math.min(Math.max(prev.act, 0), 36)
-                  : null;
-              const customGpa =
-                prev.customGpa != null
-                  ? Math.min(Math.max(prev.customGpa, 0), 4)
-                  : null;
-              return { ...prev, sat, act, customGpa };
-            });
-            setShowAcadModal(false);
+            const sat =
+              academics.sat != null
+                ? Math.min(Math.max(academics.sat, 0), 1600)
+                : null;
+            const act =
+              academics.act != null
+                ? Math.min(Math.max(academics.act, 0), 36)
+                : null;
+            const customGpa =
+              academics.customGpa != null
+                ? Math.min(Math.max(academics.customGpa, 0), 4)
+                : null;
+            const nextState = {
+              ...academics,
+              sat,
+              act,
+              customGpa,
+            };
+            setAcademics(nextState);
+            const finalGpa =
+              gpaMode === "custom"
+                ? customGpa
+                : nextState.gpaValue ?? customGpa ?? null;
+            const satMath =
+              sat != null ? Math.round(sat / 2) : academicSnapshot?.sat_math ?? null;
+            const satEbrw =
+              sat != null
+                ? sat - (satMath ?? 0)
+                : academicSnapshot?.sat_ebrwr ?? null;
+            setSavingAcad(true);
+            try {
+              await updateProfileData({
+                academic: {
+                  gpa: finalGpa ?? null,
+                  sat_total: sat,
+                  sat_math: satMath,
+                  sat_ebrwr: satEbrw,
+                  act_composite: act ?? null,
+                  ap_courses: nextState.apCourses || null,
+                  ib_courses: nextState.ibCourses || null,
+                  ib_score: nextState.ibScore || null,
+                },
+              });
+              setStudentProfile({
+                gpa: finalGpa ?? null,
+                satMath: satMath ?? null,
+                satEBRW: satEbrw ?? null,
+                actComposite: act ?? null,
+              });
+            } catch (err) {
+              console.error("Failed to save academics", err);
+            } finally {
+              setSavingAcad(false);
+              setShowAcadModal(false);
+            }
           }}
         >
             <div>
               <label className="block text-xs font-medium text-slate-700 mb-2">
-              What grades do you usually get?
+                How should we estimate your GPA?
               </label>
-              <div className="flex flex-wrap gap-2">
-              {gpaBands.map((band) => (
+              <div className="flex gap-2 mb-3">
                 <button
-                  key={band.id}
                   type="button"
-                  onClick={() =>
-                    setAcademics((prev) => ({
-                      ...prev,
-                      gpaBand: band.id,
-                      gpaValue: band.value,
-                    }))
-                  }
+                  onClick={() => {
+                    setGpaMode("band");
+                    setAcademics((prev) => ({ ...prev, customGpa: null }));
+                  }}
                   className={`rounded-full border px-3 py-1.5 text-xs ${
-                    academics.gpaBand === band.id
+                    gpaMode === "band"
                       ? "border-blue-600 bg-blue-50 text-blue-700"
                       : "border-slate-300 text-slate-700 hover:bg-slate-50"
                   }`}
                 >
-                  <span className="font-medium">{band.label}</span>
-                  <span className="ml-1 text-[11px] text-slate-500">
-                    {band.range}
-                  </span>
+                  Grade ranges
                 </button>
-              ))}
+                <button
+                  type="button"
+                  onClick={() => {
+                    setGpaMode("custom");
+                    setAcademics((prev) => ({ ...prev, gpaBand: "", gpaValue: null }));
+                  }}
+                  className={`rounded-full border px-3 py-1.5 text-xs ${
+                    gpaMode === "custom"
+                      ? "border-blue-600 bg-blue-50 text-blue-700"
+                      : "border-slate-300 text-slate-700 hover:bg-slate-50"
+                  }`}
+                >
+                  Enter exact GPA
+                </button>
+              </div>
+              {gpaMode === "band" && (
+                <>
+                  <div className="flex flex-wrap gap-2">
+                    {gpaBands.map((band) => (
+                      <button
+                        key={band.id}
+                        type="button"
+                        onClick={() =>
+                          setAcademics((prev) => ({
+                            ...prev,
+                            gpaBand: band.id,
+                            gpaValue: band.value,
+                          }))
+                        }
+                        className={`rounded-full border px-3 py-1.5 text-xs ${
+                          academics.gpaBand === band.id
+                            ? "border-blue-600 bg-blue-50 text-blue-700"
+                            : "border-slate-300 text-slate-700 hover:bg-slate-50"
+                        }`}
+                      >
+                        <span className="font-medium">{band.label}</span>
+                        <span className="ml-1 text-[11px] text-slate-500">
+                          {band.range}
+                        </span>
+                      </button>
+                    ))}
+                  </div>
+                  {gpaDisplay != null && (
+                    <p className="mt-2 text-xs text-slate-600">
+                      Your estimated unweighted GPA:{" "}
+                      <span className="font-semibold">
+                        {gpaDisplay.toFixed(2)}
+                      </span>
+                    </p>
+                  )}
+                </>
+              )}
+              {gpaMode === "custom" && (
+                <div className="mt-2">
+                  <label className="block text-xs font-medium text-slate-700 mb-1">
+                    Type your unweighted GPA
+                  </label>
+                  <input
+                    type="number"
+                    min={0}
+                    max={4}
+                    step={0.01}
+                    value={academics.customGpa ?? ""}
+                    onChange={(e) => {
+                      const val = e.target.value;
+                      setAcademics((prev) => ({
+                        ...prev,
+                        customGpa:
+                          val === ""
+                            ? null
+                            : Math.min(Math.max(Number(val), 0), 4),
+                      }));
+                    }}
+                    placeholder="e.g. 3.72"
+                    className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  />
+                </div>
+              )}
             </div>
-            {gpaDisplay != null && (
-              <p className="mt-2 text-xs text-slate-600">
-                Your estimated unweighted GPA:{" "}
-                <span className="font-semibold">
-                  {gpaDisplay.toFixed(2)}
-                </span>
-              </p>
-            )}
-
-            <div className="mt-4">
-              <label className="block text-xs font-medium text-slate-700 mb-1">
-                Or type your unweighted GPA
-              </label>
-              <input
-                type="number"
-                min={0}
-                max={4}
-                step={0.01}
-                value={academics.customGpa ?? ""}
-                onChange={(e) => {
-                  const val = e.target.value;
-                  setAcademics((prev) => ({
-                    ...prev,
-                    customGpa:
-                      val === ""
-                        ? null
-                        : Math.min(Math.max(Number(val), 0), 4),
-                  }));
-                }}
-                placeholder="e.g. 3.72"
-                className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              />
-              <p className="mt-1 text-[11px] text-slate-500">
-                This will override the estimated GPA from the grade buttons above.
-              </p>
-            </div>
-          </div>
 
           <div className="grid grid-cols-2 gap-4">
             <div>

@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import type { User } from "@supabase/supabase-js";
 import { supabase } from "../services/supabaseClient";
 import type { Activity } from "../types";
+import { normalizeMajorSelectionList } from "../utils/majors";
 
 export type StudentProfileSummary = {
   firstName?: string;
@@ -183,11 +184,7 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
           : academic.rec_score != null
           ? Number(academic.rec_score)
           : null,
-      majors: Array.isArray(academic.majors)
-        ? (academic.majors as string[]).filter(
-            (m) => typeof m === "string" && m.trim()
-          )
-        : undefined,
+      majors: normalizeMajorSelectionList(academic.majors) ?? undefined,
       activities: Array.isArray(extras) ? (extras as Activity[]) : [],
     };
 
@@ -196,6 +193,11 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
       ...fromDb,
       ...(storedProfile || {}),
     };
+    if (mergedProfile.majors) {
+      mergedProfile.majors =
+        normalizeMajorSelectionList(mergedProfile.majors) ??
+        mergedProfile.majors;
+    }
 
     setStudentProfileState(mergedProfile);
 
@@ -304,6 +306,10 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
     // Merge any overrides into the current student profile (so updates from
     // an individual step are included in the Supabase write).
     const merged: StudentProfileSummary = { ...studentProfile, ...override };
+    if (merged.majors) {
+      merged.majors =
+        normalizeMajorSelectionList(merged.majors) ?? merged.majors;
+    }
     setStudentProfileState(merged);
     saveProfileToStorage(user.id, merged);
     const mergedTargets = overrideTargetIds ?? targetUnitIds;
@@ -312,10 +318,7 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
       saveTargetsToStorage(user.id, overrideTargetIds);
     }
 
-    const majorsClean = merged.majors
-      ?.filter((m) => typeof m === "string" && m.trim())
-      .map((m) => m.trim())
-      .slice(0, 3);
+    const majorsClean = normalizeMajorSelectionList(merged.majors);
 
     const academicStats = {
       first_name: merged.firstName ?? null,
@@ -346,7 +349,11 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
 
   const setStudentProfile = (update: Partial<StudentProfileSummary>) => {
     setStudentProfileState((prev) => {
-      const merged: StudentProfileSummary = { ...prev, ...update };
+    const merged: StudentProfileSummary = { ...prev, ...update };
+    if (merged.majors) {
+      merged.majors =
+        normalizeMajorSelectionList(merged.majors) ?? merged.majors;
+    }
       saveProfileToStorage(user?.id ?? null, merged);
       return merged;
     });

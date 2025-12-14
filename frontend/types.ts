@@ -141,6 +141,64 @@ export interface MajorsMeta {
   six_digit: Record<string, string>;
 }
 
+export interface SuccessApplicationProfile {
+  id: number;
+  createdat: string;
+  year: number;
+  flair: string[];
+  assigned_category?: string | null;
+  tags?: string[] | null;
+  demographics: {
+    gender?: string | null;
+    race_ethnicity?: string | null;
+    intended_major?: string | null;
+    residence?: string | null;
+    income_bracket?: string | null;
+    type_of_school?: string | null;
+    hooks?: string | null;
+  };
+  academics: {
+    sat?: string | number | null;
+    act?: string | number | null;
+    unweighted_gpa?: number | null;
+    weighted_gpa?: number | null;
+    rank?: string | null;
+    number_of_ap_courses?: number | null;
+    number_of_ib_courses?: number | null;
+    number_of_honors_courses?: number | null;
+    ib?: string | null;
+    ap_testing?: string[] | null;
+  };
+  extracurricular_activities: Array<{
+    title: string;
+    description?: string | null;
+  }>;
+  awards?: string[] | null;
+  letters_of_recommendation?: string[] | null;
+  interviews?: string[] | null;
+  decisions: {
+    acceptances: string[];
+    waitlists: string[];
+    rejections: string[];
+  };
+  rating?: {
+    academic_score?: number | null;
+    extracurricular_score?: number | null;
+    awards_score?: number | null;
+    overall_score?: number | null;
+  };
+}
+
+export interface AnonymousEssayEntry {
+  essay_id: number;
+  school: string;
+  year: number;
+  type: string;
+  question?: string | null;
+  essay: string;
+  category: string;
+}
+
 // Admissions / profile review types
 export interface Activity {
   id: string;

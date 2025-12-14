@@ -1,17 +1,29 @@
 import React from "react";
 import type { ReactNode } from "react";
 import { NavLink } from "react-router-dom";
-import { User, ListChecks, Search } from "lucide-react";
+import { User, ListChecks, Search, NotebookPen, FileText } from "lucide-react";
 import { useOnboardingContext } from "../context/OnboardingContext";
 
 type DashboardLayoutProps = {
   children: ReactNode;
 };
 
-const navItems = [
-  { label: "My Profile", to: "/profile/dashboard", icon: User },
-  { label: "My College List", to: "/profile/college-list", icon: ListChecks },
-  { label: "College Search", to: "/explore", icon: Search },
+const navSections = [
+  {
+    label: "My Progress",
+    items: [
+      { label: "My Profile", to: "/profile/dashboard", icon: User },
+      { label: "My College List", to: "/profile/college-list", icon: ListChecks },
+    ],
+  },
+  {
+    label: "Essentials",
+    items: [
+      { label: "Colleges", to: "/profile/colleges", icon: Search },
+      { label: "Applications", to: "/profile/applications", icon: NotebookPen },
+      { label: "Essays", to: "/profile/essays", icon: FileText },
+    ],
+  },
 ];
 
 const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
@@ -28,23 +40,32 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
             Application Tools
           </div>
         </div>
-        <nav className="flex-1 px-2 py-4 space-y-1">
-          {navItems.map(({ label, to, icon: Icon }) => (
-            <NavLink
-              key={to}
-              to={to}
-              className={({ isActive }) =>
-                [
-                  "flex items-center gap-3 px-3 py-2 rounded-md text-sm font-medium transition-colors",
-                  isActive
-                    ? "bg-blue-600 text-white shadow-sm"
-                    : "text-slate-700 hover:bg-slate-100",
-                ].join(" ")
-              }
-            >
-              <Icon className="h-4 w-4" />
-              <span>{label}</span>
-            </NavLink>
+        <nav className="flex-1 px-2 py-4 space-y-4">
+          {navSections.map((section) => (
+            <div key={section.label}>
+              <p className="px-3 text-[11px] uppercase tracking-wide text-slate-400 font-semibold mb-2">
+                {section.label}
+              </p>
+              <div className="space-y-1">
+                {section.items.map(({ label, to, icon: Icon }) => (
+                  <NavLink
+                    key={to}
+                    to={to}
+                    className={({ isActive }) =>
+                      [
+                        "flex items-center gap-3 px-3 py-2 rounded-md text-sm font-medium transition-colors",
+                        isActive
+                          ? "bg-blue-600 text-white shadow-sm"
+                          : "text-slate-700 hover:bg-slate-100",
+                      ].join(" ")
+                    }
+                  >
+                    <Icon className="h-4 w-4" />
+                    <span>{label}</span>
+                  </NavLink>
+                ))}
+              </div>
+            </div>
           ))}
         </nav>
         <div className="px-6 py-4 border-t border-slate-200 text-xs text-slate-600">

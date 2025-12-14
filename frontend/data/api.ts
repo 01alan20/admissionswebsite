@@ -5,6 +5,8 @@ import {
   InstitutionMajorsByInstitution,
   InstitutionDemographics,
   MajorsMeta,
+  SuccessApplicationProfile,
+  AnonymousEssayEntry,
 } from "../types";
 
 export interface InstitutionIndex {
@@ -15,6 +17,7 @@ export interface InstitutionIndex {
 }
 
 const UNIVERSITY_DATA_BASE = "/data/University_data";
+const APPLICANT_DATA_BASE = "/data/Applicant_Data";
 
 const buildDataPath = (base: string, relative: string): string => {
   const rel = relative.startsWith("/") ? relative.slice(1) : relative;
@@ -659,4 +662,16 @@ export async function getInstitutionSummary(unitid: number | string): Promise<In
 export async function getInstitutionsSummariesByIds(ids: Array<number | string>): Promise<Institution[]> {
   const promises = ids.map((id) => getInstitutionSummary(id));
   return Promise.all(promises);
+}
+
+export async function getSuccessProfiles(): Promise<SuccessApplicationProfile[]> {
+  return getJSON<SuccessApplicationProfile[]>(
+    buildDataPath(APPLICANT_DATA_BASE, "history_success_profiles.json")
+  );
+}
+
+export async function getAnonymousEssays(): Promise<AnonymousEssayEntry[]> {
+  return getJSON<AnonymousEssayEntry[]>(
+    buildDataPath(APPLICANT_DATA_BASE, "Anonymous_Essays.json")
+  );
 }
