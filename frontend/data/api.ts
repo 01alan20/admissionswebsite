@@ -14,6 +14,13 @@ export interface InstitutionIndex {
   city: string | null;
 }
 
+const UNIVERSITY_DATA_BASE = "/data/University_data";
+
+const buildDataPath = (base: string, relative: string): string => {
+  const rel = relative.startsWith("/") ? relative.slice(1) : relative;
+  return `${base.replace(/\/$/, "")}/${rel}`;
+};
+
 async function getJSON<T>(path: string): Promise<T> {
   const res = await fetch(path, { cache: "no-store" });
   if (!res.ok) throw new Error(`Failed to fetch ${path}: ${res.status}`);
@@ -85,7 +92,9 @@ let institutionSitesPromise: Promise<Map<number, InstitutionSites>> | null = nul
 async function getInstitutionSitesMap(): Promise<Map<number, InstitutionSites>> {
   if (!institutionSitesPromise) {
     institutionSitesPromise = (async () => {
-      const data = await getJSON<any[]>("/data/institutions.json");
+    const data = await getJSON<any[]>(
+      buildDataPath(UNIVERSITY_DATA_BASE, "institutions.json")
+    );
       const map = new Map<number, InstitutionSites>();
       for (const d of data) {
         const id = Number(d.unitid);
@@ -185,7 +194,10 @@ export async function getUndergradDemographicsMap(): Promise<Map<number, Institu
   if (!undergradDemographicsMapPromise) {
     undergradDemographicsMapPromise = (async () => {
       const map = new Map<number, InstitutionDemographics>();
-      const paths = ["/data/uni_demographics.csv", "/uni_demographics.csv"];
+      const paths = [
+        buildDataPath(UNIVERSITY_DATA_BASE, "uni_demographics.csv"),
+        "/uni_demographics.csv",
+      ];
       let csvText: string | null = null;
 
       for (const path of paths) {
@@ -304,7 +316,10 @@ export async function getLocationTypeMap(): Promise<Map<number, string>> {
         map.set(id, loc);
       };
 
-      const jsonPaths = ["/data/uni_location_size.json", "/uni_location_size.json"];
+        const jsonPaths = [
+          buildDataPath(UNIVERSITY_DATA_BASE, "uni_location_size.json"),
+          "/uni_location_size.json",
+        ];
       for (const path of jsonPaths) {
         try {
           const data = await getJSON<LocationEntry[]>(path);
@@ -318,7 +333,10 @@ export async function getLocationTypeMap(): Promise<Map<number, string>> {
       }
 
       // Fallback to CSV parsing for older deployments
-      const csvPaths = ["/data/uni_location_size.csv", "/uni_location_size.csv"];
+        const csvPaths = [
+          buildDataPath(UNIVERSITY_DATA_BASE, "uni_location_size.csv"),
+          "/uni_location_size.csv",
+        ];
       for (const path of csvPaths) {
         try {
           const text = await getText(path);
@@ -357,7 +375,9 @@ export async function getLocationTypeMap(): Promise<Map<number, string>> {
 export async function getInstitutionTestScoreMap(): Promise<Map<number, InstitutionTestScores>> {
   if (!institutionTestScoreMapPromise) {
     institutionTestScoreMapPromise = (async () => {
-      const rows = await getJSON<any[]>("/data/metrics_by_year.json");
+        const rows = await getJSON<any[]>(
+          buildDataPath(UNIVERSITY_DATA_BASE, "metrics_by_year.json")
+        );
       const latestByUnit = new Map<number, any>();
 
       for (const r of rows) {
@@ -417,7 +437,9 @@ export async function getInstitutionTestScoreMap(): Promise<Map<number, Institut
 }
 
 export async function getAllInstitutions(): Promise<Institution[]> {
-  const data = await getJSON<any[]>("/data/institutions.json");
+  const data = await getJSON<any[]>(
+    buildDataPath(UNIVERSITY_DATA_BASE, "institutions.json")
+  );
   return data.map((d) => {
     const unitid = Number(d.unitid);
     return {
@@ -442,8 +464,12 @@ export async function getAllInstitutions(): Promise<Institution[]> {
   });
 }
 
-export async function getInstitutionDetail(unitid: string | number): Promise<InstitutionDetail> {
-  const detail = await getJSON<any>(`/data/institutions/${unitid}.json`);
+export async function getInstitutionDetail(
+  unitid: string | number
+): Promise<InstitutionDetail> {
+  const detail = await getJSON<any>(
+    buildDataPath(UNIVERSITY_DATA_BASE, `institutions/${unitid}.json`)
+  );
   const profile = detail.profile ?? {};
   const outcomes = profile.outcomes ?? {};
   // Flatten support_notes object to string[] for display compatibility
@@ -515,8 +541,12 @@ export async function getInstitutionDetail(unitid: string | number): Promise<Ins
   } as InstitutionDetail;
 }
 
-export async function getInstitutionMetrics(unitid: string | number): Promise<InstitutionMetrics> {
-  const data = await getJSON<any>(`/data/metrics/${unitid}.json`);
+export async function getInstitutionMetrics(
+  unitid: string | number
+): Promise<InstitutionMetrics> {
+  const data = await getJSON<any>(
+    buildDataPath(UNIVERSITY_DATA_BASE, `metrics/${unitid}.json`)
+  );
   const metrics = Array.isArray(data.metrics) ? data.metrics : [];
   const tuition = Array.isArray(data.tuition) ? data.tuition : [];
   return {
@@ -552,16 +582,22 @@ export async function getInstitutionMetrics(unitid: string | number): Promise<In
 }
 
 export async function getMajorsMeta(): Promise<MajorsMeta> {
-  return getJSON<MajorsMeta>("/data/majors_bachelor_meta.json");
+  return getJSON<MajorsMeta>(
+    buildDataPath(UNIVERSITY_DATA_BASE, "majors_bachelor_meta.json")
+  );
 }
 
 export async function getMajorsByInstitution(): Promise<InstitutionMajorsByInstitution> {
-  return getJSON<InstitutionMajorsByInstitution>("/data/majors_bachelor_by_institution.json");
+  return getJSON<InstitutionMajorsByInstitution>(
+    buildDataPath(UNIVERSITY_DATA_BASE, "majors_bachelor_by_institution.json")
+  );
 }
 
 export async function getInstitutionIndex(): Promise<InstitutionIndex[]> {
   try {
-    const data = await getJSON<InstitutionIndex[]>("/data/institutions_index.json");
+    const data = await getJSON<InstitutionIndex[]>(
+      buildDataPath(UNIVERSITY_DATA_BASE, "institutions_index.json")
+    );
     if (Array.isArray(data) && data.length > 0) {
       return data;
     }
@@ -582,7 +618,9 @@ export async function getInstitutionIndex(): Promise<InstitutionIndex[]> {
 }
 
 export async function getTopUnitIdsByApplicants(limit = 10): Promise<number[]> {
-  const rows = await getJSON<any[]>("/data/metrics_by_year.json");
+  const rows = await getJSON<any[]>(
+    buildDataPath(UNIVERSITY_DATA_BASE, "metrics_by_year.json")
+  );
   const latestByUnit = new Map<number, { year: number; applicants: number }>();
   for (const r of rows) {
     if (r.applicants_total == null) continue;
