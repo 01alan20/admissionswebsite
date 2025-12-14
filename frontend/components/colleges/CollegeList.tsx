@@ -10,12 +10,8 @@ import {
   calculateChances,
   type CollegeMetrics,
 } from "../../lib/admissions";
-import {
-  getAllInstitutions,
-  getInstitutionTestScoreMap,
-} from "../../data/api";
+import { getAllInstitutions, getInstitutionTestScoreMap } from "../../data/api";
 import type { Institution, InstitutionTestScores } from "../../types";
-import { getTwoDigitPrefix } from "../../utils/majors";
 
 type CollegeRow = {
   unitid: number;
@@ -155,20 +151,12 @@ const buildRowForInstitution = (
 const buildRecommendedRows = async (
   stats: AcademicStats,
   homeState: string | null,
-  userMajors: string[] | undefined,
   desiredCount = 20
 ): Promise<CollegeRow[]> => {
   const [allInstitutions, testScoreMap] = await Promise.all([
     getAllInstitutions(),
     getInstitutionTestScoreMap(),
   ]);
-
-  const majorPrefixes = new Set(
-    (userMajors || [])
-      .map((m) => getTwoDigitPrefix(m))
-      .filter((prefix): prefix is string => Boolean(prefix))
-  );
-
   const scoreInstitution = (inst: Institution): {
     unitid: number;
     chance: AdmissionCategory;
@@ -190,13 +178,7 @@ const buildRecommendedRows = async (
       !!homeState &&
       typeof inst.state === "string" &&
       inst.state.toUpperCase() === homeState.toUpperCase();
-    const majorMatch =
-      majorPrefixes.size > 0 &&
-      Array.isArray(inst.majors_cip_two_digit) &&
-      inst.majors_cip_two_digit.some((code) =>
-        majorPrefixes.has(String(code).slice(0, 2))
-      );
-    return { unitid: inst.unitid, chance, isSameState, majorMatch };
+    return { unitid: inst.unitid, chance, isSameState, majorMatch: false };
   };
 
   const safety: number[] = [];
@@ -305,7 +287,9 @@ const CollegeList: React.FC = () => {
 
   useEffect(() => {
     if (!user) {
+      setRows([]);
       setLoading(false);
+      setError(null);
       return;
     }
     let cancelled = false;
@@ -325,11 +309,25 @@ const CollegeList: React.FC = () => {
           demo.location_state && String(demo.location_state).trim()
             ? String(demo.location_state).toUpperCase()
             : null;
-        const stats = normalizeAcademicStats(profile?.academic_stats);
+
+        const studentSatTotal =
+          studentProfile.satMath != null && studentProfile.satEBRW != null
+            ? Number(studentProfile.satMath) + Number(studentProfile.satEBRW)
+            : null;
+
+        const fallbackStats = {
+          gpa: studentProfile.gpa ?? null,
+          sat: studentSatTotal,
+          act: studentProfile.actComposite ?? null,
+        };
+
+        const stats = normalizeAcademicStats(
+          profile?.academic_stats ?? fallbackStats
+        );
+
         const recommendedRows = await buildRecommendedRows(
           stats,
           homeState,
-          studentProfile.majors,
           20
         );
 
@@ -341,9 +339,7 @@ const CollegeList: React.FC = () => {
             homeState,
             targetUnitIds
           );
-          const recommendedIds = new Set(
-            recommendedRows.map((r) => r.unitid)
-          );
+          const recommendedIds = new Set(recommendedRows.map((r) => r.unitid));
           const extraTargetRows = targetRows.filter(
             (row) => !recommendedIds.has(row.unitid)
           );
@@ -372,7 +368,14 @@ const CollegeList: React.FC = () => {
     return () => {
       cancelled = true;
     };
-  }, [user?.id, targetUnitIds]);
+  }, [
+    user?.id,
+    targetUnitIds,
+    studentProfile.gpa,
+    studentProfile.satMath,
+    studentProfile.satEBRW,
+    studentProfile.actComposite,
+  ]);
 
   const handleDownload = () => {
     if (!rows.length) return;
@@ -523,7 +526,7 @@ const CollegeList: React.FC = () => {
                   <td className="px-4 py-2 whitespace-nowrap text-slate-600">
                     {[row.city, row.state]
                       .filter(Boolean)
-                      .join(", ") || "—"}
+                      .join(", ") || "N/A"}
                   </td>
                   <td className="px-4 py-2 whitespace-nowrap text-right text-slate-700">
                     {row.acceptanceRate != null
@@ -555,3 +558,122 @@ const CollegeList: React.FC = () => {
 };
 
 export default CollegeList;
+const sortByApplicants = (institutions: Institution[], applicantsMap: Map<number, number>): Institution[] => {
+  return institutions
+    .slice()
+    .sort((a, b) => {
+      const aApps = applicantsMap.get(a.unitid) ?? -1;
+      const bApps = applicantsMap.get(b.unitid) ?? -1;
+      if (aApps !== bApps) return bApps - aApps;
+      return (b.acceptance_rate ?? 0) - (a.acceptance_rate ?? 0);
+    });
+};
+
+const buildLocationFallbackRows = async (
+  stats: AcademicStats,
+  homeState: string | null,
+  userMajors: string[] | undefined,
+  desiredCount = 20
+): Promise<CollegeRow[]> => {
+  const [allInstitutions, testScoreMap, applicantsMap] = await Promise.all([
+    getAllInstitutions(),
+    getInstitutionTestScoreMap(),
+    getLatestApplicantsMap(),
+  ]);
+
+  const majorPrefixes = new Set(
+    (userMajors || [])
+      .map((m) => getTwoDigitPrefix(m))
+      .filter((v): v is string => Boolean(v))
+  );
+
+  const isMajorMatch = (inst: Institution) =>
+    majorPrefixes.size > 0 &&
+    Array.isArray(inst.majors_cip_two_digit) &&
+    inst.majors_cip_two_digit.some((code) => majorPrefixes.has(String(code).slice(0, 2)));
+
+  const pool = homeState
+    ? allInstitutions.filter(
+        (inst) =>
+          typeof inst.state === "string" &&
+          inst.state.toUpperCase() === homeState.toUpperCase()
+      )
+    : allInstitutions.slice();
+
+  const sorted = sortByApplicants(pool, applicantsMap);
+  const majorFirst = sorted.filter(isMajorMatch);
+  const remainder = sorted.filter((inst) => !isMajorMatch(inst));
+  const finalList = [...majorFirst, ...remainder].slice(0, desiredCount);
+
+  const rows = finalList
+    .map((inst) => {
+      const scores = testScoreMap.get(inst.unitid);
+      return buildRowForInstitution(inst, scores, stats, homeState);
+    })
+    .filter((row): row is CollegeRow => row != null);
+
+  return rows;
+};
+
+const buildInternationalRows = async (
+  stats: AcademicStats,
+  userMajors: string[] | undefined,
+  desiredCount = 20
+): Promise<CollegeRow[]> => {
+  const [allInstitutions, testScoreMap, applicantsMap, topApplicants] = await Promise.all([
+    getAllInstitutions(),
+    getInstitutionTestScoreMap(),
+    getLatestApplicantsMap(),
+    getTopUnitIdsByApplicants(100),
+  ]);
+
+  const majorPrefixes = new Set(
+    (userMajors || [])
+      .map((m) => getTwoDigitPrefix(m))
+      .filter((v): v is string => Boolean(v))
+  );
+
+  const isMajorMatch = (inst: Institution) =>
+    majorPrefixes.size === 0
+      ? true
+      : Array.isArray(inst.majors_cip_two_digit) &&
+        inst.majors_cip_two_digit.some((code) => majorPrefixes.has(String(code).slice(0, 2)));
+
+  const topApplicantInsts = topApplicants
+    .map((id) => allInstitutions.find((i) => i.unitid === id))
+    .filter((v): v is Institution => !!v)
+    .filter(isMajorMatch)
+    .slice(0, 5);
+
+  const topIntlInsts = allInstitutions
+    .filter((i) => i.intl_enrollment_pct != null)
+    .sort((a, b) => (b.intl_enrollment_pct ?? 0) - (a.intl_enrollment_pct ?? 0))
+    .filter(isMajorMatch)
+    .slice(0, 5);
+
+  const majorRelevant = allInstitutions
+    .filter(isMajorMatch)
+    .filter((i) => i.level === "4-year")
+    .filter((i) => !topApplicantInsts.includes(i) && !topIntlInsts.includes(i));
+
+  const majorRelevantSorted = sortByApplicants(majorRelevant, applicantsMap).slice(0, 10);
+
+  const combined = [...topApplicantInsts, ...topIntlInsts, ...majorRelevantSorted];
+  const seen = new Set<number>();
+  const finalList: Institution[] = [];
+  for (const inst of combined) {
+    if (seen.has(inst.unitid)) continue;
+    seen.add(inst.unitid);
+    finalList.push(inst);
+    if (finalList.length >= desiredCount) break;
+  }
+
+  const rows = finalList
+    .map((inst) => {
+      const scores = testScoreMap.get(inst.unitid);
+      return buildRowForInstitution(inst, scores, stats, null);
+    })
+    .filter((row): row is CollegeRow => row != null);
+
+  return rows;
+};

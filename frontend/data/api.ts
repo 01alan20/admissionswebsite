@@ -36,6 +36,14 @@ async function getText(path: string): Promise<string> {
   return res.text();
 }
 
+const normalizeExternalUrl = (value: string | null | undefined): string | null => {
+  const raw = (value ?? "").trim();
+  if (!raw) return null;
+  if (/^https?:\/\//i.test(raw)) return raw;
+  if (raw.startsWith("//")) return `https:${raw}`;
+  return `https://${raw}`;
+};
+
 // Map acceptance/yield ints (0-100) to decimals (0-1)
 function pctToDecimal(value: number | null | undefined): number | null {
   if (value === null || value === undefined) return null;
@@ -192,6 +200,12 @@ const DEMOGRAPHIC_COLUMNS: DemographicColumn[] = [
 ];
 
 let undergradDemographicsMapPromise: Promise<Map<number, InstitutionDemographics>> | null = null;
+let applicantsMapPromise: Promise<Map<number, number>> | null = null;
+let locationTypeMapPromise: Promise<Map<number, string>> | null = null;
+let institutionTestScoreMapPromise: Promise<Map<number, InstitutionTestScores>> | null = null;
+let allInstitutionsPromise: Promise<Institution[]> | null = null;
+let institutionIndexPromise: Promise<InstitutionIndex[]> | null = null;
+let topApplicantsPromise: Promise<number[]> | null = null;
 
 export async function getUndergradDemographicsMap(): Promise<Map<number, InstitutionDemographics>> {
   if (!undergradDemographicsMapPromise) {
@@ -304,8 +318,33 @@ export async function getInstitutionDemographics(
   return map.get(id) ?? null;
 }
 
-let locationTypeMapPromise: Promise<Map<number, string>> | null = null;
-let institutionTestScoreMapPromise: Promise<Map<number, InstitutionTestScores>> | null = null;
+export async function getLatestApplicantsMap(): Promise<Map<number, number>> {
+  if (!applicantsMapPromise) {
+    applicantsMapPromise = (async () => {
+      const rows = await getJSON<any[]>(
+        buildDataPath(UNIVERSITY_DATA_BASE, "metrics_by_year.json")
+      );
+      const latestByUnit = new Map<number, { year: number; applicants: number }>();
+      for (const r of rows) {
+        if (r.applicants_total == null) continue;
+        const u = Number(r.unitid);
+        const y = Number(r.year);
+        const a = Number(r.applicants_total);
+        if (!Number.isFinite(u) || !Number.isFinite(y) || !Number.isFinite(a)) continue;
+        const existing = latestByUnit.get(u);
+        if (!existing || y > existing.year) {
+          latestByUnit.set(u, { year: y, applicants: a });
+        }
+      }
+      const map = new Map<number, number>();
+      for (const [unitid, { applicants }] of latestByUnit.entries()) {
+        map.set(unitid, applicants);
+      }
+      return map;
+    })();
+  }
+  return applicantsMapPromise;
+}
 
 export async function getLocationTypeMap(): Promise<Map<number, string>> {
   if (!locationTypeMapPromise) {
@@ -440,31 +479,36 @@ export async function getInstitutionTestScoreMap(): Promise<Map<number, Institut
 }
 
 export async function getAllInstitutions(): Promise<Institution[]> {
-  const data = await getJSON<any[]>(
-    buildDataPath(UNIVERSITY_DATA_BASE, "institutions.json")
-  );
-  return data.map((d) => {
-    const unitid = Number(d.unitid);
-    return {
-      unitid,
-      name: d.name,
-      city: d.city,
-      state: d.state,
-      control: d.control,
-      level: d.level,
-      acceptance_rate: pctToDecimal(d.acceptance_rate),
-      yield: pctToDecimal(d.yield),
-      test_policy: normalizeTestPolicy(unitid, d.test_policy),
-      major_families: Array.isArray(d.major_families) ? d.major_families : [],
-      majors_cip_two_digit: Array.isArray(d.majors_cip_two_digit) ? d.majors_cip_two_digit : undefined,
-      majors_cip_four_digit: Array.isArray(d.majors_cip_four_digit) ? d.majors_cip_four_digit : undefined,
-      majors_cip_six_digit: Array.isArray(d.majors_cip_six_digit) ? d.majors_cip_six_digit : undefined,
-      tuition_2023_24_in_state: d.tuition_2023_24_in_state ?? undefined,
-      tuition_2023_24_out_of_state: d.tuition_2023_24_out_of_state ?? undefined,
-      tuition_2023_24: d.tuition_2023_24 ?? undefined,
-      intl_enrollment_pct: pctToDecimal(d.intl_enrollment_pct),
-    };
-  });
+  if (!allInstitutionsPromise) {
+    allInstitutionsPromise = (async () => {
+      const data = await getJSON<any[]>(
+        buildDataPath(UNIVERSITY_DATA_BASE, "institutions.json")
+      );
+      return data.map((d) => {
+        const unitid = Number(d.unitid);
+        return {
+          unitid,
+          name: d.name,
+          city: d.city,
+          state: d.state,
+          control: d.control,
+          level: d.level,
+          acceptance_rate: pctToDecimal(d.acceptance_rate),
+          yield: pctToDecimal(d.yield),
+          test_policy: normalizeTestPolicy(unitid, d.test_policy),
+          major_families: Array.isArray(d.major_families) ? d.major_families : [],
+          majors_cip_two_digit: Array.isArray(d.majors_cip_two_digit) ? d.majors_cip_two_digit : undefined,
+          majors_cip_four_digit: Array.isArray(d.majors_cip_four_digit) ? d.majors_cip_four_digit : undefined,
+          majors_cip_six_digit: Array.isArray(d.majors_cip_six_digit) ? d.majors_cip_six_digit : undefined,
+          tuition_2023_24_in_state: d.tuition_2023_24_in_state ?? undefined,
+          tuition_2023_24_out_of_state: d.tuition_2023_24_out_of_state ?? undefined,
+          tuition_2023_24: d.tuition_2023_24 ?? undefined,
+          intl_enrollment_pct: pctToDecimal(d.intl_enrollment_pct),
+        } as Institution;
+      });
+    })();
+  }
+  return allInstitutionsPromise;
 }
 
 export async function getInstitutionDetail(
@@ -519,9 +563,9 @@ export async function getInstitutionDetail(
       control: profile.control,
       level: profile.level,
       carnegie_basic: profile.carnegie_basic,
-      website: website ?? "",
-      admissions_url: admissions_url ?? null,
-      financial_aid_url: financial_aid_url ?? null,
+      website: normalizeExternalUrl(website) ?? "",
+      admissions_url: normalizeExternalUrl(admissions_url),
+      financial_aid_url: normalizeExternalUrl(financial_aid_url),
       test_policy: testPolicy,
       major_families: Array.isArray(profile.major_families) ? profile.major_families : [],
       intl_enrollment_pct: pctToDecimal(profile.intl_enrollment_pct),
@@ -597,45 +641,53 @@ export async function getMajorsByInstitution(): Promise<InstitutionMajorsByInsti
 }
 
 export async function getInstitutionIndex(): Promise<InstitutionIndex[]> {
-  try {
-    const data = await getJSON<InstitutionIndex[]>(
-      buildDataPath(UNIVERSITY_DATA_BASE, "institutions_index.json")
-    );
-    if (Array.isArray(data) && data.length > 0) {
-      return data;
-    }
-  } catch {
-    // Fall through to synthesize from full institutions.
-  }
+  if (!institutionIndexPromise) {
+    institutionIndexPromise = (async () => {
+      try {
+        const data = await getJSON<InstitutionIndex[]>(
+          buildDataPath(UNIVERSITY_DATA_BASE, "institutions_index.json")
+        );
+        if (Array.isArray(data) && data.length > 0) {
+          return data;
+        }
+      } catch {
+        // Fall through to synthesize from full institutions.
+      }
 
-  // Fallback: build a minimal index from the full institutions list so that
-  // search and onboarding still work even if the compact index file is missing
-  // or fails to load in production.
-  const all = await getAllInstitutions();
-  return all.map((d) => ({
-    unitid: d.unitid,
-    name: d.name,
-    city: d.city,
-    state: d.state,
-  }));
+      const all = await getAllInstitutions();
+      return all.map((d) => ({
+        unitid: d.unitid,
+        name: d.name,
+        city: d.city,
+        state: d.state,
+      }));
+    })();
+  }
+  return institutionIndexPromise;
 }
 
 export async function getTopUnitIdsByApplicants(limit = 10): Promise<number[]> {
-  const rows = await getJSON<any[]>(
-    buildDataPath(UNIVERSITY_DATA_BASE, "metrics_by_year.json")
-  );
-  const latestByUnit = new Map<number, { year: number; applicants: number }>();
-  for (const r of rows) {
-    if (r.applicants_total == null) continue;
-    const u = Number(r.unitid);
-    const y = Number(r.year);
-    const existing = latestByUnit.get(u);
-    if (!existing || y > existing.year) {
-      latestByUnit.set(u, { year: y, applicants: Number(r.applicants_total) });
-    }
+  if (!topApplicantsPromise) {
+    topApplicantsPromise = (async () => {
+      const rows = await getJSON<any[]>(
+        buildDataPath(UNIVERSITY_DATA_BASE, "metrics_by_year.json")
+      );
+      const latestByUnit = new Map<number, { year: number; applicants: number }>();
+      for (const r of rows) {
+        if (r.applicants_total == null) continue;
+        const u = Number(r.unitid);
+        const y = Number(r.year);
+        const existing = latestByUnit.get(u);
+        if (!existing || y > existing.year) {
+          latestByUnit.set(u, { year: y, applicants: Number(r.applicants_total) });
+        }
+      }
+      const sorted = [...latestByUnit.entries()].sort((a, b) => b[1].applicants - a[1].applicants);
+      return sorted.map(([unitid]) => unitid);
+    })();
   }
-  const sorted = [...latestByUnit.entries()].sort((a, b) => b[1].applicants - a[1].applicants);
-  return sorted.slice(0, limit).map(([unitid]) => unitid);
+  const all = await topApplicantsPromise;
+  return all.slice(0, limit);
 }
 
 export async function getInstitutionSummary(unitid: number | string): Promise<Institution> {

@@ -136,12 +136,12 @@ const DemographicsDonut: React.FC<{ groups: DemographicGroupSlice[] }> = ({ grou
           aria-label="Demographic distribution"
         >
           <div className="w-16 h-16 bg-white rounded-full m-auto relative top-8 shadow-inner flex items-center justify-center text-xs font-semibold text-gray-700">
-            {totalPct ? `${Math.min(100, totalPct).toFixed(0)}%` : '—'}
+            {totalPct ? `${Math.min(100, totalPct).toFixed(0)}%` : 'N/A'}
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 text-sm text-gray-800">
           {groups.map((g) => {
-            const label = g.percent != null ? (g.percent >= 10 ? g.percent.toFixed(0) : g.percent.toFixed(1)) : '—';
+            const label = g.percent != null ? (g.percent >= 10 ? g.percent.toFixed(0) : g.percent.toFixed(1)) : 'N/A';
             return (
               <div key={g.key} className="flex items-center gap-2">
                 <span className="h-3 w-3 rounded-sm border border-gray-200" style={{ backgroundColor: g.color }}></span>
@@ -151,16 +151,6 @@ const DemographicsDonut: React.FC<{ groups: DemographicGroupSlice[] }> = ({ grou
             );
           })}
         </div>
-      </div>
-
-      <div className="flex justify-center">
-        <button
-          type="button"
-          onClick={addToTargets}
-          className="inline-flex items-center gap-2 rounded-lg bg-brand-secondary px-5 py-2.5 text-white text-sm font-semibold shadow-sm hover:bg-brand-primary transition"
-        >
-          Add to My Target Schools
-        </button>
       </div>
     </div>
   );
@@ -234,23 +224,29 @@ const DetailPage: React.FC = () => {
     })();
   }, []);
 
-  if (loading) return <div className="text-center p-10">Loading university details...</div>;
-  if (error) return <div className="text-center p-10 text-red-500">Error: {error}</div>;
-  if (!detail) return <div className="text-center p-10">University not found.</div>;
+  const profile = detail?.profile ?? null;
+  const latestMetric = useMemo(() => {
+    if (!metrics?.metrics || !metrics.metrics.length) return null;
+    return [...metrics.metrics].slice().sort((a, b) => b.year - a.year)[0];
+  }, [metrics]);
 
-  const profile = detail.profile;
-  const latestMetric = metrics?.metrics && metrics.metrics.length
-    ? [...metrics.metrics].sort((a, b) => b.year - a.year)[0]
-    : null;
+  const required = Array.isArray(detail?.requirements?.required) ? detail!.requirements!.required : [];
+  const considered = Array.isArray(detail?.requirements?.considered) ? detail!.requirements!.considered : [];
+  const notConsidered = Array.isArray(detail?.requirements?.not_considered)
+    ? detail!.requirements!.not_considered
+    : [];
 
-  const applicants = latestMetric?.applicants_total;
-  const admitted = latestMetric?.admissions_total ?? latestMetric?.admitted_est;
-  const enrolled = latestMetric?.enrolled_total ?? latestMetric?.enrolled_est;
-  const admittedRate = applicants && admitted ? admitted / applicants : profile.outcomes.acceptance_rate ?? 0;
-  const yieldRate = admitted && enrolled ? enrolled / admitted : profile.outcomes.yield ?? 0;
+  const applicants = latestMetric?.applicants_total ?? null;
+  const admitted = latestMetric?.admissions_total ?? latestMetric?.admitted_est ?? null;
+  const enrolled = latestMetric?.enrolled_total ?? latestMetric?.enrolled_est ?? null;
 
-  const majorsTree = (() => {
-    if (!majorsMeta || !majorsByInstitution) return [];
+  const admittedRate =
+    applicants && admitted ? admitted / applicants : profile?.outcomes.acceptance_rate ?? 0;
+  const yieldRate =
+    admitted && enrolled ? enrolled / admitted : profile?.outcomes.yield ?? 0;
+
+  const majorsTree = useMemo(() => {
+    if (!majorsMeta || !majorsByInstitution || !profile) return [];
     const key = String(profile.unitid);
     const inst = majorsByInstitution[key];
     if (!inst) return [];
@@ -282,7 +278,7 @@ const DetailPage: React.FC = () => {
         return { code: two, title, fours };
       })
       .filter((node) => node.fours.length > 0);
-  })();
+  }, [majorsMeta, majorsByInstitution, profile]);
 
   const percentByKey = useMemo(() => {
     const map = new Map<string, number>();
@@ -318,7 +314,12 @@ const DetailPage: React.FC = () => {
     setTargetUnitIds(next);
   };
 
-  return (
+  if (loading) return <div className="text-center p-10">Loading university details...</div>;
+  if (error) return <div className="text-center p-10 text-red-500">Error: {error}</div>;
+  if (!detail || !profile) return <div className="text-center p-10">University not found.</div>;
+
+  try {
+    return (
     <div className="space-y-6">
       <Link
         to="/explore"
@@ -453,24 +454,24 @@ const DetailPage: React.FC = () => {
               <div>
                 <h4 className="font-semibold text-gray-800 border-b pb-1 mb-2">Required:</h4>
                 <ul className="space-y-1 list-inside list-disc text-gray-700">
-                  {detail.requirements.required.map((r) => (
-                    <li key={r}>{r}</li>
+                  {required.map((r, idx) => (
+                    <li key={`${r}-${idx}`}>{r}</li>
                   ))}
                 </ul>
               </div>
               <div>
                 <h4 className="font-semibold text-gray-800 border-b pb-1 mb-2">Considered:</h4>
                 <ul className="space-y-1 list-inside list-disc text-gray-700">
-                  {detail.requirements.considered.map((r) => (
-                    <li key={r}>{r}</li>
+                  {considered.map((r, idx) => (
+                    <li key={`${r}-${idx}`}>{r}</li>
                   ))}
                 </ul>
               </div>
               <div>
                 <h4 className="font-semibold text-gray-800 border-b pb-1 mb-2">Not Considered:</h4>
                 <ul className="space-y-1 list-inside list-disc text-gray-700">
-                  {detail.requirements.not_considered.map((r) => (
-                    <li key={r}>{r}</li>
+                  {notConsidered.map((r, idx) => (
+                    <li key={`${r}-${idx}`}>{r}</li>
                   ))}
                 </ul>
               </div>
@@ -665,13 +666,31 @@ const DetailPage: React.FC = () => {
             </ul>
             <p className="text-xs text-gray-500 mt-3">
               Always confirm visa requirements, scholarship forms, and exact deadlines on the official admissions and
-              financial aid sites—dates vary by program and citizenship.
+              financial aid sites; dates vary by program and citizenship.
             </p>
           </div>
         </aside>
       </div>
+
+      <div className="flex justify-center">
+        <button
+          type="button"
+          onClick={addToTargets}
+          className="inline-flex items-center gap-2 rounded-lg bg-brand-secondary px-5 py-2.5 text-white text-sm font-semibold shadow-sm hover:bg-brand-primary transition"
+        >
+          Add to My Target Schools
+        </button>
+      </div>
     </div>
   );
+  } catch (err) {
+    console.error("Failed to render institution detail", err);
+    return (
+      <div className="text-center p-10 text-red-600">
+        Unable to render this institution page. Please refresh or try a different school.
+      </div>
+    );
+  }
 };
 
 export default DetailPage;

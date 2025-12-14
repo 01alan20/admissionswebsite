@@ -203,16 +203,6 @@ const EssaysPage: React.FC = () => {
         ) : (
           <section className="space-y-4">
             <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
-              <div>
-                <h2 className="text-3xl font-bold text-slate-900">
-                  {view === "similar" ? "Essays Like You" : "Essays"}
-                </h2>
-                <p className="text-sm text-slate-600">
-                  {view === "similar"
-                    ? "Essays matched to your background."
-                    : "Browse successful essays from diverse schools and prompts."}
-                </p>
-              </div>
               <div className="flex gap-2">
                 <button
                   className="px-4 py-2 rounded-full border border-slate-200 text-sm text-slate-600 bg-white"
@@ -401,7 +391,7 @@ const ToggleChip: React.FC<{
 );
 
 const Tag: React.FC<{ label: React.ReactNode; color: string }> = ({ label, color }) => (
-  <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold ${color}`}>
+  <span className={`inline-flex items-center px-4 py-1.5 rounded-full text-sm font-semibold ${color}`}>
     {label}
   </span>
 );

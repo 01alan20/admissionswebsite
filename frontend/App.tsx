@@ -24,6 +24,7 @@ import MyCollegeListPage from './pages/MyCollegeListPage';
 import ProfileCollegesPage from './pages/ProfileCollegesPage';
 import ApplicationsPage from './pages/ApplicationsPage';
 import EssaysPage from './pages/EssaysPage';
+import ErrorBoundary from './components/ErrorBoundary';
 import { OnboardingProvider, useOnboardingContext } from './context/OnboardingContext';
 import ContactHelpPage from './pages/ContactHelpPage';
 import FaqPage from './pages/FaqPage';
@@ -195,7 +196,8 @@ const AppRoutes: React.FC = () => {
 
   return (
     <main className={mainClassName}>
-      <Routes>
+      <ErrorBoundary key={location.key}>
+        <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/explore" element={<ExplorePage />} />
         <Route path="/compare" element={<ComparePage />} />
@@ -221,7 +223,8 @@ const AppRoutes: React.FC = () => {
         <Route path="/profile/applications" element={<ApplicationsPage />} />
         <Route path="/profile/essays" element={<EssaysPage />} />
         <Route path="/profile/dashboard" element={<ProfileDashboardPage />} />
-      </Routes>
+        </Routes>
+      </ErrorBoundary>
     </main>
   );
 };

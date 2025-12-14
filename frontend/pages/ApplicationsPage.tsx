@@ -143,12 +143,6 @@ const ApplicationsPage: React.FC = () => {
         ) : (
           <section className="space-y-4">
             <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
-              <div>
-                <h2 className="text-3xl font-bold text-slate-900">Applications</h2>
-                <p className="text-sm text-slate-600">
-                  Explore successful applications tailored to your profile.
-                </p>
-              </div>
               <div className="flex gap-2">
                 <button
                   type="button"
@@ -261,25 +255,14 @@ const ApplicationDetail: React.FC<{
       <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-6 space-y-4">
         <div className="flex flex-wrap items-center gap-3">
           <h3 className="text-xl font-bold text-slate-900">Overview</h3>
-          <div className="flex flex-wrap gap-2">
-            {entry.flair?.map((tag) => (
-              <span key={tag} className="px-3 py-1 rounded-full bg-slate-100 text-slate-600 text-xs font-semibold">
-                {tag}
-              </span>
-            ))}
-          </div>
         </div>
-        <div className="flex flex-wrap gap-2 text-base">
+        <div className="flex flex-wrap gap-3 text-base">
           <Pill label="GPA" value={gpaDisplay != null ? gpaDisplay.toFixed(2) : "N/A"} color="bg-emerald-50 text-emerald-800 border border-emerald-200" />
           <Pill label="SAT" value={satDisplay != null ? satDisplay : "N/A"} color="bg-blue-50 text-blue-800 border border-blue-200" />
           <Pill label="ACT" value={actDisplay != null ? actDisplay : "N/A"} color="bg-indigo-50 text-indigo-800 border border-indigo-200" />
           <Pill label="Major Family" value={majorCategory} color="bg-amber-50 text-amber-800 border border-amber-200" />
         </div>
         <dl className="grid gap-4 grid-cols-2 md:grid-cols-3 text-base text-slate-800">
-          <div>
-            <dt className="font-semibold">Major Category</dt>
-            <dd>{majorCategory}</dd>
-          </div>
           <div>
             <dt className="font-semibold">Intended Major</dt>
             <dd>{intendedMajor}</dd>
@@ -368,10 +351,10 @@ const Pill: React.FC<{ label: string; value: React.ReactNode; color: string }> =
   color,
 }) => (
   <span
-    className={`inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold ${color}`}
+    className={`inline-flex items-center gap-3 px-4 py-1.5 rounded-full text-sm font-semibold ${color}`}
   >
-    <span className="uppercase tracking-wide text-[10px]">{label}</span>
-    <span>{value}</span>
+    <span className="uppercase tracking-wide text-[11px]">{label}</span>
+    <span className="text-base">{value}</span>
   </span>
 );
 
