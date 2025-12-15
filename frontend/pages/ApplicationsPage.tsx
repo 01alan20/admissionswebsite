@@ -6,11 +6,26 @@ import { Database, Users } from "lucide-react";
 import {
   getSuccessProfiles,
   getInstitutionsSummariesByIds,
+  getMajorsMeta,
 } from "../data/api";
 import type { SuccessApplicationProfile } from "../types";
 import { extractMajorLabel } from "../utils/majors";
+import {
+  buildMajorsIndex,
+  mapApplicationIntendedMajor,
+  mapApplicationMajorFamily,
+  type MajorsIndex,
+} from "../utils/majorCipMapping";
 
 type ViewMode = "menu" | "all" | "similar";
+type EnrichedEntry = {
+  data: SuccessApplicationProfile;
+  similarity: number;
+  majorFamilyLabel: string;
+  majorFamilyCode: string | null;
+  intendedMajorLabel: string;
+  intendedMajorCode: string | null;
+};
 
 const ApplicationsPage: React.FC = () => {
   const loadingGuard = useOnboardingGuard(9);
@@ -19,6 +34,8 @@ const ApplicationsPage: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [applications, setApplications] = useState<SuccessApplicationProfile[]>([]);
+  const [majorsIndex, setMajorsIndex] = useState<MajorsIndex | null>(null);
+  const [majorsMeta, setMajorsMeta] = useState<any | null>(null);
   const [selectedId, setSelectedId] = useState<number | null>(null);
   const [targetSchools, setTargetSchools] = useState<string[]>([]);
 
@@ -26,9 +43,11 @@ const ApplicationsPage: React.FC = () => {
     let cancelled = false;
     (async () => {
       try {
-        const data = await getSuccessProfiles();
+        const [data, meta] = await Promise.all([getSuccessProfiles(), getMajorsMeta()]);
         if (!cancelled) {
           setApplications(data);
+          setMajorsMeta(meta);
+          setMajorsIndex(buildMajorsIndex(meta));
           setError(null);
         }
       } catch {
@@ -66,15 +85,38 @@ const ApplicationsPage: React.FC = () => {
   }, [targetUnitIds]);
 
   const enrichedApplications = useMemo(() => {
-    return applications.map((app) => ({
-      data: app,
-      similarity: calculateApplicationSimilarity(
-        app,
-        studentProfile,
-        targetSchools
-      ),
-    }));
-  }, [applications, studentProfile, targetSchools]);
+    if (!majorsIndex || !majorsMeta) {
+      return applications.map((app) => ({
+        data: app,
+        similarity: calculateApplicationSimilarity(app, studentProfile, targetSchools, null),
+        majorFamilyLabel: app.assigned_category || "Not specified",
+        majorFamilyCode: null,
+        intendedMajorLabel: app.demographics?.intended_major || "Not specified",
+        intendedMajorCode: null,
+      })) as EnrichedEntry[];
+    }
+
+    return applications.map((app) => {
+      const family = mapApplicationMajorFamily(app.assigned_category, majorsMeta, majorsIndex);
+      const intended = mapApplicationIntendedMajor(app.demographics?.intended_major, majorsIndex);
+      const majorFamilyLabel = family?.label ?? app.assigned_category ?? "Not specified";
+      const majorFamilyCode = family?.code ?? null;
+      const intendedMajorLabel = intended?.label ?? app.demographics?.intended_major ?? "Not specified";
+      const intendedMajorCode = intended?.code ?? null;
+
+      return {
+        data: app,
+        similarity: calculateApplicationSimilarity(app, studentProfile, targetSchools, {
+          majorFamilyCode,
+          intendedMajorCode,
+        }),
+        majorFamilyLabel,
+        majorFamilyCode,
+        intendedMajorLabel,
+        intendedMajorCode,
+      } satisfies EnrichedEntry;
+    });
+  }, [applications, studentProfile, targetSchools, majorsIndex, majorsMeta]);
 
   const randomApplications = useMemo(() => {
     return pickRandomSubset(enrichedApplications, 10);
@@ -175,13 +217,13 @@ const ApplicationsPage: React.FC = () => {
                           : "border-slate-200 bg-white hover:border-slate-300"
                       }`}
                     >
-                      <div className="flex items-center justify-between text-xs text-slate-500 uppercase">
-                        <span>{entry.data.year}</span>
-                        <span>{entry.data.assigned_category || "General"}</span>
-                      </div>
-                      <div className="mt-2 text-base font-semibold text-slate-900">
-                        {entry.data.demographics.intended_major || "Undeclared"}
-                      </div>
+                       <div className="flex items-center justify-between text-xs text-slate-500 uppercase">
+                         <span>{entry.data.year}</span>
+                        <span>{entry.majorFamilyLabel || "General"}</span>
+                       </div>
+                       <div className="mt-2 text-base font-semibold text-slate-900">
+                        {entry.intendedMajorLabel || "Undeclared"}
+                       </div>
                       <p className="mt-1 text-sm text-slate-600 line-clamp-2">
                         {(entry.data.extracurricular_activities[0]?.title ||
                           entry.data.demographics.residence ||
@@ -199,6 +241,8 @@ const ApplicationsPage: React.FC = () => {
                   <ApplicationDetail
                     entry={selected.data}
                     similarity={view === "similar" ? selected.similarity : null}
+                    majorFamilyLabel={selected.majorFamilyLabel}
+                    intendedMajorLabel={selected.intendedMajorLabel}
                   />
                 )}
               </div>
@@ -238,7 +282,9 @@ const ExperienceCard: React.FC<{
 const ApplicationDetail: React.FC<{
   entry: SuccessApplicationProfile;
   similarity: number | null;
-}> = ({ entry, similarity }) => {
+  majorFamilyLabel: string;
+  intendedMajorLabel: string;
+}> = ({ entry, similarity, majorFamilyLabel, intendedMajorLabel }) => {
   const academic = entry.academics;
   const demographics = entry.demographics;
   const decisions = entry.decisions || { acceptances: [], rejections: [], waitlists: [] };
@@ -247,8 +293,8 @@ const ApplicationDetail: React.FC<{
     : null;
   const satDisplay = parseScore(academic.sat);
   const actDisplay = parseScore(academic.act);
-  const majorCategory = entry.assigned_category || "Not specified";
-  const intendedMajor = demographics.intended_major || "Not specified";
+  const majorCategory = majorFamilyLabel || entry.assigned_category || "Not specified";
+  const intendedMajor = intendedMajorLabel || demographics.intended_major || "Not specified";
   const sanitizedRace = sanitizeRaceOrEthnicity(demographics.race_ethnicity);
 
   return (
@@ -416,7 +462,8 @@ function calculateApplicationSimilarity(
     actComposite?: number | null;
     majors?: string[];
   },
-  targetSchools: string[]
+  targetSchools: string[],
+  mappedMajors: { majorFamilyCode: string | null; intendedMajorCode: string | null } | null
 ): number {
   let score = 1;
   const userGpa = studentProfile.gpa ?? null;
@@ -450,7 +497,26 @@ function calculateApplicationSimilarity(
   const majorLabels = (studentProfile.majors || [])
     .map((major) => extractMajorLabel(major).toLowerCase())
     .filter((label) => label.length > 0);
-  if (majorLabels.length) {
+
+  // Prefer CIP-based matching when available (more reliable than substring checks)
+  const userTwoDigit = new Set(
+    (studentProfile.majors || [])
+      .map((m) => m.match(/^(\d{2})/)?.[1] ?? null)
+      .filter((v): v is string => Boolean(v))
+  );
+  const appTwoDigit = new Set<string>();
+  if (mappedMajors?.majorFamilyCode) {
+    appTwoDigit.add(mappedMajors.majorFamilyCode.slice(0, 2));
+  }
+  if (mappedMajors?.intendedMajorCode) {
+    appTwoDigit.add(mappedMajors.intendedMajorCode.slice(0, 2));
+  }
+
+  if (userTwoDigit.size && appTwoDigit.size) {
+    const match = Array.from(userTwoDigit).some((code) => appTwoDigit.has(code));
+    if (match) score += 1.2;
+    else score -= 0.8;
+  } else if (majorLabels.length) {
     const comparisonFields = [
       profile.assigned_category,
       profile.demographics?.intended_major,
@@ -462,8 +528,8 @@ function calculateApplicationSimilarity(
     const match = majorLabels.some((major) =>
       comparisonFields.some((field) => field.includes(major))
     );
-    if (match) score += 1.2;
-    else score -= 0.8;
+    if (match) score += 1.0;
+    else score -= 0.6;
   }
 
   if (targetSchools.length) {

@@ -923,8 +923,8 @@ const ProfileDashboardPage: React.FC = () => {
                 Welcome to SeeThrough Admissions
               </h2>
               <p className="mt-1 text-xs text-slate-600">
-                Complete these three pieces to unlock the strongest
-                recommendations.
+                Complete Demographics, Academics, and 3 extracurriculars to unlock full access to
+                Colleges, Applications, and Essays.
               </p>
               <div className="mt-4">
                 <div className="flex items-center justify-between text-xs text-slate-600 mb-1">
@@ -978,6 +978,12 @@ const ProfileDashboardPage: React.FC = () => {
                   <span>Add at least 3 Extracurriculars</span>
                 </li>
               </ul>
+              {completionCount < 3 && (
+                <div className="mt-4 rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-xs text-amber-800">
+                  Tip: until your profile is complete, the Colleges, Applications, and Essays pages may
+                  show limited results.
+                </div>
+              )}
             </section>
 
             <section className="bg-white rounded-xl shadow-sm border border-slate-200 p-4 space-y-3">
