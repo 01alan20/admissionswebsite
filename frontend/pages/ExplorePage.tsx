@@ -370,6 +370,8 @@ const ExplorePage: React.FC<ExplorePageProps> = ({
   const [draftLocationTypes, setDraftLocationTypes] = useState<LocationCategory[]>([]);
   const [draftMajorAreas, setDraftMajorAreas] = useState<string[]>(initialMajorAreas);
   const [draftSpecificMajors, setDraftSpecificMajors] = useState<string[]>(initialSpecificMajors);
+  const [majorAreaQuery, setMajorAreaQuery] = useState("");
+  const [specificMajorQuery, setSpecificMajorQuery] = useState("");
 
   const [budget, setBudget] = useState<BudgetBucket | null>(null);
   const [selectivity, setSelectivity] = useState<SelectivityBucket | null>(null);
@@ -443,6 +445,18 @@ const ExplorePage: React.FC<ExplorePageProps> = ({
       STATE_NAME_BY_CODE[a].localeCompare(STATE_NAME_BY_CODE[b])
     );
   }, [institutions]);
+
+  const filteredMajorAreaOptions = useMemo(() => {
+    const q = majorAreaQuery.trim().toLowerCase();
+    if (!q) return majorAreaOptions;
+    return majorAreaOptions.filter((opt) => opt.label.toLowerCase().includes(q));
+  }, [majorAreaOptions, majorAreaQuery]);
+
+  const filteredSpecificMajorOptions = useMemo(() => {
+    const q = specificMajorQuery.trim().toLowerCase();
+    if (!q) return specificMajorOptions;
+    return specificMajorOptions.filter((opt) => opt.label.toLowerCase().includes(q));
+  }, [specificMajorOptions, specificMajorQuery]);
 
   const locationTypeOptions = useMemo(() => {
     const set = new Set<LocationCategory>();
@@ -584,7 +598,7 @@ const ExplorePage: React.FC<ExplorePageProps> = ({
               />
             </div>
 
-            <details open className="space-y-2">
+            <details className="space-y-2">
               <summary className="cursor-pointer text-xs uppercase font-semibold text-slate-500">
                 Tuition Budget (per year)
               </summary>
@@ -606,7 +620,7 @@ const ExplorePage: React.FC<ExplorePageProps> = ({
               </div>
             </details>
 
-            <details open className="space-y-2">
+            <details className="space-y-2">
               <summary className="cursor-pointer text-xs uppercase font-semibold text-slate-500">
                 Selectivity
               </summary>
@@ -630,7 +644,7 @@ const ExplorePage: React.FC<ExplorePageProps> = ({
               </div>
             </details>
 
-            <details open className="space-y-2">
+            <details className="space-y-2">
               <summary className="cursor-pointer text-xs uppercase font-semibold text-slate-500">
                 Testing expectations
               </summary>
@@ -655,35 +669,29 @@ const ExplorePage: React.FC<ExplorePageProps> = ({
               </div>
               <div className="space-y-2">
                 <label className="text-xs font-semibold text-slate-500">Test score floor</label>
-                <div className="flex items-center gap-2 text-sm">
-                  <label className="flex items-center gap-1">
-                    <input
-                      type="radio"
-                      name="score-type"
-                      value="sat"
-                      checked={draftTestScore?.type === "sat"}
-                      onChange={() =>
-                        setDraftTestScore(
-                          draftTestScore?.value ? { type: "sat", value: draftTestScore.value } : { type: "sat", value: 1300 }
-                        )
-                      }
-                    />
-                    SAT
-                  </label>
-                  <label className="flex items-center gap-1">
-                    <input
-                      type="radio"
-                      name="score-type"
-                      value="act"
-                      checked={draftTestScore?.type === "act"}
-                      onChange={() =>
-                        setDraftTestScore(
-                          draftTestScore?.value ? { type: "act", value: draftTestScore.value } : { type: "act", value: 28 }
-                        )
-                      }
-                    />
-                    ACT
-                  </label>
+                <div className="flex items-center gap-2 text-sm flex-wrap">
+                  <Pill
+                    active={draftTestScore?.type === "sat"}
+                    label="SAT"
+                    onClick={() =>
+                      setDraftTestScore(
+                        draftTestScore?.type === "sat"
+                          ? null
+                          : { type: "sat", value: draftTestScore?.value ?? 1300 }
+                      )
+                    }
+                  />
+                  <Pill
+                    active={draftTestScore?.type === "act"}
+                    label="ACT"
+                    onClick={() =>
+                      setDraftTestScore(
+                        draftTestScore?.type === "act"
+                          ? null
+                          : { type: "act", value: draftTestScore?.value ?? 28 }
+                      )
+                    }
+                  />
                   <input
                     id="score-min"
                     name="score-min"
@@ -714,30 +722,32 @@ const ExplorePage: React.FC<ExplorePageProps> = ({
               </div>
             </details>
 
-            <details open className="space-y-2">
+            <details className="space-y-2">
               <summary className="cursor-pointer text-xs uppercase font-semibold text-slate-500">
                 State
               </summary>
-              <select
-                id="state-filter"
-                name="state-filter"
-                multiple
-                value={draftStates}
-                onChange={(e) => {
-                  const options = Array.from(e.target.selectedOptions).map((o) => o.value);
-                  setDraftStates(options);
-                }}
-                className="w-full rounded-lg border border-slate-200 px-2 py-2 text-sm h-32 focus:border-brand-primary focus:ring-1 focus:ring-brand-primary/40"
-              >
-                {stateOptions.map((code) => (
-                  <option key={code} value={code}>
-                    {STATE_NAME_BY_CODE[code]} ({code})
-                  </option>
-                ))}
-              </select>
+              <div className="flex flex-wrap gap-2 max-h-48 overflow-auto pr-1">
+                {stateOptions.map((code) => {
+                  const active = draftStates.includes(code);
+                  return (
+                    <Pill
+                      key={code}
+                      active={active}
+                      label={`${STATE_NAME_BY_CODE[code]} (${code})`}
+                      onClick={() =>
+                        setDraftStates((prev) =>
+                          prev.includes(code)
+                            ? prev.filter((v) => v !== code)
+                            : [...prev, code]
+                        )
+                      }
+                    />
+                  );
+                })}
+              </div>
             </details>
 
-            <details open className="space-y-2">
+            <details className="space-y-2">
               <summary className="cursor-pointer text-xs uppercase font-semibold text-slate-500">
                 Location type
               </summary>
@@ -757,49 +767,71 @@ const ExplorePage: React.FC<ExplorePageProps> = ({
               </div>
             </details>
 
-            <details open className="space-y-3">
+            <details className="space-y-3">
               <summary className="cursor-pointer text-xs uppercase font-semibold text-slate-500">
                 Majors
               </summary>
               <div>
                 <p className="text-xs font-semibold text-slate-500">Major area</p>
-                <select
-                  id="major-area"
-                  name="major-area"
-                  multiple
-                  value={draftMajorAreas}
-                  onChange={(e) => {
-                    const options = Array.from(e.target.selectedOptions).map((o) => o.value);
-                    setDraftMajorAreas(options);
-                  }}
-                  className="w-full rounded-lg border border-slate-200 px-2 py-2 text-sm h-32 focus:border-brand-primary focus:ring-1 focus:ring-brand-primary/40"
-                >
-                  {majorAreaOptions.map((opt) => (
-                    <option key={opt.code} value={opt.code}>
-                      {cleanMajorLabel(opt.label)}
-                    </option>
-                  ))}
-                </select>
+                <input
+                  id="major-area-search"
+                  name="major-area-search"
+                  type="search"
+                  value={majorAreaQuery}
+                  onChange={(e) => setMajorAreaQuery(e.target.value)}
+                  placeholder="Search major areas..."
+                  className="w-full rounded-lg border border-slate-200 px-2 py-1.5 text-sm mb-2 focus:border-brand-primary focus:ring-1 focus:ring-brand-primary/40"
+                />
+                <div className="flex flex-wrap gap-2 max-h-40 overflow-auto pr-1">
+                  {filteredMajorAreaOptions.map((opt) => {
+                    const active = draftMajorAreas.includes(opt.code);
+                    return (
+                      <Pill
+                        key={opt.code}
+                        active={active}
+                        label={cleanMajorLabel(opt.label)}
+                        onClick={() =>
+                          setDraftMajorAreas((prev) =>
+                            prev.includes(opt.code)
+                              ? prev.filter((v) => v !== opt.code)
+                              : [...prev, opt.code]
+                          )
+                        }
+                      />
+                    );
+                  })}
+                </div>
               </div>
               <div>
                 <p className="text-xs font-semibold text-slate-500">Specific majors</p>
-                <select
-                  id="specific-major"
-                  name="specific-major"
-                  multiple
-                  value={draftSpecificMajors}
-                  onChange={(e) => {
-                    const options = Array.from(e.target.selectedOptions).map((o) => o.value);
-                    setDraftSpecificMajors(options);
-                  }}
-                  className="w-full rounded-lg border border-slate-200 px-2 py-2 text-sm h-32 focus:border-brand-primary focus:ring-1 focus:ring-brand-primary/40"
-                >
-                  {specificMajorOptions.map((opt) => (
-                    <option key={opt.code} value={opt.code}>
-                      {cleanMajorLabel(opt.label)}
-                    </option>
-                  ))}
-                </select>
+                <input
+                  id="specific-major-search"
+                  name="specific-major-search"
+                  type="search"
+                  value={specificMajorQuery}
+                  onChange={(e) => setSpecificMajorQuery(e.target.value)}
+                  placeholder="Search majors..."
+                  className="w-full rounded-lg border border-slate-200 px-2 py-1.5 text-sm mb-2 focus:border-brand-primary focus:ring-1 focus:ring-brand-primary/40"
+                />
+                <div className="flex flex-wrap gap-2 max-h-40 overflow-auto pr-1">
+                  {filteredSpecificMajorOptions.map((opt) => {
+                    const active = draftSpecificMajors.includes(opt.code);
+                    return (
+                      <Pill
+                        key={opt.code}
+                        active={active}
+                        label={cleanMajorLabel(opt.label)}
+                        onClick={() =>
+                          setDraftSpecificMajors((prev) =>
+                            prev.includes(opt.code)
+                              ? prev.filter((v) => v !== opt.code)
+                              : [...prev, opt.code]
+                          )
+                        }
+                      />
+                    );
+                  })}
+                </div>
               </div>
             </details>
 
@@ -823,12 +855,7 @@ const ExplorePage: React.FC<ExplorePageProps> = ({
         </div>
 
         <div className="lg:col-span-9 space-y-4">
-          <div className="flex items-center justify-between">
-            <div>
-              <p className="text-xs uppercase font-semibold text-slate-500">Essentials</p>
-              <h1 className="text-3xl font-bold text-slate-900">Colleges</h1>
-              <p className="text-sm text-slate-600 mt-1">Smart search with diversity snapshots and testing context.</p>
-            </div>
+          <div className="flex items-center justify-end">
             <div className="text-sm text-slate-600">Showing {visibleInstitutions.length} of {filteredInstitutions.length} result(s)</div>
           </div>
 
