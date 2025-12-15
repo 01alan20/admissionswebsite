@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import DashboardLayout from "../components/DashboardLayout";
 import { useOnboardingGuard } from "../hooks/useOnboardingGuard";
 import { useOnboardingContext } from "../context/OnboardingContext";
+import { BookOpen, Users } from "lucide-react";
 import {
   getAnonymousEssays,
   getInstitutionsSummariesByIds,
@@ -183,7 +184,7 @@ const EssaysPage: React.FC = () => {
               title="Browse Essays"
               description="Explore 100+ successful college essays from top schools."
               accent="from-rose-600 to-rose-400"
-              icon="📘"
+              icon={<BookOpen className="h-5 w-5" />}
               onClick={() => {
                 setBrowseSeed((prev) => prev + 1);
                 setView("browse");
@@ -193,7 +194,7 @@ const EssaysPage: React.FC = () => {
               title="Essays Like You"
               description="Find essays from students with similar backgrounds and stories."
               accent="from-indigo-600 to-indigo-400"
-              icon="✨"
+              icon={<Users className="h-5 w-5" />}
               onClick={() => {
                 setSimilarSeed((prev) => prev + 1);
                 setView("similar");
@@ -300,7 +301,7 @@ export default EssaysPage;
 const ExperienceCard: React.FC<{
   title: string;
   description: string;
-  icon: string;
+  icon: React.ReactNode;
   accent: string;
   onClick: () => void;
 }> = ({ title, description, icon, accent, onClick }) => (
@@ -310,7 +311,7 @@ const ExperienceCard: React.FC<{
     className="bg-white rounded-2xl border border-slate-100 shadow-sm text-left p-6 hover:shadow-md transition flex flex-col gap-3"
   >
     <div className={`w-12 h-12 rounded-full text-white flex items-center justify-center bg-gradient-to-r ${accent}`}>
-      <span className="text-lg">{icon}</span>
+      {icon}
     </div>
     <div>
       <h3 className="text-lg font-semibold text-slate-900">{title}</h3>

@@ -21,25 +21,32 @@ const supabase = createClient(supabaseUrl, serviceRoleKey, {
   auth: { persistSession: false },
 })
 
-const metricsPath = path.join(process.cwd(), 'public', 'data', 'metrics_by_year.json')
+const metricsPath = path.join(
+  process.cwd(),
+  'public',
+  'data',
+  'University_data',
+  'metrics_by_year.json',
+)
+
+const institutionsPath = path.join(
+  process.cwd(),
+  'public',
+  'data',
+  'University_data',
+  'institutions.json',
+)
 
 async function main() {
   // eslint-disable-next-line no-console
   console.log('Supabase URL:', supabaseUrl)
 
-  // Fetch existing institution ids to satisfy FK constraint
-  const { data: instRows, error: instError } = await supabase
-    .from('institutions')
-    .select('unitid')
-    .limit(10000)
-  if (instError) {
-    // eslint-disable-next-line no-console
-    console.error('Error fetching institutions unitid list:', instError)
-    process.exit(1)
-  }
-  const validIds = new Set((instRows || []).map((r) => r.unitid))
+  // Build valid unitids from local institutions.json to avoid API row limits.
+  const instText = fs.readFileSync(institutionsPath, 'utf8')
+  const instData = JSON.parse(instText)
+  const validIds = new Set(instData.map((d) => Number(d.unitid)).filter(Number.isFinite))
   // eslint-disable-next-line no-console
-  console.log(`Loaded ${validIds.size} institution ids from Supabase`)
+  console.log(`Loaded ${validIds.size} institution ids from ${institutionsPath}`)
 
   // eslint-disable-next-line no-console
   console.log('Loading metrics from', metricsPath)
@@ -122,6 +129,17 @@ async function main() {
 
   // eslint-disable-next-line no-console
   console.log('Finished loading institution_metrics into Supabase via HTTP API.')
+
+  const { count, error: countError } = await supabase
+    .from('institution_metrics')
+    .select('unitid', { count: 'exact', head: true })
+  if (countError) {
+    // eslint-disable-next-line no-console
+    console.warn('Unable to fetch row count for institution_metrics:', countError)
+  } else {
+    // eslint-disable-next-line no-console
+    console.log(`institution_metrics row count now=${count}`)
+  }
 }
 
 main().catch((err) => {

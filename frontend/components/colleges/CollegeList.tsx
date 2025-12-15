@@ -10,8 +10,14 @@ import {
   calculateChances,
   type CollegeMetrics,
 } from "../../lib/admissions";
-import { getAllInstitutions, getInstitutionTestScoreMap } from "../../data/api";
+import {
+  getAllInstitutions,
+  getInstitutionTestScoreMap,
+  getTopUnitIdsByApplicants,
+} from "../../data/api";
 import type { Institution, InstitutionTestScores } from "../../types";
+import { getTwoDigitPrefix, normalizeMajorSelectionList } from "../../utils/majors";
+import { isUSCountry } from "../../utils/usStates";
 
 type CollegeRow = {
   unitid: number;
@@ -73,6 +79,35 @@ const chanceOrder: Record<AdmissionCategory, number> = {
   Reach: 0,
   Target: 1,
   Safety: 2,
+};
+
+const createRng = (seed: number) => {
+  let t = seed >>> 0;
+  return () => {
+    t += 0x6d2b79f5;
+    let x = Math.imul(t ^ (t >>> 15), 1 | t);
+    x ^= x + Math.imul(x ^ (x >>> 7), 61 | x);
+    return ((x ^ (x >>> 14)) >>> 0) / 4294967296;
+  };
+};
+
+const shuffleWithSeed = <T,>(items: T[], seed: number): T[] => {
+  const rng = createRng(seed);
+  const arr = items.slice();
+  for (let i = arr.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(rng() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+};
+
+type RecommendationInputs = {
+  stats: AcademicStats;
+  homeState: string | null;
+  country: string | null;
+  majors: string[] | undefined;
+  desiredCount?: number;
+  seed?: number;
 };
 
 const buildRowForInstitution = (
@@ -148,91 +183,203 @@ const buildRowForInstitution = (
   };
 };
 
-const buildRecommendedRows = async (
-  stats: AcademicStats,
-  homeState: string | null,
-  desiredCount = 20
-): Promise<CollegeRow[]> => {
-  const [allInstitutions, testScoreMap] = await Promise.all([
+const buildRecommendedRows = async ({
+  stats,
+  homeState,
+  country,
+  majors,
+  desiredCount = 20,
+  seed = 0,
+}: RecommendationInputs): Promise<CollegeRow[]> => {
+  const [allInstitutions, testScoreMap, topApplicantIds] = await Promise.all([
     getAllInstitutions(),
     getInstitutionTestScoreMap(),
+    getTopUnitIdsByApplicants(1000),
   ]);
-  const scoreInstitution = (inst: Institution): {
-    unitid: number;
-    chance: AdmissionCategory;
-    isSameState: boolean;
-    majorMatch: boolean;
-  } | null => {
-    if (!inst.acceptance_rate || inst.level !== "4-year") return null;
-    const test: InstitutionTestScores | undefined =
-      testScoreMap.get(inst.unitid);
-    const metrics: CollegeMetrics = {
-      acceptanceRate: inst.acceptance_rate,
-      sat25: test?.sat_total_25 ?? null,
-      sat75: test?.sat_total_75 ?? null,
-      act25: test?.act_composite_25 ?? null,
-      act75: test?.act_composite_75 ?? null,
-    };
-    const chance = calculateChances(stats, metrics);
-    const isSameState =
-      !!homeState &&
-      typeof inst.state === "string" &&
-      inst.state.toUpperCase() === homeState.toUpperCase();
-    return { unitid: inst.unitid, chance, isSameState, majorMatch: false };
-  };
-
-  const safety: number[] = [];
-  const target: number[] = [];
-  const reach: number[] = [];
-
-  for (const inst of allInstitutions) {
-    const scored = scoreInstitution(inst);
-    if (!scored) continue;
-    const bucket =
-      scored.chance === "Safety"
-        ? safety
-        : scored.chance === "Target"
-        ? target
-        : reach;
-    if (scored.isSameState) {
-      bucket.unshift(scored.unitid);
-    } else {
-      bucket.push(scored.unitid);
-    }
-  }
-
-  const recommendedIds: number[] = [
-    ...target.slice(0, 10),
-    ...safety.slice(0, 5),
-    ...reach.slice(0, 5),
-  ].slice(0, desiredCount);
 
   const institutionById = new Map<number, Institution>();
   for (const inst of allInstitutions) {
     institutionById.set(inst.unitid, inst);
   }
 
-  const rows = recommendedIds
-    .map((id) => {
-      const inst = institutionById.get(id);
-      if (!inst) return null;
-      const scores = testScoreMap.get(id);
-      return buildRowForInstitution(inst, scores, stats, homeState);
-    })
-    .filter((row): row is CollegeRow => row != null);
+  const applicantRank = new Map<number, number>();
+  for (let i = 0; i < topApplicantIds.length; i += 1) {
+    applicantRank.set(Number(topApplicantIds[i]), i);
+  }
 
+  const normalizedMajors = normalizeMajorSelectionList(majors) ?? majors;
+  const majorPrefixes = new Set(
+    (normalizedMajors || [])
+      .map((m) => getTwoDigitPrefix(m))
+      .filter((v): v is string => Boolean(v))
+  );
+
+  const isInternational = Boolean(country && country.trim()) && !isUSCountry(country);
+  const hasStats = stats.gpa != null || stats.sat != null || stats.act != null;
+
+  const isMajorMatch = (inst: Institution) => {
+    if (!majorPrefixes.size) return false;
+    const list = inst.majors_cip_two_digit;
+    if (!Array.isArray(list)) return false;
+    return list.some((code) => majorPrefixes.has(String(code).slice(0, 2)));
+  };
+
+  const preferenceScore = (inst: Institution) => {
+    let score = 0;
+    if (
+      homeState &&
+      typeof inst.state === "string" &&
+      inst.state.toUpperCase() === homeState.toUpperCase()
+    ) {
+      score += 1000;
+    }
+    if (isMajorMatch(inst)) score += 500;
+    const rank = applicantRank.get(inst.unitid);
+    if (typeof rank === "number") {
+      score += Math.max(0, 400 - rank);
+    }
+    if (isInternational && typeof inst.intl_enrollment_pct === "number") {
+      score += Math.round(inst.intl_enrollment_pct * 100);
+    }
+    return score;
+  };
+
+  const pickFromPool = <T,>(pool: T[], count: number, shuffleSeed: number) => {
+    if (!pool.length) return [];
+    if (count >= pool.length) return pool.slice();
+    if (shuffleSeed === 0) return pool.slice(0, count);
+    return shuffleWithSeed(pool, shuffleSeed).slice(0, count);
+  };
+
+  const dedupeIds = (ids: number[]) => Array.from(new Set(ids.map((id) => Number(id))));
+
+  const buildRowsFromIds = (ids: number[]) => {
+    const unique = dedupeIds(ids);
+    return unique
+      .map((id) => {
+        const inst = institutionById.get(id);
+        if (!inst) return null;
+        const scores = testScoreMap.get(id);
+        return buildRowForInstitution(inst, scores, stats, homeState);
+      })
+      .filter((row): row is CollegeRow => row != null);
+  };
+
+  // International fallback (no US state matching expected)
+  if (!hasStats && isInternational) {
+    const majorFilteredTopApps = majorPrefixes.size
+      ? topApplicantIds.filter((id) => {
+          const inst = institutionById.get(Number(id));
+          return inst ? isMajorMatch(inst) : false;
+        })
+      : topApplicantIds;
+
+    const topAppliedPool = majorFilteredTopApps.slice(0, 200);
+
+    const topIntlPool = allInstitutions
+      .filter((i) => i.level === "4-year")
+      .filter((i) => (majorPrefixes.size ? isMajorMatch(i) : true))
+      .filter((i) => typeof i.intl_enrollment_pct === "number")
+      .sort((a, b) => (b.intl_enrollment_pct ?? 0) - (a.intl_enrollment_pct ?? 0))
+      .slice(0, 200)
+      .map((i) => i.unitid);
+
+    const majorRelevantPool = allInstitutions
+      .filter((i) => i.level === "4-year")
+      .filter((i) => (majorPrefixes.size ? isMajorMatch(i) : true))
+      .slice()
+      .sort((a, b) => preferenceScore(b) - preferenceScore(a))
+      .slice(0, 500)
+      .map((i) => i.unitid);
+
+    const pickTopApplied = pickFromPool(topAppliedPool, 5, seed ? seed + 11 : 0);
+    const pickTopIntl = pickFromPool(topIntlPool, 5, seed ? seed + 17 : 0);
+    const pickMajors = pickFromPool(majorRelevantPool, 10, seed ? seed + 23 : 0);
+
+    const combined = dedupeIds([...pickTopApplied, ...pickTopIntl, ...pickMajors]).slice(
+      0,
+      desiredCount
+    );
+    return buildRowsFromIds(combined);
+  }
+
+  // No stats: use top applicants (optionally weighted by location/major)
+  if (!hasStats) {
+    const candidates = allInstitutions
+      .filter((i) => i.level === "4-year")
+      .slice()
+      .sort((a, b) => preferenceScore(b) - preferenceScore(a));
+
+    const pool = candidates.slice(0, 600).map((i) => i.unitid);
+    const picked =
+      !homeState && !majorPrefixes.size
+        ? pickFromPool(topApplicantIds.slice(0, 300), desiredCount, seed)
+        : pickFromPool(pool, desiredCount, seed);
+
+    return buildRowsFromIds(picked);
+  }
+
+  // Stats-based recommendations with reach/target/safety spread
+  type Scored = {
+    unitid: number;
+    chance: AdmissionCategory;
+    score: number;
+  };
+
+  const safety: Scored[] = [];
+  const target: Scored[] = [];
+  const reach: Scored[] = [];
+
+  for (const inst of allInstitutions) {
+    if (inst.level !== "4-year") continue;
+    const test = testScoreMap.get(inst.unitid);
+    const metrics: CollegeMetrics = {
+      acceptanceRate: inst.acceptance_rate ?? null,
+      sat25: test?.sat_total_25 ?? null,
+      sat75: test?.sat_total_75 ?? null,
+      act25: test?.act_composite_25 ?? null,
+      act75: test?.act_composite_75 ?? null,
+    };
+    const hasSignal =
+      metrics.acceptanceRate != null ||
+      metrics.sat25 != null ||
+      metrics.sat75 != null ||
+      metrics.act25 != null ||
+      metrics.act75 != null;
+    if (!hasSignal) continue;
+
+    const chance = calculateChances(stats, metrics);
+    const score = preferenceScore(inst);
+    const entry: Scored = { unitid: inst.unitid, chance, score };
+    if (chance === "Safety") safety.push(entry);
+    else if (chance === "Target") target.push(entry);
+    else reach.push(entry);
+  }
+
+  const sortScored = (arr: Scored[]) => arr.slice().sort((a, b) => b.score - a.score);
+
+  const targetPool = sortScored(target).slice(0, 500).map((s) => s.unitid);
+  const safetyPool = sortScored(safety).slice(0, 500).map((s) => s.unitid);
+  const reachPool = sortScored(reach).slice(0, 500).map((s) => s.unitid);
+
+  const pickTargets = pickFromPool(targetPool, 10, seed ? seed + 31 : 0);
+  const pickSafety = pickFromPool(safetyPool, 5, seed ? seed + 37 : 0);
+  const pickReach = pickFromPool(reachPool, 5, seed ? seed + 41 : 0);
+
+  const combined = dedupeIds([...pickTargets, ...pickSafety, ...pickReach]).slice(
+    0,
+    desiredCount
+  );
+
+  const rows = buildRowsFromIds(combined);
   rows.sort((a, b) => {
-    const aChanceRank =
-      a.chance != null ? chanceOrder[a.chance] ?? 3 : 3;
-    const bChanceRank =
-      b.chance != null ? chanceOrder[b.chance] ?? 3 : 3;
+    const aChanceRank = a.chance != null ? chanceOrder[a.chance] ?? 3 : 3;
+    const bChanceRank = b.chance != null ? chanceOrder[b.chance] ?? 3 : 3;
     if (aChanceRank !== bChanceRank) return aChanceRank - bChanceRank;
-
     const aAcc = a.acceptanceRate ?? 1;
     const bAcc = b.acceptanceRate ?? 1;
     return aAcc - bAcc;
   });
-
   return rows;
 };
 
@@ -284,6 +431,12 @@ const CollegeList: React.FC = () => {
   const [rows, setRows] = useState<CollegeRow[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [seed, setSeed] = useState(0);
+
+  const majorKey = useMemo(
+    () => (studentProfile.majors ? studentProfile.majors.join("|") : ""),
+    [studentProfile.majors]
+  );
 
   useEffect(() => {
     if (!user) {
@@ -309,6 +462,12 @@ const CollegeList: React.FC = () => {
           demo.location_state && String(demo.location_state).trim()
             ? String(demo.location_state).toUpperCase()
             : null;
+        const countryRaw =
+          demo.country && String(demo.country).trim()
+            ? String(demo.country).trim()
+            : studentProfile.country && String(studentProfile.country).trim()
+            ? String(studentProfile.country).trim()
+            : null;
 
         const studentSatTotal =
           studentProfile.satMath != null && studentProfile.satEBRW != null
@@ -325,11 +484,14 @@ const CollegeList: React.FC = () => {
           profile?.academic_stats ?? fallbackStats
         );
 
-        const recommendedRows = await buildRecommendedRows(
+        const recommendedRows = await buildRecommendedRows({
           stats,
           homeState,
-          20
-        );
+          country: countryRaw,
+          majors: studentProfile.majors,
+          desiredCount: 20,
+          seed,
+        });
 
         let combinedRows: CollegeRow[] = recommendedRows;
 
@@ -375,6 +537,8 @@ const CollegeList: React.FC = () => {
     studentProfile.satMath,
     studentProfile.satEBRW,
     studentProfile.actComposite,
+    majorKey,
+    seed,
   ]);
 
   const handleDownload = () => {
@@ -461,6 +625,14 @@ const CollegeList: React.FC = () => {
           My Colleges
         </h2>
         <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={() => setSeed((s) => s + 1)}
+            disabled={loading}
+            className="inline-flex items-center rounded-md border border-slate-300 bg-white px-3 py-1.5 text-[11px] font-semibold text-slate-700 hover:bg-slate-50 disabled:opacity-60"
+          >
+            Generate Another List
+          </button>
           {hasColleges && (
             <button
               type="button"
@@ -558,122 +730,3 @@ const CollegeList: React.FC = () => {
 };
 
 export default CollegeList;
-const sortByApplicants = (institutions: Institution[], applicantsMap: Map<number, number>): Institution[] => {
-  return institutions
-    .slice()
-    .sort((a, b) => {
-      const aApps = applicantsMap.get(a.unitid) ?? -1;
-      const bApps = applicantsMap.get(b.unitid) ?? -1;
-      if (aApps !== bApps) return bApps - aApps;
-      return (b.acceptance_rate ?? 0) - (a.acceptance_rate ?? 0);
-    });
-};
-
-const buildLocationFallbackRows = async (
-  stats: AcademicStats,
-  homeState: string | null,
-  userMajors: string[] | undefined,
-  desiredCount = 20
-): Promise<CollegeRow[]> => {
-  const [allInstitutions, testScoreMap, applicantsMap] = await Promise.all([
-    getAllInstitutions(),
-    getInstitutionTestScoreMap(),
-    getLatestApplicantsMap(),
-  ]);
-
-  const majorPrefixes = new Set(
-    (userMajors || [])
-      .map((m) => getTwoDigitPrefix(m))
-      .filter((v): v is string => Boolean(v))
-  );
-
-  const isMajorMatch = (inst: Institution) =>
-    majorPrefixes.size > 0 &&
-    Array.isArray(inst.majors_cip_two_digit) &&
-    inst.majors_cip_two_digit.some((code) => majorPrefixes.has(String(code).slice(0, 2)));
-
-  const pool = homeState
-    ? allInstitutions.filter(
-        (inst) =>
-          typeof inst.state === "string" &&
-          inst.state.toUpperCase() === homeState.toUpperCase()
-      )
-    : allInstitutions.slice();
-
-  const sorted = sortByApplicants(pool, applicantsMap);
-  const majorFirst = sorted.filter(isMajorMatch);
-  const remainder = sorted.filter((inst) => !isMajorMatch(inst));
-  const finalList = [...majorFirst, ...remainder].slice(0, desiredCount);
-
-  const rows = finalList
-    .map((inst) => {
-      const scores = testScoreMap.get(inst.unitid);
-      return buildRowForInstitution(inst, scores, stats, homeState);
-    })
-    .filter((row): row is CollegeRow => row != null);
-
-  return rows;
-};
-
-const buildInternationalRows = async (
-  stats: AcademicStats,
-  userMajors: string[] | undefined,
-  desiredCount = 20
-): Promise<CollegeRow[]> => {
-  const [allInstitutions, testScoreMap, applicantsMap, topApplicants] = await Promise.all([
-    getAllInstitutions(),
-    getInstitutionTestScoreMap(),
-    getLatestApplicantsMap(),
-    getTopUnitIdsByApplicants(100),
-  ]);
-
-  const majorPrefixes = new Set(
-    (userMajors || [])
-      .map((m) => getTwoDigitPrefix(m))
-      .filter((v): v is string => Boolean(v))
-  );
-
-  const isMajorMatch = (inst: Institution) =>
-    majorPrefixes.size === 0
-      ? true
-      : Array.isArray(inst.majors_cip_two_digit) &&
-        inst.majors_cip_two_digit.some((code) => majorPrefixes.has(String(code).slice(0, 2)));
-
-  const topApplicantInsts = topApplicants
-    .map((id) => allInstitutions.find((i) => i.unitid === id))
-    .filter((v): v is Institution => !!v)
-    .filter(isMajorMatch)
-    .slice(0, 5);
-
-  const topIntlInsts = allInstitutions
-    .filter((i) => i.intl_enrollment_pct != null)
-    .sort((a, b) => (b.intl_enrollment_pct ?? 0) - (a.intl_enrollment_pct ?? 0))
-    .filter(isMajorMatch)
-    .slice(0, 5);
-
-  const majorRelevant = allInstitutions
-    .filter(isMajorMatch)
-    .filter((i) => i.level === "4-year")
-    .filter((i) => !topApplicantInsts.includes(i) && !topIntlInsts.includes(i));
-
-  const majorRelevantSorted = sortByApplicants(majorRelevant, applicantsMap).slice(0, 10);
-
-  const combined = [...topApplicantInsts, ...topIntlInsts, ...majorRelevantSorted];
-  const seen = new Set<number>();
-  const finalList: Institution[] = [];
-  for (const inst of combined) {
-    if (seen.has(inst.unitid)) continue;
-    seen.add(inst.unitid);
-    finalList.push(inst);
-    if (finalList.length >= desiredCount) break;
-  }
-
-  const rows = finalList
-    .map((inst) => {
-      const scores = testScoreMap.get(inst.unitid);
-      return buildRowForInstitution(inst, scores, stats, null);
-    })
-    .filter((row): row is CollegeRow => row != null);
-
-  return rows;
-};

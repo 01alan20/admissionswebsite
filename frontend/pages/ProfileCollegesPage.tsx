@@ -50,8 +50,7 @@ const ProfileCollegesPage: React.FC = () => {
           <p className="text-xs uppercase tracking-wide text-brand-secondary font-semibold">Essentials</p>
           <h1 className="text-3xl font-bold text-slate-900 mt-1">Colleges</h1>
           <p className="mt-2 text-sm text-slate-600 max-w-3xl">
-            Search universities, compare selectivity, and filter by majors, budget, testing policy, or campus type—all
-            within your personalized workspace.
+            Smart search with diversity snapshots and testing context.
           </p>
         </header>
         <div className="-mx-4 sm:-mx-6 lg:-mx-8">

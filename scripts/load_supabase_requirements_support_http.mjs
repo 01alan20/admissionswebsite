@@ -21,7 +21,13 @@ const supabase = createClient(supabaseUrl, serviceRoleKey, {
   auth: { persistSession: false },
 })
 
-const institutionsDir = path.join(process.cwd(), 'public', 'data', 'institutions')
+const institutionsDir = path.join(
+  process.cwd(),
+  'public',
+  'data',
+  'University_data',
+  'institutions',
+)
 
 async function main() {
   // eslint-disable-next-line no-console
@@ -119,4 +125,3 @@ main().catch((err) => {
   console.error('Unexpected error loading requirements/support notes:', err)
   process.exit(1)
 })
-

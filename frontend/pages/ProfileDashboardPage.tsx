@@ -18,6 +18,7 @@ import {
 import { COUNTRY_OPTIONS } from "../constants";
 import type { Activity, MajorsMeta } from "../types";
 import { supabase } from "../services/supabaseClient";
+import { US_STATES, isUSCountry, normalizeUSStateToCode } from "../utils/usStates";
 import {
   buildMajorAreaOptions,
   buildSpecificMajorOptions,
@@ -302,7 +303,12 @@ const ProfileDashboardPage: React.FC = () => {
           race: demo.race ?? prev.race,
           country: demo.country ?? prev.country,
           city: demo.city ?? prev.city,
-          locationState: demo.location_state ?? prev.locationState,
+          locationState: (() => {
+            const countryValue = demo.country ?? prev.country;
+            if (!isUSCountry(countryValue)) return "";
+            const normalized = normalizeUSStateToCode(demo.location_state);
+            return normalized ?? prev.locationState;
+          })(),
           gradYear:
             demo.grad_year != null ? String(demo.grad_year) : prev.gradYear,
         }));
@@ -592,7 +598,7 @@ const ProfileDashboardPage: React.FC = () => {
   };
 
   const hasColleges = colleges.length > 0;
-  const isUS = demographics.country === "United States";
+  const isUS = isUSCountry(demographics.country);
 
   const updateProfileData = useCallback(
     async (updates: {
@@ -610,10 +616,13 @@ const ProfileDashboardPage: React.FC = () => {
         setAcademicSnapshot(merged);
       }
       if (!Object.keys(payload).length) return;
-      await supabase
-        .from("profiles")
-        .update(payload)
-        .eq("user_id", user.id);
+      await supabase.from("profiles").upsert(
+        {
+          user_id: user.id,
+          ...payload,
+        },
+        { onConflict: "user_id" }
+      );
     },
     [user?.id, academicSnapshot]
   );
@@ -1028,11 +1037,17 @@ const ProfileDashboardPage: React.FC = () => {
           className="space-y-4"
           onSubmit={async (e) => {
             e.preventDefault();
+            const cleanedCountry = demographics.country.trim();
+            const cleanedIsUS = isUSCountry(cleanedCountry);
+            const normalizedState = cleanedIsUS
+              ? normalizeUSStateToCode(demographics.locationState) ??
+                demographics.locationState.trim().toUpperCase()
+              : "";
             const cleaned: DemographicsState = {
               ...demographics,
-              country: demographics.country.trim(),
+              country: cleanedCountry,
               city: demographics.city.trim(),
-              locationState: demographics.locationState.trim().toUpperCase(),
+              locationState: normalizedState,
               gradYear: demographics.gradYear.trim(),
             };
             if (!cleaned.majorCodes.length && majorSearch.trim()) {
@@ -1281,10 +1296,14 @@ const ProfileDashboardPage: React.FC = () => {
               <select
                 value={demographics.country}
                 onChange={(e) =>
-                  setDemographics((prev) => ({
-                    ...prev,
-                    country: e.target.value,
-                  }))
+                  setDemographics((prev) => {
+                    const nextCountry = e.target.value;
+                    return {
+                      ...prev,
+                      country: nextCountry,
+                      locationState: isUSCountry(nextCountry) ? prev.locationState : "",
+                    };
+                  })
                 }
                 className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               >
@@ -1322,8 +1341,7 @@ const ProfileDashboardPage: React.FC = () => {
                 <label className="block text-xs font-medium text-slate-700 mb-1">
                   Home State (US)
                 </label>
-                <input
-                  type="text"
+                <select
                   value={demographics.locationState}
                   onChange={(e) =>
                     setDemographics((prev) => ({
@@ -1331,10 +1349,15 @@ const ProfileDashboardPage: React.FC = () => {
                       locationState: e.target.value,
                     }))
                   }
-                  placeholder="CA"
-                  maxLength={2}
-                  className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm uppercase focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                />
+                  className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                >
+                  <option value="">Select state</option>
+                  {US_STATES.map((s) => (
+                    <option key={s.code} value={s.code}>
+                      {s.name}
+                    </option>
+                  ))}
+                </select>
               </div>
             )}
           </div>

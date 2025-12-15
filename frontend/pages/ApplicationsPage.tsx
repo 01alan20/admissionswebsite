@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import DashboardLayout from "../components/DashboardLayout";
 import { useOnboardingGuard } from "../hooks/useOnboardingGuard";
 import { useOnboardingContext } from "../context/OnboardingContext";
+import { Database, Users } from "lucide-react";
 import {
   getSuccessProfiles,
   getInstitutionsSummariesByIds,
@@ -130,14 +131,14 @@ const ApplicationsPage: React.FC = () => {
               description="Browse detailed application files from successful admits."
               accent="from-rose-600 to-rose-400"
               onClick={() => setView("all")}
-              icon="🔎"
+              icon={<Database className="h-5 w-5" />}
             />
             <ExperienceCard
               title="Applications Like You"
               description="Find successful profiles with similar academics and interests."
               accent="from-indigo-600 to-indigo-400"
               onClick={() => setView("similar")}
-              icon="🤝"
+              icon={<Users className="h-5 w-5" />}
             />
           </div>
         ) : (
@@ -214,7 +215,7 @@ export default ApplicationsPage;
 const ExperienceCard: React.FC<{
   title: string;
   description: string;
-  icon: string;
+  icon: React.ReactNode;
   accent: string;
   onClick: () => void;
 }> = ({ title, description, icon, accent, onClick }) => (
@@ -224,7 +225,7 @@ const ExperienceCard: React.FC<{
     className="bg-white rounded-2xl border border-slate-100 shadow-sm text-left p-6 hover:shadow-md transition flex flex-col gap-3"
   >
     <div className={`w-12 h-12 rounded-full text-white flex items-center justify-center bg-gradient-to-r ${accent}`}>
-      <span className="text-lg">{icon}</span>
+      {icon}
     </div>
     <div>
       <h3 className="text-lg font-semibold text-slate-900">{title}</h3>

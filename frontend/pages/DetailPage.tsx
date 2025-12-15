@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useOnboardingContext } from '../context/OnboardingContext';
 import {
   InstitutionDetail,
@@ -22,9 +22,9 @@ const StatCard: React.FC<{ label: string; value: string | number | null | undefi
   label,
   value,
 }) => (
-  <div className="p-3 rounded-lg bg-gray-50 text-center">
-    <p className="text-2xl font-bold text-brand-dark">{value ?? 'N/A'}</p>
-    <p className="text-xs text-gray-600 uppercase tracking-wider">{label}</p>
+  <div className="p-4 rounded-2xl border border-slate-100 bg-slate-50 text-center">
+    <p className="text-2xl font-extrabold text-slate-900">{value ?? 'N/A'}</p>
+    <p className="text-[11px] text-slate-600 uppercase tracking-wider font-semibold">{label}</p>
   </div>
 );
 
@@ -158,6 +158,7 @@ const DemographicsDonut: React.FC<{ groups: DemographicGroupSlice[] }> = ({ grou
 
 const DetailPage: React.FC = () => {
   const { unitid } = useParams<{ unitid: string }>();
+  const navigate = useNavigate();
   const [detail, setDetail] = useState<InstitutionDetail | null>(null);
   const [metrics, setMetrics] = useState<InstitutionMetrics | null>(null);
   const [loading, setLoading] = useState(true);
@@ -165,8 +166,10 @@ const DetailPage: React.FC = () => {
   const [majorsMeta, setMajorsMeta] = useState<MajorsMeta | null>(null);
   const [majorsByInstitution, setMajorsByInstitution] = useState<InstitutionMajorsByInstitution | null>(null);
   const [demographics, setDemographics] = useState<InstitutionDemographics | null>(null);
-  const { targetUnitIds, setTargetUnitIds } = useOnboardingContext();
+  const { user, targetUnitIds, setTargetUnitIds } = useOnboardingContext();
   const unitIdNumber = unitid ? Number(unitid) : null;
+  const backHref = user ? "/profile/colleges" : "/";
+  const backLabel = user ? "Back to Colleges" : "Back Home";
 
   useEffect(() => {
     const fetchData = async () => {
@@ -310,8 +313,13 @@ const DetailPage: React.FC = () => {
   const hasDemographics = demographicGroups.length > 0;
   const addToTargets = () => {
     if (!unitIdNumber) return;
+    if (!user) {
+      navigate("/profile/login");
+      return;
+    }
     const next = Array.from(new Set([...(targetUnitIds || []), unitIdNumber]));
     setTargetUnitIds(next);
+    navigate("/profile/colleges");
   };
 
   if (loading) return <div className="text-center p-10">Loading university details...</div>;
@@ -320,32 +328,35 @@ const DetailPage: React.FC = () => {
 
   try {
     return (
-    <div className="space-y-6">
-      <Link
-        to="/explore"
-        className="inline-flex items-center text-brand-secondary hover:text-brand-dark font-medium transition-colors"
+     <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6 lg:px-8 space-y-6">
+       <Link
+        to={backHref}
+        className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50 transition"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
           <path
             fillRule="evenodd"
             d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
             clipRule="evenodd"
           />
         </svg>
-        Back to Explore
+        {backLabel}
       </Link>
 
       <header>
-        <h1 className="text-4xl font-extrabold text-brand-dark">{profile.name}</h1>
-        <p className="text-lg text-gray-600 mt-1">
+        <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-900">{profile.name}</h1>
+        <p className="text-base sm:text-lg text-slate-600 mt-1">
           {profile.city}, {profile.state} - {profile.control} - {profile.level}
         </p>
         <div className="flex flex-wrap gap-2 mt-4 text-sm">
-          <span className="bg-yellow-200 text-yellow-800 font-semibold px-3 py-1 rounded-full">
+          <span className="bg-amber-50 text-amber-800 border border-amber-200 font-semibold px-3 py-1 rounded-full">
             Test policy: {formatTestPolicy(profile.test_policy)}
           </span>
           {profile.major_families.slice(0, 5).map((major) => (
-            <span key={major} className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full">
+            <span
+              key={major}
+              className="bg-slate-100 text-slate-700 border border-slate-200 px-3 py-1 rounded-full font-semibold"
+            >
               {major}
             </span>
           ))}
@@ -354,7 +365,7 @@ const DetailPage: React.FC = () => {
           <button
             type="button"
             onClick={addToTargets}
-            className="inline-flex items-center gap-2 rounded-lg bg-brand-secondary px-4 py-2 text-white text-sm font-semibold shadow-sm hover:bg-brand-primary transition"
+            className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2 text-white text-sm font-semibold shadow-sm hover:bg-blue-700 transition"
           >
             Add to My Target Schools
           </button>
@@ -363,7 +374,7 @@ const DetailPage: React.FC = () => {
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
         <main className="lg:col-span-2 space-y-8">
-          <div className="bg-white p-6 rounded-lg shadow-md">
+          <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-6">
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
               <StatCard
                 label="Acceptance rate"
@@ -397,7 +408,7 @@ const DetailPage: React.FC = () => {
           </div>
 
           {applicants && (
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-6">
               <h2 className="text-2xl font-bold text-brand-dark mb-4">Admissions funnel</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 items-end gap-6 text-center">
                 <div>
@@ -422,7 +433,7 @@ const DetailPage: React.FC = () => {
             </div>
           )}
 
-          <div className="bg-white p-6 rounded-lg shadow-md">
+          <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-6">
             <h2 className="text-2xl font-bold text-brand-dark mb-4">Cost Planner</h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
@@ -448,7 +459,7 @@ const DetailPage: React.FC = () => {
             </div>
           </div>
 
-          <div className="bg-white p-6 rounded-lg shadow-md">
+          <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-6">
             <h2 className="text-2xl font-bold text-brand-dark mb-3">Admission requirements</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm">
               <div>
@@ -479,7 +490,7 @@ const DetailPage: React.FC = () => {
           </div>
 
           {latestMetric && (
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-6">
               <h2 className="text-2xl font-bold text-brand-dark mb-2">Test scores &amp; submission rates</h2>
               <p className="text-sm text-gray-600 mb-6">
                 Submission percentages reference accepted students reporting each exam. Use the 25th/50th/75th percentile
@@ -549,7 +560,7 @@ const DetailPage: React.FC = () => {
           )}
 
           {hasDemographics && (
-            <div className="bg-white p-6 rounded-lg shadow-md space-y-5">
+            <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-6 space-y-5">
               <div className="flex items-start justify-between gap-4 flex-wrap">
                 <div>
                   <h2 className="text-2xl font-bold text-brand-dark mb-1">Campus diversity</h2>
@@ -591,7 +602,7 @@ const DetailPage: React.FC = () => {
           )}
 
           {majorsTree.length > 0 && (
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-6">
               <h2 className="text-2xl font-bold text-brand-dark mb-3">Bachelor&apos;s majors offered</h2>
               <div className="space-y-3">
                 {majorsTree.map((two) => (
@@ -624,7 +635,7 @@ const DetailPage: React.FC = () => {
           )}
         </main>
         <aside className="space-y-6 sticky top-24">
-          <div className="bg-white p-6 rounded-lg shadow-md">
+          <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-6">
             <h3 className="text-xl font-bold text-brand-dark mb-4">Quick links</h3>
             <ul className="space-y-2">
               {profile.website && (
@@ -676,7 +687,7 @@ const DetailPage: React.FC = () => {
         <button
           type="button"
           onClick={addToTargets}
-          className="inline-flex items-center gap-2 rounded-lg bg-brand-secondary px-5 py-2.5 text-white text-sm font-semibold shadow-sm hover:bg-brand-primary transition"
+          className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-5 py-2.5 text-white text-sm font-semibold shadow-sm hover:bg-blue-700 transition"
         >
           Add to My Target Schools
         </button>

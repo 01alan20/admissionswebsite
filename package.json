@@ -10,10 +10,16 @@
     "preview": "vite preview",
     "load:supabase:institutions": "node scripts/load_supabase_institutions.mjs",
     "load:supabase:institutions:http": "node scripts/load_supabase_institutions_http.mjs",
+    "load:supabase:index:http": "node scripts/load_supabase_index_http.mjs",
     "load:supabase:locations:http": "node scripts/load_supabase_locations_http.mjs",
     "load:supabase:metrics:http": "node scripts/load_supabase_metrics_http.mjs",
     "load:supabase:majors:http": "node scripts/load_supabase_majors_http.mjs",
-    "load:supabase:requirements-support:http": "node scripts/load_supabase_requirements_support_http.mjs"
+    "load:supabase:demographics:http": "node scripts/load_supabase_demographics_http.mjs",
+    "load:supabase:requirements-support:http": "node scripts/load_supabase_requirements_support_http.mjs",
+    "load:supabase:essays:http": "node scripts/load_supabase_essays_http.mjs",
+    "load:supabase:success-profiles:http": "node scripts/load_supabase_success_profiles_http.mjs",
+    "load:supabase:all:http": "node scripts/load_supabase_all_http.mjs",
+    "load:supabase:refresh-top-applicants": "node scripts/refresh_top_applicants.mjs"
   },
   "dependencies": {
     "@mlc-ai/web-llm": "^0.2.79",

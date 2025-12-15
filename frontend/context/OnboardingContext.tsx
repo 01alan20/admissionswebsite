@@ -42,15 +42,6 @@ const OnboardingContext = createContext<OnboardingContextValue | undefined>(
 );
 
 export const determineNextPath = (step: number | null | undefined): string => {
-  const s = typeof step === "number" ? step : 0;
-  if (s < 1) return "/profile/name";
-  if (s < 2) return "/profile/location";
-  if (s < 3) return "/profile/gpa";
-  if (s < 4) return "/profile/tests";
-  if (s < 5) return "/profile/activities";
-  if (s < 6) return "/profile/recs";
-  if (s < 7) return "/profile/majors";
-  if (s < 8) return "/profile/targets";
   return "/profile/dashboard";
 };
 
@@ -190,8 +181,8 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
 
     const storedProfile = loadProfileFromStorage(currentUser.id);
     const mergedProfile: StudentProfileSummary = {
-      ...fromDb,
       ...(storedProfile || {}),
+      ...fromDb,
     };
     if (mergedProfile.majors) {
       mergedProfile.majors =
@@ -200,6 +191,7 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
     }
 
     setStudentProfileState(mergedProfile);
+    saveProfileToStorage(currentUser.id, mergedProfile);
 
     const targetsFromDb = (profile?.target_universities as any) || [];
     let ids: number[] = [];
@@ -209,8 +201,9 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
         .filter((v) => Number.isFinite(v)) as number[];
     }
     const storedTargets = loadTargetsFromStorage(currentUser.id);
-    const finalIds = storedTargets.length ? storedTargets : ids;
+    const finalIds = ids.length ? ids : storedTargets;
     setTargetUnitIdsState(finalIds);
+    if (ids.length) saveTargetsToStorage(currentUser.id, ids);
   };
 
   useEffect(() => {
@@ -362,6 +355,15 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
   const setTargetUnitIds = (ids: number[]) => {
     setTargetUnitIdsState(ids);
     saveTargetsToStorage(user?.id ?? null, ids);
+    if (user) {
+      void supabase.from("profiles").upsert(
+        {
+          user_id: user.id,
+          target_universities: ids.length ? ids : null,
+        },
+        { onConflict: "user_id" }
+      );
+    }
   };
 
   const logout = async () => {
