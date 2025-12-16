@@ -17,10 +17,10 @@ jobs:
           ref: master
           path: prod
 
-      - name: Checkout beta (combo-attempt)
+      - name: Checkout beta (master snapshot)
         uses: actions/checkout@v4
         with:
-          ref: combo-attempt
+          ref: master
           path: beta
 
       - name: Setup Node
