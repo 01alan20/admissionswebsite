@@ -1,40 +1,50 @@
 import React from "react";
 import type { ReactNode } from "react";
 import { NavLink } from "react-router-dom";
-import { User, ListChecks, Search, NotebookPen, FileText, Map, CalendarDays } from "lucide-react";
+import { User, ListChecks, Search, NotebookPen, FileText, Map, CalendarDays, FlaskConical } from "lucide-react";
 import { useOnboardingContext } from "../context/OnboardingContext";
+import { isBetaUser } from "../utils/betaAccess";
 
 type DashboardLayoutProps = {
   children: ReactNode;
 };
 
-const navSections = [
-  {
-    label: "My Progress",
-    items: [
-      { label: "My Profile", to: "/profile/dashboard", icon: User },
-      { label: "My College List", to: "/profile/college-list", icon: ListChecks },
-    ],
-  },
-  {
-    label: "Essentials",
-    items: [
-      { label: "Colleges", to: "/profile/colleges", icon: Search },
-      { label: "Applications", to: "/profile/applications", icon: NotebookPen },
-      { label: "Essays", to: "/profile/essays", icon: FileText },
-    ],
-  },
-  {
-    label: "Planning",
-    items: [
-      { label: "Pathways", to: "/profile/pathways", icon: Map },
-      { label: "Timelines", to: "/profile/timelines", icon: CalendarDays },
-    ],
-  },
-];
-
 const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
   const { user } = useOnboardingContext();
+  const betaEnabled = isBetaUser(user?.email);
+
+  const navSections = [
+    {
+      label: "My Progress",
+      items: [
+        { label: "My Profile", to: "/profile/dashboard", icon: User },
+        { label: "My College List", to: "/profile/college-list", icon: ListChecks },
+      ],
+    },
+    {
+      label: "Essentials",
+      items: [
+        { label: "Colleges", to: "/profile/colleges", icon: Search },
+        { label: "Applications", to: "/profile/applications", icon: NotebookPen },
+        { label: "Essays", to: "/profile/essays", icon: FileText },
+      ],
+    },
+    ...(betaEnabled
+      ? [
+          {
+            label: "Beta",
+            items: [{ label: "Essay Lab", to: "/profile/beta", icon: FlaskConical }],
+          },
+        ]
+      : []),
+    {
+      label: "Planning",
+      items: [
+        { label: "Pathways", to: "/profile/pathways", icon: Map },
+        { label: "Timelines", to: "/profile/timelines", icon: CalendarDays },
+      ],
+    },
+  ];
 
   return (
     <div className="flex min-h-screen bg-slate-50">

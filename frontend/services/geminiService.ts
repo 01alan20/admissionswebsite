@@ -1,4 +1,3 @@
-import { GoogleGenerativeAI } from "@google/generative-ai";
 import type { StudentProfile, University, AIAnalysisResponse } from "../types";
 import { SYSTEM_INSTRUCTION } from "../constants";
 
@@ -17,7 +16,6 @@ export const analyzeAdmissionProfile = async (
   university: University
 ): Promise<AIAnalysisResponse> => {
   const apiKey = getApiKey();
-  const genAI = new GoogleGenerativeAI(apiKey);
 
   // Format Activities
   const activitiesString =
@@ -88,23 +86,30 @@ export const analyzeAdmissionProfile = async (
     2
   )}\n\nReturn ONLY the JSON object described in the system instruction.`;
 
-  const model = genAI.getGenerativeModel({
-    model: "gemini-2.5-flash",
-    systemInstruction: SYSTEM_INSTRUCTION,
-  });
+  const res = await fetch(
+    `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        systemInstruction: { parts: [{ text: SYSTEM_INSTRUCTION }] },
+        contents: [{ role: "user", parts: [{ text: prompt }] }],
+        generationConfig: { responseMimeType: "application/json" },
+      }),
+    }
+  );
 
-  const result = await model.generateContent({
-    contents: [{ role: "user", parts: [{ text: prompt }] }],
-    generationConfig: {
-      responseMimeType: "application/json",
-    },
-  });
-
-  const text = result.response.text();
-  if (!text) {
-    throw new Error("No response text from Gemini");
+  if (!res.ok) {
+    const details = await res.text();
+    throw new Error(`Gemini request failed: ${res.status} ${details}`);
   }
 
-  const parsed = JSON.parse(text) as AIAnalysisResponse;
-  return parsed;
+  const data = await res.json();
+  const text =
+    data?.candidates?.[0]?.content?.parts?.[0]?.text ??
+    data?.candidates?.[0]?.content?.parts?.map((p: any) => p?.text).join("") ??
+    "";
+  if (!text) throw new Error("No response text from Gemini");
+
+  return JSON.parse(text) as AIAnalysisResponse;
 };
