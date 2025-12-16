@@ -747,26 +747,6 @@ const ExplorePage: React.FC<ExplorePageProps> = ({
               </div>
             </details>
 
-            <details className="space-y-2">
-              <summary className="cursor-pointer text-xs uppercase font-semibold text-slate-500">
-                Location type
-              </summary>
-              <div className="flex flex-wrap gap-2">
-                {locationTypeOptions.map((opt) => (
-                  <Pill
-                    key={opt}
-                    active={draftLocationTypes.includes(opt)}
-                    label={opt}
-                    onClick={() =>
-                      setDraftLocationTypes((prev) =>
-                        prev.includes(opt) ? prev.filter((v) => v !== opt) : [...prev, opt]
-                      )
-                    }
-                  />
-                ))}
-              </div>
-            </details>
-
             <details className="space-y-3">
               <summary className="cursor-pointer text-xs uppercase font-semibold text-slate-500">
                 Majors
