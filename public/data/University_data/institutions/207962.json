@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 207962,
+    "name": "Tulsa Welding School-Tulsa",
+    "city": "Tulsa",
+    "state": "OK",
+    "control": "Private for-profit",
+    "level": "2-year",
+    "carnegie_basic": "Special Focus Two-Year: Technical Professions",
+    "website": "https://www.tws.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Precision Production",
+      "Construction Trades",
+      "Engineering Technologies",
+      "Mechanic & Repair Technologies"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": null,
+      "in_state": null,
+      "out_of_state": null
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 63,
+      "student_faculty_ratio": 30,
+      "total_enrollment": 934
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

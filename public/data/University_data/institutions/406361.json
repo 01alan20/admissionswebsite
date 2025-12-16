@@ -1,0 +1,43 @@
+{
+  "profile": {
+    "unitid": 406361,
+    "name": "Delaware Chenango Madison Otsego BOCES-Practical Nursing Program",
+    "city": "Norwich",
+    "state": "NY",
+    "control": "Public",
+    "level": "2-year",
+    "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
+    "website": "www.dcmoboces.com/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": null,
+      "in_state": null,
+      "out_of_state": null
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 0,
+      "student_faculty_ratio": 15,
+      "total_enrollment": 34
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

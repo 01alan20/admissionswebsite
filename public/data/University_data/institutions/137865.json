@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 137865,
+    "name": "Tom P. Haney Technical College",
+    "city": "Panama City",
+    "state": "FL",
+    "control": "Public",
+    "level": "2-year",
+    "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
+    "website": "www.haney.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Precision Production",
+      "Engineering Technologies",
+      "Mechanic & Repair Technologies"
+    ],
+    "intl_enrollment_pct": 2,
+    "tuition_summary": {
+      "sticker": null,
+      "in_state": null,
+      "out_of_state": null
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 70,
+      "student_faculty_ratio": 21,
+      "total_enrollment": 464
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

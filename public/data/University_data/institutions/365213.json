@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 365213,
+    "name": "Autry Technology Center",
+    "city": "Enid",
+    "state": "OK",
+    "control": "Public",
+    "level": "2-year",
+    "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
+    "website": "autrytech.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Mechanic & Repair Technologies",
+      "Personal & Culinary Services",
+      "Computer & Information Sciences"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": null,
+      "in_state": null,
+      "out_of_state": null
+    },
+    "outcomes": {
+      "acceptance_rate": 84,
+      "yield": 56,
+      "grad_rate_6yr": null,
+      "retention_full_time": 72,
+      "student_faculty_ratio": 6,
+      "total_enrollment": 432
+    }
+  },
+  "requirements": {
+    "required": [
+      "Recommendations",
+      "Secondary School Gpa"
+    ],
+    "considered": [
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Secondary School Rank",
+      "Secondary School Record"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

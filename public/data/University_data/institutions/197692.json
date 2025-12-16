@@ -1,0 +1,58 @@
+{
+  "profile": {
+    "unitid": 197692,
+    "name": "Yeshivath Shaar Hatorah",
+    "city": "Kew Gardens",
+    "state": "NY",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Four-Year: Faith-Related Institutions",
+    "website": "shaarhatorah.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Philosophy & Religious Studies"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 19200.0,
+      "in_state": 18950.0,
+      "out_of_state": 18950.0
+    },
+    "outcomes": {
+      "acceptance_rate": 92,
+      "yield": 78,
+      "grad_rate_6yr": 55,
+      "retention_full_time": 96,
+      "student_faculty_ratio": 15,
+      "total_enrollment": 96
+    }
+  },
+  "requirements": {
+    "required": [
+      "Formal Demonstration Of Competencies",
+      "Recommendations"
+    ],
+    "considered": [
+      "Completion Of College Preparatory Program",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "English Proficiency Test",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 201104,
+    "name": "Ashland University",
+    "city": "Ashland",
+    "state": "OH",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
+    "website": "https://www.ashland.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Education",
+      "Health Professions",
+      "Liberal Arts & Humanities"
+    ],
+    "intl_enrollment_pct": 4,
+    "tuition_summary": {
+      "sticker": 28910.0,
+      "in_state": 24140.0,
+      "out_of_state": 24140.0
+    },
+    "outcomes": {
+      "acceptance_rate": 81,
+      "yield": 18,
+      "grad_rate_6yr": 61,
+      "retention_full_time": 72,
+      "student_faculty_ratio": 15,
+      "total_enrollment": 4143
+    }
+  },
+  "requirements": {
+    "required": [
+      "Secondary School Gpa"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Personal Statement Or Essay",
+      "Secondary School Rank",
+      "Secondary School Record"
+    ],
+    "not_considered": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Recommendations",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

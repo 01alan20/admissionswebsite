@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 143084,
+    "name": "Augustana College",
+    "city": "Rock Island",
+    "state": "IL",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Arts & Sciences Focus",
+    "website": "www.augustana.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Biological & Biomedical Sciences",
+      "Health Professions",
+      "Communication & Journalism"
+    ],
+    "intl_enrollment_pct": 17,
+    "tuition_summary": {
+      "sticker": 49834.0,
+      "in_state": 47916.0,
+      "out_of_state": 47916.0
+    },
+    "outcomes": {
+      "acceptance_rate": 68,
+      "yield": 14,
+      "grad_rate_6yr": 79,
+      "retention_full_time": 83,
+      "student_faculty_ratio": 11,
+      "total_enrollment": 2484
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Legacy Status",
+      "Recommendations",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

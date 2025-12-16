@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 217518,
+    "name": "Roger Williams University",
+    "city": "Bristol",
+    "state": "RI",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Medium Programs",
+    "website": "https://www.rwu.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Homeland Security & Law Enforcement",
+      "Architecture & Planning",
+      "Psychology"
+    ],
+    "intl_enrollment_pct": 1,
+    "tuition_summary": {
+      "sticker": 42666.0,
+      "in_state": 40962.0,
+      "out_of_state": 40962.0
+    },
+    "outcomes": {
+      "acceptance_rate": 88,
+      "yield": 14,
+      "grad_rate_6yr": 67,
+      "retention_full_time": 79,
+      "student_faculty_ratio": 12,
+      "total_enrollment": 4344
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Formal Demonstration Of Competencies",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Legacy Status"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

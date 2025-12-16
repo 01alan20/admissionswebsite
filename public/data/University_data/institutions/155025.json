@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 155025,
+    "name": "Emporia State University",
+    "city": "Emporia",
+    "state": "KS",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
+    "website": "www.emporia.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Education",
+      "Business, Management & Marketing",
+      "Health Professions",
+      "Library Science"
+    ],
+    "intl_enrollment_pct": 5,
+    "tuition_summary": {
+      "sticker": 7356.0,
+      "in_state": 7001.0,
+      "out_of_state": 14918.0
+    },
+    "outcomes": {
+      "acceptance_rate": 98,
+      "yield": 26,
+      "grad_rate_6yr": 54,
+      "retention_full_time": 67,
+      "student_faculty_ratio": 17,
+      "total_enrollment": 4658
+    }
+  },
+  "requirements": {
+    "required": [
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Secondary School Rank"
+    ],
+    "not_considered": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

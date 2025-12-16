@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 182670,
+    "name": "Dartmouth College",
+    "city": "Hanover",
+    "state": "NH",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: Very High Research Activity",
+    "website": "www.dartmouth.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Social Sciences",
+      "Business, Management & Marketing",
+      "Engineering",
+      "Health Professions"
+    ],
+    "intl_enrollment_pct": 21,
+    "tuition_summary": {
+      "sticker": 65739.0,
+      "in_state": 62658.0,
+      "out_of_state": 62658.0
+    },
+    "outcomes": {
+      "acceptance_rate": 6,
+      "yield": 67,
+      "grad_rate_6yr": 96,
+      "retention_full_time": 98,
+      "student_faculty_ratio": 7,
+      "total_enrollment": 6746
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

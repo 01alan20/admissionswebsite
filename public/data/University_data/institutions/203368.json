@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 203368,
+    "name": "John Carroll University",
+    "city": "University Heights",
+    "state": "OH",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
+    "website": "jcu.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Social Sciences",
+      "Biological & Biomedical Sciences",
+      "Parks, Recreation & Fitness"
+    ],
+    "intl_enrollment_pct": 3,
+    "tuition_summary": {
+      "sticker": 49100.0,
+      "in_state": 47290.0,
+      "out_of_state": 47290.0
+    },
+    "outcomes": {
+      "acceptance_rate": 81,
+      "yield": 16,
+      "grad_rate_6yr": 76,
+      "retention_full_time": 85,
+      "student_faculty_ratio": 13,
+      "total_enrollment": 2773
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

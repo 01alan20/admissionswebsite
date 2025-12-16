@@ -1,0 +1,59 @@
+{
+  "profile": {
+    "unitid": 441858,
+    "name": "Eastern Virginia Career College",
+    "city": "Fredericksburg",
+    "state": "VA",
+    "control": "Private for-profit",
+    "level": "2-year",
+    "carnegie_basic": "Special Focus Two-Year: Health Professions",
+    "website": "www.evcc.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Personal & Culinary Services"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": null,
+      "in_state": null,
+      "out_of_state": null
+    },
+    "outcomes": {
+      "acceptance_rate": 87,
+      "yield": 94,
+      "grad_rate_6yr": null,
+      "retention_full_time": 74,
+      "student_faculty_ratio": 7,
+      "total_enrollment": 217
+    }
+  },
+  "requirements": {
+    "required": [
+      "Formal Demonstration Of Competencies",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Legacy Status",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

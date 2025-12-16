@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 165936,
+    "name": "Gordon College",
+    "city": "Wenham",
+    "state": "MA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Arts & Sciences Focus",
+    "website": "www.gordon.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Education",
+      "Business, Management & Marketing",
+      "Biological & Biomedical Sciences",
+      "Psychology"
+    ],
+    "intl_enrollment_pct": 9,
+    "tuition_summary": {
+      "sticker": 28100.0,
+      "in_state": 27040.0,
+      "out_of_state": 27040.0
+    },
+    "outcomes": {
+      "acceptance_rate": 59,
+      "yield": 22,
+      "grad_rate_6yr": 68,
+      "retention_full_time": 83,
+      "student_faculty_ratio": 11,
+      "total_enrollment": 1610
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Formal Demonstration Of Competencies",
+      "Recommendations"
+    ],
+    "not_considered": [
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

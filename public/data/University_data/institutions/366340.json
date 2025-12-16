@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 366340,
+    "name": "Stone Child College",
+    "city": "Box Elder",
+    "state": "MT",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Tribal Colleges",
+    "website": "www.stonechild.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Health Professions",
+      "Education",
+      "Foreign Languages & Linguistics"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 3610.0,
+      "in_state": 2645.0,
+      "out_of_state": 2645.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": null,
+      "student_faculty_ratio": 11,
+      "total_enrollment": 261
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

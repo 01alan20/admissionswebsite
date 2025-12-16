@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 240365,
+    "name": "University of Wisconsin-Oshkosh",
+    "city": "Oshkosh",
+    "state": "WI",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral/Professional Universities",
+    "website": "https://www.uwosh.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Health Professions",
+      "Education",
+      "Liberal Arts & Humanities"
+    ],
+    "intl_enrollment_pct": 1,
+    "tuition_summary": {
+      "sticker": 8212.0,
+      "in_state": 7795.0,
+      "out_of_state": 15368.0
+    },
+    "outcomes": {
+      "acceptance_rate": 87,
+      "yield": 22,
+      "grad_rate_6yr": 58,
+      "retention_full_time": 72,
+      "student_faculty_ratio": 21,
+      "total_enrollment": 13761
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Recommendations",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "profile": {
+    "unitid": 197027,
+    "name": "United States Merchant Marine Academy",
+    "city": "Kings Point",
+    "state": "NY",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
+    "website": "https://www.usmma.edu/",
+    "admissions_url": null,
+    "test_policy": "Required",
+    "major_families": [
+      "Engineering",
+      "Transportation & Materials Moving"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 945.0,
+      "in_state": 1008.0,
+      "out_of_state": 1008.0
+    },
+    "outcomes": {
+      "acceptance_rate": 32,
+      "yield": 61,
+      "grad_rate_6yr": 81,
+      "retention_full_time": 90,
+      "student_faculty_ratio": 13,
+      "total_enrollment": 961
+    }
+  },
+  "requirements": {
+    "required": [
+      "Admission Test Scores",
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Rank",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Completion Of College Preparatory Program",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Required"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

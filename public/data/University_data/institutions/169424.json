@@ -1,0 +1,45 @@
+{
+  "profile": {
+    "unitid": 169424,
+    "name": "Cranbrook Academy of Art",
+    "city": "Bloomfield Hills",
+    "state": "MI",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Four-Year: Arts, Music & Design Schools",
+    "website": "https://cranbrookart.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Visual & Performing Arts",
+      "Multidisciplinary Studies",
+      "Architecture & Planning"
+    ],
+    "intl_enrollment_pct": 27,
+    "tuition_summary": {
+      "sticker": null,
+      "in_state": null,
+      "out_of_state": null
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": null,
+      "student_faculty_ratio": null,
+      "total_enrollment": 119
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

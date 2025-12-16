@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 480198,
+    "name": "Warner Pacific University Professional and Graduate Studies",
+    "city": "Portland",
+    "state": "OR",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
+    "website": "https://www.warnerpacific.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Education",
+      "Psychology",
+      "Public Administration & Social Service"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": null,
+      "in_state": 6240.0,
+      "out_of_state": 6240.0
+    },
+    "outcomes": {
+      "acceptance_rate": 67,
+      "yield": 4,
+      "grad_rate_6yr": null,
+      "retention_full_time": null,
+      "student_faculty_ratio": 10,
+      "total_enrollment": 280
+    }
+  },
+  "requirements": {
+    "required": [
+      "Recommendations",
+      "Secondary School Gpa"
+    ],
+    "considered": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Secondary School Rank",
+      "Secondary School Record",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

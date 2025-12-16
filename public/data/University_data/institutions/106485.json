@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 106485,
+    "name": "University of Arkansas at Monticello",
+    "city": "Monticello",
+    "state": "AR",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Medium Programs",
+    "website": "www.uamont.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Education",
+      "Business, Management & Marketing",
+      "Liberal Arts & Humanities"
+    ],
+    "intl_enrollment_pct": 1,
+    "tuition_summary": {
+      "sticker": 8868.0,
+      "in_state": 8431.0,
+      "out_of_state": 14281.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": 35,
+      "retention_full_time": 69,
+      "student_faculty_ratio": 12,
+      "total_enrollment": 2739
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 178369,
+    "name": "Missouri Valley College",
+    "city": "Marshall",
+    "state": "MO",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
+    "website": "https://www.moval.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Parks, Recreation & Fitness",
+      "Education",
+      "Health Professions"
+    ],
+    "intl_enrollment_pct": 24,
+    "tuition_summary": {
+      "sticker": 23000.0,
+      "in_state": 22450.0,
+      "out_of_state": 22450.0
+    },
+    "outcomes": {
+      "acceptance_rate": 53,
+      "yield": 36,
+      "grad_rate_6yr": 25,
+      "retention_full_time": 53,
+      "student_faculty_ratio": 16,
+      "total_enrollment": 1619
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Rank"
+    ],
+    "not_considered": [
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

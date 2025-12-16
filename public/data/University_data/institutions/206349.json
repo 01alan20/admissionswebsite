@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 206349,
+    "name": "Ursuline College",
+    "city": "Pepper Pike",
+    "state": "OH",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Medium Programs",
+    "website": "www.ursuline.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Health Professions",
+      "Education",
+      "Business, Management & Marketing",
+      "Psychology"
+    ],
+    "intl_enrollment_pct": 4,
+    "tuition_summary": {
+      "sticker": 37860.0,
+      "in_state": 36816.0,
+      "out_of_state": 36816.0
+    },
+    "outcomes": {
+      "acceptance_rate": 84,
+      "yield": 22,
+      "grad_rate_6yr": 53,
+      "retention_full_time": 73,
+      "student_faculty_ratio": 7,
+      "total_enrollment": 923
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Recommendations",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

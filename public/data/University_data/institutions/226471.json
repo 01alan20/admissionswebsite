@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 226471,
+    "name": "University of Mary Hardin-Baylor",
+    "city": "Belton",
+    "state": "TX",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral/Professional Universities",
+    "website": "https://go.umhb.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Health Professions",
+      "Business, Management & Marketing",
+      "Education",
+      "Parks, Recreation & Fitness"
+    ],
+    "intl_enrollment_pct": 2,
+    "tuition_summary": {
+      "sticker": 33150.0,
+      "in_state": 31950.0,
+      "out_of_state": 31950.0
+    },
+    "outcomes": {
+      "acceptance_rate": 95,
+      "yield": 8,
+      "grad_rate_6yr": 53,
+      "retention_full_time": 68,
+      "student_faculty_ratio": 17,
+      "total_enrollment": 3520
+    }
+  },
+  "requirements": {
+    "required": [
+      "Secondary School Gpa",
+      "Secondary School Rank",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Personal Statement Or Essay"
+    ],
+    "not_considered": [
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Recommendations",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

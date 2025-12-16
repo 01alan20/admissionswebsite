@@ -1,0 +1,43 @@
+{
+  "profile": {
+    "unitid": 406024,
+    "name": "Galen College of Nursing-Tampa Bay",
+    "city": "Saint Petersburg",
+    "state": "FL",
+    "control": "Private for-profit",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Two-Year: Health Professions",
+    "website": "www.galencollege.edu/tampabay",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 16400.0,
+      "in_state": null,
+      "out_of_state": null
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": 50,
+      "retention_full_time": 50,
+      "student_faculty_ratio": 12,
+      "total_enrollment": 1601
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

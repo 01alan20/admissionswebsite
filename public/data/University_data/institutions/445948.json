@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 445948,
+    "name": "Northwest Career College",
+    "city": "Las Vegas",
+    "state": "NV",
+    "control": "Private for-profit",
+    "level": "2-year",
+    "carnegie_basic": "Associate's Colleges: High Career & Technical-Mixed Traditional/Nontraditional",
+    "website": "www.northwestcareercollege.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Legal Studies",
+      "Business, Management & Marketing",
+      "Homeland Security & Law Enforcement"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": null,
+      "in_state": null,
+      "out_of_state": null
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 67,
+      "student_faculty_ratio": 36,
+      "total_enrollment": 2222
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

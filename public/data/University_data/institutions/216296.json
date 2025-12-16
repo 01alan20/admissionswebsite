@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 216296,
+    "name": "Thaddeus Stevens College of Technology",
+    "city": "Lancaster",
+    "state": "PA",
+    "control": "Public",
+    "level": "2-year",
+    "carnegie_basic": "Associate's Colleges: High Career & Technical-High Traditional",
+    "website": "stevenscollege.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Mechanic & Repair Technologies",
+      "Precision Production",
+      "Construction Trades",
+      "Engineering"
+    ],
+    "intl_enrollment_pct": 2,
+    "tuition_summary": {
+      "sticker": 9050.0,
+      "in_state": 8450.0,
+      "out_of_state": 8450.0
+    },
+    "outcomes": {
+      "acceptance_rate": 53,
+      "yield": 69,
+      "grad_rate_6yr": null,
+      "retention_full_time": 80,
+      "student_faculty_ratio": 16,
+      "total_enrollment": 1453
+    }
+  },
+  "requirements": {
+    "required": [
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Recommendations"
+    ],
+    "not_considered": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

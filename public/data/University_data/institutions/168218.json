@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 168218,
+    "name": "Wellesley College",
+    "city": "Wellesley",
+    "state": "MA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Arts & Sciences Focus",
+    "website": "www.wellesley.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Social Sciences",
+      "Biological & Biomedical Sciences",
+      "Computer & Information Sciences",
+      "Psychology"
+    ],
+    "intl_enrollment_pct": 14,
+    "tuition_summary": {
+      "sticker": 64320.0,
+      "in_state": 61920.0,
+      "out_of_state": 61920.0
+    },
+    "outcomes": {
+      "acceptance_rate": 14,
+      "yield": 50,
+      "grad_rate_6yr": 91,
+      "retention_full_time": 96,
+      "student_faculty_ratio": 7,
+      "total_enrollment": 2418
+    }
+  },
+  "requirements": {
+    "required": [
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Secondary School Gpa",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

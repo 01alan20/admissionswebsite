@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 211273,
+    "name": "Bryn Mawr College",
+    "city": "Bryn Mawr",
+    "state": "PA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Arts & Sciences Focus",
+    "website": "www.brynmawr.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Social Sciences",
+      "Public Administration & Social Service",
+      "Health Professions",
+      "Biological & Biomedical Sciences"
+    ],
+    "intl_enrollment_pct": 11,
+    "tuition_summary": {
+      "sticker": 62560.0,
+      "in_state": 59330.0,
+      "out_of_state": 59330.0
+    },
+    "outcomes": {
+      "acceptance_rate": 31,
+      "yield": 35,
+      "grad_rate_6yr": 86,
+      "retention_full_time": 90,
+      "student_faculty_ratio": 8,
+      "total_enrollment": 1666
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

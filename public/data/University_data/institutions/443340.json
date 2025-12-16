@@ -1,0 +1,44 @@
+{
+  "profile": {
+    "unitid": 443340,
+    "name": "Williamson Christian College",
+    "city": "Franklin",
+    "state": "TN",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Four-Year: Business & Management Schools",
+    "website": "www.williamsoncc.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Philosophy & Religious Studies"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 15010.0,
+      "in_state": 13940.0,
+      "out_of_state": 13940.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": 50,
+      "retention_full_time": 75,
+      "student_faculty_ratio": 7,
+      "total_enrollment": 57
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

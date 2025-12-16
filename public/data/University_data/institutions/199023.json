@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 199023,
+    "name": "Montgomery Community College",
+    "city": "Troy",
+    "state": "NC",
+    "control": "Public",
+    "level": "2-year",
+    "carnegie_basic": "Associate's Colleges: Mixed Transfer/Career & Technical-High Nontraditional",
+    "website": "www.montgomery.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Mechanic & Repair Technologies",
+      "Health Professions",
+      "Liberal Arts & Humanities",
+      "Business, Management & Marketing"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 2538.0,
+      "in_state": 2538.0,
+      "out_of_state": 8682.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 63,
+      "student_faculty_ratio": 5,
+      "total_enrollment": 1085
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

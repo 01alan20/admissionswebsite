@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 172334,
+    "name": "Spring Arbor University",
+    "city": "Spring Arbor",
+    "state": "MI",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
+    "website": "https://www.arbor.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Health Professions",
+      "Public Administration & Social Service",
+      "Business, Management & Marketing",
+      "Education"
+    ],
+    "intl_enrollment_pct": 2,
+    "tuition_summary": {
+      "sticker": 32580.0,
+      "in_state": 31660.0,
+      "out_of_state": 31660.0
+    },
+    "outcomes": {
+      "acceptance_rate": 37,
+      "yield": 18,
+      "grad_rate_6yr": 59,
+      "retention_full_time": 74,
+      "student_faculty_ratio": 11,
+      "total_enrollment": 2390
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Recommendations",
+      "Secondary School Rank"
+    ],
+    "not_considered": [
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

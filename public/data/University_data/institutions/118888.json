@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 118888,
+    "name": "Northeastern University Oakland",
+    "city": null,
+    "state": "California",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Medium Programs",
+    "website": null,
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Communications Technologies",
+      "Computer & Information Sciences",
+      "Engineering",
+      "Biological & Biomedical Sciences"
+    ],
+    "intl_enrollment_pct": 21,
+    "tuition_summary": {
+      "sticker": 63949.0,
+      "in_state": null,
+      "out_of_state": null
+    },
+    "outcomes": {
+      "acceptance_rate": 17,
+      "yield": 17,
+      "grad_rate_6yr": null,
+      "retention_full_time": null,
+      "student_faculty_ratio": 14,
+      "total_enrollment": 658
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

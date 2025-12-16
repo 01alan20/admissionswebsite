@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 232256,
+    "name": "Hampden-Sydney College",
+    "city": "Hampden-Sydney",
+    "state": "VA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Arts & Sciences Focus",
+    "website": "www.hsc.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Social Sciences",
+      "Business, Management & Marketing",
+      "Biological & Biomedical Sciences",
+      "History"
+    ],
+    "intl_enrollment_pct": 1,
+    "tuition_summary": {
+      "sticker": 52388.0,
+      "in_state": 50740.0,
+      "out_of_state": 50740.0
+    },
+    "outcomes": {
+      "acceptance_rate": 50,
+      "yield": 22,
+      "grad_rate_6yr": 65,
+      "retention_full_time": 85,
+      "student_faculty_ratio": 9,
+      "total_enrollment": 876
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Recommendations",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Secondary School Gpa",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

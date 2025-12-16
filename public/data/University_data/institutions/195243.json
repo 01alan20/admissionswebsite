@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 195243,
+    "name": "St. Thomas Aquinas College",
+    "city": "Sparkill",
+    "state": "NY",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Small Programs",
+    "website": "www.stac.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Education",
+      "Business, Management & Marketing",
+      "Psychology",
+      "Parks, Recreation & Fitness"
+    ],
+    "intl_enrollment_pct": 4,
+    "tuition_summary": {
+      "sticker": 37720.0,
+      "in_state": 36300.0,
+      "out_of_state": 36300.0
+    },
+    "outcomes": {
+      "acceptance_rate": 82,
+      "yield": 13,
+      "grad_rate_6yr": 60,
+      "retention_full_time": 75,
+      "student_faculty_ratio": 16,
+      "total_enrollment": 1950
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

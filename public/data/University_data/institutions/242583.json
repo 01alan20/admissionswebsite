@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 242583,
+    "name": "Instituto Tecnologico de Puerto Rico-Recinto de San Juan",
+    "city": "San Juan",
+    "state": "PR",
+    "control": "Public",
+    "level": "2-year",
+    "carnegie_basic": "Associate's Colleges: High Career & Technical-High Traditional",
+    "website": "https://instituto-tecnologico-de-puerto-rico-1.jimdosite.com/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Engineering Technologies",
+      "Health Professions",
+      "Computer & Information Sciences",
+      "Business, Management & Marketing"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 3707.0,
+      "in_state": 3707.0,
+      "out_of_state": 3707.0
+    },
+    "outcomes": {
+      "acceptance_rate": 76,
+      "yield": 84,
+      "grad_rate_6yr": null,
+      "retention_full_time": 53,
+      "student_faculty_ratio": 6,
+      "total_enrollment": 190
+    }
+  },
+  "requirements": {
+    "required": [
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Secondary School Rank"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Work Experience"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

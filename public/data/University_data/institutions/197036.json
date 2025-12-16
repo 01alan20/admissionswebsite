@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 197036,
+    "name": "United States Military Academy",
+    "city": "West  Point",
+    "state": "NY",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Arts & Sciences Focus",
+    "website": "www.westpoint.edu/",
+    "admissions_url": null,
+    "test_policy": "Required",
+    "major_families": [
+      "Engineering",
+      "Social Sciences",
+      "Foreign Languages & Linguistics",
+      "Psychology"
+    ],
+    "intl_enrollment_pct": 1,
+    "tuition_summary": {
+      "sticker": null,
+      "in_state": null,
+      "out_of_state": null
+    },
+    "outcomes": {
+      "acceptance_rate": 14,
+      "yield": 76,
+      "grad_rate_6yr": 85,
+      "retention_full_time": 96,
+      "student_faculty_ratio": 7,
+      "total_enrollment": 4508
+    }
+  },
+  "requirements": {
+    "required": [
+      "Admission Test Scores",
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Completion Of College Preparatory Program",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Required"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

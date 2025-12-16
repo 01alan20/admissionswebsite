@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 156921,
+    "name": "Jefferson Community and Technical College",
+    "city": "Louisville",
+    "state": "KY",
+    "control": "Public",
+    "level": "2-year",
+    "carnegie_basic": "Associate's Colleges: Mixed Transfer/Career & Technical-High Nontraditional",
+    "website": "https://jefferson.kctcs.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Mechanic & Repair Technologies",
+      "Computer & Information Sciences",
+      "Liberal Arts & Humanities"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 4706.0,
+      "in_state": 4640.0,
+      "out_of_state": 15560.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 60,
+      "student_faculty_ratio": 25,
+      "total_enrollment": 12574
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

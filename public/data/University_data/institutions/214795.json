@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 214795,
+    "name": "Pennsylvania State University-Penn State Mont Alto",
+    "city": "Mont Alto",
+    "state": "PA",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
+    "website": "https://montalto.psu.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Health Professions",
+      "Business, Management & Marketing",
+      "Natural Resources & Conservation",
+      "Family & Consumer Sciences"
+    ],
+    "intl_enrollment_pct": 1,
+    "tuition_summary": {
+      "sticker": 14380.0,
+      "in_state": 14340.0,
+      "out_of_state": 23602.0
+    },
+    "outcomes": {
+      "acceptance_rate": 90,
+      "yield": 24,
+      "grad_rate_6yr": 18,
+      "retention_full_time": 75,
+      "student_faculty_ratio": 9,
+      "total_enrollment": 588
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Personal Statement Or Essay"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Recommendations",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

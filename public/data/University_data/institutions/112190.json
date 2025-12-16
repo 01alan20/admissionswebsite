@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 112190,
+    "name": "City College of San Francisco",
+    "city": "San Francisco",
+    "state": "CA",
+    "control": "Public",
+    "level": "2-year",
+    "carnegie_basic": "Associate's Colleges: Mixed Transfer/Career & Technical-High Traditional",
+    "website": "www.ccsf.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Family & Consumer Sciences",
+      "Liberal Arts & Humanities",
+      "Health Professions",
+      "Computer & Information Sciences"
+    ],
+    "intl_enrollment_pct": 2,
+    "tuition_summary": {
+      "sticker": 1696.0,
+      "in_state": 1696.0,
+      "out_of_state": 12244.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 62,
+      "student_faculty_ratio": 23,
+      "total_enrollment": 17808
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

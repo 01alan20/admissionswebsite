@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 420440,
+    "name": "York County Community College",
+    "city": "Wells",
+    "state": "ME",
+    "control": "Public",
+    "level": "2-year",
+    "carnegie_basic": "Associate's Colleges: High Transfer-High Nontraditional",
+    "website": "https://www.yccc.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Public Administration & Social Service",
+      "Business, Management & Marketing",
+      "Engineering Technologies",
+      "Health Professions"
+    ],
+    "intl_enrollment_pct": 1,
+    "tuition_summary": {
+      "sticker": 3866.0,
+      "in_state": 3760.0,
+      "out_of_state": 6640.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 47,
+      "student_faculty_ratio": 21,
+      "total_enrollment": 1782
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

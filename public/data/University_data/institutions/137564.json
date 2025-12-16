@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 137564,
+    "name": "Southeastern University",
+    "city": "Lakeland",
+    "state": "FL",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral/Professional Universities",
+    "website": "https://www.seu.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Theology & Religious Vocations",
+      "Business, Management & Marketing",
+      "Education",
+      "Public Administration & Social Service"
+    ],
+    "intl_enrollment_pct": 2,
+    "tuition_summary": {
+      "sticker": 31732.0,
+      "in_state": 30148.0,
+      "out_of_state": 30148.0
+    },
+    "outcomes": {
+      "acceptance_rate": 74,
+      "yield": 50,
+      "grad_rate_6yr": 49,
+      "retention_full_time": 72,
+      "student_faculty_ratio": 26,
+      "total_enrollment": 10400
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Secondary School Rank"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Work Experience"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

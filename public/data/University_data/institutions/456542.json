@@ -1,0 +1,44 @@
+{
+  "profile": {
+    "unitid": 456542,
+    "name": "Geisinger Commonwealth School of Medicine",
+    "city": "Scranton",
+    "state": "PA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Four-Year: Medical Schools & Centers",
+    "website": "https://www.geisinger.edu/education",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Biological & Biomedical Sciences",
+      "Health Professions"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 11131.0,
+      "in_state": null,
+      "out_of_state": null
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": null,
+      "student_faculty_ratio": 5,
+      "total_enrollment": 649
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

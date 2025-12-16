@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 240480,
+    "name": "University of Wisconsin-Stevens Point",
+    "city": "Stevens Point",
+    "state": "WI",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Medium Programs",
+    "website": "https://www.uwsp.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Education",
+      "Natural Resources & Conservation",
+      "Business, Management & Marketing",
+      "Health Professions"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 8834.0,
+      "in_state": 8376.0,
+      "out_of_state": 17080.0
+    },
+    "outcomes": {
+      "acceptance_rate": 90,
+      "yield": 23,
+      "grad_rate_6yr": 56,
+      "retention_full_time": 75,
+      "student_faculty_ratio": 21,
+      "total_enrollment": 8109
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Recommendations",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

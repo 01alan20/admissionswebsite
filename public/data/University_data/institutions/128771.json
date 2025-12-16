@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 128771,
+    "name": "Central Connecticut State University",
+    "city": "New Britain",
+    "state": "CT",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
+    "website": "www2.ccsu.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Education",
+      "Social Sciences",
+      "Psychology"
+    ],
+    "intl_enrollment_pct": 2,
+    "tuition_summary": {
+      "sticker": 12460.0,
+      "in_state": 12106.0,
+      "out_of_state": 24994.0
+    },
+    "outcomes": {
+      "acceptance_rate": 76,
+      "yield": 23,
+      "grad_rate_6yr": 49,
+      "retention_full_time": 79,
+      "student_faculty_ratio": 14,
+      "total_enrollment": 9712
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Rank",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

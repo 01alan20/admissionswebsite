@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 209506,
+    "name": "Oregon Institute of Technology",
+    "city": "Klamath Falls",
+    "state": "OR",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
+    "website": "https://www.oit.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Health Professions",
+      "Engineering",
+      "Engineering Technologies",
+      "Computer & Information Sciences"
+    ],
+    "intl_enrollment_pct": 1,
+    "tuition_summary": {
+      "sticker": 12687.0,
+      "in_state": 12122.0,
+      "out_of_state": 33956.0
+    },
+    "outcomes": {
+      "acceptance_rate": 92,
+      "yield": 9,
+      "grad_rate_6yr": 59,
+      "retention_full_time": 73,
+      "student_faculty_ratio": 14,
+      "total_enrollment": 5103
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

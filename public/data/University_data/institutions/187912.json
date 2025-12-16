@@ -1,0 +1,58 @@
+{
+  "profile": {
+    "unitid": 187912,
+    "name": "New Mexico Military Institute",
+    "city": "Roswell",
+    "state": "NM",
+    "control": "Public",
+    "level": "2-year",
+    "carnegie_basic": "Associate's Colleges: High Transfer-Mixed Traditional/Nontraditional",
+    "website": "www.nmmi.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Liberal Arts & Humanities"
+    ],
+    "intl_enrollment_pct": 18,
+    "tuition_summary": {
+      "sticker": 6990.0,
+      "in_state": 6965.0,
+      "out_of_state": 14017.0
+    },
+    "outcomes": {
+      "acceptance_rate": 58,
+      "yield": 76,
+      "grad_rate_6yr": null,
+      "retention_full_time": 58,
+      "student_faculty_ratio": 14,
+      "total_enrollment": 459
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Secondary School Rank"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Recommendations",
+      "Work Experience"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

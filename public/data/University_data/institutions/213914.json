@@ -1,0 +1,58 @@
+{
+  "profile": {
+    "unitid": 213914,
+    "name": "Vet Tech Institute",
+    "city": "Pittsburgh",
+    "state": "PA",
+    "control": "Private for-profit",
+    "level": "2-year",
+    "carnegie_basic": "Special Focus Two-Year: Health Professions",
+    "website": "vti.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Agriculture & Natural Resources"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 16920.0,
+      "in_state": 16100.0,
+      "out_of_state": 16100.0
+    },
+    "outcomes": {
+      "acceptance_rate": 73,
+      "yield": 60,
+      "grad_rate_6yr": null,
+      "retention_full_time": 76,
+      "student_faculty_ratio": 15,
+      "total_enrollment": 199
+    }
+  },
+  "requirements": {
+    "required": [
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Recommendations",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Secondary School Rank"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

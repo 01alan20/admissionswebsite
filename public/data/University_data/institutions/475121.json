@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 475121,
+    "name": "South University-Savannah Online",
+    "city": "Savannah",
+    "state": "GA",
+    "control": "Private for-profit",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral/Professional Universities",
+    "website": "www.southuniversity.edu/online#location=Online Programs",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Business, Management & Marketing",
+      "Computer & Information Sciences",
+      "Psychology"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 16546.0,
+      "in_state": 15394.0,
+      "out_of_state": 15394.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": 5,
+      "retention_full_time": 24,
+      "student_faculty_ratio": 31,
+      "total_enrollment": 8816
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

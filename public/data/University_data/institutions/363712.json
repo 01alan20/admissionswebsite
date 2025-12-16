@@ -1,0 +1,43 @@
+{
+  "profile": {
+    "unitid": 363712,
+    "name": "Yeshivah Gedolah Rabbinical College",
+    "city": "Miami Beach",
+    "state": "FL",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Four-Year: Faith-Related Institutions",
+    "website": "www.lecfl.com/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Theology & Religious Vocations"
+    ],
+    "intl_enrollment_pct": 9,
+    "tuition_summary": {
+      "sticker": 9300.0,
+      "in_state": 8800.0,
+      "out_of_state": 8800.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": 36,
+      "retention_full_time": 83,
+      "student_faculty_ratio": 12,
+      "total_enrollment": 77
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 199926,
+    "name": "Wilkes Community College",
+    "city": "Wilkesboro",
+    "state": "NC",
+    "control": "Public",
+    "level": "2-year",
+    "carnegie_basic": "Associate's Colleges: Mixed Transfer/Career & Technical-Mixed Traditional/Nontraditional",
+    "website": "www.wilkescc.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Liberal Arts & Humanities",
+      "Business, Management & Marketing",
+      "Mechanic & Repair Technologies",
+      "Health Professions"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 2572.0,
+      "in_state": 2572.0,
+      "out_of_state": 8716.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 75,
+      "student_faculty_ratio": 8,
+      "total_enrollment": 2405
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

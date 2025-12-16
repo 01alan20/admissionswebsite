@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 241304,
+    "name": "Columbia Central University-Caguas",
+    "city": "Caguas",
+    "state": "PR",
+    "control": "Private for-profit",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Four-Year: Other Health Professions Schools",
+    "website": "columbiacentral.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Agriculture & Natural Resources",
+      "Business, Management & Marketing",
+      "Communications Technologies"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 7314.0,
+      "in_state": 7830.0,
+      "out_of_state": 7830.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": 58,
+      "retention_full_time": 46,
+      "student_faculty_ratio": 9,
+      "total_enrollment": 2810
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

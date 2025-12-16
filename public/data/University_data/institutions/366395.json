@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 366395,
+    "name": "Suffolk County Community College",
+    "city": "Selden",
+    "state": "NY",
+    "control": "Public",
+    "level": "2-year",
+    "carnegie_basic": "Associate's Colleges: High Transfer-High Traditional",
+    "website": "https://www.sunysuffolk.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Liberal Arts & Humanities",
+      "Business, Management & Marketing",
+      "Health Professions",
+      "Homeland Security & Law Enforcement"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 6440.0,
+      "in_state": 6270.0,
+      "out_of_state": 11740.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 62,
+      "student_faculty_ratio": 22,
+      "total_enrollment": 20053
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

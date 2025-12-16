@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 444398,
+    "name": "Baptist University of the Americas",
+    "city": "San Antonio",
+    "state": "TX",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
+    "website": "www.bua.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Philosophy & Religious Studies",
+      "Liberal Arts & Humanities",
+      "Business, Management & Marketing",
+      "Multidisciplinary Studies"
+    ],
+    "intl_enrollment_pct": 42,
+    "tuition_summary": {
+      "sticker": 7680.0,
+      "in_state": 6768.0,
+      "out_of_state": 6768.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": 20,
+      "retention_full_time": 56,
+      "student_faculty_ratio": 12,
+      "total_enrollment": 101
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

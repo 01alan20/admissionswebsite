@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 128902,
+    "name": "Connecticut College",
+    "city": "New London",
+    "state": "CT",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Arts & Sciences Focus",
+    "website": "www.conncoll.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Social Sciences",
+      "Biological & Biomedical Sciences",
+      "Visual & Performing Arts",
+      "Psychology"
+    ],
+    "intl_enrollment_pct": 6,
+    "tuition_summary": {
+      "sticker": 64812.0,
+      "in_state": 63005.0,
+      "out_of_state": 63005.0
+    },
+    "outcomes": {
+      "acceptance_rate": 38,
+      "yield": 15,
+      "grad_rate_6yr": 84,
+      "retention_full_time": 87,
+      "student_faculty_ratio": 9,
+      "total_enrollment": 1995
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Secondary School Gpa",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

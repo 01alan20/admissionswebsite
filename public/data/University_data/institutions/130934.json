@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 130934,
+    "name": "Delaware State University",
+    "city": "Dover",
+    "state": "DE",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Medium Programs",
+    "website": "www.desu.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Public Administration & Social Service",
+      "Health Professions",
+      "Business, Management & Marketing",
+      "Parks, Recreation & Fitness"
+    ],
+    "intl_enrollment_pct": 2,
+    "tuition_summary": {
+      "sticker": 10314.0,
+      "in_state": 8358.0,
+      "out_of_state": 18280.0
+    },
+    "outcomes": {
+      "acceptance_rate": 62,
+      "yield": 30,
+      "grad_rate_6yr": 39,
+      "retention_full_time": 72,
+      "student_faculty_ratio": 18,
+      "total_enrollment": 5828
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Recommendations",
+      "Secondary School Rank"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

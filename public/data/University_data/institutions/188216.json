@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 188216,
+    "name": "Southwestern Indian Polytechnic Institute",
+    "city": "Albuquerque",
+    "state": "NM",
+    "control": "Public",
+    "level": "2-year",
+    "carnegie_basic": "Tribal Colleges",
+    "website": "www.sipi.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Liberal Arts & Humanities",
+      "Engineering Technologies",
+      "Education",
+      "Business, Management & Marketing"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 1095.0,
+      "in_state": null,
+      "out_of_state": null
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 44,
+      "student_faculty_ratio": 7,
+      "total_enrollment": 233
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

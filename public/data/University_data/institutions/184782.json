@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 184782,
+    "name": "Rowan University",
+    "city": "Glassboro",
+    "state": "NJ",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: High Research Activity",
+    "website": "https://www.rowan.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Health Professions",
+      "Education",
+      "Psychology"
+    ],
+    "intl_enrollment_pct": 6,
+    "tuition_summary": {
+      "sticker": 15700.0,
+      "in_state": 14952.0,
+      "out_of_state": 24345.0
+    },
+    "outcomes": {
+      "acceptance_rate": 78,
+      "yield": 18,
+      "grad_rate_6yr": 68,
+      "retention_full_time": 82,
+      "student_faculty_ratio": 16,
+      "total_enrollment": 19660
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Recommendations"
+    ],
+    "not_considered": [
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

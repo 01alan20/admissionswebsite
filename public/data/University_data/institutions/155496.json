@@ -1,0 +1,60 @@
+{
+  "profile": {
+    "unitid": 155496,
+    "name": "Manhattan Christian College",
+    "city": "Manhattan",
+    "state": "KS",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Four-Year: Faith-Related Institutions",
+    "website": "www.mccks.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Theology & Religious Vocations",
+      "Business, Management & Marketing",
+      "Liberal Arts & Humanities"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 18424.0,
+      "in_state": 17914.0,
+      "out_of_state": 17914.0
+    },
+    "outcomes": {
+      "acceptance_rate": 100,
+      "yield": 68,
+      "grad_rate_6yr": 41,
+      "retention_full_time": 68,
+      "student_faculty_ratio": 12,
+      "total_enrollment": 145
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Recommendations",
+      "Secondary School Gpa"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Legacy Status",
+      "Personal Statement Or Essay"
+    ],
+    "not_considered": [
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank",
+      "Secondary School Record",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

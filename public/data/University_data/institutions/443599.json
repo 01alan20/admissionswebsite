@@ -1,0 +1,58 @@
+{
+  "profile": {
+    "unitid": 443599,
+    "name": "American College of Healthcare Sciences",
+    "city": "Portland",
+    "state": "OR",
+    "control": "Private for-profit",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Four-Year: Other Health Professions Schools",
+    "website": "www.achs.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Health Professions"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 12656.0,
+      "in_state": 10928.0,
+      "out_of_state": 10928.0
+    },
+    "outcomes": {
+      "acceptance_rate": 58,
+      "yield": 76,
+      "grad_rate_6yr": null,
+      "retention_full_time": 50,
+      "student_faculty_ratio": 20,
+      "total_enrollment": 1042
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores"
+    ],
+    "not_considered": [
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Recommendations",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

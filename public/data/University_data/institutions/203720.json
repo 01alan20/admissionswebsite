@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 203720,
+    "name": "Ohio Business College-Sheffield",
+    "city": "Sheffield Village",
+    "state": "OH",
+    "control": "Private for-profit",
+    "level": "2-year",
+    "carnegie_basic": "Special Focus Two-Year: Other Fields",
+    "website": "www.ohiobusinesscollege.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Construction Trades",
+      "Mechanic & Repair Technologies",
+      "Health Professions",
+      "Business, Management & Marketing"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 9385.0,
+      "in_state": 9385.0,
+      "out_of_state": 9385.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 69,
+      "student_faculty_ratio": 12,
+      "total_enrollment": 165
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

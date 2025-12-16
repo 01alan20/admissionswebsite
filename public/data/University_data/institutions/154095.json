@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 154095,
+    "name": "University of Northern Iowa",
+    "city": "Cedar Falls",
+    "state": "IA",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
+    "website": "https://www.uni.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Education",
+      "Business, Management & Marketing",
+      "Health Professions",
+      "Psychology"
+    ],
+    "intl_enrollment_pct": 2,
+    "tuition_summary": {
+      "sticker": 9728.0,
+      "in_state": 9411.0,
+      "out_of_state": 20565.0
+    },
+    "outcomes": {
+      "acceptance_rate": 94,
+      "yield": 33,
+      "grad_rate_6yr": 69,
+      "retention_full_time": 85,
+      "student_faculty_ratio": 17,
+      "total_enrollment": 9013
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores"
+    ],
+    "not_considered": [
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

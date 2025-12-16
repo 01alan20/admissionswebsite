@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 196097,
+    "name": "Stony Brook University",
+    "city": "Stony Brook",
+    "state": "NY",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: Very High Research Activity",
+    "website": "https://www.stonybrook.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Health Professions",
+      "Business, Management & Marketing",
+      "Biological & Biomedical Sciences",
+      "Psychology"
+    ],
+    "intl_enrollment_pct": 13,
+    "tuition_summary": {
+      "sticker": 10560.0,
+      "in_state": 10560.0,
+      "out_of_state": 28480.0
+    },
+    "outcomes": {
+      "acceptance_rate": 49,
+      "yield": 14,
+      "grad_rate_6yr": 78,
+      "retention_full_time": 89,
+      "student_faculty_ratio": 19,
+      "total_enrollment": 25865
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

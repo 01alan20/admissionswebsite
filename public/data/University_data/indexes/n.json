@@ -1,0 +1,1664 @@
+[
+  {
+    "unitid":101277,
+    "name":"New Beginning College of Cosmetology",
+    "state":"AL",
+    "city":"Albertville"
+  },
+  {
+    "unitid":101736,
+    "name":"Northwest Shoals Community College",
+    "state":"AL",
+    "city":"Muscle Shoals"
+  },
+  {
+    "unitid":101897,
+    "name":"Northeast Alabama Community College",
+    "state":"AL",
+    "city":"Rainsville"
+  },
+  {
+    "unitid":105330,
+    "name":"Northern Arizona University",
+    "state":"AZ",
+    "city":"Flagstaff"
+  },
+  {
+    "unitid":105349,
+    "name":"Northland Pioneer College",
+    "state":"AZ",
+    "city":"Holbrook"
+  },
+  {
+    "unitid":106980,
+    "name":"National Park College",
+    "state":"AR",
+    "city":"Hot Springs"
+  },
+  {
+    "unitid":107442,
+    "name":"New Tyler Barber College Inc",
+    "state":"AR",
+    "city":"North Little Rock"
+  },
+  {
+    "unitid":107460,
+    "name":"North Arkansas College",
+    "state":"AR",
+    "city":"Harrison"
+  },
+  {
+    "unitid":107488,
+    "name":"Northwest Technical Institute",
+    "state":"AR",
+    "city":"Springdale"
+  },
+  {
+    "unitid":118888,
+    "name":"Northeastern University Oakland",
+    "state":"California",
+    "city":null
+  },
+  {
+    "unitid":119331,
+    "name":"Napa Valley College",
+    "state":"CA",
+    "city":"Napa"
+  },
+  {
+    "unitid":119553,
+    "name":"National Holistic Institute",
+    "state":"CA",
+    "city":"Emeryville"
+  },
+  {
+    "unitid":119605,
+    "name":"National University",
+    "state":"CA",
+    "city":"San Diego"
+  },
+  {
+    "unitid":119678,
+    "name":"Naval Postgraduate School",
+    "state":"CA",
+    "city":"Monterey"
+  },
+  {
+    "unitid":119775,
+    "name":"Newschool of Architecture and Design",
+    "state":"CA",
+    "city":"San Diego"
+  },
+  {
+    "unitid":119951,
+    "name":"North Adrian's College of Beauty Inc",
+    "state":"CA",
+    "city":"Modesto"
+  },
+  {
+    "unitid":120023,
+    "name":"North Orange County Community College District",
+    "state":"California",
+    "city":null
+  },
+  {
+    "unitid":120069,
+    "name":"North-West College-Pomona",
+    "state":"CA",
+    "city":"Pomona"
+  },
+  {
+    "unitid":120078,
+    "name":"North-West College-West Covina",
+    "state":"CA",
+    "city":"West Covina"
+  },
+  {
+    "unitid":120087,
+    "name":"North-West College-Van Nuys",
+    "state":"CA",
+    "city":"Van Nuys"
+  },
+  {
+    "unitid":120184,
+    "name":"Notre Dame de Namur University",
+    "state":"CA",
+    "city":"Belmont"
+  },
+  {
+    "unitid":127653,
+    "name":"Naropa University",
+    "state":"CO",
+    "city":"Boulder"
+  },
+  {
+    "unitid":127714,
+    "name":"Nazarene Bible College",
+    "state":"CO",
+    "city":"Colorado Springs"
+  },
+  {
+    "unitid":127732,
+    "name":"Northeastern Junior College",
+    "state":"CO",
+    "city":"Sterling"
+  },
+  {
+    "unitid":129729,
+    "name":"Naugatuck Valley Community College",
+    "state":"CT",
+    "city":"Waterbury"
+  },
+  {
+    "unitid":129932,
+    "name":"New England Tractor Trailer Training School of Connecticut",
+    "state":"CT",
+    "city":"Somers"
+  },
+  {
+    "unitid":130040,
+    "name":"Northwestern Connecticut Community College",
+    "state":"CT",
+    "city":"Winsted"
+  },
+  {
+    "unitid":131830,
+    "name":"National Conservatory of Dramatic Arts",
+    "state":"DC",
+    "city":"Washington"
+  },
+  {
+    "unitid":132675,
+    "name":"North Florida Technical College",
+    "state":"FL",
+    "city":"Starke"
+  },
+  {
+    "unitid":136145,
+    "name":"North Florida College",
+    "state":"FL",
+    "city":"Madison"
+  },
+  {
+    "unitid":136215,
+    "name":"Nova Southeastern University",
+    "state":"FL",
+    "city":"Fort Lauderdale"
+  },
+  {
+    "unitid":136233,
+    "name":"Northwest Florida State College",
+    "state":"FL",
+    "city":"Niceville"
+  },
+  {
+    "unitid":140678,
+    "name":"North Georgia Technical College",
+    "state":"GA",
+    "city":"Clarkesville"
+  },
+  {
+    "unitid":142443,
+    "name":"North Idaho College",
+    "state":"ID",
+    "city":"Coeur d'Alene"
+  },
+  {
+    "unitid":142461,
+    "name":"Northwest Nazarene University",
+    "state":"ID",
+    "city":"Nampa"
+  },
+  {
+    "unitid":142489,
+    "name":"Nathan Layne Institute of Cosmetology",
+    "state":"ID",
+    "city":"Chubbuck"
+  },
+  {
+    "unitid":147536,
+    "name":"National Louis University",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":147590,
+    "name":"National University of Health Sciences",
+    "state":"IL",
+    "city":"Lombard"
+  },
+  {
+    "unitid":147660,
+    "name":"North Central College",
+    "state":"IL",
+    "city":"Naperville"
+  },
+  {
+    "unitid":147679,
+    "name":"North Park University",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":147697,
+    "name":"Northern Baptist Theological Seminary",
+    "state":"IL",
+    "city":"Lisle"
+  },
+  {
+    "unitid":147703,
+    "name":"Northern Illinois University",
+    "state":"IL",
+    "city":"Dekalb"
+  },
+  {
+    "unitid":147767,
+    "name":"Northwestern University",
+    "state":"IL",
+    "city":"Evanston"
+  },
+  {
+    "unitid":147776,
+    "name":"Northeastern Illinois University",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":148955,
+    "name":"National Latino Education Institute",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":154059,
+    "name":"North Iowa Area Community College",
+    "state":"IA",
+    "city":"Mason City"
+  },
+  {
+    "unitid":154101,
+    "name":"Northwestern College",
+    "state":"IA",
+    "city":"Orange City"
+  },
+  {
+    "unitid":154110,
+    "name":"Northeast Iowa Community College",
+    "state":"IA",
+    "city":"Calmar"
+  },
+  {
+    "unitid":154129,
+    "name":"Northwest Iowa Community College",
+    "state":"IA",
+    "city":"Sheldon"
+  },
+  {
+    "unitid":155335,
+    "name":"Newman University",
+    "state":"KS",
+    "city":"Wichita"
+  },
+  {
+    "unitid":155566,
+    "name":"Neosho County Community College",
+    "state":"KS",
+    "city":"Chanute"
+  },
+  {
+    "unitid":155593,
+    "name":"North Central Kansas Technical College",
+    "state":"KS",
+    "city":"Beloit"
+  },
+  {
+    "unitid":155618,
+    "name":"Northwest Kansas Technical College",
+    "state":"KS",
+    "city":"Goodland"
+  },
+  {
+    "unitid":157447,
+    "name":"Northern Kentucky University",
+    "state":"KY",
+    "city":"Highland Heights"
+  },
+  {
+    "unitid":158884,
+    "name":"Nunez Community College",
+    "state":"LA",
+    "city":"Chalmette"
+  },
+  {
+    "unitid":159948,
+    "name":"New Orleans Baptist Theological Seminary",
+    "state":"LA",
+    "city":"New Orleans"
+  },
+  {
+    "unitid":159966,
+    "name":"Nicholls State University",
+    "state":"LA",
+    "city":"Thibodaux"
+  },
+  {
+    "unitid":160010,
+    "name":"Northwest Louisiana Technical Community College",
+    "state":"LA",
+    "city":"Minden"
+  },
+  {
+    "unitid":160038,
+    "name":"Northwestern State University of Louisiana",
+    "state":"LA",
+    "city":"Natchitoches"
+  },
+  {
+    "unitid":160667,
+    "name":"Northshore Technical Community College",
+    "state":"LA",
+    "city":"Lacombe"
+  },
+  {
+    "unitid":161484,
+    "name":"Northern Maine Community College",
+    "state":"ME",
+    "city":"Presque Isle"
+  },
+  {
+    "unitid":162371,
+    "name":"North American Trade Schools",
+    "state":"MD",
+    "city":"Baltimore"
+  },
+  {
+    "unitid":163532,
+    "name":"Ner Israel Rabbinical College",
+    "state":"MD",
+    "city":"Baltimore"
+  },
+  {
+    "unitid":163578,
+    "name":"Notre Dame of Maryland University",
+    "state":"MD",
+    "city":"Baltimore"
+  },
+  {
+    "unitid":165635,
+    "name":"National Aviation Academy of New England",
+    "state":"MA",
+    "city":"Concord"
+  },
+  {
+    "unitid":167093,
+    "name":"New England College of Optometry",
+    "state":"MA",
+    "city":"Boston"
+  },
+  {
+    "unitid":167215,
+    "name":"New England Law-Boston",
+    "state":"MA",
+    "city":"Boston"
+  },
+  {
+    "unitid":167260,
+    "name":"Nichols College",
+    "state":"MA",
+    "city":"Dudley"
+  },
+  {
+    "unitid":167297,
+    "name":"North Bennet Street School",
+    "state":"MA",
+    "city":"Boston"
+  },
+  {
+    "unitid":167312,
+    "name":"North Shore Community College",
+    "state":"MA",
+    "city":"Danvers"
+  },
+  {
+    "unitid":167358,
+    "name":"Northeastern University",
+    "state":"MA",
+    "city":"Boston"
+  },
+  {
+    "unitid":167376,
+    "name":"Northern Essex Community College",
+    "state":"MA",
+    "city":"Haverhill"
+  },
+  {
+    "unitid":168573,
+    "name":"Northwestern Technological Institute",
+    "state":"MI",
+    "city":"Southfield"
+  },
+  {
+    "unitid":171395,
+    "name":"North Central Michigan College",
+    "state":"MI",
+    "city":"Petoskey"
+  },
+  {
+    "unitid":171456,
+    "name":"Northern Michigan University",
+    "state":"MI",
+    "city":"Marquette"
+  },
+  {
+    "unitid":171483,
+    "name":"Northwestern Michigan College",
+    "state":"MI",
+    "city":"Traverse City"
+  },
+  {
+    "unitid":171492,
+    "name":"Northwood University",
+    "state":"MI",
+    "city":"Midland"
+  },
+  {
+    "unitid":173115,
+    "name":"Northwest Technical College",
+    "state":"MN",
+    "city":"Bemidji"
+  },
+  {
+    "unitid":174190,
+    "name":"Nova Academy of Cosmetology Woodbury",
+    "state":"MN",
+    "city":"WOODBURY"
+  },
+  {
+    "unitid":174376,
+    "name":"North Hennepin Community College",
+    "state":"MN",
+    "city":"Brooklyn Park"
+  },
+  {
+    "unitid":174428,
+    "name":"Normandale Community College",
+    "state":"MN",
+    "city":"Bloomington"
+  },
+  {
+    "unitid":174437,
+    "name":"North Central University",
+    "state":"MN",
+    "city":"Minneapolis"
+  },
+  {
+    "unitid":174473,
+    "name":"Northland Community and Technical College",
+    "state":"MN",
+    "city":"Thief River Falls"
+  },
+  {
+    "unitid":174507,
+    "name":"Northwestern Health Sciences University",
+    "state":"MN",
+    "city":"Bloomington"
+  },
+  {
+    "unitid":176169,
+    "name":"Northeast Mississippi Community College",
+    "state":"MS",
+    "city":"Booneville"
+  },
+  {
+    "unitid":176178,
+    "name":"Northwest Mississippi Community College",
+    "state":"MS",
+    "city":"Senatobia"
+  },
+  {
+    "unitid":178518,
+    "name":"Nazarene Theological Seminary",
+    "state":"MO",
+    "city":"Kansas City"
+  },
+  {
+    "unitid":178527,
+    "name":"Neosho Beauty College",
+    "state":"MO",
+    "city":"Neosho"
+  },
+  {
+    "unitid":178624,
+    "name":"Northwest Missouri State University",
+    "state":"MO",
+    "city":"Maryville"
+  },
+  {
+    "unitid":179715,
+    "name":"North Central Missouri College",
+    "state":"MO",
+    "city":"Trenton"
+  },
+  {
+    "unitid":181297,
+    "name":"Nebraska Methodist College of Nursing & Allied Health",
+    "state":"NE",
+    "city":"Omaha"
+  },
+  {
+    "unitid":181419,
+    "name":"Nebraska Indian Community College",
+    "state":"NE",
+    "city":"Macy"
+  },
+  {
+    "unitid":181446,
+    "name":"Nebraska Wesleyan University",
+    "state":"NE",
+    "city":"Lincoln"
+  },
+  {
+    "unitid":181491,
+    "name":"Northeast Community College",
+    "state":"NE",
+    "city":"Norfolk"
+  },
+  {
+    "unitid":181765,
+    "name":"Nebraska College of Technical Agriculture",
+    "state":"NE",
+    "city":"Curtis"
+  },
+  {
+    "unitid":182519,
+    "name":"Nevada System of Higher Education-System Office",
+    "state":"Nevada",
+    "city":null
+  },
+  {
+    "unitid":182980,
+    "name":"New England College",
+    "state":"NH",
+    "city":"Henniker"
+  },
+  {
+    "unitid":182999,
+    "name":"New England School of Hair Design",
+    "state":"NH",
+    "city":"West Lebanon"
+  },
+  {
+    "unitid":183035,
+    "name":"New Hampshire Institute for Therapeutic Arts",
+    "state":"NH",
+    "city":"Nashua"
+  },
+  {
+    "unitid":183099,
+    "name":"NHTI-Concord's Community College",
+    "state":"NH",
+    "city":"Concord"
+  },
+  {
+    "unitid":183141,
+    "name":"Nashua Community College",
+    "state":"NH",
+    "city":"Nashua"
+  },
+  {
+    "unitid":185129,
+    "name":"New Jersey City University",
+    "state":"NJ",
+    "city":"Jersey City"
+  },
+  {
+    "unitid":185758,
+    "name":"New Brunswick Theological Seminary",
+    "state":"NJ",
+    "city":"New Brunswick"
+  },
+  {
+    "unitid":185828,
+    "name":"New Jersey Institute of Technology",
+    "state":"NJ",
+    "city":"Newark"
+  },
+  {
+    "unitid":187596,
+    "name":"Navajo Technical University",
+    "state":"NM",
+    "city":"Crownpoint"
+  },
+  {
+    "unitid":187620,
+    "name":"New Mexico State University-Dona Ana",
+    "state":"NM",
+    "city":"Las Cruces"
+  },
+  {
+    "unitid":187897,
+    "name":"New Mexico Highlands University",
+    "state":"NM",
+    "city":"Las Vegas"
+  },
+  {
+    "unitid":187903,
+    "name":"New Mexico Junior College",
+    "state":"NM",
+    "city":"Hobbs"
+  },
+  {
+    "unitid":187912,
+    "name":"New Mexico Military Institute",
+    "state":"NM",
+    "city":"Roswell"
+  },
+  {
+    "unitid":187967,
+    "name":"New Mexico Institute of Mining and Technology",
+    "state":"NM",
+    "city":"Socorro"
+  },
+  {
+    "unitid":187994,
+    "name":"New Mexico State University-Alamogordo",
+    "state":"NM",
+    "city":"Alamogordo"
+  },
+  {
+    "unitid":188021,
+    "name":"New Mexico State University-Grants",
+    "state":"NM",
+    "city":"Grants"
+  },
+  {
+    "unitid":188030,
+    "name":"New Mexico State University-Main Campus",
+    "state":"NM",
+    "city":"Las Cruces"
+  },
+  {
+    "unitid":188058,
+    "name":"Northern New Mexico College",
+    "state":"NM",
+    "city":"Espanola"
+  },
+  {
+    "unitid":193478,
+    "name":"Nassau Community College",
+    "state":"NY",
+    "city":"Garden City"
+  },
+  {
+    "unitid":193584,
+    "name":"Nazareth University",
+    "state":"NY",
+    "city":"Rochester"
+  },
+  {
+    "unitid":193609,
+    "name":"Neighborhood Playhouse School of the Theater",
+    "state":"NY",
+    "city":"New York City"
+  },
+  {
+    "unitid":193751,
+    "name":"Northeast College of Health Sciences",
+    "state":"NY",
+    "city":"Seneca Falls"
+  },
+  {
+    "unitid":193821,
+    "name":"New York Law School",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":193830,
+    "name":"New York Medical College",
+    "state":"NY",
+    "city":"Valhalla"
+  },
+  {
+    "unitid":193858,
+    "name":"New York School for Medical and Dental Assistants",
+    "state":"NY",
+    "city":"Long Island City"
+  },
+  {
+    "unitid":193894,
+    "name":"New York Theological Seminary",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":193900,
+    "name":"New York University",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":193946,
+    "name":"Niagara County Community College",
+    "state":"NY",
+    "city":"Sanborn"
+  },
+  {
+    "unitid":193973,
+    "name":"Niagara University",
+    "state":"NY",
+    "city":"Niagara University"
+  },
+  {
+    "unitid":194028,
+    "name":"North Country Community College",
+    "state":"NY",
+    "city":"Saranac Lake"
+  },
+  {
+    "unitid":194073,
+    "name":"New York College of Podiatric Medicine",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":194091,
+    "name":"New York Institute of Technology",
+    "state":"NY",
+    "city":"Old Westbury"
+  },
+  {
+    "unitid":194116,
+    "name":"New York School of Interior Design",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":199087,
+    "name":"Nash Community College",
+    "state":"NC",
+    "city":"Rocky Mount"
+  },
+  {
+    "unitid":199102,
+    "name":"North Carolina A & T State University",
+    "state":"NC",
+    "city":"Greensboro"
+  },
+  {
+    "unitid":199157,
+    "name":"North Carolina Central University",
+    "state":"NC",
+    "city":"Durham"
+  },
+  {
+    "unitid":199193,
+    "name":"North Carolina State University at Raleigh",
+    "state":"NC",
+    "city":"Raleigh"
+  },
+  {
+    "unitid":199209,
+    "name":"North Carolina Wesleyan University",
+    "state":"NC",
+    "city":"Rocky Mount"
+  },
+  {
+    "unitid":200086,
+    "name":"Nueta Hidatsa Sahnish College",
+    "state":"ND",
+    "city":"New Town"
+  },
+  {
+    "unitid":200305,
+    "name":"North Dakota State College of Science",
+    "state":"ND",
+    "city":"Wahpeton"
+  },
+  {
+    "unitid":200332,
+    "name":"North Dakota State University-Main Campus",
+    "state":"ND",
+    "city":"Fargo"
+  },
+  {
+    "unitid":204334,
+    "name":"National Beauty College",
+    "state":"OH",
+    "city":"Canton"
+  },
+  {
+    "unitid":204422,
+    "name":"North Central State College",
+    "state":"OH",
+    "city":"Mansfield"
+  },
+  {
+    "unitid":204431,
+    "name":"Northern Institute of Cosmetology",
+    "state":"OH",
+    "city":"Lorain"
+  },
+  {
+    "unitid":204440,
+    "name":"Northwest State Community College",
+    "state":"OH",
+    "city":"Archbold"
+  },
+  {
+    "unitid":204468,
+    "name":"Notre Dame College",
+    "state":"OH",
+    "city":"Cleveland"
+  },
+  {
+    "unitid":204477,
+    "name":"Northeast Ohio Medical University",
+    "state":"OH",
+    "city":"Rootstown"
+  },
+  {
+    "unitid":207263,
+    "name":"Northeastern State University",
+    "state":"OK",
+    "city":"Tahlequah"
+  },
+  {
+    "unitid":207281,
+    "name":"Northern Oklahoma College",
+    "state":"OK",
+    "city":"Tonkawa"
+  },
+  {
+    "unitid":207290,
+    "name":"Northeastern Oklahoma A&M College",
+    "state":"OK",
+    "city":"Miami"
+  },
+  {
+    "unitid":207306,
+    "name":"Northwestern Oklahoma State University",
+    "state":"OK",
+    "city":"Alva"
+  },
+  {
+    "unitid":208725,
+    "name":"New Hope Christian College-Eugene",
+    "state":"OR",
+    "city":"Eugene"
+  },
+  {
+    "unitid":209083,
+    "name":"Northwest College-Beaverton",
+    "state":"OR",
+    "city":"Beaverton"
+  },
+  {
+    "unitid":209205,
+    "name":"Northwest College-Clackamas",
+    "state":"OR",
+    "city":"Happy Valley"
+  },
+  {
+    "unitid":209296,
+    "name":"National University of Natural Medicine",
+    "state":"OR",
+    "city":"Portland"
+  },
+  {
+    "unitid":214272,
+    "name":"Neumann University",
+    "state":"PA",
+    "city":"Aston"
+  },
+  {
+    "unitid":214290,
+    "name":"New Castle School of Trades",
+    "state":"PA",
+    "city":"New Castle"
+  },
+  {
+    "unitid":214379,
+    "name":"Northampton County Area Community College",
+    "state":"PA",
+    "city":"Bethlehem"
+  },
+  {
+    "unitid":217305,
+    "name":"New England Institute of Technology",
+    "state":"RI",
+    "city":"East Greenwich"
+  },
+  {
+    "unitid":217323,
+    "name":"New England Tractor Trailer Training School of Rhode Island",
+    "state":"RI",
+    "city":"Pawtucket"
+  },
+  {
+    "unitid":217606,
+    "name":"Northpoint Bible College",
+    "state":"MA",
+    "city":"Haverhill"
+  },
+  {
+    "unitid":217837,
+    "name":"Northeastern Technical College",
+    "state":"SC",
+    "city":"Cheraw"
+  },
+  {
+    "unitid":218414,
+    "name":"Newberry College",
+    "state":"SC",
+    "city":"Newberry"
+  },
+  {
+    "unitid":218441,
+    "name":"North Greenville University",
+    "state":"SC",
+    "city":"Tigerville"
+  },
+  {
+    "unitid":219204,
+    "name":"National American University-Rapid City",
+    "state":"SD",
+    "city":"Rapid City"
+  },
+  {
+    "unitid":219259,
+    "name":"Northern State University",
+    "state":"SD",
+    "city":"Aberdeen"
+  },
+  {
+    "unitid":221184,
+    "name":"Nashville State Community College",
+    "state":"TN",
+    "city":"Nashville"
+  },
+  {
+    "unitid":221908,
+    "name":"Northeast State Community College",
+    "state":"TN",
+    "city":"Blountville"
+  },
+  {
+    "unitid":224110,
+    "name":"North Central Texas College",
+    "state":"TX",
+    "city":"Gainesville"
+  },
+  {
+    "unitid":227146,
+    "name":"Navarro College",
+    "state":"TX",
+    "city":"Corsicana"
+  },
+  {
+    "unitid":227225,
+    "name":"Northeast Texas Community College",
+    "state":"TX",
+    "city":"Mount Pleasant"
+  },
+  {
+    "unitid":230913,
+    "name":"Northern Vermont University",
+    "state":"VT",
+    "city":"Johnson"
+  },
+  {
+    "unitid":230995,
+    "name":"Norwich University",
+    "state":"VT",
+    "city":"Northfield"
+  },
+  {
+    "unitid":232867,
+    "name":"New River Community College",
+    "state":"VA",
+    "city":"Dublin"
+  },
+  {
+    "unitid":232937,
+    "name":"Norfolk State University",
+    "state":"VA",
+    "city":"Norfolk"
+  },
+  {
+    "unitid":232946,
+    "name":"Northern Virginia Community College",
+    "state":"VA",
+    "city":"Annandale"
+  },
+  {
+    "unitid":236072,
+    "name":"North Seattle College",
+    "state":"WA",
+    "city":"Seattle"
+  },
+  {
+    "unitid":236133,
+    "name":"Northwest University",
+    "state":"WA",
+    "city":"Kirkland"
+  },
+  {
+    "unitid":239424,
+    "name":"Nashotah House",
+    "state":"WI",
+    "city":"Nashotah"
+  },
+  {
+    "unitid":239442,
+    "name":"Nicolet Area Technical College",
+    "state":"WI",
+    "city":"Rhinelander"
+  },
+  {
+    "unitid":239460,
+    "name":"Northcentral Technical College",
+    "state":"WI",
+    "city":"Wausau"
+  },
+  {
+    "unitid":239488,
+    "name":"Northeast Wisconsin Technical College",
+    "state":"WI",
+    "city":"Green Bay"
+  },
+  {
+    "unitid":239512,
+    "name":"Northland College",
+    "state":"WI",
+    "city":"Ashland"
+  },
+  {
+    "unitid":240198,
+    "name":"Northwood Technical College",
+    "state":"WI",
+    "city":"Shell Lake"
+  },
+  {
+    "unitid":240657,
+    "name":"Northwest College",
+    "state":"WY",
+    "city":"Powell"
+  },
+  {
+    "unitid":240666,
+    "name":"Northern Wyoming Community College District",
+    "state":"WY",
+    "city":"Sheridan"
+  },
+  {
+    "unitid":240790,
+    "name":"Northern Marianas College",
+    "state":"MP",
+    "city":"Saipan"
+  },
+  {
+    "unitid":242972,
+    "name":"NUC University",
+    "state":"PR",
+    "city":"Bayamon"
+  },
+  {
+    "unitid":260992,
+    "name":"Northwestern College",
+    "state":"IL",
+    "city":"Oak Lawn"
+  },
+  {
+    "unitid":262129,
+    "name":"New College of Florida",
+    "state":"FL",
+    "city":"Sarasota"
+  },
+  {
+    "unitid":366368,
+    "name":"New York Academy of Art",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":366623,
+    "name":"Northwest Technology Center-Alva",
+    "state":"OK",
+    "city":"Alva"
+  },
+  {
+    "unitid":367334,
+    "name":"National Tractor Trailer School Inc-Liverpool",
+    "state":"NY",
+    "city":"Liverpool"
+  },
+  {
+    "unitid":367459,
+    "name":"NorthWest Arkansas Community College",
+    "state":"AR",
+    "city":"Bentonville"
+  },
+  {
+    "unitid":368452,
+    "name":"Nossi College of Art and Design",
+    "state":"TN",
+    "city":"Nashville"
+  },
+  {
+    "unitid":369686,
+    "name":"Northwest Educational Center",
+    "state":"TX",
+    "city":"Houston"
+  },
+  {
+    "unitid":371964,
+    "name":"National Career Education",
+    "state":"CA",
+    "city":"Citrus Heights"
+  },
+  {
+    "unitid":372028,
+    "name":"North-West College-Glendale",
+    "state":"CA",
+    "city":"Glendale"
+  },
+  {
+    "unitid":373678,
+    "name":"New England Hair Academy",
+    "state":"MA",
+    "city":"Malden"
+  },
+  {
+    "unitid":375106,
+    "name":"National Tractor Trailer School Inc-Buffalo",
+    "state":"NY",
+    "city":"Buffalo"
+  },
+  {
+    "unitid":377272,
+    "name":"Nuvani Institute",
+    "state":"TX",
+    "city":"San Antonio"
+  },
+  {
+    "unitid":377281,
+    "name":"Nuvani Institute",
+    "state":"TX",
+    "city":"Eagle Pass"
+  },
+  {
+    "unitid":377546,
+    "name":"Northwest College of Art & Design",
+    "state":"WA",
+    "city":"Tacoma"
+  },
+  {
+    "unitid":378956,
+    "name":"National Aviation Academy of Tampa Bay",
+    "state":"FL",
+    "city":"Clearwater"
+  },
+  {
+    "unitid":380377,
+    "name":"Northwest Indian College",
+    "state":"WA",
+    "city":"Bellingham"
+  },
+  {
+    "unitid":409032,
+    "name":"Nouvelle Institute",
+    "state":"FL",
+    "city":"Miami"
+  },
+  {
+    "unitid":414939,
+    "name":"Nevada Career Institute",
+    "state":"NV",
+    "city":"Las Vegas"
+  },
+  {
+    "unitid":418126,
+    "name":"New York College of Health Professions",
+    "state":"NY",
+    "city":"Syosset"
+  },
+  {
+    "unitid":418223,
+    "name":"Northern Career Institute",
+    "state":"OH",
+    "city":"Eastlake"
+  },
+  {
+    "unitid":418588,
+    "name":"Northern Tier Career Center",
+    "state":"PA",
+    "city":"Towanda"
+  },
+  {
+    "unitid":418889,
+    "name":"North Central Institute",
+    "state":"TN",
+    "city":"Clarksville"
+  },
+  {
+    "unitid":419280,
+    "name":"New Dimensions School of Hair Design",
+    "state":"MO",
+    "city":"Joplin"
+  },
+  {
+    "unitid":420398,
+    "name":"Northwest Vista College",
+    "state":"TX",
+    "city":"San Antonio"
+  },
+  {
+    "unitid":421841,
+    "name":"New York Conservatory for Dramatic Arts",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":428055,
+    "name":"Nova College de Puerto Rico",
+    "state":"PR",
+    "city":"Bayamon"
+  },
+  {
+    "unitid":431071,
+    "name":"New York Institute of Massage Inc",
+    "state":"NY",
+    "city":"Williamsville"
+  },
+  {
+    "unitid":434362,
+    "name":"Northwest HVAC\/R Training Center",
+    "state":"WA",
+    "city":"Spokane"
+  },
+  {
+    "unitid":434469,
+    "name":"New Professions Technical Institute",
+    "state":"FL",
+    "city":"Miami"
+  },
+  {
+    "unitid":437723,
+    "name":"New Community Career & Technical Institute",
+    "state":"NJ",
+    "city":"Newark"
+  },
+  {
+    "unitid":439774,
+    "name":"New Concept Massage and Beauty School",
+    "state":"FL",
+    "city":"Miami"
+  },
+  {
+    "unitid":439783,
+    "name":"New York College of Traditional Chinese Medicine",
+    "state":"NY",
+    "city":"Mineola"
+  },
+  {
+    "unitid":439817,
+    "name":"Northeastern Seminary",
+    "state":"NY",
+    "city":"Rochester"
+  },
+  {
+    "unitid":440262,
+    "name":"New York Automotive and Diesel Institute",
+    "state":"NY",
+    "city":"Jamaica"
+  },
+  {
+    "unitid":440396,
+    "name":"New Saint Andrews College",
+    "state":"ID",
+    "city":"Moscow"
+  },
+  {
+    "unitid":440749,
+    "name":"National American University-Ellsworth",
+    "state":"SD",
+    "city":"Box Elder"
+  },
+  {
+    "unitid":441168,
+    "name":"Northwest College-Hillsboro",
+    "state":"OR",
+    "city":"Hillsboro"
+  },
+  {
+    "unitid":441900,
+    "name":"Nevada State University",
+    "state":"NV",
+    "city":"Henderson"
+  },
+  {
+    "unitid":442611,
+    "name":"NASCAR Technical Institute",
+    "state":"NC",
+    "city":"Mooresville"
+  },
+  {
+    "unitid":443030,
+    "name":"NorthShore University HealthSystem School of Nurse Anesthesia",
+    "state":"IL",
+    "city":"Evanston"
+  },
+  {
+    "unitid":443207,
+    "name":"NTMA Training Centers of Southern California",
+    "state":"CA",
+    "city":"Santa Fe Springs"
+  },
+  {
+    "unitid":444130,
+    "name":"Northcentral University",
+    "state":"CA",
+    "city":"San Diego"
+  },
+  {
+    "unitid":444787,
+    "name":"Nightingale College",
+    "state":"UT",
+    "city":"Salt Lake City"
+  },
+  {
+    "unitid":445364,
+    "name":"North-West College-Riverside",
+    "state":"CA",
+    "city":"Riverside"
+  },
+  {
+    "unitid":445692,
+    "name":"Neumont College of Computer Science",
+    "state":"UT",
+    "city":"Salt Lake City"
+  },
+  {
+    "unitid":445948,
+    "name":"Northwest Career College",
+    "state":"NV",
+    "city":"Las Vegas"
+  },
+  {
+    "unitid":447582,
+    "name":"New River Community and Technical College",
+    "state":"WV",
+    "city":"Beaver"
+  },
+  {
+    "unitid":447759,
+    "name":"National Polytechnic College",
+    "state":"CA",
+    "city":"Lakewood"
+  },
+  {
+    "unitid":447892,
+    "name":"North Florida Cosmetology Institute",
+    "state":"FL",
+    "city":"Tallahassee"
+  },
+  {
+    "unitid":447980,
+    "name":"Nuvo College of Cosmetology",
+    "state":"MI",
+    "city":"Norton Shores"
+  },
+  {
+    "unitid":449685,
+    "name":"New Age Training",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":455868,
+    "name":"National Career College",
+    "state":"CA",
+    "city":"Panorama City"
+  },
+  {
+    "unitid":457767,
+    "name":"National Career Institute",
+    "state":"NJ",
+    "city":"East Orange"
+  },
+  {
+    "unitid":457800,
+    "name":"New York Medical Career Training Center",
+    "state":"NY",
+    "city":"Flushing"
+  },
+  {
+    "unitid":458140,
+    "name":"Northwest School of Wooden Boat Building",
+    "state":"WA",
+    "city":"Port Hadlock"
+  },
+  {
+    "unitid":459426,
+    "name":"Nova Academy of Cosmetology",
+    "state":"MN",
+    "city":"Rochester"
+  },
+  {
+    "unitid":460464,
+    "name":"Norco College",
+    "state":"CA",
+    "city":"Norco"
+  },
+  {
+    "unitid":461023,
+    "name":"National Paralegal College",
+    "state":"AZ",
+    "city":"Phoenix"
+  },
+  {
+    "unitid":461087,
+    "name":"Northeast Technology Center",
+    "state":"OK",
+    "city":"Pryor"
+  },
+  {
+    "unitid":461148,
+    "name":"New York Film Academy",
+    "state":"CA",
+    "city":"Burbank"
+  },
+  {
+    "unitid":461412,
+    "name":"Northern Virginia School of Therapeutic Massage",
+    "state":"VA",
+    "city":"Falls Church"
+  },
+  {
+    "unitid":461795,
+    "name":"North American University",
+    "state":"TX",
+    "city":"Stafford"
+  },
+  {
+    "unitid":461962,
+    "name":"Northeast Technical Institute",
+    "state":"ME",
+    "city":"Scarborough"
+  },
+  {
+    "unitid":468246,
+    "name":"Northwest College-Eugene",
+    "state":"OR",
+    "city":"Springfield"
+  },
+  {
+    "unitid":468255,
+    "name":"Northwest College-Tualatin",
+    "state":"OR",
+    "city":"Tualatin"
+  },
+  {
+    "unitid":468963,
+    "name":"New England Tractor Trailer Training School of Massachusetts",
+    "state":"MA",
+    "city":"North Andover"
+  },
+  {
+    "unitid":475404,
+    "name":"New York School of Esthetics & Day Spa",
+    "state":"NY",
+    "city":"white plains"
+  },
+  {
+    "unitid":480903,
+    "name":"New England Tractor Trailer Training School of CT-Bridgeport",
+    "state":"CT",
+    "city":"Bridgeport"
+  },
+  {
+    "unitid":481243,
+    "name":"New York Institute of Beauty",
+    "state":"NY",
+    "city":"Islandia"
+  },
+  {
+    "unitid":482705,
+    "name":"Northeastern University Professional Programs",
+    "state":"MA",
+    "city":"Boston"
+  },
+  {
+    "unitid":483258,
+    "name":"Networks Barber College",
+    "state":"IL",
+    "city":"Calumet City"
+  },
+  {
+    "unitid":483513,
+    "name":"Neecee's Barber College",
+    "state":"TX",
+    "city":"Abilene"
+  },
+  {
+    "unitid":484367,
+    "name":"North-West College-Anaheim",
+    "state":"CA",
+    "city":"Anaheim"
+  },
+  {
+    "unitid":484376,
+    "name":"North-West College-Long Beach",
+    "state":"CA",
+    "city":"Long Beach"
+  },
+  {
+    "unitid":484950,
+    "name":"Northwest College-Medford",
+    "state":"OR",
+    "city":"Medford"
+  },
+  {
+    "unitid":485591,
+    "name":"New Beginnings Beauty Academy",
+    "state":"AR",
+    "city":"Pine Bluff"
+  },
+  {
+    "unitid":487603,
+    "name":"Northwest University-Center for Online and Extended Education",
+    "state":"WA",
+    "city":"Kirkland"
+  },
+  {
+    "unitid":488110,
+    "name":"Natural Images Beauty College",
+    "state":"TX",
+    "city":"Clute"
+  },
+  {
+    "unitid":488280,
+    "name":"National Personal Training Institute",
+    "state":"FL",
+    "city":"Orlando"
+  },
+  {
+    "unitid":488721,
+    "name":"NationsUniversity",
+    "state":"LA",
+    "city":"New Orleans"
+  },
+  {
+    "unitid":488730,
+    "name":"Northeast Lakeview College",
+    "state":"TX",
+    "city":"Universal City"
+  },
+  {
+    "unitid":490018,
+    "name":"National Personal Training Institute-Tampa",
+    "state":"FL",
+    "city":"Tampa"
+  },
+  {
+    "unitid":490115,
+    "name":"Nashville Film Institute",
+    "state":"TN",
+    "city":"Nashville"
+  },
+  {
+    "unitid":490744,
+    "name":"Northern Technical College",
+    "state":"AR",
+    "city":"Pine Bluff"
+  },
+  {
+    "unitid":491668,
+    "name":"Neo-Esthetique European Institute",
+    "state":"PR",
+    "city":"San Juan"
+  },
+  {
+    "unitid":492421,
+    "name":"No Grease Barber School",
+    "state":"NC",
+    "city":"Charlotte"
+  },
+  {
+    "unitid":493798,
+    "name":"New York Seminary",
+    "state":"NY",
+    "city":"Brooklyn"
+  },
+  {
+    "unitid":494746,
+    "name":"North-West College-San Diego",
+    "state":"CA",
+    "city":"San Diego"
+  },
+  {
+    "unitid":494959,
+    "name":"Northern Pennsylvania Regional College",
+    "state":"PA",
+    "city":"Warren"
+  },
+  {
+    "unitid":496618,
+    "name":"National Institute for Medical Assistant Advancement (NIMAA)",
+    "state":"CO",
+    "city":"Denver"
+  },
+  {
+    "unitid":496803,
+    "name":"NewU University",
+    "state":"DC",
+    "city":"Washington"
+  },
+  {
+    "unitid":498465,
+    "name":"National Tractor Trailer School",
+    "state":"AZ",
+    "city":"Phoenix"
+  }
+]

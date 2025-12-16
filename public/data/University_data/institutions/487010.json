@@ -1,0 +1,45 @@
+{
+  "profile": {
+    "unitid": 487010,
+    "name": "The University of Tennessee Health Science Center",
+    "city": "Memphis",
+    "state": "TN",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Four-Year: Research Institutions",
+    "website": "www.uthsc.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Biological & Biomedical Sciences",
+      "Engineering"
+    ],
+    "intl_enrollment_pct": 4,
+    "tuition_summary": {
+      "sticker": null,
+      "in_state": null,
+      "out_of_state": null
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": null,
+      "student_faculty_ratio": 7,
+      "total_enrollment": 3121
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

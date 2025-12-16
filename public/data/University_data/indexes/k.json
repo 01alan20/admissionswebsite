@@ -1,0 +1,470 @@
+[
+  {
+    "unitid":134422,
+    "name":"Key College",
+    "state":"FL",
+    "city":"Fort Lauderdale"
+  },
+  {
+    "unitid":135081,
+    "name":"Keiser University-Ft Lauderdale",
+    "state":"FL",
+    "city":"Fort Lauderdale"
+  },
+  {
+    "unitid":141796,
+    "name":"Kapiolani Community College",
+    "state":"HI",
+    "city":"Honolulu"
+  },
+  {
+    "unitid":141802,
+    "name":"Kauai Community College",
+    "state":"HI",
+    "city":"Lihue"
+  },
+  {
+    "unitid":146348,
+    "name":"Kankakee Community College",
+    "state":"IL",
+    "city":"Kankakee"
+  },
+  {
+    "unitid":146366,
+    "name":"Kaskaskia College",
+    "state":"IL",
+    "city":"Centralia"
+  },
+  {
+    "unitid":146418,
+    "name":"Kishwaukee College",
+    "state":"IL",
+    "city":"Malta"
+  },
+  {
+    "unitid":146427,
+    "name":"Knox College",
+    "state":"IL",
+    "city":"Galesburg"
+  },
+  {
+    "unitid":153737,
+    "name":"Kirkwood Community College",
+    "state":"IA",
+    "city":"Cedar Rapids"
+  },
+  {
+    "unitid":155292,
+    "name":"Kansas City Kansas Community College",
+    "state":"KS",
+    "city":"Kansas City"
+  },
+  {
+    "unitid":155308,
+    "name":"Kansas Christian College",
+    "state":"KS",
+    "city":"Overland Park"
+  },
+  {
+    "unitid":155399,
+    "name":"Kansas State University",
+    "state":"KS",
+    "city":"Manhattan"
+  },
+  {
+    "unitid":155414,
+    "name":"Kansas Wesleyan University",
+    "state":"KS",
+    "city":"Salina"
+  },
+  {
+    "unitid":157030,
+    "name":"Kentucky Mountain Bible College",
+    "state":"KY",
+    "city":"Jackson"
+  },
+  {
+    "unitid":157058,
+    "name":"Kentucky State University",
+    "state":"KY",
+    "city":"Frankfort"
+  },
+  {
+    "unitid":157076,
+    "name":"Kentucky Wesleyan College",
+    "state":"KY",
+    "city":"Owensboro"
+  },
+  {
+    "unitid":157100,
+    "name":"Kentucky Christian University",
+    "state":"KY",
+    "city":"Grayson"
+  },
+  {
+    "unitid":157854,
+    "name":"Kentucky Community and Technical College System",
+    "state":"Kentucky",
+    "city":null
+  },
+  {
+    "unitid":161192,
+    "name":"Kennebec Valley Community College",
+    "state":"ME",
+    "city":"Fairfield"
+  },
+  {
+    "unitid":169983,
+    "name":"Kettering University",
+    "state":"MI",
+    "city":"Flint"
+  },
+  {
+    "unitid":170532,
+    "name":"Kalamazoo College",
+    "state":"MI",
+    "city":"Kalamazoo"
+  },
+  {
+    "unitid":170541,
+    "name":"Kalamazoo Valley Community College",
+    "state":"MI",
+    "city":"Kalamazoo"
+  },
+  {
+    "unitid":170550,
+    "name":"Kellogg Community College",
+    "state":"MI",
+    "city":"Battle Creek"
+  },
+  {
+    "unitid":170587,
+    "name":"Kirtland Community College",
+    "state":"MI",
+    "city":"Grayling"
+  },
+  {
+    "unitid":171881,
+    "name":"Kuyper College",
+    "state":"MI",
+    "city":"Grand Rapids"
+  },
+  {
+    "unitid":177746,
+    "name":"Kansas City Art Institute",
+    "state":"MO",
+    "city":"Kansas City"
+  },
+  {
+    "unitid":177816,
+    "name":"Kenrick Glennon Seminary",
+    "state":"MO",
+    "city":"Saint Louis"
+  },
+  {
+    "unitid":179812,
+    "name":"Kansas City University",
+    "state":"MO",
+    "city":"Kansas City"
+  },
+  {
+    "unitid":182892,
+    "name":"Keene Beauty Academy",
+    "state":"NH",
+    "city":"Keene"
+  },
+  {
+    "unitid":183062,
+    "name":"Keene State College",
+    "state":"NH",
+    "city":"Keene"
+  },
+  {
+    "unitid":185262,
+    "name":"Kean University",
+    "state":"NJ",
+    "city":"Union"
+  },
+  {
+    "unitid":192165,
+    "name":"Kehilath Yakov Rabbinical Seminary",
+    "state":"NY",
+    "city":"Ossining"
+  },
+  {
+    "unitid":192192,
+    "name":"Keuka College",
+    "state":"NY",
+    "city":"Keuka Park"
+  },
+  {
+    "unitid":203447,
+    "name":"Kent State University at Ashtabula",
+    "state":"OH",
+    "city":"Ashtabula"
+  },
+  {
+    "unitid":203456,
+    "name":"Kent State University at East Liverpool",
+    "state":"OH",
+    "city":"East Liverpool"
+  },
+  {
+    "unitid":203465,
+    "name":"Kent State University at Stark",
+    "state":"OH",
+    "city":"North Canton"
+  },
+  {
+    "unitid":203474,
+    "name":"Kent State University at Trumbull",
+    "state":"OH",
+    "city":"Warren"
+  },
+  {
+    "unitid":203483,
+    "name":"Kent State University at Tuscarawas",
+    "state":"OH",
+    "city":"New Philadelphia"
+  },
+  {
+    "unitid":203492,
+    "name":"Kent State University at Salem",
+    "state":"OH",
+    "city":"Salem"
+  },
+  {
+    "unitid":203517,
+    "name":"Kent State University at Kent",
+    "state":"OH",
+    "city":"Kent"
+  },
+  {
+    "unitid":203526,
+    "name":"Kent State University at Geauga",
+    "state":"OH",
+    "city":"Burton"
+  },
+  {
+    "unitid":203535,
+    "name":"Kenyon College",
+    "state":"OH",
+    "city":"Gambier"
+  },
+  {
+    "unitid":203544,
+    "name":"Kettering College",
+    "state":"OH",
+    "city":"Kettering"
+  },
+  {
+    "unitid":213303,
+    "name":"Keystone College",
+    "state":"PA",
+    "city":"La Plume"
+  },
+  {
+    "unitid":213321,
+    "name":"King's College",
+    "state":"PA",
+    "city":"Wilkes-Barre"
+  },
+  {
+    "unitid":213349,
+    "name":"Kutztown University of Pennsylvania",
+    "state":"PA",
+    "city":"Kutztown"
+  },
+  {
+    "unitid":218159,
+    "name":"Kenneth Shuler School of Cosmetology-North Augusta",
+    "state":"SC",
+    "city":"North Augusta"
+  },
+  {
+    "unitid":218195,
+    "name":"Kenneth Shuler School of Cosmetology and Nails-Columbia",
+    "state":"SC",
+    "city":"Columbia"
+  },
+  {
+    "unitid":219240,
+    "name":"Kairos University",
+    "state":"SD",
+    "city":"Sioux Falls"
+  },
+  {
+    "unitid":220516,
+    "name":"King University",
+    "state":"TN",
+    "city":"Bristol"
+  },
+  {
+    "unitid":225991,
+    "name":"KD Conservatory College of Film and Dramatic Arts",
+    "state":"TX",
+    "city":"Dallas"
+  },
+  {
+    "unitid":226019,
+    "name":"Kilgore College",
+    "state":"TX",
+    "city":"Kilgore"
+  },
+  {
+    "unitid":374343,
+    "name":"KC's School of Hair Design",
+    "state":"MS",
+    "city":"Pontotoc"
+  },
+  {
+    "unitid":375373,
+    "name":"Knox County Career Center",
+    "state":"OH",
+    "city":"Mount Vernon"
+  },
+  {
+    "unitid":375726,
+    "name":"Kiamichi Technology Center-McAlester",
+    "state":"OK",
+    "city":"McAlester"
+  },
+  {
+    "unitid":407708,
+    "name":"KaiStar",
+    "state":"WA",
+    "city":"Federal Way"
+  },
+  {
+    "unitid":417628,
+    "name":"Kirksville Area Technical Center",
+    "state":"MO",
+    "city":"Kirksville"
+  },
+  {
+    "unitid":428392,
+    "name":"Klamath Community College",
+    "state":"OR",
+    "city":"Klamath Falls"
+  },
+  {
+    "unitid":432117,
+    "name":"Kenneth Shuler School of Cosmetology-Rock Hill",
+    "state":"SC",
+    "city":"Rock Hill"
+  },
+  {
+    "unitid":440031,
+    "name":"Keck Graduate Institute",
+    "state":"CA",
+    "city":"Claremont"
+  },
+  {
+    "unitid":445841,
+    "name":"Kenneth Shuler School of Cosmetology-Spartanburg",
+    "state":"SC",
+    "city":"Spartanburg"
+  },
+  {
+    "unitid":445850,
+    "name":"Kenneth Shuler School of Cosmetology-Columbia",
+    "state":"SC",
+    "city":"Columbia"
+  },
+  {
+    "unitid":457475,
+    "name":"Keune Academy by 124",
+    "state":"GA",
+    "city":"Lawrenceville"
+  },
+  {
+    "unitid":460011,
+    "name":"Kenneth Shuler School of Cosmetology-Florence",
+    "state":"SC",
+    "city":"Florence"
+  },
+  {
+    "unitid":461315,
+    "name":"Keweenaw Bay Ojibwa Community College",
+    "state":"MI",
+    "city":"Baraga"
+  },
+  {
+    "unitid":461847,
+    "name":"Keser Torah-Mayan Hatalmud",
+    "state":"NJ",
+    "city":"Lakewood"
+  },
+  {
+    "unitid":467906,
+    "name":"Kenneth Shuler School of Cosmetology-Greenville",
+    "state":"SC",
+    "city":"Greenville"
+  },
+  {
+    "unitid":481313,
+    "name":"Kaizen Beauty Academy",
+    "state":"FL",
+    "city":"Pembroke Pines"
+  },
+  {
+    "unitid":486840,
+    "name":"Kennesaw State University",
+    "state":"GA",
+    "city":"Kennesaw"
+  },
+  {
+    "unitid":487904,
+    "name":"Kentucky Horseshoeing School",
+    "state":"KY",
+    "city":"Richmond"
+  },
+  {
+    "unitid":488439,
+    "name":"Kenny's Academy of Barbering",
+    "state":"IN",
+    "city":"Indianapolis"
+  },
+  {
+    "unitid":489159,
+    "name":"Kenneth Shuler School of Cosmetology-Goose Creek",
+    "state":"SC",
+    "city":"Goose Creek"
+  },
+  {
+    "unitid":490452,
+    "name":"Kor Beauty Academy",
+    "state":"AZ",
+    "city":"Peoria"
+  },
+  {
+    "unitid":490601,
+    "name":"Kansas City University",
+    "state":"MO",
+    "city":"Joplin"
+  },
+  {
+    "unitid":492652,
+    "name":"KCK Beauty & Barber Academy",
+    "state":"FL",
+    "city":"Jacksonville"
+  },
+  {
+    "unitid":494658,
+    "name":"KC Beauty Academy",
+    "state":"CA",
+    "city":"Los Angeles"
+  },
+  {
+    "unitid":497417,
+    "name":"Kino College",
+    "state":"AZ",
+    "city":"Tucson"
+  },
+  {
+    "unitid":497693,
+    "name":"Kansas Health Science Center",
+    "state":"KS",
+    "city":"Wichita"
+  }
+]

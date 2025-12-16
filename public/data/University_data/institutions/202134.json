@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 202134,
+    "name": "Cleveland State University",
+    "city": "Cleveland",
+    "state": "OH",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: High Research Activity",
+    "website": "www.csuohio.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Health Professions",
+      "Computer & Information Sciences",
+      "Engineering"
+    ],
+    "intl_enrollment_pct": 16,
+    "tuition_summary": {
+      "sticker": 12613.0,
+      "in_state": 12254.0,
+      "out_of_state": 17469.0
+    },
+    "outcomes": {
+      "acceptance_rate": 95,
+      "yield": 16,
+      "grad_rate_6yr": 49,
+      "retention_full_time": 69,
+      "student_faculty_ratio": 16,
+      "total_enrollment": 14117
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Legacy Status",
+      "Personal Statement Or Essay"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Recommendations",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

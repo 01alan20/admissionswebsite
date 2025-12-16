@@ -1,0 +1,43 @@
+{
+  "profile": {
+    "unitid": 440651,
+    "name": "Atenas College",
+    "city": "Manati",
+    "state": "PR",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Four-Year: Other Health Professions Schools",
+    "website": "www.atenascollege.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 8198.0,
+      "in_state": 8198.0,
+      "out_of_state": 8198.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": 39,
+      "retention_full_time": 76,
+      "student_faculty_ratio": 23,
+      "total_enrollment": 611
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

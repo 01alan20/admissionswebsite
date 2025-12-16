@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 110680,
+    "name": "University of California-San Diego",
+    "city": "La Jolla",
+    "state": "CA",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: Very High Research Activity",
+    "website": "www.ucsd.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Engineering",
+      "Biological & Biomedical Sciences",
+      "Multidisciplinary Studies",
+      "Computer & Information Sciences"
+    ],
+    "intl_enrollment_pct": 18,
+    "tuition_summary": {
+      "sticker": 15265.0,
+      "in_state": 14906.0,
+      "out_of_state": 44978.0
+    },
+    "outcomes": {
+      "acceptance_rate": 25,
+      "yield": 22,
+      "grad_rate_6yr": 88,
+      "retention_full_time": 94,
+      "student_faculty_ratio": 19,
+      "total_enrollment": 42376
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Recommendations",
+      "Secondary School Rank"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

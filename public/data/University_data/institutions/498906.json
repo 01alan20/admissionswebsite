@@ -1,0 +1,43 @@
+{
+  "profile": {
+    "unitid": 498906,
+    "name": "Yeshivas Sanz Klauzenburg",
+    "city": null,
+    "state": "New York",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
+    "website": null,
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Philosophy & Religious Studies"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 14000.0,
+      "in_state": null,
+      "out_of_state": null
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": 27,
+      "retention_full_time": 100,
+      "student_faculty_ratio": 4,
+      "total_enrollment": 107
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

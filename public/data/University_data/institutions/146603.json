@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 146603,
+    "name": "Lewis and Clark Community College",
+    "city": "Godfrey",
+    "state": "IL",
+    "control": "Public",
+    "level": "2-year",
+    "carnegie_basic": "Associate's Colleges: Mixed Transfer/Career & Technical-High Nontraditional",
+    "website": "www.lc.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Liberal Arts & Humanities",
+      "Health Professions",
+      "Precision Production",
+      "Multidisciplinary Studies"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 3552.0,
+      "in_state": 3552.0,
+      "out_of_state": 12552.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 68,
+      "student_faculty_ratio": 16,
+      "total_enrollment": 4196
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

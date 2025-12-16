@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 165529,
+    "name": "Curry College",
+    "city": "Milton",
+    "state": "MA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Small Programs",
+    "website": "https://www.curry.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Health Professions",
+      "Business, Management & Marketing",
+      "Homeland Security & Law Enforcement",
+      "Psychology"
+    ],
+    "intl_enrollment_pct": 3,
+    "tuition_summary": {
+      "sticker": 46220.0,
+      "in_state": 44920.0,
+      "out_of_state": 44920.0
+    },
+    "outcomes": {
+      "acceptance_rate": 92,
+      "yield": 8,
+      "grad_rate_6yr": 48,
+      "retention_full_time": 68,
+      "student_faculty_ratio": 11,
+      "total_enrollment": 1994
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

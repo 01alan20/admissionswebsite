@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 200332,
+    "name": "North Dakota State University-Main Campus",
+    "city": "Fargo",
+    "state": "ND",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: Very High Research Activity",
+    "website": "https://www.ndsu.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Health Professions",
+      "Engineering",
+      "Agriculture & Natural Resources"
+    ],
+    "intl_enrollment_pct": 6,
+    "tuition_summary": {
+      "sticker": 10857.0,
+      "in_state": 10992.0,
+      "out_of_state": 15646.0
+    },
+    "outcomes": {
+      "acceptance_rate": 96,
+      "yield": 32,
+      "grad_rate_6yr": 64,
+      "retention_full_time": 77,
+      "student_faculty_ratio": 18,
+      "total_enrollment": 11952
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Personal Statement Or Essay"
+    ],
+    "not_considered": [
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Recommendations",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

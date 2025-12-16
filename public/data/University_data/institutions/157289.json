@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 157289,
+    "name": "University of Louisville",
+    "city": "Louisville",
+    "state": "KY",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: Very High Research Activity",
+    "website": "www.louisville.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Education",
+      "Health Professions",
+      "Engineering"
+    ],
+    "intl_enrollment_pct": 4,
+    "tuition_summary": {
+      "sticker": 12828.0,
+      "in_state": 12520.0,
+      "out_of_state": 28866.0
+    },
+    "outcomes": {
+      "acceptance_rate": 81,
+      "yield": 26,
+      "grad_rate_6yr": 61,
+      "retention_full_time": 81,
+      "student_faculty_ratio": 14,
+      "total_enrollment": 22139
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Formal Demonstration Of Competencies",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Legacy Status"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

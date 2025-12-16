@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 125897,
+    "name": "Woodbury University",
+    "city": "Burbank",
+    "state": "CA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Small Programs",
+    "website": "https://woodbury.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Architecture & Planning",
+      "Visual & Performing Arts",
+      "Business, Management & Marketing",
+      "Communications Technologies"
+    ],
+    "intl_enrollment_pct": 6,
+    "tuition_summary": {
+      "sticker": 44886.0,
+      "in_state": 44908.0,
+      "out_of_state": 44908.0
+    },
+    "outcomes": {
+      "acceptance_rate": 73,
+      "yield": 11,
+      "grad_rate_6yr": 55,
+      "retention_full_time": 80,
+      "student_faculty_ratio": 9,
+      "total_enrollment": 898
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Personal Statement Or Essay",
+      "Recommendations"
+    ],
+    "not_considered": [
+      "Completion Of College Preparatory Program",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

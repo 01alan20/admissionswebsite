@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 227526,
+    "name": "Prairie View A & M University",
+    "city": "Prairie View",
+    "state": "TX",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: High Research Activity",
+    "website": "www.pvamu.edu/",
+    "admissions_url": null,
+    "test_policy": "Required",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Health Professions",
+      "Engineering",
+      "Parks, Recreation & Fitness"
+    ],
+    "intl_enrollment_pct": 2,
+    "tuition_summary": {
+      "sticker": 11299.0,
+      "in_state": 11299.0,
+      "out_of_state": 26874.0
+    },
+    "outcomes": {
+      "acceptance_rate": 75,
+      "yield": 32,
+      "grad_rate_6yr": 43,
+      "retention_full_time": 74,
+      "student_faculty_ratio": 16,
+      "total_enrollment": 9517
+    }
+  },
+  "requirements": {
+    "required": [
+      "Admission Test Scores",
+      "Secondary School Gpa",
+      "Secondary School Rank",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Required"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

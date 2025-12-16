@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 245838,
+    "name": "Antioch University-Los Angeles",
+    "city": "Culver City",
+    "state": "CA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
+    "website": "www.antiochla.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Psychology",
+      "English Language & Literature",
+      "Liberal Arts & Humanities",
+      "Multidisciplinary Studies"
+    ],
+    "intl_enrollment_pct": 2,
+    "tuition_summary": {
+      "sticker": null,
+      "in_state": null,
+      "out_of_state": null
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": null,
+      "student_faculty_ratio": 3,
+      "total_enrollment": 888
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

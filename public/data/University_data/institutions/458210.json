@@ -1,0 +1,44 @@
+{
+  "profile": {
+    "unitid": 458210,
+    "name": "West Coast University-Orange County",
+    "city": "Anaheim",
+    "state": "CA",
+    "control": "Private for-profit",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Four-Year: Other Health Professions Schools",
+    "website": "westcoastuniversity.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Business, Management & Marketing"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 22685.0,
+      "in_state": 22889.0,
+      "out_of_state": 22889.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": 64,
+      "retention_full_time": 86,
+      "student_faculty_ratio": 20,
+      "total_enrollment": 4481
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

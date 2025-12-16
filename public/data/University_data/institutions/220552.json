@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 220552,
+    "name": "South College",
+    "city": "Knoxville",
+    "state": "TN",
+    "control": "Private for-profit",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral/Professional Universities",
+    "website": "www.south.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Business, Management & Marketing",
+      "Homeland Security & Law Enforcement",
+      "Computer & Information Sciences"
+    ],
+    "intl_enrollment_pct": 3,
+    "tuition_summary": {
+      "sticker": 17935.0,
+      "in_state": 17335.0,
+      "out_of_state": 17335.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": 28,
+      "retention_full_time": 62,
+      "student_faculty_ratio": 23,
+      "total_enrollment": 8234
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

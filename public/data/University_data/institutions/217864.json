@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 217864,
+    "name": "Citadel Military College of South Carolina",
+    "city": "Charleston",
+    "state": "SC",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
+    "website": "https://go.citadel.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Engineering",
+      "Military Technologies",
+      "Education"
+    ],
+    "intl_enrollment_pct": 1,
+    "tuition_summary": {
+      "sticker": 12570.0,
+      "in_state": 12570.0,
+      "out_of_state": 35826.0
+    },
+    "outcomes": {
+      "acceptance_rate": 98,
+      "yield": 23,
+      "grad_rate_6yr": 73,
+      "retention_full_time": 88,
+      "student_faculty_ratio": 11,
+      "total_enrollment": 3727
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Legacy Status",
+      "Recommendations",
+      "Secondary School Rank"
+    ],
+    "not_considered": [
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

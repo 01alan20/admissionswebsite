@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 174914,
+    "name": "University of St Thomas",
+    "city": "Saint Paul",
+    "state": "MN",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral/Professional Universities",
+    "website": "www.stthomas.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Computer & Information Sciences",
+      "Education",
+      "Engineering"
+    ],
+    "intl_enrollment_pct": 5,
+    "tuition_summary": {
+      "sticker": 52284.0,
+      "in_state": 50366.0,
+      "out_of_state": 50366.0
+    },
+    "outcomes": {
+      "acceptance_rate": 85,
+      "yield": 22,
+      "grad_rate_6yr": 77,
+      "retention_full_time": 86,
+      "student_faculty_ratio": 13,
+      "total_enrollment": 9121
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

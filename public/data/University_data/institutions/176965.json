@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 176965,
+    "name": "University of Central Missouri",
+    "city": "Warrensburg",
+    "state": "MO",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
+    "website": "https://www.ucmo.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Computer & Information Sciences",
+      "Education",
+      "Engineering Technologies",
+      "Business, Management & Marketing"
+    ],
+    "intl_enrollment_pct": 30,
+    "tuition_summary": {
+      "sticker": 9739.0,
+      "in_state": 9413.0,
+      "out_of_state": 17453.0
+    },
+    "outcomes": {
+      "acceptance_rate": 69,
+      "yield": 31,
+      "grad_rate_6yr": 49,
+      "retention_full_time": 70,
+      "student_faculty_ratio": 19,
+      "total_enrollment": 12788
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Recommendations",
+      "Secondary School Rank"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

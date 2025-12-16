@@ -1,0 +1,60 @@
+{
+  "profile": {
+    "unitid": 161226,
+    "name": "University of Maine at Farmington",
+    "city": "Farmington",
+    "state": "ME",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
+    "website": "https://www.umf.maine.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Education",
+      "Psychology",
+      "Business, Management & Marketing",
+      "English Language & Literature"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 10989.0,
+      "in_state": 9890.0,
+      "out_of_state": 21650.0
+    },
+    "outcomes": {
+      "acceptance_rate": 98,
+      "yield": 18,
+      "grad_rate_6yr": 53,
+      "retention_full_time": 79,
+      "student_faculty_ratio": 12,
+      "total_enrollment": 1950
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Gpa",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

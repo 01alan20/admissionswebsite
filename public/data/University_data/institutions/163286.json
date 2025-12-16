@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 163286,
+    "name": "University of Maryland-College Park",
+    "city": "College Park",
+    "state": "MD",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: Very High Research Activity",
+    "website": "www.umd.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Computer & Information Sciences",
+      "Engineering",
+      "Social Sciences"
+    ],
+    "intl_enrollment_pct": 12,
+    "tuition_summary": {
+      "sticker": 11505.0,
+      "in_state": 11233.0,
+      "out_of_state": 39469.0
+    },
+    "outcomes": {
+      "acceptance_rate": 45,
+      "yield": 23,
+      "grad_rate_6yr": 88,
+      "retention_full_time": 96,
+      "student_faculty_ratio": 18,
+      "total_enrollment": 40813
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Gpa",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Legacy Status"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 456490,
+    "name": "Polytechnic University of Puerto Rico-Orlando",
+    "city": "Orlando",
+    "state": "FL",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
+    "website": "www.pupr.edu/orlando",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Engineering",
+      "Business, Management & Marketing",
+      "Engineering Technologies",
+      "Computer & Information Sciences"
+    ],
+    "intl_enrollment_pct": 5,
+    "tuition_summary": {
+      "sticker": 14262.0,
+      "in_state": 13827.0,
+      "out_of_state": 13827.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": 8,
+      "retention_full_time": 20,
+      "student_faculty_ratio": 5,
+      "total_enrollment": 119
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

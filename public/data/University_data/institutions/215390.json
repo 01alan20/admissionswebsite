@@ -1,0 +1,58 @@
+{
+  "profile": {
+    "unitid": 215390,
+    "name": "Pittsburgh Institute of Mortuary Science Inc",
+    "city": "Pittsburgh",
+    "state": "PA",
+    "control": "Private nonprofit",
+    "level": "2-year",
+    "carnegie_basic": "Special Focus Two-Year: Arts & Design",
+    "website": "www.pims.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Personal & Culinary Services"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": null,
+      "in_state": null,
+      "out_of_state": null
+    },
+    "outcomes": {
+      "acceptance_rate": 49,
+      "yield": 60,
+      "grad_rate_6yr": null,
+      "retention_full_time": 74,
+      "student_faculty_ratio": 13,
+      "total_enrollment": 402
+    }
+  },
+  "requirements": {
+    "required": [
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "English Proficiency Test",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

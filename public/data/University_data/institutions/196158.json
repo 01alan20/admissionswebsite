@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 196158,
+    "name": "SUNY at Fredonia",
+    "city": "Fredonia",
+    "state": "NY",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Small Programs",
+    "website": "https://www.fredonia.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Education",
+      "Visual & Performing Arts",
+      "Business, Management & Marketing",
+      "Communication & Journalism"
+    ],
+    "intl_enrollment_pct": 2,
+    "tuition_summary": {
+      "sticker": 8771.0,
+      "in_state": 8767.0,
+      "out_of_state": 18677.0
+    },
+    "outcomes": {
+      "acceptance_rate": 79,
+      "yield": 14,
+      "grad_rate_6yr": 53,
+      "retention_full_time": 76,
+      "student_faculty_ratio": 11,
+      "total_enrollment": 3220
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Formal Demonstration Of Competencies",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

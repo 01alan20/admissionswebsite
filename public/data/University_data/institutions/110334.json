@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 110334,
+    "name": "Cabrillo College",
+    "city": "Aptos",
+    "state": "CA",
+    "control": "Public",
+    "level": "2-year",
+    "carnegie_basic": "Associate's Colleges: High Transfer-High Traditional",
+    "website": "https://www.cabrillo.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Liberal Arts & Humanities",
+      "Business, Management & Marketing",
+      "Parks, Recreation & Fitness",
+      "Health Professions"
+    ],
+    "intl_enrollment_pct": 1,
+    "tuition_summary": {
+      "sticker": 1270.0,
+      "in_state": 1262.0,
+      "out_of_state": 8630.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 76,
+      "student_faculty_ratio": 17,
+      "total_enrollment": 9274
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

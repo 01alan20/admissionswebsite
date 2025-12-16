@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 229027,
+    "name": "The University of Texas at San Antonio",
+    "city": "San Antonio",
+    "state": "TX",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: Very High Research Activity",
+    "website": "www.utsa.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Computer & Information Sciences",
+      "Psychology",
+      "Engineering"
+    ],
+    "intl_enrollment_pct": 3,
+    "tuition_summary": {
+      "sticker": 8991.0,
+      "in_state": 8945.0,
+      "out_of_state": 21253.0
+    },
+    "outcomes": {
+      "acceptance_rate": 88,
+      "yield": 30,
+      "grad_rate_6yr": 51,
+      "retention_full_time": 79,
+      "student_faculty_ratio": 25,
+      "total_enrollment": 34864
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Rank",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

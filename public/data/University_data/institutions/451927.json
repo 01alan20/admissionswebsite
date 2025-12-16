@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 451927,
+    "name": "Patrick Henry College",
+    "city": "Purcellville",
+    "state": "VA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Arts & Sciences Focus",
+    "website": "https://www.phc.edu/",
+    "admissions_url": null,
+    "test_policy": "Required",
+    "major_families": [
+      "Social Sciences",
+      "Military Technologies",
+      "Liberal Arts & Humanities",
+      "Business, Management & Marketing"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 28425.0,
+      "in_state": 28425.0,
+      "out_of_state": 28425.0
+    },
+    "outcomes": {
+      "acceptance_rate": 82,
+      "yield": 54,
+      "grad_rate_6yr": 65,
+      "retention_full_time": 88,
+      "student_faculty_ratio": 14,
+      "total_enrollment": 408
+    }
+  },
+  "requirements": {
+    "required": [
+      "Admission Test Scores",
+      "Personal Statement Or Essay",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Recommendations",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Required"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

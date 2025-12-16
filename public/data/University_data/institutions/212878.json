@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 212878,
+    "name": "Harrisburg Area Community College",
+    "city": "Harrisburg",
+    "state": "PA",
+    "control": "Public",
+    "level": "2-year",
+    "carnegie_basic": "Associate's Colleges: High Career & Technical-Mixed Traditional/Nontraditional",
+    "website": "www.hacc.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Business, Management & Marketing",
+      "Liberal Arts & Humanities",
+      "Computer & Information Sciences"
+    ],
+    "intl_enrollment_pct": 2,
+    "tuition_summary": {
+      "sticker": 7373.0,
+      "in_state": 7088.0,
+      "out_of_state": 10148.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 59,
+      "student_faculty_ratio": 13,
+      "total_enrollment": 12880
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

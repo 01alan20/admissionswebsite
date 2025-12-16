@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 126614,
+    "name": "University of Colorado Boulder",
+    "city": "Boulder",
+    "state": "CO",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: Very High Research Activity",
+    "website": "www.colorado.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Engineering",
+      "Biological & Biomedical Sciences",
+      "Social Sciences"
+    ],
+    "intl_enrollment_pct": 8,
+    "tuition_summary": {
+      "sticker": 16430.0,
+      "in_state": 13106.0,
+      "out_of_state": 40356.0
+    },
+    "outcomes": {
+      "acceptance_rate": 83,
+      "yield": 16,
+      "grad_rate_6yr": 75,
+      "retention_full_time": 89,
+      "student_faculty_ratio": 19,
+      "total_enrollment": 41432
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

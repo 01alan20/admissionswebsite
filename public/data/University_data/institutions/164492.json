@@ -1,0 +1,60 @@
+{
+  "profile": {
+    "unitid": 164492,
+    "name": "Anna Maria College",
+    "city": "Paxton",
+    "state": "MA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Medium Programs",
+    "website": "www.annamaria.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Homeland Security & Law Enforcement",
+      "Public Administration & Social Service",
+      "Business, Management & Marketing",
+      "Health Professions"
+    ],
+    "intl_enrollment_pct": 9,
+    "tuition_summary": {
+      "sticker": 43064.0,
+      "in_state": 41010.0,
+      "out_of_state": 41010.0
+    },
+    "outcomes": {
+      "acceptance_rate": 90,
+      "yield": 7,
+      "grad_rate_6yr": 40,
+      "retention_full_time": 62,
+      "student_faculty_ratio": 13,
+      "total_enrollment": 1332
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 146205,
+    "name": "John A Logan College",
+    "city": "Carterville",
+    "state": "IL",
+    "control": "Public",
+    "level": "2-year",
+    "carnegie_basic": "Associate's Colleges: High Career & Technical-High Nontraditional",
+    "website": "https://www.jalc.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Liberal Arts & Humanities",
+      "Precision Production",
+      "Mechanic & Repair Technologies"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 4630.0,
+      "in_state": 4550.0,
+      "out_of_state": 7370.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 65,
+      "student_faculty_ratio": 20,
+      "total_enrollment": 3120
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

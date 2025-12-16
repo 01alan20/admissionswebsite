@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 178208,
+    "name": "Midwestern Baptist Theological Seminary",
+    "city": "Kansas City",
+    "state": "MO",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Four-Year: Faith-Related Institutions",
+    "website": "https://www.mbts.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Theology & Religious Vocations",
+      "Multidisciplinary Studies",
+      "Business, Management & Marketing",
+      "Education"
+    ],
+    "intl_enrollment_pct": 14,
+    "tuition_summary": {
+      "sticker": 9400.0,
+      "in_state": 9480.0,
+      "out_of_state": 9480.0
+    },
+    "outcomes": {
+      "acceptance_rate": 94,
+      "yield": 63,
+      "grad_rate_6yr": 67,
+      "retention_full_time": 65,
+      "student_faculty_ratio": 16,
+      "total_enrollment": 3840
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

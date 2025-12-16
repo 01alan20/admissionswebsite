@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 138558,
+    "name": "Abraham Baldwin Agricultural College",
+    "city": "Tifton",
+    "state": "GA",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate/Associate's Colleges: Mixed Baccalaureate/Associate's",
+    "website": "https://www.abac.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Agriculture & Natural Resources",
+      "Health Professions",
+      "Liberal Arts & Humanities",
+      "Education"
+    ],
+    "intl_enrollment_pct": 1,
+    "tuition_summary": {
+      "sticker": 3195.0,
+      "in_state": 3165.0,
+      "out_of_state": 10071.0
+    },
+    "outcomes": {
+      "acceptance_rate": 77,
+      "yield": 55,
+      "grad_rate_6yr": 28,
+      "retention_full_time": 69,
+      "student_faculty_ratio": 23,
+      "total_enrollment": 3768
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 399212,
+    "name": "Santiago Canyon College",
+    "city": "Orange",
+    "state": "CA",
+    "control": "Public",
+    "level": "2-year",
+    "carnegie_basic": "Associate's Colleges: High Transfer-High Traditional",
+    "website": "www.sccollege.edu/Pages/default.aspx",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Liberal Arts & Humanities",
+      "Business, Management & Marketing",
+      "Engineering Technologies",
+      "Family & Consumer Sciences"
+    ],
+    "intl_enrollment_pct": 1,
+    "tuition_summary": {
+      "sticker": 1164.0,
+      "in_state": 1156.0,
+      "out_of_state": 8764.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 72,
+      "student_faculty_ratio": 34,
+      "total_enrollment": 11979
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

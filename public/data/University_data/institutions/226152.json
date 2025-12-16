@@ -1,0 +1,60 @@
+{
+  "profile": {
+    "unitid": 226152,
+    "name": "Texas A & M International University",
+    "city": "Laredo",
+    "state": "TX",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
+    "website": "www.tamiu.edu/",
+    "admissions_url": null,
+    "test_policy": "Required",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Homeland Security & Law Enforcement",
+      "Education",
+      "Health Professions"
+    ],
+    "intl_enrollment_pct": 5,
+    "tuition_summary": {
+      "sticker": 7846.0,
+      "in_state": 7846.0,
+      "out_of_state": 19382.0
+    },
+    "outcomes": {
+      "acceptance_rate": 46,
+      "yield": 36,
+      "grad_rate_6yr": 49,
+      "retention_full_time": 74,
+      "student_faculty_ratio": 21,
+      "total_enrollment": 8536
+    }
+  },
+  "requirements": {
+    "required": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Secondary School Rank",
+      "Secondary School Record"
+    ],
+    "considered": [],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Work Experience"
+    ],
+    "test_policy": "Required"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

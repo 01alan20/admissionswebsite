@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 241191,
+    "name": "Universidad Adventista de las Antillas",
+    "city": "Mayaguez",
+    "state": "PR",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Small Programs",
+    "website": "https://www.uaa.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Computer & Information Sciences",
+      "Education",
+      "Business, Management & Marketing"
+    ],
+    "intl_enrollment_pct": 3,
+    "tuition_summary": {
+      "sticker": 8050.0,
+      "in_state": 7700.0,
+      "out_of_state": 7700.0
+    },
+    "outcomes": {
+      "acceptance_rate": 100,
+      "yield": 24,
+      "grad_rate_6yr": 48,
+      "retention_full_time": 76,
+      "student_faculty_ratio": 18,
+      "total_enrollment": 886
+    }
+  },
+  "requirements": {
+    "required": [
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "English Proficiency Test",
+      "Recommendations"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

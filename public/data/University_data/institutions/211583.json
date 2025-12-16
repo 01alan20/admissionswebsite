@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 211583,
+    "name": "Chestnut Hill College",
+    "city": "Philadelphia",
+    "state": "PA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Medium Programs",
+    "website": "www.chc.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Psychology",
+      "Education",
+      "Homeland Security & Law Enforcement",
+      "Business, Management & Marketing"
+    ],
+    "intl_enrollment_pct": 2,
+    "tuition_summary": {
+      "sticker": 39410.0,
+      "in_state": 39410.0,
+      "out_of_state": 39410.0
+    },
+    "outcomes": {
+      "acceptance_rate": 79,
+      "yield": 9,
+      "grad_rate_6yr": 56,
+      "retention_full_time": 67,
+      "student_faculty_ratio": 10,
+      "total_enrollment": 1402
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Completion Of College Preparatory Program",
+      "Personal Statement Or Essay",
+      "Recommendations"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

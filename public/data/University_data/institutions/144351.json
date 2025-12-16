@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 144351,
+    "name": "Concordia University-Chicago",
+    "city": "River Forest",
+    "state": "IL",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
+    "website": "www.cuchicago.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Education",
+      "Parks, Recreation & Fitness",
+      "Business, Management & Marketing",
+      "Psychology"
+    ],
+    "intl_enrollment_pct": 4,
+    "tuition_summary": {
+      "sticker": 36258.0,
+      "in_state": 34964.0,
+      "out_of_state": 34964.0
+    },
+    "outcomes": {
+      "acceptance_rate": 93,
+      "yield": 8,
+      "grad_rate_6yr": 46,
+      "retention_full_time": 63,
+      "student_faculty_ratio": 13,
+      "total_enrollment": 5066
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

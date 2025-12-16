@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 229887,
+    "name": "Wiley University",
+    "city": "Marshall",
+    "state": "TX",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
+    "website": "wileyc.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Multidisciplinary Studies",
+      "Homeland Security & Law Enforcement",
+      "Biological & Biomedical Sciences"
+    ],
+    "intl_enrollment_pct": 2,
+    "tuition_summary": {
+      "sticker": 12500.0,
+      "in_state": 13500.0,
+      "out_of_state": 13500.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": 20,
+      "retention_full_time": 32,
+      "student_faculty_ratio": 18,
+      "total_enrollment": 636
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

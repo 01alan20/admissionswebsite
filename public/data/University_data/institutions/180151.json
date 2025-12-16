@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 180151,
+    "name": "Dawson Community College",
+    "city": "Glendive",
+    "state": "MT",
+    "control": "Public",
+    "level": "2-year",
+    "carnegie_basic": "Associate's Colleges: High Transfer-High Nontraditional",
+    "website": "www.dawson.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Liberal Arts & Humanities",
+      "Health Professions",
+      "Precision Production",
+      "Agriculture & Natural Resources"
+    ],
+    "intl_enrollment_pct": 6,
+    "tuition_summary": {
+      "sticker": 4485.0,
+      "in_state": 4245.0,
+      "out_of_state": 8775.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 45,
+      "student_faculty_ratio": 13,
+      "total_enrollment": 406
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

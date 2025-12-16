@@ -1,0 +1,60 @@
+{
+  "profile": {
+    "unitid": 164924,
+    "name": "Boston College",
+    "city": "Chestnut Hill",
+    "state": "MA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: Very High Research Activity",
+    "website": "www.bc.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Social Sciences",
+      "Education",
+      "Biological & Biomedical Sciences"
+    ],
+    "intl_enrollment_pct": 12,
+    "tuition_summary": {
+      "sticker": 67680.0,
+      "in_state": 64176.0,
+      "out_of_state": 64176.0
+    },
+    "outcomes": {
+      "acceptance_rate": 16,
+      "yield": 41,
+      "grad_rate_6yr": 91,
+      "retention_full_time": 95,
+      "student_faculty_ratio": 13,
+      "total_enrollment": 15280
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

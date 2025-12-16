@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 100690,
+    "name": "Amridge University",
+    "city": "Montgomery",
+    "state": "AL",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Small Programs",
+    "website": "https://www.amridgeuniversity.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Theology & Religious Vocations",
+      "Business, Management & Marketing",
+      "Family & Consumer Sciences",
+      "Philosophy & Religious Studies"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": null,
+      "in_state": null,
+      "out_of_state": null
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": 40,
+      "retention_full_time": null,
+      "student_faculty_ratio": 12,
+      "total_enrollment": 636
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

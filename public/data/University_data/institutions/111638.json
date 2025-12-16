@@ -1,0 +1,58 @@
+{
+  "profile": {
+    "unitid": 111638,
+    "name": "Casa Loma College-Los Angeles",
+    "city": "Sherman Oaks",
+    "state": "CA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Two-Year: Health Professions",
+    "website": "https://www.casalomacollege.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": null,
+      "in_state": null,
+      "out_of_state": null
+    },
+    "outcomes": {
+      "acceptance_rate": 36,
+      "yield": 100,
+      "grad_rate_6yr": null,
+      "retention_full_time": null,
+      "student_faculty_ratio": 19,
+      "total_enrollment": 581
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay"
+    ],
+    "considered": [
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Secondary School Rank"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

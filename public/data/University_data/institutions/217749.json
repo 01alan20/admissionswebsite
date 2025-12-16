@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 217749,
+    "name": "Bob Jones University",
+    "city": "Greenville",
+    "state": "SC",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Small Programs",
+    "website": "www.bju.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Education",
+      "Business, Management & Marketing",
+      "Health Professions",
+      "Theology & Religious Vocations"
+    ],
+    "intl_enrollment_pct": 8,
+    "tuition_summary": {
+      "sticker": 23400.0,
+      "in_state": 21890.0,
+      "out_of_state": 21890.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": 70,
+      "retention_full_time": 81,
+      "student_faculty_ratio": 13,
+      "total_enrollment": 2893
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

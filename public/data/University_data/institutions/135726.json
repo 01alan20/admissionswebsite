@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 135726,
+    "name": "University of Miami",
+    "city": "Coral Gables",
+    "state": "FL",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: Very High Research Activity",
+    "website": "www.miami.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Health Professions",
+      "Biological & Biomedical Sciences",
+      "Legal Studies"
+    ],
+    "intl_enrollment_pct": 11,
+    "tuition_summary": {
+      "sticker": 59926.0,
+      "in_state": 57194.0,
+      "out_of_state": 57194.0
+    },
+    "outcomes": {
+      "acceptance_rate": 19,
+      "yield": 26,
+      "grad_rate_6yr": 84,
+      "retention_full_time": 92,
+      "student_faculty_ratio": 11,
+      "total_enrollment": 19593
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 170532,
+    "name": "Kalamazoo College",
+    "city": "Kalamazoo",
+    "state": "MI",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Arts & Sciences Focus",
+    "website": "https://www.kzoo.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Biological & Biomedical Sciences",
+      "Social Sciences",
+      "Psychology",
+      "Foreign Languages & Linguistics"
+    ],
+    "intl_enrollment_pct": 5,
+    "tuition_summary": {
+      "sticker": 58764.0,
+      "in_state": 56562.0,
+      "out_of_state": 56562.0
+    },
+    "outcomes": {
+      "acceptance_rate": 76,
+      "yield": 13,
+      "grad_rate_6yr": 82,
+      "retention_full_time": 84,
+      "student_faculty_ratio": 10,
+      "total_enrollment": 1196
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Formal Demonstration Of Competencies",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

@@ -1,0 +1,4124 @@
+[
+  {
+    "unitid":100760,
+    "name":"Central Alabama Community College",
+    "state":"AL",
+    "city":"Alexander City"
+  },
+  {
+    "unitid":101028,
+    "name":"Chattahoochee Valley Community College",
+    "state":"AL",
+    "city":"Phenix City"
+  },
+  {
+    "unitid":101161,
+    "name":"Coastal Alabama Community College",
+    "state":"AL",
+    "city":"Bay Minette"
+  },
+  {
+    "unitid":102845,
+    "name":"Charter College",
+    "state":"WA",
+    "city":"Vancouver"
+  },
+  {
+    "unitid":103893,
+    "name":"Carrington College-Phoenix North",
+    "state":"AZ",
+    "city":"Phoenix"
+  },
+  {
+    "unitid":103909,
+    "name":"Carrington College-Mesa",
+    "state":"AZ",
+    "city":"Mesa"
+  },
+  {
+    "unitid":103927,
+    "name":"Carrington College-Tucson",
+    "state":"AZ",
+    "city":"Tucson"
+  },
+  {
+    "unitid":104346,
+    "name":"Central Arizona College",
+    "state":"AZ",
+    "city":"Coolidge"
+  },
+  {
+    "unitid":104391,
+    "name":"Charles of Italy Beauty College",
+    "state":"AZ",
+    "city":"Lake Havasu City"
+  },
+  {
+    "unitid":104425,
+    "name":"Cochise County Community College District",
+    "state":"AZ",
+    "city":"Sierra Vista"
+  },
+  {
+    "unitid":106713,
+    "name":"Central Baptist College",
+    "state":"AR",
+    "city":"Conway"
+  },
+  {
+    "unitid":106795,
+    "name":"Cossatot Community College of the University of Arkansas",
+    "state":"AR",
+    "city":"De Queen"
+  },
+  {
+    "unitid":106810,
+    "name":"Crowley's Ridge College",
+    "state":"AR",
+    "city":"Paragould"
+  },
+  {
+    "unitid":107220,
+    "name":"Career Academy of Hair Design",
+    "state":"AR",
+    "city":"Springdale"
+  },
+  {
+    "unitid":108667,
+    "name":"College of Alameda",
+    "state":"CA",
+    "city":"Alameda"
+  },
+  {
+    "unitid":110316,
+    "name":"California Institute of Integral Studies",
+    "state":"CA",
+    "city":"San Francisco"
+  },
+  {
+    "unitid":110334,
+    "name":"Cabrillo College",
+    "state":"CA",
+    "city":"Aptos"
+  },
+  {
+    "unitid":110361,
+    "name":"California Baptist University",
+    "state":"CA",
+    "city":"Riverside"
+  },
+  {
+    "unitid":110370,
+    "name":"California College of the Arts",
+    "state":"CA",
+    "city":"San Francisco"
+  },
+  {
+    "unitid":110404,
+    "name":"California Institute of Technology",
+    "state":"CA",
+    "city":"Pasadena"
+  },
+  {
+    "unitid":110413,
+    "name":"California Lutheran University",
+    "state":"CA",
+    "city":"Thousand Oaks"
+  },
+  {
+    "unitid":110422,
+    "name":"California Polytechnic State University-San Luis Obispo",
+    "state":"CA",
+    "city":"San Luis Obispo"
+  },
+  {
+    "unitid":110486,
+    "name":"California State University-Bakersfield",
+    "state":"CA",
+    "city":"Bakersfield"
+  },
+  {
+    "unitid":110495,
+    "name":"California State University-Stanislaus",
+    "state":"CA",
+    "city":"Turlock"
+  },
+  {
+    "unitid":110501,
+    "name":"California State University-Chancellors Office",
+    "state":"California",
+    "city":null
+  },
+  {
+    "unitid":110510,
+    "name":"California State University-San Bernardino",
+    "state":"CA",
+    "city":"San Bernardino"
+  },
+  {
+    "unitid":110529,
+    "name":"California State Polytechnic University-Pomona",
+    "state":"CA",
+    "city":"Pomona"
+  },
+  {
+    "unitid":110538,
+    "name":"California State University-Chico",
+    "state":"CA",
+    "city":"Chico"
+  },
+  {
+    "unitid":110547,
+    "name":"California State University-Dominguez Hills",
+    "state":"CA",
+    "city":"Carson"
+  },
+  {
+    "unitid":110556,
+    "name":"California State University-Fresno",
+    "state":"CA",
+    "city":"Fresno"
+  },
+  {
+    "unitid":110565,
+    "name":"California State University-Fullerton",
+    "state":"CA",
+    "city":"Fullerton"
+  },
+  {
+    "unitid":110574,
+    "name":"California State University-East Bay",
+    "state":"CA",
+    "city":"Hayward"
+  },
+  {
+    "unitid":110583,
+    "name":"California State University-Long Beach",
+    "state":"CA",
+    "city":"Long Beach"
+  },
+  {
+    "unitid":110592,
+    "name":"California State University-Los Angeles",
+    "state":"CA",
+    "city":"Los Angeles"
+  },
+  {
+    "unitid":110608,
+    "name":"California State University-Northridge",
+    "state":"CA",
+    "city":"Northridge"
+  },
+  {
+    "unitid":110617,
+    "name":"California State University-Sacramento",
+    "state":"CA",
+    "city":"Sacramento"
+  },
+  {
+    "unitid":110875,
+    "name":"California Beauty School",
+    "state":"CA",
+    "city":"Modesto"
+  },
+  {
+    "unitid":110918,
+    "name":"California Christian College",
+    "state":"CA",
+    "city":"Fresno"
+  },
+  {
+    "unitid":111054,
+    "name":"California Hair Design Academy",
+    "state":"CA",
+    "city":"La Mesa"
+  },
+  {
+    "unitid":111081,
+    "name":"California Institute of the Arts",
+    "state":"CA",
+    "city":"Valencia"
+  },
+  {
+    "unitid":111188,
+    "name":"California State University Maritime Academy",
+    "state":"CA",
+    "city":"Vallejo"
+  },
+  {
+    "unitid":111391,
+    "name":"California Western School of Law",
+    "state":"CA",
+    "city":"San Diego"
+  },
+  {
+    "unitid":111434,
+    "name":"Canada College",
+    "state":"CA",
+    "city":"Redwood City"
+  },
+  {
+    "unitid":111461,
+    "name":"College of the Canyons",
+    "state":"CA",
+    "city":"Santa Clarita"
+  },
+  {
+    "unitid":111513,
+    "name":"Career Academy of Beauty",
+    "state":"CA",
+    "city":"Garden Grove"
+  },
+  {
+    "unitid":111638,
+    "name":"Casa Loma College-Los Angeles",
+    "state":"CA",
+    "city":"Sherman Oaks"
+  },
+  {
+    "unitid":111708,
+    "name":"CET-San Diego",
+    "state":"CA",
+    "city":"San Diego"
+  },
+  {
+    "unitid":111717,
+    "name":"CET-San Jose",
+    "state":"CA",
+    "city":"San Jose"
+  },
+  {
+    "unitid":111726,
+    "name":"CET-El Centro",
+    "state":"CA",
+    "city":"El Centro"
+  },
+  {
+    "unitid":111744,
+    "name":"CET-Colton",
+    "state":"CA",
+    "city":"Colton"
+  },
+  {
+    "unitid":111762,
+    "name":"CET-Watsonville",
+    "state":"CA",
+    "city":"Watsonville"
+  },
+  {
+    "unitid":111799,
+    "name":"CET-Salinas",
+    "state":"CA",
+    "city":"Salinas"
+  },
+  {
+    "unitid":111887,
+    "name":"Cerritos College",
+    "state":"CA",
+    "city":"Norwalk"
+  },
+  {
+    "unitid":111896,
+    "name":"Cerro Coso Community College",
+    "state":"CA",
+    "city":"Ridgecrest"
+  },
+  {
+    "unitid":111920,
+    "name":"Chabot College",
+    "state":"CA",
+    "city":"Hayward"
+  },
+  {
+    "unitid":111939,
+    "name":"Chaffey College",
+    "state":"CA",
+    "city":"Rancho Cucamonga"
+  },
+  {
+    "unitid":111948,
+    "name":"Chapman University",
+    "state":"CA",
+    "city":"Orange"
+  },
+  {
+    "unitid":111966,
+    "name":"Charles R Drew University of Medicine and Science",
+    "state":"CA",
+    "city":"Los Angeles"
+  },
+  {
+    "unitid":112075,
+    "name":"Concordia University-Irvine",
+    "state":"CA",
+    "city":"Irvine"
+  },
+  {
+    "unitid":112127,
+    "name":"Church Divinity School of the Pacific",
+    "state":"CA",
+    "city":"Berkeley"
+  },
+  {
+    "unitid":112172,
+    "name":"Citrus College",
+    "state":"CA",
+    "city":"Glendora"
+  },
+  {
+    "unitid":112181,
+    "name":"Citrus Heights Beauty College",
+    "state":"CA",
+    "city":"Citrus Heights"
+  },
+  {
+    "unitid":112190,
+    "name":"City College of San Francisco",
+    "state":"CA",
+    "city":"San Francisco"
+  },
+  {
+    "unitid":112251,
+    "name":"Claremont Graduate University",
+    "state":"CA",
+    "city":"Claremont"
+  },
+  {
+    "unitid":112260,
+    "name":"Claremont McKenna College",
+    "state":"CA",
+    "city":"Claremont"
+  },
+  {
+    "unitid":112367,
+    "name":"Clovis Adult Education",
+    "state":"CA",
+    "city":"Clovis"
+  },
+  {
+    "unitid":112376,
+    "name":"Coast Community College District Office",
+    "state":"California",
+    "city":null
+  },
+  {
+    "unitid":112385,
+    "name":"Coastline Community College",
+    "state":"CA",
+    "city":"Fountain Valley"
+  },
+  {
+    "unitid":112455,
+    "name":"Coba Academy",
+    "state":"CA",
+    "city":"Anaheim"
+  },
+  {
+    "unitid":112561,
+    "name":"Columbia College",
+    "state":"CA",
+    "city":"Sonora"
+  },
+  {
+    "unitid":112570,
+    "name":"California College of ASU",
+    "state":"CA",
+    "city":"Tarzana"
+  },
+  {
+    "unitid":112686,
+    "name":"Compton College",
+    "state":"CA",
+    "city":"Compton"
+  },
+  {
+    "unitid":112817,
+    "name":"Contra Costa Community College District Office",
+    "state":"California",
+    "city":null
+  },
+  {
+    "unitid":112826,
+    "name":"Contra Costa College",
+    "state":"CA",
+    "city":"San Pablo"
+  },
+  {
+    "unitid":113096,
+    "name":"Cosumnes River College",
+    "state":"CA",
+    "city":"Sacramento"
+  },
+  {
+    "unitid":113111,
+    "name":"Crafton Hills College",
+    "state":"CA",
+    "city":"Yucaipa"
+  },
+  {
+    "unitid":113193,
+    "name":"Cuesta College",
+    "state":"CA",
+    "city":"San Luis Obispo"
+  },
+  {
+    "unitid":113218,
+    "name":"Cuyamaca College",
+    "state":"CA",
+    "city":"El Cajon"
+  },
+  {
+    "unitid":113236,
+    "name":"Cypress College",
+    "state":"CA",
+    "city":"Cypress"
+  },
+  {
+    "unitid":113573,
+    "name":"College of the Desert",
+    "state":"CA",
+    "city":"Palm Desert"
+  },
+  {
+    "unitid":115755,
+    "name":"California State Polytechnic University-Humboldt",
+    "state":"CA",
+    "city":"Arcata"
+  },
+  {
+    "unitid":118347,
+    "name":"College of Marin",
+    "state":"CA",
+    "city":"Kentfield"
+  },
+  {
+    "unitid":120661,
+    "name":"Concorde Career College-San Diego",
+    "state":"CA",
+    "city":"San Diego"
+  },
+  {
+    "unitid":121707,
+    "name":"College of the Redwoods",
+    "state":"CA",
+    "city":"Eureka"
+  },
+  {
+    "unitid":122791,
+    "name":"College of San Mateo",
+    "state":"CA",
+    "city":"San Mateo"
+  },
+  {
+    "unitid":123217,
+    "name":"College of the Sequoias",
+    "state":"CA",
+    "city":"Visalia"
+  },
+  {
+    "unitid":123484,
+    "name":"College of the Siskiyous",
+    "state":"CA",
+    "city":"Weed"
+  },
+  {
+    "unitid":123493,
+    "name":"Charles A Jones Career and Education Center",
+    "state":"CA",
+    "city":"Sacramento"
+  },
+  {
+    "unitid":123679,
+    "name":"Concorde Career College-Garden Grove",
+    "state":"CA",
+    "city":"Garden Grove"
+  },
+  {
+    "unitid":124283,
+    "name":"Claremont School of Theology",
+    "state":"CA",
+    "city":"Claremont"
+  },
+  {
+    "unitid":124706,
+    "name":"Concorde Career College-San Bernardino",
+    "state":"CA",
+    "city":"San Bernardino"
+  },
+  {
+    "unitid":124937,
+    "name":"Concorde Career College-North Hollywood",
+    "state":"CA",
+    "city":"North Hollywood"
+  },
+  {
+    "unitid":125462,
+    "name":"Coalinga College",
+    "state":"CA",
+    "city":"Coalinga"
+  },
+  {
+    "unitid":125532,
+    "name":"Carrington College-Sacramento",
+    "state":"CA",
+    "city":"Sacramento"
+  },
+  {
+    "unitid":126669,
+    "name":"Colorado Christian University",
+    "state":"CO",
+    "city":"Lakewood"
+  },
+  {
+    "unitid":126678,
+    "name":"Colorado College",
+    "state":"CO",
+    "city":"Colorado Springs"
+  },
+  {
+    "unitid":126687,
+    "name":"Concorde Career College-Aurora",
+    "state":"CO",
+    "city":"Aurora"
+  },
+  {
+    "unitid":126711,
+    "name":"Colorado Mountain College",
+    "state":"CO",
+    "city":"Glenwood Springs"
+  },
+  {
+    "unitid":126748,
+    "name":"Colorado Northwestern Community College",
+    "state":"CO",
+    "city":"Rangely"
+  },
+  {
+    "unitid":126775,
+    "name":"Colorado School of Mines",
+    "state":"CO",
+    "city":"Golden"
+  },
+  {
+    "unitid":126784,
+    "name":"Colorado School of Trades",
+    "state":"CO",
+    "city":"Lakewood"
+  },
+  {
+    "unitid":126818,
+    "name":"Colorado State University-Fort Collins",
+    "state":"CO",
+    "city":"Fort Collins"
+  },
+  {
+    "unitid":126827,
+    "name":"Colorado Technical University-Colorado Springs",
+    "state":"CO",
+    "city":"Colorado Springs"
+  },
+  {
+    "unitid":126863,
+    "name":"Community College of Aurora",
+    "state":"CO",
+    "city":"Aurora"
+  },
+  {
+    "unitid":126942,
+    "name":"Community College of Denver",
+    "state":"CO",
+    "city":"Denver"
+  },
+  {
+    "unitid":127556,
+    "name":"Colorado Mesa University",
+    "state":"CO",
+    "city":"Grand Junction"
+  },
+  {
+    "unitid":128106,
+    "name":"Colorado State University Pueblo",
+    "state":"CO",
+    "city":"Pueblo"
+  },
+  {
+    "unitid":128771,
+    "name":"Central Connecticut State University",
+    "state":"CT",
+    "city":"New Britain"
+  },
+  {
+    "unitid":128780,
+    "name":"Charter Oak State College",
+    "state":"CT",
+    "city":"New Britain"
+  },
+  {
+    "unitid":128896,
+    "name":"Cortiva Institute",
+    "state":"CT",
+    "city":"Cromwell"
+  },
+  {
+    "unitid":128902,
+    "name":"Connecticut College",
+    "state":"CT",
+    "city":"New London"
+  },
+  {
+    "unitid":129367,
+    "name":"Connecticut State Community College",
+    "state":"CT",
+    "city":"Hartford"
+  },
+  {
+    "unitid":129543,
+    "name":"Connecticut State Community College Housatonic",
+    "state":"CT",
+    "city":"Bridgeport"
+  },
+  {
+    "unitid":130004,
+    "name":"Connecticut State Community College Norwalk",
+    "state":"CT",
+    "city":"Norwalk"
+  },
+  {
+    "unitid":130396,
+    "name":"Connecticut State Community College Gateway",
+    "state":"CT",
+    "city":"New Haven"
+  },
+  {
+    "unitid":130606,
+    "name":"Connecticut State Community College Tunxis",
+    "state":"CT",
+    "city":"Farmington"
+  },
+  {
+    "unitid":132851,
+    "name":"College of Central Florida",
+    "state":"FL",
+    "city":"Ocala"
+  },
+  {
+    "unitid":132976,
+    "name":"Charlotte Technical College",
+    "state":"FL",
+    "city":"Port Charlotte"
+  },
+  {
+    "unitid":133021,
+    "name":"Chipola College",
+    "state":"FL",
+    "city":"Marianna"
+  },
+  {
+    "unitid":133845,
+    "name":"Concorde Career Institute-Jacksonville",
+    "state":"FL",
+    "city":"Jacksonville"
+  },
+  {
+    "unitid":133854,
+    "name":"Concorde Career Institute-Miramar",
+    "state":"FL",
+    "city":"Miramar"
+  },
+  {
+    "unitid":133863,
+    "name":"Concorde Career Institute-Tampa",
+    "state":"FL",
+    "city":"Tampa"
+  },
+  {
+    "unitid":134574,
+    "name":"Cortiva Institute",
+    "state":"FL",
+    "city":"St. Petersburg"
+  },
+  {
+    "unitid":138947,
+    "name":"Clark Atlanta University",
+    "state":"GA",
+    "city":"Atlanta"
+  },
+  {
+    "unitid":139250,
+    "name":"College of Coastal Georgia",
+    "state":"GA",
+    "city":"Brunswick"
+  },
+  {
+    "unitid":139311,
+    "name":"Clayton  State University",
+    "state":"GA",
+    "city":"Morrow"
+  },
+  {
+    "unitid":139348,
+    "name":"Columbia Theological Seminary",
+    "state":"GA",
+    "city":"Decatur"
+  },
+  {
+    "unitid":139357,
+    "name":"Columbus Technical College",
+    "state":"GA",
+    "city":"Columbus"
+  },
+  {
+    "unitid":139366,
+    "name":"Columbus State University",
+    "state":"GA",
+    "city":"Columbus"
+  },
+  {
+    "unitid":139393,
+    "name":"Covenant College",
+    "state":"GA",
+    "city":"Lookout Mountain"
+  },
+  {
+    "unitid":140331,
+    "name":"Chattahoochee Technical College",
+    "state":"GA",
+    "city":"Marietta"
+  },
+  {
+    "unitid":141486,
+    "name":"Chaminade University of Honolulu",
+    "state":"HI",
+    "city":"Honolulu"
+  },
+  {
+    "unitid":142054,
+    "name":"Carrington College-Boise",
+    "state":"ID",
+    "city":"Boise"
+  },
+  {
+    "unitid":142179,
+    "name":"College of Eastern Idaho",
+    "state":"ID",
+    "city":"Idaho Falls"
+  },
+  {
+    "unitid":142559,
+    "name":"College of Southern Idaho",
+    "state":"ID",
+    "city":"Twin Falls"
+  },
+  {
+    "unitid":143464,
+    "name":"Cameo Beauty Academy",
+    "state":"IL",
+    "city":"Oak Lawn"
+  },
+  {
+    "unitid":143473,
+    "name":"Cannella School of Hair Design-Villa Park",
+    "state":"IL",
+    "city":"Villa Park"
+  },
+  {
+    "unitid":143482,
+    "name":"Cannella School of Hair Design-Chicago",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":143491,
+    "name":"Cannella School of Hair Design-Chicago",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":143552,
+    "name":"Capri Beauty College",
+    "state":"IL",
+    "city":"Oak Forest"
+  },
+  {
+    "unitid":143613,
+    "name":"Carl Sandburg College",
+    "state":"IL",
+    "city":"Galesburg"
+  },
+  {
+    "unitid":143659,
+    "name":"Catholic Theological Union at Chicago",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":144005,
+    "name":"Chicago State University",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":144014,
+    "name":"Chicago Theological Seminary",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":144157,
+    "name":"City Colleges of Chicago-Kennedy-King College",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":144166,
+    "name":"City Colleges of Chicago-Malcolm X College",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":144175,
+    "name":"City Colleges of Chicago-Olive-Harvey College",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":144184,
+    "name":"City Colleges of Chicago-Harry S Truman College",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":144193,
+    "name":"City Colleges of Chicago-Richard J Daley College",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":144209,
+    "name":"City Colleges of Chicago-Harold Washington College",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":144218,
+    "name":"City Colleges of Chicago-Wilbur Wright College",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":144281,
+    "name":"Columbia College Chicago",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":144351,
+    "name":"Concordia University-Chicago",
+    "state":"IL",
+    "city":"River Forest"
+  },
+  {
+    "unitid":144500,
+    "name":"City Colleges of Chicago-District Office",
+    "state":"Illinois",
+    "city":null
+  },
+  {
+    "unitid":144795,
+    "name":"Cosmetology & Spa Academy",
+    "state":"IL",
+    "city":"Crystal Lake"
+  },
+  {
+    "unitid":144865,
+    "name":"College of DuPage",
+    "state":"IL",
+    "city":"Glen Ellyn"
+  },
+  {
+    "unitid":146472,
+    "name":"College of Lake County",
+    "state":"IL",
+    "city":"Grayslake"
+  },
+  {
+    "unitid":147642,
+    "name":"Cosmetology Concepts Niles",
+    "state":"IL",
+    "city":"Niles"
+  },
+  {
+    "unitid":150172,
+    "name":"Calumet College of Saint Joseph",
+    "state":"IN",
+    "city":"Whiting"
+  },
+  {
+    "unitid":150215,
+    "name":"Christian Theological Seminary",
+    "state":"IN",
+    "city":"Indianapolis"
+  },
+  {
+    "unitid":150251,
+    "name":"College of Court Reporting Inc",
+    "state":"IN",
+    "city":"Valparaiso"
+  },
+  {
+    "unitid":150288,
+    "name":"Concordia Theological Seminary",
+    "state":"IN",
+    "city":"Fort Wayne"
+  },
+  {
+    "unitid":153074,
+    "name":"Capri College-Dubuque",
+    "state":"IA",
+    "city":"Dubuque"
+  },
+  {
+    "unitid":153083,
+    "name":"Capri College-Cedar Rapids",
+    "state":"IA",
+    "city":"Cedar Rapids"
+  },
+  {
+    "unitid":153108,
+    "name":"Central College",
+    "state":"IA",
+    "city":"Pella"
+  },
+  {
+    "unitid":153126,
+    "name":"Clarke University",
+    "state":"IA",
+    "city":"Dubuque"
+  },
+  {
+    "unitid":153144,
+    "name":"Coe College",
+    "state":"IA",
+    "city":"Cedar Rapids"
+  },
+  {
+    "unitid":153162,
+    "name":"Cornell College",
+    "state":"IA",
+    "city":"Mount Vernon"
+  },
+  {
+    "unitid":154448,
+    "name":"Capri College-Davenport",
+    "state":"IA",
+    "city":"Davenport"
+  },
+  {
+    "unitid":154855,
+    "name":"Central Christian College of Kansas",
+    "state":"KS",
+    "city":"McPherson"
+  },
+  {
+    "unitid":154907,
+    "name":"Cloud County Community College",
+    "state":"KS",
+    "city":"Concordia"
+  },
+  {
+    "unitid":154925,
+    "name":"Coffeyville Community College",
+    "state":"KS",
+    "city":"Coffeyville"
+  },
+  {
+    "unitid":154934,
+    "name":"Colby Community College",
+    "state":"KS",
+    "city":"Colby"
+  },
+  {
+    "unitid":154952,
+    "name":"Cowley County Community College",
+    "state":"KS",
+    "city":"Arkansas City"
+  },
+  {
+    "unitid":155283,
+    "name":"Concorde Career College-Kansas City",
+    "state":"MO",
+    "city":"Kansas City"
+  },
+  {
+    "unitid":156365,
+    "name":"Campbellsville University",
+    "state":"KY",
+    "city":"Campbellsville"
+  },
+  {
+    "unitid":156408,
+    "name":"Centre College",
+    "state":"KY",
+    "city":"Danville"
+  },
+  {
+    "unitid":156417,
+    "name":"Clear Creek Baptist Bible College",
+    "state":"KY",
+    "city":"Pineville"
+  },
+  {
+    "unitid":158088,
+    "name":"Central Louisiana Technical Community College",
+    "state":"LA",
+    "city":"Alexandria"
+  },
+  {
+    "unitid":158477,
+    "name":"Centenary College of Louisiana",
+    "state":"LA",
+    "city":"Shreveport"
+  },
+  {
+    "unitid":158538,
+    "name":"Cloyd's Beauty School 1 Inc",
+    "state":"LA",
+    "city":"West Monroe"
+  },
+  {
+    "unitid":158617,
+    "name":"Crescent City Bartending School",
+    "state":"LA",
+    "city":"New Orleans"
+  },
+  {
+    "unitid":160126,
+    "name":"Celebrity Stylist Beauty School",
+    "state":"LA",
+    "city":"Monroe"
+  },
+  {
+    "unitid":160959,
+    "name":"College of the Atlantic",
+    "state":"ME",
+    "city":"Bar Harbor"
+  },
+  {
+    "unitid":161077,
+    "name":"Central Maine Community College",
+    "state":"ME",
+    "city":"Auburn"
+  },
+  {
+    "unitid":161086,
+    "name":"Colby College",
+    "state":"ME",
+    "city":"Waterville"
+  },
+  {
+    "unitid":162061,
+    "name":"Capitol Technology University",
+    "state":"MD",
+    "city":"Laurel"
+  },
+  {
+    "unitid":162104,
+    "name":"Cecil College",
+    "state":"MD",
+    "city":"North East"
+  },
+  {
+    "unitid":162122,
+    "name":"College of Southern Maryland",
+    "state":"MD",
+    "city":"La Plata"
+  },
+  {
+    "unitid":162168,
+    "name":"Chesapeake College",
+    "state":"MD",
+    "city":"Wye Mills"
+  },
+  {
+    "unitid":162283,
+    "name":"Coppin State University",
+    "state":"MD",
+    "city":"Baltimore"
+  },
+  {
+    "unitid":165167,
+    "name":"Cambridge College",
+    "state":"MA",
+    "city":"Boston"
+  },
+  {
+    "unitid":165194,
+    "name":"Cape Cod Community College",
+    "state":"MA",
+    "city":"West Barnstable"
+  },
+  {
+    "unitid":165255,
+    "name":"Catherine Hinds Institute of Esthetics",
+    "state":"MA",
+    "city":"Woburn"
+  },
+  {
+    "unitid":165334,
+    "name":"Clark University",
+    "state":"MA",
+    "city":"Worcester"
+  },
+  {
+    "unitid":165495,
+    "name":"Conway School of Landscape Design",
+    "state":"MA",
+    "city":"Northampton"
+  },
+  {
+    "unitid":165529,
+    "name":"Curry College",
+    "state":"MA",
+    "city":"Milton"
+  },
+  {
+    "unitid":166124,
+    "name":"College of the Holy Cross",
+    "state":"MA",
+    "city":"Worcester"
+  },
+  {
+    "unitid":167394,
+    "name":"College of Our Lady of the Elms",
+    "state":"MA",
+    "city":"Chicopee"
+  },
+  {
+    "unitid":169080,
+    "name":"Calvin University",
+    "state":"MI",
+    "city":"Grand Rapids"
+  },
+  {
+    "unitid":169099,
+    "name":"Calvin Theological Seminary",
+    "state":"MI",
+    "city":"Grand Rapids"
+  },
+  {
+    "unitid":169187,
+    "name":"Carnegie Institute",
+    "state":"MI",
+    "city":"Troy"
+  },
+  {
+    "unitid":169248,
+    "name":"Central Michigan University",
+    "state":"MI",
+    "city":"Mount Pleasant"
+  },
+  {
+    "unitid":169327,
+    "name":"Cleary University",
+    "state":"MI",
+    "city":"Howell"
+  },
+  {
+    "unitid":169363,
+    "name":"Concordia University Ann Arbor",
+    "state":"MI",
+    "city":"Ann Arbor"
+  },
+  {
+    "unitid":169424,
+    "name":"Cranbrook Academy of Art",
+    "state":"MI",
+    "city":"Bloomfield Hills"
+  },
+  {
+    "unitid":169442,
+    "name":"College for Creative Studies",
+    "state":"MI",
+    "city":"Detroit"
+  },
+  {
+    "unitid":169813,
+    "name":"Creative Hair School of Cosmetology",
+    "state":"MI",
+    "city":"Flint"
+  },
+  {
+    "unitid":170037,
+    "name":"Cornerstone University",
+    "state":"MI",
+    "city":"Grand Rapids"
+  },
+  {
+    "unitid":173203,
+    "name":"Central Lakes College-Brainerd",
+    "state":"MN",
+    "city":"Brainerd"
+  },
+  {
+    "unitid":173258,
+    "name":"Carleton College",
+    "state":"MN",
+    "city":"Northfield"
+  },
+  {
+    "unitid":173300,
+    "name":"Concordia College at Moorhead",
+    "state":"MN",
+    "city":"Moorhead"
+  },
+  {
+    "unitid":173328,
+    "name":"Concordia University-Saint Paul",
+    "state":"MN",
+    "city":"Saint Paul"
+  },
+  {
+    "unitid":174747,
+    "name":"College of Saint Benedict",
+    "state":"MN",
+    "city":"Saint Joseph"
+  },
+  {
+    "unitid":174862,
+    "name":"Crown College",
+    "state":"MN",
+    "city":"Saint Bonifacius"
+  },
+  {
+    "unitid":175315,
+    "name":"Century College",
+    "state":"MN",
+    "city":"White Bear Lake"
+  },
+  {
+    "unitid":175494,
+    "name":"Chris Beauty College",
+    "state":"MS",
+    "city":"Gulfport"
+  },
+  {
+    "unitid":175519,
+    "name":"Coahoma Community College",
+    "state":"MS",
+    "city":"Clarksdale"
+  },
+  {
+    "unitid":175573,
+    "name":"Copiah-Lincoln Community College",
+    "state":"MS",
+    "city":"Wesson"
+  },
+  {
+    "unitid":176770,
+    "name":"Cox College",
+    "state":"MO",
+    "city":"Springfield"
+  },
+  {
+    "unitid":176789,
+    "name":"Calvary University",
+    "state":"MO",
+    "city":"Kansas City"
+  },
+  {
+    "unitid":176798,
+    "name":"Cape Girardeau Career and Technology Center",
+    "state":"MO",
+    "city":"Cape Girardeau"
+  },
+  {
+    "unitid":176910,
+    "name":"Central Christian College of the Bible",
+    "state":"MO",
+    "city":"Moberly"
+  },
+  {
+    "unitid":176947,
+    "name":"Central Methodist University-College of Liberal Arts and Sciences",
+    "state":"MO",
+    "city":"Fayette"
+  },
+  {
+    "unitid":177038,
+    "name":"Cleveland University-Kansas City",
+    "state":"KS",
+    "city":"Overland Park"
+  },
+  {
+    "unitid":177065,
+    "name":"Columbia College",
+    "state":"MO",
+    "city":"Columbia"
+  },
+  {
+    "unitid":177083,
+    "name":"Conception Seminary College",
+    "state":"MO",
+    "city":"Conception"
+  },
+  {
+    "unitid":177092,
+    "name":"Concordia Seminary",
+    "state":"MO",
+    "city":"Saint Louis"
+  },
+  {
+    "unitid":177117,
+    "name":"Cottey College",
+    "state":"MO",
+    "city":"Nevada"
+  },
+  {
+    "unitid":177126,
+    "name":"Covenant Theological Seminary",
+    "state":"MO",
+    "city":"Saint Louis"
+  },
+  {
+    "unitid":177135,
+    "name":"Crowder College",
+    "state":"MO",
+    "city":"Neosho"
+  },
+  {
+    "unitid":177144,
+    "name":"Culver-Stockton College",
+    "state":"MO",
+    "city":"Canton"
+  },
+  {
+    "unitid":178697,
+    "name":"College of the Ozarks",
+    "state":"MO",
+    "city":"Point Lookout"
+  },
+  {
+    "unitid":180090,
+    "name":"Crevier's Academy of Cosmetology Arts",
+    "state":"MT",
+    "city":"Kalispell"
+  },
+  {
+    "unitid":180106,
+    "name":"Carroll College",
+    "state":"MT",
+    "city":"Helena"
+  },
+  {
+    "unitid":180160,
+    "name":"Chief Dull Knife College",
+    "state":"MT",
+    "city":"Lame Deer"
+  },
+  {
+    "unitid":180832,
+    "name":"Clarkson College",
+    "state":"NE",
+    "city":"Omaha"
+  },
+  {
+    "unitid":180902,
+    "name":"Central Community College",
+    "state":"NE",
+    "city":"Grand Island"
+  },
+  {
+    "unitid":180948,
+    "name":"Chadron State College",
+    "state":"NE",
+    "city":"Chadron"
+  },
+  {
+    "unitid":180957,
+    "name":"College of Hair Design-Downtown",
+    "state":"NE",
+    "city":"Lincoln"
+  },
+  {
+    "unitid":180984,
+    "name":"Concordia University-Nebraska",
+    "state":"NE",
+    "city":"Seward"
+  },
+  {
+    "unitid":181002,
+    "name":"Creighton University",
+    "state":"NE",
+    "city":"Omaha"
+  },
+  {
+    "unitid":181145,
+    "name":"CHI Health School of Radiologic Technology",
+    "state":"NE",
+    "city":"Omaha"
+  },
+  {
+    "unitid":181604,
+    "name":"College of Saint Mary",
+    "state":"NE",
+    "city":"Omaha"
+  },
+  {
+    "unitid":181941,
+    "name":"Career College of Northern Nevada",
+    "state":"NV",
+    "city":"Sparks"
+  },
+  {
+    "unitid":182005,
+    "name":"College of Southern Nevada",
+    "state":"NV",
+    "city":"Las Vegas"
+  },
+  {
+    "unitid":182634,
+    "name":"Colby-Sawyer College",
+    "state":"NH",
+    "city":"New London"
+  },
+  {
+    "unitid":183910,
+    "name":"Caldwell University",
+    "state":"NJ",
+    "city":"Caldwell"
+  },
+  {
+    "unitid":183938,
+    "name":"Camden County College",
+    "state":"NJ",
+    "city":"Blackwood"
+  },
+  {
+    "unitid":183974,
+    "name":"Centenary University",
+    "state":"NJ",
+    "city":"Hackettstown"
+  },
+  {
+    "unitid":184180,
+    "name":"County College of Morris",
+    "state":"NJ",
+    "city":"Randolph"
+  },
+  {
+    "unitid":186405,
+    "name":"Capital Health School of Radiologic Technology",
+    "state":"NJ",
+    "city":"Trenton"
+  },
+  {
+    "unitid":186423,
+    "name":"Capital Health School of Nursing",
+    "state":"NJ",
+    "city":"Trenton"
+  },
+  {
+    "unitid":187532,
+    "name":"Central New Mexico Community College",
+    "state":"NM",
+    "city":"Albuquerque"
+  },
+  {
+    "unitid":187639,
+    "name":"Clovis Community College",
+    "state":"NM",
+    "city":"Clovis"
+  },
+  {
+    "unitid":189705,
+    "name":"Canisius University",
+    "state":"NY",
+    "city":"Buffalo"
+  },
+  {
+    "unitid":189714,
+    "name":"Capri Cosmetology Learning Centers",
+    "state":"NY",
+    "city":"Nanuet"
+  },
+  {
+    "unitid":189839,
+    "name":"Cayuga County Community College",
+    "state":"NY",
+    "city":"Auburn"
+  },
+  {
+    "unitid":189848,
+    "name":"Cazenovia College",
+    "state":"NY",
+    "city":"Cazenovia"
+  },
+  {
+    "unitid":189857,
+    "name":"Central Yeshiva Tomchei Tmimim Lubavitz",
+    "state":"NY",
+    "city":"Brooklyn"
+  },
+  {
+    "unitid":189990,
+    "name":"Christine Valmy International School for Esthetics, Skin Care & Makeup",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":190008,
+    "name":"Circle in the Square Theatre School",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":190035,
+    "name":"CUNY System Office",
+    "state":"New York",
+    "city":null
+  },
+  {
+    "unitid":190044,
+    "name":"Clarkson University",
+    "state":"NY",
+    "city":"Potsdam"
+  },
+  {
+    "unitid":190053,
+    "name":"Clinton Community College",
+    "state":"NY",
+    "city":"Plattsburgh"
+  },
+  {
+    "unitid":190071,
+    "name":"Cochran School of Nursing",
+    "state":"NY",
+    "city":"Yonkers"
+  },
+  {
+    "unitid":190080,
+    "name":"Colgate Rochester Crozer Divinity School",
+    "state":"NY",
+    "city":"Rochester"
+  },
+  {
+    "unitid":190099,
+    "name":"Colgate University",
+    "state":"NY",
+    "city":"Hamilton"
+  },
+  {
+    "unitid":190150,
+    "name":"Columbia University in the City of New York",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":190169,
+    "name":"Columbia-Greene Community College",
+    "state":"NY",
+    "city":"Hudson"
+  },
+  {
+    "unitid":190318,
+    "name":"Continental School of Beauty Culture-Rochester",
+    "state":"NY",
+    "city":"Rochester"
+  },
+  {
+    "unitid":190415,
+    "name":"Cornell University",
+    "state":"NY",
+    "city":"Ithaca"
+  },
+  {
+    "unitid":190503,
+    "name":"Culinary Institute of America",
+    "state":"NY",
+    "city":"Hyde Park"
+  },
+  {
+    "unitid":190512,
+    "name":"CUNY Bernard M Baruch College",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":190521,
+    "name":"CUNY Borough of Manhattan Community College",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":190530,
+    "name":"CUNY Bronx Community College",
+    "state":"NY",
+    "city":"Bronx"
+  },
+  {
+    "unitid":190549,
+    "name":"CUNY Brooklyn College",
+    "state":"NY",
+    "city":"Brooklyn"
+  },
+  {
+    "unitid":190558,
+    "name":"College of Staten Island CUNY",
+    "state":"NY",
+    "city":"Staten Island"
+  },
+  {
+    "unitid":190567,
+    "name":"CUNY City College",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":190576,
+    "name":"CUNY Graduate School and University Center",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":190585,
+    "name":"CUNY Hostos Community College",
+    "state":"NY",
+    "city":"Bronx"
+  },
+  {
+    "unitid":190594,
+    "name":"CUNY Hunter College",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":190600,
+    "name":"CUNY John Jay College of Criminal Justice",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":190619,
+    "name":"CUNY Kingsborough Community College",
+    "state":"NY",
+    "city":"Brooklyn"
+  },
+  {
+    "unitid":190628,
+    "name":"CUNY LaGuardia Community College",
+    "state":"NY",
+    "city":"Long Island City"
+  },
+  {
+    "unitid":190637,
+    "name":"CUNY Lehman College",
+    "state":"NY",
+    "city":"Bronx"
+  },
+  {
+    "unitid":190646,
+    "name":"CUNY Medgar Evers College",
+    "state":"NY",
+    "city":"Brooklyn"
+  },
+  {
+    "unitid":190655,
+    "name":"CUNY New York City College of Technology",
+    "state":"NY",
+    "city":"Brooklyn"
+  },
+  {
+    "unitid":190664,
+    "name":"CUNY Queens College",
+    "state":"NY",
+    "city":"Queens"
+  },
+  {
+    "unitid":190673,
+    "name":"CUNY Queensborough Community College",
+    "state":"NY",
+    "city":"Bayside"
+  },
+  {
+    "unitid":190682,
+    "name":"CUNY School of Law",
+    "state":"NY",
+    "city":"Long Island City"
+  },
+  {
+    "unitid":190691,
+    "name":"CUNY York College",
+    "state":"NY",
+    "city":"Jamaica"
+  },
+  {
+    "unitid":190707,
+    "name":"CVPH Medical Center School of Radiologic Technology",
+    "state":"NY",
+    "city":"Plattsburgh"
+  },
+  {
+    "unitid":194435,
+    "name":"Continental School of Beauty Culture-West Seneca",
+    "state":"NY",
+    "city":"West Seneca"
+  },
+  {
+    "unitid":197814,
+    "name":"College of the Albemarle",
+    "state":"NC",
+    "city":"Elizabeth City"
+  },
+  {
+    "unitid":198109,
+    "name":"Cabarrus College of Health Sciences",
+    "state":"NC",
+    "city":"Concord"
+  },
+  {
+    "unitid":198118,
+    "name":"Caldwell Community College and Technical Institute",
+    "state":"NC",
+    "city":"Hudson"
+  },
+  {
+    "unitid":198136,
+    "name":"Campbell University",
+    "state":"NC",
+    "city":"Buies Creek"
+  },
+  {
+    "unitid":198154,
+    "name":"Cape Fear Community College",
+    "state":"NC",
+    "city":"Wilmington"
+  },
+  {
+    "unitid":198206,
+    "name":"Carteret Community College",
+    "state":"NC",
+    "city":"Morehead City"
+  },
+  {
+    "unitid":198215,
+    "name":"Catawba College",
+    "state":"NC",
+    "city":"Salisbury"
+  },
+  {
+    "unitid":198233,
+    "name":"Catawba Valley Community College",
+    "state":"NC",
+    "city":"Hickory"
+  },
+  {
+    "unitid":198251,
+    "name":"Central Carolina Community College",
+    "state":"NC",
+    "city":"Sanford"
+  },
+  {
+    "unitid":198260,
+    "name":"Central Piedmont Community College",
+    "state":"NC",
+    "city":"Charlotte"
+  },
+  {
+    "unitid":198303,
+    "name":"Chowan University",
+    "state":"NC",
+    "city":"Murfreesboro"
+  },
+  {
+    "unitid":198321,
+    "name":"Cleveland Community College",
+    "state":"NC",
+    "city":"Shelby"
+  },
+  {
+    "unitid":198330,
+    "name":"Coastal Carolina Community College",
+    "state":"NC",
+    "city":"Jacksonville"
+  },
+  {
+    "unitid":198367,
+    "name":"Craven Community College",
+    "state":"NC",
+    "city":"New Bern"
+  },
+  {
+    "unitid":199078,
+    "name":"College of Wilmington",
+    "state":"NC",
+    "city":"Wilmington"
+  },
+  {
+    "unitid":199971,
+    "name":"Carolina Christian College",
+    "state":"NC",
+    "city":"Winston Salem"
+  },
+  {
+    "unitid":200208,
+    "name":"Cankdeska Cikana Community College",
+    "state":"ND",
+    "city":"Fort Totten"
+  },
+  {
+    "unitid":201539,
+    "name":"Canton City Schools Adult Career and Technical Education",
+    "state":"OH",
+    "city":"Canton"
+  },
+  {
+    "unitid":201548,
+    "name":"Capital University",
+    "state":"OH",
+    "city":"Columbus"
+  },
+  {
+    "unitid":201645,
+    "name":"Case Western Reserve University",
+    "state":"OH",
+    "city":"Cleveland"
+  },
+  {
+    "unitid":201654,
+    "name":"Cedarville University",
+    "state":"OH",
+    "city":"Cedarville"
+  },
+  {
+    "unitid":201672,
+    "name":"Central Ohio Technical College",
+    "state":"OH",
+    "city":"Newark"
+  },
+  {
+    "unitid":201681,
+    "name":"Central School of Practical Nursing",
+    "state":"OH",
+    "city":"Independence"
+  },
+  {
+    "unitid":201690,
+    "name":"Central State University",
+    "state":"OH",
+    "city":"Wilberforce"
+  },
+  {
+    "unitid":201751,
+    "name":"Chatfield College",
+    "state":"OH",
+    "city":"Saint Martin"
+  },
+  {
+    "unitid":201803,
+    "name":"Choffin Career  and Technical Center",
+    "state":"OH",
+    "city":"Youngstown"
+  },
+  {
+    "unitid":201867,
+    "name":"Cincinnati College of Mortuary Science",
+    "state":"OH",
+    "city":"Cincinnati"
+  },
+  {
+    "unitid":201928,
+    "name":"Cincinnati State Technical and Community College",
+    "state":"OH",
+    "city":"Cincinnati"
+  },
+  {
+    "unitid":201973,
+    "name":"Clark State College",
+    "state":"OH",
+    "city":"Springfield"
+  },
+  {
+    "unitid":202046,
+    "name":"Cleveland Institute of Art",
+    "state":"OH",
+    "city":"Cleveland"
+  },
+  {
+    "unitid":202073,
+    "name":"Cleveland Institute of Music",
+    "state":"OH",
+    "city":"Cleveland"
+  },
+  {
+    "unitid":202134,
+    "name":"Cleveland State University",
+    "state":"OH",
+    "city":"Cleveland"
+  },
+  {
+    "unitid":202152,
+    "name":"Columbiana County Career and Technical Center",
+    "state":"OH",
+    "city":"Lisbon"
+  },
+  {
+    "unitid":202170,
+    "name":"Columbus College of Art & Design",
+    "state":"OH",
+    "city":"Columbus"
+  },
+  {
+    "unitid":202222,
+    "name":"Columbus State Community College",
+    "state":"OH",
+    "city":"Columbus"
+  },
+  {
+    "unitid":202356,
+    "name":"Cuyahoga Community College District",
+    "state":"OH",
+    "city":"Cleveland"
+  },
+  {
+    "unitid":203438,
+    "name":"Casal Aveda Institute",
+    "state":"OH",
+    "city":"Niles"
+  },
+  {
+    "unitid":203614,
+    "name":"Collins Career Technical Center",
+    "state":"OH",
+    "city":"Chesapeake"
+  },
+  {
+    "unitid":204981,
+    "name":"Cuyahoga Valley Career Center",
+    "state":"OH",
+    "city":"Brecksville"
+  },
+  {
+    "unitid":206914,
+    "name":"Cameron University",
+    "state":"OK",
+    "city":"Lawton"
+  },
+  {
+    "unitid":206923,
+    "name":"Carl Albert State College",
+    "state":"OK",
+    "city":"Poteau"
+  },
+  {
+    "unitid":206932,
+    "name":"Central Oklahoma College",
+    "state":"OK",
+    "city":"Oklahoma City"
+  },
+  {
+    "unitid":206996,
+    "name":"Connors State College",
+    "state":"OK",
+    "city":"Warner"
+  },
+  {
+    "unitid":208318,
+    "name":"Central Oregon Community College",
+    "state":"OR",
+    "city":"Bend"
+  },
+  {
+    "unitid":208390,
+    "name":"Chemeketa Community College",
+    "state":"OR",
+    "city":"Salem"
+  },
+  {
+    "unitid":208406,
+    "name":"Clackamas Community College",
+    "state":"OR",
+    "city":"Oregon City"
+  },
+  {
+    "unitid":208415,
+    "name":"Clatsop Community College",
+    "state":"OR",
+    "city":"Astoria"
+  },
+  {
+    "unitid":208433,
+    "name":"College of Hair Design Careers",
+    "state":"OR",
+    "city":"Salem"
+  },
+  {
+    "unitid":208479,
+    "name":"Concorde Career College-Portland",
+    "state":"OR",
+    "city":"Portland"
+  },
+  {
+    "unitid":210331,
+    "name":"Corban University",
+    "state":"OR",
+    "city":"Salem"
+  },
+  {
+    "unitid":210605,
+    "name":"Community College of Allegheny County",
+    "state":"PA",
+    "city":"Pittsburgh"
+  },
+  {
+    "unitid":211024,
+    "name":"Clarks Summit University",
+    "state":"PA",
+    "city":"Clarks Summit"
+  },
+  {
+    "unitid":211079,
+    "name":"Community College of Beaver County",
+    "state":"PA",
+    "city":"Monaca"
+  },
+  {
+    "unitid":211352,
+    "name":"Cabrini University",
+    "state":"PA",
+    "city":"Radnor"
+  },
+  {
+    "unitid":211431,
+    "name":"Carlow University",
+    "state":"PA",
+    "city":"Pittsburgh"
+  },
+  {
+    "unitid":211440,
+    "name":"Carnegie Mellon University",
+    "state":"PA",
+    "city":"Pittsburgh"
+  },
+  {
+    "unitid":211468,
+    "name":"Cedar Crest College",
+    "state":"PA",
+    "city":"Allentown"
+  },
+  {
+    "unitid":211477,
+    "name":"Central Penn College",
+    "state":"PA",
+    "city":"Summerdale"
+  },
+  {
+    "unitid":211556,
+    "name":"Chatham University",
+    "state":"PA",
+    "city":"Pittsburgh"
+  },
+  {
+    "unitid":211583,
+    "name":"Chestnut Hill College",
+    "state":"PA",
+    "city":"Philadelphia"
+  },
+  {
+    "unitid":211608,
+    "name":"Cheyney University of Pennsylvania",
+    "state":"PA",
+    "city":"Cheyney"
+  },
+  {
+    "unitid":211635,
+    "name":"Citizens School of Nursing",
+    "state":"PA",
+    "city":"Tarentum"
+  },
+  {
+    "unitid":211893,
+    "name":"Curtis Institute of Music",
+    "state":"PA",
+    "city":"Philadelphia"
+  },
+  {
+    "unitid":212975,
+    "name":"Commonwealth Technical Institute",
+    "state":"PA",
+    "city":"Johnstown"
+  },
+  {
+    "unitid":215044,
+    "name":"Cortiva Institute",
+    "state":"PA",
+    "city":"King of Prussia"
+  },
+  {
+    "unitid":215114,
+    "name":"Cairn University-Langhorne",
+    "state":"PA",
+    "city":"Langhorne"
+  },
+  {
+    "unitid":215239,
+    "name":"Community College of Philadelphia",
+    "state":"PA",
+    "city":"Philadelphia"
+  },
+  {
+    "unitid":217475,
+    "name":"Community College of Rhode Island",
+    "state":"RI",
+    "city":"Warwick"
+  },
+  {
+    "unitid":217688,
+    "name":"Charleston Southern University",
+    "state":"SC",
+    "city":"Charleston"
+  },
+  {
+    "unitid":217794,
+    "name":"Charleston Cosmetology Institute",
+    "state":"SC",
+    "city":"Charleston"
+  },
+  {
+    "unitid":217819,
+    "name":"College of Charleston",
+    "state":"SC",
+    "city":"Charleston"
+  },
+  {
+    "unitid":217828,
+    "name":"Charzanne Beauty College",
+    "state":"SC",
+    "city":"Greenwood"
+  },
+  {
+    "unitid":217864,
+    "name":"Citadel Military College of South Carolina",
+    "state":"SC",
+    "city":"Charleston"
+  },
+  {
+    "unitid":217873,
+    "name":"Claflin University",
+    "state":"SC",
+    "city":"Orangeburg"
+  },
+  {
+    "unitid":217882,
+    "name":"Clemson University",
+    "state":"SC",
+    "city":"Clemson"
+  },
+  {
+    "unitid":217891,
+    "name":"Clinton College",
+    "state":"SC",
+    "city":"Rock Hill"
+  },
+  {
+    "unitid":217907,
+    "name":"Coker University",
+    "state":"SC",
+    "city":"Hartsville"
+  },
+  {
+    "unitid":217925,
+    "name":"Columbia International University",
+    "state":"SC",
+    "city":"Columbia"
+  },
+  {
+    "unitid":217934,
+    "name":"Columbia College",
+    "state":"SC",
+    "city":"Columbia"
+  },
+  {
+    "unitid":217961,
+    "name":"Converse University",
+    "state":"SC",
+    "city":"Spartanburg"
+  },
+  {
+    "unitid":218724,
+    "name":"Coastal Carolina University",
+    "state":"SC",
+    "city":"Conway"
+  },
+  {
+    "unitid":218858,
+    "name":"Central Carolina Technical College",
+    "state":"SC",
+    "city":"Sumter"
+  },
+  {
+    "unitid":219806,
+    "name":"Carson-Newman University",
+    "state":"TN",
+    "city":"Jefferson City"
+  },
+  {
+    "unitid":219824,
+    "name":"Chattanooga State Community College",
+    "state":"TN",
+    "city":"Chattanooga"
+  },
+  {
+    "unitid":219833,
+    "name":"Christian Brothers University",
+    "state":"TN",
+    "city":"Memphis"
+  },
+  {
+    "unitid":219879,
+    "name":"Cleveland State Community College",
+    "state":"TN",
+    "city":"Cleveland"
+  },
+  {
+    "unitid":219888,
+    "name":"Columbia State Community College",
+    "state":"TN",
+    "city":"Columbia"
+  },
+  {
+    "unitid":219903,
+    "name":"Concorde Career College-Memphis",
+    "state":"TN",
+    "city":"Memphis"
+  },
+  {
+    "unitid":219949,
+    "name":"Cumberland University",
+    "state":"TN",
+    "city":"Lebanon"
+  },
+  {
+    "unitid":220118,
+    "name":"Chattanooga College Medical Dental and & Technical Careers",
+    "state":"TN",
+    "city":"Chattanooga"
+  },
+  {
+    "unitid":223320,
+    "name":"Coastal Bend College",
+    "state":"TX",
+    "city":"Beeville"
+  },
+  {
+    "unitid":223816,
+    "name":"Central Texas College",
+    "state":"TX",
+    "city":"Killeen"
+  },
+  {
+    "unitid":223852,
+    "name":"Charles and Sues School of Hair Design",
+    "state":"TX",
+    "city":"Bryan"
+  },
+  {
+    "unitid":223898,
+    "name":"Cisco College",
+    "state":"TX",
+    "city":"Cisco"
+  },
+  {
+    "unitid":223922,
+    "name":"Clarendon College",
+    "state":"TX",
+    "city":"Clarendon"
+  },
+  {
+    "unitid":224004,
+    "name":"Concordia University Texas",
+    "state":"TX",
+    "city":"Austin"
+  },
+  {
+    "unitid":226408,
+    "name":"College of the Mainland",
+    "state":"TX",
+    "city":"Texas City"
+  },
+  {
+    "unitid":226675,
+    "name":"Covenant School of Nursing and Allied Health",
+    "state":"TX",
+    "city":"Lubbock"
+  },
+  {
+    "unitid":230065,
+    "name":"Cameo College of Essential Beauty",
+    "state":"UT",
+    "city":"Murray"
+  },
+  {
+    "unitid":230144,
+    "name":"Collectiv Academy",
+    "state":"UT",
+    "city":"Sandy"
+  },
+  {
+    "unitid":230834,
+    "name":"Castleton University",
+    "state":"VT",
+    "city":"Castleton"
+  },
+  {
+    "unitid":230852,
+    "name":"Champlain College",
+    "state":"VT",
+    "city":"Burlington"
+  },
+  {
+    "unitid":230861,
+    "name":"Community College of Vermont",
+    "state":"VT",
+    "city":"Montpelier"
+  },
+  {
+    "unitid":231688,
+    "name":"Central School of Practical Nursing",
+    "state":"VA",
+    "city":"Norfolk"
+  },
+  {
+    "unitid":231697,
+    "name":"Central Virginia Community College",
+    "state":"VA",
+    "city":"Lynchburg"
+  },
+  {
+    "unitid":231712,
+    "name":"Christopher Newport University",
+    "state":"VA",
+    "city":"Newport News"
+  },
+  {
+    "unitid":232016,
+    "name":"Centura College-Virginia Beach",
+    "state":"VA",
+    "city":"Virginia Beach"
+  },
+  {
+    "unitid":232618,
+    "name":"Centra College",
+    "state":"VA",
+    "city":"Lynchburg"
+  },
+  {
+    "unitid":234827,
+    "name":"Central Washington University",
+    "state":"WA",
+    "city":"Ellensburg"
+  },
+  {
+    "unitid":234845,
+    "name":"Centralia College",
+    "state":"WA",
+    "city":"Centralia"
+  },
+  {
+    "unitid":234915,
+    "name":"City University of Seattle",
+    "state":"WA",
+    "city":"Seattle"
+  },
+  {
+    "unitid":234933,
+    "name":"Clark College",
+    "state":"WA",
+    "city":"Vancouver"
+  },
+  {
+    "unitid":234951,
+    "name":"Clover Park Technical College",
+    "state":"WA",
+    "city":"Lakewood"
+  },
+  {
+    "unitid":234979,
+    "name":"Columbia Basin College",
+    "state":"WA",
+    "city":"Pasco"
+  },
+  {
+    "unitid":235024,
+    "name":"Cornish College of the Arts",
+    "state":"WA",
+    "city":"Seattle"
+  },
+  {
+    "unitid":237242,
+    "name":"Cabell County Career Technology Center",
+    "state":"WV",
+    "city":"Huntington"
+  },
+  {
+    "unitid":237303,
+    "name":"Charleston School of Beauty Culture",
+    "state":"WV",
+    "city":"Charleston"
+  },
+  {
+    "unitid":237321,
+    "name":"Clarksburg Beauty Academy and School of Massage Therapy",
+    "state":"WV",
+    "city":"Clarksburg"
+  },
+  {
+    "unitid":237330,
+    "name":"Concord University",
+    "state":"WV",
+    "city":"Athens"
+  },
+  {
+    "unitid":238430,
+    "name":"Cardinal Stritch University",
+    "state":"WI",
+    "city":"Milwaukee"
+  },
+  {
+    "unitid":238458,
+    "name":"Carroll University",
+    "state":"WI",
+    "city":"Waukesha"
+  },
+  {
+    "unitid":238476,
+    "name":"Carthage College",
+    "state":"WI",
+    "city":"Kenosha"
+  },
+  {
+    "unitid":238616,
+    "name":"Concordia University-Wisconsin",
+    "state":"WI",
+    "city":"Mequon"
+  },
+  {
+    "unitid":240116,
+    "name":"Chippewa Valley Technical College",
+    "state":"WI",
+    "city":"Eau Claire"
+  },
+  {
+    "unitid":240505,
+    "name":"Casper College",
+    "state":"WY",
+    "city":"Casper"
+  },
+  {
+    "unitid":240514,
+    "name":"Central Wyoming College",
+    "state":"WY",
+    "city":"Riverton"
+  },
+  {
+    "unitid":240709,
+    "name":"Cheeks Beauty Academy",
+    "state":"WY",
+    "city":"Cheyenne"
+  },
+  {
+    "unitid":241304,
+    "name":"Columbia Central University-Caguas",
+    "state":"PR",
+    "city":"Caguas"
+  },
+  {
+    "unitid":241377,
+    "name":"Caribbean University-Bayamon",
+    "state":"PR",
+    "city":"Bayamon"
+  },
+  {
+    "unitid":241386,
+    "name":"Caribbean University-Carolina",
+    "state":"PR",
+    "city":"Carolina"
+  },
+  {
+    "unitid":241517,
+    "name":"CEM College-San Juan",
+    "state":"PR",
+    "city":"San Juan"
+  },
+  {
+    "unitid":241720,
+    "name":"Colegio Universitario de San Juan",
+    "state":"PR",
+    "city":"San Juan"
+  },
+  {
+    "unitid":241793,
+    "name":"Center for Advanced Studies On Puerto Rico and the Caribbean",
+    "state":"PR",
+    "city":"San Juan"
+  },
+  {
+    "unitid":243638,
+    "name":"College of Micronesia-FSM",
+    "state":"FM",
+    "city":"Pohnpei"
+  },
+  {
+    "unitid":244233,
+    "name":"City College-Hollywood",
+    "state":"FL",
+    "city":"Fort Lauderdale"
+  },
+  {
+    "unitid":246017,
+    "name":"Central Technology Center",
+    "state":"OK",
+    "city":"Drumright"
+  },
+  {
+    "unitid":246035,
+    "name":"Carrington College-Portland",
+    "state":"OR",
+    "city":"Portland"
+  },
+  {
+    "unitid":246071,
+    "name":"Career Technology Center of Lackawanna County",
+    "state":"PA",
+    "city":"Scranton"
+  },
+  {
+    "unitid":246460,
+    "name":"Central Texas Beauty College-Round Rock",
+    "state":"TX",
+    "city":"Round Rock"
+  },
+  {
+    "unitid":246974,
+    "name":"Carrington College-San Leandro Campus",
+    "state":"CA",
+    "city":"San Leandro"
+  },
+  {
+    "unitid":247834,
+    "name":"Collin County Community College District",
+    "state":"TX",
+    "city":"McKinney"
+  },
+  {
+    "unitid":248527,
+    "name":"Cloyd's Beauty School 3 Inc",
+    "state":"LA",
+    "city":"Monroe"
+  },
+  {
+    "unitid":260336,
+    "name":"Clinton Technical School",
+    "state":"MO",
+    "city":"Clinton"
+  },
+  {
+    "unitid":262341,
+    "name":"Conservatory of Recording Arts and Sciences",
+    "state":"AZ",
+    "city":"Tempe"
+  },
+  {
+    "unitid":363907,
+    "name":"Caribbean University-Ponce",
+    "state":"PR",
+    "city":"Ponce"
+  },
+  {
+    "unitid":363916,
+    "name":"Caribbean University-Vega Baja",
+    "state":"PR",
+    "city":"Vega Baja"
+  },
+  {
+    "unitid":364025,
+    "name":"Chandler-Gilbert Community College",
+    "state":"AZ",
+    "city":"Chandler"
+  },
+  {
+    "unitid":364946,
+    "name":"Caddo Kiowa Technology Center",
+    "state":"OK",
+    "city":"Fort Cobb"
+  },
+  {
+    "unitid":364964,
+    "name":"Center for Instruction, Technology & Innovation",
+    "state":"NY",
+    "city":"Mexico"
+  },
+  {
+    "unitid":365374,
+    "name":"Canadian Valley Technology Center",
+    "state":"OK",
+    "city":"El Reno"
+  },
+  {
+    "unitid":365693,
+    "name":"Capitol Beauty School",
+    "state":"NE",
+    "city":"Omaha"
+  },
+  {
+    "unitid":366155,
+    "name":"Cloyd's Barber School 2 Inc",
+    "state":"LA",
+    "city":"Monroe"
+  },
+  {
+    "unitid":366261,
+    "name":"Commonwealth Institute of Funeral Service",
+    "state":"TX",
+    "city":"Houston"
+  },
+  {
+    "unitid":366711,
+    "name":"California State University-San Marcos",
+    "state":"CA",
+    "city":"San Marcos"
+  },
+  {
+    "unitid":367972,
+    "name":"Capital Area Career Center",
+    "state":"IL",
+    "city":"Springfield"
+  },
+  {
+    "unitid":369668,
+    "name":"Central Pennsylvania Institute of Science and Technology",
+    "state":"PA",
+    "city":"Pleasant Gap"
+  },
+  {
+    "unitid":371830,
+    "name":"CRU Institute of Cosmetology and Barbering",
+    "state":"CA",
+    "city":"Garden Grove"
+  },
+  {
+    "unitid":375656,
+    "name":"Chisholm Trail Technology Center",
+    "state":"OK",
+    "city":"Omega"
+  },
+  {
+    "unitid":376224,
+    "name":"CEM College-Humacao",
+    "state":"PR",
+    "city":"Humacao"
+  },
+  {
+    "unitid":376242,
+    "name":"Colegio Mayor de Tecnologia Inc",
+    "state":"PR",
+    "city":"Arroyo"
+  },
+  {
+    "unitid":376695,
+    "name":"College of the Marshall Islands",
+    "state":"MH",
+    "city":"Majuro"
+  },
+  {
+    "unitid":377449,
+    "name":"Centura College-Newport News",
+    "state":"VA",
+    "city":"Newport News"
+  },
+  {
+    "unitid":377458,
+    "name":"Centura College-Norfolk",
+    "state":"VA",
+    "city":"Norfolk"
+  },
+  {
+    "unitid":377759,
+    "name":"Capstone College",
+    "state":"CA",
+    "city":"Pasadena"
+  },
+  {
+    "unitid":378105,
+    "name":"Central Coast College",
+    "state":"CA",
+    "city":"Salinas"
+  },
+  {
+    "unitid":379746,
+    "name":"College of Health Care Professions",
+    "state":"TX",
+    "city":"Houston"
+  },
+  {
+    "unitid":379782,
+    "name":"Center for Advanced Legal Studies",
+    "state":"TX",
+    "city":"Houston"
+  },
+  {
+    "unitid":381255,
+    "name":"CET-Coachella",
+    "state":"CA",
+    "city":"Coachella"
+  },
+  {
+    "unitid":381282,
+    "name":"CET-Oxnard",
+    "state":"CA",
+    "city":"Oxnard"
+  },
+  {
+    "unitid":381325,
+    "name":"CET-Santa Maria",
+    "state":"CA",
+    "city":"Santa Maria"
+  },
+  {
+    "unitid":381352,
+    "name":"Colorado Chinese Medicine University",
+    "state":"CO",
+    "city":"Denver"
+  },
+  {
+    "unitid":381699,
+    "name":"Cheeks Beauty Academy",
+    "state":"CO",
+    "city":"Loveland"
+  },
+  {
+    "unitid":381732,
+    "name":"Colorado School of Healing Arts",
+    "state":"CO",
+    "city":"Lakewood"
+  },
+  {
+    "unitid":383464,
+    "name":"Central Texas Beauty College-Temple",
+    "state":"TX",
+    "city":"Temple"
+  },
+  {
+    "unitid":387925,
+    "name":"Cortiva Institute",
+    "state":"FL",
+    "city":"Pompano Beach"
+  },
+  {
+    "unitid":388520,
+    "name":"College of Biblical Studies-Houston",
+    "state":"TX",
+    "city":"Houston"
+  },
+  {
+    "unitid":395362,
+    "name":"Copper Mountain Community College",
+    "state":"CA",
+    "city":"Joshua Tree"
+  },
+  {
+    "unitid":404426,
+    "name":"Coconino Community College",
+    "state":"AZ",
+    "city":"Flagstaff"
+  },
+  {
+    "unitid":405872,
+    "name":"Carroll Community College",
+    "state":"MD",
+    "city":"Westminster"
+  },
+  {
+    "unitid":406422,
+    "name":"Central Susquehanna Intermediate Unit LPN Career",
+    "state":"PA",
+    "city":"Milton"
+  },
+  {
+    "unitid":406547,
+    "name":"City College-Gainesville",
+    "state":"FL",
+    "city":"Gainesville"
+  },
+  {
+    "unitid":407142,
+    "name":"Cosmetology Training Center",
+    "state":"LA",
+    "city":"Lafayette"
+  },
+  {
+    "unitid":409698,
+    "name":"California State University-Monterey Bay",
+    "state":"CA",
+    "city":"Seaside"
+  },
+  {
+    "unitid":411754,
+    "name":"Cleveland Clinic Health System-School of Diagnostic Imaging",
+    "state":"OH",
+    "city":"Euclid"
+  },
+  {
+    "unitid":413413,
+    "name":"Capella University",
+    "state":"MN",
+    "city":"Minneapolis"
+  },
+  {
+    "unitid":413617,
+    "name":"College of Menominee Nation",
+    "state":"WI",
+    "city":"Keshena"
+  },
+  {
+    "unitid":417248,
+    "name":"CT Aerotech",
+    "state":"CT",
+    "city":"Hartford"
+  },
+  {
+    "unitid":417327,
+    "name":"City College-Altamonte Springs",
+    "state":"FL",
+    "city":"Altamonte Springs"
+  },
+  {
+    "unitid":417442,
+    "name":"Career Center of Southern Illinois",
+    "state":"IL",
+    "city":"Red Bud"
+  },
+  {
+    "unitid":417503,
+    "name":"Crave Beauty Academy",
+    "state":"KS",
+    "city":"Wichita"
+  },
+  {
+    "unitid":417682,
+    "name":"Cass Career Center",
+    "state":"MO",
+    "city":"Harrisonville"
+  },
+  {
+    "unitid":417725,
+    "name":"Central College of Cosmetology",
+    "state":"MO",
+    "city":"Saint Robert"
+  },
+  {
+    "unitid":417868,
+    "name":"Clinton Essex Warren Washington BOCES",
+    "state":"NY",
+    "city":"Plattsburgh"
+  },
+  {
+    "unitid":417983,
+    "name":"Cattaraugus Allegany BOCES-Practical Nursing Program",
+    "state":"NY",
+    "city":"Olean"
+  },
+  {
+    "unitid":418171,
+    "name":"Charles Stuart School of Diamond Setting",
+    "state":"NY",
+    "city":"Brooklyn"
+  },
+  {
+    "unitid":418205,
+    "name":"Career and Technology Education Centers of Licking County",
+    "state":"OH",
+    "city":"Newark"
+  },
+  {
+    "unitid":418427,
+    "name":"Chester County Intermediate Unit",
+    "state":"PA",
+    "city":"Downingtown"
+  },
+  {
+    "unitid":419095,
+    "name":"Charles H McCann Technical School",
+    "state":"MA",
+    "city":"North Adams"
+  },
+  {
+    "unitid":419183,
+    "name":"Central California School of Continuing Education",
+    "state":"CA",
+    "city":"San Luis Obispo"
+  },
+  {
+    "unitid":419484,
+    "name":"Crawford County Career and Technical Center Practical Nursing Program",
+    "state":"PA",
+    "city":"Meadville"
+  },
+  {
+    "unitid":420024,
+    "name":"Centura College-Chesapeake",
+    "state":"VA",
+    "city":"Chesapeake"
+  },
+  {
+    "unitid":420370,
+    "name":"Career Technical Institute",
+    "state":"DC",
+    "city":"Washington"
+  },
+  {
+    "unitid":420556,
+    "name":"Columbia Gorge Community College",
+    "state":"OR",
+    "city":"The Dalles"
+  },
+  {
+    "unitid":421665,
+    "name":"Cadillac Institute of Cosmetology",
+    "state":"MI",
+    "city":"Cadillac"
+  },
+  {
+    "unitid":423120,
+    "name":"Compu-Med Vocational Careers Corp",
+    "state":"FL",
+    "city":"Hialeah"
+  },
+  {
+    "unitid":427894,
+    "name":"CET-Alexandria",
+    "state":"VA",
+    "city":"Alexandria"
+  },
+  {
+    "unitid":427982,
+    "name":"Centura College-Richmond Main",
+    "state":"VA",
+    "city":"North Chesterfield"
+  },
+  {
+    "unitid":430306,
+    "name":"Cayce\/Reilly School of Massage",
+    "state":"VA",
+    "city":"Virginia Beach"
+  },
+  {
+    "unitid":430795,
+    "name":"Carver Career Center",
+    "state":"WV",
+    "city":"Charleston"
+  },
+  {
+    "unitid":430883,
+    "name":"Cayuga Onondaga BOCES-Practical Nursing Program",
+    "state":"NY",
+    "city":"Auburn"
+  },
+  {
+    "unitid":430908,
+    "name":"Clearfield County Career and Technology Center",
+    "state":"PA",
+    "city":"Clearfield"
+  },
+  {
+    "unitid":430935,
+    "name":"Colegio de Cinematograf\u00eda Artes y Television",
+    "state":"PR",
+    "city":"Bayamon"
+  },
+  {
+    "unitid":431558,
+    "name":"Cape Coral Technical College",
+    "state":"FL",
+    "city":"Cape Coral"
+  },
+  {
+    "unitid":432269,
+    "name":"CET-El Paso",
+    "state":"TX",
+    "city":"El Paso"
+  },
+  {
+    "unitid":433013,
+    "name":"Career Networks Institute",
+    "state":"CA",
+    "city":"Santa Ana"
+  },
+  {
+    "unitid":433174,
+    "name":"Carolinas College of Health Sciences",
+    "state":"NC",
+    "city":"Charlotte"
+  },
+  {
+    "unitid":433420,
+    "name":"California Aeronautical University",
+    "state":"CA",
+    "city":"Bakersfield"
+  },
+  {
+    "unitid":434308,
+    "name":"Cortiva Institute",
+    "state":"MD",
+    "city":"Linthicum"
+  },
+  {
+    "unitid":434539,
+    "name":"City College-Miami",
+    "state":"FL",
+    "city":"Miami"
+  },
+  {
+    "unitid":434672,
+    "name":"Community College of Baltimore County",
+    "state":"MD",
+    "city":"Baltimore"
+  },
+  {
+    "unitid":434830,
+    "name":"Creative Images Institute of Cosmetology-North Dayton",
+    "state":"OH",
+    "city":"Dayton"
+  },
+  {
+    "unitid":436553,
+    "name":"Century College",
+    "state":"PR",
+    "city":"San Juan"
+  },
+  {
+    "unitid":437769,
+    "name":"Chester Career College",
+    "state":"VA",
+    "city":"CHESTER"
+  },
+  {
+    "unitid":437936,
+    "name":"Carrington College-San Jose",
+    "state":"CA",
+    "city":"San Jose"
+  },
+  {
+    "unitid":438258,
+    "name":"Carrington College-Pleasant Hill Campus",
+    "state":"CA",
+    "city":"Pleasant Hill"
+  },
+  {
+    "unitid":438285,
+    "name":"Cortiva Institute",
+    "state":"FL",
+    "city":"Maitland"
+  },
+  {
+    "unitid":439118,
+    "name":"Carrington College-Spokane",
+    "state":"WA",
+    "city":"Spokane"
+  },
+  {
+    "unitid":439190,
+    "name":"Cascadia College",
+    "state":"WA",
+    "city":"Bothell"
+  },
+  {
+    "unitid":439367,
+    "name":"CBD College",
+    "state":"CA",
+    "city":"Los Angeles"
+  },
+  {
+    "unitid":439570,
+    "name":"Community Care College",
+    "state":"OK",
+    "city":"Tulsa"
+  },
+  {
+    "unitid":441706,
+    "name":"Caribbean Forensic and Technical College",
+    "state":"PR",
+    "city":"San Juan"
+  },
+  {
+    "unitid":441742,
+    "name":"Concorde Career College-Grand Prairie",
+    "state":"TX",
+    "city":"Grand Prairie"
+  },
+  {
+    "unitid":441937,
+    "name":"California State University-Channel Islands",
+    "state":"CA",
+    "city":"Camarillo"
+  },
+  {
+    "unitid":442602,
+    "name":"Carrington College-Albuquerque",
+    "state":"NM",
+    "city":"Albuquerque"
+  },
+  {
+    "unitid":442985,
+    "name":"California Healing Arts College",
+    "state":"CA",
+    "city":"Carson"
+  },
+  {
+    "unitid":443100,
+    "name":"Colegio Educativo Tecnologico Industrial Inc",
+    "state":"PR",
+    "city":"Arecibo"
+  },
+  {
+    "unitid":443632,
+    "name":"Colorado Media School",
+    "state":"CO",
+    "city":"Denver"
+  },
+  {
+    "unitid":443951,
+    "name":"Charlie's Guard-Detective Bureau and Academy Inc",
+    "state":"PR",
+    "city":"Aguadilla"
+  },
+  {
+    "unitid":444051,
+    "name":"Creative Images Institute of Cosmetology-South Dayton",
+    "state":"OH",
+    "city":"Dayton"
+  },
+  {
+    "unitid":444264,
+    "name":"Cambridge Technical Institute",
+    "state":"PR",
+    "city":"Caguas"
+  },
+  {
+    "unitid":444510,
+    "name":"CES College",
+    "state":"CA",
+    "city":"Burbank"
+  },
+  {
+    "unitid":444565,
+    "name":"Culinary Institute Inc",
+    "state":"TX",
+    "city":"Houston"
+  },
+  {
+    "unitid":444778,
+    "name":"Charlotte Christian College and Theological Seminary",
+    "state":"NC",
+    "city":"Charlotte"
+  },
+  {
+    "unitid":445267,
+    "name":"Central Methodist University-College of Graduate and Extended Studies",
+    "state":"MO",
+    "city":"Fayette"
+  },
+  {
+    "unitid":445498,
+    "name":"Colegio Tecnico de Electricidad Galloza",
+    "state":"PR",
+    "city":"Aguada"
+  },
+  {
+    "unitid":445780,
+    "name":"Cosmetology School of Arts & Sciences",
+    "state":"ID",
+    "city":"Burley"
+  },
+  {
+    "unitid":446084,
+    "name":"CALC Institute of Technology",
+    "state":"IL",
+    "city":"Alton"
+  },
+  {
+    "unitid":446109,
+    "name":"Cambridge College of Healthcare & Technology",
+    "state":"FL",
+    "city":"Altamonte Springs"
+  },
+  {
+    "unitid":446118,
+    "name":"Career Care Institute",
+    "state":"CA",
+    "city":"Lancaster"
+  },
+  {
+    "unitid":446163,
+    "name":"Community Christian College",
+    "state":"CA",
+    "city":"Redlands"
+  },
+  {
+    "unitid":446206,
+    "name":"Culpeper Cosmetology Training Center",
+    "state":"VA",
+    "city":"Culpeper"
+  },
+  {
+    "unitid":446978,
+    "name":"Colorado State University-System Office",
+    "state":"Colorado",
+    "city":null
+  },
+  {
+    "unitid":447713,
+    "name":"California Career College",
+    "state":"CA",
+    "city":"Canoga Park"
+  },
+  {
+    "unitid":447962,
+    "name":"Compass Career College",
+    "state":"LA",
+    "city":"Hammond"
+  },
+  {
+    "unitid":448239,
+    "name":"Careers Unlimited",
+    "state":"UT",
+    "city":"Orem"
+  },
+  {
+    "unitid":449083,
+    "name":"CBT Technology Institute-Main Campus",
+    "state":"FL",
+    "city":"Miami"
+  },
+  {
+    "unitid":449092,
+    "name":"CBT Technology Institute-Hialeah",
+    "state":"FL",
+    "city":"Hialeah"
+  },
+  {
+    "unitid":449393,
+    "name":"Coachella Valley Beauty College",
+    "state":"CA",
+    "city":"La Quinta"
+  },
+  {
+    "unitid":449773,
+    "name":"CCI Training Center-Arlington",
+    "state":"TX",
+    "city":"Arlington"
+  },
+  {
+    "unitid":449782,
+    "name":"Champion Beauty College",
+    "state":"TX",
+    "city":"Houston"
+  },
+  {
+    "unitid":450401,
+    "name":"Clary Sage College",
+    "state":"OK",
+    "city":"Tulsa"
+  },
+  {
+    "unitid":450696,
+    "name":"Carrington College-Stockton",
+    "state":"CA",
+    "city":"Stockton"
+  },
+  {
+    "unitid":450702,
+    "name":"Carrington College-Citrus Heights",
+    "state":"CA",
+    "city":"Citrus Heights"
+  },
+  {
+    "unitid":450933,
+    "name":"Columbia Southern University",
+    "state":"AL",
+    "city":"Orange Beach"
+  },
+  {
+    "unitid":450988,
+    "name":"Coastline Beauty College",
+    "state":"CA",
+    "city":"Fountain Valley"
+  },
+  {
+    "unitid":451194,
+    "name":"Carlson College of Massage Therapy",
+    "state":"IA",
+    "city":"Anamosa"
+  },
+  {
+    "unitid":451343,
+    "name":"Corinth Academy of Cosmetology",
+    "state":"MS",
+    "city":"Corinth"
+  },
+  {
+    "unitid":451413,
+    "name":"Center for Allied Health Education",
+    "state":"NY",
+    "city":"Brooklyn"
+  },
+  {
+    "unitid":451495,
+    "name":"CDE Career Institute",
+    "state":"PA",
+    "city":"Tannersville"
+  },
+  {
+    "unitid":451510,
+    "name":"Charleston School of Law",
+    "state":"SC",
+    "city":"Charleston"
+  },
+  {
+    "unitid":451741,
+    "name":"CEM College-Bayamon",
+    "state":"PR",
+    "city":"Bayam\u00f3n"
+  },
+  {
+    "unitid":452540,
+    "name":"Community Technology Learning Center of Portage",
+    "state":"Ohio",
+    "city":null
+  },
+  {
+    "unitid":454218,
+    "name":"Chamberlain University-Administrative Office",
+    "state":"Illinois",
+    "city":null
+  },
+  {
+    "unitid":454227,
+    "name":"Chamberlain University-Illinois",
+    "state":"IL",
+    "city":"Addison"
+  },
+  {
+    "unitid":454236,
+    "name":"Chamberlain University-Ohio",
+    "state":"OH",
+    "city":"Columbus"
+  },
+  {
+    "unitid":454245,
+    "name":"Chamberlain University-Arizona",
+    "state":"AZ",
+    "city":"Phoenix"
+  },
+  {
+    "unitid":454801,
+    "name":"Career Development Institute Inc",
+    "state":"CA",
+    "city":"Los Angeles"
+  },
+  {
+    "unitid":454865,
+    "name":"Cambridge College of Healthcare & Technology",
+    "state":"FL",
+    "city":"Delray Beach"
+  },
+  {
+    "unitid":454874,
+    "name":"Cozmo Beauty School",
+    "state":"FL",
+    "city":"Bonita Springs"
+  },
+  {
+    "unitid":454917,
+    "name":"Celebrity School of Beauty",
+    "state":"FL",
+    "city":"Miami"
+  },
+  {
+    "unitid":455114,
+    "name":"College of Western Idaho",
+    "state":"ID",
+    "city":"Nampa"
+  },
+  {
+    "unitid":455211,
+    "name":"Casal Institute of Nevada",
+    "state":"NV",
+    "city":"Las Vegas"
+  },
+  {
+    "unitid":455220,
+    "name":"Career School of NY",
+    "state":"NY",
+    "city":"Staten Island"
+  },
+  {
+    "unitid":455707,
+    "name":"Cardiac and Vascular Institute of Ultrasound",
+    "state":"AL",
+    "city":"Mobile"
+  },
+  {
+    "unitid":455734,
+    "name":"California Nurses Educational Institute",
+    "state":"CA",
+    "city":"Palm Springs"
+  },
+  {
+    "unitid":455910,
+    "name":"Center for Massage",
+    "state":"NC",
+    "city":"Asheville"
+  },
+  {
+    "unitid":455983,
+    "name":"Columbia College",
+    "state":"VA",
+    "city":"Vienna"
+  },
+  {
+    "unitid":456287,
+    "name":"College of Hair Design-East Campus",
+    "state":"NE",
+    "city":"Lincoln"
+  },
+  {
+    "unitid":456977,
+    "name":"CBT Technology Institute-Cutler Bay",
+    "state":"FL",
+    "city":"Cutler Bay"
+  },
+  {
+    "unitid":457031,
+    "name":"Capri Beauty College",
+    "state":"IL",
+    "city":"New Lenox"
+  },
+  {
+    "unitid":457101,
+    "name":"Carrington College-Las Vegas",
+    "state":"NV",
+    "city":"Las Vegas"
+  },
+  {
+    "unitid":457110,
+    "name":"Carrington College-Reno",
+    "state":"NV",
+    "city":"Reno"
+  },
+  {
+    "unitid":457129,
+    "name":"Chamberlain University-Florida",
+    "state":"FL",
+    "city":"Jacksonville"
+  },
+  {
+    "unitid":457697,
+    "name":"City Vision University",
+    "state":"MO",
+    "city":"Kansas City"
+  },
+  {
+    "unitid":459189,
+    "name":"Cosmo Beauty Academy",
+    "state":"CA",
+    "city":"Sacramento"
+  },
+  {
+    "unitid":459417,
+    "name":"Compass College of Film and Media",
+    "state":"MI",
+    "city":"Grand Rapids"
+  },
+  {
+    "unitid":460181,
+    "name":"Concorde Career College-Dallas",
+    "state":"TX",
+    "city":"Dallas"
+  },
+  {
+    "unitid":460190,
+    "name":"Concorde Career Institute-Orlando",
+    "state":"FL",
+    "city":"Orlando"
+  },
+  {
+    "unitid":460206,
+    "name":"Concorde Career College-San Antonio",
+    "state":"TX",
+    "city":"San Antonio"
+  },
+  {
+    "unitid":460765,
+    "name":"Carolina College of Hair Design Inc",
+    "state":"NC",
+    "city":"Asheville"
+  },
+  {
+    "unitid":460871,
+    "name":"Chamberlain University-Virginia",
+    "state":"VA",
+    "city":"Vienna"
+  },
+  {
+    "unitid":461032,
+    "name":"Carolina College of Biblical Studies",
+    "state":"NC",
+    "city":"Fayetteville"
+  },
+  {
+    "unitid":461704,
+    "name":"Capilo School of Hair Design",
+    "state":"ME",
+    "city":"Augusta"
+  },
+  {
+    "unitid":461829,
+    "name":"Cinta Aveda Institute",
+    "state":"CA",
+    "city":"San Francisco"
+  },
+  {
+    "unitid":461953,
+    "name":"Colorado Academy of Veterinary Technology",
+    "state":"CO",
+    "city":"Colorado Springs"
+  },
+  {
+    "unitid":466921,
+    "name":"Chamberlain University-Missouri",
+    "state":"MO",
+    "city":"St. Louis"
+  },
+  {
+    "unitid":466930,
+    "name":"Chamberlain University-Texas",
+    "state":"TX",
+    "city":"Houston"
+  },
+  {
+    "unitid":467094,
+    "name":"Continental School of Beauty Culture-Mattydale",
+    "state":"NY",
+    "city":"Mattydale"
+  },
+  {
+    "unitid":467368,
+    "name":"Carrington College-Ontario",
+    "state":"CA",
+    "city":"Ontario"
+  },
+  {
+    "unitid":468769,
+    "name":"CET-Soledad",
+    "state":"CA",
+    "city":"Soledad"
+  },
+  {
+    "unitid":475398,
+    "name":"Catholic Distance University",
+    "state":"WV",
+    "city":"Charles Town"
+  },
+  {
+    "unitid":475468,
+    "name":"Christine Valmy International School of Esthetics & Cosmetology",
+    "state":"NJ",
+    "city":"Pine Brook"
+  },
+  {
+    "unitid":475477,
+    "name":"City College-Hollywood",
+    "state":"FL",
+    "city":"Hollywood"
+  },
+  {
+    "unitid":475565,
+    "name":"CUNY Stella and Charles Guttman Community College",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":475608,
+    "name":"Criswell College",
+    "state":"TX",
+    "city":"Dallas"
+  },
+  {
+    "unitid":475732,
+    "name":"Chamberlain University-Georgia",
+    "state":"GA",
+    "city":"Sandy Springs"
+  },
+  {
+    "unitid":475741,
+    "name":"Chamberlain University-Indiana",
+    "state":"IN",
+    "city":"Indianapolis"
+  },
+  {
+    "unitid":476975,
+    "name":"Colorado State University Global",
+    "state":"CO",
+    "city":"Aurora"
+  },
+  {
+    "unitid":480781,
+    "name":"California Miramar University",
+    "state":"CA",
+    "city":"San Diego"
+  },
+  {
+    "unitid":480888,
+    "name":"CyberTex Institute of Technology",
+    "state":"TX",
+    "city":"Austin"
+  },
+  {
+    "unitid":480967,
+    "name":"College of the Muscogee Nation",
+    "state":"OK",
+    "city":"Okmulgee"
+  },
+  {
+    "unitid":481049,
+    "name":"Carthage R9 School District-Carthage Technical Center",
+    "state":"MO",
+    "city":"Carthage"
+  },
+  {
+    "unitid":481386,
+    "name":"California Career Institute",
+    "state":"CA",
+    "city":"Anaheim"
+  },
+  {
+    "unitid":481447,
+    "name":"Center for the Healing Arts",
+    "state":"NJ",
+    "city":"Voorhees"
+  },
+  {
+    "unitid":481517,
+    "name":"City Pointe Beauty Academy",
+    "state":"MO",
+    "city":"Webb City"
+  },
+  {
+    "unitid":482200,
+    "name":"Cosmetology Academy of Texarkana",
+    "state":"TX",
+    "city":"Texarkana"
+  },
+  {
+    "unitid":483045,
+    "name":"Central Georgia Technical College",
+    "state":"GA",
+    "city":"Warner Robins"
+  },
+  {
+    "unitid":483753,
+    "name":"Champ's Barber School",
+    "state":"PA",
+    "city":"Lancaster"
+  },
+  {
+    "unitid":483911,
+    "name":"Creative Touch Cosmetology School",
+    "state":"IL",
+    "city":"Waterloo"
+  },
+  {
+    "unitid":485412,
+    "name":"Coachella Valley Beauty College-Hemet",
+    "state":"CA",
+    "city":"Hemet"
+  },
+  {
+    "unitid":485458,
+    "name":"Coastal Pines Technical College",
+    "state":"GA",
+    "city":"Waycross"
+  },
+  {
+    "unitid":485467,
+    "name":"Carrington College-Administrative Office",
+    "state":"California",
+    "city":null
+  },
+  {
+    "unitid":485546,
+    "name":"California Intercontinental University",
+    "state":"CA",
+    "city":"Irvine"
+  },
+  {
+    "unitid":486381,
+    "name":"Center for Ultrasound Research & Education",
+    "state":"NY",
+    "city":"White Plains"
+  },
+  {
+    "unitid":486390,
+    "name":"Culinary Tech Center",
+    "state":"NY",
+    "city":"White Plains"
+  },
+  {
+    "unitid":486488,
+    "name":"California Jazz Conservatory",
+    "state":"CA",
+    "city":"Berkeley"
+  },
+  {
+    "unitid":486497,
+    "name":"California Barber and Beauty College",
+    "state":"CA",
+    "city":"San Diego"
+  },
+  {
+    "unitid":486770,
+    "name":"Cortiva Institute-Arlington",
+    "state":"TX",
+    "city":"Arlington"
+  },
+  {
+    "unitid":486938,
+    "name":"Chamberlain University-Nevada",
+    "state":"NV",
+    "city":"Las Vegas"
+  },
+  {
+    "unitid":486947,
+    "name":"Chamberlain University-Michigan",
+    "state":"MI",
+    "city":"Troy"
+  },
+  {
+    "unitid":486956,
+    "name":"Chamberlain University-New Jersey",
+    "state":"NJ",
+    "city":"North Brunswick"
+  },
+  {
+    "unitid":487588,
+    "name":"Concorde Career College-Southaven",
+    "state":"MS",
+    "city":"Southaven"
+  },
+  {
+    "unitid":487621,
+    "name":"Celebrity Barber School",
+    "state":"LA",
+    "city":"Monroe"
+  },
+  {
+    "unitid":487649,
+    "name":"California Institute of Advanced Management",
+    "state":"CA",
+    "city":"Alhambra"
+  },
+  {
+    "unitid":487968,
+    "name":"CAAN Academy of Nursing",
+    "state":"IL",
+    "city":"Matteson"
+  },
+  {
+    "unitid":488004,
+    "name":"Central Yeshiva Beth Joseph",
+    "state":"NY",
+    "city":"Brooklyn"
+  },
+  {
+    "unitid":488226,
+    "name":"Center for Neurosomatic Studies",
+    "state":"FL",
+    "city":"Clearwater"
+  },
+  {
+    "unitid":488387,
+    "name":"Claremont Lincoln University",
+    "state":"CA",
+    "city":"Claremont"
+  },
+  {
+    "unitid":488563,
+    "name":"California College of Music",
+    "state":"CA",
+    "city":"Pasadena"
+  },
+  {
+    "unitid":488572,
+    "name":"California Health Sciences University",
+    "state":"CA",
+    "city":"Clovis"
+  },
+  {
+    "unitid":488590,
+    "name":"Christian Culinary Academy",
+    "state":"OR",
+    "city":"Cannon Beach"
+  },
+  {
+    "unitid":489201,
+    "name":"Clovis Community College",
+    "state":"CA",
+    "city":"Fresno"
+  },
+  {
+    "unitid":489256,
+    "name":"Caribbean Aviation Training Institute Inc",
+    "state":"PR",
+    "city":"Carolina"
+  },
+  {
+    "unitid":489344,
+    "name":"Chamberlain University-North Carolina",
+    "state":"NC",
+    "city":"Charlotte"
+  },
+  {
+    "unitid":489353,
+    "name":"Chamberlain University-California",
+    "state":"CA",
+    "city":"Rancho Cordova"
+  },
+  {
+    "unitid":489937,
+    "name":"Carolina University",
+    "state":"NC",
+    "city":"Winston-Salem"
+  },
+  {
+    "unitid":490285,
+    "name":"California Institute of Arts & Technology",
+    "state":"CA",
+    "city":"San Diego"
+  },
+  {
+    "unitid":490300,
+    "name":"Cutting Edge Academy",
+    "state":"NJ",
+    "city":"Succasunna"
+  },
+  {
+    "unitid":490692,
+    "name":"Cincinnati School of Barbering & Hair Design",
+    "state":"OH",
+    "city":"Cincinnati"
+  },
+  {
+    "unitid":491215,
+    "name":"Commercial Divers International",
+    "state":"AZ",
+    "city":"Goodyear"
+  },
+  {
+    "unitid":491260,
+    "name":"Centralia Beauty College",
+    "state":"WA",
+    "city":"Centralia"
+  },
+  {
+    "unitid":491507,
+    "name":"California Institute of Medical Science",
+    "state":"CA",
+    "city":"Clovis"
+  },
+  {
+    "unitid":491552,
+    "name":"Christina and Company Education Center",
+    "state":"IN",
+    "city":"Lafayette"
+  },
+  {
+    "unitid":491941,
+    "name":"Caris College",
+    "state":"IN",
+    "city":"Jeffersonville"
+  },
+  {
+    "unitid":491950,
+    "name":"Contra Costa Medical Career College",
+    "state":"CA",
+    "city":"Antioch"
+  },
+  {
+    "unitid":492069,
+    "name":"Champion Christian College",
+    "state":"AR",
+    "city":"Hot Springs"
+  },
+  {
+    "unitid":492078,
+    "name":"Chicago Professional Center",
+    "state":"IL",
+    "city":"Prospect Heights"
+  },
+  {
+    "unitid":492661,
+    "name":"California College of Barbering and Cosmetology",
+    "state":"CA",
+    "city":"Stockton"
+  },
+  {
+    "unitid":492759,
+    "name":"Chamberlain University-Louisiana",
+    "state":"LA",
+    "city":"Jefferson"
+  },
+  {
+    "unitid":493530,
+    "name":"Crown Cutz Academy Bristol",
+    "state":"VA",
+    "city":"Bristol"
+  },
+  {
+    "unitid":493558,
+    "name":"Central Pennsylvania Diesel Institute",
+    "state":"PA",
+    "city":"Liverpool"
+  },
+  {
+    "unitid":493600,
+    "name":"Congregation Talmidei Mesivta Tiferes Shmiel Aleksander",
+    "state":"NY",
+    "city":"Brooklyn"
+  },
+  {
+    "unitid":493822,
+    "name":"College Unbound",
+    "state":"RI",
+    "city":"Providence"
+  },
+  {
+    "unitid":493956,
+    "name":"Cal Northern School of Law",
+    "state":"California",
+    "city":null
+  },
+  {
+    "unitid":493974,
+    "name":"College of Athens",
+    "state":"Georgia",
+    "city":null
+  },
+  {
+    "unitid":494630,
+    "name":"Christ Mission College",
+    "state":"TX",
+    "city":"San Antonio"
+  },
+  {
+    "unitid":495271,
+    "name":"California Indian Nations College",
+    "state":"CA",
+    "city":"Palm Desert"
+  },
+  {
+    "unitid":496043,
+    "name":"California University of Science and Medicine",
+    "state":"CA",
+    "city":"Colton"
+  },
+  {
+    "unitid":496186,
+    "name":"California Institute of Arts & Technology-National City",
+    "state":"CA",
+    "city":"National City"
+  },
+  {
+    "unitid":496627,
+    "name":"California Northstate University",
+    "state":"CA",
+    "city":"Elk Grove"
+  },
+  {
+    "unitid":496715,
+    "name":"CTK Healthcare & Career Institute",
+    "state":"TX",
+    "city":"Irving"
+  },
+  {
+    "unitid":497666,
+    "name":"California University-Silicon Valley",
+    "state":"CA",
+    "city":"Sunnyvale"
+  },
+  {
+    "unitid":497912,
+    "name":"Concorde Career College-Broadway",
+    "state":"MO",
+    "city":"Kansas City"
+  },
+  {
+    "unitid":498012,
+    "name":"Commonwealth of Puerto Rico Department of Education-PRAMI",
+    "state":"PR",
+    "city":"Fajardo"
+  },
+  {
+    "unitid":498340,
+    "name":"Chancellor Institute",
+    "state":"FL",
+    "city":"Margate"
+  },
+  {
+    "unitid":498377,
+    "name":"Commercial Diving Technologies Institute",
+    "state":"FL",
+    "city":"Hudson"
+  },
+  {
+    "unitid":498562,
+    "name":"Commonwealth University of Pennsylvania",
+    "state":"PA",
+    "city":"Bloomsburg"
+  },
+  {
+    "unitid":498748,
+    "name":"CalCopa Massage School",
+    "state":"California",
+    "city":null
+  },
+  {
+    "unitid":498818,
+    "name":"Cutting Edge Barber Academy",
+    "state":"Pennsylvania",
+    "city":null
+  },
+  {
+    "unitid":498872,
+    "name":"Central Valley Barber College",
+    "state":"California",
+    "city":null
+  },
+  {
+    "unitid":499033,
+    "name":"Champ's Barber School-Lebanon",
+    "state":"Pennsylvania",
+    "city":null
+  },
+  {
+    "unitid":499079,
+    "name":"Collectiv Hair Dressing Academy-Collectiv Academy-Dallas",
+    "state":"Texas",
+    "city":null
+  },
+  {
+    "unitid":499176,
+    "name":"College of Biomedical Equipment Technology",
+    "state":"Texas",
+    "city":null
+  }
+]

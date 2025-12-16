@@ -1,0 +1,60 @@
+{
+  "profile": {
+    "unitid": 242699,
+    "name": "Inter American University of Puerto Rico-Guayama",
+    "city": "Guayama",
+    "state": "PR",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
+    "website": "www.guayama.inter.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Business, Management & Marketing",
+      "Biological & Biomedical Sciences",
+      "Personal & Culinary Services"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 5580.0,
+      "in_state": 5580.0,
+      "out_of_state": 5580.0
+    },
+    "outcomes": {
+      "acceptance_rate": 49,
+      "yield": 100,
+      "grad_rate_6yr": 36,
+      "retention_full_time": 81,
+      "student_faculty_ratio": 25,
+      "total_enrollment": 1776
+    }
+  },
+  "requirements": {
+    "required": [
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [],
+    "not_considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

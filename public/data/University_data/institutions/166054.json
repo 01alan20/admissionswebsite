@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 166054,
+    "name": "Hellenic College-Holy Cross Greek Orthodox School of Theology",
+    "city": "Brookline",
+    "state": "MA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Arts & Sciences Focus",
+    "website": "www.hchc.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Theology & Religious Vocations",
+      "Philosophy & Religious Studies",
+      "Business, Management & Marketing",
+      "English Language & Literature"
+    ],
+    "intl_enrollment_pct": 3,
+    "tuition_summary": {
+      "sticker": 22490.0,
+      "in_state": 22490.0,
+      "out_of_state": 22490.0
+    },
+    "outcomes": {
+      "acceptance_rate": 90,
+      "yield": 74,
+      "grad_rate_6yr": 44,
+      "retention_full_time": 100,
+      "student_faculty_ratio": 7,
+      "total_enrollment": 199
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa"
+    ],
+    "considered": [
+      "Completion Of College Preparatory Program",
+      "Legacy Status",
+      "Secondary School Rank",
+      "Secondary School Record",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

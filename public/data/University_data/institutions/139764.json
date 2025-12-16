@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 139764,
+    "name": "Georgia Southwestern State University",
+    "city": "Americus",
+    "state": "GA",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Medium Programs",
+    "website": "https://gsw.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Education",
+      "Business, Management & Marketing",
+      "Health Professions",
+      "Computer & Information Sciences"
+    ],
+    "intl_enrollment_pct": 5,
+    "tuition_summary": {
+      "sticker": 4980.0,
+      "in_state": 4980.0,
+      "out_of_state": 15702.0
+    },
+    "outcomes": {
+      "acceptance_rate": 77,
+      "yield": 34,
+      "grad_rate_6yr": 32,
+      "retention_full_time": 64,
+      "student_faculty_ratio": 18,
+      "total_enrollment": 3408
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Recommendations"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

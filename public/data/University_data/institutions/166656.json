@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 166656,
+    "name": "MCPHS University",
+    "city": "Boston",
+    "state": "MA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Four-Year: Other Health Professions Schools",
+    "website": "www.mcphs.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Health Professions",
+      "Biological & Biomedical Sciences",
+      "Psychology",
+      "Agriculture & Natural Resources"
+    ],
+    "intl_enrollment_pct": 15,
+    "tuition_summary": {
+      "sticker": 38850.0,
+      "in_state": 37230.0,
+      "out_of_state": 37230.0
+    },
+    "outcomes": {
+      "acceptance_rate": 85,
+      "yield": 13,
+      "grad_rate_6yr": 64,
+      "retention_full_time": 79,
+      "student_faculty_ratio": 10,
+      "total_enrollment": 6321
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Legacy Status",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

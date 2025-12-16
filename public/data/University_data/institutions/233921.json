@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 233921,
+    "name": "Virginia Polytechnic Institute and State University",
+    "city": "Blacksburg",
+    "state": "VA",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: Very High Research Activity",
+    "website": "www.vt.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Engineering",
+      "Business, Management & Marketing",
+      "Computer & Information Sciences",
+      "Social Sciences"
+    ],
+    "intl_enrollment_pct": 10,
+    "tuition_summary": {
+      "sticker": 15478.0,
+      "in_state": 14586.0,
+      "out_of_state": 34838.0
+    },
+    "outcomes": {
+      "acceptance_rate": 57,
+      "yield": 27,
+      "grad_rate_6yr": 86,
+      "retention_full_time": 92,
+      "student_faculty_ratio": 17,
+      "total_enrollment": 38294
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Recommendations",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

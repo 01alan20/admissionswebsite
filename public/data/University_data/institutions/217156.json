@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 217156,
+    "name": "Brown University",
+    "city": "Providence",
+    "state": "RI",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: Very High Research Activity",
+    "website": "www.brown.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Social Sciences",
+      "Computer & Information Sciences",
+      "Biological & Biomedical Sciences",
+      "Engineering"
+    ],
+    "intl_enrollment_pct": 20,
+    "tuition_summary": {
+      "sticker": 68230.0,
+      "in_state": 65146.0,
+      "out_of_state": 65146.0
+    },
+    "outcomes": {
+      "acceptance_rate": 5,
+      "yield": 63,
+      "grad_rate_6yr": 96,
+      "retention_full_time": 99,
+      "student_faculty_ratio": 6,
+      "total_enrollment": 11516
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "English Proficiency Test",
+      "Legacy Status",
+      "Secondary School Gpa",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 173911,
+    "name": "South Central College",
+    "city": "North Mankato",
+    "state": "MN",
+    "control": "Public",
+    "level": "2-year",
+    "carnegie_basic": "Associate's Colleges: High Career & Technical-Mixed Traditional/Nontraditional",
+    "website": "southcentral.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Liberal Arts & Humanities",
+      "Precision Production",
+      "Engineering Technologies"
+    ],
+    "intl_enrollment_pct": 3,
+    "tuition_summary": {
+      "sticker": 6146.0,
+      "in_state": 6146.0,
+      "out_of_state": 6146.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 60,
+      "student_faculty_ratio": 15,
+      "total_enrollment": 2652
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

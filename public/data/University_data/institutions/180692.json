@@ -1,0 +1,60 @@
+{
+  "profile": {
+    "unitid": 180692,
+    "name": "The University of Montana-Western",
+    "city": "Dillon",
+    "state": "MT",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
+    "website": "umwestern.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Education",
+      "Liberal Arts & Humanities",
+      "Business, Management & Marketing",
+      "Agriculture & Natural Resources"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 6430.0,
+      "in_state": 5874.0,
+      "out_of_state": 17698.0
+    },
+    "outcomes": {
+      "acceptance_rate": 99,
+      "yield": 38,
+      "grad_rate_6yr": 49,
+      "retention_full_time": 79,
+      "student_faculty_ratio": 15,
+      "total_enrollment": 1458
+    }
+  },
+  "requirements": {
+    "required": [
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [],
+    "not_considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

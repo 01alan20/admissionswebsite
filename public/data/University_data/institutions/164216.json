@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 164216,
+    "name": "Washington College",
+    "city": "Chestertown",
+    "state": "MD",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Arts & Sciences Focus",
+    "website": "www.washcoll.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Social Sciences",
+      "Biological & Biomedical Sciences",
+      "Business, Management & Marketing",
+      "Natural Resources & Conservation"
+    ],
+    "intl_enrollment_pct": 3,
+    "tuition_summary": {
+      "sticker": 54356.0,
+      "in_state": 52481.0,
+      "out_of_state": 52481.0
+    },
+    "outcomes": {
+      "acceptance_rate": 66,
+      "yield": 14,
+      "grad_rate_6yr": 74,
+      "retention_full_time": 87,
+      "student_faculty_ratio": 9,
+      "total_enrollment": 916
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

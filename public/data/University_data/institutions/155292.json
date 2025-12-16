@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 155292,
+    "name": "Kansas City Kansas Community College",
+    "city": "Kansas City",
+    "state": "KS",
+    "control": "Public",
+    "level": "2-year",
+    "carnegie_basic": "Associate's Colleges: High Career & Technical-Mixed Traditional/Nontraditional",
+    "website": "www.kckcc.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Liberal Arts & Humanities",
+      "Personal & Culinary Services",
+      "Mechanic & Repair Technologies"
+    ],
+    "intl_enrollment_pct": 2,
+    "tuition_summary": {
+      "sticker": 3150.0,
+      "in_state": 3120.0,
+      "out_of_state": 6690.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 50,
+      "student_faculty_ratio": 14,
+      "total_enrollment": 4803
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

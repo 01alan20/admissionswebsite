@@ -1,0 +1,380 @@
+[
+  {
+    "unitid":106148,
+    "name":"Yavapai College",
+    "state":"AZ",
+    "city":"Prescott"
+  },
+  {
+    "unitid":126076,
+    "name":"Yeshiva Ohr Elchonon Chabad West Coast Talmudical Seminary",
+    "state":"CA",
+    "city":"Los Angeles"
+  },
+  {
+    "unitid":126100,
+    "name":"Yosemite Community College District Office",
+    "state":"California",
+    "city":null
+  },
+  {
+    "unitid":126119,
+    "name":"Yuba College",
+    "state":"CA",
+    "city":"Marysville"
+  },
+  {
+    "unitid":130794,
+    "name":"Yale University",
+    "state":"CT",
+    "city":"New Haven"
+  },
+  {
+    "unitid":141361,
+    "name":"Young Harris College",
+    "state":"GA",
+    "city":"Young Harris"
+  },
+  {
+    "unitid":181853,
+    "name":"York University",
+    "state":"NE",
+    "city":"York"
+  },
+  {
+    "unitid":190752,
+    "name":"Yeshiva of Far Rockaway Derech Ayson Rabbinical Seminary",
+    "state":"NY",
+    "city":"Far Rockaway"
+  },
+  {
+    "unitid":197601,
+    "name":"Yeshiva Karlin Stolin",
+    "state":"NY",
+    "city":"Brooklyn"
+  },
+  {
+    "unitid":197647,
+    "name":"Yeshiva Derech Chaim",
+    "state":"NY",
+    "city":"Brooklyn"
+  },
+  {
+    "unitid":197674,
+    "name":"Yeshiva of Nitra Rabbinical College",
+    "state":"NY",
+    "city":"Chester"
+  },
+  {
+    "unitid":197692,
+    "name":"Yeshivath Shaar Hatorah",
+    "state":"NY",
+    "city":"Kew Gardens"
+  },
+  {
+    "unitid":197708,
+    "name":"Yeshiva University",
+    "state":"NY",
+    "city":"New York"
+  },
+  {
+    "unitid":197735,
+    "name":"Yeshivath Viznitz",
+    "state":"NY",
+    "city":"Monsey"
+  },
+  {
+    "unitid":197744,
+    "name":"Yeshivath Zichron Moshe",
+    "state":"NY",
+    "city":"South Fallsburg"
+  },
+  {
+    "unitid":206695,
+    "name":"Youngstown State University",
+    "state":"OH",
+    "city":"Youngstown"
+  },
+  {
+    "unitid":217040,
+    "name":"Yeshivath Beth Moshe",
+    "state":"PA",
+    "city":"Scranton"
+  },
+  {
+    "unitid":217059,
+    "name":"York College of Pennsylvania",
+    "state":"PA",
+    "city":"York"
+  },
+  {
+    "unitid":217077,
+    "name":"YTI Career Institute-York",
+    "state":"PA",
+    "city":"York"
+  },
+  {
+    "unitid":218991,
+    "name":"York Technical College",
+    "state":"SC",
+    "city":"Rock Hill"
+  },
+  {
+    "unitid":237109,
+    "name":"Yakima Valley College",
+    "state":"WA",
+    "city":"Yakima"
+  },
+  {
+    "unitid":247773,
+    "name":"Yeshiva Gedolah of Greater Detroit",
+    "state":"MI",
+    "city":"Oak Park"
+  },
+  {
+    "unitid":363712,
+    "name":"Yeshivah Gedolah Rabbinical College",
+    "state":"FL",
+    "city":"Miami Beach"
+  },
+  {
+    "unitid":375230,
+    "name":"Yeshiva Gedolah Imrei Yosef D'spinka",
+    "state":"NY",
+    "city":"Brooklyn"
+  },
+  {
+    "unitid":375939,
+    "name":"YTI Career Institute-Altoona",
+    "state":"PA",
+    "city":"Altoona"
+  },
+  {
+    "unitid":401250,
+    "name":"Yo San University of Traditional Chinese Medicine",
+    "state":"CA",
+    "city":"Los Angeles"
+  },
+  {
+    "unitid":405058,
+    "name":"Yeshivas Novominsk",
+    "state":"NY",
+    "city":"Brooklyn"
+  },
+  {
+    "unitid":413820,
+    "name":"Yukon Beauty College Inc",
+    "state":"OK",
+    "city":"Yukon"
+  },
+  {
+    "unitid":418409,
+    "name":"York County School of Technology-Adult & Continuing Education",
+    "state":"PA",
+    "city":"York"
+  },
+  {
+    "unitid":420325,
+    "name":"Yeshiva D'monsey Rabbinical College",
+    "state":"NY",
+    "city":"Monsey"
+  },
+  {
+    "unitid":420440,
+    "name":"York County Community College",
+    "state":"ME",
+    "city":"Wells"
+  },
+  {
+    "unitid":431983,
+    "name":"Yeshiva of the Telshe Alumni",
+    "state":"NY",
+    "city":"Riverdale"
+  },
+  {
+    "unitid":434937,
+    "name":"Yeshiva College of the Nations Capital",
+    "state":"MD",
+    "city":"Silver  Spring"
+  },
+  {
+    "unitid":441609,
+    "name":"Yeshiva Shaarei Torah of Rockland",
+    "state":"NY",
+    "city":"Suffern"
+  },
+  {
+    "unitid":451370,
+    "name":"Yeshivas Be'er Yitzchok",
+    "state":"NJ",
+    "city":"Elizabeth"
+  },
+  {
+    "unitid":451398,
+    "name":"Yeshiva Toras Chaim",
+    "state":"NJ",
+    "city":"Lakewood"
+  },
+  {
+    "unitid":455257,
+    "name":"Yeshiva of Machzikai Hadas",
+    "state":"NY",
+    "city":"Brooklyn"
+  },
+  {
+    "unitid":476692,
+    "name":"Yeshiva Gedolah Zichron Leyma",
+    "state":"NJ",
+    "city":"Union"
+  },
+  {
+    "unitid":481410,
+    "name":"Yeshiva Gedolah Kesser Torah",
+    "state":"NY",
+    "city":"Monsey"
+  },
+  {
+    "unitid":481438,
+    "name":"Yeshiva Yesodei Hatorah",
+    "state":"NJ",
+    "city":"Lakewood"
+  },
+  {
+    "unitid":484136,
+    "name":"Yahweh Beauty Academy",
+    "state":"TX",
+    "city":"Killeen"
+  },
+  {
+    "unitid":486017,
+    "name":"Yeshiva Ohr Yisrael",
+    "state":"NY",
+    "city":"Brooklyn"
+  },
+  {
+    "unitid":486026,
+    "name":"Yeshiva Sholom Shachna",
+    "state":"NY",
+    "city":"Brooklyn"
+  },
+  {
+    "unitid":487746,
+    "name":"Yeshiva Zichron Aryeh",
+    "state":"NY",
+    "city":"Far Rockaway"
+  },
+  {
+    "unitid":488350,
+    "name":"Yeshiva Gedolah Shaarei Shmuel",
+    "state":"NJ",
+    "city":"Lakewood"
+  },
+  {
+    "unitid":490276,
+    "name":"Yeshiva Shaar Ephraim",
+    "state":"NY",
+    "city":"Monsey"
+  },
+  {
+    "unitid":490319,
+    "name":"Yeshiva Bais Aharon",
+    "state":"NJ",
+    "city":"Lakewood"
+  },
+  {
+    "unitid":490504,
+    "name":"Yeshiva Ohr Naftoli",
+    "state":"NY",
+    "city":"New Windsor"
+  },
+  {
+    "unitid":491057,
+    "name":"Yeshiva Kollel Tifereth Elizer",
+    "state":"NY",
+    "city":"Brooklyn"
+  },
+  {
+    "unitid":491613,
+    "name":"Yeshiva Gedolah Tiferes Boruch",
+    "state":"NJ",
+    "city":"North Plainfield"
+  },
+  {
+    "unitid":491622,
+    "name":"Yeshiva Chemdas Hatorah",
+    "state":"NJ",
+    "city":"Lakewood"
+  },
+  {
+    "unitid":491640,
+    "name":"Yeshiva Gedolah Keren Hatorah",
+    "state":"NJ",
+    "city":"Lakewood"
+  },
+  {
+    "unitid":491710,
+    "name":"Yeshiva Gedolah of Cliffwood",
+    "state":"NJ",
+    "city":"Keyport"
+  },
+  {
+    "unitid":491765,
+    "name":"Yeshivas Emek Hatorah",
+    "state":"NJ",
+    "city":"Howell"
+  },
+  {
+    "unitid":491914,
+    "name":"Yeshiva Gedola Tiferes Yerachmiel",
+    "state":"NJ",
+    "city":"Lakewood"
+  },
+  {
+    "unitid":493594,
+    "name":"Yeshiva of Ocean",
+    "state":"NY",
+    "city":"Greenfield Park"
+  },
+  {
+    "unitid":493619,
+    "name":"Young Americans College of the Performing Arts",
+    "state":"CA",
+    "city":"Corona"
+  },
+  {
+    "unitid":493664,
+    "name":"Yeshivat Hechal Shemuel",
+    "state":"NY",
+    "city":"Brooklyn"
+  },
+  {
+    "unitid":493707,
+    "name":"Yeshiva Gedolah of Woodlake Village",
+    "state":"NJ",
+    "city":"Lakewood"
+  },
+  {
+    "unitid":493716,
+    "name":"Yeshiva Gedola Tiferes Yaakov Yitzchok",
+    "state":"NJ",
+    "city":"Lakewood"
+  },
+  {
+    "unitid":494737,
+    "name":"Yeshiva Yesoda Hatorah Vetz Chaim",
+    "state":"NY",
+    "city":"Brooklyn"
+  },
+  {
+    "unitid":498809,
+    "name":"Yeshiva of Kasho",
+    "state":"New York",
+    "city":null
+  },
+  {
+    "unitid":498906,
+    "name":"Yeshivas Sanz Klauzenburg",
+    "state":"New York",
+    "city":null
+  }
+]

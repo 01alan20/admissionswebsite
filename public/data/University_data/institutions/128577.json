@@ -1,0 +1,41 @@
+{
+  "profile": {
+    "unitid": 128577,
+    "name": "Asnuntuck Community College",
+    "city": "Enfield",
+    "state": "CT",
+    "control": "Public",
+    "level": "2-year",
+    "carnegie_basic": "Associate's Colleges: High Career & Technical-Mixed Traditional/Nontraditional",
+    "website": "www.asnuntuck.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [],
+    "intl_enrollment_pct": null,
+    "tuition_summary": {
+      "sticker": null,
+      "in_state": 4772.0,
+      "out_of_state": 14172.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": null,
+      "student_faculty_ratio": null,
+      "total_enrollment": null
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

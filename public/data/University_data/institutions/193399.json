@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 193399,
+    "name": "University of Mount Saint Vincent",
+    "city": "Bronx",
+    "state": "NY",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
+    "website": "www.mountsaintvincent.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Psychology",
+      "Education",
+      "Health Professions",
+      "Business, Management & Marketing"
+    ],
+    "intl_enrollment_pct": 2,
+    "tuition_summary": {
+      "sticker": 42740.0,
+      "in_state": 40980.0,
+      "out_of_state": 40980.0
+    },
+    "outcomes": {
+      "acceptance_rate": 85,
+      "yield": 15,
+      "grad_rate_6yr": 57,
+      "retention_full_time": 71,
+      "student_faculty_ratio": 15,
+      "total_enrollment": 3202
+    }
+  },
+  "requirements": {
+    "required": [
+      "Personal Statement Or Essay",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Recommendations"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

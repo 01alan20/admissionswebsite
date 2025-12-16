@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 173328,
+    "name": "Concordia University-Saint Paul",
+    "city": "Saint Paul",
+    "state": "MN",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
+    "website": "https://www.csp.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Education",
+      "Health Professions",
+      "Computer & Information Sciences",
+      "Business, Management & Marketing"
+    ],
+    "intl_enrollment_pct": 15,
+    "tuition_summary": {
+      "sticker": 25000.0,
+      "in_state": 24400.0,
+      "out_of_state": 24400.0
+    },
+    "outcomes": {
+      "acceptance_rate": 75,
+      "yield": 18,
+      "grad_rate_6yr": 58,
+      "retention_full_time": 67,
+      "student_faculty_ratio": 15,
+      "total_enrollment": 5854
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Gpa"
+    ],
+    "considered": [
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank",
+      "Secondary School Record"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

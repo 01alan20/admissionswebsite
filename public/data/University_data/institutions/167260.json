@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 167260,
+    "name": "Nichols College",
+    "city": "Dudley",
+    "state": "MA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Medium Programs",
+    "website": "www.nichols.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Homeland Security & Law Enforcement",
+      "Parks, Recreation & Fitness",
+      "Psychology"
+    ],
+    "intl_enrollment_pct": 3,
+    "tuition_summary": {
+      "sticker": 40375.0,
+      "in_state": 38800.0,
+      "out_of_state": 38800.0
+    },
+    "outcomes": {
+      "acceptance_rate": 88,
+      "yield": 18,
+      "grad_rate_6yr": 64,
+      "retention_full_time": 72,
+      "student_faculty_ratio": 15,
+      "total_enrollment": 1354
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

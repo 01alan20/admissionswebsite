@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 184612,
+    "name": "Felician University",
+    "city": "Lodi",
+    "state": "NJ",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Medium Programs",
+    "website": "www.felician.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Health Professions",
+      "Business, Management & Marketing",
+      "Education",
+      "Biological & Biomedical Sciences"
+    ],
+    "intl_enrollment_pct": 5,
+    "tuition_summary": {
+      "sticker": 37830.0,
+      "in_state": 36410.0,
+      "out_of_state": 36410.0
+    },
+    "outcomes": {
+      "acceptance_rate": 94,
+      "yield": 17,
+      "grad_rate_6yr": 49,
+      "retention_full_time": 80,
+      "student_faculty_ratio": 15,
+      "total_enrollment": 2236
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Rank",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Legacy Status"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

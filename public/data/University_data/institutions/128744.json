@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 128744,
+    "name": "University of Bridgeport",
+    "city": "Bridgeport",
+    "state": "CT",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral/Professional Universities",
+    "website": "www.bridgeport.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Health Professions",
+      "Education",
+      "Computer & Information Sciences",
+      "Business, Management & Marketing"
+    ],
+    "intl_enrollment_pct": 36,
+    "tuition_summary": {
+      "sticker": 35760.0,
+      "in_state": 35760.0,
+      "out_of_state": 35760.0
+    },
+    "outcomes": {
+      "acceptance_rate": 64,
+      "yield": 6,
+      "grad_rate_6yr": 46,
+      "retention_full_time": 63,
+      "student_faculty_ratio": 16,
+      "total_enrollment": 4103
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Recommendations"
+    ],
+    "not_considered": [
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

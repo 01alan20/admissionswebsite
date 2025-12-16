@@ -1,0 +1,60 @@
+{
+  "profile": {
+    "unitid": 231712,
+    "name": "Christopher Newport University",
+    "city": "Newport News",
+    "state": "VA",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Small Programs",
+    "website": "https://cnu.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Biological & Biomedical Sciences",
+      "Psychology",
+      "Social Sciences"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 16351.0,
+      "in_state": 15425.0,
+      "out_of_state": 29063.0
+    },
+    "outcomes": {
+      "acceptance_rate": 88,
+      "yield": 19,
+      "grad_rate_6yr": 75,
+      "retention_full_time": 83,
+      "student_faculty_ratio": 13,
+      "total_enrollment": 4503
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "Personal Statement Or Essay",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Recommendations",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

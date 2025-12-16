@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 491631,
+    "name": "Women's Institute of Torah Seminary and College",
+    "city": "Baltimore",
+    "state": "MD",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Four-Year: Faith-Related Institutions",
+    "website": "www.wits.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Philosophy & Religious Studies",
+      "Psychology",
+      "Computer & Information Sciences",
+      "Health Professions"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 9300.0,
+      "in_state": 9010.0,
+      "out_of_state": 9010.0
+    },
+    "outcomes": {
+      "acceptance_rate": 96,
+      "yield": 94,
+      "grad_rate_6yr": 100,
+      "retention_full_time": 96,
+      "student_faculty_ratio": 9,
+      "total_enrollment": 191
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "Recommendations"
+    ],
+    "considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "English Proficiency Test",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

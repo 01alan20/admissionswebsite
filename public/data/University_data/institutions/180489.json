@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 180489,
+    "name": "The University of Montana",
+    "city": "Missoula",
+    "state": "MT",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: Very High Research Activity",
+    "website": "www.umt.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Health Professions",
+      "Business, Management & Marketing",
+      "Natural Resources & Conservation",
+      "Social Sciences"
+    ],
+    "intl_enrollment_pct": 2,
+    "tuition_summary": {
+      "sticker": 8152.0,
+      "in_state": 7719.0,
+      "out_of_state": 29634.0
+    },
+    "outcomes": {
+      "acceptance_rate": 96,
+      "yield": 18,
+      "grad_rate_6yr": 45,
+      "retention_full_time": 76,
+      "student_faculty_ratio": 18,
+      "total_enrollment": 10327
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Secondary School Rank"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

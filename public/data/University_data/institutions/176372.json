@@ -1,0 +1,60 @@
+{
+  "profile": {
+    "unitid": 176372,
+    "name": "University of Southern Mississippi",
+    "city": "Hattiesburg",
+    "state": "MS",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: Very High Research Activity",
+    "website": "https://www.usm.edu/",
+    "admissions_url": null,
+    "test_policy": "Required",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Education",
+      "Health Professions",
+      "Library Science"
+    ],
+    "intl_enrollment_pct": 5,
+    "tuition_summary": {
+      "sticker": 9618.0,
+      "in_state": 9450.0,
+      "out_of_state": 11450.0
+    },
+    "outcomes": {
+      "acceptance_rate": 99,
+      "yield": 20,
+      "grad_rate_6yr": 51,
+      "retention_full_time": 70,
+      "student_faculty_ratio": 15,
+      "total_enrollment": 13110
+    }
+  },
+  "requirements": {
+    "required": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Required"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

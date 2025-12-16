@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 198756,
+    "name": "Johnson C Smith University",
+    "city": "Charlotte",
+    "state": "NC",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Arts & Sciences Focus",
+    "website": "www.jcsu.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Public Administration & Social Service",
+      "Biological & Biomedical Sciences",
+      "Parks, Recreation & Fitness"
+    ],
+    "intl_enrollment_pct": 1,
+    "tuition_summary": {
+      "sticker": 20480.0,
+      "in_state": 19504.0,
+      "out_of_state": 19504.0
+    },
+    "outcomes": {
+      "acceptance_rate": 43,
+      "yield": 15,
+      "grad_rate_6yr": 34,
+      "retention_full_time": 63,
+      "student_faculty_ratio": 11,
+      "total_enrollment": 1102
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Personal Statement Or Essay",
+      "Secondary School Rank"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Recommendations",
+      "Work Experience"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

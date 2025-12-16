@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 225885,
+    "name": "Jarvis Christian University",
+    "city": "Hawkins",
+    "state": "TX",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
+    "website": "www.jarvis.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Parks, Recreation & Fitness",
+      "Business, Management & Marketing",
+      "Homeland Security & Law Enforcement",
+      "Biological & Biomedical Sciences"
+    ],
+    "intl_enrollment_pct": 4,
+    "tuition_summary": {
+      "sticker": 11720.0,
+      "in_state": 11720.0,
+      "out_of_state": 11720.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": 15,
+      "retention_full_time": 49,
+      "student_faculty_ratio": 10,
+      "total_enrollment": 800
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

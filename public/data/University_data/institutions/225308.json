@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 225308,
+    "name": "Trinity Valley Community College",
+    "city": "Athens",
+    "state": "TX",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Associate's Colleges: Mixed Transfer/Career & Technical-High Traditional",
+    "website": "www.tvcc.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Liberal Arts & Humanities",
+      "Health Professions",
+      "Personal & Culinary Services",
+      "Precision Production"
+    ],
+    "intl_enrollment_pct": 1,
+    "tuition_summary": {
+      "sticker": 2640.0,
+      "in_state": 2640.0,
+      "out_of_state": 5970.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": null,
+      "student_faculty_ratio": 16,
+      "total_enrollment": 5300
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

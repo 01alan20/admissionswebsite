@@ -1,0 +1,58 @@
+{
+  "profile": {
+    "unitid": 449612,
+    "name": "Louisiana Culinary Institute",
+    "city": "Baton Rouge",
+    "state": "LA",
+    "control": "Private for-profit",
+    "level": "2-year",
+    "carnegie_basic": "Special Focus Two-Year: Arts & Design",
+    "website": "www.lci.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Personal & Culinary Services",
+      "Business, Management & Marketing"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 15575.0,
+      "in_state": 15575.0,
+      "out_of_state": 15575.0
+    },
+    "outcomes": {
+      "acceptance_rate": 49,
+      "yield": 91,
+      "grad_rate_6yr": null,
+      "retention_full_time": 75,
+      "student_faculty_ratio": 16,
+      "total_enrollment": 90
+    }
+  },
+  "requirements": {
+    "required": [
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations"
+    ],
+    "considered": [],
+    "not_considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Secondary School Gpa",
+      "Secondary School Rank",
+      "Secondary School Record",
+      "Work Experience"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

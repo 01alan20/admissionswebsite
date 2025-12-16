@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 210401,
+    "name": "Willamette University",
+    "city": "Salem",
+    "state": "OR",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Arts & Sciences Focus",
+    "website": "www.willamette.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Social Sciences",
+      "Legal Studies",
+      "Business, Management & Marketing",
+      "Biological & Biomedical Sciences"
+    ],
+    "intl_enrollment_pct": 4,
+    "tuition_summary": {
+      "sticker": 48268.0,
+      "in_state": 45260.0,
+      "out_of_state": 45260.0
+    },
+    "outcomes": {
+      "acceptance_rate": 79,
+      "yield": 16,
+      "grad_rate_6yr": 73,
+      "retention_full_time": 86,
+      "student_faculty_ratio": 12,
+      "total_enrollment": 2112
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

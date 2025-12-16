@@ -1,0 +1,59 @@
+{
+  "profile": {
+    "unitid": 172033,
+    "name": "Sacred Heart Major Seminary",
+    "city": "Detroit",
+    "state": "MI",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Arts & Sciences Focus",
+    "website": "www.shms.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Theology & Religious Vocations",
+      "Philosophy & Religious Studies"
+    ],
+    "intl_enrollment_pct": 2,
+    "tuition_summary": {
+      "sticker": 25560.0,
+      "in_state": 22277.0,
+      "out_of_state": 22277.0
+    },
+    "outcomes": {
+      "acceptance_rate": 100,
+      "yield": 50,
+      "grad_rate_6yr": 67,
+      "retention_full_time": 100,
+      "student_faculty_ratio": 7,
+      "total_enrollment": 357
+    }
+  },
+  "requirements": {
+    "required": [
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "English Proficiency Test"
+    ],
+    "not_considered": [
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 219046,
+    "name": "Black Hills State University",
+    "city": "Spearfish",
+    "state": "SD",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Small Programs",
+    "website": "www.bhsu.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Education",
+      "Biological & Biomedical Sciences",
+      "Parks, Recreation & Fitness"
+    ],
+    "intl_enrollment_pct": 2,
+    "tuition_summary": {
+      "sticker": 9000.0,
+      "in_state": 9000.0,
+      "out_of_state": 12100.0
+    },
+    "outcomes": {
+      "acceptance_rate": 94,
+      "yield": 32,
+      "grad_rate_6yr": 40,
+      "retention_full_time": 72,
+      "student_faculty_ratio": 17,
+      "total_enrollment": 3475
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "Secondary School Gpa",
+      "Secondary School Rank",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores"
+    ],
+    "not_considered": [
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

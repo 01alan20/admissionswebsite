@@ -1,0 +1,58 @@
+{
+  "profile": {
+    "unitid": 215594,
+    "name": "Reading Hospital School of Health Sciences",
+    "city": "Reading",
+    "state": "PA",
+    "control": "Private nonprofit",
+    "level": "2-year",
+    "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
+    "website": "https://reading.towerhealth.org/academics/health-sciences/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 11915.0,
+      "in_state": 11445.0,
+      "out_of_state": 11445.0
+    },
+    "outcomes": {
+      "acceptance_rate": 20,
+      "yield": 100,
+      "grad_rate_6yr": null,
+      "retention_full_time": 89,
+      "student_faculty_ratio": 7,
+      "total_enrollment": 270
+    }
+  },
+  "requirements": {
+    "required": [
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Completion Of College Preparatory Program",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Secondary School Rank"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

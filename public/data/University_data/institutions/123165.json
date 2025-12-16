@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 123165,
+    "name": "Scripps College",
+    "city": "Claremont",
+    "state": "CA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Arts & Sciences Focus",
+    "website": "www.scrippscollege.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Biological & Biomedical Sciences",
+      "Social Sciences",
+      "Psychology",
+      "English Language & Literature"
+    ],
+    "intl_enrollment_pct": 4,
+    "tuition_summary": {
+      "sticker": 63434.0,
+      "in_state": 60712.0,
+      "out_of_state": 60712.0
+    },
+    "outcomes": {
+      "acceptance_rate": 34,
+      "yield": 26,
+      "grad_rate_6yr": 87,
+      "retention_full_time": 88,
+      "student_faculty_ratio": 11,
+      "total_enrollment": 1103
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Legacy Status",
+      "Secondary School Gpa",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

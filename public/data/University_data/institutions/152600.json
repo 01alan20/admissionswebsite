@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 152600,
+    "name": "Valparaiso University",
+    "city": "Valparaiso",
+    "state": "IN",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral/Professional Universities",
+    "website": "https://www.valpo.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Health Professions",
+      "Business, Management & Marketing",
+      "Computer & Information Sciences",
+      "Engineering"
+    ],
+    "intl_enrollment_pct": 14,
+    "tuition_summary": {
+      "sticker": 46588.0,
+      "in_state": 44796.0,
+      "out_of_state": 44796.0
+    },
+    "outcomes": {
+      "acceptance_rate": 92,
+      "yield": 11,
+      "grad_rate_6yr": 67,
+      "retention_full_time": 79,
+      "student_faculty_ratio": 11,
+      "total_enrollment": 2846
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

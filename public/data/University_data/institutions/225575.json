@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 225575,
+    "name": "Huston-Tillotson University",
+    "city": "Austin",
+    "state": "TX",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
+    "website": "www.htu.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Liberal Arts & Humanities",
+      "Psychology",
+      "Parks, Recreation & Fitness"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 14703.0,
+      "in_state": 14703.0,
+      "out_of_state": 14703.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": 33,
+      "retention_full_time": 51,
+      "student_faculty_ratio": 16,
+      "total_enrollment": 1029
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

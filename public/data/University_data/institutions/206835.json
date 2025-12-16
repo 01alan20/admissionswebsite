@@ -1,0 +1,60 @@
+{
+  "profile": {
+    "unitid": 206835,
+    "name": "Oklahoma Wesleyan University",
+    "city": "Bartlesville",
+    "state": "OK",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Small Programs",
+    "website": "www.okwu.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Health Professions",
+      "Education",
+      "Parks, Recreation & Fitness"
+    ],
+    "intl_enrollment_pct": 7,
+    "tuition_summary": {
+      "sticker": 31466.0,
+      "in_state": 30262.0,
+      "out_of_state": 30262.0
+    },
+    "outcomes": {
+      "acceptance_rate": 77,
+      "yield": 37,
+      "grad_rate_6yr": 28,
+      "retention_full_time": 49,
+      "student_faculty_ratio": 15,
+      "total_enrollment": 947
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Rank",
+      "Secondary School Record"
+    ],
+    "considered": [],
+    "not_considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Work Experience"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

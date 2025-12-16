@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 144184,
+    "name": "City Colleges of Chicago-Harry S Truman College",
+    "city": "Chicago",
+    "state": "IL",
+    "control": "Public",
+    "level": "2-year",
+    "carnegie_basic": "Associate's Colleges: High Transfer-High Nontraditional",
+    "website": "www.ccc.edu/colleges/truman/Pages/default.aspx",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Liberal Arts & Humanities",
+      "Family & Consumer Sciences",
+      "Multidisciplinary Studies",
+      "Education"
+    ],
+    "intl_enrollment_pct": 1,
+    "tuition_summary": {
+      "sticker": 4380.0,
+      "in_state": 4380.0,
+      "out_of_state": 14430.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 58,
+      "student_faculty_ratio": 25,
+      "total_enrollment": 6185
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

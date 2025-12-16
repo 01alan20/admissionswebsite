@@ -1,0 +1,57 @@
+{
+  "profile": {
+    "unitid": 213163,
+    "name": "UPMC Jameson School of Nursing",
+    "city": "New Castle",
+    "state": "PA",
+    "control": "Private nonprofit",
+    "level": "2-year",
+    "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
+    "website": "www.upmc.com/healthcare-professionals/education/schools-of-nursing/campuses/jameson",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 15498.0,
+      "in_state": 14682.0,
+      "out_of_state": 14682.0
+    },
+    "outcomes": {
+      "acceptance_rate": 74,
+      "yield": 67,
+      "grad_rate_6yr": null,
+      "retention_full_time": 55,
+      "student_faculty_ratio": 12,
+      "total_enrollment": 332
+    }
+  },
+  "requirements": {
+    "required": [
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Record"
+    ],
+    "considered": [],
+    "not_considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

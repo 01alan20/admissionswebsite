@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 161518,
+    "name": "Saint Joseph's College of Maine",
+    "city": "Standish",
+    "state": "ME",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
+    "website": "www.sjcme.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Health Professions",
+      "Theology & Religious Vocations",
+      "Business, Management & Marketing",
+      "Education"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 42834.0,
+      "in_state": 41586.0,
+      "out_of_state": 41586.0
+    },
+    "outcomes": {
+      "acceptance_rate": 82,
+      "yield": 15,
+      "grad_rate_6yr": 69,
+      "retention_full_time": 80,
+      "student_faculty_ratio": 10,
+      "total_enrollment": 1463
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Personal Statement Or Essay"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

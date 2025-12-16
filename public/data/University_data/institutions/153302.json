@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 153302,
+    "name": "Emmaus Bible College",
+    "city": "Dubuque",
+    "state": "IA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
+    "website": "https://www.emmaus.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Theology & Religious Vocations",
+      "Psychology",
+      "Business, Management & Marketing",
+      "Education"
+    ],
+    "intl_enrollment_pct": 3,
+    "tuition_summary": {
+      "sticker": 20000.0,
+      "in_state": 19800.0,
+      "out_of_state": 19800.0
+    },
+    "outcomes": {
+      "acceptance_rate": 98,
+      "yield": 61,
+      "grad_rate_6yr": 41,
+      "retention_full_time": 70,
+      "student_faculty_ratio": 8,
+      "total_enrollment": 197
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores"
+    ],
+    "not_considered": [
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

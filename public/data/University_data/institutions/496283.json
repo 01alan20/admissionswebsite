@@ -1,0 +1,43 @@
+{
+  "profile": {
+    "unitid": 496283,
+    "name": "Provo College-Idaho Falls Campus",
+    "city": "Idaho Falls",
+    "state": "ID",
+    "control": "Private for-profit",
+    "level": "4-year",
+    "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
+    "website": "https://www.eaglegatecollege.edu/locations/idaho-falls/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 18645.0,
+      "in_state": 17112.0,
+      "out_of_state": 17112.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 25,
+      "student_faculty_ratio": 22,
+      "total_enrollment": 268
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

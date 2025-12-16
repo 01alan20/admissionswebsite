@@ -1,0 +1,60 @@
+{
+  "profile": {
+    "unitid": 483780,
+    "name": "Washington University of Science and Technology",
+    "city": "Vienna",
+    "state": "VA",
+    "control": "Private for-profit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Medium Programs",
+    "website": "www.wust.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Computer & Information Sciences",
+      "Business, Management & Marketing",
+      "Homeland Security & Law Enforcement"
+    ],
+    "intl_enrollment_pct": 88,
+    "tuition_summary": {
+      "sticker": 13178.0,
+      "in_state": null,
+      "out_of_state": null
+    },
+    "outcomes": {
+      "acceptance_rate": 11,
+      "yield": 100,
+      "grad_rate_6yr": 55,
+      "retention_full_time": 60,
+      "student_faculty_ratio": 16,
+      "total_enrollment": 1105
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Rank",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

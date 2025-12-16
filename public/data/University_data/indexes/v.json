@@ -1,0 +1,434 @@
+[
+  {
+    "unitid":108065,
+    "name":"Velvatex College of Beauty Culture",
+    "state":"AR",
+    "city":"Little Rock"
+  },
+  {
+    "unitid":123651,
+    "name":"Vanguard University of Southern California",
+    "state":"CA",
+    "city":"Costa Mesa"
+  },
+  {
+    "unitid":125019,
+    "name":"Ventura County Community College System Office",
+    "state":"California",
+    "city":null
+  },
+  {
+    "unitid":125028,
+    "name":"Ventura College",
+    "state":"CA",
+    "city":"Ventura"
+  },
+  {
+    "unitid":125091,
+    "name":"Victor Valley College",
+    "state":"CA",
+    "city":"Victorville"
+  },
+  {
+    "unitid":138187,
+    "name":"Valencia College",
+    "state":"FL",
+    "city":"Orlando"
+  },
+  {
+    "unitid":141264,
+    "name":"Valdosta State University",
+    "state":"GA",
+    "city":"Valdosta"
+  },
+  {
+    "unitid":149639,
+    "name":"VanderCook College of Music",
+    "state":"IL",
+    "city":"Chicago"
+  },
+  {
+    "unitid":152600,
+    "name":"Valparaiso University",
+    "state":"IN",
+    "city":"Valparaiso"
+  },
+  {
+    "unitid":152628,
+    "name":"Vincennes Beauty College",
+    "state":"IN",
+    "city":"Vincennes"
+  },
+  {
+    "unitid":152637,
+    "name":"Vincennes University",
+    "state":"IN",
+    "city":"Vincennes"
+  },
+  {
+    "unitid":176433,
+    "name":"Vaughn Beauty College",
+    "state":"MS",
+    "city":"Aberdeen"
+  },
+  {
+    "unitid":188289,
+    "name":"Vogue College of Cosmetology-Santa Fe",
+    "state":"NM",
+    "city":"Santa Fe"
+  },
+  {
+    "unitid":188340,
+    "name":"Vaughn College of Aeronautics and Technology",
+    "state":"NY",
+    "city":"Flushing"
+  },
+  {
+    "unitid":197133,
+    "name":"Vassar College",
+    "state":"NY",
+    "city":"Poughkeepsie"
+  },
+  {
+    "unitid":197142,
+    "name":"Villa Maria College",
+    "state":"NY",
+    "city":"Buffalo"
+  },
+  {
+    "unitid":199838,
+    "name":"Vance-Granville Community College",
+    "state":"NC",
+    "city":"Henderson"
+  },
+  {
+    "unitid":200572,
+    "name":"Valley City State University",
+    "state":"ND",
+    "city":"Valley City"
+  },
+  {
+    "unitid":213914,
+    "name":"Vet Tech Institute",
+    "state":"PA",
+    "city":"Pittsburgh"
+  },
+  {
+    "unitid":216551,
+    "name":"Valley Forge Military College",
+    "state":"PA",
+    "city":"Wayne"
+  },
+  {
+    "unitid":216579,
+    "name":"Venus Beauty Academy",
+    "state":"PA",
+    "city":"Sharon Hill"
+  },
+  {
+    "unitid":216597,
+    "name":"Villanova University",
+    "state":"PA",
+    "city":"Villanova"
+  },
+  {
+    "unitid":218919,
+    "name":"Voorhees University",
+    "state":"SC",
+    "city":"Denmark"
+  },
+  {
+    "unitid":221999,
+    "name":"Vanderbilt University",
+    "state":"TN",
+    "city":"Nashville"
+  },
+  {
+    "unitid":222053,
+    "name":"Volunteer State Community College",
+    "state":"TN",
+    "city":"Gallatin"
+  },
+  {
+    "unitid":223472,
+    "name":"Vet Tech Institute of Houston",
+    "state":"TX",
+    "city":"Houston"
+  },
+  {
+    "unitid":229504,
+    "name":"Vernon College",
+    "state":"TX",
+    "city":"Vernon"
+  },
+  {
+    "unitid":229522,
+    "name":"Victoria Beauty & Barber College",
+    "state":"TX",
+    "city":"Victoria"
+  },
+  {
+    "unitid":229540,
+    "name":"Victoria College",
+    "state":"TX",
+    "city":"Victoria"
+  },
+  {
+    "unitid":229656,
+    "name":"Vogue College of Cosmetology-McAllen",
+    "state":"TX",
+    "city":"McAllen"
+  },
+  {
+    "unitid":231147,
+    "name":"Vermont Law and Graduate School",
+    "state":"VT",
+    "city":"South Royalton"
+  },
+  {
+    "unitid":231156,
+    "name":"Vermont State Colleges-Office of the Chancellor",
+    "state":"Vermont",
+    "city":null
+  },
+  {
+    "unitid":231165,
+    "name":"Vermont State University",
+    "state":"VT",
+    "city":"Randolph"
+  },
+  {
+    "unitid":233754,
+    "name":"Virginia Peninsula Community College",
+    "state":"VA",
+    "city":"Hampton"
+  },
+  {
+    "unitid":233903,
+    "name":"Virginia Highlands Community College",
+    "state":"VA",
+    "city":"Abingdon"
+  },
+  {
+    "unitid":233921,
+    "name":"Virginia Polytechnic Institute and State University",
+    "state":"VA",
+    "city":"Blacksburg"
+  },
+  {
+    "unitid":233949,
+    "name":"Virginia Western Community College",
+    "state":"VA",
+    "city":"Roanoke"
+  },
+  {
+    "unitid":234030,
+    "name":"Virginia Commonwealth University",
+    "state":"VA",
+    "city":"Richmond"
+  },
+  {
+    "unitid":234085,
+    "name":"Virginia Military Institute",
+    "state":"VA",
+    "city":"Lexington"
+  },
+  {
+    "unitid":234137,
+    "name":"Virginia University of Lynchburg",
+    "state":"VA",
+    "city":"Lynchburg"
+  },
+  {
+    "unitid":234155,
+    "name":"Virginia State University",
+    "state":"VA",
+    "city":"Petersburg"
+  },
+  {
+    "unitid":234164,
+    "name":"Virginia Union University",
+    "state":"VA",
+    "city":"Richmond"
+  },
+  {
+    "unitid":234173,
+    "name":"Virginia Wesleyan University",
+    "state":"VA",
+    "city":"Virginia Beach"
+  },
+  {
+    "unitid":238175,
+    "name":"VICI Beauty School",
+    "state":"WI",
+    "city":"Greenfield"
+  },
+  {
+    "unitid":240107,
+    "name":"Viterbo University",
+    "state":"WI",
+    "city":"La Crosse"
+  },
+  {
+    "unitid":377485,
+    "name":"Virginia Beach City Public Schools School of Practical Nursing",
+    "state":"VA",
+    "city":"Virginia Beach"
+  },
+  {
+    "unitid":377652,
+    "name":"Valley College-Beckley",
+    "state":"WV",
+    "city":"Beckley"
+  },
+  {
+    "unitid":377661,
+    "name":"Valley College-Martinsburg",
+    "state":"WV",
+    "city":"Martinsburg"
+  },
+  {
+    "unitid":417123,
+    "name":"Ventura Adult and Continuing Education",
+    "state":"CA",
+    "city":"Ventura"
+  },
+  {
+    "unitid":417910,
+    "name":"Veeb Nassau County School of Practical Nursing",
+    "state":"NY",
+    "city":"Hicksville"
+  },
+  {
+    "unitid":418278,
+    "name":"Vantage Career Center",
+    "state":"OH",
+    "city":"Van Wert"
+  },
+  {
+    "unitid":418524,
+    "name":"Venango County Area Vocational Technical School",
+    "state":"PA",
+    "city":"Oil City"
+  },
+  {
+    "unitid":421717,
+    "name":"Vanguard-Sentinel Adult Career and Technology Center",
+    "state":"OH",
+    "city":"Fremont"
+  },
+  {
+    "unitid":443322,
+    "name":"Valley Grande Institute for Academic Studies",
+    "state":"TX",
+    "city":"Weslaco"
+  },
+  {
+    "unitid":449445,
+    "name":"Valley College of Medical Careers",
+    "state":"CA",
+    "city":"West Hills"
+  },
+  {
+    "unitid":449764,
+    "name":"Visible Music College",
+    "state":"TN",
+    "city":"Memphis"
+  },
+  {
+    "unitid":449834,
+    "name":"Virginia Beach Theological Seminary",
+    "state":"VA",
+    "city":"Virginia Beach"
+  },
+  {
+    "unitid":451626,
+    "name":"Victoria's Academy of Cosmetology",
+    "state":"WA",
+    "city":"Kennewick"
+  },
+  {
+    "unitid":455992,
+    "name":"Vermont College of Fine Arts",
+    "state":"VT",
+    "city":"Montpelier"
+  },
+  {
+    "unitid":476540,
+    "name":"Vogue College of Cosmetology-San Antonio Fredericksburg",
+    "state":"TX",
+    "city":"San Antonio"
+  },
+  {
+    "unitid":476559,
+    "name":"Vogue College of Cosmetology",
+    "state":"TX",
+    "city":"San Antonio"
+  },
+  {
+    "unitid":481085,
+    "name":"Verve College",
+    "state":"IL",
+    "city":"Oak Brook"
+  },
+  {
+    "unitid":482228,
+    "name":"Veritas Baptist College",
+    "state":"IN",
+    "city":"Lawrenceburg"
+  },
+  {
+    "unitid":483744,
+    "name":"Vibe Barber College",
+    "state":"TN",
+    "city":"Memphis"
+  },
+  {
+    "unitid":485962,
+    "name":"VH Barber & Styling Academy",
+    "state":"LA",
+    "city":"Bossier City"
+  },
+  {
+    "unitid":486257,
+    "name":"Valor Christian College",
+    "state":"OH",
+    "city":"Canal Winchester"
+  },
+  {
+    "unitid":490106,
+    "name":"Virginia University of Integrative Medicine",
+    "state":"VA",
+    "city":"Vienna"
+  },
+  {
+    "unitid":491871,
+    "name":"Vogue International Academy",
+    "state":"TX",
+    "city":"Houston"
+  },
+  {
+    "unitid":491899,
+    "name":"Victory Career College",
+    "state":"CA",
+    "city":"Torrance"
+  },
+  {
+    "unitid":492324,
+    "name":"Vista Adult School",
+    "state":"CA",
+    "city":"Vista"
+  },
+  {
+    "unitid":493770,
+    "name":"Vski Cosmetology School",
+    "state":"SC",
+    "city":"Charleston"
+  },
+  {
+    "unitid":494250,
+    "name":"Valley College-Cleveland",
+    "state":"OH",
+    "city":"Cleveland"
+  }
+]

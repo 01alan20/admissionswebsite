@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 187444,
+    "name": "William Paterson University of New Jersey",
+    "city": "Wayne",
+    "state": "NJ",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
+    "website": "www.wpunj.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Health Professions",
+      "Business, Management & Marketing",
+      "Education",
+      "Psychology"
+    ],
+    "intl_enrollment_pct": 2,
+    "tuition_summary": {
+      "sticker": 15150.0,
+      "in_state": 14624.0,
+      "out_of_state": 23624.0
+    },
+    "outcomes": {
+      "acceptance_rate": 93,
+      "yield": 12,
+      "grad_rate_6yr": 48,
+      "retention_full_time": 73,
+      "student_faculty_ratio": 17,
+      "total_enrollment": 9426
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

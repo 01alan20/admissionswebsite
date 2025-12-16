@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 231873,
+    "name": "Mountain Gateway Community College",
+    "city": "Clifton Forge",
+    "state": "VA",
+    "control": "Public",
+    "level": "2-year",
+    "carnegie_basic": "Associate's Colleges: High Transfer-High Nontraditional",
+    "website": "www.mgcc.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Liberal Arts & Humanities",
+      "Health Professions",
+      "Construction Trades",
+      "Mechanic & Repair Technologies"
+    ],
+    "intl_enrollment_pct": 1,
+    "tuition_summary": {
+      "sticker": 4878.0,
+      "in_state": 4740.0,
+      "out_of_state": 10743.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 68,
+      "student_faculty_ratio": 18,
+      "total_enrollment": 1002
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

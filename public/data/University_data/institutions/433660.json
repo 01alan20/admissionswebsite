@@ -1,0 +1,60 @@
+{
+  "profile": {
+    "unitid": 433660,
+    "name": "Florida Gulf Coast University",
+    "city": "Fort Myers",
+    "state": "FL",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral/Professional Universities",
+    "website": "www.fgcu.edu/",
+    "admissions_url": null,
+    "test_policy": "Required",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Health Professions",
+      "Liberal Arts & Humanities",
+      "Education"
+    ],
+    "intl_enrollment_pct": 2,
+    "tuition_summary": {
+      "sticker": 6118.0,
+      "in_state": 6118.0,
+      "out_of_state": 25162.0
+    },
+    "outcomes": {
+      "acceptance_rate": 77,
+      "yield": 23,
+      "grad_rate_6yr": 56,
+      "retention_full_time": 83,
+      "student_faculty_ratio": 21,
+      "total_enrollment": 16167
+    }
+  },
+  "requirements": {
+    "required": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Recommendations",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Required"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

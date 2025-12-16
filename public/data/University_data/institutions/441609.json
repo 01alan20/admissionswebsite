@@ -1,0 +1,58 @@
+{
+  "profile": {
+    "unitid": 441609,
+    "name": "Yeshiva Shaarei Torah of Rockland",
+    "city": "Suffern",
+    "state": "NY",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Special Focus Four-Year: Faith-Related Institutions",
+    "website": "www.yst.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Philosophy & Religious Studies"
+    ],
+    "intl_enrollment_pct": 9,
+    "tuition_summary": {
+      "sticker": 13000.0,
+      "in_state": 15775.0,
+      "out_of_state": 15775.0
+    },
+    "outcomes": {
+      "acceptance_rate": 35,
+      "yield": 53,
+      "grad_rate_6yr": null,
+      "retention_full_time": 80,
+      "student_faculty_ratio": 11,
+      "total_enrollment": 141
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "Recommendations"
+    ],
+    "considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "English Proficiency Test",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

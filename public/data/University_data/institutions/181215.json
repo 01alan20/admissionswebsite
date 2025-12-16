@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 181215,
+    "name": "University of Nebraska at Kearney",
+    "city": "Kearney",
+    "state": "NE",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
+    "website": "www.unk.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Education",
+      "Business, Management & Marketing",
+      "Biological & Biomedical Sciences",
+      "Health Professions"
+    ],
+    "intl_enrollment_pct": 4,
+    "tuition_summary": {
+      "sticker": 8302.0,
+      "in_state": 7984.0,
+      "out_of_state": 13786.0
+    },
+    "outcomes": {
+      "acceptance_rate": 86,
+      "yield": 15,
+      "grad_rate_6yr": 60,
+      "retention_full_time": 77,
+      "student_faculty_ratio": 13,
+      "total_enrollment": 6017
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Rank"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

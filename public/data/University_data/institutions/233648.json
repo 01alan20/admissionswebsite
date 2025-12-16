@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "unitid": 233648,
+    "name": "Southwest Virginia Community College",
+    "city": "Cedar Bluff",
+    "state": "VA",
+    "control": "Public",
+    "level": "2-year",
+    "carnegie_basic": "Associate's Colleges: Mixed Transfer/Career & Technical-Mixed Traditional/Nontraditional",
+    "website": "sw.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Liberal Arts & Humanities",
+      "Engineering Technologies",
+      "Precision Production"
+    ],
+    "intl_enrollment_pct": 1,
+    "tuition_summary": {
+      "sticker": 4901.0,
+      "in_state": 4733.0,
+      "out_of_state": 10736.0
+    },
+    "outcomes": {
+      "acceptance_rate": null,
+      "yield": null,
+      "grad_rate_6yr": null,
+      "retention_full_time": 61,
+      "student_faculty_ratio": 19,
+      "total_enrollment": 2288
+    }
+  },
+  "requirements": {
+    "required": [],
+    "considered": [],
+    "not_considered": [],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

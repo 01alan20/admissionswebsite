@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 177542,
+    "name": "Hannibal-LaGrange University",
+    "city": "Hannibal",
+    "state": "MO",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
+    "website": "www.hlg.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Education",
+      "Health Professions",
+      "Business, Management & Marketing",
+      "Parks, Recreation & Fitness"
+    ],
+    "intl_enrollment_pct": 3,
+    "tuition_summary": {
+      "sticker": 26880.0,
+      "in_state": 25600.0,
+      "out_of_state": 25600.0
+    },
+    "outcomes": {
+      "acceptance_rate": 59,
+      "yield": 31,
+      "grad_rate_6yr": 39,
+      "retention_full_time": 79,
+      "student_faculty_ratio": 7,
+      "total_enrollment": 441
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Gpa"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Secondary School Rank"
+    ],
+    "not_considered": [
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Record",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

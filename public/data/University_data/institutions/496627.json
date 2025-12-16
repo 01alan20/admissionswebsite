@@ -1,0 +1,59 @@
+{
+  "profile": {
+    "unitid": 496627,
+    "name": "California Northstate University",
+    "city": "Elk Grove",
+    "state": "CA",
+    "control": "Private for-profit",
+    "level": "4-year",
+    "carnegie_basic": "Not applicable, not in Carnegie universe (not accredited or nondegree-granting)",
+    "website": "www.cnsu.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Psychology"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 56501.0,
+      "in_state": 52685.0,
+      "out_of_state": 52685.0
+    },
+    "outcomes": {
+      "acceptance_rate": 85,
+      "yield": 8,
+      "grad_rate_6yr": 88,
+      "retention_full_time": 90,
+      "student_faculty_ratio": 7,
+      "total_enrollment": 847
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Gpa"
+    ],
+    "considered": [
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Rank",
+      "Secondary School Record",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Admission Test Scores"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

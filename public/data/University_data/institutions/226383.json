@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 226383,
+    "name": "Lubbock Christian University",
+    "city": "Lubbock",
+    "state": "TX",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Medium Programs",
+    "website": "https://www.lcu.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Health Professions",
+      "Education",
+      "Business, Management & Marketing",
+      "Psychology"
+    ],
+    "intl_enrollment_pct": 3,
+    "tuition_summary": {
+      "sticker": 27298.0,
+      "in_state": 26300.0,
+      "out_of_state": 26300.0
+    },
+    "outcomes": {
+      "acceptance_rate": 73,
+      "yield": 22,
+      "grad_rate_6yr": 49,
+      "retention_full_time": 74,
+      "student_faculty_ratio": 12,
+      "total_enrollment": 1589
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Secondary School Rank"
+    ],
+    "not_considered": [
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

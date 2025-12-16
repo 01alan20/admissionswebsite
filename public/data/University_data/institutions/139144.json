@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 139144,
+    "name": "Berry College",
+    "city": "Mount Berry",
+    "state": "GA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Small Programs",
+    "website": "https://www.berry.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Biological & Biomedical Sciences",
+      "Education",
+      "Psychology"
+    ],
+    "intl_enrollment_pct": 0,
+    "tuition_summary": {
+      "sticker": 40416.0,
+      "in_state": 39376.0,
+      "out_of_state": 39376.0
+    },
+    "outcomes": {
+      "acceptance_rate": 62,
+      "yield": 14,
+      "grad_rate_6yr": 74,
+      "retention_full_time": 83,
+      "student_faculty_ratio": 12,
+      "total_enrollment": 2370
+    }
+  },
+  "requirements": {
+    "required": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

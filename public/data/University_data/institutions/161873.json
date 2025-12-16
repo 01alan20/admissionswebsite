@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 161873,
+    "name": "University of Baltimore",
+    "city": "Baltimore",
+    "state": "MD",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
+    "website": "www.ubalt.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Business, Management & Marketing",
+      "Legal Studies",
+      "Homeland Security & Law Enforcement",
+      "Multidisciplinary Studies"
+    ],
+    "intl_enrollment_pct": 3,
+    "tuition_summary": {
+      "sticker": 9772.0,
+      "in_state": 9506.0,
+      "out_of_state": 22956.0
+    },
+    "outcomes": {
+      "acceptance_rate": 86,
+      "yield": 28,
+      "grad_rate_6yr": 47,
+      "retention_full_time": 65,
+      "student_faculty_ratio": 10,
+      "total_enrollment": 3101
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

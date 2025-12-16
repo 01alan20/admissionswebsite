@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 120537,
+    "name": "Hope International University",
+    "city": "Fullerton",
+    "state": "CA",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Medium Programs",
+    "website": "www.hiu.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Psychology",
+      "Education",
+      "Business, Management & Marketing",
+      "Theology & Religious Vocations"
+    ],
+    "intl_enrollment_pct": 2,
+    "tuition_summary": {
+      "sticker": 36250.0,
+      "in_state": 35700.0,
+      "out_of_state": 35700.0
+    },
+    "outcomes": {
+      "acceptance_rate": 35,
+      "yield": 30,
+      "grad_rate_6yr": 46,
+      "retention_full_time": 68,
+      "student_faculty_ratio": 13,
+      "total_enrollment": 1140
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Legacy Status",
+      "Secondary School Rank"
+    ],
+    "not_considered": [
+      "Formal Demonstration Of Competencies",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 239017,
+    "name": "Lawrence University",
+    "city": "Appleton",
+    "state": "WI",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Arts & Sciences Focus",
+    "website": "https://www.lawrence.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Visual & Performing Arts",
+      "Biological & Biomedical Sciences",
+      "Social Sciences",
+      "Psychology"
+    ],
+    "intl_enrollment_pct": 12,
+    "tuition_summary": {
+      "sticker": 55461.0,
+      "in_state": 53979.0,
+      "out_of_state": 53979.0
+    },
+    "outcomes": {
+      "acceptance_rate": 63,
+      "yield": 15,
+      "grad_rate_6yr": 76,
+      "retention_full_time": 87,
+      "student_faculty_ratio": 7,
+      "total_enrollment": 1410
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Legacy Status"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

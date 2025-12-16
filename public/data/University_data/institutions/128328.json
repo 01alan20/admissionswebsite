@@ -1,0 +1,60 @@
+{
+  "profile": {
+    "unitid": 128328,
+    "name": "United States Air Force Academy",
+    "city": "USAF Academy",
+    "state": "CO",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Diverse Fields",
+    "website": "www.usafa.edu/",
+    "admissions_url": null,
+    "test_policy": "Required",
+    "major_families": [
+      "Engineering",
+      "Business, Management & Marketing",
+      "Multidisciplinary Studies",
+      "Social Sciences"
+    ],
+    "intl_enrollment_pct": 1,
+    "tuition_summary": {
+      "sticker": null,
+      "in_state": null,
+      "out_of_state": null
+    },
+    "outcomes": {
+      "acceptance_rate": 14,
+      "yield": 79,
+      "grad_rate_6yr": 88,
+      "retention_full_time": 96,
+      "student_faculty_ratio": 7,
+      "total_enrollment": 4124
+    }
+  },
+  "requirements": {
+    "required": [
+      "Admission Test Scores",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Rank",
+      "Secondary School Record",
+      "Work Experience"
+    ],
+    "considered": [],
+    "not_considered": [
+      "Completion Of College Preparatory Program",
+      "English Proficiency Test",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc"
+    ],
+    "test_policy": "Required"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "profile": {
+    "unitid": 207157,
+    "name": "Randall University",
+    "city": "Moore",
+    "state": "OK",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Baccalaureate Colleges: Arts & Sciences Focus",
+    "website": "www.ru.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Multidisciplinary Studies",
+      "Theology & Religious Vocations",
+      "Business, Management & Marketing",
+      "Liberal Arts & Humanities"
+    ],
+    "intl_enrollment_pct": 6,
+    "tuition_summary": {
+      "sticker": 17322.0,
+      "in_state": 16742.0,
+      "out_of_state": 16742.0
+    },
+    "outcomes": {
+      "acceptance_rate": 45,
+      "yield": 68,
+      "grad_rate_6yr": 17,
+      "retention_full_time": 57,
+      "student_faculty_ratio": 9,
+      "total_enrollment": 297
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

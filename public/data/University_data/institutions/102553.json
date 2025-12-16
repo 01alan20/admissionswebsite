@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 102553,
+    "name": "University of Alaska Anchorage",
+    "city": "Anchorage",
+    "state": "AK",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Larger Programs",
+    "website": "www.uaa.alaska.edu/",
+    "admissions_url": null,
+    "test_policy": "Test optional",
+    "major_families": [
+      "Health Professions",
+      "Business, Management & Marketing",
+      "Liberal Arts & Humanities",
+      "Public Administration & Social Service"
+    ],
+    "intl_enrollment_pct": 2,
+    "tuition_summary": {
+      "sticker": 7566.0,
+      "in_state": 7508.0,
+      "out_of_state": 21635.0
+    },
+    "outcomes": {
+      "acceptance_rate": 67,
+      "yield": 46,
+      "grad_rate_6yr": 28,
+      "retention_full_time": 72,
+      "student_faculty_ratio": 12,
+      "total_enrollment": 10796
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Gpa"
+    ],
+    "not_considered": [
+      "Admission Test Scores",
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "test_policy": "Test optional"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 226231,
+    "name": "LeTourneau University",
+    "city": "Longview",
+    "state": "TX",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Master's Colleges & Universities: Medium Programs",
+    "website": "www.letu.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Engineering",
+      "Business, Management & Marketing",
+      "Transportation & Materials Moving",
+      "Education"
+    ],
+    "intl_enrollment_pct": 3,
+    "tuition_summary": {
+      "sticker": 35500.0,
+      "in_state": 34470.0,
+      "out_of_state": 34470.0
+    },
+    "outcomes": {
+      "acceptance_rate": 41,
+      "yield": 24,
+      "grad_rate_6yr": 61,
+      "retention_full_time": 81,
+      "student_faculty_ratio": 11,
+      "total_enrollment": 3389
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Formal Demonstration Of Competencies",
+      "Personal Statement Or Essay",
+      "Secondary School Rank",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Completion Of College Preparatory Program",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Recommendations"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

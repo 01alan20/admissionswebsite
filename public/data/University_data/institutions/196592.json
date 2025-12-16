@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 196592,
+    "name": "Touro University",
+    "city": "New York",
+    "state": "NY",
+    "control": "Private nonprofit",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral/Professional Universities",
+    "website": "https://www.touro.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Health Professions",
+      "Education",
+      "Psychology",
+      "Multidisciplinary Studies"
+    ],
+    "intl_enrollment_pct": 3,
+    "tuition_summary": {
+      "sticker": 21810.0,
+      "in_state": 21170.0,
+      "out_of_state": 21170.0
+    },
+    "outcomes": {
+      "acceptance_rate": 63,
+      "yield": 51,
+      "grad_rate_6yr": 73,
+      "retention_full_time": 86,
+      "student_faculty_ratio": 10,
+      "total_enrollment": 11953
+    }
+  },
+  "requirements": {
+    "required": [
+      "Formal Demonstration Of Competencies",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "English Proficiency Test",
+      "Legacy Status",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Secondary School Gpa",
+      "Work Experience"
+    ],
+    "not_considered": [
+      "Completion Of College Preparatory Program",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Secondary School Rank"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "unitid": 188030,
+    "name": "New Mexico State University-Main Campus",
+    "city": "Las Cruces",
+    "state": "NM",
+    "control": "Public",
+    "level": "4-year",
+    "carnegie_basic": "Doctoral Universities: High Research Activity",
+    "website": "www.nmsu.edu/",
+    "admissions_url": null,
+    "test_policy": "Test flexible",
+    "major_families": [
+      "Engineering",
+      "Business, Management & Marketing",
+      "Health Professions",
+      "Education"
+    ],
+    "intl_enrollment_pct": 6,
+    "tuition_summary": {
+      "sticker": 8147.0,
+      "in_state": 7627.0,
+      "out_of_state": 24751.0
+    },
+    "outcomes": {
+      "acceptance_rate": 76,
+      "yield": 21,
+      "grad_rate_6yr": 52,
+      "retention_full_time": 75,
+      "student_faculty_ratio": 15,
+      "total_enrollment": 14779
+    }
+  },
+  "requirements": {
+    "required": [
+      "English Proficiency Test",
+      "Secondary School Gpa",
+      "Secondary School Record"
+    ],
+    "considered": [
+      "Admission Test Scores",
+      "Secondary School Rank"
+    ],
+    "not_considered": [
+      "Completion Of College Preparatory Program",
+      "Formal Demonstration Of Competencies",
+      "Legacy Status",
+      "Other Test Wonderlic Wisc Iii Etc",
+      "Personal Statement Or Essay",
+      "Recommendations",
+      "Work Experience"
+    ],
+    "test_policy": "Test flexible"
+  },
+  "support_notes": {
+    "international_cost": null,
+    "scholarships": null,
+    "support_services": null,
+    "deadlines": null
+  }
+}
