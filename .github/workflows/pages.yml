@@ -1,4 +1,4 @@
-name: Deploy Vite site
+name: Deploy GitHub Pages (prod + beta)
 
 on:
   push:
@@ -8,20 +8,63 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Checkout production (master)
+        uses: actions/checkout@v4
         with:
-          node-version: 18
+          ref: master
+          path: prod
+
+      - name: Checkout beta (combo-attempt)
+        uses: actions/checkout@v4
+        with:
+          ref: combo-attempt
+          path: beta
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
           cache: npm
-      - run: npm ci
-      - run: npm run build
+          cache-dependency-path: |
+            prod/package-lock.json
+            beta/package-lock.json
+
+      - name: Install deps (prod)
+        working-directory: prod
+        run: npm ci
+
+      - name: Build prod (root)
+        working-directory: prod
+        run: npm run build
         env:
           VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
           VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
-      - uses: actions/upload-pages-artifact@v3
+
+      - name: Install deps (beta)
+        working-directory: beta
+        run: npm ci
+
+      - name: Build beta (/beta)
+        working-directory: beta
+        run: npm run build -- --base=/beta/
+        env:
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+
+      - name: Assemble Pages artifact
+        run: |
+          mkdir -p site
+          cp -R prod/dist/* site/
+          mkdir -p site/beta
+          cp -R beta/dist/* site/beta/
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: site
 
   deploy:
     needs: build
