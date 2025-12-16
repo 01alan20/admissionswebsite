@@ -7,8 +7,8 @@ import {
   getAllInstitutions,
   getLocationTypeMap,
   type InstitutionIndex,
-  type Institution,
 } from "../data/api";
+import type { Institution } from "../types";
 import { categorizeTestPolicy } from "../utils/admissionsModel";
 
 const STATE_NAMES: Record<string, string> = {

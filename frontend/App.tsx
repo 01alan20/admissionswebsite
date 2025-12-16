@@ -34,13 +34,15 @@ const Header: React.FC = () => {
   const activeLinkClass =
     "bg-blue-600 text-white px-3 py-2 rounded-lg text-sm font-semibold shadow-sm";
 
-  const navLinks = [{ label: 'Home', to: '/' }];
+  type HeaderLink = { label: string; to: string; extra?: string };
 
-  const profileLink = !loading && user
+  const navLinks: HeaderLink[] = [{ label: 'Home', to: '/' }];
+
+  const profileLink: HeaderLink | null = !loading && user
     ? { label: 'Dashboard', to: '/profile/dashboard' }
     : null;
 
-  const mobileLinks = !loading && !user
+  const mobileLinks: HeaderLink[] = !loading && !user
     ? [...navLinks, { label: 'Log In', to: '/profile/login' }]
     : [...navLinks, ...(profileLink ? [profileLink] : [])];
 

@@ -69,9 +69,9 @@ export const analyzeAdmissionProfile = async (
     },
     target_university: {
       name: university.name,
-      acceptance_rate: university.acceptanceRate,
-      admissions_stats: university.admissionsStats ?? {},
-      type: university.type,
+      acceptance_rate: (university as any).acceptance_rate ?? null,
+      admissions_stats: {},
+      type: null,
     },
     // Keep a human-readable block as additional context.
     human_readable_summary: {
@@ -108,4 +108,3 @@ export const analyzeAdmissionProfile = async (
   const parsed = JSON.parse(text) as AIAnalysisResponse;
   return parsed;
 };
-

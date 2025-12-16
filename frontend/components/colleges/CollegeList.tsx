@@ -15,7 +15,8 @@ import {
   getInstitutionTestScoreMap,
   getTopUnitIdsByApplicants,
 } from "../../data/api";
-import type { Institution, InstitutionTestScores } from "../../types";
+import type { Institution } from "../../types";
+import type { InstitutionTestScores } from "../../data/api";
 import { getTwoDigitPrefix, normalizeMajorSelectionList } from "../../utils/majors";
 import { isUSCountry } from "../../utils/usStates";
 

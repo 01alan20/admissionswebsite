@@ -23,6 +23,8 @@ export interface TargetUniversity {
 export interface DemographicsJson {
   gender?: string | null;
   race?: string | null;
+  country?: string | null;
+  location_country?: string | null;
   location_state?: string | null;
   grad_year?: number | null;
 }
@@ -36,4 +38,3 @@ export interface ExtracurricularActivityJson {
   hours_per_week?: number | null;
   weeks_per_year?: number | null;
 }
-

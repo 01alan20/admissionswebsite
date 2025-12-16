@@ -38,7 +38,7 @@ const ComparePage: React.FC = () => {
           const hay = `${item.name ?? ''} ${item.city ?? ''} ${item.state ?? ''}`.toLowerCase();
           return hay.includes(q);
         })
-        .filter(item => !selected.find(s => s.unitid === item.unitid))
+        .filter(item => !selected.find(s => s.summary.unitid === item.unitid))
         .slice(0, 8)
     : [];
 

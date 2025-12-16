@@ -98,13 +98,13 @@ export const buildMajorAreaOptions = (meta: MajorsMeta | null): MajorOption[] =>
   if (!meta || !meta.two_digit) return [];
   const entries = Object.entries(meta.two_digit);
   return entries
-    .map(([code, raw]) => {
+    .map(([code, raw]): MajorOption | null => {
       const label = cleanMajorLabel(raw);
       const normalizedCode = code.trim();
       if (!label || /^\d+$/.test(label) || !normalizedCode) return null;
-      return { code: normalizedCode, label, level: "two" as const };
+      return { code: normalizedCode, label, level: "two" };
     })
-    .filter((opt): opt is MajorOption => !!opt)
+    .filter((opt): opt is MajorOption => opt !== null)
     .sort((a, b) => a.label.localeCompare(b.label));
 };
 
