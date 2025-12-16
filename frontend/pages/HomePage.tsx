@@ -1,251 +1,472 @@
-﻿
-import React, { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import React, { useEffect, useMemo, useState } from "react";
+import { Link } from "react-router-dom";
+import { supabase } from "../services/supabaseClient";
+import { useOnboardingContext } from "../context/OnboardingContext";
+import { CalendarCheck2, GraduationCap, ScrollText, Sparkles } from "lucide-react";
 
-// A simplified SearchBox for the homepage.
-const SearchBox: React.FC = () => {
-  const [query, setQuery] = useState('');
-  const navigate = useNavigate();
+type InstitutionRow = {
+  unitid: number;
+  name: string;
+  city: string | null;
+  state: string | null;
+  control: string | null;
+  level: string | null;
+  acceptance_rate: number | null;
+  tuition_2023_24: number | null;
+  test_policy: string | null;
+};
 
-  const handleSearch = (e: React.FormEvent) => {
+type EssayRow = {
+  id: number;
+  school: string | null;
+  year: number | null;
+  type: string | null;
+  category: string | null;
+  prompt: string | null;
+  essay: string;
+};
+
+type FeatureHighlight = {
+  label: string;
+  icon: React.ReactNode;
+};
+
+const countWords = (value: string | null | undefined): number => {
+  if (!value) return 0;
+  return value.trim().split(/\s+/).filter(Boolean).length;
+};
+
+const moneyFormatter = new Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+  maximumFractionDigits: 0,
+});
+
+const HomePage: React.FC = () => {
+  const { user } = useOnboardingContext();
+  const showcaseUnitIds = useMemo(
+    () => [166027, 166683, 243744, 123961, 193900],
+    []
+  );
+  const minEssayWords = 100;
+  const [institutions, setInstitutions] = useState<InstitutionRow[]>([]);
+  const [essays, setEssays] = useState<EssayRow[]>([]);
+  const [authEmail, setAuthEmail] = useState("");
+  const [authPassword, setAuthPassword] = useState("");
+  const [authLoading, setAuthLoading] = useState(false);
+  const [authMessage, setAuthMessage] = useState<string | null>(null);
+  const [authError, setAuthError] = useState<string | null>(null);
+
+  useEffect(() => {
+    document.title = "SeeThrough Admissions | College planning workspace";
+    let meta = document.querySelector('meta[name="description"]');
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.setAttribute("name", "description");
+      document.head.appendChild(meta);
+    }
+    meta.setAttribute(
+      "content",
+      "Build your profile, explore colleges, and learn from successful applications and essays."
+    );
+  }, []);
+
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      try {
+        const [{ data: instData }, { data: essayData }] = await Promise.all([
+          supabase
+            .from("institutions")
+            .select(
+              "unitid,name,city,state,control,level,acceptance_rate,tuition_2023_24,test_policy"
+            )
+            .in("unitid", showcaseUnitIds),
+          supabase
+            .from("anonymous_essays")
+            .select("id,school,year,type,category,prompt,essay")
+            .order("id", { ascending: false })
+            .limit(10),
+        ]);
+
+        if (cancelled) return;
+
+        const instSorted = (instData as InstitutionRow[] | null) ?? [];
+        instSorted.sort(
+          (a, b) =>
+            showcaseUnitIds.indexOf(a.unitid) - showcaseUnitIds.indexOf(b.unitid)
+        );
+        setInstitutions(instSorted);
+
+        setEssays((essayData as EssayRow[] | null) ?? []);
+      } catch {
+        // Silent: landing page still renders without live data.
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [showcaseUnitIds]);
+
+  const handleQuickSignup = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (query.trim()) {
-      navigate(`/explore?q=${encodeURIComponent(query.trim())}`);
+    if (!authEmail || !authPassword || authLoading) return;
+    setAuthLoading(true);
+    setAuthError(null);
+    setAuthMessage(null);
+    try {
+      const { error } = await supabase.auth.signUp({
+        email: authEmail,
+        password: authPassword,
+      });
+      if (error) throw error;
+      setAuthMessage("Account created. Check your inbox to verify, then log in.");
+    } catch (err: any) {
+      setAuthError(err?.message ?? "Failed to create account.");
+    } finally {
+      setAuthLoading(false);
     }
   };
 
-  return (
-    <form onSubmit={handleSearch} className="w-full max-w-2xl">
-      <div className="flex flex-col sm:flex-row gap-3">
-        <input
-          type="search"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search for a university by name, city, or state..."
-          className="w-full sm:flex-1 min-w-0 p-3 sm:p-4 text-base sm:text-lg text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-brand-secondary focus:border-brand-secondary"
-        />
-        <button
-          type="submit"
-          className="w-full sm:w-auto text-white bg-brand-primary hover:bg-brand-dark focus:ring-4 focus:outline-none focus:ring-blue-300 font-semibold rounded-lg text-sm px-5 py-3 sm:py-2"
-        >
-          Search
-        </button>
-      </div>
-    </form>
+  const fallbackInstitutions = useMemo<InstitutionRow[]>(
+    () => [
+      {
+        unitid: 166027,
+        name: "Harvard University",
+        city: "Cambridge",
+        state: "MA",
+        control: "Private nonprofit",
+        level: "4-year",
+        acceptance_rate: 0.04,
+        tuition_2023_24: 59076,
+        test_policy: "Test optional",
+      },
+      {
+        unitid: 166683,
+        name: "Massachusetts Institute of Technology",
+        city: "Cambridge",
+        state: "MA",
+        control: "Private nonprofit",
+        level: "4-year",
+        acceptance_rate: 0.04,
+        tuition_2023_24: 57986,
+        test_policy: "Test optional",
+      },
+      {
+        unitid: 243744,
+        name: "Stanford University",
+        city: "Stanford",
+        state: "CA",
+        control: "Private nonprofit",
+        level: "4-year",
+        acceptance_rate: 0.04,
+        tuition_2023_24: 62484,
+        test_policy: "Test optional",
+      },
+      {
+        unitid: 123961,
+        name: "University of Southern California",
+        city: "Los Angeles",
+        state: "CA",
+        control: "Private nonprofit",
+        level: "4-year",
+        acceptance_rate: null,
+        tuition_2023_24: 69798,
+        test_policy: "Test optional",
+      },
+      {
+        unitid: 193900,
+        name: "New York University",
+        city: "New York",
+        state: "NY",
+        control: "Private nonprofit",
+        level: "4-year",
+        acceptance_rate: null,
+        tuition_2023_24: 62000,
+        test_policy: "Test optional",
+      },
+    ],
+    []
   );
-};
 
-const HomePage: React.FC = () => {
-  useEffect(() => {
-    const title = 'US College Admissions Guidance for Students & Families | SeeThrough Admissions';
-    const description =
-      'Former university dean guiding US and international students and parents to build realistic college lists, plan courses and activities, and submit stronger applications with less stress.';
-
-    document.title = title;
-    let meta = document.querySelector('meta[name=\"description\"]');
-    if (!meta) {
-      meta = document.createElement('meta');
-      meta.setAttribute('name', 'description');
-      document.head.appendChild(meta);
+  const displayInstitutions = useMemo(() => {
+    const chosen: InstitutionRow[] = [];
+    const seen = new Set<number>();
+    for (const inst of institutions) {
+      if (seen.has(inst.unitid)) continue;
+      seen.add(inst.unitid);
+      chosen.push(inst);
+      if (chosen.length >= 5) return chosen.slice(0, 5);
     }
-    meta.setAttribute('content', description);
-  }, []);
+    for (const inst of fallbackInstitutions) {
+      if (seen.has(inst.unitid)) continue;
+      seen.add(inst.unitid);
+      chosen.push(inst);
+      if (chosen.length >= 5) break;
+    }
+    return chosen.slice(0, 5);
+  }, [institutions, fallbackInstitutions]);
+
+  const fallbackEssays = useMemo<EssayRow[]>(
+    () => [
+      {
+        id: 1,
+        school: "Example",
+        year: 2023,
+        type: "Common App Essay",
+        category: "Personal Growth",
+        prompt: "Tell us about a time you challenged yourself.",
+        essay:
+          "I used to avoid speaking up, even when I had an answer. In group projects I became the “quiet finisher,” the person who cleaned up slides and fixed formatting while everyone else argued about ideas. That worked until my biology lab partnered with a local clinic to analyze water samples from a neighborhood with frequent boil notices. The data didn’t match the story we expected, and the easy explanation was to blame our technique. I re-ran the test after school, documented every step, and realized our sampling locations were wrong.\n\nI brought it up anyway. My voice shook, but I laid out the evidence and suggested a revised plan. The room went silent—then our team lead asked me to run the next collection route. That weekend, we mapped the neighborhood, spoke with residents, and produced a report the clinic used in a grant application for updated filtration. I didn’t just learn how to challenge myself; I learned that clarity and care can be louder than confidence.",
+      },
+      {
+        id: 2,
+        school: "Example",
+        year: 2022,
+        type: "Supplemental Essay",
+        category: "Why This College",
+        prompt: "Why are you applying to this university?",
+        essay:
+          "What drew me in wasn’t the name—it was the way students build projects with real impact. I’ve learned best when I’m solving a real problem with other people: tutoring a ninth grader who thought math “wasn’t for him,” building a small budgeting tool for my family, and organizing a campus clean‑up that turned into a long-term recycling partnership with our city.\n\nI’m applying because I want an environment where curiosity is translated into action. Your emphasis on interdisciplinary work—where computer science can sit next to psychology, where research groups welcome undergraduates, and where student organizations collaborate with local communities—matches how I learn. I can already picture myself in the lab meeting where ideas are tested, not just praised, and in the seminar where we argue thoughtfully and leave with a plan.\n\nMost importantly, I want to contribute to a campus culture that treats ambition as responsibility. I’m not looking for a place to collect achievements; I’m looking for a place to build things that last.",
+      },
+    ],
+    []
+  );
+
+  const displayEssays = useMemo(() => {
+    const candidates = essays.filter((e) => countWords(e.essay) >= minEssayWords);
+    const picked = candidates.slice(0, 2);
+    if (picked.length >= 2) return picked.slice(0, 2);
+    return [...picked, ...fallbackEssays].slice(0, 2);
+  }, [essays, fallbackEssays]);
 
   return (
-    <div className="space-y-10 sm:space-y-12">
-      <section className="bg-white rounded-lg shadow-xl p-6 sm:p-10 md:p-14 lg:p-16 relative overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-brand-light/40 via-white to-brand-accent/10" />
-        <div className="relative max-w-4xl text-left space-y-6">
-          <p className="text-sm font-semibold text-brand-secondary uppercase tracking-wide">
-            College admissions guidance for US and international students
-          </p>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-brand-dark leading-tight">
-            Realistic US College Admissions Plans for Students and Families
-          </h1>
-          <p className="text-base sm:text-lg text-gray-700">
-            I am a former university dean and student services leader who now coaches students in the US and abroad to build
-            a balanced college list, map courses, testing, and activities, and submit stronger applications with less stress.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3">
-            <Link
-              to="/contact"
-              className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-white bg-brand-primary hover:bg-brand-dark rounded-md shadow-sm transition-colors"
-            >
-              Get personalized email guidance
-            </Link>
-            <Link
-              to="/timelines"
-              className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-brand-primary bg-white border border-brand-primary/60 hover:border-brand-primary rounded-md shadow-sm transition-colors"
-            >
-              Check the "Are We On Track?" timelines
-            </Link>
-            <Link
-              to="/explore"
-              className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-white bg-brand-secondary hover:bg-brand-primary rounded-md shadow-sm transition-colors"
-            >
-              Explore universities now
-            </Link>
+    <div className="w-full px-4 py-6 sm:px-6 lg:px-10 space-y-10 sm:space-y-12">
+      <section className="rounded-2xl bg-white border border-slate-200 shadow-sm overflow-hidden">
+        <div className="bg-slate-50/70 px-6 py-10 sm:px-10 sm:py-14">
+          <div className="grid gap-10 lg:grid-cols-[1.25fr,0.75fr] items-start">
+            <div>
+              <h1 className="mt-2 text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
+                Your college admissions, simplified
+              </h1>
+              <p className="mt-4 text-base sm:text-lg text-slate-600 max-w-2xl">
+                Unlock testing, colleges & tracking to get into your dream school.
+              </p>
+
+              <div className="mt-7 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+                {[
+                  { label: "College Explorer", icon: <GraduationCap className="h-4 w-4 text-blue-700" /> },
+                  { label: "Smart Tracking", icon: <Sparkles className="h-4 w-4 text-blue-700" /> },
+                  { label: "Admissions Timeline", icon: <CalendarCheck2 className="h-4 w-4 text-blue-700" /> },
+                  { label: "Real Essays", icon: <ScrollText className="h-4 w-4 text-blue-700" /> },
+                ].map((f: FeatureHighlight) => (
+                  <div
+                    key={f.label}
+                    className="rounded-xl border border-slate-200 bg-white px-4 py-3 shadow-sm flex items-center gap-3"
+                  >
+                    <div className="h-8 w-8 rounded-lg bg-blue-50 border border-blue-100 flex items-center justify-center">
+                      {f.icon}
+                    </div>
+                    <div className="text-sm font-semibold text-slate-900">{f.label}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="rounded-2xl border border-slate-200 bg-white shadow-sm p-6">
+              {!user ? (
+                <>
+                  <h2 className="text-lg font-semibold text-slate-900">
+                    Create your free account
+                  </h2>
+                  <form onSubmit={handleQuickSignup} className="mt-4 space-y-3">
+                    <div>
+                      <label
+                        htmlFor="landing-email"
+                        className="block text-sm font-medium text-slate-700 mb-1"
+                      >
+                        Email
+                      </label>
+                      <input
+                        id="landing-email"
+                        name="email"
+                        type="email"
+                        required
+                        value={authEmail}
+                        onChange={(e) => setAuthEmail(e.target.value)}
+                        autoComplete="email"
+                        placeholder="email"
+                        className="w-full px-3 py-2 border border-slate-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600 text-sm"
+                      />
+                    </div>
+                    <div>
+                      <label
+                        htmlFor="landing-password"
+                        className="block text-sm font-medium text-slate-700 mb-1"
+                      >
+                        Password
+                      </label>
+                      <input
+                        id="landing-password"
+                        name="password"
+                        type="password"
+                        required
+                        value={authPassword}
+                        onChange={(e) => setAuthPassword(e.target.value)}
+                        autoComplete="new-password"
+                        placeholder="Create a password"
+                        className="w-full px-3 py-2 border border-slate-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600 text-sm"
+                      />
+                    </div>
+
+                    <button
+                      type="submit"
+                      disabled={authLoading}
+                      className="w-full inline-flex items-center justify-center rounded-lg bg-blue-600 px-4 py-2.5 text-white font-semibold hover:bg-blue-700 disabled:opacity-60"
+                    >
+                      {authLoading ? "Creating..." : "Get Started Now"}
+                    </button>
+
+                    {authMessage && (
+                      <p className="text-sm text-emerald-700">{authMessage}</p>
+                    )}
+                    {authError && (
+                      <p className="text-sm text-red-600">{authError}</p>
+                    )}
+
+                    <p className="text-xs text-slate-500">
+                      Already have an account?{" "}
+                      <Link
+                        to="/profile/login"
+                        className="text-blue-700 hover:underline font-semibold"
+                      >
+                        Log in
+                      </Link>
+                    </p>
+                  </form>
+                </>
+              ) : (
+                <>
+                  <h2 className="text-lg font-semibold text-slate-900">
+                    You&apos;re logged in
+                  </h2>
+                  <p className="mt-1 text-sm text-slate-600 truncate">{user.email}</p>
+                  <Link
+                    to="/profile/dashboard"
+                    className="mt-4 w-full inline-flex items-center justify-center rounded-lg bg-blue-600 px-4 py-2.5 text-white font-semibold hover:bg-blue-700"
+                  >
+                    Go to dashboard
+                  </Link>
+                </>
+              )}
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
-        <div className="bg-white p-6 sm:p-8 rounded-lg shadow-md space-y-4">
-          <h2 className="text-2xl font-bold text-brand-primary">Who We Help</h2>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
-            <li>US students in public, private, or homeschool settings who want a clear, realistic US college plan.</li>
-            <li>International students in IB, A Levels, AP, or local curricula planning a US college path.</li>
-            <li>Parents and guardians worldwide who want honest feedback on competitiveness, budget, and fit.</li>
-          </ul>
-        </div>
-        <div className="bg-white p-6 sm:p-8 rounded-lg shadow-md space-y-4">
-          <h2 className="text-2xl font-bold text-brand-primary">What We Do</h2>
-          <div className="space-y-3">
-            <div>
-              <h3 className="text-lg font-semibold text-brand-dark">1. US College Planning and Strategy</h3>
-              <p className="text-gray-700">
-                Four year planning for courses, testing, activities, and timelines for US college applications.
-              </p>
+      <section className="space-y-4">
+        <div className="rounded-2xl bg-white border border-slate-200 shadow-sm p-6">
+          <div className="flex items-start gap-3">
+            <div className="h-9 w-9 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center">
+              <span className="text-base">🎓</span>
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-brand-dark">2. College List, Essays, and Application Support</h3>
-              <p className="text-gray-700">
-                Common App help, realistic college list building for US and international students, essay brainstorming and review.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-brand-dark">3. Support for Parents and Families</h3>
-              <p className="text-gray-700">
-                Clarity on admissions chances, scholarship considerations, and regular updates so everyone stays aligned.
-              </p>
+              <h2 className="text-2xl font-extrabold text-slate-900">College Explorer</h2>
             </div>
           </div>
         </div>
-      </section>
 
-      <section className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-8">
-        <div className="bg-white p-6 sm:p-7 rounded-lg shadow-md space-y-3">
-          <h2 className="text-2xl font-bold text-brand-primary">Why Work With an Independent College Counselor</h2>
-          <p className="text-gray-700">
-            School counselors are often overloaded and online forums can be noisy. You get university leadership experience,
-            transparent advice, and ethical support with a focus on your best fit.
-          </p>
-        </div>
-        <div className="bg-white p-6 sm:p-7 rounded-lg shadow-md space-y-3">
-          <h2 className="text-2xl font-bold text-brand-primary">Experience You Can Trust</h2>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
-            <li>Former university leader with 15+ years in higher education.</li>
-            <li>Worked with students across Asia, the Middle East, and the US.</li>
-            <li>Led student success and admissions operations serving thousands of learners.</li>
-          </ul>
-        </div>
-        <div className="bg-white p-6 sm:p-7 rounded-lg shadow-md space-y-3">
-          <h2 className="text-2xl font-bold text-brand-primary">How It Works</h2>
-          <ol className="list-decimal list-inside text-gray-700 space-y-2">
-            <li>Fill out a short intake form.</li>
-            <li>Receive a tailored email reply with next steps and options.</li>
-            <li>Choose a package or one-off session with clear timelines.</li>
-          </ol>
-          <Link to="/contact" className="text-brand-secondary font-semibold hover:text-brand-primary">
-            Get personalized help
-          </Link>
-        </div>
-      </section>
+        <div className="flex gap-4 overflow-x-auto pb-2">
+          {displayInstitutions.map((inst) => (
+            <div
+              key={inst.unitid}
+              className="min-w-[280px] max-w-[320px] flex-1 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
+            >
+              <div className="flex items-start justify-between gap-3">
+                <div>
+                  <h3 className="text-base font-semibold text-slate-900">{inst.name}</h3>
+                </div>
+              </div>
 
-      <section className="bg-white p-6 sm:p-8 rounded-lg shadow-md space-y-6">
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <div>
-            <h2 className="text-2xl font-bold text-brand-primary">Research US Universities With Our Tools</h2>
-            <p className="text-gray-700">
-              Explore data, compare schools, and see AI-powered insights built for students and families in the US and abroad.
-            </p>
-          </div>
-          <Link
-            to="/explore"
-            className="inline-flex items-center justify-center px-5 py-2 text-sm font-semibold text-white bg-brand-secondary hover:bg-brand-primary rounded-md transition-colors"
-          >
-            Start exploring
-          </Link>
-        </div>
-        <div className="flex justify-center">
-          <SearchBox />
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {[
-            { title: 'Explore Schools', body: 'Filter by budget, selectivity, majors, and more to find a strong-fit list.' },
-            { title: 'Compare Side-by-Side', body: 'See tuition, acceptance rates, and outcomes in one clean view.' },
-            { title: 'AI-Powered Insights', body: 'Get quick summaries tailored to US and international students on every university.' },
-          ].map((item) => (
-            <div key={item.title} className="border border-gray-200 rounded-md p-4 bg-gray-50">
-              <h3 className="text-lg font-semibold text-brand-dark mb-1">{item.title}</h3>
-              <p className="text-gray-700">{item.body}</p>
+              <div className="mt-4 flex flex-wrap gap-2 text-[11px] font-semibold">
+                <span className="inline-flex items-center rounded-full bg-slate-100 text-slate-700 border border-slate-200 px-2 py-1">
+                  {inst.control?.toLowerCase().includes("public") ? "Public" : "Private"}
+                </span>
+                <span className="inline-flex items-center rounded-full bg-blue-50 text-blue-700 border border-blue-200 px-2 py-1">
+                  {inst.acceptance_rate != null
+                    ? `${Math.round(inst.acceptance_rate * 100)}% Acceptance`
+                    : "Acceptance N/A"}
+                </span>
+                <span className="inline-flex items-center rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 px-2 py-1">
+                  {inst.tuition_2023_24 != null
+                    ? `${moneyFormatter.format(inst.tuition_2023_24)}/yr`
+                    : "Tuition N/A"}
+                </span>
+              </div>
+
+              <div className="mt-4 flex items-center gap-3">
+                <Link
+                  to={`/institution/${inst.unitid}`}
+                  className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-4 py-2 text-white text-sm font-semibold hover:bg-blue-700"
+                >
+                  View Details
+                </Link>
+              </div>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="bg-white p-6 sm:p-8 rounded-lg shadow-md space-y-6">
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+      <section className="space-y-4">
+        <div className="flex items-end justify-between gap-4">
           <div>
-            <h2 className="text-2xl font-bold text-brand-primary">Common Questions</h2>
-            <p className="text-gray-700">
-              Answers for US and international students and parents considering US college counseling.
-            </p>
+            <h2 className="text-2xl font-bold text-slate-900">
+              Real Essays That Got In
+            </h2>
           </div>
-          <Link
-            to="/faq"
-            className="inline-flex items-center justify-center px-5 py-2 text-sm font-semibold text-white bg-brand-secondary hover:bg-brand-primary rounded-md transition-colors"
-          >
-            View the full FAQ
-          </Link>
         </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {[
-            {
-              q: 'What does a college admissions consultant do for students?',
-              a: 'Clarifies options, builds a realistic college list, guides essays, and keeps you on track from anywhere.',
-            },
-            {
-              q: 'When should we start working together?',
-              a: 'Ideally end of Grade 9 or 10; Grade 11-12 is still impactful for list, essays, and strategy.',
-            },
-            {
-              q: 'Do you guarantee admission to a specific college?',
-              a: 'No ethical counselor can guarantee admission; we focus on fit and stronger applications.',
-            },
-            {
-              q: 'Do you work with US and international families across time zones?',
-              a: 'Yes. We schedule across US and overseas time zones and keep parents updated at every step.',
-            },
-          ].map((item) => (
-            <details key={item.q} className="group border border-gray-200 rounded-md p-4 bg-gray-50">
-              <summary className="flex justify-between items-center cursor-pointer text-brand-dark font-semibold">
-                {item.q}
-                <span className="text-brand-secondary group-open:rotate-45 transition-transform">+</span>
-              </summary>
-              <p className="mt-3 text-gray-700">{item.a}</p>
-            </details>
-          ))}
+          {displayEssays.map((e) => (
+              <div
+                key={e.id}
+                className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
+              >
+                <div className="flex flex-wrap gap-2 text-xs font-semibold">
+                  <span className="inline-flex items-center rounded-full bg-blue-50 text-blue-700 border border-blue-200 px-2 py-1">
+                    {e.school ?? "School"}
+                  </span>
+                  <span className="inline-flex items-center rounded-full bg-slate-100 text-slate-700 border border-slate-200 px-2 py-1">
+                    {e.year ?? "Year"}
+                  </span>
+                  <span className="inline-flex items-center rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 px-2 py-1">
+                    {e.type ?? "Essay"}
+                  </span>
+                  <span className="inline-flex items-center rounded-full bg-amber-50 text-amber-700 border border-amber-200 px-2 py-1">
+                    {e.category ?? "Category"}
+                  </span>
+                </div>
+                <div className="mt-3">
+                  <p className="text-sm font-semibold text-slate-900">
+                    {e.prompt ?? "Prompt"}
+                  </p>
+                  <p className="mt-3 text-sm text-slate-700 whitespace-pre-wrap leading-relaxed">
+                    {e.essay}
+                  </p>
+                </div>
+              </div>
+            ))}
         </div>
       </section>
 
-      <section className="bg-brand-primary text-white rounded-lg shadow-lg p-8 sm:p-10 text-center space-y-4">
-        <h2 className="text-3xl font-bold">Ready To Get Clear On US Admissions?</h2>
-        <p className="text-lg text-white/90 max-w-3xl mx-auto">
-          Get honest, research-based guidance from an independent college counselor for students and families in the US and worldwide.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-3 justify-center">
+      <section className="rounded-2xl bg-blue-600 text-white shadow-sm px-6 py-12 text-center">
+        <h2 className="text-4xl font-extrabold">Stop Guessing. Start Planning</h2>
+        <div className="mt-6 flex justify-center">
           <Link
-            to="/contact"
-            className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-brand-primary bg-white rounded-md shadow-sm hover:bg-brand-light transition-colors"
+            to={user ? "/profile/dashboard" : "/profile/login"}
+            className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 font-semibold text-blue-700 hover:bg-slate-50"
           >
-            Get personalized help
-          </Link>
-          <Link
-            to="/faq"
-            className="inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-white border border-white/70 rounded-md hover:bg-white/10 transition-colors"
-          >
-            See common questions
+            Get Started Now
           </Link>
         </div>
       </section>

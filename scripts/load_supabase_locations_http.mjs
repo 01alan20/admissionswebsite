@@ -2,7 +2,6 @@ import fs from 'node:fs'
 import path from 'node:path'
 import dotenv from 'dotenv'
 import { createClient } from '@supabase/supabase-js'
-import { parse } from 'csv-parse/sync'
 
 dotenv.config({ path: '.env.local' })
 
@@ -22,39 +21,54 @@ const supabase = createClient(supabaseUrl, serviceRoleKey, {
   auth: { persistSession: false },
 })
 
-const csvPath = path.join(process.cwd(), 'public', 'data', 'uni_location_size.csv')
+const locationsJsonPath = path.join(
+  process.cwd(),
+  'public',
+  'data',
+  'University_data',
+  'uni_location_size.json',
+)
+const institutionsPath = path.join(
+  process.cwd(),
+  'public',
+  'data',
+  'University_data',
+  'institutions.json',
+)
 
 async function main() {
   // eslint-disable-next-line no-console
   console.log('Supabase URL:', supabaseUrl)
 
-  // Fetch existing institution ids to satisfy FK constraint
-  const { data: instRows, error: instError } = await supabase
-    .from('institutions')
-    .select('unitid')
-    .limit(10000)
-  if (instError) {
+  if (!fs.existsSync(locationsJsonPath)) {
     // eslint-disable-next-line no-console
-    console.error('Error fetching institutions unitid list:', instError)
-    process.exit(1)
+    console.warn(
+      'Location dataset not found at',
+      locationsJsonPath,
+      '\nSkipping institution_locations load (table will remain empty).',
+    )
+    return
   }
-  const validIds = new Set((instRows || []).map((r) => r.unitid))
+
+  // Build valid unitids from local institutions.json to avoid API row limits.
+  const instText = fs.readFileSync(institutionsPath, 'utf8')
+  const instData = JSON.parse(instText)
+  const validIds = new Set(instData.map((d) => Number(d.unitid)).filter(Number.isFinite))
   // eslint-disable-next-line no-console
-  console.log(`Loaded ${validIds.size} institution ids from Supabase`)
+  console.log(`Loaded ${validIds.size} institution ids from ${institutionsPath}`)
 
   // eslint-disable-next-line no-console
-  console.log('Loading locations from', csvPath)
+  console.log('Loading locations from', locationsJsonPath)
 
-  const text = fs.readFileSync(csvPath, 'utf8')
-  const records = parse(text, { columns: true, skip_empty_lines: true })
-
-  const rows = records
-    .filter((r) => r.unitid && validIds.has(Number(r.unitid)))
+  const text = fs.readFileSync(locationsJsonPath, 'utf8')
+  const records = JSON.parse(text)
+  const rows = (Array.isArray(records) ? records : [])
+    .filter((r) => r && r.unitid && validIds.has(Number(r.unitid)))
     .map((r) => ({
       unitid: Number(r.unitid),
-      location_type: (r.UniLocation || '').trim() || null,
-      location_size: (r.LocationSize || '').trim() || null,
-      title_iv_indicator: (r['HD2024.Postsecondary and Title IV institution indicator'] || '').trim() || null,
+      location_type: (r.location || '').trim() || null,
+      location_size: (r.size || '').trim() || null,
+      title_iv_indicator: null,
     }))
 
   // eslint-disable-next-line no-console

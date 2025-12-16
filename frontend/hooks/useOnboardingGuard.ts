@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-import { determineNextPath, useOnboardingContext } from "../context/OnboardingContext";
+import { useOnboardingContext } from "../context/OnboardingContext";
 
 export const useOnboardingGuard = (requiredStep: number) => {
   const { user, onboardingStep, loading } = useOnboardingContext();
@@ -11,17 +11,10 @@ export const useOnboardingGuard = (requiredStep: number) => {
     if (loading) return;
 
     if (!user) {
-      if (location.pathname !== "/profile/login") {
-        navigate("/profile/login", { replace: true });
+      if (location.pathname !== "/") {
+        navigate("/", { replace: true });
       }
       return;
-    }
-
-    if (onboardingStep + 1 < requiredStep) {
-      const next = determineNextPath(onboardingStep);
-      if (location.pathname !== next) {
-        navigate(next, { replace: true });
-      }
     }
   }, [user, onboardingStep, loading, requiredStep, navigate, location]);
 

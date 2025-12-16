@@ -4,22 +4,25 @@ import { useOnboardingGuard } from "../hooks/useOnboardingGuard";
 import { useOnboardingContext } from "../context/OnboardingContext";
 import { getMajorsMeta } from "../data/api";
 import type { MajorsMeta } from "../types";
+import {
+  buildMajorAreaOptions,
+  buildSpecificMajorOptions,
+  extractMajorCode,
+  extractMajorLabel,
+  formatMajorSelection,
+  normalizeMajorSelectionList,
+  type MajorOption,
+} from "../utils/majors";
 
 const MAX_SELECTED = 3;
-
-type MajorOption = { code: string; label: string };
-
-const cleanLabel = (raw: unknown): string => {
-  const s = String(raw ?? "").trim();
-  return s.replace(/["'*]/g, "").trim();
-};
 
 const ProfileMajorsStepPage: React.FC = () => {
   const loading = useOnboardingGuard(7);
   const { setOnboardingStepRemote, studentProfile } = useOnboardingContext();
-  const [selectedMajors, setSelectedMajors] = useState<string[]>(
-    () => (studentProfile.majors ?? []).map((m) => cleanLabel(m)).filter(Boolean)
-  );
+  const [selectedMajors, setSelectedMajors] = useState<string[]>(() => {
+    const normalized = normalizeMajorSelectionList(studentProfile.majors);
+    return normalized ? normalized.slice(0, MAX_SELECTED) : [];
+  });
   const [majorAreaQuery, setMajorAreaQuery] = useState("");
   const [specificMajorQuery, setSpecificMajorQuery] = useState("");
   const [majorsMeta, setMajorsMeta] = useState<MajorsMeta | null>(null);
@@ -45,29 +48,12 @@ const ProfileMajorsStepPage: React.FC = () => {
     };
   }, [loading]);
 
-  const majorAreaOptions = useMemo<MajorOption[]>(() => {
-    if (!majorsMeta) return [];
-    const two = majorsMeta.two_digit || {};
-    return Object.entries(two)
-      .map(([code, raw]) => {
-        const label = cleanLabel(raw);
-        return label && !/^\d+$/.test(label) ? { code, label } : null;
-      })
-      .filter((v): v is MajorOption => !!v)
-      .sort((a, b) => a.label.localeCompare(b.label) || a.code.localeCompare(b.code));
-  }, [majorsMeta]);
+  const majorAreaOptions = useMemo<MajorOption[]>(() => buildMajorAreaOptions(majorsMeta), [majorsMeta]);
 
-  const specificMajorOptions = useMemo<MajorOption[]>(() => {
-    if (!majorsMeta) return [];
-    const six = majorsMeta.six_digit || {};
-    return Object.entries(six)
-      .map(([code, raw]) => {
-        const label = cleanLabel(raw);
-        return label && !/^\d+$/.test(label) ? { code, label } : null;
-      })
-      .filter((v): v is MajorOption => !!v)
-      .sort((a, b) => a.label.localeCompare(b.label) || a.code.localeCompare(b.code));
-  }, [majorsMeta]);
+  const specificMajorOptions = useMemo<MajorOption[]>(
+    () => buildSpecificMajorOptions(majorsMeta),
+    [majorsMeta]
+  );
 
   const filteredMajorAreas = useMemo(() => {
     const q = majorAreaQuery.trim().toLowerCase();
@@ -81,11 +67,15 @@ const ProfileMajorsStepPage: React.FC = () => {
     return specificMajorOptions.filter((m) => m.label.toLowerCase().includes(q));
   }, [specificMajorQuery, specificMajorOptions]);
 
-  const toggleSelection = (label: string) => {
+  const toggleSelection = (option: MajorOption) => {
+    const value = formatMajorSelection(option.code, option.label);
     setSelectedMajors((prev) => {
-      if (prev.includes(label)) return prev.filter((v) => v !== label);
+      const idx = prev.findIndex((entry) => extractMajorCode(entry) === option.code);
+      if (idx >= 0) {
+        return prev.filter((_, index) => index !== idx);
+      }
       if (prev.length >= MAX_SELECTED) return prev;
-      return [...prev, label];
+      return [...prev, value];
     });
   };
 
@@ -126,12 +116,12 @@ const ProfileMajorsStepPage: React.FC = () => {
               />
               <div className="space-y-1 max-h-64 overflow-auto">
                 {filteredMajorAreas.map((m) => {
-                  const selected = selectedMajors.includes(m.label);
+                  const selected = selectedMajors.some((value) => extractMajorCode(value) === m.code);
                   return (
                     <button
                       key={m.code}
                       type="button"
-                      onClick={() => toggleSelection(m.label)}
+                      onClick={() => toggleSelection(m)}
                       className={`w-full text-left px-3 py-1.5 rounded border text-xs ${
                         selected
                           ? "bg-brand-light border-brand-secondary text-brand-dark"
@@ -156,12 +146,12 @@ const ProfileMajorsStepPage: React.FC = () => {
               />
               <div className="space-y-1 max-h-64 overflow-auto">
                 {filteredSpecificMajors.map((m) => {
-                  const selected = selectedMajors.includes(m.label);
+                  const selected = selectedMajors.some((value) => extractMajorCode(value) === m.code);
                   return (
                     <button
                       key={m.code}
                       type="button"
-                      onClick={() => toggleSelection(m.label)}
+                      onClick={() => toggleSelection(m)}
                       className={`w-full text-left px-3 py-1.5 rounded border text-xs ${
                         selected
                           ? "bg-brand-light border-brand-secondary text-brand-dark"
@@ -185,7 +175,7 @@ const ProfileMajorsStepPage: React.FC = () => {
                   key={m}
                   className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-brand-light text-brand-dark text-xs"
                 >
-                  {m}
+                  {extractMajorLabel(m) || m}
                   <button
                     type="button"
                     className="text-red-600 font-bold"
@@ -221,4 +211,3 @@ const ProfileMajorsStepPage: React.FC = () => {
 };
 
 export default ProfileMajorsStepPage;
-

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { useOnboardingContext, determineNextPath } from "../context/OnboardingContext";
+import { useOnboardingContext } from "../context/OnboardingContext";
 
 const ProfileRoutePage: React.FC = () => {
   const { user, onboardingStep, loading } = useOnboardingContext();
@@ -14,8 +14,7 @@ const ProfileRoutePage: React.FC = () => {
       return;
     }
 
-    const next = determineNextPath(onboardingStep);
-    navigate(next, { replace: true });
+    navigate("/profile/dashboard", { replace: true });
   }, [user, onboardingStep, loading, navigate]);
 
   return (

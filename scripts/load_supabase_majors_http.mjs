@@ -21,8 +21,27 @@ const supabase = createClient(supabaseUrl, serviceRoleKey, {
   auth: { persistSession: false },
 })
 
-const majorsMetaPath = path.join(process.cwd(), 'public', 'data', 'majors_bachelor_meta.json')
-const majorsByInstPath = path.join(process.cwd(), 'public', 'data', 'majors_bachelor_by_institution.json')
+const majorsMetaPath = path.join(
+  process.cwd(),
+  'public',
+  'data',
+  'University_data',
+  'majors_bachelor_meta.json',
+)
+const majorsByInstPath = path.join(
+  process.cwd(),
+  'public',
+  'data',
+  'University_data',
+  'majors_bachelor_by_institution.json',
+)
+const institutionsPath = path.join(
+  process.cwd(),
+  'public',
+  'data',
+  'University_data',
+  'institutions.json',
+)
 
 async function loadMajorsMeta() {
   // eslint-disable-next-line no-console
@@ -69,19 +88,12 @@ async function loadInstitutionMajors() {
   // eslint-disable-next-line no-console
   console.log('Loading institution majors from', majorsByInstPath)
 
-  // Fetch existing institution ids to satisfy FK constraint
-  const { data: instRows, error: instError } = await supabase
-    .from('institutions')
-    .select('unitid')
-    .limit(10000)
-  if (instError) {
-    // eslint-disable-next-line no-console
-    console.error('Error fetching institutions unitid list:', instError)
-    process.exit(1)
-  }
-  const validIds = new Set((instRows || []).map((r) => r.unitid))
+  // Build valid unitids from local institutions.json to avoid API row limits.
+  const instText = fs.readFileSync(institutionsPath, 'utf8')
+  const instData = JSON.parse(instText)
+  const validIds = new Set(instData.map((d) => Number(d.unitid)).filter(Number.isFinite))
   // eslint-disable-next-line no-console
-  console.log(`Loaded ${validIds.size} institution ids from Supabase`)
+  console.log(`Loaded ${validIds.size} institution ids from ${institutionsPath}`)
   const text = fs.readFileSync(majorsByInstPath, 'utf8')
   const data = JSON.parse(text)
 

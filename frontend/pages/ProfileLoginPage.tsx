@@ -18,11 +18,7 @@ const ProfileLoginPage: React.FC = () => {
   useEffect(() => {
     if (loading) return;
     if (user) {
-      if (onboardingStep >= 6) {
-        navigate("/profile/dashboard", { replace: true });
-      } else {
-        navigate("/profile/name", { replace: true });
-      }
+      navigate("/profile/dashboard", { replace: true });
     }
   }, [user, onboardingStep, loading, navigate]);
 
@@ -92,7 +88,7 @@ const ProfileLoginPage: React.FC = () => {
         </p>
 
         <h2 className="text-xl font-semibold text-gray-800 mb-3">
-          Sign up or log in with email and password
+          Sign up or log in with username (email) and password
         </h2>
 
         <div className="flex mb-4 border border-slate-200 rounded-lg overflow-hidden text-sm font-semibold">
@@ -122,29 +118,35 @@ const ProfileLoginPage: React.FC = () => {
 
         <form onSubmit={handleSubmit} className="space-y-3">
           <div>
-            <label className="block text-sm font-medium text-slate-700 mb-1">
-              Email
+            <label htmlFor="auth-email" className="block text-sm font-medium text-slate-700 mb-1">
+              Username (email)
             </label>
             <input
+              id="auth-email"
+              name="email"
               type="email"
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="you@example.com"
+              autoComplete="email"
               className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-brand-secondary focus:border-brand-secondary text-sm"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium text-slate-700 mb-1">
+            <label htmlFor="auth-password" className="block text-sm font-medium text-slate-700 mb-1">
               Password
             </label>
             <input
+              id="auth-password"
+              name="password"
               type="password"
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="Choose a secure password"
+              autoComplete={mode === "signup" ? "new-password" : "current-password"}
               className="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-brand-secondary focus:border-brand-secondary text-sm"
             />
           </div>
@@ -175,7 +177,7 @@ const ProfileLoginPage: React.FC = () => {
         </form>
 
         {message && (
-          <p className="text-green-700 mt-3 text-[2.2rem] leading-snug">
+          <p className="text-green-700 mt-3 text-sm leading-snug">
             {message}
           </p>
         )}
@@ -190,4 +192,3 @@ const ProfileLoginPage: React.FC = () => {
 };
 
 export default ProfileLoginPage;
-

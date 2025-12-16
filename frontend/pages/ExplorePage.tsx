@@ -1,365 +1,422 @@
-import React, { useEffect, useMemo, useState } from 'react';
-import { useSearchParams, Link } from 'react-router-dom';
-import { Institution, InstitutionDemographics, InstitutionMajorsByInstitution, MajorsMeta } from '../types';
-import { categorizeTestPolicy } from '../utils/admissionsModel';
+import React, { useEffect, useMemo, useState } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 import {
-  getInstitutionIndex,
-  getTopUnitIdsByApplicants,
-  getInstitutionsSummariesByIds,
   getAllInstitutions,
-  getMajorsMeta,
-  getMajorsByInstitution,
-  getLocationTypeMap,
   getInstitutionTestScoreMap,
   getUndergradDemographicsMap,
-  InstitutionIndex,
-  InstitutionTestScores,
-  TestScoreType,
-} from '../data/api';
+  getLocationTypeMap,
+  getMajorsMeta,
+  getMajorsByInstitution,
+  getTopUnitIdsByApplicants,
+} from "../data/api";
+import { categorizeTestPolicy } from "../utils/admissionsModel";
+import {
+  buildMajorAreaOptions,
+  buildSpecificMajorOptions,
+  cleanMajorLabel,
+} from "../utils/majors";
+import type {
+  Institution,
+  InstitutionDemographics,
+  InstitutionMajorsByInstitution,
+  MajorsMeta,
+} from "../types";
+import type { InstitutionTestScores } from "../data/api";
 
-const DEMOGRAPHIC_COLORS: Record<string, string> = {
-  white: '#4b5563',
-  asian: '#0ea5e9',
-  black_or_african_american: '#7c3aed',
-  hispanic_or_latino: '#f59e0b',
-  native_hawaiian_or_pacific_islander: '#14b8a6',
-  nonresident: '#22c55e',
-  other: '#94a3b8',
-};
-
-type GroupDef = {
-  key: string;
-  label: string;
-  sourceKeys: string[];
-  color: string;
-};
-
-const DEMOGRAPHIC_GROUPS: GroupDef[] = [
-  { key: 'white', label: 'White', sourceKeys: ['white'], color: DEMOGRAPHIC_COLORS.white },
-  { key: 'asian', label: 'Asian', sourceKeys: ['asian'], color: DEMOGRAPHIC_COLORS.asian },
-  { key: 'black', label: 'Black', sourceKeys: ['black_or_african_american'], color: DEMOGRAPHIC_COLORS.black_or_african_american },
-  { key: 'latino', label: 'Latino', sourceKeys: ['hispanic_or_latino'], color: DEMOGRAPHIC_COLORS.hispanic_or_latino },
-  { key: 'pacific', label: 'Hawaii/Pacific', sourceKeys: ['native_hawaiian_or_pacific_islander'], color: DEMOGRAPHIC_COLORS.native_hawaiian_or_pacific_islander },
-  { key: 'international', label: 'International', sourceKeys: ['nonresident'], color: DEMOGRAPHIC_COLORS.nonresident },
+const PAGE_SIZE = 20;
+const DEMOGRAPHIC_GROUPS = [
+  { key: "white", label: "White", source: ["white"], color: "#4b5563" },
+  { key: "asian", label: "Asian", source: ["asian"], color: "#0ea5e9" },
   {
-    key: 'other',
-    label: 'Other',
-    sourceKeys: ['american_indian_or_alaska_native', 'two_or_more_races', 'unknown'],
-    color: DEMOGRAPHIC_COLORS.other,
+    key: "black",
+    label: "Black",
+    source: ["black_or_african_american"],
+    color: "#7c3aed",
+  },
+  { key: "latino", label: "Latino", source: ["hispanic_or_latino"], color: "#f59e0b" },
+  {
+    key: "pacific",
+    label: "Hawaii/Pacific",
+    source: ["native_hawaiian_or_pacific_islander"],
+    color: "#14b8a6",
+  },
+  { key: "international", label: "International", source: ["nonresident"], color: "#22c55e" },
+  {
+    key: "other",
+    label: "Other",
+    source: ["american_indian_or_alaska_native", "two_or_more_races", "unknown"],
+    color: "#94a3b8",
   },
 ];
 
-const DemographicsMiniBars: React.FC<{ data: InstitutionDemographics | null | undefined }> = ({ data }) => {
-  if (!data || !data.breakdown?.length) return null;
+const TEST_POLICY_LABEL: Record<string, string> = {
+  required: "Required",
+  flexible: "Test flexible",
+  optional: "Test optional",
+  not_considered: "Test blind",
+};
 
-  const percentByKey = new Map<string, number>();
-  for (const slice of data.breakdown) {
-    if (slice.percent == null) continue;
-    percentByKey.set(slice.key, slice.percent);
+type BudgetBucket = "under15" | "15to25" | "25to40" | "40to60" | "over60";
+type SelectivityBucket = "lottery" | "reach" | "target" | "safety" | "open";
+type LocationCategory = "City" | "Suburban" | "Town" | "Rural";
+type TestScoreFilter = { type: "sat" | "act"; value: number };
+
+const STATE_NAME_BY_CODE: Record<string, string> = {
+  AL: "Alabama",
+  AK: "Alaska",
+  AZ: "Arizona",
+  AR: "Arkansas",
+  CA: "California",
+  CO: "Colorado",
+  CT: "Connecticut",
+  DE: "Delaware",
+  DC: "District of Columbia",
+  FL: "Florida",
+  GA: "Georgia",
+  HI: "Hawaii",
+  ID: "Idaho",
+  IL: "Illinois",
+  IN: "Indiana",
+  IA: "Iowa",
+  KS: "Kansas",
+  KY: "Kentucky",
+  LA: "Louisiana",
+  ME: "Maine",
+  MD: "Maryland",
+  MA: "Massachusetts",
+  MI: "Michigan",
+  MN: "Minnesota",
+  MS: "Mississippi",
+  MO: "Missouri",
+  MT: "Montana",
+  NE: "Nebraska",
+  NV: "Nevada",
+  NH: "New Hampshire",
+  NJ: "New Jersey",
+  NM: "New Mexico",
+  NY: "New York",
+  NC: "North Carolina",
+  ND: "North Dakota",
+  OH: "Ohio",
+  OK: "Oklahoma",
+  OR: "Oregon",
+  PA: "Pennsylvania",
+  RI: "Rhode Island",
+  SC: "South Carolina",
+  SD: "South Dakota",
+  TN: "Tennessee",
+  TX: "Texas",
+  UT: "Utah",
+  VT: "Vermont",
+  VA: "Virginia",
+  WA: "Washington",
+  WV: "West Virginia",
+  WI: "Wisconsin",
+  WY: "Wyoming",
+};
+
+type ExplorePageProps = {
+  initialMajorAreas?: string[];
+  initialSpecificMajors?: string[];
+};
+
+const formatCurrency = (value: number | null | undefined): string => {
+  if (value == null || Number.isNaN(value)) return "N/A";
+  return new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD",
+    maximumFractionDigits: 0,
+  }).format(value);
+};
+
+const formatPercent = (value: number | null | undefined): string => {
+  if (value == null || Number.isNaN(value)) return "Acceptance unknown";
+  return `${Math.round(value * 100)}% Acceptance`;
+};
+
+const normalizeLocationType = (raw: string | null | undefined): LocationCategory | null => {
+  if (!raw) return null;
+  const lower = raw.toLowerCase();
+  if (lower.includes("city")) return "City";
+  if (lower.includes("suburb")) return "Suburban";
+  if (lower.includes("town")) return "Town";
+  if (lower.includes("rural")) return "Rural";
+  return null;
+};
+
+const pickTuition = (inst: Institution): number | null => {
+  return (
+    inst.tuition_2023_24_in_state ??
+    inst.tuition_2023_24_out_of_state ??
+    inst.tuition_2023_24 ??
+    null
+  );
+};
+
+const matchesTuitionBucket = (tuition: number | null, bucket: BudgetBucket): boolean => {
+  if (tuition == null) return false;
+  switch (bucket) {
+    case "under15":
+      return tuition < 15000;
+    case "15to25":
+      return tuition >= 15000 && tuition < 25000;
+    case "25to40":
+      return tuition >= 25000 && tuition < 40000;
+    case "40to60":
+      return tuition >= 40000 && tuition < 60000;
+    case "over60":
+      return tuition >= 60000;
+    default:
+      return true;
+  }
+};
+
+const selectivityBucket = (acceptance: number | null | undefined): SelectivityBucket | null => {
+  if (acceptance == null) return null;
+  if (acceptance < 0.1) return "lottery";
+  if (acceptance < 0.25) return "reach";
+  if (acceptance < 0.5) return "target";
+  if (acceptance < 0.8) return "safety";
+  return "open";
+};
+
+const getTestScoreMid = (
+  unitid: number,
+  type: "sat" | "act",
+  map: Map<number, InstitutionTestScores>
+): number | null => {
+  const scores = map.get(unitid);
+  if (!scores) return null;
+  if (type === "sat") {
+    const { sat_total_25, sat_total_75 } = scores;
+    if (sat_total_25 != null && sat_total_75 != null) return Math.round((sat_total_25 + sat_total_75) / 2);
+    return sat_total_75 ?? sat_total_25 ?? null;
+  }
+  const { act_composite_25, act_composite_75 } = scores;
+  if (act_composite_25 != null && act_composite_75 != null) return Math.round((act_composite_25 + act_composite_75) / 2);
+  return act_composite_75 ?? act_composite_25 ?? null;
+};
+
+const institutionHasMajors = (
+  inst: Institution,
+  majorAreas: string[],
+  specificMajors: string[],
+  majorsByInstitution: InstitutionMajorsByInstitution | null
+): boolean => {
+  if (!majorAreas.length && !specificMajors.length) return true;
+  const record = majorsByInstitution?.[String(inst.unitid)];
+  const twoDigit = new Set<string>();
+  const detailed = new Set<string>();
+  const addCodes = (arr: string[] | undefined, target: Set<string>, slice?: number) => {
+    if (!Array.isArray(arr)) return;
+    for (const code of arr) {
+      const val = String(code).trim();
+      if (!val) continue;
+      target.add(slice ? val.slice(0, slice) : val);
+    }
+  };
+
+  addCodes(inst.majors_cip_two_digit, twoDigit);
+  addCodes(record?.two_digit, twoDigit);
+  addCodes(inst.majors_cip_four_digit, detailed);
+  addCodes(inst.majors_cip_six_digit, detailed);
+  addCodes(record?.four_digit, detailed);
+  addCodes(record?.six_digit, detailed);
+
+  if (majorAreas.length) {
+    const matchesArea = majorAreas.some((area) => twoDigit.has(area.slice(0, 2)));
+    if (!matchesArea) return false;
   }
 
-  const groups = DEMOGRAPHIC_GROUPS.map((g) => {
-    const pct = g.sourceKeys.reduce((sum, key) => sum + (percentByKey.get(key) ?? 0), 0);
-    const hasData = g.sourceKeys.some((key) => percentByKey.has(key));
-    return { ...g, percent: hasData ? pct : null };
-  }).filter((g) => g.percent != null);
+  if (specificMajors.length) {
+    const matchesSpecific = specificMajors.some((code) => {
+      const normalized = code.trim();
+      if (normalized.includes(".")) {
+        return detailed.has(normalized) || detailed.has(normalized.slice(0, 6)) || detailed.has(normalized.slice(0, 4));
+      }
+      return twoDigit.has(normalized.slice(0, 2));
+    });
+    if (!matchesSpecific) return false;
+  }
 
-  if (groups.length === 0) return null;
-
-  return (
-    <div className="mt-3 bg-white border border-gray-100 rounded-md p-2 shadow-sm">
-      <div className="h-3 w-full rounded-full bg-white overflow-hidden border border-gray-200 flex">
-        {groups.map((g) => {
-          const pct = g.percent ?? 0;
-          if (pct <= 0) return null;
-          return (
-            <div
-              key={g.key}
-              className="h-full"
-              style={{ width: `${pct}%`, minWidth: '4px', backgroundColor: g.color }}
-              title={`${g.label}: ${pct.toFixed(1)}%`}
-            />
-          );
-        })}
-      </div>
-      <div className="mt-2 flex flex-wrap gap-x-2 gap-y-1 text-[10px] text-gray-700">
-        {groups.map((g) => (
-          <span key={`legend-${g.key}`} className="inline-flex items-center gap-1">
-            <span className="h-2.5 w-2.5 rounded-sm" style={{ backgroundColor: g.color }} />
-            <span className="truncate" title={g.label}>{g.label}</span>
-          </span>
-        ))}
-      </div>
-    </div>
-  );
+  return true;
 };
 
-const InstitutionCard: React.FC<{ institution: Institution; demographics?: InstitutionDemographics | null }> = ({
-  institution,
-  demographics,
+const buildDemographicSegments = (
+  demo: InstitutionDemographics | undefined
+): Array<{ key: string; label: string; percent: number; color: string }> => {
+  if (!demo) return [];
+  const total = demo.total_undergrad ?? 0;
+  const slices = DEMOGRAPHIC_GROUPS.map((group) => {
+    let percent: number | null = null;
+    for (const source of group.source) {
+      const match = demo.breakdown.find((b) => b.key === source);
+      if (match && match.percent != null) {
+        percent = (percent ?? 0) + match.percent;
+      }
+    }
+    return {
+      key: group.key,
+      label: group.label,
+      percent: percent ?? 0,
+      color: group.color,
+    };
+  });
+  const valid = slices.filter((s) => s.percent > 0);
+  if (!valid.length && total > 0) return slices;
+  return valid;
+};
+
+const filterInstitutions = (
+  institutions: Institution[],
+  opts: {
+    search: string;
+    budget: BudgetBucket | null;
+    selectivity: SelectivityBucket | null;
+    testPolicy: keyof typeof TEST_POLICY_LABEL | null;
+    testScore: TestScoreFilter | null;
+    states: string[];
+    locationTypes: LocationCategory[];
+    majorAreas: string[];
+    specificMajors: string[];
+  },
+  majorsByInstitution: InstitutionMajorsByInstitution | null,
+  locationMap: Map<number, string>,
+  testScoreMap: Map<number, InstitutionTestScores>
+): Institution[] => {
+  const searchTerm = opts.search.trim().toLowerCase();
+  return institutions.filter((inst) => {
+    if (searchTerm.length >= 3) {
+      const target = `${inst.name} ${inst.city ?? ""} ${inst.state ?? ""}`.toLowerCase();
+      if (!target.includes(searchTerm)) return false;
+    }
+
+    if (opts.budget) {
+      const tuition = pickTuition(inst);
+      if (!matchesTuitionBucket(tuition, opts.budget)) return false;
+    }
+
+    if (opts.selectivity) {
+      const bucket = selectivityBucket(inst.acceptance_rate);
+      if (bucket !== opts.selectivity) return false;
+    }
+
+    if (opts.testPolicy) {
+      const policy = categorizeTestPolicy(inst.test_policy);
+      if (policy !== opts.testPolicy) return false;
+    }
+
+    if (opts.testScore) {
+      const mid = getTestScoreMid(inst.unitid, opts.testScore.type, testScoreMap);
+      if (mid == null || mid < opts.testScore.value) return false;
+    }
+
+    if (opts.states.length) {
+      if (!inst.state || !opts.states.includes(inst.state)) return false;
+    }
+
+    if (opts.locationTypes.length) {
+      const loc = normalizeLocationType(locationMap.get(inst.unitid));
+      if (!loc || !opts.locationTypes.includes(loc)) return false;
+    }
+
+    if (!institutionHasMajors(inst, opts.majorAreas, opts.specificMajors, majorsByInstitution)) {
+      return false;
+    }
+
+    return true;
+  });
+};
+
+const Pill: React.FC<{
+  active: boolean;
+  label: string;
+  onClick: () => void;
+}> = ({ active, label, onClick }) => (
+  <button
+    type="button"
+    onClick={onClick}
+    className={`px-3 py-1.5 rounded-full border text-sm transition-colors ${
+      active
+        ? "bg-brand-primary text-white border-brand-primary"
+        : "bg-white text-slate-700 border-slate-200 hover:border-slate-300"
+    }`}
+  >
+    {label}
+  </button>
+);
+
+const ExplorePage: React.FC<ExplorePageProps> = ({
+  initialMajorAreas = [],
+  initialSpecificMajors = [],
 }) => {
-  const tuition = institution.tuition_2023_24_out_of_state ?? institution.tuition_2023_24_in_state ?? institution.tuition_2023_24;
-  return (
-    <div className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col">
-      <div className="p-6 flex-grow">
-        <h3 className="text-xl font-bold text-brand-primary mb-1">{institution.name}</h3>
-        <p className="text-gray-600 mb-4">{institution.city}, {institution.state}</p>
-        <div className="flex flex-wrap gap-2 mb-4 text-sm">
-          <span className="bg-brand-light text-brand-dark px-2 py-1 rounded-full">{institution.control}</span>
-          {institution.acceptance_rate != null && (
-            <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full">
-              {(institution.acceptance_rate * 100).toFixed(0)}% Acceptance
-            </span>
-          )}
-          {tuition != null && (
-            <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full">
-              ${tuition.toLocaleString()}/yr
-            </span>
-          )}
-        </div>
-        <p className="text-gray-700 text-sm line-clamp-2">
-          Test Policy: {formatTestPolicy(institution.test_policy)}
-        </p>
-        <DemographicsMiniBars data={demographics} />
-      </div>
-      <div className="p-4 bg-gray-50">
-        <Link
-          to={`/institution/${institution.unitid}`}
-          className="w-full text-center block bg-brand-secondary text-white font-semibold py-2 px-4 rounded-lg hover:bg-brand-primary transition-colors"
-        >
-          View Details
-        </Link>
-      </div>
-    </div>
-  );
-};
-
-const ExplorePage: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const [index, setIndex] = useState<InstitutionIndex[]>([]);
-  const [defaultUnitIds, setDefaultUnitIds] = useState<number[]>([]);
-  const [filteredUnitIds, setFilteredUnitIds] = useState<number[]>([]);
-  const [displayed, setDisplayed] = useState<Institution[]>([]);
-  const [loading, setLoading] = useState<boolean>(false);
-
-  const [query, setQuery] = useState(searchParams.get('q') || '');
-  const pageSize = 20;
-  const [page, setPage] = useState<number>(1);
-
-  // Filters (dropdowns)
-  const [budget, setBudget] = useState<string[]>([]); // tuition buckets, e.g. "0-10000", "60000+"
-  const [selectivity, setSelectivity] = useState<string[]>([]); // selective, reach, target, balanced, safety, supersafe
-  const [testPolicy, setTestPolicy] = useState<string[]>([]); // required, flexible, optional
-  const [majorAreaQuery, setMajorAreaQuery] = useState<string>('');
-  const [specificMajorQuery, setSpecificMajorQuery] = useState<string>('');
-  const [selectedMajorAreas, setSelectedMajorAreas] = useState<string[]>([]); // CIP 2-digit codes
-  const [selectedSpecificMajors, setSelectedSpecificMajors] = useState<string[]>([]); // CIP 6-digit codes
-  const [allInstitutions, setAllInstitutions] = useState<Institution[] | null>(null);
+  const [institutions, setInstitutions] = useState<Institution[]>([]);
+  const [demographicsMap, setDemographicsMap] = useState<Map<number, InstitutionDemographics>>(new Map());
+  const [testScoreMap, setTestScoreMap] = useState<Map<number, InstitutionTestScores>>(new Map());
+  const [locationMap, setLocationMap] = useState<Map<number, string>>(new Map());
   const [majorsMeta, setMajorsMeta] = useState<MajorsMeta | null>(null);
   const [majorsByInstitution, setMajorsByInstitution] = useState<InstitutionMajorsByInstitution | null>(null);
-  // State filter
-  const [stateQuery, setStateQuery] = useState<string>('');
+  const [topApplicants, setTopApplicants] = useState<number[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  // Draft filters (user edits) and applied filters (used for results)
+  const [draftBudget, setDraftBudget] = useState<BudgetBucket | null>(null);
+  const [draftSelectivity, setDraftSelectivity] = useState<SelectivityBucket | null>(null);
+  const [draftTestPolicy, setDraftTestPolicy] = useState<keyof typeof TEST_POLICY_LABEL | null>(null);
+  const [draftTestScore, setDraftTestScore] = useState<TestScoreFilter | null>(null);
+  const [draftStates, setDraftStates] = useState<string[]>([]);
+  const [draftLocationTypes, setDraftLocationTypes] = useState<LocationCategory[]>([]);
+  const [draftMajorAreas, setDraftMajorAreas] = useState<string[]>(initialMajorAreas);
+  const [draftSpecificMajors, setDraftSpecificMajors] = useState<string[]>(initialSpecificMajors);
+  const [majorAreaQuery, setMajorAreaQuery] = useState("");
+  const [specificMajorQuery, setSpecificMajorQuery] = useState("");
+
+  const [budget, setBudget] = useState<BudgetBucket | null>(null);
+  const [selectivity, setSelectivity] = useState<SelectivityBucket | null>(null);
+  const [testPolicy, setTestPolicy] = useState<keyof typeof TEST_POLICY_LABEL | null>(null);
+  const [testScore, setTestScore] = useState<TestScoreFilter | null>(null);
   const [selectedStates, setSelectedStates] = useState<string[]>([]);
-  // Location type filter
-  const [locationTypes, setLocationTypes] = useState<string[]>([]);
-  // Test score filter
-  const [testScoreType, setTestScoreType] = useState<TestScoreType | ''>('');
-  const [testScoreValue, setTestScoreValue] = useState<string>('');
-  // Demographics map (undergrad)
-  const [demographicsMap, setDemographicsMap] = useState<Map<number, InstitutionDemographics> | null>(null);
+  const [locationTypes, setLocationTypes] = useState<LocationCategory[]>([]);
+  const [majorAreas, setMajorAreas] = useState<string[]>(initialMajorAreas);
+  const [specificMajors, setSpecificMajors] = useState<string[]>(initialSpecificMajors);
+  const [page, setPage] = useState(1);
 
-  // Load index and default top 10 by applicants
+  const searchQuery = searchParams.get("q") ?? "";
+
   useEffect(() => {
+    setMajorAreas(initialMajorAreas);
+    setSpecificMajors(initialSpecificMajors);
+    setDraftMajorAreas(initialMajorAreas);
+    setDraftSpecificMajors(initialSpecificMajors);
+  }, [initialMajorAreas, initialSpecificMajors]);
+
+  useEffect(() => {
+    let cancelled = false;
     (async () => {
-      setLoading(true);
       try {
-        const [idx, top10] = await Promise.all([
-          getInstitutionIndex(),
-          getTopUnitIdsByApplicants(10),
+        setLoading(true);
+        setError(null);
+        const [all, demoMap, testMap, locMap, meta, majors, topIds] = await Promise.all([
+          getAllInstitutions(),
+          getUndergradDemographicsMap(),
+          getInstitutionTestScoreMap(),
+          getLocationTypeMap(),
+          getMajorsMeta().catch(() => null),
+          getMajorsByInstitution().catch(() => null),
+          getTopUnitIdsByApplicants(100).catch(() => []),
         ]);
-        setIndex(idx);
-        setDefaultUnitIds(top10);
-        setFilteredUnitIds(top10);
-        setPage(1);
-      } finally {
-        setLoading(false);
-      }
-    })();
-  }, []);
-
-  // Load demographics CSV once
-  useEffect(() => {
-    let cancelled = false;
-    (async () => {
-      try {
-        const map = await getUndergradDemographicsMap();
-        if (!cancelled) setDemographicsMap(map);
-      } catch {
-        if (!cancelled) setDemographicsMap(null);
-      }
-    })();
-    return () => {
-      cancelled = true;
-    };
-  }, []);
-
-  // Apply query + filters (search only after 3+ letters)
-  useEffect(() => {
-    const run = async () => {
-      const q = query.trim().toLowerCase();
-      const hasQuery = q.length >= 3;
-      const parsedScore = Number(testScoreValue);
-      const isValidTestScore =
-        Number.isFinite(parsedScore) &&
-        parsedScore > 0 &&
-        ((testScoreType === 'sat' && parsedScore >= 400 && parsedScore <= 1600) ||
-          (testScoreType === 'act' && parsedScore >= 1 && parsedScore <= 36));
-      const hasTestScoreFilter = testScoreType !== '' && isValidTestScore;
-      const testScoreFilter =
-        hasTestScoreFilter ? { type: testScoreType as TestScoreType, value: parsedScore } : null;
-      const hasFilter =
-        budget.length > 0 ||
-        selectivity.length > 0 ||
-        testPolicy.length > 0 ||
-        selectedMajorAreas.length > 0 ||
-        selectedSpecificMajors.length > 0 ||
-        selectedStates.length > 0 ||
-        locationTypes.length > 0 ||
-        hasTestScoreFilter;
-
-      if (!hasQuery && !hasFilter) {
-        setFilteredUnitIds(defaultUnitIds);
-        setPage(1);
-        return;
-      }
-
-      let searchUnitIds: number[] | null = null;
-      if (hasQuery && index.length > 0) {
-        const matched = index
-          .filter((i) => {
-            const hay = `${i.name ?? ''} ${i.city ?? ''} ${i.state ?? ''}`.toLowerCase();
-            return hay.includes(q);
-          })
-          .map((i) => i.unitid);
-        searchUnitIds = matched;
-      }
-
-      let filterUnitIds: number[] | null = null;
-      if (hasFilter) {
-        try {
-          const all = allInstitutions || await getAllInstitutions();
-          if (!allInstitutions) setAllInstitutions(all);
-          const locationMap = await getLocationTypeMap();
-          let testScoreMap: Map<number, InstitutionTestScores> | null = null;
-          if (hasTestScoreFilter) {
-            try {
-              testScoreMap = await getInstitutionTestScoreMap();
-            } catch {
-              testScoreMap = null;
-            }
-          }
-          filterUnitIds = filterInstitutions(
-            all,
-            budget,
-            selectivity,
-            testPolicy,
-            selectedMajorAreas,
-            selectedSpecificMajors,
-            selectedStates,
-            locationTypes,
-            majorsByInstitution,
-            locationMap,
-            testScoreFilter,
-            testScoreMap,
-          ).map((i) => i.unitid);
-        } catch (err) {
-          // If location CSV or other optional data fails, fall back to filtering without location
-          const all = allInstitutions || await getAllInstitutions();
-          if (!allInstitutions) setAllInstitutions(all);
-          let testScoreMap: Map<number, InstitutionTestScores> | null = null;
-          if (hasTestScoreFilter) {
-            try {
-              testScoreMap = await getInstitutionTestScoreMap();
-            } catch {
-              testScoreMap = null;
-            }
-          }
-          filterUnitIds = filterInstitutions(
-            all,
-            budget,
-            selectivity,
-            testPolicy,
-            selectedMajorAreas,
-            selectedSpecificMajors,
-            selectedStates,
-            [],
-            majorsByInstitution,
-            null,
-            testScoreFilter,
-            testScoreMap,
-          ).map((i) => i.unitid);
-        }
-      }
-
-      let ids: number[];
-      if (searchUnitIds && filterUnitIds) {
-        const set = new Set(filterUnitIds);
-        ids = searchUnitIds.filter((id) => set.has(id));
-      } else if (searchUnitIds) {
-        ids = searchUnitIds;
-      } else if (filterUnitIds) {
-        ids = filterUnitIds;
-      } else {
-        ids = defaultUnitIds;
-      }
-
-      setFilteredUnitIds(ids);
-      setPage(1);
-    };
-    run();
-  }, [
-    query,
-    budget,
-    selectivity,
-    testPolicy,
-    selectedMajorAreas,
-    selectedSpecificMajors,
-    selectedStates,
-    locationTypes,
-    testScoreType,
-    testScoreValue,
-    index,
-    defaultUnitIds,
-    allInstitutions,
-    majorsByInstitution,
-  ]);
-
-  // Update URL params as user types
-  useEffect(() => {
-    const params = new URLSearchParams();
-    if (query.trim()) params.set('q', query.trim());
-    setSearchParams(params);
-  }, [query, setSearchParams]);
-
-  const totalPages = useMemo(() => {
-    return Math.max(1, Math.ceil(filteredUnitIds.length / pageSize));
-  }, [filteredUnitIds.length]);
-
-  // Load current page worth of institutions with request guard
-  useEffect(() => {
-    let cancelled = false;
-    (async () => {
-      setLoading(true);
-      try {
-        const start = (page - 1) * pageSize;
-        const end = start + pageSize;
-        const ids = filteredUnitIds.slice(start, end);
-        if (ids.length === 0) {
-          if (!cancelled) setDisplayed([]);
-        } else {
-          const rows = await getInstitutionsSummariesByIds(ids);
-          if (!cancelled) setDisplayed(rows);
-        }
+        if (cancelled) return;
+        setInstitutions(all);
+        setDemographicsMap(demoMap);
+        setTestScoreMap(testMap);
+        setLocationMap(locMap);
+        setMajorsMeta(meta);
+        setMajorsByInstitution(majors);
+        setTopApplicants(topIds);
+      } catch (e: any) {
+        if (!cancelled) setError(e?.message ?? "Failed to load colleges");
       } finally {
         if (!cancelled) setLoading(false);
       }
@@ -367,709 +424,530 @@ const ExplorePage: React.FC = () => {
     return () => {
       cancelled = true;
     };
-  }, [filteredUnitIds, page]);
+  }, []);
 
-  const prevPage = () => setPage((p) => Math.max(1, p - 1));
-  const nextPage = () => setPage((p) => Math.min(totalPages, p + 1));
+  useEffect(() => {
+    setPage(1);
+  }, [searchQuery, budget, selectivity, testPolicy, testScore, selectedStates, locationTypes, majorAreas, specificMajors]);
 
-  // Dropdown UI helpers
-  const toggleFromList = (curr: string[], value: string) =>
-    curr.includes(value) ? curr.filter((v) => v !== value) : [...curr, value];
+  const majorAreaOptions = useMemo(() => buildMajorAreaOptions(majorsMeta), [majorsMeta]);
+  const specificMajorOptions = useMemo(() => buildSpecificMajorOptions(majorsMeta), [majorsMeta]);
 
-  const handleBudgetChange = (value: string) => setBudget((b) => toggleFromList(b, value));
-  const handleSelectivityChange = (value: string) => setSelectivity((s) => toggleFromList(s, value));
-  const handleTestPolicyChange = (value: string) => setTestPolicy((t) => toggleFromList(t, value));
+  const stateOptions = useMemo(() => {
+    const set = new Set<string>();
+    institutions.forEach((inst) => {
+      const code = inst.state ? String(inst.state).toUpperCase() : "";
+      if (code && STATE_NAME_BY_CODE[code]) {
+        set.add(code);
+      }
+    });
+    return Array.from(set).sort((a, b) =>
+      STATE_NAME_BY_CODE[a].localeCompare(STATE_NAME_BY_CODE[b])
+    );
+  }, [institutions]);
 
-  type CipMajorOption = {
-    code: string;
-    title: string;
-    label: string;
-  };
-
-  const majorAreaOptions = useMemo<CipMajorOption[]>(() => {
-    if (!majorsMeta) return [];
-    const two = majorsMeta.two_digit || {};
-    return Object.entries(two)
-      .map(([code, rawTitle]) => {
-        const title = cleanCipTitle(rawTitle);
-        if (!title || /^\d+$/.test(title)) return null;
-        const lower = title.toLowerCase();
-        if (lower === 'first major' || lower === 'area') return null;
-        return { code, title, label: title };
-      })
-      .filter((v): v is CipMajorOption => !!v)
-      .sort((a, b) => a.title.localeCompare(b.title) || a.code.localeCompare(b.code));
-  }, [majorsMeta]);
-
-  const specificMajorOptions = useMemo<CipMajorOption[]>(() => {
-    if (!majorsMeta) return [];
-    const six = majorsMeta.six_digit || {};
-    return Object.entries(six)
-      .map(([code, rawTitle]) => {
-        const title = cleanCipTitle(rawTitle);
-        if (!title || /^\d+$/.test(title)) return null;
-        return { code, title, label: title };
-      })
-      .filter((v): v is CipMajorOption => !!v)
-      .sort((a, b) => a.title.localeCompare(b.title) || a.code.localeCompare(b.code));
-  }, [majorsMeta]);
-
-  const filteredMajorAreas = useMemo<CipMajorOption[]>(() => {
+  const filteredMajorAreaOptions = useMemo(() => {
     const q = majorAreaQuery.trim().toLowerCase();
     if (!q) return majorAreaOptions;
-    return majorAreaOptions.filter((m) => m.title.toLowerCase().includes(q));
-  }, [majorAreaQuery, majorAreaOptions]);
+    return majorAreaOptions.filter((opt) => opt.label.toLowerCase().includes(q));
+  }, [majorAreaOptions, majorAreaQuery]);
 
-  const filteredSpecificMajors = useMemo<CipMajorOption[]>(() => {
+  const filteredSpecificMajorOptions = useMemo(() => {
     const q = specificMajorQuery.trim().toLowerCase();
     if (!q) return specificMajorOptions;
-    return specificMajorOptions.filter((m) => m.title.toLowerCase().includes(q));
-  }, [specificMajorQuery, specificMajorOptions]);
+    return specificMajorOptions.filter((opt) => opt.label.toLowerCase().includes(q));
+  }, [specificMajorOptions, specificMajorQuery]);
 
-  const toggleMajorArea = (code: string) => {
-    setSelectedMajorAreas((prev) => toggleFromList(prev, code));
-  };
+  const locationTypeOptions = useMemo(() => {
+    const set = new Set<LocationCategory>();
+    locationMap.forEach((value) => {
+      const norm = normalizeLocationType(value);
+      if (norm) set.add(norm);
+    });
+    return Array.from(set).sort();
+  }, [locationMap]);
 
-  const toggleSpecificMajor = (m: CipMajorOption) => {
-    setSelectedSpecificMajors((prev) => toggleFromList(prev, m.code));
-    setSpecificMajorQuery('');
-  };
+  const orderedInstitutions = useMemo(() => {
+    const order = new Map<number, number>();
+    topApplicants.forEach((id, idx) => order.set(id, idx));
+    return [...institutions].sort((a, b) => {
+      const aRank = order.get(a.unitid);
+      const bRank = order.get(b.unitid);
+      if (aRank != null || bRank != null) {
+        return (aRank ?? Number.POSITIVE_INFINITY) - (bRank ?? Number.POSITIVE_INFINITY);
+      }
+      const aAcc = a.acceptance_rate ?? 0;
+      const bAcc = b.acceptance_rate ?? 0;
+      return bAcc - aAcc;
+    });
+  }, [institutions, topApplicants]);
 
-  // State dropdown helpers (match by full state name)
-  const STATE_NAMES: Record<string, string> = {
-    AL: 'Alabama', AK: 'Alaska', AZ: 'Arizona', AR: 'Arkansas', CA: 'California', CO: 'Colorado', CT: 'Connecticut',
-    DE: 'Delaware', FL: 'Florida', GA: 'Georgia', HI: 'Hawaii', ID: 'Idaho', IL: 'Illinois', IN: 'Indiana', IA: 'Iowa',
-    KS: 'Kansas', KY: 'Kentucky', LA: 'Louisiana', ME: 'Maine', MD: 'Maryland', MA: 'Massachusetts', MI: 'Michigan',
-    MN: 'Minnesota', MS: 'Mississippi', MO: 'Missouri', MT: 'Montana', NE: 'Nebraska', NV: 'Nevada', NH: 'New Hampshire',
-    NJ: 'New Jersey', NM: 'New Mexico', NY: 'New York', NC: 'North Carolina', ND: 'North Dakota', OH: 'Ohio',
-    OK: 'Oklahoma', OR: 'Oregon', PA: 'Pennsylvania', RI: 'Rhode Island', SC: 'South Carolina', SD: 'South Dakota',
-    TN: 'Tennessee', TX: 'Texas', UT: 'Utah', VT: 'Vermont', VA: 'Virginia', WA: 'Washington', WV: 'West Virginia',
-    WI: 'Wisconsin', WY: 'Wyoming', DC: 'District of Columbia',
-  };
+  const filteredInstitutions = useMemo(() => {
+    return filterInstitutions(
+      orderedInstitutions,
+      {
+        search: searchQuery,
+        budget,
+        selectivity,
+        testPolicy,
+        testScore,
+        states: selectedStates,
+        locationTypes,
+        majorAreas,
+        specificMajors,
+      },
+      majorsByInstitution,
+      locationMap,
+      testScoreMap
+    );
+  }, [orderedInstitutions, searchQuery, budget, selectivity, testPolicy, testScore, selectedStates, locationTypes, majorAreas, specificMajors, majorsByInstitution, locationMap, testScoreMap]);
 
-  function toFullStateName(value?: string | null): string {
-    if (!value) return '';
-    const v = value.trim();
-    if (!v) return '';
-    if (v.length === 2) {
-      return STATE_NAMES[v.toUpperCase()] || v;
+  const totalPages = Math.max(1, Math.ceil(filteredInstitutions.length / PAGE_SIZE));
+  const currentPage = Math.min(page, totalPages);
+  const startIdx = (currentPage - 1) * PAGE_SIZE;
+  const visibleInstitutions = filteredInstitutions.slice(startIdx, startIdx + PAGE_SIZE);
+
+  const handleSearchChange = (value: string) => {
+    const params = new URLSearchParams(searchParams);
+    if (value) {
+      params.set("q", value);
+    } else {
+      params.delete("q");
     }
-    return v;
-  }
+    setSearchParams(params, { replace: true });
+  };
 
-  const allStates = useMemo(() => {
-    const allowed = new Set(Object.keys(STATE_NAMES).map((c) => c.toUpperCase()));
-    const set = new Set<string>();
-    for (const i of index) {
-      const raw = (i.state || "").trim().toUpperCase();
-      if (!allowed.has(raw)) continue;
-      const full = toFullStateName(i.state);
-      if (full) set.add(full);
-    }
-    return Array.from(set).sort((a, b) => a.localeCompare(b));
-  }, [index]);
+  const handleApplyFilters = () => {
+    setBudget(draftBudget);
+    setSelectivity(draftSelectivity);
+    setTestPolicy(draftTestPolicy);
+    setTestScore(draftTestScore);
+    setSelectedStates(draftStates);
+    setLocationTypes(draftLocationTypes);
+    setMajorAreas(draftMajorAreas);
+    setSpecificMajors(draftSpecificMajors);
+    setPage(1);
+  };
 
-  const stateSuggestions = useMemo(() => {
-    const q = stateQuery.trim().toLowerCase();
-    if (!q) return allStates.slice(0, 50);
-    return allStates.filter((s) => s.toLowerCase().includes(q)).slice(0, 50);
-  }, [stateQuery, allStates]);
+  const resetFilters = () => {
+    setDraftBudget(null);
+    setDraftSelectivity(null);
+    setDraftTestPolicy(null);
+    setDraftTestScore(null);
+    setDraftStates([]);
+    setDraftLocationTypes([]);
+    setDraftMajorAreas(initialMajorAreas);
+    setDraftSpecificMajors(initialSpecificMajors);
+    setBudget(null);
+    setSelectivity(null);
+    setTestPolicy(null);
+    setTestScore(null);
+    setSelectedStates([]);
+    setLocationTypes([]);
+    setMajorAreas(initialMajorAreas);
+    setSpecificMajors(initialSpecificMajors);
+    setSearchParams(new URLSearchParams(), { replace: true });
+    setPage(1);
+  };
 
-  const toggleState = (s: string) => {
-    const lower = s.trim().toLowerCase();
-    const entry = Object.entries(STATE_NAMES).find(([, name]) => name.toLowerCase() === lower);
-    const code = entry ? entry[0] : s;
-    setSelectedStates((prev) => toggleFromList(prev, code));
-    setStateQuery('');
+  const renderDemographicsBar = (unitid: number) => {
+    const segments = buildDemographicSegments(demographicsMap.get(unitid));
+    if (!segments.length) return null;
+    const total = segments.reduce((sum, s) => sum + s.percent, 0) || 100;
+    return (
+      <div className="mt-3">
+        <div className="h-2 w-full bg-slate-100 rounded-full overflow-hidden flex">
+          {segments.map((seg) => (
+            <div
+              key={seg.key}
+              style={{ width: `${Math.max(2, (seg.percent / total) * 100)}%`, backgroundColor: seg.color }}
+              className="h-full"
+              title={`${seg.label}: ${seg.percent.toFixed(1)}%`}
+            />
+          ))}
+        </div>
+        <div className="mt-2 flex flex-wrap gap-2 text-[11px] text-slate-600">
+          {segments.map((seg) => (
+            <span key={seg.key} className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-slate-50 border border-slate-200">
+              <span className="h-2 w-2 rounded-sm" style={{ backgroundColor: seg.color }}></span>
+              {seg.label}
+            </span>
+          ))}
+        </div>
+      </div>
+    );
   };
 
   return (
-    <div className="flex flex-col md:flex-row gap-6">
-      <aside className="w-full md:w-72">
-        <div className="bg-white p-4 rounded-lg shadow-md sticky top-24 space-y-4">
-          <div className="bg-brand-dark text-white rounded-md p-3 space-y-2">
-            <h2 className="text-sm font-semibold">Need Personalized Help?</h2>
-            <p className="text-xs text-gray-100">
-              A real person can review your profile and questions and send guidance. It&apos;s 100% free.
-            </p>
-            <Link
-              to="/contact"
-              className="inline-block mt-1 px-3 py-1 text-sm font-semibold rounded bg-white text-brand-primary hover:bg-brand-light"
-            >
-              Get personalized help
-            </Link>
-          </div>
-          <form onSubmit={(e) => e.preventDefault()}>
-            <input
-              type="search"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder="Type at least 3 letters to search..."
-              className="w-full p-3 border border-gray-300 rounded-md focus:ring-brand-secondary focus:border-brand-secondary"
-            />
-          </form>
-
-          <details className="border rounded-md">
-              <summary className="cursor-pointer px-3 py-2 font-semibold">Tuition Budget (per year)</summary>
-              <div className="px-3 py-2 space-y-2">
-                {[
-                  { value: '0-10000', label: '< $10k' },
-                  { value: '10000-20000', label: '$10k - $20k' },
-                  { value: '20000-30000', label: '$20k - $30k' },
-                  { value: '30000-40000', label: '$30k - $40k' },
-                  { value: '40000-50000', label: '$40k - $50k' },
-                  { value: '50000-60000', label: '$50k - $60k' },
-                  { value: '60000+', label: '$60k+' },
-                ].map(({ value, label }) => (
-                  <button
-                    key={value}
-                    onClick={() => handleBudgetChange(value)}
-                    className={`w-full text-left px-3 py-2 rounded border ${
-                    budget.includes(value) ? 'bg-brand-light border-brand-secondary' : 'bg-white border-gray-300'
-                  }`}
-                >
-                  {label}
-                </button>
-              ))}
-            </div>
-          </details>
-
-          <details className="border rounded-md">
-            <summary className="cursor-pointer px-3 py-2 font-semibold">Selectivity</summary>
-            <div className="px-3 py-2 space-y-2">
-              {[
-                { value: 'selective', label: 'Selective (<10%)' },
-                { value: 'reach', label: 'Reach (10% - 25%)' },
-                { value: 'target', label: 'Target (25% - 49%)' },
-                { value: 'balanced', label: 'Balanced (50% - 69%)' },
-                { value: 'safety', label: 'Safety (70% - 90%)' },
-                { value: 'supersafe', label: 'Super Safe (91%+)' },
-              ].map(({ value, label }) => (
-                <button
-                  key={value}
-                  onClick={() => handleSelectivityChange(value)}
-                  className={`w-full text-left px-3 py-2 rounded border ${
-                    selectivity.includes(value) ? 'bg-brand-light border-brand-secondary' : 'bg-white border-gray-300'
-                  }`}
-                >
-                  {label}
-                </button>
-              ))}
-            </div>
-          </details>
-
-          <details className="border rounded-md">
-            <summary className="cursor-pointer px-3 py-2 font-semibold">Testing Expectations</summary>
-            <div className="px-3 py-2 space-y-2">
-              {[
-                { value: 'required', label: 'Test Required' },
-                { value: 'flexible', label: 'Test Flexible' },
-                { value: 'optional', label: 'Test Optional' },
-                { value: 'blind', label: 'Test Blind / Not Considered' },
-              ].map(({ value, label }) => (
-                <button
-                  key={value}
-                  onClick={() => handleTestPolicyChange(value)}
-                  className={`w-full text-left px-3 py-2 rounded border ${
-                    testPolicy.includes(value) ? 'bg-brand-light border-brand-secondary' : 'bg-white border-gray-300'
-                  }`}
-                >
-                  {label}
-                </button>
-              ))}
-            </div>
-          </details>
-
-          <details className="border rounded-md">
-            <summary className="cursor-pointer px-3 py-2 font-semibold">Test Score</summary>
-            <div className="px-3 py-2 space-y-3">
-              <div className="flex gap-2">
-                <button
-                  type="button"
-                  onClick={() => {
-                    setTestScoreType((prev) => (prev === 'sat' ? '' : 'sat'));
-                    setTestScoreValue('');
-                  }}
-                  className={`flex-1 text-center px-3 py-2 rounded border text-sm ${
-                    testScoreType === 'sat'
-                      ? 'bg-brand-light border-brand-secondary text-brand-dark'
-                      : 'bg-white border-gray-300 hover:bg-brand-light'
-                  }`}
-                >
-                  SAT Total
-                </button>
-                <button
-                  type="button"
-                  onClick={() => {
-                    setTestScoreType((prev) => (prev === 'act' ? '' : 'act'));
-                    setTestScoreValue('');
-                  }}
-                  className={`flex-1 text-center px-3 py-2 rounded border text-sm ${
-                    testScoreType === 'act'
-                      ? 'bg-brand-light border-brand-secondary text-brand-dark'
-                      : 'bg-white border-gray-300 hover:bg-brand-light'
-                  }`}
-                >
-                  ACT Composite
-                </button>
-              </div>
-
-              {testScoreType === 'sat' && (
-                <div className="space-y-1">
-                  <label className="block text-xs font-semibold text-gray-700">
-                    SAT Total (400-1600)
-                  </label>
-                  <input
-                    type="number"
-                    min={400}
-                    max={1600}
-                    value={testScoreValue}
-                    onChange={(e) => setTestScoreValue(e.target.value)}
-                    placeholder="e.g. 1450"
-                    className="w-full p-2 border border-gray-300 rounded-md text-sm"
-                  />
-                </div>
-              )}
-
-              {testScoreType === 'act' && (
-                <div className="space-y-1">
-                  <label className="block text-xs font-semibold text-gray-700">
-                    ACT Composite (1-36)
-                  </label>
-                  <input
-                    type="number"
-                    min={1}
-                    max={36}
-                    value={testScoreValue}
-                    onChange={(e) => setTestScoreValue(e.target.value)}
-                    placeholder="e.g. 33"
-                    className="w-full p-2 border border-gray-300 rounded-md text-sm"
-                  />
-                </div>
-              )}
-
-              {testScoreType !== '' && (
-                <button
-                  type="button"
-                  onClick={() => {
-                    setTestScoreType('');
-                    setTestScoreValue('');
-                  }}
-                  className="text-xs text-red-600 underline"
-                >
-                  Clear test score filter
-                </button>
-              )}
-            </div>
-          </details>
-
-          <details className="border rounded-md">
-            <summary className="cursor-pointer px-3 py-2 font-semibold">State</summary>
-            <div className="px-3 py-2 space-y-2">
+    <div className="py-6">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <div className="lg:col-span-3 space-y-4">
+          <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-4 space-y-4">
+            <div className="space-y-2">
+              <label htmlFor="college-search" className="text-sm font-semibold text-slate-700">
+                Search colleges
+              </label>
               <input
+                id="college-search"
+                name="college-search"
                 type="search"
-                value={stateQuery}
-                onChange={(e) => setStateQuery(e.target.value)}
-                placeholder="Search state..."
-                className="w-full p-2 border border-gray-300 rounded-md"
+                value={searchQuery}
+                onChange={(e) => handleSearchChange(e.target.value)}
+                placeholder="Type at least 3 letters to search"
+                className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/30"
               />
-              {stateSuggestions.length > 0 && (
-                <div className="space-y-2 max-h-80 overflow-auto">
-              {stateSuggestions.map((s) => {
-                const lower = s.trim().toLowerCase();
-                const entry = Object.entries(STATE_NAMES).find(([, name]) => name.toLowerCase() === lower);
-                const code = entry ? entry[0] : s;
-                const isSelected = selectedStates.includes(code);
-                return (
+            </div>
+
+            <details className="space-y-2">
+              <summary className="cursor-pointer text-xs uppercase font-semibold text-slate-500">
+                Tuition Budget (per year)
+              </summary>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  { key: "under15", label: "Under $15k" },
+                  { key: "15to25", label: "$15k-$25k" },
+                  { key: "25to40", label: "$25k-$40k" },
+                  { key: "40to60", label: "$40k-$60k" },
+                  { key: "over60", label: "$60k+" },
+                ].map((opt) => (
+                  <Pill
+                    key={opt.key}
+                    active={draftBudget === opt.key}
+                    label={opt.label}
+                    onClick={() => setDraftBudget(draftBudget === opt.key ? null : (opt.key as BudgetBucket))}
+                  />
+                ))}
+              </div>
+            </details>
+
+            <details className="space-y-2">
+              <summary className="cursor-pointer text-xs uppercase font-semibold text-slate-500">
+                Selectivity
+              </summary>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  { key: "lottery", label: "<10%" },
+                  { key: "reach", label: "10-24%" },
+                  { key: "target", label: "25-49%" },
+                  { key: "safety", label: "50-79%" },
+                  { key: "open", label: "80%+" },
+                ].map((opt) => (
+                  <Pill
+                    key={opt.key}
+                    active={draftSelectivity === opt.key}
+                    label={opt.label}
+                    onClick={() =>
+                      setDraftSelectivity(draftSelectivity === opt.key ? null : (opt.key as SelectivityBucket))
+                    }
+                  />
+                ))}
+              </div>
+            </details>
+
+            <details className="space-y-2">
+              <summary className="cursor-pointer text-xs uppercase font-semibold text-slate-500">
+                Testing expectations
+              </summary>
+              <div className="flex flex-wrap gap-2">
+                {[
+                  { key: "required", label: "Required" },
+                  { key: "flexible", label: "Flexible" },
+                  { key: "optional", label: "Optional" },
+                  { key: "not_considered", label: "Test blind" },
+                ].map((opt) => (
+                  <Pill
+                    key={opt.key}
+                    active={draftTestPolicy === opt.key}
+                    label={opt.label}
+                    onClick={() =>
+                      setDraftTestPolicy(
+                        draftTestPolicy === opt.key ? null : (opt.key as keyof typeof TEST_POLICY_LABEL)
+                      )
+                    }
+                  />
+                ))}
+              </div>
+              <div className="space-y-2">
+                <label className="text-xs font-semibold text-slate-500">Test score floor</label>
+                <div className="flex items-center gap-2 text-sm flex-wrap">
+                  <Pill
+                    active={draftTestScore?.type === "sat"}
+                    label="SAT"
+                    onClick={() =>
+                      setDraftTestScore(
+                        draftTestScore?.type === "sat"
+                          ? null
+                          : { type: "sat", value: draftTestScore?.value ?? 1300 }
+                      )
+                    }
+                  />
+                  <Pill
+                    active={draftTestScore?.type === "act"}
+                    label="ACT"
+                    onClick={() =>
+                      setDraftTestScore(
+                        draftTestScore?.type === "act"
+                          ? null
+                          : { type: "act", value: draftTestScore?.value ?? 28 }
+                      )
+                    }
+                  />
+                  <input
+                    id="score-min"
+                    name="score-min"
+                    type="number"
+                    min={draftTestScore?.type === "act" ? 10 : 600}
+                    max={draftTestScore?.type === "act" ? 36 : 1600}
+                    value={draftTestScore?.value ?? ""}
+                    onChange={(e) => {
+                      const val = Number(e.target.value);
+                      if (!draftTestScore?.type) return;
+                      if (Number.isNaN(val)) {
+                        setDraftTestScore(null);
+                      } else {
+                        setDraftTestScore({ type: draftTestScore.type, value: val });
+                      }
+                    }}
+                    placeholder={draftTestScore?.type === "act" ? "ACT" : "SAT"}
+                    className="w-24 rounded-lg border border-slate-200 px-2 py-1 text-sm focus:border-brand-primary focus:ring-1 focus:ring-brand-primary/40"
+                  />
                   <button
-                    key={s}
-                    className={`w-full text-left px-3 py-2 rounded border ${
-                      isSelected
-                        ? 'bg-brand-light border-brand-secondary text-brand-dark'
-                        : 'bg-white border-gray-300 hover:bg-brand-light'
-                    }`}
-                    onClick={() => toggleState(s)}
+                    type="button"
+                    className="text-xs text-brand-primary underline"
+                    onClick={() => setDraftTestScore(null)}
                   >
-                    {s}
+                    Clear
                   </button>
-                );
-              })}
                 </div>
-              )}
-            </div>
-          </details>
+              </div>
+            </details>
 
-          <details className="border rounded-md">
-            <summary className="cursor-pointer px-3 py-2 font-semibold">Location Type</summary>
-            <div className="px-3 py-2 space-y-2">
-              {[
-                { value: 'city', label: 'City' },
-                { value: 'suburban', label: 'Suburban' },
-                { value: 'town', label: 'Town' },
-                { value: 'rural', label: 'Rural' },
-              ].map(({ value, label }) => (
-                <button
-                  key={value}
-                  onClick={() =>
-                    setLocationTypes((curr) =>
-                      curr.includes(value) ? curr.filter((v) => v !== value) : [...curr, value]
-                    )
-                  }
-                  className={`w-full text-left px-3 py-2 rounded border ${
-                    locationTypes.includes(value)
-                      ? 'bg-brand-light border-brand-secondary'
-                      : 'bg-white border-gray-300'
-                  }`}
-                >
-                  {label}
-                </button>
-              ))}
-            </div>
-          </details>
+            <details className="space-y-2">
+              <summary className="cursor-pointer text-xs uppercase font-semibold text-slate-500">
+                State
+              </summary>
+              <div className="flex flex-wrap gap-2 max-h-48 overflow-auto pr-1">
+                {stateOptions.map((code) => {
+                  const active = draftStates.includes(code);
+                  return (
+                    <Pill
+                      key={code}
+                      active={active}
+                      label={`${STATE_NAME_BY_CODE[code]} (${code})`}
+                      onClick={() =>
+                        setDraftStates((prev) =>
+                          prev.includes(code)
+                            ? prev.filter((v) => v !== code)
+                            : [...prev, code]
+                        )
+                      }
+                    />
+                  );
+                })}
+              </div>
+            </details>
 
-          <details
-            className="border rounded-md"
-            onToggle={(e: any) => {
-              if (e.currentTarget.open) {
-                if (!allInstitutions) {
-                  getAllInstitutions().then(setAllInstitutions);
-                }
-                if (!majorsMeta) {
-                  getMajorsMeta().then(setMajorsMeta);
-                }
-                if (!majorsByInstitution) {
-                  getMajorsByInstitution().then(setMajorsByInstitution);
-                }
-              }
-            }}
-          >
-            <summary className="cursor-pointer px-3 py-2 font-semibold">Major</summary>
-            <div className="px-3 py-2 space-y-4">
+            <details className="space-y-2">
+              <summary className="cursor-pointer text-xs uppercase font-semibold text-slate-500">
+                Location type
+              </summary>
+              <div className="flex flex-wrap gap-2">
+                {locationTypeOptions.map((opt) => (
+                  <Pill
+                    key={opt}
+                    active={draftLocationTypes.includes(opt)}
+                    label={opt}
+                    onClick={() =>
+                      setDraftLocationTypes((prev) =>
+                        prev.includes(opt) ? prev.filter((v) => v !== opt) : [...prev, opt]
+                      )
+                    }
+                  />
+                ))}
+              </div>
+            </details>
+
+            <details className="space-y-3">
+              <summary className="cursor-pointer text-xs uppercase font-semibold text-slate-500">
+                Majors
+              </summary>
               <div>
-                <div className="text-xs font-semibold text-slate-700 mb-2">Major areas</div>
+                <p className="text-xs font-semibold text-slate-500">Major area</p>
                 <input
+                  id="major-area-search"
+                  name="major-area-search"
                   type="search"
                   value={majorAreaQuery}
                   onChange={(e) => setMajorAreaQuery(e.target.value)}
                   placeholder="Search major areas..."
-                  className="w-full p-2 border border-gray-300 rounded-md text-sm"
+                  className="w-full rounded-lg border border-slate-200 px-2 py-1.5 text-sm mb-2 focus:border-brand-primary focus:ring-1 focus:ring-brand-primary/40"
                 />
-                <div className="mt-2 space-y-1 max-h-52 overflow-auto">
-                  {filteredMajorAreas.map((m) => {
-                    const selected = selectedMajorAreas.includes(m.code);
+                <div className="flex flex-wrap gap-2 max-h-40 overflow-auto pr-1">
+                  {filteredMajorAreaOptions.map((opt) => {
+                    const active = draftMajorAreas.includes(opt.code);
                     return (
-                      <button
-                        key={m.code}
-                        type="button"
-                        onClick={() => toggleMajorArea(m.code)}
-                        className={`w-full text-left px-3 py-1.5 rounded border text-xs ${
-                          selected
-                            ? "bg-brand-light border-brand-secondary text-brand-dark"
-                            : "bg-white border-gray-300 hover:bg-brand-light"
-                        }`}
-                      >
-                        {m.label}
-                      </button>
+                      <Pill
+                        key={opt.code}
+                        active={active}
+                        label={cleanMajorLabel(opt.label)}
+                        onClick={() =>
+                          setDraftMajorAreas((prev) =>
+                            prev.includes(opt.code)
+                              ? prev.filter((v) => v !== opt.code)
+                              : [...prev, opt.code]
+                          )
+                        }
+                      />
                     );
                   })}
                 </div>
               </div>
-
-              <div className="border-t border-gray-200 pt-3">
-                <div className="text-xs font-semibold text-slate-700 mb-2">Specific majors</div>
+              <div>
+                <p className="text-xs font-semibold text-slate-500">Specific majors</p>
                 <input
+                  id="specific-major-search"
+                  name="specific-major-search"
                   type="search"
                   value={specificMajorQuery}
                   onChange={(e) => setSpecificMajorQuery(e.target.value)}
-                  placeholder="Search specific majors..."
-                  className="w-full p-2 border border-gray-300 rounded-md text-sm"
+                  placeholder="Search majors..."
+                  className="w-full rounded-lg border border-slate-200 px-2 py-1.5 text-sm mb-2 focus:border-brand-primary focus:ring-1 focus:ring-brand-primary/40"
                 />
-                <div className="mt-2 space-y-1 max-h-52 overflow-auto">
-                  {filteredSpecificMajors.map((m) => {
-                    const selected = selectedSpecificMajors.includes(m.code);
+                <div className="flex flex-wrap gap-2 max-h-40 overflow-auto pr-1">
+                  {filteredSpecificMajorOptions.map((opt) => {
+                    const active = draftSpecificMajors.includes(opt.code);
                     return (
-                      <button
-                        key={m.code}
-                        type="button"
-                        className={`w-full text-left px-3 py-1.5 rounded border text-xs ${
-                          selected
-                            ? "bg-brand-light border-brand-secondary text-brand-dark"
-                            : "bg-white border-gray-300 hover:bg-brand-light"
-                        }`}
-                        onClick={() => toggleSpecificMajor(m)}
-                      >
-                        {m.label}
-                      </button>
+                      <Pill
+                        key={opt.code}
+                        active={active}
+                        label={cleanMajorLabel(opt.label)}
+                        onClick={() =>
+                          setDraftSpecificMajors((prev) =>
+                            prev.includes(opt.code)
+                              ? prev.filter((v) => v !== opt.code)
+                              : [...prev, opt.code]
+                          )
+                        }
+                      />
                     );
                   })}
                 </div>
-
-                {(selectedMajorAreas.length > 0 || selectedSpecificMajors.length > 0) && (
-                  <div className="flex flex-wrap gap-2 mt-3">
-                    {selectedMajorAreas.map((code) => {
-                      const opt = majorAreaOptions.find((m) => m.code === code);
-                      const label = opt?.label ?? code;
-                      return (
-                        <span
-                          key={`area-${code}`}
-                          className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-brand-light text-brand-dark text-xs"
-                        >
-                          {label}
-                          <button
-                            type="button"
-                            className="text-red-600 font-bold"
-                            onClick={() =>
-                              setSelectedMajorAreas((prev) => prev.filter((v) => v !== code))
-                            }
-                          >
-                            ×
-                          </button>
-                        </span>
-                      );
-                    })}
-                    {selectedSpecificMajors.map((code) => {
-                      const opt = specificMajorOptions.find((m) => m.code === code);
-                      const label = opt?.label ?? code;
-                      return (
-                        <span
-                          key={`spec-${code}`}
-                          className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-brand-light text-brand-dark text-xs"
-                        >
-                          {label}
-                          <button
-                            type="button"
-                            className="text-red-600 font-bold"
-                            onClick={() =>
-                              setSelectedSpecificMajors((prev) => prev.filter((v) => v !== code))
-                            }
-                          >
-                            ×
-                          </button>
-                        </span>
-                      );
-                    })}
-                  </div>
-                )}
               </div>
-            </div>
-          </details>
-        </div>
-      </aside>
+            </details>
 
-      <main className="flex-1">
-        <div className="mb-2">
-          <p className="text-gray-600">
-            Showing {displayed.length} of {filteredUnitIds.length || 0} result(s)
-          </p>
-        </div>
-        {loading ? (
-          <p>Loading universities...</p>
-        ) : displayed.length > 0 ? (
-          <>
-            <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
-              {displayed.map((inst) => (
-                <InstitutionCard
-                  key={inst.unitid}
-                  institution={inst}
-                  demographics={demographicsMap?.get(inst.unitid)}
-                />
-              ))}
-            </div>
-            <div className="flex items-center justify-center gap-4 mt-6">
+            <div className="flex flex-col gap-2">
               <button
-                onClick={prevPage}
-                disabled={page === 1}
-                className="px-3 py-2 rounded bg-gray-100 text-gray-700 disabled:opacity-50"
+                type="button"
+                onClick={handleApplyFilters}
+                className="w-full rounded-lg bg-brand-primary text-white px-3 py-2 text-sm font-semibold hover:bg-brand-primary/90"
               >
-                Prev
+                Apply filters
               </button>
-              <span className="text-gray-700">
-                Page {page} of {totalPages}
+              <button
+                type="button"
+                onClick={resetFilters}
+                className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50"
+              >
+                Reset filters
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className="lg:col-span-9 space-y-4">
+          <div className="flex items-center justify-end">
+            <div className="text-sm text-slate-600">Showing {visibleInstitutions.length} of {filteredInstitutions.length} result(s)</div>
+          </div>
+
+          {loading ? (
+            <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 text-slate-700">
+              Loading universities...
+            </div>
+          ) : error ? (
+            <div className="bg-white rounded-2xl border border-red-200 shadow-sm p-6 text-red-700">
+              {error}
+            </div>
+          ) : visibleInstitutions.length === 0 ? (
+            <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-8 text-center text-slate-600">
+              No universities found. Try adjusting filters.
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+              {visibleInstitutions.map((inst) => {
+                const policy = categorizeTestPolicy(inst.test_policy);
+                const tuition = pickTuition(inst);
+                const acceptanceLabel = formatPercent(inst.acceptance_rate);
+                const testPolicyLabel = TEST_POLICY_LABEL[policy] ?? inst.test_policy;
+                const location = [inst.city, inst.state].filter(Boolean).join(", ");
+                return (
+                  <div
+                    key={inst.unitid}
+                    className="bg-white rounded-2xl border border-slate-200 shadow-sm p-4 flex flex-col h-full hover:border-brand-primary/40 transition-colors"
+                  >
+                    <div className="flex-1">
+                      <div className="flex items-start justify-between gap-3">
+                        <div>
+                          <h3 className="text-lg font-semibold text-slate-900 leading-tight">{inst.name}</h3>
+                          <p className="text-sm text-slate-600">{location || "Location unavailable"}</p>
+                        </div>
+                        <span className="inline-flex items-center px-2 py-1 rounded-full text-[11px] font-semibold bg-slate-100 text-slate-700 border border-slate-200">
+                          {inst.control || ""}
+                        </span>
+                      </div>
+                      <div className="mt-3 flex flex-wrap items-center gap-2 text-xs">
+                        <span className="inline-flex items-center px-2 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200 font-semibold">
+                          {acceptanceLabel}
+                        </span>
+                        <span className="inline-flex items-center px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 font-semibold">
+                          {formatCurrency(tuition)}
+                        </span>
+                        <span className="inline-flex items-center px-2 py-1 rounded-full bg-amber-50 text-amber-700 border border-amber-200 font-semibold">
+                          {testPolicyLabel}
+                        </span>
+                      </div>
+                      {renderDemographicsBar(inst.unitid)}
+                    </div>
+                    <div className="mt-4">
+                      <Link
+                        to={`/institution/${inst.unitid}`}
+                        className="inline-flex w-full items-center justify-center rounded-lg bg-brand-primary text-white font-semibold py-2 hover:bg-brand-primary/90"
+                      >
+                        View Details
+                      </Link>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          )}
+
+          {!loading && filteredInstitutions.length > PAGE_SIZE && (
+            <div className="flex items-center justify-between text-sm text-slate-700">
+              <button
+                type="button"
+                onClick={() => setPage((p) => Math.max(1, p - 1))}
+                disabled={currentPage === 1}
+                className="px-3 py-1.5 rounded-lg border border-slate-200 bg-white disabled:opacity-60"
+              >
+                Previous
+              </button>
+              <span>
+                Page {currentPage} of {totalPages}
               </span>
               <button
-                onClick={nextPage}
-                disabled={page === totalPages}
-                className="px-3 py-2 rounded bg-gray-100 text-gray-700 disabled:opacity-50"
+                type="button"
+                onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
+                disabled={currentPage === totalPages}
+                className="px-3 py-1.5 rounded-lg border border-slate-200 bg-white disabled:opacity-60"
               >
                 Next
               </button>
             </div>
-          </>
-        ) : (
-          <div className="text-center py-12 bg-white rounded-lg shadow-md">
-            <h3 className="text-xl font-semibold text-gray-800">No Universities Found</h3>
-            <p className="text-gray-500 mt-2">Try a different search term or adjust filters.</p>
-          </div>
-        )}
-      </main>
+          )}
+        </div>
+      </div>
     </div>
   );
 };
 
 export default ExplorePage;
-
-// Helpers
-function matchesTuitionBucket(tuition: number, bucket: string): boolean {
-  if (!Number.isFinite(tuition)) return false;
-  if (bucket.endsWith('+')) {
-    const min = Number(bucket.slice(0, -1));
-    if (Number.isNaN(min)) return false;
-    return tuition >= min;
-  }
-  const [minStr, maxStr] = bucket.split('-');
-  const min = Number(minStr);
-  const max = Number(maxStr);
-  if (Number.isNaN(min) || Number.isNaN(max)) return false;
-  return tuition >= min && tuition < max;
-}
-
-function formatTestPolicy(value: string | null | undefined): string {
-  const category = categorizeTestPolicy(value ?? '');
-  if (category === 'flexible') return 'Test flexible';
-  if (category === 'optional') return 'Test optional';
-  if (category === 'not_considered') return 'Test blind';
-  if (!value) return 'Unknown';
-  return 'Required';
-}
-
-function cleanCipTitle(value: string | null | undefined): string {
-  if (!value) return "";
-  let t = String(value).trim();
-  if ((t.startsWith('"') && t.endsWith('"')) || (t.startsWith("'") && t.endsWith("'"))) {
-    t = t.slice(1, -1).trim();
-  } else {
-    if (t.startsWith('"') || t.startsWith("'")) t = t.slice(1).trim();
-    if (t.endsWith('"') || t.endsWith("'")) t = t.slice(0, -1).trim();
-  }
-  return t;
-}
-
-function normalizeLocationType(raw: string | null | undefined): string | null {
-  if (!raw) return null;
-  const v = raw.trim().toLowerCase();
-  if (!v) return null;
-  if (v.startsWith('city')) return 'city';
-  if (v.startsWith('suburb')) return 'suburban';
-  if (v.startsWith('town')) return 'town';
-  if (v.startsWith('rural')) return 'rural';
-  return null;
-}
-
-function filterInstitutions(
-  institutions: Institution[],
-  budget: string[],
-  selectivity: string[],
-  testPolicy: string[],
-  selectedMajorAreas: string[],
-  selectedSpecificMajors: string[],
-  selectedStates: string[],
-  selectedLocationTypes: string[],
-  majorsByInstitution: InstitutionMajorsByInstitution | null,
-  locationMap: Map<number, string> | null,
-  testScoreFilter: { type: TestScoreType; value: number } | null,
-  testScoreMap: Map<number, InstitutionTestScores> | null,
-): Institution[] {
-  let results = institutions.slice();
-
-  if (budget.length > 0) {
-    results = results.filter((inst) => {
-      const tuition = inst.tuition_2023_24_out_of_state ?? inst.tuition_2023_24_in_state ?? inst.tuition_2023_24;
-      if (tuition == null) return false;
-      return budget.some((b) => matchesTuitionBucket(tuition, b));
-    });
-  }
-
-  if (selectivity.length > 0) {
-    results = results.filter((inst) => {
-      const rate = inst.acceptance_rate;
-      if (rate == null) return false;
-      return selectivity.some((s) => {
-        if (s === 'selective') return rate < 0.1;
-        if (s === 'reach') return rate >= 0.1 && rate < 0.25;
-        if (s === 'target') return rate >= 0.25 && rate < 0.5;
-        if (s === 'balanced') return rate >= 0.5 && rate < 0.7;
-        if (s === 'safety') return rate >= 0.7 && rate < 0.91;
-        if (s === 'supersafe') return rate >= 0.91;
-        return false;
-      });
-    });
-  }
-
-  if (testPolicy.length > 0) {
-    results = results.filter((inst) => {
-      const policyCategory = categorizeTestPolicy(inst.test_policy);
-      return testPolicy.some((tp) => {
-        if (tp === 'required') return policyCategory === 'required';
-        if (tp === 'flexible') return policyCategory === 'flexible';
-        if (tp === 'optional') return policyCategory === 'optional';
-        if (tp === 'blind') return policyCategory === 'not_considered';
-        return false;
-      });
-    });
-  }
-
-  if ((selectedMajorAreas.length > 0 || selectedSpecificMajors.length > 0) && majorsByInstitution) {
-    const areaSet = new Set(selectedMajorAreas);
-    const specificSet = new Set(selectedSpecificMajors);
-    results = results.filter((inst) => {
-      const entry = majorsByInstitution[String(inst.unitid)];
-      if (!entry) return false;
-      const hasArea =
-        selectedMajorAreas.length === 0
-          ? true
-          : (entry.two_digit || []).some((code) => areaSet.has(code));
-      const hasSpecific =
-        selectedSpecificMajors.length === 0
-          ? true
-          : (entry.six_digit || []).some((code) => specificSet.has(code));
-      return hasArea && hasSpecific;
-    });
-  }
-
-  if (selectedStates.length > 0) {
-    const set = new Set(selectedStates.map((s) => s.toUpperCase()));
-    results = results.filter((inst) => {
-      const code = (inst.state || '').trim().toUpperCase();
-      return code !== '' && set.has(code);
-    });
-  }
-
-  if (selectedLocationTypes.length > 0 && locationMap) {
-    if (locationMap.size === 0) {
-      return results;
-    }
-    const typeSet = new Set(selectedLocationTypes);
-    results = results.filter((inst) => {
-      const rawLoc = locationMap.get(inst.unitid);
-      const normalized = normalizeLocationType(rawLoc);
-      if (!normalized) return false;
-      return typeSet.has(normalized);
-    });
-  }
-
-  if (testScoreFilter && testScoreMap) {
-    const { type, value } = testScoreFilter;
-    results = results.filter((inst) => {
-      const scores = testScoreMap.get(inst.unitid);
-      if (!scores) return false;
-
-      if (type === 'sat') {
-        const low = scores.sat_total_25 ?? null;
-        const high = scores.sat_total_75 ?? null;
-        if (low == null || high == null) return false;
-        return value >= low && value <= high;
-      }
-
-      if (type === 'act') {
-        const low = scores.act_composite_25 ?? null;
-        const high = scores.act_composite_75 ?? null;
-        if (low == null || high == null) return false;
-        return value >= low && value <= high;
-      }
-
-      return false;
-    });
-  }
-
-  return results;
-}

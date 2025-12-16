@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import React, { useState, useEffect, useMemo } from 'react';
+import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useOnboardingContext } from '../context/OnboardingContext';
 import {
   InstitutionDetail,
   InstitutionMetrics,
@@ -21,9 +22,9 @@ const StatCard: React.FC<{ label: string; value: string | number | null | undefi
   label,
   value,
 }) => (
-  <div className="p-3 rounded-lg bg-gray-50 text-center">
-    <p className="text-2xl font-bold text-brand-dark">{value ?? 'N/A'}</p>
-    <p className="text-xs text-gray-600 uppercase tracking-wider">{label}</p>
+  <div className="p-4 rounded-2xl border border-slate-100 bg-slate-50 text-center">
+    <p className="text-2xl font-extrabold text-slate-900">{value ?? 'N/A'}</p>
+    <p className="text-[11px] text-slate-600 uppercase tracking-wider font-semibold">{label}</p>
   </div>
 );
 
@@ -135,12 +136,12 @@ const DemographicsDonut: React.FC<{ groups: DemographicGroupSlice[] }> = ({ grou
           aria-label="Demographic distribution"
         >
           <div className="w-16 h-16 bg-white rounded-full m-auto relative top-8 shadow-inner flex items-center justify-center text-xs font-semibold text-gray-700">
-            {totalPct ? `${Math.min(100, totalPct).toFixed(0)}%` : '—'}
+            {totalPct ? `${Math.min(100, totalPct).toFixed(0)}%` : 'N/A'}
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2 text-sm text-gray-800">
           {groups.map((g) => {
-            const label = g.percent != null ? (g.percent >= 10 ? g.percent.toFixed(0) : g.percent.toFixed(1)) : '—';
+            const label = g.percent != null ? (g.percent >= 10 ? g.percent.toFixed(0) : g.percent.toFixed(1)) : 'N/A';
             return (
               <div key={g.key} className="flex items-center gap-2">
                 <span className="h-3 w-3 rounded-sm border border-gray-200" style={{ backgroundColor: g.color }}></span>
@@ -157,6 +158,7 @@ const DemographicsDonut: React.FC<{ groups: DemographicGroupSlice[] }> = ({ grou
 
 const DetailPage: React.FC = () => {
   const { unitid } = useParams<{ unitid: string }>();
+  const navigate = useNavigate();
   const [detail, setDetail] = useState<InstitutionDetail | null>(null);
   const [metrics, setMetrics] = useState<InstitutionMetrics | null>(null);
   const [loading, setLoading] = useState(true);
@@ -164,20 +166,26 @@ const DetailPage: React.FC = () => {
   const [majorsMeta, setMajorsMeta] = useState<MajorsMeta | null>(null);
   const [majorsByInstitution, setMajorsByInstitution] = useState<InstitutionMajorsByInstitution | null>(null);
   const [demographics, setDemographics] = useState<InstitutionDemographics | null>(null);
+  const { user, targetUnitIds, setTargetUnitIds } = useOnboardingContext();
+  const unitIdNumber = unitid ? Number(unitid) : null;
+  const backHref = user ? "/profile/colleges" : "/";
+  const backLabel = user ? "Back to Colleges" : "Back Home";
 
   useEffect(() => {
     const fetchData = async () => {
       if (!unitid) return;
       try {
         setLoading(true);
-
         const detailData = await getInstitutionDetail(unitid);
-        const metricsData = await getInstitutionMetrics(unitid);
-
-        if (!detailData || !metricsData) {
+        let metricsData: InstitutionMetrics | null = null;
+        try {
+          metricsData = await getInstitutionMetrics(unitid);
+        } catch {
+          metricsData = null;
+        }
+        if (!detailData) {
           throw new Error('University data not found.');
         }
-
         setDetail(detailData);
         setMetrics(metricsData);
         setError(null);
@@ -219,21 +227,29 @@ const DetailPage: React.FC = () => {
     })();
   }, []);
 
-  if (loading) return <div className="text-center p-10">Loading university details...</div>;
-  if (error) return <div className="text-center p-10 text-red-500">Error: {error}</div>;
-  if (!detail) return <div className="text-center p-10">University not found.</div>;
+  const profile = detail?.profile ?? null;
+  const latestMetric = useMemo(() => {
+    if (!metrics?.metrics || !metrics.metrics.length) return null;
+    return [...metrics.metrics].slice().sort((a, b) => b.year - a.year)[0];
+  }, [metrics]);
 
-  const profile = detail.profile;
-  const latestMetric = metrics?.metrics?.sort((a, b) => b.year - a.year)[0];
+  const required = Array.isArray(detail?.requirements?.required) ? detail!.requirements!.required : [];
+  const considered = Array.isArray(detail?.requirements?.considered) ? detail!.requirements!.considered : [];
+  const notConsidered = Array.isArray(detail?.requirements?.not_considered)
+    ? detail!.requirements!.not_considered
+    : [];
 
-  const applicants = latestMetric?.applicants_total;
-  const admitted = latestMetric?.admissions_total ?? latestMetric?.admitted_est;
-  const enrolled = latestMetric?.enrolled_total ?? latestMetric?.enrolled_est;
-  const admittedRate = applicants && admitted ? admitted / applicants : profile.outcomes.acceptance_rate ?? 0;
-  const yieldRate = admitted && enrolled ? enrolled / admitted : profile.outcomes.yield ?? 0;
+  const applicants = latestMetric?.applicants_total ?? null;
+  const admitted = latestMetric?.admissions_total ?? latestMetric?.admitted_est ?? null;
+  const enrolled = latestMetric?.enrolled_total ?? latestMetric?.enrolled_est ?? null;
 
-  const majorsTree = (() => {
-    if (!majorsMeta || !majorsByInstitution) return [];
+  const admittedRate =
+    applicants && admitted ? admitted / applicants : profile?.outcomes.acceptance_rate ?? 0;
+  const yieldRate =
+    admitted && enrolled ? enrolled / admitted : profile?.outcomes.yield ?? 0;
+
+  const majorsTree = useMemo(() => {
+    if (!majorsMeta || !majorsByInstitution || !profile) return [];
     const key = String(profile.unitid);
     const inst = majorsByInstitution[key];
     if (!inst) return [];
@@ -265,60 +281,100 @@ const DetailPage: React.FC = () => {
         return { code: two, title, fours };
       })
       .filter((node) => node.fours.length > 0);
-  })();
+  }, [majorsMeta, majorsByInstitution, profile]);
 
-  const percentByKey = (() => {
+  const percentByKey = useMemo(() => {
     const map = new Map<string, number>();
     (demographics?.breakdown || []).forEach((slice) => {
       if (slice.percent != null) map.set(slice.key, slice.percent);
     });
     return map;
-  })();
+  }, [demographics]);
 
-  const demographicGroups: DemographicGroupSlice[] = DEMOGRAPHIC_GROUPS.map((g) => {
-    const pct = g.sourceKeys.reduce((sum, key) => sum + (percentByKey.get(key) ?? 0), 0);
-    const hasData = g.sourceKeys.some((key) => percentByKey.has(key));
-    return { ...g, percent: hasData ? pct : null };
-  }).filter((g) => g.percent != null);
+  const demographicGroups: DemographicGroupSlice[] = useMemo(() => {
+    return DEMOGRAPHIC_GROUPS.map((g) => {
+      const pct = g.sourceKeys.reduce((sum, key) => sum + (percentByKey.get(key) ?? 0), 0);
+      const hasData = g.sourceKeys.some((key) => percentByKey.has(key));
+      return { ...g, percent: hasData ? pct : null };
+    }).filter((g) => g.percent != null);
+  }, [percentByKey]);
+
+  const genderBalance = useMemo(() => {
+    const men = demographics?.total_undergrad_men ?? null;
+    const women = demographics?.total_undergrad_women ?? null;
+    const total = demographics?.total_undergrad ?? null;
+    if (!total || total <= 0 || men == null || women == null) return null;
+    return {
+      men: Math.max(0, Math.min(100, (men / total) * 100)),
+      women: Math.max(0, Math.min(100, (women / total) * 100)),
+    };
+  }, [demographics]);
 
   const hasDemographics = demographicGroups.length > 0;
+  const addToTargets = () => {
+    if (!unitIdNumber) return;
+    if (!user) {
+      navigate("/profile/login");
+      return;
+    }
+    const next = Array.from(new Set([...(targetUnitIds || []), unitIdNumber]));
+    setTargetUnitIds(next);
+    navigate("/profile/colleges");
+  };
 
-  return (
-    <div className="space-y-6">
-      <Link
-        to="/explore"
-        className="inline-flex items-center text-brand-secondary hover:text-brand-dark font-medium transition-colors"
+  if (loading) return <div className="text-center p-10">Loading university details...</div>;
+  if (error) return <div className="text-center p-10 text-red-500">Error: {error}</div>;
+  if (!detail || !profile) return <div className="text-center p-10">University not found.</div>;
+
+  try {
+    return (
+     <div className="mx-auto max-w-6xl px-4 py-6 sm:px-6 lg:px-8 space-y-6">
+       <Link
+        to={backHref}
+        className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 hover:bg-slate-50 transition"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
           <path
             fillRule="evenodd"
             d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
             clipRule="evenodd"
           />
         </svg>
-        Back to Explore
+        {backLabel}
       </Link>
 
       <header>
-        <h1 className="text-4xl font-extrabold text-brand-dark">{profile.name}</h1>
-        <p className="text-lg text-gray-600 mt-1">
+        <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-900">{profile.name}</h1>
+        <p className="text-base sm:text-lg text-slate-600 mt-1">
           {profile.city}, {profile.state} - {profile.control} - {profile.level}
         </p>
         <div className="flex flex-wrap gap-2 mt-4 text-sm">
-          <span className="bg-yellow-200 text-yellow-800 font-semibold px-3 py-1 rounded-full">
+          <span className="bg-amber-50 text-amber-800 border border-amber-200 font-semibold px-3 py-1 rounded-full">
             Test policy: {formatTestPolicy(profile.test_policy)}
           </span>
           {profile.major_families.slice(0, 5).map((major) => (
-            <span key={major} className="bg-gray-100 text-gray-800 px-3 py-1 rounded-full">
+            <span
+              key={major}
+              className="bg-slate-100 text-slate-700 border border-slate-200 px-3 py-1 rounded-full font-semibold"
+            >
               {major}
             </span>
           ))}
+        </div>
+        <div className="mt-4 flex flex-wrap gap-3">
+          <button
+            type="button"
+            onClick={addToTargets}
+            className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2 text-white text-sm font-semibold shadow-sm hover:bg-blue-700 transition"
+          >
+            Add to My Target Schools
+          </button>
         </div>
       </header>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
         <main className="lg:col-span-2 space-y-8">
-          <div className="bg-white p-6 rounded-lg shadow-md">
+          <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-6">
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
               <StatCard
                 label="Acceptance rate"
@@ -352,7 +408,7 @@ const DetailPage: React.FC = () => {
           </div>
 
           {applicants && (
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-6">
               <h2 className="text-2xl font-bold text-brand-dark mb-4">Admissions funnel</h2>
               <div className="grid grid-cols-1 md:grid-cols-3 items-end gap-6 text-center">
                 <div>
@@ -377,7 +433,7 @@ const DetailPage: React.FC = () => {
             </div>
           )}
 
-          <div className="bg-white p-6 rounded-lg shadow-md">
+          <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-6">
             <h2 className="text-2xl font-bold text-brand-dark mb-4">Cost Planner</h2>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
@@ -403,30 +459,30 @@ const DetailPage: React.FC = () => {
             </div>
           </div>
 
-          <div className="bg-white p-6 rounded-lg shadow-md">
+          <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-6">
             <h2 className="text-2xl font-bold text-brand-dark mb-3">Admission requirements</h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm">
               <div>
                 <h4 className="font-semibold text-gray-800 border-b pb-1 mb-2">Required:</h4>
                 <ul className="space-y-1 list-inside list-disc text-gray-700">
-                  {detail.requirements.required.map((r) => (
-                    <li key={r}>{r}</li>
+                  {required.map((r, idx) => (
+                    <li key={`${r}-${idx}`}>{r}</li>
                   ))}
                 </ul>
               </div>
               <div>
                 <h4 className="font-semibold text-gray-800 border-b pb-1 mb-2">Considered:</h4>
                 <ul className="space-y-1 list-inside list-disc text-gray-700">
-                  {detail.requirements.considered.map((r) => (
-                    <li key={r}>{r}</li>
+                  {considered.map((r, idx) => (
+                    <li key={`${r}-${idx}`}>{r}</li>
                   ))}
                 </ul>
               </div>
               <div>
                 <h4 className="font-semibold text-gray-800 border-b pb-1 mb-2">Not Considered:</h4>
                 <ul className="space-y-1 list-inside list-disc text-gray-700">
-                  {detail.requirements.not_considered.map((r) => (
-                    <li key={r}>{r}</li>
+                  {notConsidered.map((r, idx) => (
+                    <li key={`${r}-${idx}`}>{r}</li>
                   ))}
                 </ul>
               </div>
@@ -434,7 +490,7 @@ const DetailPage: React.FC = () => {
           </div>
 
           {latestMetric && (
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-6">
               <h2 className="text-2xl font-bold text-brand-dark mb-2">Test scores &amp; submission rates</h2>
               <p className="text-sm text-gray-600 mb-6">
                 Submission percentages reference accepted students reporting each exam. Use the 25th/50th/75th percentile
@@ -504,7 +560,7 @@ const DetailPage: React.FC = () => {
           )}
 
           {hasDemographics && (
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-6 space-y-5">
               <div className="flex items-start justify-between gap-4 flex-wrap">
                 <div>
                   <h2 className="text-2xl font-bold text-brand-dark mb-1">Campus diversity</h2>
@@ -517,36 +573,36 @@ const DetailPage: React.FC = () => {
                     </p>
                   )}
                 </div>
-                {(() => {
-                  const men = demographics?.total_undergrad_men ?? null;
-                  const women = demographics?.total_undergrad_women ?? null;
-                  const total = (demographics?.total_undergrad ?? (men ?? 0) + (women ?? 0)) || null;
-                  if (men == null || women == null || !total) return null;
-                  const menPct = (men / total) * 100;
-                  const womenPct = (women / total) * 100;
-                  return (
-                    <div className="text-sm text-gray-700 min-w-[200px]">
-                      <div className="font-semibold mb-1">Gender balance</div>
-                      <div className="w-full h-2 rounded-full bg-gray-100 overflow-hidden flex">
-                        <div className="h-2 bg-blue-500" style={{ width: `${menPct}%` }} title={`Men: ${menPct.toFixed(1)}%`} />
-                        <div className="h-2 bg-pink-400" style={{ width: `${womenPct}%` }} title={`Women: ${womenPct.toFixed(1)}%`} />
-                      </div>
-                      <div className="flex justify-between text-[12px] text-gray-600 mt-1">
-                        <span>Men {menPct.toFixed(1)}%</span>
-                        <span>Women {womenPct.toFixed(1)}%</span>
-                      </div>
+                {genderBalance && (
+                  <div className="text-sm text-gray-700 min-w-[220px]">
+                    <div className="font-semibold mb-1">Gender balance</div>
+                    <div className="w-full h-2 rounded-full bg-gray-100 overflow-hidden flex">
+                      <div
+                        className="h-2 bg-blue-500"
+                        style={{ width: `${genderBalance.men}%` }}
+                        title={`Men: ${genderBalance.men.toFixed(1)}%`}
+                      />
+                      <div
+                        className="h-2 bg-pink-400"
+                        style={{ width: `${genderBalance.women}%` }}
+                        title={`Women: ${genderBalance.women.toFixed(1)}%`}
+                      />
                     </div>
-                  );
-                })()}
+                    <div className="flex justify-between text-[12px] text-gray-600 mt-1">
+                      <span>Men {genderBalance.men.toFixed(1)}%</span>
+                      <span>Women {genderBalance.women.toFixed(1)}%</span>
+                    </div>
+                  </div>
+                )}
               </div>
-              <div className="mt-5">
+              <div className="mt-2">
                 <DemographicsDonut groups={demographicGroups} />
               </div>
             </div>
           )}
 
           {majorsTree.length > 0 && (
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-6">
               <h2 className="text-2xl font-bold text-brand-dark mb-3">Bachelor&apos;s majors offered</h2>
               <div className="space-y-3">
                 {majorsTree.map((two) => (
@@ -579,7 +635,7 @@ const DetailPage: React.FC = () => {
           )}
         </main>
         <aside className="space-y-6 sticky top-24">
-          <div className="bg-white p-6 rounded-lg shadow-md">
+          <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-6">
             <h3 className="text-xl font-bold text-brand-dark mb-4">Quick links</h3>
             <ul className="space-y-2">
               {profile.website && (
@@ -621,13 +677,31 @@ const DetailPage: React.FC = () => {
             </ul>
             <p className="text-xs text-gray-500 mt-3">
               Always confirm visa requirements, scholarship forms, and exact deadlines on the official admissions and
-              financial aid sites—dates vary by program and citizenship.
+              financial aid sites; dates vary by program and citizenship.
             </p>
           </div>
         </aside>
       </div>
+
+      <div className="flex justify-center">
+        <button
+          type="button"
+          onClick={addToTargets}
+          className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-5 py-2.5 text-white text-sm font-semibold shadow-sm hover:bg-blue-700 transition"
+        >
+          Add to My Target Schools
+        </button>
+      </div>
     </div>
   );
+  } catch (err) {
+    console.error("Failed to render institution detail", err);
+    return (
+      <div className="text-center p-10 text-red-600">
+        Unable to render this institution page. Please refresh or try a different school.
+      </div>
+    );
+  }
 };
 
 export default DetailPage;

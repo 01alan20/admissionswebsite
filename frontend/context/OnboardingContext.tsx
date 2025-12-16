@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import type { User } from "@supabase/supabase-js";
 import { supabase } from "../services/supabaseClient";
 import type { Activity } from "../types";
+import { normalizeMajorSelectionList } from "../utils/majors";
 
 export type StudentProfileSummary = {
   firstName?: string;
@@ -41,16 +42,71 @@ const OnboardingContext = createContext<OnboardingContextValue | undefined>(
 );
 
 export const determineNextPath = (step: number | null | undefined): string => {
-  const s = typeof step === "number" ? step : 0;
-  if (s < 1) return "/profile/name";
-  if (s < 2) return "/profile/location";
-  if (s < 3) return "/profile/gpa";
-  if (s < 4) return "/profile/tests";
-  if (s < 5) return "/profile/activities";
-  if (s < 6) return "/profile/recs";
-  if (s < 7) return "/profile/majors";
-  if (s < 8) return "/profile/targets";
   return "/profile/dashboard";
+};
+
+const TARGETS_STORAGE_KEY_PREFIX = "sta_targets_";
+const PROFILE_STORAGE_KEY_PREFIX = "sta_profile_";
+
+const loadTargetsFromStorage = (userId: string | null): number[] => {
+  if (typeof window === "undefined" || !userId) return [];
+  try {
+    const raw = window.localStorage.getItem(
+      `${TARGETS_STORAGE_KEY_PREFIX}${userId}`
+    );
+    if (!raw) return [];
+    const parsed = JSON.parse(raw);
+    if (!Array.isArray(parsed)) return [];
+    return parsed
+      .map((v: any) => Number(v))
+      .filter((v: number) => Number.isFinite(v));
+  } catch {
+    return [];
+  }
+};
+
+const saveTargetsToStorage = (userId: string | null, ids: number[]) => {
+  if (typeof window === "undefined" || !userId) return;
+  try {
+    window.localStorage.setItem(
+      `${TARGETS_STORAGE_KEY_PREFIX}${userId}`,
+      JSON.stringify(ids)
+    );
+  } catch {
+    // ignore
+  }
+};
+
+const loadProfileFromStorage = (
+  userId: string | null
+): Partial<StudentProfileSummary> | null => {
+  if (typeof window === "undefined" || !userId) return null;
+  try {
+    const raw = window.localStorage.getItem(
+      `${PROFILE_STORAGE_KEY_PREFIX}${userId}`
+    );
+    if (!raw) return null;
+    const parsed = JSON.parse(raw);
+    if (!parsed || typeof parsed !== "object") return null;
+    return parsed as Partial<StudentProfileSummary>;
+  } catch {
+    return null;
+  }
+};
+
+const saveProfileToStorage = (
+  userId: string | null,
+  profile: StudentProfileSummary
+) => {
+  if (typeof window === "undefined" || !userId) return;
+  try {
+    window.localStorage.setItem(
+      `${PROFILE_STORAGE_KEY_PREFIX}${userId}`,
+      JSON.stringify(profile)
+    );
+  } catch {
+    // ignore
+  }
 };
 
 export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
@@ -59,7 +115,7 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
   const [user, setUser] = useState<User | null>(null);
   const [onboardingStep, setOnboardingStep] = useState(0);
   const [loading, setLoading] = useState(true);
-  const [targetUnitIds, setTargetUnitIds] = useState<number[]>([]);
+  const [targetUnitIds, setTargetUnitIdsState] = useState<number[]>([]);
   const [studentProfile, setStudentProfileState] = useState<StudentProfileSummary>(
     {}
   );
@@ -82,7 +138,8 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
 
     const academic = (profile?.academic_stats || {}) as any;
     const extras = (profile?.extracurriculars || []) as any;
-    setStudentProfileState({
+
+    const fromDb: StudentProfileSummary = {
       firstName: academic.first_name ?? undefined,
       lastName: academic.last_name ?? undefined,
       country: academic.country ?? undefined,
@@ -118,20 +175,35 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
           : academic.rec_score != null
           ? Number(academic.rec_score)
           : null,
-      majors: Array.isArray(academic.majors)
-        ? (academic.majors as string[]).filter((m) => typeof m === "string" && m.trim())
-        : undefined,
+      majors: normalizeMajorSelectionList(academic.majors) ?? undefined,
       activities: Array.isArray(extras) ? (extras as Activity[]) : [],
-    });
+    };
 
-    const targets = (profile?.target_universities as any) || [];
-    if (Array.isArray(targets)) {
-      setTargetUnitIds(
-        targets
-          .map((v) => Number(v))
-          .filter((v) => Number.isFinite(v)) as number[]
-      );
+    const storedProfile = loadProfileFromStorage(currentUser.id);
+    const mergedProfile: StudentProfileSummary = {
+      ...(storedProfile || {}),
+      ...fromDb,
+    };
+    if (mergedProfile.majors) {
+      mergedProfile.majors =
+        normalizeMajorSelectionList(mergedProfile.majors) ??
+        mergedProfile.majors;
     }
+
+    setStudentProfileState(mergedProfile);
+    saveProfileToStorage(currentUser.id, mergedProfile);
+
+    const targetsFromDb = (profile?.target_universities as any) || [];
+    let ids: number[] = [];
+    if (Array.isArray(targetsFromDb)) {
+      ids = targetsFromDb
+        .map((v) => Number(v))
+        .filter((v) => Number.isFinite(v)) as number[];
+    }
+    const storedTargets = loadTargetsFromStorage(currentUser.id);
+    const finalIds = ids.length ? ids : storedTargets;
+    setTargetUnitIdsState(finalIds);
+    if (ids.length) saveTargetsToStorage(currentUser.id, ids);
   };
 
   useEffect(() => {
@@ -227,16 +299,19 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
     // Merge any overrides into the current student profile (so updates from
     // an individual step are included in the Supabase write).
     const merged: StudentProfileSummary = { ...studentProfile, ...override };
+    if (merged.majors) {
+      merged.majors =
+        normalizeMajorSelectionList(merged.majors) ?? merged.majors;
+    }
     setStudentProfileState(merged);
+    saveProfileToStorage(user.id, merged);
     const mergedTargets = overrideTargetIds ?? targetUnitIds;
     if (overrideTargetIds) {
-      setTargetUnitIds(overrideTargetIds);
+      setTargetUnitIdsState(overrideTargetIds);
+      saveTargetsToStorage(user.id, overrideTargetIds);
     }
 
-    const majorsClean = merged.majors
-      ?.filter((m) => typeof m === "string" && m.trim())
-      .map((m) => m.trim())
-      .slice(0, 3);
+    const majorsClean = normalizeMajorSelectionList(merged.majors);
 
     const academicStats = {
       first_name: merged.firstName ?? null,
@@ -266,7 +341,29 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
   };
 
   const setStudentProfile = (update: Partial<StudentProfileSummary>) => {
-    setStudentProfileState((prev) => ({ ...prev, ...update }));
+    setStudentProfileState((prev) => {
+    const merged: StudentProfileSummary = { ...prev, ...update };
+    if (merged.majors) {
+      merged.majors =
+        normalizeMajorSelectionList(merged.majors) ?? merged.majors;
+    }
+      saveProfileToStorage(user?.id ?? null, merged);
+      return merged;
+    });
+  };
+
+  const setTargetUnitIds = (ids: number[]) => {
+    setTargetUnitIdsState(ids);
+    saveTargetsToStorage(user?.id ?? null, ids);
+    if (user) {
+      void supabase.from("profiles").upsert(
+        {
+          user_id: user.id,
+          target_universities: ids.length ? ids : null,
+        },
+        { onConflict: "user_id" }
+      );
+    }
   };
 
   const logout = async () => {

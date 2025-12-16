@@ -22,7 +22,13 @@ const supabase = createClient(supabaseUrl, serviceRoleKey, {
 })
 
 const rootDir = path.resolve(process.cwd())
-const institutionsPath = path.join(rootDir, 'public', 'data', 'institutions.json')
+const institutionsPath = path.join(
+  rootDir,
+  'public',
+  'data',
+  'University_data',
+  'institutions.json',
+)
 
 async function main() {
   // eslint-disable-next-line no-console
