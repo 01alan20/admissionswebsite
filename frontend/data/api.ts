@@ -1144,12 +1144,76 @@ export async function getInstitutionsSummariesByIds(ids: Array<number | string>)
 }
 
 export async function getSuccessProfiles(): Promise<SuccessApplicationProfile[]> {
+  try {
+    const rows = await supabaseFetchAll<any>((from, to) =>
+      supabase
+        .from("success_app_profiles")
+        .select("id, created_at, year, flair, demographics, academics, extracurriculars, awards, decisions")
+        .order("id", { ascending: false })
+        .range(from, to)
+    );
+
+    const mapped: SuccessApplicationProfile[] = (rows ?? []).map((r: any) => ({
+      id: Number(r.id) || 0,
+      createdat: r.created_at ?? new Date().toISOString(),
+      year: Number(r.year) || 0,
+      flair: Array.isArray(r.flair) ? r.flair : [],
+      assigned_category: null,
+      tags: null,
+      demographics: (r.demographics ?? {}) as any,
+      academics: (r.academics ?? {}) as any,
+      extracurricular_activities: Array.isArray(r.extracurriculars) ? r.extracurriculars : [],
+      awards: Array.isArray(r.awards) ? r.awards : null,
+      letters_of_recommendation: null,
+      interviews: null,
+      decisions: (r.decisions ?? { acceptances: [], waitlists: [], rejections: [] }) as any,
+      rating: null,
+    }));
+
+    if (mapped.length > 0) return mapped;
+    if (!IS_DEV) return [];
+  } catch (e) {
+    if (!IS_DEV) throw e;
+  }
+
   return getJSON<SuccessApplicationProfile[]>(
     buildDataPath(APPLICANT_DATA_BASE, "history_success_profiles.json")
   );
 }
 
 export async function getAnonymousEssays(): Promise<AnonymousEssayEntry[]> {
+  try {
+    const rows = await supabaseFetchAll<any>((from, to) =>
+      supabase
+        .from("anonymous_essays")
+        .select("id, school, year, type, category, prompt, essay, demographics")
+        .order("id", { ascending: false })
+        .range(from, to)
+    );
+
+    const mapped: AnonymousEssayEntry[] = (rows ?? [])
+      .map((r: any) => {
+        const essayText = String(r.essay ?? "").trim();
+        if (!essayText) return null;
+        const sourceEssayId = toNumberOrNullAny(r?.demographics?.source_essay_id);
+        return {
+          essay_id: sourceEssayId ?? Number(r.id) ?? 0,
+          school: r.school ?? "Unknown",
+          year: Number.isFinite(Number(r.year)) ? Number(r.year) : 0,
+          type: r.type ?? "Essay",
+          question: r.prompt ?? null,
+          essay: essayText,
+          category: r.category ?? "General",
+        } as AnonymousEssayEntry;
+      })
+      .filter(Boolean) as AnonymousEssayEntry[];
+
+    if (mapped.length > 0) return mapped;
+    if (!IS_DEV) return [];
+  } catch (e) {
+    if (!IS_DEV) throw e;
+  }
+
   return getJSON<AnonymousEssayEntry[]>(
     buildDataPath(APPLICANT_DATA_BASE, "Anonymous_Essays.json")
   );
