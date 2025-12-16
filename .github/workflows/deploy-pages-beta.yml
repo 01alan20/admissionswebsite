@@ -1,0 +1,86 @@
+name: Deploy GitHub Pages (prod + beta)
+
+on:
+  push:
+    branches: [ combo-attempt ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout production (master)
+        uses: actions/checkout@v4
+        with:
+          ref: master
+          path: prod
+
+      - name: Checkout beta (combo-attempt)
+        uses: actions/checkout@v4
+        with:
+          ref: combo-attempt
+          path: beta
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: |
+            prod/package-lock.json
+            beta/package-lock.json
+
+      - name: Install deps (prod)
+        working-directory: prod
+        run: npm ci
+
+      - name: Build prod (root)
+        working-directory: prod
+        run: npm run build
+        env:
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+
+      - name: Install deps (beta)
+        working-directory: beta
+        run: npm ci
+
+      - name: Build beta (/beta)
+        working-directory: beta
+        run: npm run build -- --base=/beta/
+        env:
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+
+      - name: Assemble Pages artifact
+        run: |
+          mkdir -p site
+          cp -R prod/dist/* site/
+          mkdir -p site/beta
+          cp -R beta/dist/* site/beta/
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
