@@ -128,8 +128,14 @@ async function getInstitutionSitesMap(): Promise<Map<number, InstitutionSites>> 
           });
         }
         if (map.size > 0) return map;
-      } catch {
-        // Fall back to local JSON.
+        if (!IS_DEV) {
+          throw new Error(
+            "Supabase returned 0 institutions for sites. Check RLS policies for `public.institutions` (anon select must be allowed)."
+          );
+        }
+      } catch (e) {
+        if (!IS_DEV) throw e;
+        // Fall back to local JSON (dev only).
       }
 
       const data = await getJSON<any[]>(
@@ -304,9 +310,13 @@ export async function getUndergradDemographicsMap(): Promise<Map<number, Institu
         }
 
         if (map.size > 0) return map;
-      } catch {
-        // fall through to CSV parsing
+        if (!IS_DEV) return map;
+      } catch (e) {
+        if (!IS_DEV) return map;
+        // fall through to CSV parsing (dev only)
       }
+
+      if (!IS_DEV) return map;
 
       const paths = [
         buildDataPath(UNIVERSITY_DATA_BASE, "uni_demographics.csv"),
@@ -434,8 +444,47 @@ export async function getLatestApplicantsMap(): Promise<Map<number, number>> {
           map.set(unitid, applicants);
         }
         if (map.size > 0) return map;
-      } catch {
-        // fall through to JSON parsing
+      } catch (e) {
+        if (IS_DEV) {
+          // fall through to JSON parsing (dev only)
+        } else {
+          // If the matview isn't exposed (missing grants/schema cache), fall back to a
+          // lightweight proxy ordering using institutions.total_enrollment.
+          try {
+            const rows = await supabaseFetchAll<any>((from, to) =>
+              supabase.from("institutions").select("unitid, total_enrollment").range(from, to)
+            );
+            const map = new Map<number, number>();
+            for (const r of rows) {
+              const unitid = Number(r.unitid);
+              const applicants = toNumberOrNullAny(r.total_enrollment);
+              if (!Number.isFinite(unitid) || applicants == null) continue;
+              map.set(unitid, applicants);
+            }
+            return map;
+          } catch {
+            return new Map<number, number>();
+          }
+        }
+      }
+
+      if (!IS_DEV) {
+        // Matview returned 0 rows; keep the app working using a proxy value.
+        try {
+          const rows = await supabaseFetchAll<any>((from, to) =>
+            supabase.from("institutions").select("unitid, total_enrollment").range(from, to)
+          );
+          const map = new Map<number, number>();
+          for (const r of rows) {
+            const unitid = Number(r.unitid);
+            const applicants = toNumberOrNullAny(r.total_enrollment);
+            if (!Number.isFinite(unitid) || applicants == null) continue;
+            map.set(unitid, applicants);
+          }
+          return map;
+        } catch {
+          return new Map<number, number>();
+        }
       }
 
       const rows = await getJSON<any[]>(
@@ -490,9 +539,12 @@ export async function getLocationTypeMap(): Promise<Map<number, string>> {
           map.set(id, loc);
         }
         if (map.size > 0) return map;
-      } catch {
-        // fall through to JSON/CSV parsing
+      } catch (e) {
+        if (!IS_DEV) return map;
+        // fall through to JSON/CSV parsing (dev only)
       }
+
+      if (!IS_DEV) return map;
 
       const jsonPaths = [
         buildDataPath(UNIVERSITY_DATA_BASE, "uni_location_size.json"),
@@ -563,10 +615,9 @@ export async function getInstitutionTestScoreMap(): Promise<Map<number, Institut
             )
             .range(from, to)
         );
-      } catch {
-        rows = await getJSON<any[]>(
-          buildDataPath(UNIVERSITY_DATA_BASE, "metrics_by_year.json")
-        );
+      } catch (e) {
+        if (!IS_DEV) return new Map<number, InstitutionTestScores>();
+        rows = await getJSON<any[]>(buildDataPath(UNIVERSITY_DATA_BASE, "metrics_by_year.json"));
       }
       const latestByUnit = new Map<number, any>();
 
@@ -712,7 +763,11 @@ export async function getInstitutionDetail(
       .eq("unitid", requestedId)
       .maybeSingle();
     if (instErr) throw instErr;
-    if (!inst) throw new Error("University data not found.");
+    if (!inst) {
+      throw new Error(
+        "University data not found (or access denied). Check that the row exists and that RLS allows anon/authenticated selects on `public.institutions`."
+      );
+    }
 
     const unitIdNum = Number(inst.unitid);
     const testPolicy = normalizeTestPolicy(unitIdNum, inst.test_policy);
@@ -780,8 +835,9 @@ export async function getInstitutionDetail(
       requirements,
       support_notes,
     } as InstitutionDetail;
-  } catch {
-    // Fallback to legacy JSON detail file (dev only; not shipped to beta).
+  } catch (e) {
+    if (!IS_DEV) throw e;
+    // Fallback to legacy JSON detail file (dev only).
     const detail = await getJSON<any>(
       buildDataPath(UNIVERSITY_DATA_BASE, `institutions/${unitid}.json`)
     );
@@ -919,7 +975,8 @@ export async function getInstitutionMetrics(
     }));
 
     return { metrics, tuition } as InstitutionMetrics;
-  } catch {
+  } catch (e) {
+    if (!IS_DEV) throw e;
     const data = await getJSON<any>(
       buildDataPath(UNIVERSITY_DATA_BASE, `metrics/${unitid}.json`)
     );
@@ -1047,8 +1104,28 @@ export async function getInstitutionIndex(): Promise<InstitutionIndex[]> {
             }))
             .filter((r) => Number.isFinite(r.unitid) && r.name);
         }
-      } catch {
-        // fall through to JSON / synthesis
+      } catch (e) {
+        // If the index table isn't available, synthesize from institutions (prod),
+        // otherwise fall through to JSON / synthesis (dev).
+        if (!IS_DEV) {
+          const all = await getAllInstitutions();
+          return all.map((d) => ({
+            unitid: d.unitid,
+            name: d.name,
+            city: d.city,
+            state: d.state,
+          }));
+        }
+      }
+
+      if (!IS_DEV) {
+        const all = await getAllInstitutions();
+        return all.map((d) => ({
+          unitid: d.unitid,
+          name: d.name,
+          city: d.city,
+          state: d.state,
+        }));
       }
 
       try {
@@ -1087,13 +1164,38 @@ export async function getTopUnitIdsByApplicants(limit = 10): Promise<number[]> {
         if (Array.isArray(data) && data.length > 0) {
           return data.map((r: any) => Number(r.unitid)).filter(Number.isFinite);
         }
-        if (!IS_DEV) {
-          throw new Error(
-            "Supabase returned 0 rows from `top_applicants_latest`. Check RLS policies on the materialized view."
-          );
-        }
       } catch (e) {
-        if (!IS_DEV) throw e;
+        if (!IS_DEV) {
+          // Fall back to a reasonable proxy ordering that is always available.
+          try {
+            const rows = await supabaseFetchAll<any>((from, to) =>
+              supabase.from("institutions").select("unitid, total_enrollment").range(from, to)
+            );
+            return rows
+              .map((r) => ({ unitid: Number(r.unitid), total: toNumberOrNullAny(r.total_enrollment) ?? 0 }))
+              .filter((r) => Number.isFinite(r.unitid))
+              .sort((a, b) => (b.total ?? 0) - (a.total ?? 0))
+              .map((r) => r.unitid);
+          } catch {
+            return [];
+          }
+        }
+      }
+
+      if (!IS_DEV) {
+        // Matview returned 0 rows; keep the app working using a proxy value.
+        try {
+          const rows = await supabaseFetchAll<any>((from, to) =>
+            supabase.from("institutions").select("unitid, total_enrollment").range(from, to)
+          );
+          return rows
+            .map((r) => ({ unitid: Number(r.unitid), total: toNumberOrNullAny(r.total_enrollment) ?? 0 }))
+            .filter((r) => Number.isFinite(r.unitid))
+            .sort((a, b) => (b.total ?? 0) - (a.total ?? 0))
+            .map((r) => r.unitid);
+        } catch {
+          return [];
+        }
       }
 
       const rows = await getJSON<any[]>(
@@ -1171,9 +1273,9 @@ export async function getSuccessProfiles(): Promise<SuccessApplicationProfile[]>
     }));
 
     if (mapped.length > 0) return mapped;
-    if (!IS_DEV) return [];
+    return [];
   } catch (e) {
-    if (!IS_DEV) throw e;
+    if (!IS_DEV) return [];
   }
 
   return getJSON<SuccessApplicationProfile[]>(
@@ -1209,9 +1311,9 @@ export async function getAnonymousEssays(): Promise<AnonymousEssayEntry[]> {
       .filter(Boolean) as AnonymousEssayEntry[];
 
     if (mapped.length > 0) return mapped;
-    if (!IS_DEV) return [];
+    return [];
   } catch (e) {
-    if (!IS_DEV) throw e;
+    if (!IS_DEV) return [];
   }
 
   return getJSON<AnonymousEssayEntry[]>(

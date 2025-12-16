@@ -85,12 +85,13 @@ create policy "Public read" on public.institution_support_notes
 grant select on public.institution_support_notes to anon, authenticated;
 
 -- top_applicants_latest (materialized view used for ordering)
-alter table public.top_applicants_latest enable row level security;
-drop policy if exists "Public read" on public.top_applicants_latest;
-create policy "Public read" on public.top_applicants_latest
-  for select to anon, authenticated
-  using (true);
-grant select on public.top_applicants_latest to anon, authenticated;
+-- Note: materialized views do NOT support RLS. Expose via GRANT only.
+do $$
+begin
+  grant select on public.top_applicants_latest to anon, authenticated;
+exception when undefined_table then
+  raise notice 'public.top_applicants_latest does not exist (skipping grant)';
+end $$;
 
 -- Optional content tables (if/when loaded)
 alter table public.anonymous_essays enable row level security;
@@ -108,4 +109,3 @@ create policy "Public read" on public.success_app_profiles
 grant select on public.success_app_profiles to anon, authenticated;
 
 commit;
-
