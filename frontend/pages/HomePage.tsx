@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { supabase } from "../services/supabaseClient";
 import { useOnboardingContext } from "../context/OnboardingContext";
+import { CalendarCheck2, GraduationCap, ScrollText, Sparkles } from "lucide-react";
 
 type InstitutionRow = {
   unitid: number;
@@ -23,6 +24,11 @@ type EssayRow = {
   category: string | null;
   prompt: string | null;
   essay: string;
+};
+
+type FeatureHighlight = {
+  label: string;
+  icon: React.ReactNode;
 };
 
 const countWords = (value: string | null | undefined): number => {
@@ -247,18 +253,19 @@ const HomePage: React.FC = () => {
                 Unlock testing, colleges & tracking to get into your dream school.
               </p>
 
-              <div className="mt-7 grid gap-3 sm:grid-cols-3">
+              <div className="mt-7 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
                 {[
-                  { label: "College Explorer", icon: "🎓" },
-                  { label: "Smart Tracking", icon: "✅" },
-                  { label: "Test Bestity", icon: "⚙️" },
-                ].map((f) => (
+                  { label: "College Explorer", icon: <GraduationCap className="h-4 w-4 text-blue-700" /> },
+                  { label: "Smart Tracking", icon: <Sparkles className="h-4 w-4 text-blue-700" /> },
+                  { label: "Admissions Timeline", icon: <CalendarCheck2 className="h-4 w-4 text-blue-700" /> },
+                  { label: "Real Essays", icon: <ScrollText className="h-4 w-4 text-blue-700" /> },
+                ].map((f: FeatureHighlight) => (
                   <div
                     key={f.label}
                     className="rounded-xl border border-slate-200 bg-white px-4 py-3 shadow-sm flex items-center gap-3"
                   >
                     <div className="h-8 w-8 rounded-lg bg-blue-50 border border-blue-100 flex items-center justify-center">
-                      <span className="text-base">{f.icon}</span>
+                      {f.icon}
                     </div>
                     <div className="text-sm font-semibold text-slate-900">{f.label}</div>
                   </div>
