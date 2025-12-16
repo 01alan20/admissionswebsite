@@ -14,7 +14,7 @@ const ProfileRoutePage: React.FC = () => {
       return;
     }
 
-    navigate("/profile/dashboard", { replace: true });
+    navigate("/profile/my-profile", { replace: true });
   }, [user, onboardingStep, loading, navigate]);
 
   return (

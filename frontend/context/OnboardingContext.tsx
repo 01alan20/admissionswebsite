@@ -42,7 +42,7 @@ const OnboardingContext = createContext<OnboardingContextValue | undefined>(
 );
 
 export const determineNextPath = (step: number | null | undefined): string => {
-  return "/profile/dashboard";
+  return "/profile/my-profile";
 };
 
 const TARGETS_STORAGE_KEY_PREFIX = "sta_targets_";

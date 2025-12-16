@@ -18,7 +18,7 @@ const ProfileLoginPage: React.FC = () => {
   useEffect(() => {
     if (loading) return;
     if (user) {
-      navigate("/profile/dashboard", { replace: true });
+      navigate("/profile/my-profile", { replace: true });
     }
   }, [user, onboardingStep, loading, navigate]);
 

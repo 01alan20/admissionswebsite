@@ -40,7 +40,7 @@ const Header: React.FC = () => {
   const navLinks: HeaderLink[] = [{ label: 'Home', to: '/' }];
 
   const profileLink: HeaderLink | null = !loading && user
-    ? { label: 'Dashboard', to: '/profile/dashboard' }
+    ? { label: 'My Profile', to: '/profile/my-profile' }
     : null;
 
   const mobileLinks: HeaderLink[] = !loading && !user
@@ -106,10 +106,10 @@ const Header: React.FC = () => {
               )}
               {(!loading && user) && (
                 <NavLink
-                  to="/profile/dashboard"
+                  to="/profile/my-profile"
                   className={({ isActive }) => isActive ? activeLinkClass : linkClass}
                 >
-                  Dashboard
+                  My Profile
                 </NavLink>
               )}
             </div>
@@ -198,7 +198,8 @@ const AppRoutes: React.FC = () => {
         <Route path="/profile/essays" element={<EssaysPage />} />
         <Route path="/profile/pathways" element={<ProfilePathwaysPage />} />
         <Route path="/profile/timelines" element={<ProfileTimelinesPage />} />
-        <Route path="/profile/dashboard" element={<ProfileDashboardPage />} />
+        <Route path="/profile/my-profile" element={<ProfileDashboardPage />} />
+        <Route path="/profile/dashboard" element={<Navigate to="/profile/my-profile" replace />} />
         <Route path="/profile/beta" element={<BetaEssayLabPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>

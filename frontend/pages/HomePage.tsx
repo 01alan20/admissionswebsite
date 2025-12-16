@@ -352,7 +352,7 @@ const HomePage: React.FC = () => {
                   </h2>
                   <p className="mt-1 text-sm text-slate-600 truncate">{user.email}</p>
                   <Link
-                    to="/profile/dashboard"
+                        to="/profile/my-profile"
                     className="mt-4 w-full inline-flex items-center justify-center rounded-lg bg-blue-600 px-4 py-2.5 text-white font-semibold hover:bg-blue-700"
                   >
                     Go to dashboard
@@ -463,7 +463,7 @@ const HomePage: React.FC = () => {
         <h2 className="text-4xl font-extrabold">Stop Guessing. Start Planning</h2>
         <div className="mt-6 flex justify-center">
           <Link
-            to={user ? "/profile/dashboard" : "/profile/login"}
+            to={user ? "/profile/my-profile" : "/profile/login"}
             className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 font-semibold text-blue-700 hover:bg-slate-50"
           >
             Get Started Now

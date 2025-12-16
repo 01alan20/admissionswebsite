@@ -17,7 +17,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
     {
       label: "My Progress",
       items: [
-        { label: "My Profile", to: "/profile/dashboard", icon: User },
+        { label: "My Profile", to: "/profile/my-profile", icon: User },
         { label: "My College List", to: "/profile/college-list", icon: ListChecks },
       ],
     },

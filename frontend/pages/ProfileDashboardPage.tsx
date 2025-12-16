@@ -647,10 +647,10 @@ const ProfileDashboardPage: React.FC = () => {
               SeeThrough Admissions
             </p>
             <h1 className="mt-1 text-3xl font-bold">
-              Keep pushing, {firstName}
+              Hello, {firstName}!
             </h1>
             <p className="mt-1 text-sm text-blue-100 max-w-xl">
-              Build your profile, track colleges, and understand your chances.
+              Build your profile, track colleges, and improve your chances.
             </p>
           </div>
           <div className="flex flex-col gap-3 items-stretch md:items-end">

@@ -153,7 +153,7 @@ const BetaEssayLabPage: React.FC = () => {
   };
 
   if (!user) return <Navigate to="/profile/login" replace />;
-  if (!allowed) return <Navigate to="/profile/dashboard" replace />;
+  if (!allowed) return <Navigate to="/profile/my-profile" replace />;
 
   return (
     <DashboardLayout>
@@ -370,4 +370,3 @@ const BetaEssayLabPage: React.FC = () => {
 };
 
 export default BetaEssayLabPage;
-
