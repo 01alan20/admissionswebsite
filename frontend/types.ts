@@ -163,6 +163,10 @@ export interface SuccessApplicationProfile {
     unweighted_gpa?: number | null;
     weighted_gpa?: number | null;
     rank?: string | null;
+    class_rank_exact?: string | null;
+    class_rank_percentile?: number | null;
+    class_rank_category?: string | null;
+    class_size?: number | null;
     number_of_ap_courses?: number | null;
     number_of_ib_courses?: number | null;
     number_of_honors_courses?: number | null;
@@ -214,6 +218,10 @@ export interface StudentProfile {
   city: string;
   gpa: string;
   classRank: string;
+  classRankExact?: string;
+  classRankCategory?: string;
+  classRankPercentile?: string;
+  classSize?: string;
   satMath: string;
   satEBRW: string;
   actScore: string;

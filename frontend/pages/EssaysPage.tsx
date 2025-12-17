@@ -265,7 +265,9 @@ const EssaysPage: React.FC = () => {
                     >
                       <div className="flex items-center justify-between text-xs text-slate-500 uppercase">
                         <span>{essay.school}</span>
-                        <span>{essay.year}</span>
+                        <span aria-hidden="true" className="invisible">
+                          {essay.year}
+                        </span>
                       </div>
                       <div className="mt-2 text-base font-semibold text-slate-900 capitalize">
                         {formatEssayType(essay.type)}
@@ -406,7 +408,6 @@ const EssayDetail: React.FC<{
       <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-6 space-y-4">
         <div className="flex flex-wrap items-center gap-2 text-sm">
           <Tag label={essay.school || "Unknown"} color="bg-emerald-50 text-emerald-800 border border-emerald-200" />
-          <Tag label={essay.year || "Year"} color="bg-blue-50 text-blue-800 border border-blue-200" />
           <Tag label={formatEssayType(essay.type)} color="bg-indigo-50 text-indigo-800 border border-indigo-200" />
           <Tag label={essay.category || "Category"} color="bg-amber-50 text-amber-800 border border-amber-200" />
           {similarity != null && (

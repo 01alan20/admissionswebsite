@@ -2,6 +2,16 @@ import React, { useState } from "react";
 import type { StudentProfile, University, Activity } from "../types";
 import { COUNTRY_OPTIONS, DEMOGRAPHIC_OPTIONS, MAJOR_OPTIONS } from "../constants";
 
+const mapClassRankPercentile = (value: string): string => {
+  if (/Top 1%/i.test(value)) return "1";
+  if (/Top 5%/i.test(value)) return "5";
+  if (/Top 10%/i.test(value)) return "10";
+  if (/Top 25%/i.test(value)) return "25";
+  if (/Top 50%/i.test(value)) return "50";
+  if (/Below 50%/i.test(value)) return "51";
+  return "";
+};
+
 interface AdmissionFormProps {
   student: StudentProfile;
   setStudent: React.Dispatch<React.SetStateAction<StudentProfile>>;
@@ -38,6 +48,21 @@ export const AdmissionForm: React.FC<AdmissionFormProps> = ({
   ) => {
     const { name, value } = e.target;
     setStudent((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const updateClassRank = (
+    updates: Partial<Pick<StudentProfile, "classRankExact" | "classRankCategory" | "classRankPercentile" | "classSize">>
+  ) => {
+    setStudent((prev) => {
+      const next = { ...prev, ...updates };
+      const exact =
+        next.classRankExact && next.classSize
+          ? `${next.classRankExact} / ${next.classSize}`
+          : next.classRankExact || "";
+      const category = next.classRankCategory || "";
+      const finalValue = exact || category || "N/A";
+      return { ...next, classRank: finalValue };
+    });
   };
 
   const addActivity = () => {
@@ -274,21 +299,65 @@ export const AdmissionForm: React.FC<AdmissionFormProps> = ({
 
             <div>
               <label className="block text-sm font-semibold text-slate-700 mb-2">
-                Class Rank
+                Class Rank (Exact or Category)
               </label>
-              <select
-                name="classRank"
-                value={student.classRank}
-                onChange={handleChange}
-                className="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-ivy-800 outline-none"
-              >
-                <option value="N/A">N/A (School doesn't rank)</option>
-                <option value="Top 1%">Top 1%</option>
-                <option value="Top 5%">Top 5%</option>
-                <option value="Top 10%">Top 10%</option>
-                <option value="Top 25%">Top 25%</option>
-                <option value="Top 50%">Top 50%</option>
-              </select>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <div>
+                  <label className="block text-xs font-semibold text-slate-600 mb-1">
+                    Your Rank Number
+                  </label>
+                  <input
+                    type="number"
+                    min="1"
+                    name="classRankExact"
+                    value={student.classRankExact || ""}
+                    onChange={(e) => updateClassRank({ classRankExact: e.target.value })}
+                    placeholder="e.g. 12"
+                    className="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-ivy-800 outline-none"
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-semibold text-slate-600 mb-1">
+                    Class Size
+                  </label>
+                  <input
+                    type="number"
+                    min="1"
+                    name="classSize"
+                    value={student.classSize || ""}
+                    onChange={(e) => updateClassRank({ classSize: e.target.value })}
+                    placeholder="e.g. 420"
+                    className="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-ivy-800 outline-none"
+                  />
+                </div>
+              </div>
+              <div className="mt-3">
+                <label className="block text-xs font-semibold text-slate-600 mb-1">
+                    Or select a category
+                </label>
+                <select
+                  name="classRankCategory"
+                  value={student.classRankCategory || ""}
+                  onChange={(e) =>
+                    updateClassRank({
+                      classRankCategory: e.target.value,
+                      classRankPercentile: mapClassRankPercentile(e.target.value),
+                    })
+                  }
+                  className="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-ivy-800 outline-none"
+                >
+                  <option value="">N/A (School doesn't rank)</option>
+                  <option value="Top 1%">Top 1%</option>
+                  <option value="Top 5%">Top 5%</option>
+                  <option value="Top 10%">Top 10%</option>
+                  <option value="Top 25%">Top 25%</option>
+                  <option value="Top 50%">Top 50%</option>
+                  <option value="Below 50%">Below 50%</option>
+                </select>
+                <p className="mt-1 text-xs text-slate-500">
+                  If both exact and category are filled, we’ll prefer the exact rank but keep both saved.
+                </p>
+              </div>
             </div>
           </div>
         )}

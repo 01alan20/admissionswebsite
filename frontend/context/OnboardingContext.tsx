@@ -12,6 +12,10 @@ export type StudentProfileSummary = {
   city?: string;
   gpa?: number | null;
   classRank?: string | null;
+  classRankExact?: string | null;
+  classRankCategory?: string | null;
+  classRankPercentile?: number | null;
+  classSize?: number | null;
   satMath?: number | null;
   satEBRW?: number | null;
   actComposite?: number | null;
@@ -151,6 +155,14 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
           ? Number(academic.gpa)
           : null,
       classRank: academic.class_rank ?? null,
+      classRankExact: academic.class_rank_exact ?? null,
+      classRankCategory: academic.class_rank_category ?? null,
+      classRankPercentile:
+        academic.class_rank_percentile != null
+          ? Number(academic.class_rank_percentile)
+          : null,
+      classSize:
+        academic.class_size != null ? Number(academic.class_size) : null,
       satMath:
         typeof academic.sat_math === "number"
           ? academic.sat_math
@@ -313,13 +325,23 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
 
     const majorsClean = normalizeMajorSelectionList(merged.majors);
 
+    const classRankValue =
+      merged.classRankExact ||
+      merged.classRank ||
+      merged.classRankCategory ||
+      null;
+
     const academicStats = {
       first_name: merged.firstName ?? null,
       last_name: merged.lastName ?? null,
       country: merged.country ?? null,
       city: merged.city ?? null,
       gpa: merged.gpa ?? null,
-      class_rank: merged.classRank ?? null,
+      class_rank: classRankValue,
+      class_rank_exact: merged.classRankExact ?? null,
+      class_rank_category: merged.classRankCategory ?? null,
+      class_rank_percentile: merged.classRankPercentile ?? null,
+      class_size: merged.classSize ?? null,
       sat_math: merged.satMath ?? null,
       sat_ebrwr: merged.satEBRW ?? null,
       act_composite: merged.actComposite ?? null,

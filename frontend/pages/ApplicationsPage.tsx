@@ -2,12 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import DashboardLayout from "../components/DashboardLayout";
 import { useOnboardingGuard } from "../hooks/useOnboardingGuard";
 import { useOnboardingContext } from "../context/OnboardingContext";
-import { Database, Users } from "lucide-react";
-import {
-  getSuccessProfiles,
-  getInstitutionsSummariesByIds,
-  getMajorsMeta,
-} from "../data/api";
+import { getSuccessProfiles, getInstitutionsSummariesByIds, getMajorsMeta } from "../data/api";
 import type { SuccessApplicationProfile } from "../types";
 import { extractMajorLabel } from "../utils/majors";
 import {
@@ -69,9 +64,7 @@ const ApplicationsPage: React.FC = () => {
     let cancelled = false;
     (async () => {
       try {
-        const names = await getInstitutionsSummariesByIds(
-          targetUnitIds.slice(0, 50)
-        );
+        const names = await getInstitutionsSummariesByIds(targetUnitIds.slice(0, 50));
         if (!cancelled) {
           setTargetSchools(names.map((n) => n.name));
         }
@@ -118,19 +111,24 @@ const ApplicationsPage: React.FC = () => {
     });
   }, [applications, studentProfile, targetSchools, majorsIndex, majorsMeta]);
 
-  const randomApplications = useMemo(() => {
-    return pickRandomSubset(enrichedApplications, 10);
+  const orderedApplications = useMemo(() => {
+    return enrichedApplications
+      .slice()
+      .sort((a, b) => {
+        const yearDiff = (b.data.year || 0) - (a.data.year || 0);
+        if (yearDiff !== 0) return yearDiff;
+        return (b.data.id || 0) - (a.data.id || 0);
+      });
   }, [enrichedApplications]);
 
   const similarApplications = useMemo(() => {
     return enrichedApplications
       .slice()
       .sort((a, b) => b.similarity - a.similarity)
-      .slice(0, 10);
+      .slice(0, 12);
   }, [enrichedApplications]);
 
-  const activeEntries =
-    view === "similar" ? similarApplications : randomApplications;
+  const activeEntries = view === "similar" ? similarApplications : orderedApplications;
 
   useEffect(() => {
     if (view === "menu") {
@@ -169,34 +167,22 @@ const ApplicationsPage: React.FC = () => {
         {view === "menu" ? (
           <div className="grid gap-4 md:grid-cols-2">
             <ExperienceCard
-              title="Application Database"
-              description="Browse detailed application files from successful admits."
+              title="Browse Applications"
+              description="Explore successful applications from recent cycles."
               accent="from-rose-600 to-rose-400"
               onClick={() => setView("all")}
-              icon={<Database className="h-5 w-5" />}
+              icon={null}
             />
             <ExperienceCard
               title="Applications Like You"
-              description="Find successful profiles with similar academics and interests."
+              description="Find profiles with similar academics and interests."
               accent="from-indigo-600 to-indigo-400"
               onClick={() => setView("similar")}
-              icon={<Users className="h-5 w-5" />}
+              icon={null}
             />
           </div>
         ) : (
           <section className="space-y-4">
-            <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
-              <div className="flex gap-2">
-                <button
-                  type="button"
-                  className="px-4 py-2 rounded-full border border-slate-200 text-sm text-slate-600 bg-white"
-                  onClick={() => setView("menu")}
-                >
-                  Back
-                </button>
-              </div>
-            </div>
-
             {loading ? (
               <div className="py-8 text-center text-slate-600">Loading applications...</div>
             ) : error ? (
@@ -206,44 +192,28 @@ const ApplicationsPage: React.FC = () => {
             ) : (
               <div className="grid gap-6 lg:grid-cols-[320px,1fr]">
                 <nav className="bg-white rounded-2xl border border-slate-100 shadow-sm max-h-[80vh] overflow-y-auto p-3 space-y-3">
-                  {activeEntries.map((entry) => (
-                    <button
+                  {activeEntries.map((entry, idx) => (
+                    <ApplicationListCard
                       key={entry.data.id}
-                      type="button"
-                      onClick={() => setSelectedId(entry.data.id)}
-                      className={`w-full text-left p-4 rounded-2xl border transition ${
-                        selected && selected.data.id === entry.data.id
-                          ? "border-brand-secondary bg-indigo-50"
-                          : "border-slate-200 bg-white hover:border-slate-300"
-                      }`}
-                    >
-                       <div className="flex items-center justify-between text-xs text-slate-500 uppercase">
-                         <span>{entry.data.year}</span>
-                        <span>{entry.majorFamilyLabel || "General"}</span>
-                       </div>
-                       <div className="mt-2 text-base font-semibold text-slate-900">
-                        {entry.intendedMajorLabel || "Undeclared"}
-                       </div>
-                      <p className="mt-1 text-sm text-slate-600 line-clamp-2">
-                        {(entry.data.extracurricular_activities[0]?.title ||
-                          entry.data.demographics.residence ||
-                          "Completed application")}
-                      </p>
-                      {view === "similar" && (
-                        <div className="mt-3 text-xs font-semibold text-slate-700">
-                          Similarity {entry.similarity.toFixed(1)} / 5
-                        </div>
-                      )}
-                    </button>
+                      entry={entry}
+                      index={idx}
+                      active={Boolean(selected && selected.data.id === entry.data.id)}
+                      showSimilarity={view === "similar"}
+                      onSelect={() => setSelectedId(entry.data.id)}
+                    />
                   ))}
                 </nav>
-                {selected && (
+                {selected ? (
                   <ApplicationDetail
                     entry={selected.data}
                     similarity={view === "similar" ? selected.similarity : null}
                     majorFamilyLabel={selected.majorFamilyLabel}
                     intendedMajorLabel={selected.intendedMajorLabel}
                   />
+                ) : (
+                  <div className="rounded-2xl border border-dashed border-slate-200 bg-white p-6 text-center text-slate-500">
+                    Select a profile to view the full application.
+                  </div>
                 )}
               </div>
             )}
@@ -259,25 +229,82 @@ export default ApplicationsPage;
 const ExperienceCard: React.FC<{
   title: string;
   description: string;
-  icon: React.ReactNode;
   accent: string;
   onClick: () => void;
-}> = ({ title, description, icon, accent, onClick }) => (
+}> = ({ title, description, accent, onClick }) => (
   <button
     type="button"
     onClick={onClick}
     className="bg-white rounded-2xl border border-slate-100 shadow-sm text-left p-6 hover:shadow-md transition flex flex-col gap-3"
   >
     <div className={`w-12 h-12 rounded-full text-white flex items-center justify-center bg-gradient-to-r ${accent}`}>
-      {icon}
+      <span className="text-lg font-semibold">→</span>
     </div>
     <div>
       <h3 className="text-lg font-semibold text-slate-900">{title}</h3>
       <p className="text-sm text-slate-600 mt-1">{description}</p>
     </div>
-    <span className="text-sm font-semibold text-brand-secondary mt-auto">Launch Tool -&gt;</span>
+    <span className="text-sm font-semibold text-brand-secondary mt-auto">Launch</span>
   </button>
 );
+
+const ApplicationListCard: React.FC<{
+  entry: EnrichedEntry;
+  index: number;
+  active: boolean;
+  showSimilarity: boolean;
+  onSelect: () => void;
+}> = ({ entry, index, active, showSimilarity, onSelect }) => {
+  const descriptor =
+    entry.data.extracurricular_activities?.[0]?.title ||
+    entry.data.demographics?.residence ||
+    "Completed application";
+  const primarySchool = entry.data.decisions?.acceptances?.[0] || "School not listed";
+  const majorAndSchool = `${primarySchool} • ${entry.intendedMajorLabel || "Undeclared"}`;
+  const gpaDisplay =
+    typeof (entry.data.academics.weighted_gpa ?? entry.data.academics.unweighted_gpa) === "number"
+      ? (entry.data.academics.weighted_gpa ?? entry.data.academics.unweighted_gpa)
+      : null;
+  const satDisplay = parseScore(entry.data.academics.sat);
+  const actDisplay = parseScore(entry.data.academics.act);
+  const metrics: string[] = [];
+  if (gpaDisplay != null) metrics.push(`GPA ${gpaDisplay.toFixed(2)}`);
+  if (satDisplay != null) metrics.push(`SAT ${satDisplay}`);
+  if (actDisplay != null) metrics.push(`ACT ${actDisplay}`);
+  if (entry.majorFamilyLabel) metrics.push(entry.majorFamilyLabel);
+
+  return (
+    <button
+      type="button"
+      onClick={onSelect}
+      className={`w-full text-left p-4 rounded-2xl border transition flex flex-col gap-2 ${
+        active
+          ? "border-brand-secondary bg-indigo-50 shadow-sm"
+          : "border-slate-200 bg-white hover:border-slate-300"
+      }`}
+    >
+      <div className="flex items-center gap-3">
+        <div className="min-w-0 flex-1">
+          <div className="flex items-center justify-between text-[11px] uppercase tracking-wide text-slate-500">
+            <span className="line-clamp-1">{majorAndSchool}</span>
+            <span>{entry.data.year || "—"}</span>
+          </div>
+          <p className="text-xs text-slate-600 line-clamp-2 mt-1">{descriptor}</p>
+        </div>
+      </div>
+      <div className="flex flex-wrap gap-1">
+        {metrics.map((label, idx) => (
+          <Badge key={`${entry.data.id}-metric-${idx}`} label={label} tone="slate" compact />
+        ))}
+      </div>
+      {showSimilarity && (
+        <div className="text-[11px] font-semibold text-indigo-700">
+          Similarity {entry.similarity.toFixed(1)} / 5
+        </div>
+      )}
+    </button>
+  );
+};
 
 const ApplicationDetail: React.FC<{
   entry: SuccessApplicationProfile;
@@ -288,150 +315,173 @@ const ApplicationDetail: React.FC<{
   const academic = entry.academics;
   const demographics = entry.demographics;
   const decisions = entry.decisions || { acceptances: [], rejections: [], waitlists: [] };
-  const gpaDisplay = typeof (academic.weighted_gpa ?? academic.unweighted_gpa) === "number"
-    ? (academic.weighted_gpa ?? academic.unweighted_gpa)
-    : null;
+  const gpaDisplay =
+    typeof (academic.weighted_gpa ?? academic.unweighted_gpa) === "number"
+      ? (academic.weighted_gpa ?? academic.unweighted_gpa)
+      : null;
   const satDisplay = parseScore(academic.sat);
   const actDisplay = parseScore(academic.act);
   const majorCategory = majorFamilyLabel || entry.assigned_category || "Not specified";
   const intendedMajor = intendedMajorLabel || demographics.intended_major || "Not specified";
   const sanitizedRace = sanitizeRaceOrEthnicity(demographics.race_ethnicity);
+  const activities = entry.extracurricular_activities || [];
+  const awards = entry.awards || [];
 
   return (
-    <div className="space-y-4">
-      <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-6 space-y-4">
-        <div className="flex flex-wrap items-center gap-3">
-          <h3 className="text-xl font-bold text-slate-900">Overview</h3>
-        </div>
-        <div className="flex flex-wrap gap-3 text-base">
-          <Pill label="GPA" value={gpaDisplay != null ? gpaDisplay.toFixed(2) : "N/A"} color="bg-emerald-50 text-emerald-800 border border-emerald-200" />
-          <Pill label="SAT" value={satDisplay != null ? satDisplay : "N/A"} color="bg-blue-50 text-blue-800 border border-blue-200" />
-          <Pill label="ACT" value={actDisplay != null ? actDisplay : "N/A"} color="bg-indigo-50 text-indigo-800 border border-indigo-200" />
-          <Pill label="Major Family" value={majorCategory} color="bg-amber-50 text-amber-800 border border-amber-200" />
-        </div>
-        <dl className="grid gap-4 grid-cols-2 md:grid-cols-3 text-base text-slate-800">
+    <div className="space-y-5">
+      <div className="rounded-2xl border border-blue-100 bg-gradient-to-r from-sky-50 to-indigo-50 shadow-sm p-6 space-y-3">
+        <div className="flex items-start justify-between gap-3">
           <div>
-            <dt className="font-semibold">Intended Major</dt>
-            <dd>{intendedMajor}</dd>
-          </div>
-          <div>
-            <dt className="font-semibold">Race / Ethnicity</dt>
-            <dd>{sanitizedRace}</dd>
-          </div>
-          <div>
-            <dt className="font-semibold">Gender</dt>
-            <dd>{demographics.gender || "Not specified"}</dd>
+            <p className="text-xs uppercase tracking-wide text-slate-500">Overview</p>
+            <h3 className="text-xl font-bold text-slate-900 mt-1">Successful Application #{entry.id}</h3>
           </div>
           {similarity != null && (
-            <div>
-              <dt className="font-semibold">Similarity Score</dt>
-              <dd className="text-base font-bold text-brand-secondary">{similarity.toFixed(1)} / 5</dd>
+            <div className="px-3 py-1 rounded-full bg-white/80 text-xs font-semibold text-indigo-700 border border-indigo-100">
+              Similarity {similarity.toFixed(1)} / 5
             </div>
           )}
-        </dl>
+        </div>
+        <div className="flex flex-wrap gap-2">
+          <Badge label={majorCategory} tone="amber" />
+          {gpaDisplay != null && <Badge label={`GPA ${gpaDisplay.toFixed(2)}`} tone="emerald" />}
+          {satDisplay != null && <Badge label={`SAT ${satDisplay}`} tone="indigo" />}
+          {actDisplay != null && <Badge label={`ACT ${actDisplay}`} tone="purple" />}
+        </div>
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4 text-sm text-slate-800">
+          <div>
+            <span className="font-semibold text-slate-900">Major:</span> <span>{intendedMajor}</span>
+          </div>
+          <div>
+            <span className="font-semibold text-slate-900">Race:</span> <span>{sanitizedRace}</span>
+          </div>
+          <div>
+            <span className="font-semibold text-slate-900">Gender:</span>{" "}
+            <span>{demographics.gender || "Not specified"}</span>
+          </div>
+          <div>
+            <span className="font-semibold text-slate-900">Country:</span>{" "}
+            <span>{parseResidence(demographics.residence).country}</span>
+          </div>
+          <div>
+            <span className="font-semibold text-slate-900">State:</span>{" "}
+            <span>{parseResidence(demographics.residence).state}</span>
+          </div>
+          <div>
+            <span className="font-semibold text-slate-900">City:</span>{" "}
+            <span>{parseResidence(demographics.residence).city}</span>
+          </div>
+        </div>
       </div>
 
-      <div className="grid gap-4 md:grid-cols-2">
-        <DetailCard title="Academics">
-          <dl className="text-sm text-slate-700 space-y-2">
-            <DetailRow label="GPA (Weighted)" value={formatNumber(academic.weighted_gpa)} />
-            <DetailRow label="SAT" value={academic.sat || "Not reported"} />
-            <DetailRow label="ACT" value={academic.act || "Not reported"} />
-            <DetailRow label="AP Courses" value={academic.number_of_ap_courses ?? "—"} />
-            <DetailRow label="IB Courses" value={academic.number_of_ib_courses ?? "—"} />
+      <div className="grid gap-4">
+        <PanelCard title="Academics" tone="lavender">
+          <dl className="space-y-2 text-sm text-slate-700">
+            <InfoRow label="Weighted GPA" value={formatNumber(academic.weighted_gpa)} />
+            <InfoRow label="SAT" value={satDisplay != null ? satDisplay : "Not reported"} />
+            <InfoRow label="ACT" value={actDisplay != null ? actDisplay : "Not reported"} />
+            <InfoRow label="Class Rank" value={formatClassRank(academic)} />
+            <InfoRow label="AP Courses" value={formatNumber(academic.number_of_ap_courses)} />
+            <InfoRow label="IB Courses" value={formatNumber(academic.number_of_ib_courses)} />
           </dl>
-        </DetailCard>
+        </PanelCard>
 
-        <DetailCard title="Extracurriculars">
-          <ul className="text-sm text-slate-700 space-y-2 list-disc pl-5">
-            {entry.extracurricular_activities?.slice(0, 6).map((item, idx) => (
-              <li key={`${entry.id}-activity-${idx}`}>
-                <span className="font-semibold">{item.title}</span>
-                {item.description && <span className="text-slate-500"> — {item.description}</span>}
-              </li>
-            )) || <li>No activities listed.</li>}
-          </ul>
-        </DetailCard>
-      </div>
+        <div className="grid gap-4 md:grid-cols-2">
+          <PanelCard title="Extracurriculars" tone="sky">
+            <BulletList
+              items={activities.slice(0, 6).map((item) =>
+                item.description ? `${item.title}: ${item.description}` : item.title
+              )}
+              empty="No activities listed."
+            />
+          </PanelCard>
+          <PanelCard title="Awards" tone="sun">
+            <BulletList items={awards.slice(0, 8)} empty="No awards shared." />
+          </PanelCard>
+        </div>
 
-      <div className="grid gap-4 md:grid-cols-2">
-        <DetailCard title="Awards">
-          <ul className="text-sm text-slate-700 space-y-1 list-disc pl-5">
-            {entry.awards?.slice(0, 6).map((award, idx) => (
-              <li key={`${entry.id}-award-${idx}`}>{award}</li>
-            )) || <li>No awards listed.</li>}
-          </ul>
-        </DetailCard>
-        <DetailCard title="Letters & Interviews">
-          <p className="text-sm text-slate-700">
-            Letters: {entry.letters_of_recommendation?.length ?? 0} • Interviews: {entry.interviews?.length ?? 0}
-          </p>
-        </DetailCard>
-      </div>
-
-      <div className="grid gap-4 md:grid-cols-3">
-        <DecisionCard title="Acceptances" color="bg-emerald-50" list={decisions.acceptances} />
-        <DecisionCard title="Waitlists" color="bg-amber-50" list={decisions.waitlists} />
-        <DecisionCard title="Rejections" color="bg-rose-50" list={decisions.rejections} />
+        <div className="grid gap-4 md:grid-cols-3">
+          <PanelCard title="Acceptances" tone="mint">
+            <BulletList items={decisions.acceptances?.slice(0, 12) ?? []} empty="No acceptances listed." />
+          </PanelCard>
+          <PanelCard title="Waitlists" tone="sun">
+            <BulletList items={decisions.waitlists?.slice(0, 6) ?? []} empty="None reported." />
+          </PanelCard>
+          <PanelCard title="Rejections" tone="rose">
+            <BulletList items={decisions.rejections?.slice(0, 8) ?? []} empty="None reported." />
+          </PanelCard>
+        </div>
       </div>
     </div>
   );
 };
 
-const DetailCard: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
-  <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-5 space-y-3">
-    <h3 className="text-lg font-semibold text-slate-900">{title}</h3>
-    {children}
-  </div>
-);
+const TONE_STYLES: Record<
+  "lavender" | "sky" | "mint" | "sun" | "rose" | "blue" | "amber" | "emerald" | "indigo" | "purple" | "slate",
+  { bg: string; border: string; text: string }
+> = {
+  lavender: { bg: "bg-gradient-to-b from-indigo-50 to-purple-50", border: "border-indigo-100", text: "text-slate-800" },
+  sky: { bg: "bg-gradient-to-b from-sky-50 to-blue-50", border: "border-sky-100", text: "text-slate-800" },
+  mint: { bg: "bg-gradient-to-b from-emerald-50 to-teal-50", border: "border-emerald-100", text: "text-slate-800" },
+  sun: { bg: "bg-gradient-to-b from-amber-50 to-orange-50", border: "border-amber-100", text: "text-slate-800" },
+  rose: { bg: "bg-gradient-to-b from-rose-50 to-orange-50", border: "border-rose-100", text: "text-slate-800" },
+  blue: { bg: "bg-blue-50", border: "border-blue-100", text: "text-blue-800" },
+  amber: { bg: "bg-amber-50", border: "border-amber-100", text: "text-amber-800" },
+  emerald: { bg: "bg-emerald-50", border: "border-emerald-100", text: "text-emerald-800" },
+  indigo: { bg: "bg-indigo-50", border: "border-indigo-100", text: "text-indigo-800" },
+  purple: { bg: "bg-purple-50", border: "border-purple-100", text: "text-purple-800" },
+  slate: { bg: "bg-slate-100", border: "border-slate-200", text: "text-slate-700" },
+};
 
-const DetailRow: React.FC<{ label: string; value: React.ReactNode }> = ({ label, value }) => (
+const PanelCard: React.FC<{
+  title: string;
+  tone: keyof typeof TONE_STYLES;
+  children: React.ReactNode;
+}> = ({ title, tone, children }) => {
+  const toneClass = TONE_STYLES[tone];
+  return (
+    <div className={`rounded-2xl border shadow-sm p-5 ${toneClass.bg} ${toneClass.border}`}>
+      <h3 className="text-lg font-semibold text-slate-900">{title}</h3>
+      <div className="mt-3 text-sm leading-relaxed">{children}</div>
+    </div>
+  );
+};
+
+const BulletList: React.FC<{ items: string[]; empty: string }> = ({ items, empty }) => {
+  if (!items || items.length === 0) {
+    return <p className="text-sm text-slate-600">{empty}</p>;
+  }
+  return (
+    <ul className="space-y-1 text-sm text-slate-800 list-disc pl-4">
+      {items.map((item, idx) => (
+        <li key={`${item}-${idx}`}>{item}</li>
+      ))}
+    </ul>
+  );
+};
+
+const Badge: React.FC<{ label: React.ReactNode; tone: keyof typeof TONE_STYLES; compact?: boolean }> = ({
+  label,
+  tone,
+  compact = false,
+}) => {
+  const toneClass = TONE_STYLES[tone];
+  return (
+    <span
+      className={`inline-flex items-center ${
+        compact ? "px-2 py-1 text-[11px]" : "px-3 py-1.5 text-xs"
+      } rounded-full font-semibold ${toneClass.bg} ${toneClass.border} ${toneClass.text}`}
+    >
+      {label}
+    </span>
+  );
+};
+
+const InfoRow: React.FC<{ label: string; value: React.ReactNode }> = ({ label, value }) => (
   <div className="flex items-center justify-between gap-3">
     <dt className="text-slate-500">{label}</dt>
     <dd className="font-semibold text-slate-900">{value}</dd>
   </div>
 );
-
-const Pill: React.FC<{ label: string; value: React.ReactNode; color: string }> = ({
-  label,
-  value,
-  color,
-}) => (
-  <span
-    className={`inline-flex items-center gap-3 px-4 py-1.5 rounded-full text-sm font-semibold ${color}`}
-  >
-    <span className="uppercase tracking-wide text-[11px]">{label}</span>
-    <span className="text-base">{value}</span>
-  </span>
-);
-
-const DecisionCard: React.FC<{ title: string; list: string[]; color: string }> = ({
-  title,
-  list,
-  color,
-}) => (
-  <div className={`rounded-2xl border border-slate-100 shadow-sm p-5 ${color}`}>
-    <h3 className="text-lg font-semibold text-slate-900">{title}</h3>
-    {list && list.length ? (
-      <ul className="mt-3 space-y-1 text-sm text-slate-700 list-disc pl-5">
-        {list.slice(0, 10).map((item, idx) => (
-          <li key={`${title}-${idx}`}>{item}</li>
-        ))}
-      </ul>
-    ) : (
-      <p className="mt-3 text-sm text-slate-600">None listed.</p>
-    )}
-  </div>
-);
-
-function pickRandomSubset<T>(list: T[], count: number): T[] {
-  const copy = list.slice();
-  for (let i = copy.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [copy[i], copy[j]] = [copy[j], copy[i]];
-  }
-  return copy.slice(0, count);
-}
 
 function parseScore(value: string | number | null | undefined): number | null {
   if (value == null) return null;
@@ -450,7 +500,40 @@ function formatNumber(value: number | string | null | undefined): string {
 function sanitizeRaceOrEthnicity(value: string | null | undefined): string {
   if (!value) return "Not specified";
   const stripped = value.replace(/\s*\([^)]*\)\s*/g, "").trim();
-  return stripped || "Not specified";
+  const withoutReligion = stripped
+    .split(/[,/]/)
+    .map((part) => part.trim())
+    .filter(
+      (part) =>
+        part &&
+        !/jewish|christian|catholic|muslim|islam|hindu|buddhist|atheist|agnostic/i.test(part)
+    );
+  const result = withoutReligion.join(", ");
+  return result || "Not specified";
+}
+
+function formatClassRank(academic: SuccessApplicationProfile["academics"]): string {
+  const exact = academic.class_rank_exact || academic.rank;
+  const percentile = academic.class_rank_percentile;
+  const category = academic.class_rank_category;
+
+  if (exact && category) return `${exact} (${category})`;
+  if (exact && percentile != null) return `${exact} (Top ${percentile}%)`;
+  if (exact) return exact;
+  if (category) return category;
+  if (percentile != null) return `Top ${percentile}%`;
+  return "Not reported";
+}
+
+function parseResidence(residence: string | null | undefined): { country: string; state: string; city: string } {
+  if (!residence) {
+    return { country: "Not specified", state: "Not specified", city: "Not specified" };
+  }
+  const parts = residence.split(",").map((p) => p.trim()).filter(Boolean);
+  const city = parts[0] || "Not specified";
+  const state = parts[1] || "Not specified";
+  const country = parts[2] || "Not specified";
+  return { country, state, city };
 }
 
 function calculateApplicationSimilarity(
@@ -498,7 +581,6 @@ function calculateApplicationSimilarity(
     .map((major) => extractMajorLabel(major).toLowerCase())
     .filter((label) => label.length > 0);
 
-  // Prefer CIP-based matching when available (more reliable than substring checks)
   const userTwoDigit = new Set(
     (studentProfile.majors || [])
       .map((m) => m.match(/^(\d{2})/)?.[1] ?? null)

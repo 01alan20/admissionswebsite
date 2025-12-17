@@ -48,6 +48,11 @@ type AcademicsState = {
   apCourses: string;
   ibCourses: string;
   ibScore: string;
+  classRankExact: string;
+  classRankCategory: string;
+  classRankPercentile: string;
+  classSize: string;
+  classRankMode: "exact" | "category";
 };
 
 type ActivityState = {
@@ -139,6 +144,27 @@ const newId = () =>
     .toString(36)
     .slice(2, 8)}`;
 
+const mapClassRankPercentile = (value: string): string => {
+  if (/Top 1%/i.test(value)) return "1";
+  if (/Top 5%/i.test(value)) return "5";
+  if (/Top 10%/i.test(value)) return "10";
+  if (/Top 25%/i.test(value)) return "25";
+  if (/Top 50%/i.test(value)) return "50";
+  if (/Below 50%/i.test(value)) return "51";
+  return "";
+};
+
+const formatClassRankDisplay = (acad: AcademicsState): string => {
+  const exact =
+    acad.classRankExact && acad.classSize
+      ? `${acad.classRankExact} / ${acad.classSize}`
+      : acad.classRankExact;
+  if (exact) return exact;
+  if (acad.classRankCategory) return acad.classRankCategory;
+  if (acad.classRankPercentile) return `Top ${acad.classRankPercentile}%`;
+  return "Not specified";
+};
+
 const ProfileDashboardPage: React.FC = () => {
   const navigate = useNavigate();
   const loadingGuard = useOnboardingGuard(9);
@@ -180,6 +206,16 @@ const ProfileDashboardPage: React.FC = () => {
         : studentProfile.gpa != null
         ? Number(studentProfile.gpa)
         : null;
+    const classRankExact = studentProfile.classRankExact ?? "";
+    const classRankCategory = studentProfile.classRankCategory ?? "";
+    const classRankPercentile =
+      studentProfile.classRankPercentile != null
+        ? String(studentProfile.classRankPercentile)
+        : "";
+    const classSize =
+      studentProfile.classSize != null ? String(studentProfile.classSize) : "";
+    const classRankMode =
+      classRankExact || classSize ? "exact" : classRankCategory || classRankPercentile ? "category" : "exact";
     const satTotal =
       studentProfile.satMath != null &&
       studentProfile.satEBRW != null
@@ -201,6 +237,11 @@ const ProfileDashboardPage: React.FC = () => {
       apCourses: "",
       ibCourses: "",
       ibScore: "",
+      classRankExact,
+      classRankCategory,
+      classRankPercentile,
+      classSize,
+      classRankMode,
     };
   });
 
@@ -340,6 +381,22 @@ const ProfileDashboardPage: React.FC = () => {
             typeof stats.ib_score === "string"
               ? stats.ib_score
               : prev.ibScore,
+          classRankExact:
+            typeof stats.class_rank_exact === "string"
+              ? stats.class_rank_exact
+              : prev.classRankExact,
+          classRankCategory:
+            typeof stats.class_rank_category === "string"
+              ? stats.class_rank_category
+              : prev.classRankCategory,
+          classRankPercentile:
+            stats.class_rank_percentile != null
+              ? String(stats.class_rank_percentile)
+              : prev.classRankPercentile,
+          classSize:
+            stats.class_size != null
+              ? String(stats.class_size)
+              : prev.classSize,
         }));
         if (typeof stats.gpa === "number") {
           setGpaMode("custom");
@@ -750,6 +807,14 @@ const ProfileDashboardPage: React.FC = () => {
                     {gpaDisplay != null
                       ? gpaDisplay.toFixed(2)
                       : "N/A"}
+                  </dd>
+                </div>
+                <div className="flex items-center justify-between px-4 py-2">
+                  <dt className="text-sm text-slate-600">
+                    Class Rank
+                  </dt>
+                  <dd className="text-sm font-medium text-slate-900">
+                    {formatClassRankDisplay(academics)}
                   </dd>
                 </div>
                 <div className="flex items-center justify-between px-4 py-2">
@@ -1695,6 +1760,17 @@ const ProfileDashboardPage: React.FC = () => {
               sat != null
                 ? sat - (satMath ?? 0)
                 : academicSnapshot?.sat_ebrwr ?? null;
+            const classRankExact =
+              nextState.classRankExact && nextState.classSize
+                ? `${nextState.classRankExact} / ${nextState.classSize}`
+                : nextState.classRankExact || "";
+            const classRankCategory = nextState.classRankCategory || "";
+            const classRankPercentile =
+              nextState.classRankPercentile && !Number.isNaN(Number(nextState.classRankPercentile))
+                ? Number(nextState.classRankPercentile)
+                : null;
+            const classRankValue =
+              classRankExact || classRankCategory || (classRankPercentile ? `Top ${classRankPercentile}%` : null);
             setSavingAcad(true);
             try {
               await updateProfileData({
@@ -1707,6 +1783,11 @@ const ProfileDashboardPage: React.FC = () => {
                   ap_courses: nextState.apCourses || null,
                   ib_courses: nextState.ibCourses || null,
                   ib_score: nextState.ibScore || null,
+                  class_rank: classRankValue,
+                  class_rank_exact: classRankExact || null,
+                  class_rank_category: classRankCategory || null,
+                  class_rank_percentile: classRankPercentile,
+                  class_size: nextState.classSize ? Number(nextState.classSize) : null,
                 },
               });
               setStudentProfile({
@@ -1714,6 +1795,11 @@ const ProfileDashboardPage: React.FC = () => {
                 satMath: satMath ?? null,
                 satEBRW: satEbrw ?? null,
                 actComposite: act ?? null,
+                classRank: classRankValue ?? null,
+                classRankExact: classRankExact || null,
+                classRankCategory: classRankCategory || null,
+                classRankPercentile: classRankPercentile,
+                classSize: nextState.classSize ? Number(nextState.classSize) : null,
               });
             } catch (err) {
               console.error("Failed to save academics", err);
@@ -1820,6 +1906,109 @@ const ProfileDashboardPage: React.FC = () => {
                   />
                 </div>
               )}
+            </div>
+
+            <div className="space-y-2">
+              <label className="block text-xs font-medium text-slate-700 mb-1">
+                Class Rank (optional)
+              </label>
+              <div className="flex gap-2 mb-2">
+                <button
+                  type="button"
+                  onClick={() =>
+                    setAcademics((prev) => ({ ...prev, classRankMode: "exact" }))
+                  }
+                  className={`rounded-full border px-3 py-1.5 text-xs ${
+                    academics.classRankMode === "exact"
+                      ? "border-blue-600 bg-blue-50 text-blue-700"
+                      : "border-slate-300 text-slate-700 hover:bg-slate-50"
+                  }`}
+                >
+                  Enter exact rank
+                </button>
+                <button
+                  type="button"
+                  onClick={() =>
+                    setAcademics((prev) => ({ ...prev, classRankMode: "category" }))
+                  }
+                  className={`rounded-full border px-3 py-1.5 text-xs ${
+                    academics.classRankMode === "category"
+                      ? "border-blue-600 bg-blue-50 text-blue-700"
+                      : "border-slate-300 text-slate-700 hover:bg-slate-50"
+                  }`}
+                >
+                  Choose category
+                </button>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <div>
+                  <label className="block text-[11px] font-semibold text-slate-600 mb-1">
+                    Your rank number
+                  </label>
+                  <input
+                    type="number"
+                    min={1}
+                    value={academics.classRankExact}
+                    onChange={(e) =>
+                      setAcademics((prev) => ({
+                        ...prev,
+                        classRankExact: e.target.value,
+                      }))
+                    }
+                    placeholder="e.g. 12"
+                    className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    disabled={academics.classRankMode === "category"}
+                  />
+                </div>
+                <div>
+                  <label className="block text-[11px] font-semibold text-slate-600 mb-1">
+                    Class size
+                  </label>
+                  <input
+                    type="number"
+                    min={1}
+                    value={academics.classSize}
+                    onChange={(e) =>
+                      setAcademics((prev) => ({
+                        ...prev,
+                        classSize: e.target.value,
+                      }))
+                    }
+                    placeholder="e.g. 420"
+                    className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    disabled={academics.classRankMode === "category"}
+                  />
+                </div>
+              </div>
+              <div>
+                <label className="block text-[11px] font-semibold text-slate-600 mb-1">
+                  Or choose a category
+                </label>
+                <select
+                  value={academics.classRankCategory}
+                  onChange={(e) => {
+                    const val = e.target.value;
+                    setAcademics((prev) => ({
+                      ...prev,
+                      classRankCategory: val,
+                      classRankPercentile: mapClassRankPercentile(val),
+                    }));
+                  }}
+                  className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  disabled={academics.classRankMode === "exact"}
+                >
+                  <option value="">N/A (school doesn't rank)</option>
+                  <option value="Top 1%">Top 1%</option>
+                  <option value="Top 5%">Top 5%</option>
+                  <option value="Top 10%">Top 10%</option>
+                  <option value="Top 25%">Top 25%</option>
+                  <option value="Top 50%">Top 50%</option>
+                  <option value="Below 50%">Below 50%</option>
+                </select>
+                <p className="mt-1 text-[11px] text-slate-500">
+                  If both exact and category are filled, we’ll prefer the exact rank but keep both saved.
+                </p>
+              </div>
             </div>
 
           <div className="grid grid-cols-2 gap-4">
