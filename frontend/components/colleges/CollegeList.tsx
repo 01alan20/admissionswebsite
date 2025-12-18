@@ -471,7 +471,9 @@ const CollegeList: React.FC = () => {
             : null;
 
         const studentSatTotal =
-          studentProfile.satMath != null && studentProfile.satEBRW != null
+          studentProfile.satTotal != null
+            ? Number(studentProfile.satTotal)
+            : studentProfile.satMath != null && studentProfile.satEBRW != null
             ? Number(studentProfile.satMath) + Number(studentProfile.satEBRW)
             : null;
 

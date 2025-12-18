@@ -165,6 +165,26 @@ const formatClassRankDisplay = (acad: AcademicsState): string => {
   return "Not specified";
 };
 
+const normalizeActivityRole = (value: string): Activity["role"] => {
+  const raw = String(value ?? "").trim().toLowerCase();
+  if (!raw) return "Member";
+  if (raw.includes("founder") || raw.includes("co-founder")) return "Founder";
+  if (
+    raw.includes("captain") ||
+    raw.includes("president") ||
+    raw.includes("leader") ||
+    raw.includes("chair") ||
+    raw.includes("head")
+  ) {
+    return "Leader/Captain";
+  }
+  return "Member";
+};
+
+const normalizeActivityLevel = (_value: string): Activity["level"] => {
+  return "School Level";
+};
+
 const ProfileDashboardPage: React.FC = () => {
   const navigate = useNavigate();
   const loadingGuard = useOnboardingGuard(9);
@@ -268,6 +288,7 @@ const ProfileDashboardPage: React.FC = () => {
   );
   const [savingDemo, setSavingDemo] = useState(false);
   const [savingAcad, setSavingAcad] = useState(false);
+  const [savingAct, setSavingAct] = useState(false);
 
   const [showDemoModal, setShowDemoModal] = useState(false);
   const [showAcadModal, setShowAcadModal] = useState(false);
@@ -508,10 +529,10 @@ const ProfileDashboardPage: React.FC = () => {
   const satDisplay =
     academics.sat != null
       ? academics.sat
-      : studentProfile.satMath != null &&
-        studentProfile.satEBRW != null
-      ? Number(studentProfile.satMath) +
-        Number(studentProfile.satEBRW)
+      : studentProfile.satTotal != null
+      ? Number(studentProfile.satTotal)
+      : studentProfile.satMath != null && studentProfile.satEBRW != null
+      ? Number(studentProfile.satMath) + Number(studentProfile.satEBRW)
       : null;
   const actDisplay =
     academics.act != null
@@ -661,6 +682,7 @@ const ProfileDashboardPage: React.FC = () => {
     async (updates: {
       demographics?: Record<string, any>;
       academic?: Record<string, any>;
+      extracurriculars?: any[];
     }) => {
       if (!user) return;
       const payload: Record<string, any> = {};
@@ -671,6 +693,9 @@ const ProfileDashboardPage: React.FC = () => {
         const merged = { ...(academicSnapshot || {}), ...updates.academic };
         payload.academic_stats = merged;
         setAcademicSnapshot(merged);
+      }
+      if (updates.extracurriculars) {
+        payload.extracurriculars = updates.extracurriculars;
       }
       if (!Object.keys(payload).length) return;
       await supabase.from("profiles").upsert(
@@ -1452,9 +1477,10 @@ const ProfileDashboardPage: React.FC = () => {
             <button
               type="submit"
               form="activities-form"
+              disabled={savingAct}
               className="rounded-md bg-blue-600 px-3 py-1.5 text-xs font-semibold text-white hover:bg-blue-700"
             >
-              Save
+              {savingAct ? "Saving..." : "Save"}
             </button>
           </>
         }
@@ -1462,7 +1488,7 @@ const ProfileDashboardPage: React.FC = () => {
         <form
           id="activities-form"
           className="space-y-4"
-          onSubmit={(e) => {
+          onSubmit={async (e) => {
             e.preventDefault();
             const cleaned = activities
               .map((a) => ({
@@ -1472,9 +1498,25 @@ const ProfileDashboardPage: React.FC = () => {
               }))
               .filter((a) => a.name || a.role)
               .slice(0, 10);
+            const normalizedForDb: Activity[] = cleaned
+              .filter((a) => a.name)
+              .map((a) => ({
+                id: a.id ?? newId(),
+                name: a.name,
+                role: normalizeActivityRole(a.role),
+                level: normalizeActivityLevel(a.role),
+              }));
             setActivities(cleaned);
-            setStudentProfile({ activities: cleaned as any });
-            setShowActModal(false);
+            setSavingAct(true);
+            try {
+              await updateProfileData({ extracurriculars: normalizedForDb });
+              setStudentProfile({ activities: normalizedForDb });
+              setShowActModal(false);
+            } catch (err) {
+              console.error("Failed to save extracurriculars", err);
+            } finally {
+              setSavingAct(false);
+            }
           }}
         >
           <p className="text-xs text-slate-600">
@@ -1754,12 +1796,6 @@ const ProfileDashboardPage: React.FC = () => {
               gpaMode === "custom"
                 ? customGpa
                 : nextState.gpaValue ?? customGpa ?? null;
-            const satMath =
-              sat != null ? Math.round(sat / 2) : academicSnapshot?.sat_math ?? null;
-            const satEbrw =
-              sat != null
-                ? sat - (satMath ?? 0)
-                : academicSnapshot?.sat_ebrwr ?? null;
             const classRankExact =
               nextState.classRankExact && nextState.classSize
                 ? `${nextState.classRankExact} / ${nextState.classSize}`
@@ -1777,8 +1813,6 @@ const ProfileDashboardPage: React.FC = () => {
                 academic: {
                   gpa: finalGpa ?? null,
                   sat_total: sat,
-                  sat_math: satMath,
-                  sat_ebrwr: satEbrw,
                   act_composite: act ?? null,
                   ap_courses: nextState.apCourses || null,
                   ib_courses: nextState.ibCourses || null,
@@ -1792,8 +1826,7 @@ const ProfileDashboardPage: React.FC = () => {
               });
               setStudentProfile({
                 gpa: finalGpa ?? null,
-                satMath: satMath ?? null,
-                satEBRW: satEbrw ?? null,
+                satTotal: sat ?? null,
                 actComposite: act ?? null,
                 classRank: classRankValue ?? null,
                 classRankExact: classRankExact || null,

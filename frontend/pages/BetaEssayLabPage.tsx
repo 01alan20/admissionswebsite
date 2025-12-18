@@ -137,6 +137,7 @@ const BetaEssayLabPage: React.FC = () => {
         gpa: studentProfile.gpa ?? null,
         satMath: studentProfile.satMath ?? null,
         satEBRW: studentProfile.satEBRW ?? null,
+        satTotal: studentProfile.satTotal ?? null,
         actComposite: studentProfile.actComposite ?? null,
       };
       const feedback = await requestEssayFeedback({

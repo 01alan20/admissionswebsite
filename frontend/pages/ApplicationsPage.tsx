@@ -650,6 +650,7 @@ function calculateApplicationSimilarity(
   profile: SuccessApplicationProfile,
   studentProfile: {
     gpa?: number | null;
+    satTotal?: number | null;
     satMath?: number | null;
     satEBRW?: number | null;
     actComposite?: number | null;
@@ -661,7 +662,9 @@ function calculateApplicationSimilarity(
   let score = 1;
   const userGpa = studentProfile.gpa ?? null;
   const userSat =
-    studentProfile.satMath != null && studentProfile.satEBRW != null
+    studentProfile.satTotal != null
+      ? Number(studentProfile.satTotal)
+      : studentProfile.satMath != null && studentProfile.satEBRW != null
       ? Number(studentProfile.satMath) + Number(studentProfile.satEBRW)
       : null;
   const userAct = studentProfile.actComposite ?? null;

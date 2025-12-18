@@ -12,6 +12,7 @@ export type StudentProfileSummary = {
   city?: string;
   gpa?: number | null;
   classRank?: string | null;
+  satTotal?: number | null;
   classRankExact?: string | null;
   classRankCategory?: string | null;
   classRankPercentile?: number | null;
@@ -129,7 +130,7 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
     setUser(u);
   };
 
-  const loadProfileForUser = async (currentUser: User, cancelledRef: { value: boolean }) => {
+const loadProfileForUser = async (currentUser: User, cancelledRef: { value: boolean }) => {
     const { data: profile } = await supabase
       .from("profiles")
       .select("onboarding_step, academic_stats, target_universities, extracurriculars")
@@ -143,6 +144,30 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
     const academic = (profile?.academic_stats || {}) as any;
     const extras = (profile?.extracurriculars || []) as any;
 
+    const normalizedActivities: Activity[] = Array.isArray(extras)
+      ? (extras as any[])
+          .map((raw) => {
+            if (!raw || typeof raw !== "object") return null;
+            const id = typeof (raw as any).id === "string" ? (raw as any).id : null;
+            const name = String((raw as any).name ?? "").trim();
+            if (!name) return null;
+            const roleRaw = String((raw as any).role ?? "").trim();
+            const role =
+              roleRaw === "Founder" || roleRaw === "Leader/Captain" || roleRaw === "Member"
+                ? (roleRaw as Activity["role"])
+                : "Member";
+            const levelRaw = String((raw as any).level ?? "").trim();
+            const level =
+              levelRaw === "School Level" ||
+              levelRaw === "Regional/State" ||
+              levelRaw === "National/International"
+                ? (levelRaw as Activity["level"])
+                : "School Level";
+            return { id: id ?? `${Date.now()}_${Math.random()}`, name, role, level } as Activity;
+          })
+          .filter(Boolean)
+      : [];
+
     const fromDb: StudentProfileSummary = {
       firstName: academic.first_name ?? undefined,
       lastName: academic.last_name ?? undefined,
@@ -155,6 +180,12 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
           ? Number(academic.gpa)
           : null,
       classRank: academic.class_rank ?? null,
+      satTotal:
+        typeof academic.sat_total === "number"
+          ? academic.sat_total
+          : academic.sat_total != null
+          ? Number(academic.sat_total)
+          : null,
       classRankExact: academic.class_rank_exact ?? null,
       classRankCategory: academic.class_rank_category ?? null,
       classRankPercentile:
@@ -188,7 +219,7 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
           ? Number(academic.rec_score)
           : null,
       majors: normalizeMajorSelectionList(academic.majors) ?? undefined,
-      activities: Array.isArray(extras) ? (extras as Activity[]) : [],
+      activities: normalizedActivities,
     };
 
     const storedProfile = loadProfileFromStorage(currentUser.id);
@@ -331,6 +362,13 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
       merged.classRankCategory ||
       null;
 
+    const satTotalValue =
+      merged.satTotal != null
+        ? merged.satTotal
+        : merged.satMath != null && merged.satEBRW != null
+        ? Number(merged.satMath) + Number(merged.satEBRW)
+        : null;
+
     const academicStats = {
       first_name: merged.firstName ?? null,
       last_name: merged.lastName ?? null,
@@ -342,8 +380,7 @@ export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
       class_rank_category: merged.classRankCategory ?? null,
       class_rank_percentile: merged.classRankPercentile ?? null,
       class_size: merged.classSize ?? null,
-      sat_math: merged.satMath ?? null,
-      sat_ebrwr: merged.satEBRW ?? null,
+      sat_total: satTotalValue,
       act_composite: merged.actComposite ?? null,
       rec_score: merged.recScore ?? null,
       majors: majorsClean && majorsClean.length ? majorsClean : null,
