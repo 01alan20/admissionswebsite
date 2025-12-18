@@ -37,6 +37,30 @@ Pushes to `master` build with Vite and publish `dist/` automatically.
 - Pages settings: set Source = GitHub Actions.
 - For project pages (https://<user>.github.io/<repo>/) the workflow sets the Vite base path so assets load correctly.
 
+## Contact form (private + emailed)
+
+GitHub Pages is static, so "Contact" submissions cannot be stored in this repo without becoming public.
+Instead, the app stores contact requests in Supabase and a GitHub Action forwards new requests to email.
+
+- Frontend page: `frontend/pages/ContactPage.tsx` (route: `#/contact`)
+- Storage table: `public.contact_requests` (Supabase)
+- RLS policy to allow public inserts: `supabase/contact_requests_rls.sql`
+- Email forwarder (runs every 15 minutes): `.github/workflows/contact-requests-email.yml`
+
+**One-time Supabase setup**
+- Create the `contact_requests` table (or confirm it already exists in your project).
+- Run `supabase/contact_requests_rls.sql` in the Supabase SQL editor to ensure:
+  - Anonymous `insert` is allowed.
+  - Public `select` is not allowed (keeps requests private).
+
+**GitHub Actions secrets (Repo Settings → Secrets and variables → Actions)**
+- `SUPABASE_URL` (e.g. `https://xxxx.supabase.co`)
+- `SUPABASE_SERVICE_ROLE_KEY` (service role key from Supabase)
+- `GMAIL_USERNAME` (sending Gmail address)
+- `GMAIL_APP_PASSWORD` (Google “App password” for that Gmail account)
+- `CONTACT_EMAIL_TO` (where you want requests delivered)
+- Optional: `CONTACT_EMAIL_FROM` (defaults to `GMAIL_USERNAME`)
+
 ## Data files and privacy
 
 This site fetches data at runtime from `public/data/**` (e.g., `/data/institutions.json`, `/data/institutions/<unitid>.json`).

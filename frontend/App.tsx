@@ -15,6 +15,7 @@ import EssaysPage from './pages/EssaysPage';
 import ProfilePathwaysPage from './pages/ProfilePathwaysPage';
 import ProfileTimelinesPage from './pages/ProfileTimelinesPage';
 import BetaEssayLabPage from './pages/BetaEssayLabPage';
+import ContactPage from './pages/ContactPage';
 import ErrorBoundary from './components/ErrorBoundary';
 import { OnboardingProvider, useOnboardingContext } from './context/OnboardingContext';
 
@@ -37,7 +38,10 @@ const Header: React.FC = () => {
 
   type HeaderLink = { label: string; to: string; extra?: string };
 
-  const navLinks: HeaderLink[] = [{ label: 'Home', to: '/' }];
+  const navLinks: HeaderLink[] = [
+    { label: 'Home', to: '/' },
+    { label: 'Contact', to: '/contact' },
+  ];
 
   const profileLink: HeaderLink | null = !loading && user
     ? { label: 'My Profile', to: '/profile/my-profile' }
@@ -189,6 +193,7 @@ const AppRoutes: React.FC = () => {
         <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/institution/:unitid" element={<DetailPage />} />
+        <Route path="/contact" element={<ContactPage />} />
         <Route path="/profile" element={<ProfileRoutePage />} />
         <Route path="/profile/route" element={<ProfileRoutePage />} />
         <Route path="/profile/login" element={<ProfileLoginPage />} />
