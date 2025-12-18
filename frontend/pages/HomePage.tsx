@@ -128,6 +128,25 @@ const HomePage: React.FC = () => {
     }
   };
 
+  const handleGoogleSignup = async () => {
+    if (authLoading) return;
+    setAuthLoading(true);
+    setAuthError(null);
+    setAuthMessage(null);
+    try {
+      const redirectTo = `${window.location.origin}/#/profile/route`;
+      const { error } = await supabase.auth.signInWithOAuth({
+        provider: "google",
+        options: { redirectTo },
+      });
+      if (error) throw error;
+    } catch (err: any) {
+      setAuthError(err?.message ?? "Google sign-in failed. Please try again.");
+    } finally {
+      setAuthLoading(false);
+    }
+  };
+
   const fallbackInstitutions = useMemo<InstitutionRow[]>(
     () => [
       {
@@ -279,7 +298,43 @@ const HomePage: React.FC = () => {
                   <h2 className="text-lg font-semibold text-slate-900">
                     Create your free account
                   </h2>
-                  <form onSubmit={handleQuickSignup} className="mt-4 space-y-3">
+                  <div className="space-y-3">
+                    <button
+                      type="button"
+                      onClick={handleGoogleSignup}
+                      disabled={authLoading}
+                      className="w-full inline-flex items-center justify-center gap-2 rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-800 shadow-sm hover:bg-slate-50 disabled:opacity-60"
+                    >
+                      <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-white">
+                        <svg viewBox="0 0 48 48" className="h-5 w-5">
+                          <path
+                            fill="#EA4335"
+                            d="M24 9.5c3.54 0 6 1.54 7.38 2.83l5.4-5.27C33.94 3.64 29.6 1.5 24 1.5 14.96 1.5 7.18 7.44 4.2 15.64l6.68 5.18C12.4 13.6 17.74 9.5 24 9.5z"
+                          />
+                          <path
+                            fill="#34A853"
+                            d="M46.5 24.5c0-1.53-.14-2.99-.41-4.41H24v8.35h12.7c-.55 2.83-2.21 5.22-4.7 6.84l7.17 5.56c4.19-3.87 7-9.54 7-16.34z"
+                          />
+                          <path
+                            fill="#4A90E2"
+                            d="M10.88 29.82a14.5 14.5 0 0 1-.77-4.32c0-1.5.27-2.95.75-4.32l-6.68-5.18C2.64 18.45 1.5 21.1 1.5 24c0 2.9 1.14 5.55 2.68 7.99l6.7-2.17z"
+                          />
+                          <path
+                            fill="#FBBC05"
+                            d="M24 46.5c6.6 0 12.12-2.17 16.16-5.92l-7.17-5.56c-2 1.34-4.58 2.13-8.99 2.13-6.26 0-11.6-4.1-13.12-9.64l-6.7 2.17C7.18 40.56 14.96 46.5 24 46.5z"
+                          />
+                        </svg>
+                      </span>
+                      Continue with Google
+                    </button>
+                    <div className="flex items-center gap-3 text-xs text-slate-500">
+                      <div className="flex-1 h-px bg-slate-200" />
+                      <span>or use email</span>
+                      <div className="flex-1 h-px bg-slate-200" />
+                    </div>
+                  </div>
+
+                  <form onSubmit={handleQuickSignup} className="mt-2 space-y-3">
                     <div>
                       <label
                         htmlFor="landing-email"
@@ -394,7 +449,11 @@ const HomePage: React.FC = () => {
                 </span>
                 <span className="inline-flex items-center rounded-full bg-blue-50 text-blue-700 border border-blue-200 px-2 py-1">
                   {inst.acceptance_rate != null
-                    ? `${Math.round(inst.acceptance_rate * 100)}% Acceptance`
+                    ? `${Math.round(
+                        inst.acceptance_rate > 1
+                          ? Math.min(inst.acceptance_rate, 100)
+                          : inst.acceptance_rate * 100
+                      )}% Acceptance`
                     : "Acceptance N/A"}
                 </span>
                 <span className="inline-flex items-center rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 px-2 py-1">
