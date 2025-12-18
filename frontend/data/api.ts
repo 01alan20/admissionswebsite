@@ -1250,26 +1250,30 @@ export async function getSuccessProfiles(): Promise<SuccessApplicationProfile[]>
     const rows = await supabaseFetchAll<any>((from, to) =>
       supabase
         .from("success_app_profiles")
-        .select("id, created_at, year, flair, demographics, academics, extracurriculars, awards, decisions")
+        .select(
+          "id, createdat, year, flair, assigned_category, tags, demographics, academics, extracurricular_activities, awards, decisions, rating"
+        )
         .order("id", { ascending: false })
         .range(from, to)
     );
 
     const mapped: SuccessApplicationProfile[] = (rows ?? []).map((r: any) => ({
       id: Number(r.id) || 0,
-      createdat: r.created_at ?? new Date().toISOString(),
+      createdat: r.createdat ?? new Date().toISOString(),
       year: Number(r.year) || 0,
       flair: Array.isArray(r.flair) ? r.flair : [],
-      assigned_category: null,
-      tags: null,
+      assigned_category: (r.assigned_category ?? null) as any,
+      tags: Array.isArray(r.tags) ? r.tags : null,
       demographics: (r.demographics ?? {}) as any,
       academics: (r.academics ?? {}) as any,
-      extracurricular_activities: Array.isArray(r.extracurriculars) ? r.extracurriculars : [],
+      extracurricular_activities: Array.isArray(r.extracurricular_activities)
+        ? r.extracurricular_activities
+        : [],
       awards: Array.isArray(r.awards) ? r.awards : null,
       letters_of_recommendation: null,
       interviews: null,
       decisions: (r.decisions ?? { acceptances: [], waitlists: [], rejections: [] }) as any,
-      rating: null,
+      rating: (r.rating ?? null) as any,
     }));
 
     if (mapped.length > 0) return mapped;

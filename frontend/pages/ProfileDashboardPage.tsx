@@ -1937,7 +1937,7 @@ const ProfileDashboardPage: React.FC = () => {
                       : "border-slate-300 text-slate-700 hover:bg-slate-50"
                   }`}
                 >
-                  Choose category
+                  Estimated rank
                 </button>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
