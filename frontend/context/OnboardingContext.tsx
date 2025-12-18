@@ -114,6 +114,24 @@ const saveProfileToStorage = (
   }
 };
 
+const deriveNameFromUser = (currentUser: User): { firstName?: string; lastName?: string } => {
+  const full = (currentUser.user_metadata?.full_name as string) || "";
+  const email = currentUser.email || "";
+  if (full.trim()) {
+    const parts = full.trim().split(/\s+/);
+    const firstName = parts[0];
+    const lastName = parts.slice(1).join(" ") || undefined;
+    return { firstName, lastName };
+  }
+  if (email) {
+    const handle = email.split("@")[0] || "";
+    const cleaned = handle.replace(/[._-]+/g, " ");
+    const firstName = cleaned ? cleaned.split(/\s+/)[0] : undefined;
+    return { firstName, lastName: undefined };
+  }
+  return {};
+};
+
 export const OnboardingProvider: React.FC<{ children: ReactNode }> = ({
   children,
 }) => {
@@ -168,9 +186,13 @@ const loadProfileForUser = async (currentUser: User, cancelledRef: { value: bool
           .filter(Boolean)
       : [];
 
+    const derived = deriveNameFromUser(currentUser);
+    const firstNameResolved = academic.first_name ?? derived.firstName ?? undefined;
+    const lastNameResolved = academic.last_name ?? derived.lastName ?? undefined;
+
     const fromDb: StudentProfileSummary = {
-      firstName: academic.first_name ?? undefined,
-      lastName: academic.last_name ?? undefined,
+      firstName: firstNameResolved,
+      lastName: lastNameResolved,
       country: academic.country ?? undefined,
       city: academic.city ?? undefined,
       gpa:
@@ -221,6 +243,21 @@ const loadProfileForUser = async (currentUser: User, cancelledRef: { value: bool
       majors: normalizeMajorSelectionList(academic.majors) ?? undefined,
       activities: normalizedActivities,
     };
+
+    if ((!academic.first_name || !academic.last_name) && (derived.firstName || derived.lastName)) {
+      const nextAcademic = {
+        ...academic,
+        first_name: firstNameResolved,
+        last_name: lastNameResolved,
+      };
+      await supabase.from("profiles").upsert(
+        {
+          user_id: currentUser.id,
+          academic_stats: nextAcademic,
+        },
+        { onConflict: "user_id" }
+      );
+    }
 
     const storedProfile = loadProfileFromStorage(currentUser.id);
     const mergedProfile: StudentProfileSummary = {
