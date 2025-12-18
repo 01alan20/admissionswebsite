@@ -257,10 +257,8 @@ const ApplicationListCard: React.FC<{
     entry.data.extracurricular_activities?.[0]?.title ||
     entry.data.demographics?.residence ||
     "Completed application";
-  const primarySchool = entry.data.decisions?.acceptances?.[0] || "School not listed";
-  const majorAndSchool = `${stripQuotes(primarySchool)} • ${stripQuotes(
-    entry.intendedMajorLabel || "Undeclared"
-  )}`;
+  const primarySchool = stripQuotes(entry.data.decisions?.acceptances?.[0] || "School not listed");
+  const majorLabel = stripQuotes(entry.intendedMajorLabel || "Undeclared");
   const gpaDisplay =
     typeof (entry.data.academics.weighted_gpa ?? entry.data.academics.unweighted_gpa) === "number"
       ? (entry.data.academics.weighted_gpa ?? entry.data.academics.unweighted_gpa)
@@ -286,9 +284,10 @@ const ApplicationListCard: React.FC<{
       <div className="flex items-center gap-3">
         <div className="min-w-0 flex-1">
           <div className="flex items-center justify-between gap-3">
-            <span className="line-clamp-1 text-base font-bold text-slate-900">{majorAndSchool}</span>
+            <span className="line-clamp-1 text-base font-bold text-slate-900">{primarySchool}</span>
             <span className="text-sm text-slate-500">{entry.data.year || "—"}</span>
           </div>
+          <p className="text-sm font-semibold text-slate-900 line-clamp-1 mt-1">{majorLabel}</p>
           <p className="text-sm text-slate-700 line-clamp-2 mt-1">{descriptor}</p>
         </div>
       </div>
@@ -373,43 +372,42 @@ const ApplicationDetail: React.FC<{
         </div>
       </div>
 
-      <div className="grid gap-4">
+      <div className="grid gap-4 md:grid-cols-3">
         <PanelCard title="Academics" tone="lavender">
           <dl className="space-y-2 text-sm text-slate-700">
             <InfoRow label="Weighted GPA" value={formatNumber(academic.weighted_gpa)} />
-            <InfoRow label="SAT" value={satDisplay != null ? satDisplay : "Not reported"} />
-            <InfoRow label="ACT" value={actDisplay != null ? actDisplay : "Not reported"} />
+            {satDisplay != null && <InfoRow label="SAT" value={satDisplay} />}
+            {actDisplay != null && <InfoRow label="ACT" value={actDisplay} />}
             <InfoRow label="Class Rank" value={formatClassRank(academic)} />
             <InfoRow label="AP Courses" value={formatNumber(academic.number_of_ap_courses)} />
             <InfoRow label="IB Courses" value={formatNumber(academic.number_of_ib_courses)} />
           </dl>
         </PanelCard>
 
-        <div className="grid gap-4 md:grid-cols-2">
-          <PanelCard title="Extracurriculars" tone="sky">
-            <BulletList
-              items={activities.slice(0, 6).map((item) =>
-                item.description ? `${item.title}: ${item.description}` : item.title
-              )}
-              empty="No activities listed."
-            />
-          </PanelCard>
-          <PanelCard title="Awards" tone="sun">
-            <BulletList items={awards.slice(0, 8)} empty="No awards shared." />
-          </PanelCard>
-        </div>
+        <PanelCard title="Extracurriculars" tone="sky">
+          <BulletList
+            items={activities.slice(0, 6).map((item) =>
+              item.description ? `${item.title}: ${item.description}` : item.title
+            )}
+            empty="No activities listed."
+          />
+        </PanelCard>
 
-        <div className="grid gap-4 md:grid-cols-3">
-          <PanelCard title="Acceptances" tone="mint">
-            <BulletList items={decisions.acceptances?.slice(0, 12) ?? []} empty="No acceptances listed." />
-          </PanelCard>
-          <PanelCard title="Waitlists" tone="sun">
-            <BulletList items={decisions.waitlists?.slice(0, 6) ?? []} empty="None reported." />
-          </PanelCard>
-          <PanelCard title="Rejections" tone="rose">
-            <BulletList items={decisions.rejections?.slice(0, 8) ?? []} empty="None reported." />
-          </PanelCard>
-        </div>
+        <PanelCard title="Awards" tone="sun">
+          <BulletList items={awards.slice(0, 8)} empty="No awards shared." />
+        </PanelCard>
+      </div>
+
+      <div className="grid gap-4 md:grid-cols-3">
+        <PanelCard title="Acceptances" tone="mint">
+          <BulletList items={decisions.acceptances?.slice(0, 12) ?? []} empty="No acceptances listed." />
+        </PanelCard>
+        <PanelCard title="Waitlists" tone="sun">
+          <BulletList items={decisions.waitlists?.slice(0, 6) ?? []} empty="None reported." />
+        </PanelCard>
+        <PanelCard title="Rejections" tone="rose">
+          <BulletList items={decisions.rejections?.slice(0, 8) ?? []} empty="None reported." />
+        </PanelCard>
       </div>
     </div>
   );

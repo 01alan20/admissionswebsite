@@ -1973,75 +1973,75 @@ const ProfileDashboardPage: React.FC = () => {
                   Estimated rank
                 </button>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              {academics.classRankMode === "exact" ? (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  <div>
+                    <label className="block text-[11px] font-semibold text-slate-600 mb-1">
+                      Your rank number
+                    </label>
+                    <input
+                      type="number"
+                      min={1}
+                      value={academics.classRankExact}
+                      onChange={(e) =>
+                        setAcademics((prev) => ({
+                          ...prev,
+                          classRankExact: e.target.value,
+                        }))
+                      }
+                      placeholder="e.g. 12"
+                      className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-[11px] font-semibold text-slate-600 mb-1">
+                      Class size
+                    </label>
+                    <input
+                      type="number"
+                      min={1}
+                      value={academics.classSize}
+                      onChange={(e) =>
+                        setAcademics((prev) => ({
+                          ...prev,
+                          classSize: e.target.value,
+                        }))
+                      }
+                      placeholder="e.g. 420"
+                      className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    />
+                  </div>
+                </div>
+              ) : (
                 <div>
                   <label className="block text-[11px] font-semibold text-slate-600 mb-1">
-                    Your rank number
+                    Rank category
                   </label>
-                  <input
-                    type="number"
-                    min={1}
-                    value={academics.classRankExact}
-                    onChange={(e) =>
+                  <select
+                    value={academics.classRankCategory}
+                    onChange={(e) => {
+                      const val = e.target.value;
                       setAcademics((prev) => ({
                         ...prev,
-                        classRankExact: e.target.value,
-                      }))
-                    }
-                    placeholder="e.g. 12"
+                        classRankCategory: val,
+                        classRankPercentile: mapClassRankPercentile(val),
+                      }));
+                    }}
                     className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                    disabled={academics.classRankMode === "category"}
-                  />
+                  >
+                    <option value="">N/A (school doesn't rank)</option>
+                    <option value="Top 1%">Top 1%</option>
+                    <option value="Top 5%">Top 5%</option>
+                    <option value="Top 10%">Top 10%</option>
+                    <option value="Top 25%">Top 25%</option>
+                    <option value="Top 50%">Top 50%</option>
+                    <option value="Below 50%">Below 50%</option>
+                  </select>
                 </div>
-                <div>
-                  <label className="block text-[11px] font-semibold text-slate-600 mb-1">
-                    Class size
-                  </label>
-                  <input
-                    type="number"
-                    min={1}
-                    value={academics.classSize}
-                    onChange={(e) =>
-                      setAcademics((prev) => ({
-                        ...prev,
-                        classSize: e.target.value,
-                      }))
-                    }
-                    placeholder="e.g. 420"
-                    className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                    disabled={academics.classRankMode === "category"}
-                  />
-                </div>
-              </div>
-              <div>
-                <label className="block text-[11px] font-semibold text-slate-600 mb-1">
-                  Or choose a category
-                </label>
-                <select
-                  value={academics.classRankCategory}
-                  onChange={(e) => {
-                    const val = e.target.value;
-                    setAcademics((prev) => ({
-                      ...prev,
-                      classRankCategory: val,
-                      classRankPercentile: mapClassRankPercentile(val),
-                    }));
-                  }}
-                  className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                  disabled={academics.classRankMode === "exact"}
-                >
-                  <option value="">N/A (school doesn't rank)</option>
-                  <option value="Top 1%">Top 1%</option>
-                  <option value="Top 5%">Top 5%</option>
-                  <option value="Top 10%">Top 10%</option>
-                  <option value="Top 25%">Top 25%</option>
-                  <option value="Top 50%">Top 50%</option>
-                  <option value="Below 50%">Below 50%</option>
-                </select>
-                <p className="mt-1 text-[11px] text-slate-500">
-                  If both exact and category are filled, we’ll prefer the exact rank but keep both saved.
-                </p>
-              </div>
+              )}
+              <p className="mt-1 text-[11px] text-slate-500">
+                Exact rank is preferred when available, but both values are saved.
+              </p>
             </div>
 
           <div className="grid grid-cols-2 gap-4">
