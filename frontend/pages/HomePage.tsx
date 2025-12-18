@@ -495,9 +495,6 @@ const HomePage: React.FC = () => {
                   <span className="inline-flex items-center rounded-full bg-blue-50 text-blue-700 border border-blue-200 px-2 py-1">
                     {e.school ?? "School"}
                   </span>
-                  <span className="inline-flex items-center rounded-full bg-slate-100 text-slate-700 border border-slate-200 px-2 py-1">
-                    {e.year ?? "Year"}
-                  </span>
                   <span className="inline-flex items-center rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 px-2 py-1">
                     {e.type ?? "Essay"}
                   </span>
