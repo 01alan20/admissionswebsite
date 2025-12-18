@@ -1,7 +1,7 @@
 import React from "react";
 import type { ReactNode } from "react";
 import { NavLink } from "react-router-dom";
-import { User, ListChecks, Search, NotebookPen, FileText, Map, CalendarDays, FlaskConical, Mail } from "lucide-react";
+import { User, ListChecks, Search, NotebookPen, FileText, Map, CalendarDays, FlaskConical } from "lucide-react";
 import { useOnboardingContext } from "../context/OnboardingContext";
 import { isBetaUser } from "../utils/betaAccess";
 
@@ -43,10 +43,6 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
         { label: "Pathways", to: "/profile/pathways", icon: Map },
         { label: "Timelines", to: "/profile/timelines", icon: CalendarDays },
       ],
-    },
-    {
-      label: "Support",
-      items: [{ label: "Contact Me", to: "/profile/contact", icon: Mail }],
     },
   ];
 
