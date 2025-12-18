@@ -179,12 +179,6 @@ const FaqPage: React.FC = () => {
         </p>
         <div className="flex flex-col sm:flex-row gap-3">
           <Link
-            to="/contact"
-            className="inline-flex items-center justify-center px-5 py-3 text-sm font-semibold text-white bg-brand-primary hover:bg-brand-dark rounded-md transition-colors"
-          >
-            Get personalized email guidance
-          </Link>
-          <Link
             to="/explore"
             className="inline-flex items-center justify-center px-5 py-3 text-sm font-semibold text-brand-primary bg-white border border-brand-primary/60 hover:border-brand-primary rounded-md transition-colors"
           >
@@ -216,18 +210,6 @@ const FaqPage: React.FC = () => {
         ))}
       </div>
 
-      <div className="bg-brand-primary text-white rounded-lg shadow-md p-7 sm:p-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-        <div>
-          <h3 className="text-2xl font-bold">Need a quick answer that is not listed?</h3>
-          <p className="text-white/90">Send your question and we will reply within a week with a tailored response.</p>
-        </div>
-        <Link
-          to="/contact"
-          className="inline-flex items-center justify-center px-5 py-3 text-sm font-semibold text-brand-primary bg-white rounded-md shadow-sm hover:bg-brand-light transition-colors"
-        >
-          Ask your question
-        </Link>
-      </div>
     </div>
   );
 };
