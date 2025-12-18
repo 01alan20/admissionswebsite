@@ -1,41 +1,9 @@
 import React, { useMemo, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { useOnboardingContext } from "../context/OnboardingContext";
+import { submitContactRequest } from "../services/contactRequests";
 
 type SubmitState = "idle" | "submitting" | "success" | "error";
-
-type LocalContactRequest = {
-  id: string;
-  createdAt: string;
-  name: string;
-  email: string;
-  phone: string | null;
-  message: string;
-  sourcePage: string;
-  userId: string | null;
-  profileSnapshot: unknown | null;
-};
-
-const STORAGE_KEY = "seethrough_contact_requests_v1";
-
-function loadRequests(): LocalContactRequest[] {
-  if (typeof window === "undefined") return [];
-  try {
-    const raw = window.localStorage.getItem(STORAGE_KEY);
-    if (!raw) return [];
-    const parsed = JSON.parse(raw);
-    return Array.isArray(parsed) ? (parsed as LocalContactRequest[]) : [];
-  } catch {
-    return [];
-  }
-}
-
-function saveRequest(request: LocalContactRequest): void {
-  if (typeof window === "undefined") return;
-  const existing = loadRequests();
-  const next = [request, ...existing].slice(0, 100);
-  window.localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
-}
 
 const ContactPage: React.FC = () => {
   const { user, profileSummary } = useOnboardingContext();
@@ -47,7 +15,6 @@ const ContactPage: React.FC = () => {
   const [message, setMessage] = useState("");
   const [submitState, setSubmitState] = useState<SubmitState>("idle");
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
-  const [submittedPayload, setSubmittedPayload] = useState<LocalContactRequest | null>(null);
 
   const sourcePage = useMemo(() => location.pathname || "/contact", [location.pathname]);
 
@@ -61,20 +28,15 @@ const ContactPage: React.FC = () => {
     setErrorMessage(null);
 
     try {
-      const payload: LocalContactRequest = {
-        id: crypto.randomUUID(),
-        createdAt: new Date().toISOString(),
-        name: name.trim(),
-        email: email.trim(),
-        phone: phone.trim() ? phone.trim() : null,
-        message: message.trim(),
+      await submitContactRequest({
+        name,
+        email,
+        phone: phone.trim() || undefined,
+        message,
         sourcePage,
         userId: user?.id ?? null,
         profileSnapshot: user ? profileSummary : null,
-      };
-
-      saveRequest(payload);
-      setSubmittedPayload(payload);
+      });
       setSubmitState("success");
     } catch (err) {
       setSubmitState("error");
@@ -88,7 +50,7 @@ const ContactPage: React.FC = () => {
         <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 sm:p-8">
           <h1 className="text-3xl sm:text-4xl font-extrabold text-brand-dark">Contact</h1>
           <p className="text-slate-600 mt-2">
-            Send us a question. For now, your submission is saved locally in this browser so you can share it with us.
+            Send a question and we will reply by email as soon as we can.
           </p>
         </div>
 
@@ -96,46 +58,7 @@ const ContactPage: React.FC = () => {
           {submitState === "success" ? (
             <div className="space-y-2">
               <h2 className="text-xl font-bold text-emerald-700">Submitted</h2>
-              <p className="text-slate-600">Thanks — your message was saved locally in this browser.</p>
-
-              {submittedPayload && (
-                <div className="mt-4 rounded-xl border border-slate-200 bg-slate-50 p-4 space-y-3">
-                  <p className="text-sm font-semibold text-slate-800">Your submission (JSON)</p>
-                  <pre className="text-xs overflow-auto max-h-64 rounded-lg bg-white border border-slate-200 p-3">
-                    {JSON.stringify(submittedPayload, null, 2)}
-                  </pre>
-                  <div className="flex flex-col sm:flex-row gap-2">
-                    <button
-                      type="button"
-                      className="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-slate-900 text-white font-semibold hover:bg-slate-800 transition-colors"
-                      onClick={async () => {
-                        await navigator.clipboard.writeText(JSON.stringify(submittedPayload));
-                      }}
-                    >
-                      Copy JSON
-                    </button>
-                    <button
-                      type="button"
-                      className="inline-flex items-center justify-center px-4 py-2 rounded-lg bg-white border border-slate-300 text-slate-900 font-semibold hover:bg-slate-100 transition-colors"
-                      onClick={() => {
-                        const blob = new Blob([JSON.stringify(submittedPayload, null, 2)], {
-                          type: "application/json",
-                        });
-                        const url = URL.createObjectURL(blob);
-                        const a = document.createElement("a");
-                        a.href = url;
-                        a.download = `contact-request-${submittedPayload.id}.json`;
-                        document.body.appendChild(a);
-                        a.click();
-                        a.remove();
-                        URL.revokeObjectURL(url);
-                      }}
-                    >
-                      Download JSON
-                    </button>
-                  </div>
-                </div>
-              )}
+              <p className="text-slate-600">Thanks — we received your message.</p>
 
               <button
                 type="button"
@@ -145,7 +68,6 @@ const ContactPage: React.FC = () => {
                   setEmail("");
                   setPhone("");
                   setMessage("");
-                  setSubmittedPayload(null);
                   setSubmitState("idle");
                 }}
               >
@@ -211,7 +133,7 @@ const ContactPage: React.FC = () => {
 
               <div className="flex items-center justify-between gap-4">
                 <p className="text-xs text-slate-500">
-                  Note: right now this does not email us automatically — it only saves locally so you can share it.
+                  Please double-check your email address so we can reply.
                 </p>
                 <button
                   type="submit"
