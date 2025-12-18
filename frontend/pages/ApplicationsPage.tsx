@@ -171,14 +171,12 @@ const ApplicationsPage: React.FC = () => {
               description="Explore successful applications from recent cycles."
               accent="from-rose-600 to-rose-400"
               onClick={() => setView("all")}
-              icon={null}
             />
             <ExperienceCard
               title="Applications Like You"
               description="Find profiles with similar academics and interests."
               accent="from-indigo-600 to-indigo-400"
               onClick={() => setView("similar")}
-              icon={null}
             />
           </div>
         ) : (
