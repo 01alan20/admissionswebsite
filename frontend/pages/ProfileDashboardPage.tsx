@@ -738,6 +738,13 @@ const ProfileDashboardPage: React.FC = () => {
           <div className="flex flex-col gap-3 items-stretch md:items-end">
             <button
               type="button"
+              onClick={() => navigate("/contact")}
+              className="inline-flex items-center justify-center rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-blue-700 shadow-sm hover:bg-blue-50"
+            >
+              Get planning help
+            </button>
+            <button
+              type="button"
               onClick={handleLogout}
               className="inline-flex items-center justify-center rounded-full bg-transparent px-5 py-2.5 text-sm font-semibold text-blue-50 border border-white/30 hover:bg-white/10"
             >
