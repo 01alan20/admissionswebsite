@@ -258,7 +258,9 @@ const ApplicationListCard: React.FC<{
     entry.data.demographics?.residence ||
     "Completed application";
   const primarySchool = entry.data.decisions?.acceptances?.[0] || "School not listed";
-  const majorAndSchool = `${primarySchool} • ${entry.intendedMajorLabel || "Undeclared"}`;
+  const majorAndSchool = `${stripQuotes(primarySchool)} • ${stripQuotes(
+    entry.intendedMajorLabel || "Undeclared"
+  )}`;
   const gpaDisplay =
     typeof (entry.data.academics.weighted_gpa ?? entry.data.academics.unweighted_gpa) === "number"
       ? (entry.data.academics.weighted_gpa ?? entry.data.academics.unweighted_gpa)
@@ -269,7 +271,7 @@ const ApplicationListCard: React.FC<{
   if (gpaDisplay != null) metrics.push(`GPA ${gpaDisplay.toFixed(2)}`);
   if (satDisplay != null) metrics.push(`SAT ${satDisplay}`);
   if (actDisplay != null) metrics.push(`ACT ${actDisplay}`);
-  if (entry.majorFamilyLabel) metrics.push(entry.majorFamilyLabel);
+  if (entry.majorFamilyLabel) metrics.push(stripQuotes(entry.majorFamilyLabel));
 
   return (
     <button
@@ -283,11 +285,11 @@ const ApplicationListCard: React.FC<{
     >
       <div className="flex items-center gap-3">
         <div className="min-w-0 flex-1">
-          <div className="flex items-center justify-between text-[11px] uppercase tracking-wide text-slate-500">
-            <span className="line-clamp-1">{majorAndSchool}</span>
-            <span>{entry.data.year || "—"}</span>
+          <div className="flex items-center justify-between gap-3">
+            <span className="line-clamp-1 text-base font-bold text-slate-900">{majorAndSchool}</span>
+            <span className="text-sm text-slate-500">{entry.data.year || "—"}</span>
           </div>
-          <p className="text-xs text-slate-600 line-clamp-2 mt-1">{descriptor}</p>
+          <p className="text-sm text-slate-700 line-clamp-2 mt-1">{descriptor}</p>
         </div>
       </div>
       <div className="flex flex-wrap gap-1">
@@ -319,11 +321,12 @@ const ApplicationDetail: React.FC<{
       : null;
   const satDisplay = parseScore(academic.sat);
   const actDisplay = parseScore(academic.act);
-  const majorCategory = majorFamilyLabel || entry.assigned_category || "Not specified";
-  const intendedMajor = intendedMajorLabel || demographics.intended_major || "Not specified";
+  const majorCategory = stripQuotes(majorFamilyLabel || entry.assigned_category || "Not specified");
+  const intendedMajor = stripQuotes(intendedMajorLabel || demographics.intended_major || "Not specified");
   const sanitizedRace = sanitizeRaceOrEthnicity(demographics.race_ethnicity);
   const activities = entry.extracurricular_activities || [];
   const awards = entry.awards || [];
+  const residence = parseResidence(demographics.residence);
 
   return (
     <div className="space-y-5">
@@ -331,7 +334,6 @@ const ApplicationDetail: React.FC<{
         <div className="flex items-start justify-between gap-3">
           <div>
             <p className="text-xs uppercase tracking-wide text-slate-500">Overview</p>
-            <h3 className="text-xl font-bold text-slate-900 mt-1">Successful Application #{entry.id}</h3>
           </div>
           {similarity != null && (
             <div className="px-3 py-1 rounded-full bg-white/80 text-xs font-semibold text-indigo-700 border border-indigo-100">
@@ -340,10 +342,10 @@ const ApplicationDetail: React.FC<{
           )}
         </div>
         <div className="flex flex-wrap gap-2">
-          <Badge label={majorCategory} tone="amber" />
-          {gpaDisplay != null && <Badge label={`GPA ${gpaDisplay.toFixed(2)}`} tone="emerald" />}
-          {satDisplay != null && <Badge label={`SAT ${satDisplay}`} tone="indigo" />}
-          {actDisplay != null && <Badge label={`ACT ${actDisplay}`} tone="purple" />}
+          <Badge label={majorCategory} tone="amber" size="large" />
+          {gpaDisplay != null && <Badge label={`GPA ${gpaDisplay.toFixed(2)}`} tone="emerald" size="large" />}
+          {satDisplay != null && <Badge label={`SAT ${satDisplay}`} tone="indigo" size="large" />}
+          {actDisplay != null && <Badge label={`ACT ${actDisplay}`} tone="purple" size="large" />}
         </div>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4 text-sm text-slate-800">
           <div>
@@ -358,15 +360,15 @@ const ApplicationDetail: React.FC<{
           </div>
           <div>
             <span className="font-semibold text-slate-900">Country:</span>{" "}
-            <span>{parseResidence(demographics.residence).country}</span>
+            <span>{residence.country}</span>
           </div>
           <div>
             <span className="font-semibold text-slate-900">State:</span>{" "}
-            <span>{parseResidence(demographics.residence).state}</span>
+            <span>{residence.state}</span>
           </div>
           <div>
             <span className="font-semibold text-slate-900">City:</span>{" "}
-            <span>{parseResidence(demographics.residence).city}</span>
+            <span>{residence.city}</span>
           </div>
         </div>
       </div>
@@ -457,16 +459,24 @@ const BulletList: React.FC<{ items: string[]; empty: string }> = ({ items, empty
   );
 };
 
-const Badge: React.FC<{ label: React.ReactNode; tone: keyof typeof TONE_STYLES; compact?: boolean }> = ({
-  label,
-  tone,
-  compact = false,
-}) => {
+type BadgeSize = "compact" | "normal" | "large";
+type BadgeProps = {
+  label: React.ReactNode;
+  tone: keyof typeof TONE_STYLES;
+  compact?: boolean;
+  size?: BadgeSize;
+};
+
+const Badge = ({ label, tone, compact = false, size = compact ? "compact" : "normal" }: BadgeProps) => {
   const toneClass = TONE_STYLES[tone];
   return (
     <span
       className={`inline-flex items-center ${
-        compact ? "px-2 py-1 text-[11px]" : "px-3 py-1.5 text-xs"
+        size === "compact"
+          ? "px-2 py-1 text-[11px]"
+          : size === "large"
+          ? "px-4 py-2 text-sm"
+          : "px-3 py-1.5 text-xs"
       } rounded-full font-semibold ${toneClass.bg} ${toneClass.border} ${toneClass.text}`}
     >
       {label}
@@ -510,6 +520,13 @@ function sanitizeRaceOrEthnicity(value: string | null | undefined): string {
   return result || "Not specified";
 }
 
+function stripQuotes(value: string): string {
+  return String(value ?? "")
+    .replace(/[“”"]/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 function formatClassRank(academic: SuccessApplicationProfile["academics"]): string {
   const exact = academic.class_rank_exact || academic.rank;
   const percentile = academic.class_rank_percentile;
@@ -527,12 +544,107 @@ function parseResidence(residence: string | null | undefined): { country: string
   if (!residence) {
     return { country: "Not specified", state: "Not specified", city: "Not specified" };
   }
-  const parts = residence.split(",").map((p) => p.trim()).filter(Boolean);
-  const city = parts[0] || "Not specified";
-  const state = parts[1] || "Not specified";
-  const country = parts[2] || "Not specified";
-  return { country, state, city };
+
+  const cleaned = String(residence).replace(/\s+/g, " ").trim();
+  const parts = cleaned.split(",").map((p) => p.trim()).filter(Boolean);
+
+  if (parts.length >= 2) {
+    const city = parts[0] || "Not specified";
+    const state = normalizeUSState(parts[1]) ?? parts[1] ?? "Not specified";
+    const country = parts[2] || (normalizeUSState(parts[1]) ? "United States" : "Not specified");
+    return { country, state, city };
+  }
+
+  const inferredState = normalizeUSState(cleaned);
+  if (inferredState) {
+    return { country: "United States", state: inferredState, city: "Not specified" };
+  }
+
+  return { country: "Not specified", state: "Not specified", city: cleaned || "Not specified" };
 }
+
+function normalizeUSState(input: string): string | null {
+  const raw = String(input ?? "").trim();
+  if (!raw) return null;
+  const upper = raw.toUpperCase();
+  if (US_STATE_ABBREVIATIONS.has(upper)) return upper;
+
+  const normalized = raw.replace(/\./g, "").toLowerCase();
+  const fromName = US_STATE_NAME_TO_ABBR.get(normalized);
+  if (fromName) return fromName;
+
+  const matchAbbr = normalized.match(/\b([a-z]{2})\b/i)?.[1]?.toUpperCase() ?? null;
+  if (matchAbbr && US_STATE_ABBREVIATIONS.has(matchAbbr)) return matchAbbr;
+
+  for (const [name, abbr] of US_STATE_NAME_TO_ABBR.entries()) {
+    const re = new RegExp(`\\b${name.replace(/\s+/g, "\\\\s+")}\\b`, "i");
+    if (re.test(normalized)) return abbr;
+  }
+  return null;
+}
+
+const US_STATE_ABBREVIATIONS = new Set<string>([
+  "AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA",
+  "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD",
+  "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ",
+  "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC",
+  "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY",
+  "DC",
+]);
+
+const US_STATE_NAME_TO_ABBR = new Map<string, string>([
+  ["alabama", "AL"],
+  ["alaska", "AK"],
+  ["arizona", "AZ"],
+  ["arkansas", "AR"],
+  ["california", "CA"],
+  ["colorado", "CO"],
+  ["connecticut", "CT"],
+  ["delaware", "DE"],
+  ["florida", "FL"],
+  ["georgia", "GA"],
+  ["hawaii", "HI"],
+  ["idaho", "ID"],
+  ["illinois", "IL"],
+  ["indiana", "IN"],
+  ["iowa", "IA"],
+  ["kansas", "KS"],
+  ["kentucky", "KY"],
+  ["louisiana", "LA"],
+  ["maine", "ME"],
+  ["maryland", "MD"],
+  ["massachusetts", "MA"],
+  ["michigan", "MI"],
+  ["minnesota", "MN"],
+  ["mississippi", "MS"],
+  ["missouri", "MO"],
+  ["montana", "MT"],
+  ["nebraska", "NE"],
+  ["nevada", "NV"],
+  ["new hampshire", "NH"],
+  ["new jersey", "NJ"],
+  ["new mexico", "NM"],
+  ["new york", "NY"],
+  ["north carolina", "NC"],
+  ["north dakota", "ND"],
+  ["ohio", "OH"],
+  ["oklahoma", "OK"],
+  ["oregon", "OR"],
+  ["pennsylvania", "PA"],
+  ["rhode island", "RI"],
+  ["south carolina", "SC"],
+  ["south dakota", "SD"],
+  ["tennessee", "TN"],
+  ["texas", "TX"],
+  ["utah", "UT"],
+  ["vermont", "VT"],
+  ["virginia", "VA"],
+  ["washington", "WA"],
+  ["west virginia", "WV"],
+  ["wisconsin", "WI"],
+  ["wyoming", "WY"],
+  ["district of columbia", "DC"],
+]);
 
 function calculateApplicationSimilarity(
   profile: SuccessApplicationProfile,
