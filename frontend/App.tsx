@@ -15,6 +15,7 @@ import EssaysPage from './pages/EssaysPage';
 import ProfilePathwaysPage from './pages/ProfilePathwaysPage';
 import ProfileTimelinesPage from './pages/ProfileTimelinesPage';
 import BetaEssayLabPage from './pages/BetaEssayLabPage';
+import ContactPage from './pages/ContactPage';
 import ErrorBoundary from './components/ErrorBoundary';
 import { OnboardingProvider, useOnboardingContext } from './context/OnboardingContext';
 
@@ -201,6 +202,7 @@ const AppRoutes: React.FC = () => {
         <Route path="/profile/my-profile" element={<ProfileDashboardPage />} />
         <Route path="/profile/dashboard" element={<Navigate to="/profile/my-profile" replace />} />
         <Route path="/profile/beta" element={<BetaEssayLabPage />} />
+        <Route path="/profile/contact" element={<ContactPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </ErrorBoundary>
