@@ -134,7 +134,7 @@ const HomePage: React.FC = () => {
     setAuthError(null);
     setAuthMessage(null);
     try {
-      const redirectTo = `${window.location.origin}/#/profile/route`;
+      const redirectTo = `${window.location.origin}/auth/callback`;
       const { error } = await supabase.auth.signInWithOAuth({
         provider: "google",
         options: { redirectTo },

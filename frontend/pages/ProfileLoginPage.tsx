@@ -65,7 +65,7 @@ const ProfileLoginPage: React.FC = () => {
     setError(null);
     setMessage(null);
     try {
-      const redirectTo = `${window.location.origin}/#/profile/login`;
+      const redirectTo = `${window.location.origin}/auth/callback`;
       const { error: resetError } = await supabase.auth.resetPasswordForEmail(email, {
         redirectTo,
       });
@@ -99,7 +99,7 @@ const ProfileLoginPage: React.FC = () => {
               setError(null);
               setMessage(null);
               try {
-                const redirectTo = `${window.location.origin}/#/profile/route`;
+                const redirectTo = `${window.location.origin}/auth/callback`;
                 const { error: oauthError } = await supabase.auth.signInWithOAuth({
                   provider: "google",
                   options: { redirectTo },

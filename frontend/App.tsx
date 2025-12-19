@@ -1,5 +1,5 @@
 ﻿import React, { useState } from 'react';
-import { HashRouter, Route, Routes, NavLink, Navigate } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, NavLink, Navigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { trackPageView } from './utils/analytics';
@@ -16,6 +16,7 @@ import ProfilePathwaysPage from './pages/ProfilePathwaysPage';
 import ProfileTimelinesPage from './pages/ProfileTimelinesPage';
 import BetaEssayLabPage from './pages/BetaEssayLabPage';
 import ContactPage from './pages/ContactPage';
+import AuthCallbackPage from './pages/AuthCallbackPage';
 import ErrorBoundary from './components/ErrorBoundary';
 import { OnboardingProvider, useOnboardingContext } from './context/OnboardingContext';
 
@@ -194,6 +195,7 @@ const AppRoutes: React.FC = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/institution/:unitid" element={<DetailPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/auth/callback" element={<AuthCallbackPage />} />
         <Route path="/profile" element={<ProfileRoutePage />} />
         <Route path="/profile/route" element={<ProfileRoutePage />} />
         <Route path="/profile/login" element={<ProfileLoginPage />} />
@@ -215,7 +217,7 @@ const AppRoutes: React.FC = () => {
 
 const App: React.FC = () => {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <OnboardingProvider>
         <div className="flex flex-col min-h-screen font-sans text-gray-800">
           <Header />
@@ -223,7 +225,7 @@ const App: React.FC = () => {
           <Footer />
         </div>
       </OnboardingProvider>
-    </HashRouter>
+    </BrowserRouter>
   );
 };
 

@@ -2,23 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>USA Admissions</title>
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="666649c2-3c3a-4833-b30d-0d89d18be5cc"></script>
+    <title>Redirecting...</title>
+    <script>
+      (function () {
+        var loc = window.location;
+        var target = loc.pathname + loc.search + loc.hash;
+        var redirect = loc.origin + "/?p=" + encodeURIComponent(target);
+        loc.replace(redirect);
+      })();
+    </script>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-    <!-- Hidden form so Netlify detects & provisions it at deploy
-    <form name="profile-review" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
-      <input type="text" name="name" />
-      <input type="email" name="email" />
-      <input type="text" name="universities" />
-      <textarea name="academics"></textarea>
-      <textarea name="extracurricular"></textarea>
-      <textarea name="athletics"></textarea>
-      <textarea name="personal"></textarea>
-    </form>
-  -->
+    Redirecting...
   </body>
 </html>
