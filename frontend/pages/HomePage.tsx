@@ -272,7 +272,7 @@ const HomePage: React.FC = () => {
                 Unlock testing, colleges & tracking to get into your dream school.
               </p>
 
-              <div className="mt-7 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+              <div className="mt-7 flex flex-wrap gap-2 text-sm text-slate-700">
                 {[
                   { label: "College Explorer", icon: <GraduationCap className="h-4 w-4 text-blue-700" /> },
                   { label: "Smart Tracking", icon: <Sparkles className="h-4 w-4 text-blue-700" /> },
@@ -281,9 +281,9 @@ const HomePage: React.FC = () => {
                 ].map((f: FeatureHighlight) => (
                   <div
                     key={f.label}
-                    className="rounded-xl border border-slate-200 bg-white px-4 py-3 shadow-sm flex items-center gap-3"
+                    className="inline-flex items-center gap-2 rounded-full bg-slate-100 px-3 py-2 font-semibold cursor-default select-none"
                   >
-                    <div className="h-8 w-8 rounded-lg bg-blue-50 border border-blue-100 flex items-center justify-center">
+                    <div className="h-7 w-7 rounded-full bg-white border border-slate-200 flex items-center justify-center">
                       {f.icon}
                     </div>
                     <div className="text-sm font-semibold text-slate-900">{f.label}</div>

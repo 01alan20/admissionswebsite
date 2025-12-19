@@ -40,3 +40,4 @@ supabase/recreate_success_app_profiles.sql
 # Large/local datasets (served from public but not tracked)
 # (Keep commented to ensure datasets are bundled for GitHub Pages deployment)
 # public/data/
+data/

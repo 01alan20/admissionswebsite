@@ -55,74 +55,76 @@ const Header: React.FC = () => {
   const closeMobile = () => setMobileOpen(false);
 
   return (
-    <header className="bg-white/90 backdrop-blur border-b border-slate-200 sticky top-0 z-50">
-      <nav className="w-full px-4 sm:px-6 lg:px-10">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
-            <NavLink to="/" className="text-slate-900 font-extrabold text-lg flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
-              <span>SeeThroughAdmissions</span>
-            </NavLink>
-          </div>
-          <div className="flex items-center md:hidden">
-            <button
-              type="button"
-              aria-label="Toggle navigation"
-              onClick={() => setMobileOpen((o) => !o)}
-              className="inline-flex items-center justify-center rounded-lg p-2 text-slate-700 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-600/30"
-            >
-              <svg
-                className="h-6 w-6"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
+    <>
+      <header className="bg-white/90 backdrop-blur border-b border-slate-200 sticky top-0 z-50">
+        <nav className="w-full px-4 sm:px-6 lg:px-10">
+          <div className="flex items-center justify-between h-16">
+            <div className="flex items-center">
+              <NavLink to="/" className="text-slate-900 font-extrabold text-lg flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+                <span>SeeThroughAdmissions</span>
+              </NavLink>
+            </div>
+            <div className="flex items-center md:hidden">
+              <button
+                type="button"
+                aria-label="Toggle navigation"
+                onClick={() => setMobileOpen((o) => !o)}
+                className="inline-flex items-center justify-center rounded-lg p-2 text-slate-700 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-600/30"
               >
-                {mobileOpen ? (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                ) : (
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                <svg
+                  className="h-6 w-6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  {mobileOpen ? (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                  ) : (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                  )}
+                </svg>
+              </button>
+            </div>
+            <div className="hidden md:block">
+              <div className="ml-10 flex items-baseline space-x-4">
+                {navLinks.map(({ label, to, extra }) => (
+                  <NavLink
+                    key={to}
+                    to={to}
+                    className={({ isActive }) =>
+                      isActive
+                        ? activeLinkClass
+                        : `${linkClass} ${extra ?? ''}`
+                    }
+                  >
+                    {label}
+                  </NavLink>
+                ))}
+                {(!loading && !user) && (
+                  <NavLink
+                    to="/profile/login"
+                    className={({ isActive }) => isActive ? activeLinkClass : linkClass}
+                  >
+                    Log In
+                  </NavLink>
                 )}
-              </svg>
-            </button>
-          </div>
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
-              {navLinks.map(({ label, to, extra }) => (
-                <NavLink
-                  key={to}
-                  to={to}
-                  className={({ isActive }) =>
-                    isActive
-                      ? activeLinkClass
-                      : `${linkClass} ${extra ?? ''}`
-                  }
-                >
-                  {label}
-                </NavLink>
-              ))}
-              {(!loading && !user) && (
-                <NavLink
-                  to="/profile/login"
-                  className={({ isActive }) => isActive ? activeLinkClass : linkClass}
-                >
-                  Log In
-                </NavLink>
-              )}
-              {(!loading && user) && (
-                <NavLink
-                  to="/profile/my-profile"
-                  className={({ isActive }) => isActive ? activeLinkClass : linkClass}
-                >
-                  My Profile
-                </NavLink>
-              )}
+                {(!loading && user) && (
+                  <NavLink
+                    to="/profile/my-profile"
+                    className={({ isActive }) => isActive ? activeLinkClass : linkClass}
+                  >
+                    My Profile
+                  </NavLink>
+                )}
+              </div>
             </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </header>
       {mobileOpen && (
-        <div className="md:hidden fixed inset-0 z-50">
+        <div className="md:hidden fixed inset-0 z-[60]">
           <div className="absolute inset-0 bg-black/40" onClick={closeMobile}></div>
           <div className="absolute inset-y-0 right-0 w-full max-w-xs bg-white shadow-2xl p-6 overflow-y-auto">
             <div className="flex items-center justify-between mb-4">
@@ -161,7 +163,7 @@ const Header: React.FC = () => {
           </div>
         </div>
       )}
-    </header>
+    </>
   );
 };
 
