@@ -204,6 +204,16 @@ const institutionHasMajors = (
   majorsByInstitution: InstitutionMajorsByInstitution | null
 ): boolean => {
   if (!majorAreas.length && !specificMajors.length) return true;
+
+  const hasInlineMajors =
+    (Array.isArray(inst.majors_cip_two_digit) && inst.majors_cip_two_digit.length > 0) ||
+    (Array.isArray(inst.majors_cip_four_digit) && inst.majors_cip_four_digit.length > 0) ||
+    (Array.isArray(inst.majors_cip_six_digit) && inst.majors_cip_six_digit.length > 0);
+
+  if (!majorsByInstitution && !hasInlineMajors) {
+    return true;
+  }
+
   const record = majorsByInstitution?.[String(inst.unitid)];
   const twoDigit = new Set<string>();
   const detailed = new Set<string>();
@@ -307,6 +317,7 @@ const filterInstitutions = (
     }
 
     if (opts.testScore) {
+      if (testScoreMap.size === 0) return true;
       const mid = getTestScoreMid(inst.unitid, opts.testScore.type, testScoreMap);
       if (mid == null || mid < opts.testScore.value) return false;
     }
@@ -316,6 +327,7 @@ const filterInstitutions = (
     }
 
     if (opts.locationTypes.length) {
+      if (locationMap.size === 0) return true;
       const loc = normalizeLocationType(locationMap.get(inst.unitid));
       if (!loc || !opts.locationTypes.includes(loc)) return false;
     }
@@ -425,23 +437,35 @@ const ExplorePage: React.FC<ExplorePageProps> = ({
       try {
         setLoading(true);
         setError(null);
-        const [all, demoMap, testMap, locMap, meta, majors, topIds] = await Promise.all([
-          getAllInstitutions(),
-          getUndergradDemographicsMap(),
-          getInstitutionTestScoreMap(),
-          getLocationTypeMap(),
-          getMajorsMeta().catch(() => null),
-          getMajorsByInstitution().catch(() => null),
-          getTopUnitIdsByApplicants(100).catch(() => []),
-        ]);
+        const all = await getAllInstitutions();
         if (cancelled) return;
         setInstitutions(all);
-        setDemographicsMap(demoMap);
-        setTestScoreMap(testMap);
-        setLocationMap(locMap);
-        setMajorsMeta(meta);
-        setMajorsByInstitution(majors);
-        setTopApplicants(topIds);
+        setLoading(false);
+
+        void Promise.allSettled([
+          getTopUnitIdsByApplicants(100).then((topIds) => {
+            if (!cancelled) setTopApplicants(topIds);
+          }),
+          getUndergradDemographicsMap().then((demoMap) => {
+            if (!cancelled) setDemographicsMap(demoMap);
+          }),
+          getInstitutionTestScoreMap().then((testMap) => {
+            if (!cancelled) setTestScoreMap(testMap);
+          }),
+          getLocationTypeMap().then((locMap) => {
+            if (!cancelled) setLocationMap(locMap);
+          }),
+          getMajorsMeta()
+            .then((meta) => {
+              if (!cancelled) setMajorsMeta(meta);
+            })
+            .catch(() => {}),
+          getMajorsByInstitution()
+            .then((majors) => {
+              if (!cancelled) setMajorsByInstitution(majors);
+            })
+            .catch(() => {}),
+        ]);
       } catch (e: any) {
         if (!cancelled) setError(e?.message ?? "Failed to load colleges");
       } finally {

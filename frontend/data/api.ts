@@ -32,13 +32,13 @@ const buildDataPath = (base: string, relative: string): string => {
 };
 
 async function getJSON<T>(path: string): Promise<T> {
-  const res = await fetch(path, { cache: "no-store" });
+  const res = await fetch(path, { cache: IS_DEV ? "no-store" : "force-cache" });
   if (!res.ok) throw new Error(`Failed to fetch ${path}: ${res.status}`);
   return res.json() as Promise<T>;
 }
 
 async function getText(path: string): Promise<string> {
-  const res = await fetch(path, { cache: "no-store" });
+  const res = await fetch(path, { cache: IS_DEV ? "no-store" : "force-cache" });
   if (!res.ok) throw new Error(`Failed to fetch ${path}: ${res.status}`);
   return res.text();
 }
@@ -258,6 +258,8 @@ const DEMOGRAPHIC_COLUMNS: DemographicColumn[] = [
 
 let undergradDemographicsMapPromise: Promise<Map<number, InstitutionDemographics>> | null = null;
 let applicantsMapPromise: Promise<Map<number, number>> | null = null;
+let majorsMetaPromise: Promise<MajorsMeta> | null = null;
+let majorsByInstitutionPromise: Promise<InstitutionMajorsByInstitution> | null = null;
 let locationTypeMapPromise: Promise<Map<number, string>> | null = null;
 let institutionTestScoreMapPromise: Promise<Map<number, InstitutionTestScores>> | null = null;
 let allInstitutionsPromise: Promise<Institution[]> | null = null;
@@ -1016,75 +1018,85 @@ export async function getInstitutionMetrics(
 }
 
 export async function getMajorsMeta(): Promise<MajorsMeta> {
-  try {
-    const rows = await supabaseFetchAll<any>((from, to) =>
-      supabase.from("majors_meta").select("cip_code, cip_level, title").range(from, to)
-    );
-    const meta: MajorsMeta = { two_digit: {}, four_digit: {}, six_digit: {} };
-    for (const r of rows) {
-      const code = String(r.cip_code ?? "").trim();
-      const level = String(r.cip_level ?? "").trim().toLowerCase();
-      const title = String(r.title ?? "").trim();
-      if (!code || !title) continue;
-      if (level.includes("2")) meta.two_digit[code] = title;
-      else if (level.includes("4")) meta.four_digit[code] = title;
-      else if (level.includes("6")) meta.six_digit[code] = title;
-    }
-    if (
-      Object.keys(meta.two_digit).length ||
-      Object.keys(meta.four_digit).length ||
-      Object.keys(meta.six_digit).length
-    ) {
-      return meta;
-    }
+  if (!majorsMetaPromise) {
+    majorsMetaPromise = (async () => {
+      try {
+        const rows = await supabaseFetchAll<any>((from, to) =>
+          supabase.from("majors_meta").select("cip_code, cip_level, title").range(from, to)
+        );
+        const meta: MajorsMeta = { two_digit: {}, four_digit: {}, six_digit: {} };
+        for (const r of rows) {
+          const code = String(r.cip_code ?? "").trim();
+          const level = String(r.cip_level ?? "").trim().toLowerCase();
+          const title = String(r.title ?? "").trim();
+          if (!code || !title) continue;
+          if (level.includes("2")) meta.two_digit[code] = title;
+          else if (level.includes("4")) meta.four_digit[code] = title;
+          else if (level.includes("6")) meta.six_digit[code] = title;
+        }
+        if (
+          Object.keys(meta.two_digit).length ||
+          Object.keys(meta.four_digit).length ||
+          Object.keys(meta.six_digit).length
+        ) {
+          return meta;
+        }
 
-    if (!IS_DEV) {
-      throw new Error(
-        "Supabase returned 0 majors. Check RLS policies for `public.majors_meta` (anon select must be allowed)."
+        if (!IS_DEV) {
+          throw new Error(
+            "Supabase returned 0 majors. Check RLS policies for `public.majors_meta` (anon select must be allowed)."
+          );
+        }
+      } catch (e) {
+        if (!IS_DEV) throw e;
+      }
+
+      return getJSON<MajorsMeta>(
+        buildDataPath(UNIVERSITY_DATA_BASE, "majors_bachelor_meta.json")
       );
-    }
-  } catch (e) {
-    if (!IS_DEV) throw e;
+    })();
   }
-
-  return getJSON<MajorsMeta>(
-    buildDataPath(UNIVERSITY_DATA_BASE, "majors_bachelor_meta.json")
-  );
+  return majorsMetaPromise;
 }
 
 export async function getMajorsByInstitution(): Promise<InstitutionMajorsByInstitution> {
-  try {
-    const rows = await supabaseFetchAll<any>((from, to) =>
-      supabase.from("institution_majors").select("unitid, cip_level, cip_code").range(from, to)
-    );
-    const result: InstitutionMajorsByInstitution = {};
-    for (const r of rows) {
-      const unitid = Number(r.unitid);
-      if (!Number.isFinite(unitid)) continue;
-      const level = String(r.cip_level ?? "").toLowerCase();
-      const code = String(r.cip_code ?? "").trim();
-      if (!code) continue;
-      if (!result[String(unitid)]) {
-        result[String(unitid)] = { two_digit: [], four_digit: [], six_digit: [] };
+  if (!majorsByInstitutionPromise) {
+    majorsByInstitutionPromise = (async () => {
+      try {
+        const rows = await supabaseFetchAll<any>((from, to) =>
+          supabase.from("institution_majors").select("unitid, cip_level, cip_code").range(from, to)
+        );
+        const result: InstitutionMajorsByInstitution = {};
+        for (const r of rows) {
+          const unitid = Number(r.unitid);
+          if (!Number.isFinite(unitid)) continue;
+          const level = String(r.cip_level ?? "").toLowerCase();
+          const code = String(r.cip_code ?? "").trim();
+          if (!code) continue;
+          if (!result[String(unitid)]) {
+            result[String(unitid)] = { two_digit: [], four_digit: [], six_digit: [] };
+          }
+          if (level.includes("2")) result[String(unitid)].two_digit.push(code);
+          else if (level.includes("4")) result[String(unitid)].four_digit.push(code);
+          else if (level.includes("6")) result[String(unitid)].six_digit.push(code);
+        }
+        if (Object.keys(result).length) return result;
+
+        if (!IS_DEV) {
+          throw new Error(
+            "Supabase returned 0 institution majors. Check RLS policies for `public.institution_majors` (anon select must be allowed)."
+          );
+        }
+      } catch (e) {
+        if (!IS_DEV) throw e;
       }
-      if (level.includes("2")) result[String(unitid)].two_digit.push(code);
-      else if (level.includes("4")) result[String(unitid)].four_digit.push(code);
-      else if (level.includes("6")) result[String(unitid)].six_digit.push(code);
-    }
-    if (Object.keys(result).length) return result;
 
-    if (!IS_DEV) {
-      throw new Error(
-        "Supabase returned 0 institution majors. Check RLS policies for `public.institution_majors` (anon select must be allowed)."
+      return getJSON<InstitutionMajorsByInstitution>(
+        buildDataPath(UNIVERSITY_DATA_BASE, "majors_bachelor_by_institution.json")
       );
-    }
-  } catch (e) {
-    if (!IS_DEV) throw e;
+    })();
   }
-
-  return getJSON<InstitutionMajorsByInstitution>(
-    buildDataPath(UNIVERSITY_DATA_BASE, "majors_bachelor_by_institution.json")
-  );
+  return majorsByInstitutionPromise;
 }
 
 export async function getInstitutionIndex(): Promise<InstitutionIndex[]> {
