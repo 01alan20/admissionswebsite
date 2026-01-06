@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import {
   getAllInstitutions,
@@ -384,6 +384,33 @@ const ExplorePage: React.FC<ExplorePageProps> = ({
   const [page, setPage] = useState(1);
 
   const searchQuery = searchParams.get("q") ?? "";
+  const [searchInput, setSearchInput] = useState(searchQuery);
+
+  const applySearchQuery = useCallback((value: string) => {
+    const current = searchParams.get("q") ?? "";
+    if (value === current) return;
+
+    const params = new URLSearchParams(searchParams);
+    if (value) {
+      params.set("q", value);
+    } else {
+      params.delete("q");
+    }
+    setSearchParams(params, { replace: true });
+  }, [searchParams, setSearchParams]);
+
+  useEffect(() => {
+    setSearchInput(searchQuery);
+  }, [searchQuery]);
+
+  useEffect(() => {
+    const handle = window.setTimeout(() => {
+      applySearchQuery(searchInput);
+    }, 350);
+    return () => {
+      window.clearTimeout(handle);
+    };
+  }, [searchInput, applySearchQuery]);
 
   useEffect(() => {
     setMajorAreas(initialMajorAreas);
@@ -507,16 +534,6 @@ const ExplorePage: React.FC<ExplorePageProps> = ({
   const startIdx = (currentPage - 1) * PAGE_SIZE;
   const visibleInstitutions = filteredInstitutions.slice(startIdx, startIdx + PAGE_SIZE);
 
-  const handleSearchChange = (value: string) => {
-    const params = new URLSearchParams(searchParams);
-    if (value) {
-      params.set("q", value);
-    } else {
-      params.delete("q");
-    }
-    setSearchParams(params, { replace: true });
-  };
-
   const handleApplyFilters = () => {
     setBudget(draftBudget);
     setSelectivity(draftSelectivity);
@@ -547,6 +564,7 @@ const ExplorePage: React.FC<ExplorePageProps> = ({
     setMajorAreas(initialMajorAreas);
     setSpecificMajors(initialSpecificMajors);
     setSearchParams(new URLSearchParams(), { replace: true });
+    setSearchInput("");
     setPage(1);
   };
 
@@ -591,8 +609,12 @@ const ExplorePage: React.FC<ExplorePageProps> = ({
                 id="college-search"
                 name="college-search"
                 type="search"
-                value={searchQuery}
-                onChange={(e) => handleSearchChange(e.target.value)}
+                value={searchInput}
+                onChange={(e) => setSearchInput(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") applySearchQuery(searchInput);
+                }}
+                onBlur={() => applySearchQuery(searchInput)}
                 placeholder="Type at least 3 letters to search"
                 className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/30"
               />
