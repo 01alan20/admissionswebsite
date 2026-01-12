@@ -2,7 +2,6 @@ import React, { useEffect, useMemo, useState } from "react";
 import { Navigate } from "react-router-dom";
 import DashboardLayout from "../components/DashboardLayout";
 import { useOnboardingContext } from "../context/OnboardingContext";
-import { isBetaUser } from "../utils/betaAccess";
 import { supabase } from "../services/supabaseClient";
 import { getAnonymousEssays } from "../data/api";
 import type { AnonymousEssayEntry } from "../types";
@@ -23,7 +22,6 @@ const randomId = () => Math.random().toString(36).slice(2, 10);
 const BetaEssayLabPage: React.FC = () => {
   const { user, studentProfile } = useOnboardingContext();
 
-  const allowed = isBetaUser(user?.email);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -38,7 +36,7 @@ const BetaEssayLabPage: React.FC = () => {
   );
 
   useEffect(() => {
-    if (!user || !allowed) return;
+    if (!user) return;
     let cancelled = false;
     (async () => {
       try {
@@ -78,7 +76,7 @@ const BetaEssayLabPage: React.FC = () => {
     return () => {
       cancelled = true;
     };
-  }, [user?.id, allowed]);
+  }, [user?.id]);
 
   const persistDrafts = async (nextDrafts: Draft[]) => {
     if (!user) return;
@@ -154,7 +152,6 @@ const BetaEssayLabPage: React.FC = () => {
   };
 
   if (!user) return <Navigate to="/profile/login" replace />;
-  if (!allowed) return <Navigate to="/profile/my-profile" replace />;
 
   return (
     <DashboardLayout>
