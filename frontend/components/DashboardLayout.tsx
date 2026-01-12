@@ -26,14 +26,16 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
       items: [
         { label: "Colleges", to: "/profile/colleges", icon: Search },
         { label: "Applications", to: "/profile/applications", icon: NotebookPen },
-        { label: "Essays", to: "/profile/essays", icon: FileText },
       ],
     },
     ...(betaEnabled
       ? [
           {
             label: "Beta",
-            items: [{ label: "Essay Lab", to: "/profile/beta", icon: FlaskConical }],
+            items: [
+              { label: "Essays", to: "/profile/beta/essays", icon: FileText },
+              { label: "Essay Lab", to: "/profile/beta", icon: FlaskConical },
+            ],
           },
         ]
       : []),
