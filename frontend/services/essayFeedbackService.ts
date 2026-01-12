@@ -1,5 +1,3 @@
-import { supabase } from "./supabaseClient";
-
 export type EssayFeedback = {
   overall_summary: string;
   strengths: string[];
@@ -8,7 +6,7 @@ export type EssayFeedback = {
   score_1_to_10?: number | null;
 };
 
-const getDevGeminiApiKey = (): string | null => {
+const getGeminiApiKey = (): string | null => {
   const key = (import.meta as any).env?.VITE_GEMINI_API_KEY as string | undefined;
   const trimmed = (key ?? "").trim();
   return trimmed ? trimmed : null;
@@ -53,48 +51,32 @@ export const requestEssayFeedback = async (input: {
   const essay = String(input.essay ?? "").trim();
   if (!essay) throw new Error("Essay text is empty.");
 
-  // Dev-only: call Gemini directly (WARNING: client-side key exposure).
-  if ((import.meta as any).env?.DEV) {
-    const apiKey = getDevGeminiApiKey();
-    if (!apiKey) {
-      throw new Error("Missing VITE_GEMINI_API_KEY for local dev feedback.");
-    }
-    const res = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`,
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          contents: [{ role: "user", parts: [{ text: buildPrompt(input) }] }],
-          generationConfig: { responseMimeType: "application/json" },
-        }),
-      }
-    );
-    if (!res.ok) {
-      const details = await res.text();
-      throw new Error(`Gemini request failed: ${res.status} ${details}`);
-    }
-    const data = await res.json();
-    const text =
-      data?.candidates?.[0]?.content?.parts?.[0]?.text ??
-      data?.candidates?.[0]?.content?.parts?.map((p: any) => p?.text).join("") ??
-      "";
-    if (!text) throw new Error("No response text from Gemini.");
-    return JSON.parse(text) as EssayFeedback;
+  // Client-side Gemini call (WARNING: API key is exposed in the built JS bundle).
+  const apiKey = getGeminiApiKey();
+  if (!apiKey) {
+    throw new Error("Essay feedback is not configured (missing VITE_GEMINI_API_KEY).");
   }
 
-  // Production: invoke Supabase Edge Function so the Gemini key stays server-side.
-  const { data, error } = await supabase.functions.invoke("essay-feedback", {
-    body: {
-      essay,
-      prompt: input.prompt ?? null,
-      context: input.context ?? null,
-    },
-  });
-
-  if (error) {
-    throw new Error(error.message || "Failed to get essay feedback.");
+  const res = await fetch(
+    `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        contents: [{ role: "user", parts: [{ text: buildPrompt({ ...input, essay }) }] }],
+        generationConfig: { responseMimeType: "application/json" },
+      }),
+    }
+  );
+  if (!res.ok) {
+    const details = await res.text();
+    throw new Error(`Gemini request failed: ${res.status} ${details}`);
   }
-
-  return data as EssayFeedback;
+  const data = await res.json();
+  const text =
+    data?.candidates?.[0]?.content?.parts?.[0]?.text ??
+    data?.candidates?.[0]?.content?.parts?.map((p: any) => p?.text).join("") ??
+    "";
+  if (!text) throw new Error("No response text from Gemini.");
+  return JSON.parse(text) as EssayFeedback;
 };

@@ -11,10 +11,10 @@ import ProfileDashboardPage from './pages/ProfileDashboardPage';
 import MyCollegeListPage from './pages/MyCollegeListPage';
 import ProfileCollegesPage from './pages/ProfileCollegesPage';
 import ApplicationsPage from './pages/ApplicationsPage';
+import EssaysPage from './pages/EssaysPage';
 import ProfilePathwaysPage from './pages/ProfilePathwaysPage';
 import ProfileTimelinesPage from './pages/ProfileTimelinesPage';
 import BetaEssayLabPage from './pages/BetaEssayLabPage';
-import BetaEssaysPage from './pages/BetaEssaysPage';
 import ContactPage from './pages/ContactPage';
 import AuthCallbackPage from './pages/AuthCallbackPage';
 import ErrorBoundary from './components/ErrorBoundary';
@@ -28,7 +28,7 @@ const Header: React.FC = () => {
   // For the new CollegeBase-style experience, hide the
   // marketing header on profile/dashboard routes so the
   // sidebar layout can take over the full canvas.
-  if (location.pathname.startsWith("/profile")) {
+  if (location.pathname.startsWith("/profile") || location.pathname.startsWith("/beta")) {
     return null;
   }
 
@@ -204,13 +204,14 @@ const AppRoutes: React.FC = () => {
         <Route path="/profile/college-list" element={<MyCollegeListPage />} />
         <Route path="/profile/colleges" element={<ProfileCollegesPage />} />
         <Route path="/profile/applications" element={<ApplicationsPage />} />
-        <Route path="/profile/essays" element={<Navigate to="/profile/my-profile" replace />} />
+        <Route path="/profile/essays" element={<EssaysPage />} />
         <Route path="/profile/pathways" element={<ProfilePathwaysPage />} />
         <Route path="/profile/timelines" element={<ProfileTimelinesPage />} />
         <Route path="/profile/my-profile" element={<ProfileDashboardPage />} />
         <Route path="/profile/dashboard" element={<Navigate to="/profile/my-profile" replace />} />
-        <Route path="/profile/beta" element={<BetaEssayLabPage />} />
-        <Route path="/profile/beta/essays" element={<BetaEssaysPage />} />
+        <Route path="/profile/beta" element={<Navigate to="/profile/my-profile" replace />} />
+        <Route path="/profile/beta/essays" element={<Navigate to="/profile/essays" replace />} />
+        <Route path="/beta/essaylab" element={<BetaEssayLabPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </ErrorBoundary>

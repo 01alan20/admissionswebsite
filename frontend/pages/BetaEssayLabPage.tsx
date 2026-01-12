@@ -3,8 +3,6 @@ import { Navigate } from "react-router-dom";
 import DashboardLayout from "../components/DashboardLayout";
 import { useOnboardingContext } from "../context/OnboardingContext";
 import { supabase } from "../services/supabaseClient";
-import { getAnonymousEssays } from "../data/api";
-import type { AnonymousEssayEntry } from "../types";
 import { requestEssayFeedback, type EssayFeedback } from "../services/essayFeedbackService";
 
 type Draft = {
@@ -25,7 +23,6 @@ const BetaEssayLabPage: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  const [essayLibrary, setEssayLibrary] = useState<AnonymousEssayEntry[]>([]);
   const [drafts, setDrafts] = useState<Draft[]>([]);
   const [selectedDraftId, setSelectedDraftId] = useState<string | null>(null);
   const [feedbackLoading, setFeedbackLoading] = useState(false);
@@ -43,10 +40,11 @@ const BetaEssayLabPage: React.FC = () => {
         setLoading(true);
         setError(null);
 
-        const [{ data: profileRow, error: profileErr }, library] = await Promise.all([
-          supabase.from("profiles").select("essay_drafts").eq("user_id", user.id).maybeSingle(),
-          getAnonymousEssays(),
-        ]);
+        const { data: profileRow, error: profileErr } = await supabase
+          .from("profiles")
+          .select("essay_drafts")
+          .eq("user_id", user.id)
+          .maybeSingle();
         if (profileErr) throw profileErr;
 
         const raw = (profileRow as any)?.essay_drafts;
@@ -65,7 +63,6 @@ const BetaEssayLabPage: React.FC = () => {
         if (!cancelled) {
           setDrafts(safeDrafts);
           setSelectedDraftId(safeDrafts[0]?.id ?? null);
-          setEssayLibrary(Array.isArray(library) ? library.slice(0, 10) : []);
         }
       } catch (e: any) {
         if (!cancelled) setError(e?.message || "Failed to load Essay Lab.");
@@ -157,10 +154,12 @@ const BetaEssayLabPage: React.FC = () => {
     <DashboardLayout>
       <div className="space-y-6">
         <header className="bg-white rounded-2xl shadow-sm border border-slate-100 p-6">
-          <p className="text-xs uppercase tracking-wide text-brand-secondary font-semibold">Beta</p>
+          <p className="text-xs uppercase tracking-wide text-brand-secondary font-semibold">
+            Preview
+          </p>
           <h1 className="text-3xl font-bold text-slate-900 mt-1">Essay Lab</h1>
           <p className="mt-2 text-sm text-slate-600 max-w-3xl">
-            Draft essays, track versions, and get feedback (private beta).
+            Draft essays, track versions, and generate feedback.
           </p>
         </header>
 
@@ -171,45 +170,7 @@ const BetaEssayLabPage: React.FC = () => {
             {error}
           </div>
         ) : (
-          <div className="grid gap-6 lg:grid-cols-3">
-            {/* Essay List */}
-            <section className="bg-white rounded-2xl border border-slate-100 shadow-sm p-4">
-              <div className="flex items-center justify-between mb-3">
-                <h2 className="text-sm font-semibold text-slate-900">Essay List</h2>
-                <span className="text-xs text-slate-500">Top 10</span>
-              </div>
-              <div className="space-y-3 max-h-[70vh] overflow-y-auto pr-1">
-                {essayLibrary.map((e) => (
-                  <button
-                    key={e.essay_id}
-                    type="button"
-                    className="w-full text-left p-3 rounded-xl border border-slate-200 hover:border-slate-300"
-                    onClick={() => {
-                      if (!selectedDraft) return;
-                      void updateDraft(selectedDraft.id, {
-                        title: selectedDraft.title || `${e.school ?? "Essay"}`,
-                        prompt: e.question ?? selectedDraft.prompt,
-                      });
-                    }}
-                  >
-                    <div className="text-xs text-slate-500">
-                      {(e.school ?? "Unknown")} • {e.year ?? "—"} • {e.type ?? "Essay"}
-                    </div>
-                    <div className="mt-1 text-sm font-semibold text-slate-900 line-clamp-2">
-                      {e.category ?? "General"}
-                    </div>
-                    <div className="mt-1 text-xs text-slate-600 line-clamp-2">
-                      {e.question ?? ""}
-                    </div>
-                  </button>
-                ))}
-                {essayLibrary.length === 0 && (
-                  <div className="text-sm text-slate-500">No essays loaded yet.</div>
-                )}
-              </div>
-            </section>
-
-            {/* Drafts */}
+          <div className="grid gap-6 lg:grid-cols-2">
             <section className="bg-white rounded-2xl border border-slate-100 shadow-sm p-4">
               <div className="flex items-center justify-between mb-3">
                 <h2 className="text-sm font-semibold text-slate-900">Essay Drafts</h2>
@@ -274,7 +235,9 @@ const BetaEssayLabPage: React.FC = () => {
                       id="draft-prompt"
                       name="draft-prompt"
                       value={selectedDraft.prompt}
-                      onChange={(e) => void updateDraft(selectedDraft.id, { prompt: e.target.value })}
+                      onChange={(e) =>
+                        void updateDraft(selectedDraft.id, { prompt: e.target.value })
+                      }
                       className="w-full min-h-24 rounded-lg border border-slate-200 px-3 py-2 text-sm"
                       placeholder="Essay prompt (optional)"
                     />
@@ -282,7 +245,9 @@ const BetaEssayLabPage: React.FC = () => {
                       id="draft-essay"
                       name="draft-essay"
                       value={selectedDraft.essay}
-                      onChange={(e) => void updateDraft(selectedDraft.id, { essay: e.target.value })}
+                      onChange={(e) =>
+                        void updateDraft(selectedDraft.id, { essay: e.target.value })
+                      }
                       className="w-full min-h-[320px] rounded-lg border border-slate-200 px-3 py-2 text-sm"
                       placeholder="Paste your essay draft here..."
                     />
@@ -299,7 +264,6 @@ const BetaEssayLabPage: React.FC = () => {
               </div>
             </section>
 
-            {/* Feedback */}
             <section className="bg-white rounded-2xl border border-slate-100 shadow-sm p-4">
               <div className="flex items-center justify-between mb-3">
                 <h2 className="text-sm font-semibold text-slate-900">Essay Feedback</h2>
@@ -332,7 +296,9 @@ const BetaEssayLabPage: React.FC = () => {
                     </ul>
                   </div>
                   <div>
-                    <p className="text-xs uppercase font-semibold text-slate-500">Improvements</p>
+                    <p className="text-xs uppercase font-semibold text-slate-500">
+                      Improvements
+                    </p>
                     <ul className="mt-2 space-y-2 text-sm text-slate-700 list-disc pl-5">
                       {selectedDraft.feedback.improvements.map((s, idx) => (
                         <li key={idx}>{s}</li>
@@ -340,14 +306,20 @@ const BetaEssayLabPage: React.FC = () => {
                     </ul>
                   </div>
                   <div>
-                    <p className="text-xs uppercase font-semibold text-slate-500">Concrete rewrites</p>
+                    <p className="text-xs uppercase font-semibold text-slate-500">
+                      Concrete rewrites
+                    </p>
                     <div className="mt-2 space-y-3">
                       {selectedDraft.feedback.concrete_rewrites.map((r, idx) => (
                         <div key={idx} className="rounded-xl border border-slate-200 p-3">
                           <p className="text-xs font-semibold text-slate-500">Before</p>
-                          <p className="mt-1 text-sm text-slate-700 whitespace-pre-wrap">{r.before}</p>
+                          <p className="mt-1 text-sm text-slate-700 whitespace-pre-wrap">
+                            {r.before}
+                          </p>
                           <p className="mt-3 text-xs font-semibold text-slate-500">After</p>
-                          <p className="mt-1 text-sm text-slate-700 whitespace-pre-wrap">{r.after}</p>
+                          <p className="mt-1 text-sm text-slate-700 whitespace-pre-wrap">
+                            {r.after}
+                          </p>
                         </div>
                       ))}
                       {selectedDraft.feedback.concrete_rewrites.length === 0 && (
@@ -368,3 +340,4 @@ const BetaEssayLabPage: React.FC = () => {
 };
 
 export default BetaEssayLabPage;
+
