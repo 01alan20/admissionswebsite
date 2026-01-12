@@ -3,7 +3,6 @@ import type { ReactNode } from "react";
 import { NavLink } from "react-router-dom";
 import { User, ListChecks, Search, NotebookPen, FileText, Map, CalendarDays, FlaskConical, LifeBuoy } from "lucide-react";
 import { useOnboardingContext } from "../context/OnboardingContext";
-import { isBetaUser } from "../utils/betaAccess";
 
 type DashboardLayoutProps = {
   children: ReactNode;
@@ -11,7 +10,6 @@ type DashboardLayoutProps = {
 
 const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
   const { user } = useOnboardingContext();
-  const betaEnabled = isBetaUser(user?.email);
 
   const navSections = [
     {
@@ -27,16 +25,9 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
         { label: "Colleges", to: "/profile/colleges", icon: Search },
         { label: "Applications", to: "/profile/applications", icon: NotebookPen },
         { label: "Essays", to: "/profile/essays", icon: FileText },
+        { label: "Essay Lab", to: "/profile/beta", icon: FlaskConical },
       ],
     },
-    ...(betaEnabled
-      ? [
-          {
-            label: "Beta",
-            items: [{ label: "Essay Lab", to: "/profile/beta", icon: FlaskConical }],
-          },
-        ]
-      : []),
     {
       label: "Planning",
       items: [
