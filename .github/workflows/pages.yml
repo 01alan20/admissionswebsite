@@ -65,6 +65,12 @@ jobs:
           mkdir -p site/beta
           cp -R beta/dist/* site/beta/
 
+          # Remove large/local-only documents that shouldn't ship to Pages.
+          rm -rf "site/data/essays that worked examples" || true
+          rm -rf "site/beta/data/essays that worked examples" || true
+          rm -f "site/data/University_data/institutions.json.bak" || true
+          rm -f "site/beta/data/University_data/institutions.json.bak" || true
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -82,3 +88,6 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          # Default is 10 minutes; large artifacts can take longer to publish.
+          timeout: "1800000"
