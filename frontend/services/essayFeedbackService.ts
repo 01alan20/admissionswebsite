@@ -26,11 +26,21 @@ const buildPrompt = (input: {
   prompt?: string | null;
   context?: Record<string, any> | null;
   essayType?: "personal" | "supplement" | "piq" | null;
+  targetWordCount?: number | null;
 }): string => {
+  const targetWordsRaw = input.targetWordCount;
+  const targetWords =
+    typeof targetWordsRaw === "number" && Number.isFinite(targetWordsRaw) && targetWordsRaw > 0
+      ? Math.floor(targetWordsRaw)
+      : null;
+
   const rubricRules = [
     "Use the 6-category rubric below and score each category 1-10 (integers).",
     "Be specific and actionable. Avoid generic praise; show what to change.",
     "Preserve the student's voice; do not rewrite the entire essay.",
+    targetWords
+      ? `Consider the target length (~${targetWords} words). Note if the draft is materially too short/long.`
+      : "If the user provided a target word count, consider length appropriateness.",
     "Return ONLY valid JSON matching the schema.",
   ].join(" ");
 
@@ -86,6 +96,7 @@ export const requestEssayFeedback = async (input: {
   prompt?: string | null;
   context?: Record<string, any> | null;
   essayType?: "personal" | "supplement" | "piq" | null;
+  targetWordCount?: number | null;
 }): Promise<EssayFeedback> => {
   const essay = String(input.essay ?? "").trim();
   if (!essay) throw new Error("Essay text is empty.");
@@ -102,7 +113,9 @@ export const requestEssayFeedback = async (input: {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        contents: [{ role: "user", parts: [{ text: buildPrompt({ ...input, essay }) }] }],
+        contents: [
+          { role: "user", parts: [{ text: buildPrompt({ ...input, essay }) }] },
+        ],
         generationConfig: { responseMimeType: "application/json" },
       }),
     }

@@ -2,8 +2,11 @@ import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Navigate, useLocation } from "react-router-dom";
 import DashboardLayout from "../components/DashboardLayout";
 import { useOnboardingContext } from "../context/OnboardingContext";
+import { getInstitutionsSummariesByIds } from "../data/api";
+import { generateEssayDraft } from "../services/essayGenerationService";
 import { requestEssayFeedback, type EssayFeedback } from "../services/essayFeedbackService";
 import { supabase } from "../services/supabaseClient";
+import { countWords, getEssayLabRequirements } from "../utils/essayLabRequirements";
 
 type EssayType = "personal" | "supplement" | "piq";
 
@@ -13,6 +16,7 @@ type Draft = {
   prompt: string;
   essay: string;
   essayType: EssayType;
+  targetWordCount: number;
   updatedAt: string;
   feedback?: EssayFeedback | null;
 };
@@ -34,13 +38,20 @@ const clampInt = (value: unknown, fallback: number): number => {
   return Math.max(0, Math.floor(n));
 };
 
+const clampWordCount = (value: unknown, fallback: number): number => {
+  const n = clampInt(value, fallback);
+  if (n < 100) return 100;
+  if (n > 1500) return 1500;
+  return n;
+};
+
 const normalizeEssayType = (value: unknown): EssayType => {
   if (value === "supplement" || value === "piq" || value === "personal") return value;
   return "personal";
 };
 
 const BetaEssayLabPage: React.FC = () => {
-  const { user, studentProfile } = useOnboardingContext();
+  const { user, studentProfile, targetUnitIds } = useOnboardingContext();
   const location = useLocation();
 
   const [loading, setLoading] = useState(true);
@@ -50,7 +61,9 @@ const BetaEssayLabPage: React.FC = () => {
   const [drafts, setDrafts] = useState<Draft[]>([]);
   const [selectedDraftId, setSelectedDraftId] = useState<string | null>(null);
   const [feedbackLoading, setFeedbackLoading] = useState(false);
+  const [generationLoading, setGenerationLoading] = useState(false);
   const [feedbackRequests, setFeedbackRequests] = useState(0);
+  const [demographics, setDemographics] = useState<Record<string, any> | null>(null);
 
   const saveTimerRef = useRef<number | null>(null);
 
@@ -110,12 +123,15 @@ const BetaEssayLabPage: React.FC = () => {
 
         const { data: profileRow, error: profileErr } = await supabase
           .from("profiles")
-          .select("essay_drafts")
+          .select("essay_drafts, demographics")
           .eq("user_id", user.id)
           .maybeSingle();
         if (profileErr) throw profileErr;
 
         const raw = (profileRow as any)?.essay_drafts as EssayDraftsPayload | null | undefined;
+        const demographicsRow = ((profileRow as any)?.demographics ?? null) as
+          | Record<string, any>
+          | null;
         const loadedDrafts: Draft[] = Array.isArray(raw?.drafts) ? raw!.drafts : [];
         const safeDrafts = loadedDrafts
           .filter((d) => d && typeof d === "object")
@@ -125,6 +141,7 @@ const BetaEssayLabPage: React.FC = () => {
             prompt: String(d.prompt ?? ""),
             essay: String(d.essay ?? ""),
             essayType: normalizeEssayType(d.essayType),
+            targetWordCount: clampWordCount(d.targetWordCount, 500),
             updatedAt: String(d.updatedAt ?? nowIso()),
             feedback: d.feedback ?? null,
           }));
@@ -135,6 +152,7 @@ const BetaEssayLabPage: React.FC = () => {
           setDrafts(safeDrafts);
           setSelectedDraftId(safeDrafts[0]?.id ?? null);
           setFeedbackRequests(requests);
+          setDemographics(demographicsRow);
         }
       } catch (e: any) {
         if (!cancelled) setError(e?.message || "Failed to load Essay Lab.");
@@ -158,6 +176,7 @@ const BetaEssayLabPage: React.FC = () => {
       prompt: "",
       essay: "",
       essayType: "personal",
+      targetWordCount: 500,
       updatedAt: nowIso(),
       feedback: null,
     };
@@ -182,8 +201,21 @@ const BetaEssayLabPage: React.FC = () => {
     queuePersist(next, feedbackRequests);
   };
 
+  const ensureProfileComplete = (purpose: "feedback" | "generation"): boolean => {
+    const req = getEssayLabRequirements({ demographics, targetUnitIds, studentProfile });
+    if (!req.missing.length) return true;
+    const verb = purpose === "generation" ? "generate an essay" : "use essay feedback";
+    setError(
+      `Complete your profile to ${verb}: ${req.missing.join(
+        ", "
+      )}. Update /profile/my-profile and pick target schools in /profile/colleges.`
+    );
+    return false;
+  };
+
   const runFeedback = async () => {
     if (!selectedDraft || !user) return;
+    if (!ensureProfileComplete("feedback")) return;
     try {
       setFeedbackLoading(true);
       setError(null);
@@ -202,6 +234,7 @@ const BetaEssayLabPage: React.FC = () => {
         prompt: selectedDraft.prompt,
         context,
         essayType: selectedDraft.essayType,
+        targetWordCount: selectedDraft.targetWordCount,
       });
 
       const nextRequests = feedbackRequests + 1;
@@ -215,6 +248,76 @@ const BetaEssayLabPage: React.FC = () => {
       setError(e?.message || "Failed to generate feedback.");
     } finally {
       setFeedbackLoading(false);
+    }
+  };
+
+  const runGeneration = async () => {
+    if (!selectedDraft || !user) return;
+    if (!ensureProfileComplete("generation")) return;
+    if (
+      (selectedDraft.essayType === "supplement" || selectedDraft.essayType === "piq") &&
+      !selectedDraft.prompt.trim()
+    ) {
+      setError("Add the essay prompt first (required for supplements and PIQs).");
+      return;
+    }
+    try {
+      setGenerationLoading(true);
+      setError(null);
+
+      const schoolIds = (targetUnitIds ?? []).slice(0, 10);
+      let targetSchools: Array<{ unitid: number; name?: string | null }> = schoolIds.map(
+        (id) => ({ unitid: Number(id) })
+      );
+      try {
+        const summaries = await getInstitutionsSummariesByIds(schoolIds);
+        targetSchools = summaries.map((s) => ({
+          unitid: Number((s as any).unitid),
+          name: (s as any).name ?? null,
+        }));
+      } catch {
+        // fallback to IDs only
+      }
+
+      const ctx = {
+        name: `${studentProfile.firstName ?? ""} ${studentProfile.lastName ?? ""}`.trim() || null,
+        location: {
+          country: demographics?.country ?? studentProfile.country ?? null,
+          city: demographics?.city ?? studentProfile.city ?? null,
+        },
+        demographics: {
+          gender: demographics?.gender ?? null,
+          race: demographics?.race ?? null,
+          gradYear: demographics?.grad_year ?? null,
+        },
+        academics: {
+          gpa: studentProfile.gpa ?? null,
+          majors: studentProfile.majors ?? [],
+          satTotal: studentProfile.satTotal ?? null,
+          actComposite: studentProfile.actComposite ?? null,
+        },
+        activities: studentProfile.activities ?? [],
+      };
+
+      const generated = await generateEssayDraft({
+        essayType: selectedDraft.essayType,
+        prompt: selectedDraft.prompt,
+        targetWordCount: selectedDraft.targetWordCount,
+        context: ctx,
+        targetSchools,
+      });
+
+      const nextDrafts = drafts.map((d) =>
+        d.id === selectedDraft.id
+          ? { ...d, essay: generated, feedback: null, updatedAt: nowIso() }
+          : d
+      );
+      setDrafts(nextDrafts);
+      await persistDrafts(nextDrafts, feedbackRequests);
+    } catch (e: any) {
+      setError(e?.message || "Failed to generate an essay draft.");
+    } finally {
+      setGenerationLoading(false);
     }
   };
 
@@ -374,6 +477,31 @@ const BetaEssayLabPage: React.FC = () => {
                   </div>
 
                   <div className="grid gap-2">
+                    <label className="text-xs font-semibold text-slate-600" htmlFor="draft-words">
+                      Target words
+                    </label>
+                    <div className="flex items-center gap-3">
+                      <input
+                        id="draft-words"
+                        name="draft-words"
+                        type="number"
+                        min={100}
+                        max={1500}
+                        value={selectedDraft.targetWordCount}
+                        onChange={(e) =>
+                          updateDraft(selectedDraft.id, {
+                            targetWordCount: clampWordCount(e.target.value, 500),
+                          })
+                        }
+                        className="w-32 rounded-lg border border-slate-200 px-3 py-2 text-sm"
+                      />
+                      <span className="text-xs text-slate-500">
+                        Current: {countWords(selectedDraft.essay)} words
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="grid gap-2">
                     <label className="text-xs font-semibold text-slate-600" htmlFor="draft-essay">
                       Essay
                     </label>
@@ -387,14 +515,24 @@ const BetaEssayLabPage: React.FC = () => {
                     />
                   </div>
 
-                  <button
-                    type="button"
-                    disabled={feedbackLoading || !selectedDraft.essay.trim()}
-                    onClick={() => void runFeedback()}
-                    className="w-full px-4 py-2 rounded-xl bg-blue-600 text-white font-semibold disabled:opacity-60"
-                  >
-                    {feedbackLoading ? "Generating feedback..." : "Get Feedback"}
-                  </button>
+                  <div className="grid gap-3 sm:grid-cols-2">
+                    <button
+                      type="button"
+                      disabled={generationLoading}
+                      onClick={() => void runGeneration()}
+                      className="w-full px-4 py-2 rounded-xl border border-slate-200 text-slate-800 font-semibold disabled:opacity-60"
+                    >
+                      {generationLoading ? "Generating..." : "Magic Generate"}
+                    </button>
+                    <button
+                      type="button"
+                      disabled={feedbackLoading || !selectedDraft.essay.trim()}
+                      onClick={() => void runFeedback()}
+                      className="w-full px-4 py-2 rounded-xl bg-blue-600 text-white font-semibold disabled:opacity-60"
+                    >
+                      {feedbackLoading ? "Generating feedback..." : "Get Feedback"}
+                    </button>
+                  </div>
                 </div>
               )}
             </section>
@@ -511,4 +649,3 @@ const BetaEssayLabPage: React.FC = () => {
 };
 
 export default BetaEssayLabPage;
-
