@@ -1,9 +1,21 @@
 import React, { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { supabase } from "../services/supabaseClient";
 
 const AuthCallbackPage: React.FC = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const getSafeNextPath = (): string | null => {
+    const next = new URLSearchParams(location.search).get("next");
+    if (!next) return null;
+    const trimmed = next.trim();
+    if (!trimmed.startsWith("/") || trimmed.startsWith("//")) return null;
+    if (trimmed.includes("://") || trimmed.includes("\\")) return null;
+    return trimmed;
+  };
+
+  const safeNextPath = getSafeNextPath();
 
   useEffect(() => {
     let cancelled = false;
@@ -30,14 +42,14 @@ const AuthCallbackPage: React.FC = () => {
         // Swallow errors and send the user back to login so they can retry.
       } finally {
         if (!cancelled) {
-          navigate("/profile/route", { replace: true });
+          navigate(safeNextPath ?? "/profile/route", { replace: true });
         }
       }
     })();
     return () => {
       cancelled = true;
     };
-  }, [navigate]);
+  }, [navigate, safeNextPath]);
 
   return (
     <div className="max-w-xl mx-auto text-center py-12">

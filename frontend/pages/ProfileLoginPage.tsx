@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { supabase } from "../services/supabaseClient";
 import { useOnboardingContext } from "../context/OnboardingContext";
 
@@ -14,13 +14,25 @@ const ProfileLoginPage: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const { user, onboardingStep, loading, setUserDirect } = useOnboardingContext();
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const getSafeNextPath = (): string | null => {
+    const next = new URLSearchParams(location.search).get("next");
+    if (!next) return null;
+    const trimmed = next.trim();
+    if (!trimmed.startsWith("/") || trimmed.startsWith("//")) return null;
+    if (trimmed.includes("://") || trimmed.includes("\\")) return null;
+    return trimmed;
+  };
+
+  const safeNextPath = getSafeNextPath();
 
   useEffect(() => {
     if (loading) return;
     if (user) {
-      navigate("/profile/my-profile", { replace: true });
+      navigate(safeNextPath ?? "/profile/my-profile", { replace: true });
     }
-  }, [user, onboardingStep, loading, navigate]);
+  }, [user, onboardingStep, loading, navigate, safeNextPath]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -50,7 +62,7 @@ const ProfileLoginPage: React.FC = () => {
         if (data?.user) {
           setUserDirect(data.user);
         }
-        navigate("/profile/route", { replace: true });
+        navigate(safeNextPath ?? "/profile/route", { replace: true });
       }
     } catch (err: any) {
       setError(err.message ?? "Authentication failed. Please try again.");
@@ -99,7 +111,9 @@ const ProfileLoginPage: React.FC = () => {
               setError(null);
               setMessage(null);
               try {
-                const redirectTo = `${window.location.origin}/auth/callback`;
+                const redirectTo = safeNextPath
+                  ? `${window.location.origin}/auth/callback?next=${encodeURIComponent(safeNextPath)}`
+                  : `${window.location.origin}/auth/callback`;
                 const { error: oauthError } = await supabase.auth.signInWithOAuth({
                   provider: "google",
                   options: { redirectTo },

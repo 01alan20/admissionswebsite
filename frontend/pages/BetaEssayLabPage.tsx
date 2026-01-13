@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { Navigate } from "react-router-dom";
+import { Navigate, useLocation } from "react-router-dom";
 import DashboardLayout from "../components/DashboardLayout";
 import { useOnboardingContext } from "../context/OnboardingContext";
 import { supabase } from "../services/supabaseClient";
@@ -19,6 +19,7 @@ const randomId = () => Math.random().toString(36).slice(2, 10);
 
 const BetaEssayLabPage: React.FC = () => {
   const { user, studentProfile } = useOnboardingContext();
+  const location = useLocation();
 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -148,7 +149,10 @@ const BetaEssayLabPage: React.FC = () => {
     }
   };
 
-  if (!user) return <Navigate to="/profile/login" replace />;
+  if (!user) {
+    const next = `${location.pathname}${location.search}${location.hash}`;
+    return <Navigate to={`/profile/login?next=${encodeURIComponent(next)}`} replace />;
+  }
 
   return (
     <DashboardLayout>
@@ -340,4 +344,3 @@ const BetaEssayLabPage: React.FC = () => {
 };
 
 export default BetaEssayLabPage;
-
