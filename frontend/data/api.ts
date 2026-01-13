@@ -18,7 +18,8 @@ export interface InstitutionIndex {
 }
 
 const VITE_BASE_URL: string = ((import.meta as any).env?.BASE_URL as string) || "/";
-const IS_DEV = Boolean((import.meta as any).env?.DEV);
+// Supabase is the source of truth; local `public/data` fallbacks are disabled.
+const IS_DEV = false;
 const joinBase = (base: string, relative: string): string =>
   `${base.replace(/\/$/, "")}/${relative.replace(/^\//, "")}`;
 

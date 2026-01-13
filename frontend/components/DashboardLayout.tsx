@@ -1,7 +1,17 @@
 import React from "react";
 import type { ReactNode } from "react";
 import { NavLink } from "react-router-dom";
-import { User, ListChecks, Search, NotebookPen, FileText, Map, CalendarDays, LifeBuoy } from "lucide-react";
+import {
+  User,
+  ListChecks,
+  Search,
+  NotebookPen,
+  FileText,
+  Sparkles,
+  Map,
+  CalendarDays,
+  LifeBuoy,
+} from "lucide-react";
 import { useOnboardingContext } from "../context/OnboardingContext";
 
 type DashboardLayoutProps = {
@@ -26,6 +36,11 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
         { label: "Applications", to: "/profile/applications", icon: NotebookPen },
         { label: "Essays", to: "/profile/essays", icon: FileText },
       ],
+    },
+
+    {
+      label: "Essay Lab",
+      items: [{ label: "Essay Lab", to: "/profile/essay-lab", icon: Sparkles }],
     },
 
     {

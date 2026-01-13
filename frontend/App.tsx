@@ -12,6 +12,7 @@ import MyCollegeListPage from './pages/MyCollegeListPage';
 import ProfileCollegesPage from './pages/ProfileCollegesPage';
 import ApplicationsPage from './pages/ApplicationsPage';
 import EssaysPage from './pages/EssaysPage';
+import EssayLabPage from './pages/EssayLabPage';
 import ProfilePathwaysPage from './pages/ProfilePathwaysPage';
 import ProfileTimelinesPage from './pages/ProfileTimelinesPage';
 import BetaEssayLabPage from './pages/BetaEssayLabPage';
@@ -205,12 +206,13 @@ const AppRoutes: React.FC = () => {
         <Route path="/profile/colleges" element={<ProfileCollegesPage />} />
         <Route path="/profile/applications" element={<ApplicationsPage />} />
         <Route path="/profile/essays" element={<EssaysPage />} />
+        <Route path="/profile/essay-lab" element={<EssayLabPage />} />
         <Route path="/profile/pathways" element={<ProfilePathwaysPage />} />
         <Route path="/profile/timelines" element={<ProfileTimelinesPage />} />
         <Route path="/profile/my-profile" element={<ProfileDashboardPage />} />
         <Route path="/profile/dashboard" element={<Navigate to="/profile/my-profile" replace />} />
         <Route path="/profile/beta" element={<Navigate to="/profile/my-profile" replace />} />
-        <Route path="/profile/beta/essays" element={<Navigate to="/profile/essays" replace />} />
+        <Route path="/profile/beta/essays" element={<Navigate to="/profile/essay-lab" replace />} />
         <Route path="/beta/essaylab" element={<BetaEssayLabPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
