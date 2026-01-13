@@ -399,7 +399,7 @@ const EssayLabPage: React.FC = () => {
                   </button>
                 ))}
                 {drafts.length === 0 && (
-                  <div className="text-sm text-slate-500">No essays yet. Click â€œNewâ€.</div>
+                  <div className="text-sm text-slate-500">No essays yet. Click “New”.</div>
                 )}
               </div>
             </section>
@@ -419,7 +419,7 @@ const EssayLabPage: React.FC = () => {
               </div>
 
               {!selectedDraft ? (
-                <div className="text-sm text-slate-500">Select an essay or click â€œNewâ€.</div>
+                <div className="text-sm text-slate-500">Select an essay or click “New”.</div>
               ) : (
                 <div className="space-y-3">
                   <div className="grid gap-2">
@@ -545,7 +545,7 @@ const EssayLabPage: React.FC = () => {
               {!selectedDraft ? (
                 <div className="text-sm text-slate-500">Select an essay to view feedback.</div>
               ) : !selectedDraft.feedback ? (
-                <div className="text-sm text-slate-500">No feedback yet. Click â€œGet Feedbackâ€.</div>
+                <div className="text-sm text-slate-500">No feedback yet. Click “Get Feedback”.</div>
               ) : (
                 <div className="space-y-4 max-h-[70vh] overflow-y-auto pr-1">
                   {rubric && (
