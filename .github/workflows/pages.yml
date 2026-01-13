@@ -71,6 +71,12 @@ jobs:
           rm -f "site/data/University_data/institutions.json.bak" || true
           rm -f "site/beta/data/University_data/institutions.json.bak" || true
 
+          # Remove dev-only per-school files (Supabase is used in production).
+          rm -rf "site/data/University_data/metrics" || true
+          rm -rf "site/data/University_data/institutions" || true
+          rm -rf "site/beta/data/University_data/metrics" || true
+          rm -rf "site/beta/data/University_data/institutions" || true
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
