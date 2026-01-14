@@ -13,6 +13,33 @@ const clampWordCount = (value: unknown, fallback: number): number => {
   return int;
 };
 
+const countWords = (text: string): number => {
+  const cleaned = String(text ?? "")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (!cleaned) return 0;
+  return cleaned.split(" ").length;
+};
+
+const enforceWordCap = (text: string, cap: number): string => {
+  const cleaned = String(text ?? "")
+    .replace(/\s+/g, " ")
+    .trim();
+  if (!cleaned) return "";
+  const words = cleaned.split(" ").filter(Boolean);
+  if (words.length <= cap) return cleaned;
+
+  // Prefer ending on a sentence boundary near the cap.
+  const sentenceEnd = /[.!?][\"')\]]*$/;
+  const start = Math.max(0, cap - 60);
+  for (let i = cap - 1; i >= start; i--) {
+    if (sentenceEnd.test(words[i])) {
+      return words.slice(0, i + 1).join(" ");
+    }
+  }
+  return words.slice(0, cap).join(" ");
+};
+
 const buildPrompt = (input: {
   essayType: "personal" | "supplement" | "piq";
   prompt?: string | null;
@@ -40,7 +67,8 @@ const buildPrompt = (input: {
         ].join(" ");
 
   const rules = [
-    `Target length: about ${target} words (±5%).`,
+    `Hard cap: ${target} words. Do NOT exceed ${target} words.`,
+    `Aim for ${Math.max(100, Math.floor(target * 0.95))}-${target} words unless the user prompt explicitly requests otherwise.`,
     "Use ONLY the provided profile context and activities; do not invent awards, jobs, leadership roles, or schools attended.",
     "Sound like a real student with a distinct voice; avoid buzzwords and generic motivational clichés.",
     "Use concrete details (scenes, objects, dialogue snippets) where appropriate.",
@@ -97,8 +125,13 @@ export const generateEssayDraft = async (input: {
   if (!text) throw new Error("No response text from Gemini.");
 
   const parsed = JSON.parse(text) as { essay?: unknown };
-  const essay = String(parsed?.essay ?? "").trim();
+  const target = clampWordCount(input.targetWordCount, 500);
+  const essayRaw = String(parsed?.essay ?? "").trim();
+  const essay = enforceWordCap(essayRaw, target);
   if (!essay) throw new Error("Gemini returned an empty essay.");
+  if (countWords(essay) > target) {
+    // Shouldn't happen, but keep a hard cap anyway.
+    return enforceWordCap(essay, target);
+  }
   return essay;
 };
-
