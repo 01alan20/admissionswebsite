@@ -181,7 +181,13 @@ const EssaysPage: React.FC = () => {
     setEnabledCategories(allCategories);
   };
 
-  if (loadingGuard) return loadingGuard;
+  if (loadingGuard) {
+    return (
+      <DashboardLayout>
+        <div className="py-10 text-sm text-slate-600">Loading essays...</div>
+      </DashboardLayout>
+    );
+  }
 
   return (
     <DashboardLayout>
@@ -507,4 +513,3 @@ function calculateEssaySimilarity(
 
   return Math.min(5, Math.max(1, score));
 }
-
