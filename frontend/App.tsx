@@ -15,7 +15,6 @@ import EssaysPage from './pages/EssaysPage';
 import EssayLabPage from './pages/EssayLabPage';
 import ProfilePathwaysPage from './pages/ProfilePathwaysPage';
 import ProfileTimelinesPage from './pages/ProfileTimelinesPage';
-import BetaEssayLabPage from './pages/BetaEssayLabPage';
 import ContactPage from './pages/ContactPage';
 import AuthCallbackPage from './pages/AuthCallbackPage';
 import ErrorBoundary from './components/ErrorBoundary';
@@ -213,7 +212,7 @@ const AppRoutes: React.FC = () => {
         <Route path="/profile/dashboard" element={<Navigate to="/profile/my-profile" replace />} />
         <Route path="/profile/beta" element={<Navigate to="/profile/my-profile" replace />} />
         <Route path="/profile/beta/essays" element={<Navigate to="/profile/essay-lab" replace />} />
-        <Route path="/beta/essaylab" element={<BetaEssayLabPage />} />
+        <Route path="/beta/essaylab" element={<Navigate to="/profile/essay-lab" replace />} />
         <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </ErrorBoundary>
