@@ -153,9 +153,9 @@ const faqJsonLd = {
 
 const FaqPage: React.FC = () => {
   useEffect(() => {
-    const title = 'College Admissions Consultant FAQs for International Students and Families | SeeThrough Admissions';
+    const title = 'College Admissions Consultant FAQs | SeeThrough Admissions';
     const description =
-      'Common questions about working with a college admissions consultant for international students, including timing, services, ethics, and how to get started.';
+      'Common questions about working with a college admissions consultant, including timing, services, ethics, and how to get started.';
 
     document.title = title;
     let meta = document.querySelector('meta[name=\"description\"]');
@@ -171,11 +171,11 @@ const FaqPage: React.FC = () => {
     <div className="space-y-8">
       <div className="bg-white rounded-lg shadow-md p-6 sm:p-8 space-y-4">
         <h1 className="text-3xl sm:text-4xl font-extrabold text-brand-dark">
-          College Admissions Consultant FAQs for International Students and Families
+          College Admissions Consultant FAQs
         </h1>
         <p className="text-gray-700 text-lg">
           Clear answers to the most common questions parents and students ask about independent college counseling,
-          timing, and how US college admissions help works for international students.
+          timing, and how US college admissions help works.
         </p>
         <div className="flex flex-col sm:flex-row gap-3">
           <Link

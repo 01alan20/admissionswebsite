@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import { Link, useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import {
   getAllInstitutions,
   getInstitutionTestScoreMap,
@@ -9,7 +9,9 @@ import {
   getMajorsByInstitution,
   getTopUnitIdsByApplicants,
 } from "../data/api";
+import { useOnboardingContext } from "../context/OnboardingContext";
 import { categorizeTestPolicy } from "../utils/admissionsModel";
+import { trackEvent } from "../utils/analytics";
 import {
   buildMajorAreaOptions,
   buildSpecificMajorOptions,
@@ -362,7 +364,10 @@ const ExplorePage: React.FC<ExplorePageProps> = ({
   initialMajorAreas = [],
   initialSpecificMajors = [],
 }) => {
+  const location = useLocation();
+  const navigate = useNavigate();
   const [searchParams, setSearchParams] = useSearchParams();
+  const { user, targetUnitIds, setTargetUnitIds } = useOnboardingContext();
   const [institutions, setInstitutions] = useState<Institution[]>([]);
   const [demographicsMap, setDemographicsMap] = useState<Map<number, InstitutionDemographics>>(new Map());
   const [testScoreMap, setTestScoreMap] = useState<Map<number, InstitutionTestScores>>(new Map());
@@ -397,6 +402,25 @@ const ExplorePage: React.FC<ExplorePageProps> = ({
 
   const searchQuery = searchParams.get("q") ?? "";
   const [searchInput, setSearchInput] = useState(searchQuery);
+
+  const nextPath = useMemo(
+    () => `${location.pathname}${location.search}${location.hash}`,
+    [location.pathname, location.search, location.hash]
+  );
+
+  useEffect(() => {
+    document.title = "Explore US Colleges | SeeThrough Admissions";
+    let meta = document.querySelector('meta[name="description"]');
+    if (!meta) {
+      meta = document.createElement("meta");
+      meta.setAttribute("name", "description");
+      document.head.appendChild(meta);
+    }
+    meta.setAttribute(
+      "content",
+      "Explore US colleges with filters for selectivity, tuition, testing policies, and majors. Save schools to your list when you're ready."
+    );
+  }, []);
 
   const applySearchQuery = useCallback((value: string) => {
     const current = searchParams.get("q") ?? "";
@@ -518,6 +542,26 @@ const ExplorePage: React.FC<ExplorePageProps> = ({
     return Array.from(set).sort();
   }, [locationMap]);
 
+  const handleSaveToggle = useCallback(
+    (unitId: number) => {
+      if (!user) {
+        trackEvent("sign_up_start", { method: "email_or_google", source: "explore_save" });
+        navigate(`/profile/login?next=${encodeURIComponent(nextPath)}`);
+        return;
+      }
+      const next = new Set<number>((targetUnitIds ?? []).map((id) => Number(id)).filter((id) => Number.isFinite(id)));
+      if (next.has(unitId)) {
+        next.delete(unitId);
+        trackEvent("college_unsave", { source: "explore", unitid: unitId });
+      } else {
+        next.add(unitId);
+        trackEvent("college_save", { source: "explore", unitid: unitId });
+      }
+      setTargetUnitIds(Array.from(next));
+    },
+    [navigate, nextPath, setTargetUnitIds, targetUnitIds, user]
+  );
+
   const orderedInstitutions = useMemo(() => {
     const order = new Map<number, number>();
     topApplicants.forEach((id, idx) => order.set(id, idx));
@@ -621,7 +665,62 @@ const ExplorePage: React.FC<ExplorePageProps> = ({
   };
 
   return (
-    <div className="py-6">
+    <div className="w-full px-4 sm:px-6 lg:px-10 py-6 space-y-6">
+      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 sm:p-8">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+          <div>
+            <h1 className="text-3xl sm:text-4xl font-extrabold text-brand-dark">Explore US Colleges</h1>
+            <p className="mt-2 text-slate-600 max-w-2xl">
+              Filter by tuition, selectivity, testing policies, majors, and location. Save schools to build your list.
+            </p>
+            <div className="mt-4 flex flex-wrap gap-2 text-sm font-semibold">
+              <Link
+                to="/"
+                className="inline-flex items-center rounded-full bg-slate-100 text-slate-800 border border-slate-200 px-3 py-1 hover:bg-slate-200"
+              >
+                Home
+              </Link>
+              <Link
+                to="/faq"
+                className="inline-flex items-center rounded-full bg-slate-100 text-slate-800 border border-slate-200 px-3 py-1 hover:bg-slate-200"
+              >
+                FAQs
+              </Link>
+              <Link
+                to="/timelines"
+                className="inline-flex items-center rounded-full bg-slate-100 text-slate-800 border border-slate-200 px-3 py-1 hover:bg-slate-200"
+              >
+                Timelines
+              </Link>
+            </div>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-2">
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center rounded-lg bg-brand-primary px-4 py-2.5 text-white font-semibold hover:bg-brand-dark"
+              onClick={() => trackEvent("cta_click", { name: "free_profile_review", source: "explore_header" })}
+            >
+              Free profile review
+            </Link>
+            {user ? (
+              <Link
+                to="/profile/college-list"
+                className="inline-flex items-center justify-center rounded-lg border border-slate-200 bg-white px-4 py-2.5 font-semibold text-slate-800 hover:bg-slate-50"
+              >
+                My college list
+              </Link>
+            ) : (
+              <Link
+                to={`/profile/login?next=${encodeURIComponent(nextPath)}`}
+                className="inline-flex items-center justify-center rounded-lg border border-slate-200 bg-white px-4 py-2.5 font-semibold text-slate-800 hover:bg-slate-50"
+              >
+                Log in / sign up
+              </Link>
+            )}
+          </div>
+        </div>
+      </div>
+
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
         <div className="lg:col-span-3 space-y-4">
           <div className="bg-white rounded-2xl shadow-sm border border-slate-200 p-4 space-y-4">
@@ -933,13 +1032,26 @@ const ExplorePage: React.FC<ExplorePageProps> = ({
                       </div>
                       {renderDemographicsBar(inst.unitid)}
                     </div>
-                    <div className="mt-4">
+                    <div className="mt-4 flex items-center gap-2">
                       <Link
                         to={`/institution/${inst.unitid}`}
-                        className="inline-flex w-full items-center justify-center rounded-lg bg-brand-primary text-white font-semibold py-2 hover:bg-brand-primary/90"
+                        className="inline-flex flex-1 items-center justify-center rounded-lg bg-brand-primary text-white font-semibold py-2 hover:bg-brand-primary/90"
+                        onClick={() => trackEvent("view_institution", { source: "explore", unitid: inst.unitid })}
                       >
                         View Details
                       </Link>
+                      <button
+                        type="button"
+                        onClick={() => handleSaveToggle(inst.unitid)}
+                        className={[
+                          "inline-flex items-center justify-center rounded-lg border px-3 py-2 text-sm font-semibold",
+                          user && targetUnitIds?.includes(inst.unitid)
+                            ? "border-emerald-200 bg-emerald-50 text-emerald-800 hover:bg-emerald-100"
+                            : "border-slate-200 bg-white text-slate-800 hover:bg-slate-50",
+                        ].join(" ")}
+                      >
+                        {user && targetUnitIds?.includes(inst.unitid) ? "Saved" : "Save"}
+                      </button>
                     </div>
                   </div>
                 );

@@ -52,7 +52,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
     },
     {
       label: "Support",
-      items: [{ label: "Planning Help", to: "/contact", icon: LifeBuoy }],
+      items: [{ label: "Free Profile Review", to: "/contact", icon: LifeBuoy }],
     },
   ];
 

@@ -50,9 +50,9 @@ const ContactPage: React.FC = () => {
     <div className="w-full px-4 sm:px-6 lg:px-10 py-10">
       <div className="max-w-3xl mx-auto space-y-6">
         <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6 sm:p-8">
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-brand-dark">Contact</h1>
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-brand-dark">Free Profile Review</h1>
           <p className="text-slate-600 mt-2">
-            Send a question and we will reply by email as soon as we can.
+            Tell us your situation and we’ll reply by email with clear next steps.
           </p>
         </div>
 

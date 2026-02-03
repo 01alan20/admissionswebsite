@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams, Link, useLocation, useNavigate } from 'react-router-dom';
 import { useOnboardingContext } from '../context/OnboardingContext';
 import {
   InstitutionDetail,
@@ -9,6 +9,7 @@ import {
   MajorsMeta,
 } from '../types';
 import { categorizeTestPolicy } from '../utils/admissionsModel';
+import { trackEvent } from '../utils/analytics';
 // removed tuition trend chart
 import {
   getInstitutionDetail,
@@ -158,6 +159,7 @@ const DemographicsDonut: React.FC<{ groups: DemographicGroupSlice[] }> = ({ grou
 
 const DetailPage: React.FC = () => {
   const { unitid } = useParams<{ unitid: string }>();
+  const location = useLocation();
   const navigate = useNavigate();
   const [detail, setDetail] = useState<InstitutionDetail | null>(null);
   const [metrics, setMetrics] = useState<InstitutionMetrics | null>(null);
@@ -168,8 +170,10 @@ const DetailPage: React.FC = () => {
   const [demographics, setDemographics] = useState<InstitutionDemographics | null>(null);
   const { user, targetUnitIds, setTargetUnitIds } = useOnboardingContext();
   const unitIdNumber = unitid ? Number(unitid) : null;
-  const backHref = user ? "/profile/colleges" : "/";
-  const backLabel = user ? "Back to Colleges" : "Back Home";
+  const backHref = user ? "/profile/colleges" : "/explore";
+  const backLabel = user ? "Back to Colleges" : "Back to Explore";
+  const nextPath = `${location.pathname}${location.search}${location.hash}`;
+  const isSaved = unitIdNumber != null && Number.isFinite(unitIdNumber) && (targetUnitIds ?? []).includes(unitIdNumber);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -314,12 +318,20 @@ const DetailPage: React.FC = () => {
   const addToTargets = () => {
     if (!unitIdNumber) return;
     if (!user) {
-      navigate("/profile/login");
+      trackEvent("sign_up_start", { method: "email_or_google", source: "detail_save" });
+      navigate(`/profile/login?next=${encodeURIComponent(nextPath)}`);
       return;
     }
-    const next = Array.from(new Set([...(targetUnitIds || []), unitIdNumber]));
-    setTargetUnitIds(next);
-    navigate("/profile/colleges");
+
+    const next = new Set<number>((targetUnitIds ?? []).map((id) => Number(id)).filter((id) => Number.isFinite(id)));
+    if (next.has(unitIdNumber)) {
+      next.delete(unitIdNumber);
+      trackEvent("college_unsave", { source: "detail", unitid: unitIdNumber });
+    } else {
+      next.add(unitIdNumber);
+      trackEvent("college_save", { source: "detail", unitid: unitIdNumber });
+    }
+    setTargetUnitIds(Array.from(next));
   };
 
   if (loading) return <div className="text-center p-10">Loading university details...</div>;
@@ -365,9 +377,14 @@ const DetailPage: React.FC = () => {
           <button
             type="button"
             onClick={addToTargets}
-            className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2 text-white text-sm font-semibold shadow-sm hover:bg-blue-700 transition"
+            className={[
+              "inline-flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold shadow-sm transition",
+              isSaved
+                ? "bg-emerald-600 text-white hover:bg-emerald-700"
+                : "bg-brand-primary text-white hover:bg-brand-dark",
+            ].join(" ")}
           >
-            Add to My Target Schools
+            {isSaved ? "Saved to My List" : "Save to My List"}
           </button>
         </div>
       </header>

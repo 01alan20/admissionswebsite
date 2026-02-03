@@ -1,5 +1,5 @@
 ﻿import React, { useState } from 'react';
-import { BrowserRouter, Route, Routes, NavLink, Navigate } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, NavLink, Navigate, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { trackPageView } from './utils/analytics';
@@ -45,7 +45,7 @@ const Header: React.FC = () => {
   const linkClass =
     "text-slate-700 hover:bg-slate-100 px-3 py-2 rounded-lg text-sm font-semibold transition-colors";
   const activeLinkClass =
-    "bg-blue-600 text-white px-3 py-2 rounded-lg text-sm font-semibold shadow-sm";
+    "bg-brand-primary text-white px-3 py-2 rounded-lg text-sm font-semibold shadow-sm";
 
   type HeaderLink = { label: string; to: string; extra?: string };
 
@@ -53,7 +53,7 @@ const Header: React.FC = () => {
     { label: 'Home', to: '/' },
     { label: 'Explore', to: '/explore' },
     { label: 'FAQs', to: '/faq' },
-    { label: 'Contact', to: '/contact' },
+    { label: 'Free Review', to: '/contact' },
   ];
 
   const profileLink: HeaderLink | null = !loading && user
@@ -82,7 +82,7 @@ const Header: React.FC = () => {
                 type="button"
                 aria-label="Toggle navigation"
                 onClick={() => setMobileOpen((o) => !o)}
-                className="inline-flex items-center justify-center rounded-lg p-2 text-slate-700 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-600/30"
+                className="inline-flex items-center justify-center rounded-lg p-2 text-slate-700 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-brand-primary/30"
               >
                 <svg
                   className="h-6 w-6"
@@ -164,7 +164,7 @@ const Header: React.FC = () => {
                   onClick={closeMobile}
                   className={({ isActive }) =>
                     `block px-3 py-2 rounded-lg text-base font-semibold ${
-                      isActive ? 'bg-blue-600 text-white' : 'text-slate-700 hover:bg-slate-100'
+                      isActive ? 'bg-brand-primary text-white' : 'text-slate-700 hover:bg-slate-100'
                     } ${extra ?? ''}`
                   }
                 >
@@ -194,11 +194,21 @@ const Footer: React.FC = () => (
 
 const AppRoutes: React.FC = () => {
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
+    // GitHub Pages (and some CDNs) canonicalize to trailing slashes for directories
+    // (e.g. /explore -> /explore/). Normalize to a stable pathname so React Router
+    // navigation stays predictable.
+    if (!location.pathname.startsWith("/beta") && location.pathname.length > 1 && location.pathname.endsWith("/")) {
+      const normalized = location.pathname.replace(/\/+$/, "");
+      navigate(`${normalized}${location.search}${location.hash}`, { replace: true });
+      return;
+    }
+
     const path = `${location.pathname}${location.search}${location.hash}`;
     trackPageView(path);
-  }, [location]);
+  }, [location.pathname, location.search, location.hash, navigate]);
 
   const mainClassName = "flex-grow bg-slate-50";
 

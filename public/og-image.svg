@@ -8,7 +8,7 @@
   <rect width="1200" height="630" fill="url(#bg)"/>
   <rect x="90" y="90" width="1020" height="450" rx="32" fill="#F0F4F8" opacity="0.10"/>
   <text x="120" y="240" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" font-size="64" font-weight="800" fill="#F0F4F8">SeeThrough Admissions</text>
-  <text x="120" y="320" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" font-size="36" font-weight="600" fill="#F0F4F8" opacity="0.92">US admissions guidance for international students</text>
+  <text x="120" y="320" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" font-size="36" font-weight="600" fill="#F0F4F8" opacity="0.92">Transparent US admissions guidance</text>
   <text x="120" y="390" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" font-size="28" font-weight="500" fill="#F0F4F8" opacity="0.85">Explore colleges • Track timelines • Learn from real essays</text>
   <circle cx="1040" cy="210" r="62" fill="#F2A900"/>
   <text x="1040" y="230" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial" font-size="56" font-weight="900" fill="#0A2240">S</text>

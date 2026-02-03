@@ -59,7 +59,7 @@ const HomePage: React.FC = () => {
   const [authError, setAuthError] = useState<string | null>(null);
 
   useEffect(() => {
-    document.title = "US College Admissions Consultant for International Students | SeeThrough Admissions";
+    document.title = "US College Admissions Consultant | SeeThrough Admissions";
     let meta = document.querySelector('meta[name="description"]');
     if (!meta) {
       meta = document.createElement("meta");
@@ -68,7 +68,7 @@ const HomePage: React.FC = () => {
     }
     meta.setAttribute(
       "content",
-      "Transparent US college admissions guidance for international students and families. Build your profile, explore colleges, and learn from successful applications and essays."
+      "Transparent US college admissions guidance and planning tools. Build your profile, explore colleges, and learn from successful applications and essays."
     );
   }, []);
 
@@ -270,18 +270,18 @@ const HomePage: React.FC = () => {
           <div className="grid gap-10 lg:grid-cols-[1.25fr,0.75fr] items-start">
             <div>
               <h1 className="mt-2 text-4xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
-                Your college admissions, simplified
+                US College Admissions Consultant
               </h1>
               <p className="mt-4 text-base sm:text-lg text-slate-600 max-w-2xl">
-                Build a balanced college list, plan testing, and track deadlines—built for international students applying to US universities.
+                Clear, ethical guidance plus practical tools to build a balanced college list, plan testing, and track deadlines—without the stress.
               </p>
 
               <div className="mt-7 flex flex-wrap gap-2 text-sm text-slate-700">
                 {[
-                  { label: "College Explorer", icon: <GraduationCap className="h-4 w-4 text-blue-700" /> },
-                  { label: "Smart Tracking", icon: <Sparkles className="h-4 w-4 text-blue-700" /> },
-                  { label: "Admissions Timeline", icon: <CalendarCheck2 className="h-4 w-4 text-blue-700" /> },
-                  { label: "Real Essays", icon: <ScrollText className="h-4 w-4 text-blue-700" /> },
+                  { label: "College Explorer", icon: <GraduationCap className="h-4 w-4 text-brand-primary" /> },
+                  { label: "Smart Tracking", icon: <Sparkles className="h-4 w-4 text-brand-primary" /> },
+                  { label: "Admissions Timeline", icon: <CalendarCheck2 className="h-4 w-4 text-brand-primary" /> },
+                  { label: "Real Essays", icon: <ScrollText className="h-4 w-4 text-brand-primary" /> },
                 ].map((f: FeatureHighlight) => (
                   <div
                     key={f.label}
@@ -299,10 +299,19 @@ const HomePage: React.FC = () => {
             <div className="rounded-2xl border border-slate-200 bg-white shadow-sm p-6">
               {!user ? (
                 <>
-                  <h2 className="text-lg font-semibold text-slate-900">
-                    Create your free account
-                  </h2>
+                  <h2 className="text-lg font-semibold text-slate-900">Start with the free tools</h2>
+                  <p className="mt-1 text-sm text-slate-600">
+                    Browse colleges and timelines without an account. Create one when you want to save your list.
+                  </p>
                   <div className="space-y-3">
+                    <Link
+                      to="/explore"
+                      className="w-full inline-flex items-center justify-center rounded-lg bg-brand-primary px-4 py-2.5 text-white text-sm font-semibold hover:bg-brand-dark"
+                      onClick={() => trackEvent("cta_click", { name: "explore", source: "home" })}
+                    >
+                      Explore colleges (free)
+                    </Link>
+
                     <button
                       type="button"
                       onClick={handleGoogleSignup}
@@ -355,7 +364,7 @@ const HomePage: React.FC = () => {
                         onChange={(e) => setAuthEmail(e.target.value)}
                         autoComplete="email"
                         placeholder="email"
-                        className="w-full px-3 py-2 border border-slate-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600 text-sm"
+                        className="w-full px-3 py-2 border border-slate-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-primary/30 focus:border-brand-primary text-sm"
                       />
                     </div>
                     <div>
@@ -374,14 +383,14 @@ const HomePage: React.FC = () => {
                         onChange={(e) => setAuthPassword(e.target.value)}
                         autoComplete="new-password"
                         placeholder="Create a password"
-                        className="w-full px-3 py-2 border border-slate-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-600/30 focus:border-blue-600 text-sm"
+                        className="w-full px-3 py-2 border border-slate-200 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-primary/30 focus:border-brand-primary text-sm"
                       />
                     </div>
 
                     <button
                       type="submit"
                       disabled={authLoading}
-                      className="w-full inline-flex items-center justify-center rounded-lg bg-blue-600 px-4 py-2.5 text-white font-semibold hover:bg-blue-700 disabled:opacity-60"
+                      className="w-full inline-flex items-center justify-center rounded-lg bg-slate-900 px-4 py-2.5 text-white font-semibold hover:bg-slate-800 disabled:opacity-60"
                     >
                       {authLoading ? "Creating..." : "Get Started Now"}
                     </button>
@@ -397,12 +406,22 @@ const HomePage: React.FC = () => {
                       Already have an account?{" "}
                       <Link
                         to="/profile/login"
-                        className="text-blue-700 hover:underline font-semibold"
+                        className="text-brand-primary hover:underline font-semibold"
                       >
                         Log in
                       </Link>
                     </p>
                   </form>
+
+                  <div className="pt-3">
+                    <Link
+                      to="/contact"
+                      className="w-full inline-flex items-center justify-center rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-slate-800 hover:bg-slate-50"
+                      onClick={() => trackEvent("cta_click", { name: "free_profile_review", source: "home" })}
+                    >
+                      Get a free profile review
+                    </Link>
+                  </div>
                 </>
               ) : (
                 <>
@@ -412,7 +431,7 @@ const HomePage: React.FC = () => {
                   <p className="mt-1 text-sm text-slate-600 truncate">{user.email}</p>
                   <Link
                         to="/profile/my-profile"
-                    className="mt-4 w-full inline-flex items-center justify-center rounded-lg bg-blue-600 px-4 py-2.5 text-white font-semibold hover:bg-blue-700"
+                    className="mt-4 w-full inline-flex items-center justify-center rounded-lg bg-brand-primary px-4 py-2.5 text-white font-semibold hover:bg-brand-dark"
                   >
                     Go to dashboard
                   </Link>
@@ -426,8 +445,8 @@ const HomePage: React.FC = () => {
       <section className="space-y-4">
         <div className="rounded-2xl bg-white border border-slate-200 shadow-sm p-6">
           <div className="flex items-start gap-3">
-            <div className="h-9 w-9 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center">
-              <span className="text-base">🎓</span>
+            <div className="h-9 w-9 rounded-xl bg-brand-light border border-slate-200 flex items-center justify-center">
+              <GraduationCap className="h-5 w-5 text-brand-primary" />
             </div>
             <div>
               <h2 className="text-2xl font-extrabold text-slate-900">College Explorer</h2>
@@ -451,7 +470,7 @@ const HomePage: React.FC = () => {
                 <span className="inline-flex items-center rounded-full bg-slate-100 text-slate-700 border border-slate-200 px-2 py-1">
                   {inst.control?.toLowerCase().includes("public") ? "Public" : "Private"}
                 </span>
-                <span className="inline-flex items-center rounded-full bg-blue-50 text-blue-700 border border-blue-200 px-2 py-1">
+                <span className="inline-flex items-center rounded-full bg-brand-light text-brand-primary border border-slate-200 px-2 py-1">
                   {inst.acceptance_rate != null
                     ? `${Math.round(
                         inst.acceptance_rate > 1
@@ -470,7 +489,7 @@ const HomePage: React.FC = () => {
               <div className="mt-4 flex items-center gap-3">
                 <Link
                   to={`/institution/${inst.unitid}`}
-                  className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-4 py-2 text-white text-sm font-semibold hover:bg-blue-700"
+                  className="inline-flex items-center justify-center rounded-lg bg-brand-primary px-4 py-2 text-white text-sm font-semibold hover:bg-brand-dark"
                 >
                   View Details
                 </Link>
@@ -496,7 +515,7 @@ const HomePage: React.FC = () => {
                 className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
               >
                 <div className="flex flex-wrap gap-2 text-xs font-semibold">
-                  <span className="inline-flex items-center rounded-full bg-blue-50 text-blue-700 border border-blue-200 px-2 py-1">
+                  <span className="inline-flex items-center rounded-full bg-brand-light text-brand-primary border border-slate-200 px-2 py-1">
                     {e.school ?? "School"}
                   </span>
                   <span className="inline-flex items-center rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 px-2 py-1">
@@ -519,12 +538,12 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-      <section className="rounded-2xl bg-blue-600 text-white shadow-sm px-6 py-12 text-center">
+      <section className="rounded-2xl bg-brand-primary text-white shadow-sm px-6 py-12 text-center">
         <h2 className="text-4xl font-extrabold">Stop Guessing. Start Planning</h2>
         <div className="mt-6 flex justify-center">
           <Link
             to={user ? "/profile/my-profile" : "/profile/login"}
-            className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 font-semibold text-blue-700 hover:bg-slate-50"
+            className="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 font-semibold text-brand-primary hover:bg-slate-50"
           >
             Get Started Now
           </Link>
