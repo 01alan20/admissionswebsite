@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { supabase } from "../services/supabaseClient";
 import { useOnboardingContext } from "../context/OnboardingContext";
 import { CalendarCheck2, GraduationCap, ScrollText, Sparkles } from "lucide-react";
+import { trackEvent } from "../utils/analytics";
 
 type InstitutionRow = {
   unitid: number;
@@ -58,7 +59,7 @@ const HomePage: React.FC = () => {
   const [authError, setAuthError] = useState<string | null>(null);
 
   useEffect(() => {
-    document.title = "SeeThrough Admissions | College planning workspace";
+    document.title = "US College Admissions Consultant for International Students | SeeThrough Admissions";
     let meta = document.querySelector('meta[name="description"]');
     if (!meta) {
       meta = document.createElement("meta");
@@ -67,7 +68,7 @@ const HomePage: React.FC = () => {
     }
     meta.setAttribute(
       "content",
-      "Build your profile, explore colleges, and learn from successful applications and essays."
+      "Transparent US college admissions guidance for international students and families. Build your profile, explore colleges, and learn from successful applications and essays."
     );
   }, []);
 
@@ -115,11 +116,13 @@ const HomePage: React.FC = () => {
     setAuthError(null);
     setAuthMessage(null);
     try {
+      trackEvent("sign_up_start", { method: "email", source: "home" });
       const { error } = await supabase.auth.signUp({
         email: authEmail,
         password: authPassword,
       });
       if (error) throw error;
+      trackEvent("sign_up", { method: "email", source: "home" });
       setAuthMessage("Account created. Check your inbox to verify, then log in.");
     } catch (err: any) {
       setAuthError(err?.message ?? "Failed to create account.");
@@ -134,6 +137,7 @@ const HomePage: React.FC = () => {
     setAuthError(null);
     setAuthMessage(null);
     try {
+      trackEvent("sign_up_start", { method: "google", source: "home" });
       const redirectTo = `${window.location.origin}/auth/callback`;
       const { error } = await supabase.auth.signInWithOAuth({
         provider: "google",
@@ -269,7 +273,7 @@ const HomePage: React.FC = () => {
                 Your college admissions, simplified
               </h1>
               <p className="mt-4 text-base sm:text-lg text-slate-600 max-w-2xl">
-                Unlock testing, colleges & tracking to get into your dream school.
+                Build a balanced college list, plan testing, and track deadlines—built for international students applying to US universities.
               </p>
 
               <div className="mt-7 flex flex-wrap gap-2 text-sm text-slate-700">

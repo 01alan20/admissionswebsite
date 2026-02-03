@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { supabase } from "../services/supabaseClient";
 import { useOnboardingContext } from "../context/OnboardingContext";
+import { trackEvent } from "../utils/analytics";
 
 type AuthMode = "login" | "signup";
 
@@ -42,16 +43,19 @@ const ProfileLoginPage: React.FC = () => {
     setMessage(null);
     try {
       if (mode === "signup") {
+        trackEvent("sign_up_start", { method: "email", source: "profile_login" });
         const { error: signUpError } = await supabase.auth.signUp({
           email,
           password,
         });
         if (signUpError) throw signUpError;
+        trackEvent("sign_up", { method: "email", source: "profile_login" });
         setMessage(
           "Account created. Check your inbox for a verification email from Supabase (our authentication provider), then log in here with your password after confirming."
         );
         setMode("login");
       } else {
+        trackEvent("login_start", { method: "email", source: "profile_login" });
         const { data, error: signInError } = await supabase.auth.signInWithPassword({
           email,
           password,
@@ -61,6 +65,7 @@ const ProfileLoginPage: React.FC = () => {
         // waiting for a full app reload.
         if (data?.user) {
           setUserDirect(data.user);
+          trackEvent("login", { method: "email", source: "profile_login" });
         }
         navigate(safeNextPath ?? "/profile/route", { replace: true });
       }
@@ -111,6 +116,7 @@ const ProfileLoginPage: React.FC = () => {
               setError(null);
               setMessage(null);
               try {
+                trackEvent("sign_up_start", { method: "google", source: "profile_login" });
                 const redirectTo = safeNextPath
                   ? `${window.location.origin}/auth/callback?next=${encodeURIComponent(safeNextPath)}`
                   : `${window.location.origin}/auth/callback`;

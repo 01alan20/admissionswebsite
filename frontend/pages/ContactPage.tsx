@@ -2,6 +2,7 @@ import React, { useMemo, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { useOnboardingContext } from "../context/OnboardingContext";
 import { submitContactRequest } from "../services/contactRequests";
+import { trackEvent } from "../utils/analytics";
 
 type SubmitState = "idle" | "submitting" | "success" | "error";
 
@@ -37,6 +38,7 @@ const ContactPage: React.FC = () => {
         userId: user?.id ?? null,
         profileSnapshot: user ? profileSummary : null,
       });
+      trackEvent("generate_lead", { source: sourcePage || "/contact" });
       setSubmitState("success");
     } catch (err) {
       setSubmitState("error");

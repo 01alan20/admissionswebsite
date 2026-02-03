@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/generate_spa_route_files.mjs",
     "lint": "eslint .",
     "preview": "vite preview",
     "load:supabase:institutions": "node scripts/load_supabase_institutions.mjs",

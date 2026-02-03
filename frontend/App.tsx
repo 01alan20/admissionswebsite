@@ -4,6 +4,11 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { trackPageView } from './utils/analytics';
 import HomePage from './pages/HomePage';
+import ExplorePage from './pages/ExplorePage';
+import ComparePage from './pages/ComparePage';
+import TimelinesPage from './pages/TimelinesPage';
+import HighSchoolPathwaysPage from './pages/HighSchoolPathwaysPage';
+import FaqPage from './pages/FaqPage';
 import DetailPage from './pages/DetailPage';
 import ProfileRoutePage from './pages/ProfileRoutePage';
 import ProfileLoginPage from './pages/ProfileLoginPage';
@@ -28,7 +33,12 @@ const Header: React.FC = () => {
   // For the new CollegeBase-style experience, hide the
   // marketing header on profile/dashboard routes so the
   // sidebar layout can take over the full canvas.
-  if (location.pathname.startsWith("/profile") || location.pathname.startsWith("/beta")) {
+  const shouldHideHeader =
+    (location.pathname.startsWith("/profile") &&
+      !["/profile", "/profile/route", "/profile/login"].includes(location.pathname)) ||
+    location.pathname.startsWith("/beta");
+
+  if (shouldHideHeader) {
     return null;
   }
 
@@ -41,6 +51,8 @@ const Header: React.FC = () => {
 
   const navLinks: HeaderLink[] = [
     { label: 'Home', to: '/' },
+    { label: 'Explore', to: '/explore' },
+    { label: 'FAQs', to: '/faq' },
     { label: 'Contact', to: '/contact' },
   ];
 
@@ -195,6 +207,11 @@ const AppRoutes: React.FC = () => {
       <ErrorBoundary key={location.key}>
         <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/explore" element={<ExplorePage />} />
+        <Route path="/compare" element={<ComparePage />} />
+        <Route path="/timelines" element={<TimelinesPage />} />
+        <Route path="/high-school-pathways" element={<HighSchoolPathwaysPage />} />
+        <Route path="/faq" element={<FaqPage />} />
         <Route path="/institution/:unitid" element={<DetailPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/auth/callback" element={<AuthCallbackPage />} />
