@@ -122,6 +122,9 @@ type ExplorePageProps = {
   initialSpecificMajors?: string[];
 };
 
+const DEFAULT_MAJOR_AREAS: string[] = [];
+const DEFAULT_SPECIFIC_MAJORS: string[] = [];
+
 const formatCurrency = (value: number | null | undefined): string => {
   if (value == null || Number.isNaN(value)) return "N/A";
   return new Intl.NumberFormat("en-US", {
@@ -361,8 +364,8 @@ const Pill: React.FC<{
 );
 
 const ExplorePage: React.FC<ExplorePageProps> = ({
-  initialMajorAreas = [],
-  initialSpecificMajors = [],
+  initialMajorAreas = DEFAULT_MAJOR_AREAS,
+  initialSpecificMajors = DEFAULT_SPECIFIC_MAJORS,
 }) => {
   const location = useLocation();
   const navigate = useNavigate();
@@ -737,7 +740,6 @@ const ExplorePage: React.FC<ExplorePageProps> = ({
                 onKeyDown={(e) => {
                   if (e.key === "Enter") applySearchQuery(searchInput);
                 }}
-                onBlur={() => applySearchQuery(searchInput)}
                 placeholder="Type at least 3 letters to search"
                 className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/30"
               />
