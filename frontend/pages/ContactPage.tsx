@@ -60,7 +60,7 @@ const ContactPage: React.FC = () => {
           {submitState === "success" ? (
             <div className="space-y-2">
               <h2 className="text-xl font-bold text-emerald-700">Submitted</h2>
-              <p className="text-slate-600">Thanks — we received your message.</p>
+              <p className="text-slate-600">Thanks, we received your message.</p>
 
               <button
                 type="button"

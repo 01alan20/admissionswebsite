@@ -15,6 +15,6 @@ View your app in AI Studio: https://ai.studio/apps/drive/1DhDeCYfBgd-BDLf51g6c84
 
 1. Install dependencies:
    `npm install`
-2. (Optional) AI summaries are disabled by default. If you later enable them, set `GEMINI_API_KEY` in an `.env.local` and wire a client — not required for this build.
+2. (Optional) AI summaries are disabled by default. If you later enable them, set `GEMINI_API_KEY` in an `.env.local` and wire a client - not required for this build.
 3. Run the app:
    `npm run dev`

@@ -285,7 +285,7 @@ const ApplicationListCard: React.FC<{
         <div className="min-w-0 flex-1">
           <div className="flex items-center justify-between gap-3">
             <span className="line-clamp-1 text-base font-bold text-slate-900">{primarySchool}</span>
-            <span className="text-sm text-slate-500">{entry.data.year || "—"}</span>
+            <span className="text-sm text-slate-500">{entry.data.year || "N/A"}</span>
           </div>
           <p className="text-sm font-semibold text-slate-900 line-clamp-1 mt-1">{majorLabel}</p>
           <p className="text-sm text-slate-700 line-clamp-2 mt-1">{descriptor}</p>

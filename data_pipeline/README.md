@@ -4,8 +4,8 @@ This folder contains the Python scripts that build the static datasets under `pu
 
 ### Inputs
 
-- `public/data/institutions_degrees_bachelor.csv` — IPEDS bachelor degrees by CIP code.
-- `public/data/institution_sites.csv` — official institutional, admissions, and financial‑aid URLs.
+- `public/data/institutions_degrees_bachelor.csv` - IPEDS bachelor degrees by CIP code.
+- `public/data/institution_sites.csv` - official institutional, admissions, and financial‑aid URLs.
 
 ### Scripts
 
@@ -30,4 +30,3 @@ After regenerating data, you can rebuild the frontend as usual:
 ```bash
 npm run build
 ```
-

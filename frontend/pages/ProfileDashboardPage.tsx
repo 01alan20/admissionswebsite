@@ -1002,7 +1002,7 @@ const ProfileDashboardPage: React.FC = () => {
                           <td className="px-4 py-2 whitespace-nowrap text-slate-600">
                             {[row.city, row.state]
                               .filter(Boolean)
-                              .join(", ") || "—"}
+                              .join(", ") || "N/A"}
                           </td>
                         </tr>
                       ))}

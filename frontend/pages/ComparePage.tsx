@@ -87,7 +87,7 @@ const ComparePage: React.FC = () => {
             {searchResults.map(item => (
               <li key={item.unitid} onClick={() => handleSelectIndex(item)} className="p-3 hover:bg-brand-light cursor-pointer">
                 {item.name}
-                {item.city ? <span className="text-gray-500 text-sm"> — {item.city}, {item.state}</span> : null}
+                {item.city ? <span className="text-gray-500 text-sm"> - {item.city}, {item.state}</span> : null}
               </li>
             ))}
           </ul>

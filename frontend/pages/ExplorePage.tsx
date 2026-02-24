@@ -202,11 +202,37 @@ const getTestScoreMid = (
   return act_composite_75 ?? act_composite_25 ?? null;
 };
 
+const normalizeMajorText = (value: string): string =>
+  value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+const majorLabelMatches = (haystack: string, label: string): boolean => {
+  const needle = normalizeMajorText(cleanMajorLabel(label));
+  if (!needle) return false;
+  if (haystack.includes(needle)) return true;
+
+  const tokens = needle.split(" ").filter((token) => token.length >= 4);
+  if (!tokens.length) return false;
+
+  let hits = 0;
+  for (const token of tokens) {
+    if (haystack.includes(token)) hits += 1;
+  }
+  return hits >= Math.min(2, tokens.length);
+};
+
+const toggleValueInList = (list: string[], value: string): string[] =>
+  list.includes(value) ? list.filter((v) => v !== value) : [...list, value];
+
 const institutionHasMajors = (
   inst: Institution,
   majorAreas: string[],
   specificMajors: string[],
-  majorsByInstitution: InstitutionMajorsByInstitution | null
+  majorsByInstitution: InstitutionMajorsByInstitution | null,
+  majorsMeta: MajorsMeta | null
 ): boolean => {
   if (!majorAreas.length && !specificMajors.length) return true;
 
@@ -237,6 +263,44 @@ const institutionHasMajors = (
   addCodes(inst.majors_cip_six_digit, detailed);
   addCodes(record?.four_digit, detailed);
   addCodes(record?.six_digit, detailed);
+
+  const hasCodeData = twoDigit.size > 0 || detailed.size > 0;
+  if (!hasCodeData) {
+    const familyText = normalizeMajorText(
+      (Array.isArray(inst.major_families) ? inst.major_families : [])
+        .map((entry) => cleanMajorLabel(entry))
+        .filter(Boolean)
+        .join(" ")
+    );
+
+    if (!familyText) {
+      return true;
+    }
+
+    if (majorAreas.length) {
+      const matchesAreaByLabel = majorAreas.some((area) => {
+        const key = area.slice(0, 2).trim();
+        const label = majorsMeta?.two_digit?.[key] ?? key;
+        return majorLabelMatches(familyText, String(label));
+      });
+      if (!matchesAreaByLabel) return false;
+    }
+
+    if (specificMajors.length) {
+      const matchesSpecificByLabel = specificMajors.some((code) => {
+        const normalized = code.trim();
+        const label =
+          majorsMeta?.six_digit?.[normalized] ??
+          majorsMeta?.four_digit?.[normalized] ??
+          majorsMeta?.two_digit?.[normalized.slice(0, 2)] ??
+          normalized;
+        return majorLabelMatches(familyText, String(label));
+      });
+      if (!matchesSpecificByLabel) return false;
+    }
+
+    return true;
+  }
 
   if (majorAreas.length) {
     const matchesArea = majorAreas.some((area) => twoDigit.has(area.slice(0, 2)));
@@ -296,6 +360,7 @@ const filterInstitutions = (
     specificMajors: string[];
   },
   majorsByInstitution: InstitutionMajorsByInstitution | null,
+  majorsMeta: MajorsMeta | null,
   locationMap: Map<number, string>,
   testScoreMap: Map<number, InstitutionTestScores>
 ): Institution[] => {
@@ -337,7 +402,7 @@ const filterInstitutions = (
       if (!loc || !opts.locationTypes.includes(loc)) return false;
     }
 
-    if (!institutionHasMajors(inst, opts.majorAreas, opts.specificMajors, majorsByInstitution)) {
+    if (!institutionHasMajors(inst, opts.majorAreas, opts.specificMajors, majorsByInstitution, majorsMeta)) {
       return false;
     }
 
@@ -595,10 +660,11 @@ const ExplorePage: React.FC<ExplorePageProps> = ({
         specificMajors,
       },
       majorsByInstitution,
+      majorsMeta,
       locationMap,
       testScoreMap
     );
-  }, [orderedInstitutions, searchQuery, budget, selectivity, testPolicy, testScore, selectedStates, locationTypes, majorAreas, specificMajors, majorsByInstitution, locationMap, testScoreMap]);
+  }, [orderedInstitutions, searchQuery, budget, selectivity, testPolicy, testScore, selectedStates, locationTypes, majorAreas, specificMajors, majorsByInstitution, majorsMeta, locationMap, testScoreMap]);
 
   const totalPages = Math.max(1, Math.ceil(filteredInstitutions.length / PAGE_SIZE));
   const currentPage = Math.min(page, totalPages);
@@ -616,6 +682,18 @@ const ExplorePage: React.FC<ExplorePageProps> = ({
     setSpecificMajors(draftSpecificMajors);
     setPage(1);
   };
+
+  const handleToggleMajorArea = useCallback((code: string) => {
+    setDraftMajorAreas((prev) => toggleValueInList(prev, code));
+    setMajorAreas((prev) => toggleValueInList(prev, code));
+    setPage(1);
+  }, []);
+
+  const handleToggleSpecificMajor = useCallback((code: string) => {
+    setDraftSpecificMajors((prev) => toggleValueInList(prev, code));
+    setSpecificMajors((prev) => toggleValueInList(prev, code));
+    setPage(1);
+  }, []);
 
   const resetFilters = () => {
     setDraftBudget(null);
@@ -917,13 +995,7 @@ const ExplorePage: React.FC<ExplorePageProps> = ({
                         key={opt.code}
                         active={active}
                         label={cleanMajorLabel(opt.label)}
-                        onClick={() =>
-                          setDraftMajorAreas((prev) =>
-                            prev.includes(opt.code)
-                              ? prev.filter((v) => v !== opt.code)
-                              : [...prev, opt.code]
-                          )
-                        }
+                        onClick={() => handleToggleMajorArea(opt.code)}
                       />
                     );
                   })}
@@ -948,13 +1020,7 @@ const ExplorePage: React.FC<ExplorePageProps> = ({
                         key={opt.code}
                         active={active}
                         label={cleanMajorLabel(opt.label)}
-                        onClick={() =>
-                          setDraftSpecificMajors((prev) =>
-                            prev.includes(opt.code)
-                              ? prev.filter((v) => v !== opt.code)
-                              : [...prev, opt.code]
-                          )
-                        }
+                        onClick={() => handleToggleSpecificMajor(opt.code)}
                       />
                     );
                   })}

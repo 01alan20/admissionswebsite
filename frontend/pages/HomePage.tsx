@@ -240,7 +240,7 @@ const HomePage: React.FC = () => {
         category: "Personal Growth",
         prompt: "Tell us about a time you challenged yourself.",
         essay:
-          "I used to avoid speaking up, even when I had an answer. In group projects I became the “quiet finisher,” the person who cleaned up slides and fixed formatting while everyone else argued about ideas. That worked until my biology lab partnered with a local clinic to analyze water samples from a neighborhood with frequent boil notices. The data didn’t match the story we expected, and the easy explanation was to blame our technique. I re-ran the test after school, documented every step, and realized our sampling locations were wrong.\n\nI brought it up anyway. My voice shook, but I laid out the evidence and suggested a revised plan. The room went silent—then our team lead asked me to run the next collection route. That weekend, we mapped the neighborhood, spoke with residents, and produced a report the clinic used in a grant application for updated filtration. I didn’t just learn how to challenge myself; I learned that clarity and care can be louder than confidence.",
+          "I used to avoid speaking up, even when I had an answer. In group projects I became the “quiet finisher,” the person who cleaned up slides and fixed formatting while everyone else argued about ideas. That worked until my biology lab partnered with a local clinic to analyze water samples from a neighborhood with frequent boil notices. The data didn’t match the story we expected, and the easy explanation was to blame our technique. I re-ran the test after school, documented every step, and realized our sampling locations were wrong.\n\nI brought it up anyway. My voice shook, but I laid out the evidence and suggested a revised plan. The room went silent - then our team lead asked me to run the next collection route. That weekend, we mapped the neighborhood, spoke with residents, and produced a report the clinic used in a grant application for updated filtration. I didn’t just learn how to challenge myself; I learned that clarity and care can be louder than confidence.",
       },
       {
         id: 2,
@@ -250,7 +250,7 @@ const HomePage: React.FC = () => {
         category: "Why This College",
         prompt: "Why are you applying to this university?",
         essay:
-          "What drew me in wasn’t the name—it was the way students build projects with real impact. I’ve learned best when I’m solving a real problem with other people: tutoring a ninth grader who thought math “wasn’t for him,” building a small budgeting tool for my family, and organizing a campus clean‑up that turned into a long-term recycling partnership with our city.\n\nI’m applying because I want an environment where curiosity is translated into action. Your emphasis on interdisciplinary work—where computer science can sit next to psychology, where research groups welcome undergraduates, and where student organizations collaborate with local communities—matches how I learn. I can already picture myself in the lab meeting where ideas are tested, not just praised, and in the seminar where we argue thoughtfully and leave with a plan.\n\nMost importantly, I want to contribute to a campus culture that treats ambition as responsibility. I’m not looking for a place to collect achievements; I’m looking for a place to build things that last.",
+          "What drew me in wasn’t the name - it was the way students build projects with real impact. I’ve learned best when I’m solving a real problem with other people: tutoring a ninth grader who thought math “wasn’t for him,” building a small budgeting tool for my family, and organizing a campus clean‑up that turned into a long-term recycling partnership with our city.\n\nI’m applying because I want an environment where curiosity is translated into action. Your emphasis on interdisciplinary work - where computer science can sit next to psychology, where research groups welcome undergraduates, and where student organizations collaborate with local communities - matches how I learn. I can already picture myself in the lab meeting where ideas are tested, not just praised, and in the seminar where we argue thoughtfully and leave with a plan.\n\nMost importantly, I want to contribute to a campus culture that treats ambition as responsibility. I’m not looking for a place to collect achievements; I’m looking for a place to build things that last.",
       },
     ],
     []
@@ -273,7 +273,7 @@ const HomePage: React.FC = () => {
                 US College Admissions Consultant
               </h1>
               <p className="mt-4 text-base sm:text-lg text-slate-600 max-w-2xl">
-                Clear, ethical guidance plus practical tools to build a balanced college list, plan testing, and track deadlines—without the stress.
+                Clear, ethical guidance plus practical tools to build a balanced college list, plan testing, and track deadlines - without the stress.
               </p>
 
               <div className="mt-7 flex flex-wrap gap-2 text-sm text-slate-700">

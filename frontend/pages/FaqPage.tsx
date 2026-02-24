@@ -1,4 +1,4 @@
-﻿import React, { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 type FaqItem = { question: string; answer: string };
@@ -41,7 +41,7 @@ const faqSections: FaqSection[] = [
       {
         question: 'Is it too late to get help if we are already in Grade 12?',
         answer:
-          'No. We focus on the highest-impact steps—college list balance, essay strategy, timelines, and making sure recommendations and activities are presented clearly.',
+          'No. We focus on the highest-impact steps - college list balance, essay strategy, timelines, and making sure recommendations and activities are presented clearly.',
       },
       {
         question: 'How does working with you actually work?',
@@ -96,7 +96,7 @@ const faqSections: FaqSection[] = [
       {
         question: 'What kinds of students do best with SeeThrough Admissions?',
         answer:
-          'Students and families who want clarity, are willing to reflect, and follow through on an agreed plan. You do not need to be perfect—you need to be engaged.',
+          'Students and families who want clarity, are willing to reflect, and follow through on an agreed plan. You do not need to be perfect - you need to be engaged.',
       },
       {
         question: 'What results have your students achieved?',
