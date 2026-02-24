@@ -61,7 +61,8 @@ const TEST_POLICY_LABEL: Record<string, string> = {
 type BudgetBucket = "under15" | "15to25" | "25to40" | "40to60" | "over60";
 type SelectivityBucket = "lottery" | "reach" | "target" | "safety" | "open";
 type LocationCategory = "City" | "Suburban" | "Town" | "Rural";
-type TestScoreFilter = { type: "sat" | "act"; value: number };
+type TestScoreType = "sat" | "act";
+type TestScoreFilters = Partial<Record<TestScoreType, number>>;
 
 const STATE_NAME_BY_CODE: Record<string, string> = {
   AL: "Alabama",
@@ -187,7 +188,7 @@ const selectivityBucket = (acceptance: number | null | undefined): SelectivityBu
 
 const getTestScoreMid = (
   unitid: number,
-  type: "sat" | "act",
+  type: TestScoreType,
   map: Map<number, InstitutionTestScores>
 ): number | null => {
   const scores = map.get(unitid);
@@ -224,8 +225,11 @@ const majorLabelMatches = (haystack: string, label: string): boolean => {
   return hits >= Math.min(2, tokens.length);
 };
 
-const toggleValueInList = (list: string[], value: string): string[] =>
+const toggleValueInList = <T extends string>(list: T[], value: T): T[] =>
   list.includes(value) ? list.filter((v) => v !== value) : [...list, value];
+
+const hasAnyTestScoreFilter = (filters: TestScoreFilters): boolean =>
+  Number.isFinite(filters.sat) || Number.isFinite(filters.act);
 
 const institutionHasMajors = (
   inst: Institution,
@@ -350,10 +354,10 @@ const filterInstitutions = (
   institutions: Institution[],
   opts: {
     search: string;
-    budget: BudgetBucket | null;
-    selectivity: SelectivityBucket | null;
-    testPolicy: keyof typeof TEST_POLICY_LABEL | null;
-    testScore: TestScoreFilter | null;
+    budget: BudgetBucket[];
+    selectivity: SelectivityBucket[];
+    testPolicy: Array<keyof typeof TEST_POLICY_LABEL>;
+    testScores: TestScoreFilters;
     states: string[];
     locationTypes: LocationCategory[];
     majorAreas: string[];
@@ -371,25 +375,33 @@ const filterInstitutions = (
       if (!target.includes(searchTerm)) return false;
     }
 
-    if (opts.budget) {
+    if (opts.budget.length) {
       const tuition = pickTuition(inst);
-      if (!matchesTuitionBucket(tuition, opts.budget)) return false;
+      if (!opts.budget.some((bucket) => matchesTuitionBucket(tuition, bucket))) return false;
     }
 
-    if (opts.selectivity) {
+    if (opts.selectivity.length) {
       const bucket = selectivityBucket(inst.acceptance_rate);
-      if (bucket !== opts.selectivity) return false;
+      if (!bucket || !opts.selectivity.includes(bucket)) return false;
     }
 
-    if (opts.testPolicy) {
+    if (opts.testPolicy.length) {
       const policy = categorizeTestPolicy(inst.test_policy);
-      if (policy !== opts.testPolicy) return false;
+      if (!opts.testPolicy.includes(policy)) return false;
     }
 
-    if (opts.testScore) {
+    if (hasAnyTestScoreFilter(opts.testScores)) {
       if (testScoreMap.size === 0) return true;
-      const mid = getTestScoreMid(inst.unitid, opts.testScore.type, testScoreMap);
-      if (mid == null || mid < opts.testScore.value) return false;
+      const selectedTypes: TestScoreType[] = (["sat", "act"] as const).filter(
+        (type) => Number.isFinite(opts.testScores[type])
+      );
+      const matchesScore = selectedTypes.some((type) => {
+        const threshold = opts.testScores[type];
+        if (!Number.isFinite(threshold)) return false;
+        const mid = getTestScoreMid(inst.unitid, type, testScoreMap);
+        return mid != null && mid >= Number(threshold);
+      });
+      if (!matchesScore) return false;
     }
 
     if (opts.states.length) {
@@ -447,10 +459,10 @@ const ExplorePage: React.FC<ExplorePageProps> = ({
   const [error, setError] = useState<string | null>(null);
 
   // Draft filters (user edits) and applied filters (used for results)
-  const [draftBudget, setDraftBudget] = useState<BudgetBucket | null>(null);
-  const [draftSelectivity, setDraftSelectivity] = useState<SelectivityBucket | null>(null);
-  const [draftTestPolicy, setDraftTestPolicy] = useState<keyof typeof TEST_POLICY_LABEL | null>(null);
-  const [draftTestScore, setDraftTestScore] = useState<TestScoreFilter | null>(null);
+  const [draftBudget, setDraftBudget] = useState<BudgetBucket[]>([]);
+  const [draftSelectivity, setDraftSelectivity] = useState<SelectivityBucket[]>([]);
+  const [draftTestPolicy, setDraftTestPolicy] = useState<Array<keyof typeof TEST_POLICY_LABEL>>([]);
+  const [draftTestScores, setDraftTestScores] = useState<TestScoreFilters>({});
   const [draftStates, setDraftStates] = useState<string[]>([]);
   const [draftLocationTypes, setDraftLocationTypes] = useState<LocationCategory[]>([]);
   const [draftMajorAreas, setDraftMajorAreas] = useState<string[]>(initialMajorAreas);
@@ -458,10 +470,10 @@ const ExplorePage: React.FC<ExplorePageProps> = ({
   const [majorAreaQuery, setMajorAreaQuery] = useState("");
   const [specificMajorQuery, setSpecificMajorQuery] = useState("");
 
-  const [budget, setBudget] = useState<BudgetBucket | null>(null);
-  const [selectivity, setSelectivity] = useState<SelectivityBucket | null>(null);
-  const [testPolicy, setTestPolicy] = useState<keyof typeof TEST_POLICY_LABEL | null>(null);
-  const [testScore, setTestScore] = useState<TestScoreFilter | null>(null);
+  const [budget, setBudget] = useState<BudgetBucket[]>([]);
+  const [selectivity, setSelectivity] = useState<SelectivityBucket[]>([]);
+  const [testPolicy, setTestPolicy] = useState<Array<keyof typeof TEST_POLICY_LABEL>>([]);
+  const [testScores, setTestScores] = useState<TestScoreFilters>({});
   const [selectedStates, setSelectedStates] = useState<string[]>([]);
   const [locationTypes, setLocationTypes] = useState<LocationCategory[]>([]);
   const [majorAreas, setMajorAreas] = useState<string[]>(initialMajorAreas);
@@ -571,7 +583,7 @@ const ExplorePage: React.FC<ExplorePageProps> = ({
 
   useEffect(() => {
     setPage(1);
-  }, [searchQuery, budget, selectivity, testPolicy, testScore, selectedStates, locationTypes, majorAreas, specificMajors]);
+  }, [searchQuery, budget, selectivity, testPolicy, testScores, selectedStates, locationTypes, majorAreas, specificMajors]);
 
   const majorAreaOptions = useMemo(() => buildMajorAreaOptions(majorsMeta), [majorsMeta]);
   const specificMajorOptions = useMemo(() => buildSpecificMajorOptions(majorsMeta), [majorsMeta]);
@@ -653,7 +665,7 @@ const ExplorePage: React.FC<ExplorePageProps> = ({
         budget,
         selectivity,
         testPolicy,
-        testScore,
+        testScores,
         states: selectedStates,
         locationTypes,
         majorAreas,
@@ -664,7 +676,7 @@ const ExplorePage: React.FC<ExplorePageProps> = ({
       locationMap,
       testScoreMap
     );
-  }, [orderedInstitutions, searchQuery, budget, selectivity, testPolicy, testScore, selectedStates, locationTypes, majorAreas, specificMajors, majorsByInstitution, majorsMeta, locationMap, testScoreMap]);
+  }, [orderedInstitutions, searchQuery, budget, selectivity, testPolicy, testScores, selectedStates, locationTypes, majorAreas, specificMajors, majorsByInstitution, majorsMeta, locationMap, testScoreMap]);
 
   const totalPages = Math.max(1, Math.ceil(filteredInstitutions.length / PAGE_SIZE));
   const currentPage = Math.min(page, totalPages);
@@ -675,7 +687,7 @@ const ExplorePage: React.FC<ExplorePageProps> = ({
     setBudget(draftBudget);
     setSelectivity(draftSelectivity);
     setTestPolicy(draftTestPolicy);
-    setTestScore(draftTestScore);
+    setTestScores(draftTestScores);
     setSelectedStates(draftStates);
     setLocationTypes(draftLocationTypes);
     setMajorAreas(draftMajorAreas);
@@ -696,18 +708,18 @@ const ExplorePage: React.FC<ExplorePageProps> = ({
   }, []);
 
   const resetFilters = () => {
-    setDraftBudget(null);
-    setDraftSelectivity(null);
-    setDraftTestPolicy(null);
-    setDraftTestScore(null);
+    setDraftBudget([]);
+    setDraftSelectivity([]);
+    setDraftTestPolicy([]);
+    setDraftTestScores({});
     setDraftStates([]);
     setDraftLocationTypes([]);
     setDraftMajorAreas(initialMajorAreas);
     setDraftSpecificMajors(initialSpecificMajors);
-    setBudget(null);
-    setSelectivity(null);
-    setTestPolicy(null);
-    setTestScore(null);
+    setBudget([]);
+    setSelectivity([]);
+    setTestPolicy([]);
+    setTestScores({});
     setSelectedStates([]);
     setLocationTypes([]);
     setMajorAreas(initialMajorAreas);
@@ -837,9 +849,11 @@ const ExplorePage: React.FC<ExplorePageProps> = ({
                 ].map((opt) => (
                   <Pill
                     key={opt.key}
-                    active={draftBudget === opt.key}
+                    active={draftBudget.includes(opt.key as BudgetBucket)}
                     label={opt.label}
-                    onClick={() => setDraftBudget(draftBudget === opt.key ? null : (opt.key as BudgetBucket))}
+                    onClick={() =>
+                      setDraftBudget((prev) => toggleValueInList(prev, opt.key as BudgetBucket))
+                    }
                   />
                 ))}
               </div>
@@ -859,10 +873,12 @@ const ExplorePage: React.FC<ExplorePageProps> = ({
                 ].map((opt) => (
                   <Pill
                     key={opt.key}
-                    active={draftSelectivity === opt.key}
+                    active={draftSelectivity.includes(opt.key as SelectivityBucket)}
                     label={opt.label}
                     onClick={() =>
-                      setDraftSelectivity(draftSelectivity === opt.key ? null : (opt.key as SelectivityBucket))
+                      setDraftSelectivity((prev) =>
+                        toggleValueInList(prev, opt.key as SelectivityBucket)
+                      )
                     }
                   />
                 ))}
@@ -882,11 +898,11 @@ const ExplorePage: React.FC<ExplorePageProps> = ({
                 ].map((opt) => (
                   <Pill
                     key={opt.key}
-                    active={draftTestPolicy === opt.key}
+                    active={draftTestPolicy.includes(opt.key as keyof typeof TEST_POLICY_LABEL)}
                     label={opt.label}
                     onClick={() =>
-                      setDraftTestPolicy(
-                        draftTestPolicy === opt.key ? null : (opt.key as keyof typeof TEST_POLICY_LABEL)
+                      setDraftTestPolicy((prev) =>
+                        toggleValueInList(prev, opt.key as keyof typeof TEST_POLICY_LABEL)
                       )
                     }
                   />
@@ -896,54 +912,85 @@ const ExplorePage: React.FC<ExplorePageProps> = ({
                 <label className="text-xs font-semibold text-slate-500">Test score floor</label>
                 <div className="flex items-center gap-2 text-sm flex-wrap">
                   <Pill
-                    active={draftTestScore?.type === "sat"}
+                    active={Number.isFinite(draftTestScores.sat)}
                     label="SAT"
-                    onClick={() =>
-                      setDraftTestScore(
-                        draftTestScore?.type === "sat"
-                          ? null
-                          : { type: "sat", value: draftTestScore?.value ?? 1300 }
-                      )
-                    }
+                    onClick={() => {
+                      setDraftTestScores((prev) => {
+                        if (Number.isFinite(prev.sat)) {
+                          const next = { ...prev };
+                          delete next.sat;
+                          return next;
+                        }
+                        return { ...prev, sat: 1300 };
+                      });
+                    }}
                   />
                   <Pill
-                    active={draftTestScore?.type === "act"}
+                    active={Number.isFinite(draftTestScores.act)}
                     label="ACT"
-                    onClick={() =>
-                      setDraftTestScore(
-                        draftTestScore?.type === "act"
-                          ? null
-                          : { type: "act", value: draftTestScore?.value ?? 28 }
-                      )
-                    }
-                  />
-                  <input
-                    id="score-min"
-                    name="score-min"
-                    type="number"
-                    min={draftTestScore?.type === "act" ? 10 : 600}
-                    max={draftTestScore?.type === "act" ? 36 : 1600}
-                    value={draftTestScore?.value ?? ""}
-                    onChange={(e) => {
-                      const val = Number(e.target.value);
-                      if (!draftTestScore?.type) return;
-                      if (Number.isNaN(val)) {
-                        setDraftTestScore(null);
-                      } else {
-                        setDraftTestScore({ type: draftTestScore.type, value: val });
-                      }
+                    onClick={() => {
+                      setDraftTestScores((prev) => {
+                        if (Number.isFinite(prev.act)) {
+                          const next = { ...prev };
+                          delete next.act;
+                          return next;
+                        }
+                        return { ...prev, act: 28 };
+                      });
                     }}
-                    placeholder={draftTestScore?.type === "act" ? "ACT" : "SAT"}
-                    className="w-24 rounded-lg border border-slate-200 px-2 py-1 text-sm focus:border-brand-primary focus:ring-1 focus:ring-brand-primary/40"
                   />
                   <button
                     type="button"
                     className="text-xs text-brand-primary underline"
-                    onClick={() => setDraftTestScore(null)}
+                    onClick={() => setDraftTestScores({})}
                   >
                     Clear
                   </button>
                 </div>
+                {Number.isFinite(draftTestScores.sat) && (
+                  <div className="flex items-center gap-2 text-sm">
+                    <label htmlFor="score-min-sat" className="text-xs text-slate-500 w-10">
+                      SAT
+                    </label>
+                    <input
+                      id="score-min-sat"
+                      name="score-min-sat"
+                      type="number"
+                      min={600}
+                      max={1600}
+                      value={draftTestScores.sat ?? ""}
+                      onChange={(e) => {
+                        const val = Number(e.target.value);
+                        setDraftTestScores((prev) =>
+                          Number.isNaN(val) ? prev : { ...prev, sat: val }
+                        );
+                      }}
+                      className="w-28 rounded-lg border border-slate-200 px-2 py-1 text-sm focus:border-brand-primary focus:ring-1 focus:ring-brand-primary/40"
+                    />
+                  </div>
+                )}
+                {Number.isFinite(draftTestScores.act) && (
+                  <div className="flex items-center gap-2 text-sm">
+                    <label htmlFor="score-min-act" className="text-xs text-slate-500 w-10">
+                      ACT
+                    </label>
+                    <input
+                      id="score-min-act"
+                      name="score-min-act"
+                      type="number"
+                      min={10}
+                      max={36}
+                      value={draftTestScores.act ?? ""}
+                      onChange={(e) => {
+                        const val = Number(e.target.value);
+                        setDraftTestScores((prev) =>
+                          Number.isNaN(val) ? prev : { ...prev, act: val }
+                        );
+                      }}
+                      className="w-28 rounded-lg border border-slate-200 px-2 py-1 text-sm focus:border-brand-primary focus:ring-1 focus:ring-brand-primary/40"
+                    />
+                  </div>
+                )}
               </div>
             </details>
 
