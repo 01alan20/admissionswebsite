@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { supabase } from "../services/supabaseClient";
+import { logUserEvent } from "../services/userEvents";
 
 const AuthCallbackPage: React.FC = () => {
   const navigate = useNavigate();
@@ -37,6 +38,17 @@ const AuthCallbackPage: React.FC = () => {
             });
             if (error) throw error;
           }
+        }
+        const { data: userData } = await supabase.auth.getUser();
+        if (userData?.user) {
+          void logUserEvent({
+            userId: userData.user.id,
+            eventType: "user_login",
+            source: "auth_callback",
+            metadata: {
+              method: "oauth",
+            },
+          });
         }
       } catch {
         // Swallow errors and send the user back to login so they can retry.

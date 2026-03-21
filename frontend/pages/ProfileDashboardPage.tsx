@@ -28,6 +28,7 @@ import {
   normalizeMajorSelectionList,
 } from "../utils/majors";
 import type { AdmissionCategory } from "../types/supabase";
+import { logUserEvent } from "../services/userEvents";
 
 type DemographicsState = {
   gender: string;
@@ -683,6 +684,8 @@ const ProfileDashboardPage: React.FC = () => {
       demographics?: Record<string, any>;
       academic?: Record<string, any>;
       extracurriculars?: any[];
+      eventType?: string;
+      eventMetadata?: Record<string, unknown>;
     }) => {
       if (!user) return;
       const payload: Record<string, any> = {};
@@ -705,6 +708,14 @@ const ProfileDashboardPage: React.FC = () => {
         },
         { onConflict: "user_id" }
       );
+      if (updates.eventType) {
+        void logUserEvent({
+          userId: user.id,
+          eventType: updates.eventType,
+          source: "profile_dashboard",
+          metadata: updates.eventMetadata ?? {},
+        });
+      }
     },
     [user?.id, academicSnapshot]
   );
@@ -1179,6 +1190,12 @@ const ProfileDashboardPage: React.FC = () => {
                   city: cleaned.city || null,
                   majors: normalizedMajors.length ? normalizedMajors : null,
                 },
+                eventType: "profile_demographics_saved",
+                eventMetadata: {
+                  gradYear: cleaned.gradYear ? Number(cleaned.gradYear) : null,
+                  majorsCount: normalizedMajors.length,
+                  country: cleaned.country || null,
+                },
               });
               setStudentProfile({
                 country: cleaned.country || "",
@@ -1516,7 +1533,13 @@ const ProfileDashboardPage: React.FC = () => {
             setActivities(cleaned);
             setSavingAct(true);
             try {
-              await updateProfileData({ extracurriculars: normalizedForDb });
+              await updateProfileData({
+                extracurriculars: normalizedForDb,
+                eventType: "profile_extracurriculars_saved",
+                eventMetadata: {
+                  activityCount: normalizedForDb.length,
+                },
+              });
               setStudentProfile({ activities: normalizedForDb });
               setShowActModal(false);
             } catch (err) {
@@ -1829,6 +1852,16 @@ const ProfileDashboardPage: React.FC = () => {
                   class_rank_category: classRankCategory || null,
                   class_rank_percentile: classRankPercentile,
                   class_size: nextState.classSize ? Number(nextState.classSize) : null,
+                },
+                eventType: "profile_academics_saved",
+                eventMetadata: {
+                  hasGpa: finalGpa != null,
+                  hasSat: sat != null,
+                  hasAct: act != null,
+                  hasClassRank:
+                    Boolean(classRankExact) ||
+                    Boolean(classRankCategory) ||
+                    classRankPercentile != null,
                 },
               });
               setStudentProfile({

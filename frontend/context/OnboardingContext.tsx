@@ -2,6 +2,7 @@
 import type { ReactNode } from "react";
 import type { User } from "@supabase/supabase-js";
 import { supabase } from "../services/supabaseClient";
+import { logUserEvent } from "../services/userEvents";
 import type { Activity } from "../types";
 import { normalizeMajorSelectionList } from "../utils/majors";
 
@@ -404,6 +405,16 @@ const loadProfileForUser = async (currentUser: User, cancelledRef: { value: bool
       },
       { onConflict: "user_id" }
     );
+    void logUserEvent({
+      userId: user.id,
+      eventType: "profile_onboarding_saved",
+      source: "onboarding_context",
+      metadata: {
+        onboardingStep: next,
+        targetCount: mergedTargets?.length ?? 0,
+        activityCount: merged.activities?.length ?? 0,
+      },
+    });
     setOnboardingStep(next);
   };
 
@@ -430,6 +441,14 @@ const loadProfileForUser = async (currentUser: User, cancelledRef: { value: bool
         },
         { onConflict: "user_id" }
       );
+      void logUserEvent({
+        userId: user.id,
+        eventType: "profile_targets_saved",
+        source: "onboarding_context",
+        metadata: {
+          targetCount: ids.length,
+        },
+      });
     }
   };
 

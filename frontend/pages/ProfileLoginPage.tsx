@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { supabase } from "../services/supabaseClient";
 import { useOnboardingContext } from "../context/OnboardingContext";
 import { trackEvent } from "../utils/analytics";
+import { logUserEvent } from "../services/userEvents";
 
 type AuthMode = "login" | "signup";
 
@@ -66,6 +67,14 @@ const ProfileLoginPage: React.FC = () => {
         if (data?.user) {
           setUserDirect(data.user);
           trackEvent("login", { method: "email", source: "profile_login" });
+          void logUserEvent({
+            userId: data.user.id,
+            eventType: "user_login",
+            source: "profile_login",
+            metadata: {
+              method: "email",
+            },
+          });
         }
         navigate(safeNextPath ?? "/profile/route", { replace: true });
       }
