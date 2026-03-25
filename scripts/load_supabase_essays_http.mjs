@@ -66,8 +66,21 @@ async function main() {
       const year = Number.isFinite(Number(e.year)) ? Number(e.year) : null
       const type = e.type ?? null
       const category = e.category ?? null
-      const prompt = e.question ?? null
+      const prompt = e.question ?? e.prompt ?? null
       const essay = e.essay ?? null
+      const sourceDemographics =
+        e.demographics && typeof e.demographics === 'object' && !Array.isArray(e.demographics)
+          ? e.demographics
+          : null
+      const demographics = sourceDemographics
+        ? {
+            ...sourceDemographics,
+            ...(e.essay_id != null ? { source_essay_id: e.essay_id } : {}),
+          }
+        : e.essay_id != null
+          ? { source_essay_id: e.essay_id }
+          : null
+      const major_codes = Array.isArray(e.major_codes) ? e.major_codes : null
       if (!essay) return null
       return {
         school,
@@ -76,8 +89,8 @@ async function main() {
         category,
         prompt,
         essay,
-        major_codes: null,
-        demographics: e.essay_id != null ? { source_essay_id: e.essay_id } : null,
+        major_codes,
+        demographics,
       }
     })
     .filter(Boolean)

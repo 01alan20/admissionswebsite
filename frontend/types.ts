@@ -193,6 +193,17 @@ export interface SuccessApplicationProfile {
   };
 }
 
+export interface AnonymousEssayDemographics {
+  source_essay_id?: number;
+  student_alias?: string | null;
+  country?: string | null;
+  accepted_schools?: string[] | null;
+  tags?: string[] | null;
+  guessed_intended_major?: string | null;
+  guessed_major_bucket?: string | null;
+  guess_confidence?: string | null;
+}
+
 export interface AnonymousEssayEntry {
   essay_id: number;
   school: string;
@@ -201,6 +212,7 @@ export interface AnonymousEssayEntry {
   question?: string | null;
   essay: string;
   category: string;
+  demographics?: AnonymousEssayDemographics | null;
 }
 
 // Admissions / profile review types

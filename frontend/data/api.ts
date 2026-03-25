@@ -1314,7 +1314,9 @@ export async function getAnonymousEssays(): Promise<AnonymousEssayEntry[]> {
       .map((r: any) => {
         const essayText = String(r.essay ?? "").trim();
         if (!essayText) return null;
-        const sourceEssayId = toNumberOrNullAny(r?.demographics?.source_essay_id);
+        const demographics =
+          r?.demographics && typeof r.demographics === "object" ? r.demographics : null;
+        const sourceEssayId = toNumberOrNullAny(demographics?.source_essay_id);
         return {
           essay_id: sourceEssayId ?? Number(r.id) ?? 0,
           school: r.school ?? "Unknown",
@@ -1323,6 +1325,7 @@ export async function getAnonymousEssays(): Promise<AnonymousEssayEntry[]> {
           question: r.prompt ?? null,
           essay: essayText,
           category: r.category ?? "General",
+          demographics,
         } as AnonymousEssayEntry;
       })
       .filter(Boolean) as AnonymousEssayEntry[];

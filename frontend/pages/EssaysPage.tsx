@@ -424,6 +424,11 @@ const EssayDetail: React.FC<{
   essay: AnonymousEssayEntry;
   similarity: number | null;
 }> = ({ essay, similarity }) => {
+  const acceptedSchools = Array.isArray(essay.demographics?.accepted_schools)
+    ? essay.demographics?.accepted_schools.filter(Boolean)
+    : [];
+  const guessedMajor = essay.demographics?.guessed_intended_major?.trim() || "";
+
   return (
     <div className="space-y-4">
       <div className="bg-white rounded-2xl border border-slate-100 shadow-sm p-6 space-y-4">
@@ -441,6 +446,12 @@ const EssayDetail: React.FC<{
             label={essay.category || "Category"}
             color="bg-amber-50 text-amber-800 border border-amber-200"
           />
+          {guessedMajor && (
+            <Tag
+              label={`Major guess: ${guessedMajor}`}
+              color="bg-slate-50 text-slate-800 border border-slate-200"
+            />
+          )}
           {similarity != null && (
             <Tag
               label={`Similarity ${similarity.toFixed(1)} / 5`}
@@ -452,6 +463,12 @@ const EssayDetail: React.FC<{
           <div>
             <h3 className="text-sm font-semibold text-slate-900 uppercase">Prompt</h3>
             <p className="text-sm text-slate-600 mt-1">{essay.question}</p>
+          </div>
+        )}
+        {acceptedSchools.length > 0 && (
+          <div>
+            <h3 className="text-sm font-semibold text-slate-900 uppercase">Accepted To</h3>
+            <p className="text-sm text-slate-600 mt-1">{acceptedSchools.join(", ")}</p>
           </div>
         )}
         <div>
@@ -486,6 +503,14 @@ function calculateEssaySimilarity(
 ): number {
   let score = 1;
   const normalizedCategory = (essay.category || "").toLowerCase();
+  const guessedMajor = (essay.demographics?.guessed_intended_major || "").toLowerCase();
+  const guessedBucket = (essay.demographics?.guessed_major_bucket || "").toLowerCase();
+  const tagFields = Array.isArray(essay.demographics?.tags)
+    ? essay.demographics.tags.map((tag) => String(tag).toLowerCase())
+    : [];
+  const acceptedSchools = Array.isArray(essay.demographics?.accepted_schools)
+    ? essay.demographics.accepted_schools.map((school) => String(school).toLowerCase())
+    : [(essay.school || "").toLowerCase()];
   const majors = (studentProfile.majors || [])
     .map((major) => extractMajorLabel(major).toLowerCase())
     .filter((label) => label.length > 0);
@@ -495,15 +520,19 @@ function calculateEssaySimilarity(
       normalizedCategory,
       (essay.question || "").toLowerCase(),
       (essay.type || "").toLowerCase(),
+      guessedMajor,
+      guessedBucket,
+      ...tagFields,
     ];
     const match = majors.some((major) => comparisonFields.some((field) => field.includes(major)));
     if (match) score += 2;
   }
 
   if (targetSchools.length) {
-    const match = targetSchools.some((school) =>
-      (essay.school || "").toLowerCase().includes(school.toLowerCase())
-    );
+    const match = targetSchools.some((school) => {
+      const normalizedSchool = school.toLowerCase();
+      return acceptedSchools.some((accepted) => accepted.includes(normalizedSchool));
+    });
     if (match) score += 1;
   }
 
