@@ -27,12 +27,13 @@
     "@supabase/supabase-js": "^2.84.0",
     "csv-parse": "^6.1.0",
     "dotenv": "^17.2.3",
+    "lucide-react": "^0.474.0",
     "postgres": "^3.4.7",
+    "posthog-js": "^1.364.7",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-router-dom": "^7.8.0",
-    "recharts": "^3.4.1",
-    "lucide-react": "^0.474.0"
+    "recharts": "^3.4.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.33.0",

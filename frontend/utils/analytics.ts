@@ -1,3 +1,5 @@
+import posthog from 'posthog-js';
+
 export const GA_MEASUREMENT_ID = 'G-E3NM4BX10Q';
 
 declare global {
@@ -8,6 +10,8 @@ declare global {
 }
 
 export const trackPageView = (path: string): void => {
+  posthog.capture('$pageview', { $current_url: window.location.href });
+
   if (typeof window === 'undefined' || typeof window.gtag !== 'function' || !GA_MEASUREMENT_ID) {
     return;
   }
@@ -26,6 +30,8 @@ export const trackEvent = (
   params?: Record<string, string | number | boolean | null | undefined>
 ): void => {
   if (typeof window === 'undefined') return;
+
+  posthog.capture(name, params ?? {});
 
   if (typeof window.gtag === 'function' && GA_MEASUREMENT_ID) {
     window.gtag('event', name, { ...(params ?? {}), send_to: GA_MEASUREMENT_ID });
